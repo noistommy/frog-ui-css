@@ -1,0 +1,1 @@
+let panel=document.querySelector(".ga-panel.collapse"),content=document.querySelector(".content-wrapper");if(panel){let e=panel.querySelector(".panel-toggle-btn");e.addEventListener("click",e=>{panel.classList.contains("open")?panel.classList.remove("open"):panel.classList.add("open")})}

@@ -1,0 +1,1 @@
+let showB=document.querySelector(".show-btn"),closeB=null,modal=document.querySelector(".ga-modal-container"),closeModal=()=>{modal.classList.remove("open")};closeB=document.querySelector(".close"),modal&&(showB.onclick=()=>{modal.classList.add("open")},closeB.onclick=()=>{closeModal()});
