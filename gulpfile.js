@@ -22,6 +22,7 @@ const prompt = require('gulp-prompt');
 
 const log = require('fancy-log');
 
+const baseFile = 'frogui'
 // fs module test
 // fa.writeFile('sample.json', JSON.stringify({ sample: 'data' }), () => {})
 
@@ -47,7 +48,7 @@ const clean = () => {
 
 // scss 빌드
 const build = () => {
-  const baseFile = 'frogui'
+  
   log(baseFile, paths.base)
   return src([`src/${baseFile}.scss`])
     .pipe(sassGlob())
@@ -60,7 +61,7 @@ const build = () => {
 }
 // JS 빌드
 const buildJS = () => {
-  return src(['src/definitions/components/*.js', 'example/base.js'])
+  return src(['src/definitions/components/*.js'])
     // .pipe(concat('frog_ui.js'))
     .pipe(dest('./dist/js'))
     .pipe(uglify())
@@ -70,7 +71,7 @@ const buildJS = () => {
 // assets 파일 빌드 폴더로 가져가기
 const assets = () => {
   return src('src/assets/**')
-    .pipe(dest('./example/build/assets'))
+    .pipe(dest('.wsite/build/assets'))
 }
 //
 
@@ -80,15 +81,15 @@ const watcher = () => {
   watch(['src/themes/default/bases/variables.scss', 'src/themes/default/bases/reset.scss'], build)
   watch('src/definitions/components/*.js', buildJS)
 
-  watch(['example/*.scss'], site)
-  watch(['example/**/*.pug'], viewDev)
+  // watch(['example/*.scss'], site)
+  // watch(['example/**/*.pug'], viewDev)
 }
 
 // 예제 사이트 watch & build
-const siteWatcher = () => {
-  watch(['example/style.scss'], site)
-  watch(['example/**/*.pug'], viewDev)
-}
+// const siteWatcher = () => {
+//   watch(['example/style.scss'], site)
+//   watch(['example/**/*.pug'], viewDev)
+// }
 // 에제 페이지 컴파일
 const viewDev = () => {
   return src(['example/index.pug', 'example/**/*.pug'])
@@ -133,7 +134,7 @@ const question = () => {
 module.exports.question = question;
 module.exports.clean = clean;
 module.exports.build = build;
-module.exports.devSite = series(site, siteWatcher);
+// module.exports.devSite = series(site, siteWatcher);
 module.exports.default = series(clean, parallel(viewDev, site, build, buildJS, assets), watcher, () => {
     log("Run gulp!!")
 });

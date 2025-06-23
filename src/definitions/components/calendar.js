@@ -3,6 +3,9 @@ const days = ['일', '월', '화', '수', '목', '금', '토']
 const calendar = document.querySelector('.ga-calendar');
 const wrapper = document.querySelector('.cell-wrapper');
 
+const prev = document.querySelector('.prev-month')
+const next = document.querySelector('.next-month')
+
 const getDate = () => {
     const y = new Date().getFullYear();
     const m = new Date().getMonth() + 1;
@@ -56,6 +59,7 @@ function setCalendar (year = dy, month = dm, date = dd) {
             if(i===0 && j < startDay) {
                 cell.classList.add('disabled')
                 cell.dataset.name = prevLast + (j - startDay) + 1
+                dayList.push(prevLast + (j - startDay) + 1)
             } else if(currDay <= currLast) {
                 if( j === 0) {
                     cell.classList.add('sun')
@@ -65,15 +69,18 @@ function setCalendar (year = dy, month = dm, date = dd) {
                 }
                 if( currDay === date) {
                     cell.classList.add('today')
+                    cell.classList.add('selected')
                 }
                 cell.dataset.name = currDay;
+                dayList.push(currDay)
                 currDay++
             } else {
                 cell.classList.add('disabled')
                 cell.dataset.name = nextDay
+                dayList.push(nextDay)
                 nextDay++
             }
-            dayList.push(cell)
+            // dayList.push(currDay)
             wrapper.append(cell)
         }
     }
@@ -87,8 +94,6 @@ function setCalendar (year = dy, month = dm, date = dd) {
     return dayList;
 }
 
-
-// setCalendar();
 
 
 //

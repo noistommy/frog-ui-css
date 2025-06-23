@@ -132,6 +132,9 @@ header.gnb .logo {
 .page-wrapper {
   padding: 30px;
 }
+.flex-wrap {
+  display: flex;
+}
 
 section {
   width: 100%;
@@ -318,6 +321,7 @@ section {
     }
   }
 }
+
 
 .ga-card {
   .footer {

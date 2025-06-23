@@ -22,8 +22,8 @@ router.get('/pages/calendar', function(req, res, next) {
   res.render('components/calendar',  { title: 'Calendar' });
 });
 
-router.get('/pages/card', function(req, res, next) {
-  res.render('components/card',  { title: 'Card' });
+router.get('/pages/cards', function(req, res, next) {
+  res.render('components/cards',  { title: 'Cards' });
 });
 
 router.get('/pages/checkbox', function(req, res, next) {
@@ -80,6 +80,10 @@ router.get('/pages/switch', function(req, res, next) {
 
 router.get('/pages/tabs', function(req, res, next) {
   res.render('components/tabs',  { title: 'Tabs' });
+});
+
+router.get('/pages/table', function(req, res, next) {
+  res.render('components/table',  { title: 'Table' });
 });
 
 router.get('/pages/tag', function(req, res, next) {

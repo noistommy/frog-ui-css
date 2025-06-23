@@ -1,0 +1,109 @@
+@use 'sass:color';
+@use 'sass:list';
+@use '../../theme.scss' as *;
+
+.be-message {
+  padding: 15px 20px;
+  border-radius: 4px;
+  background-color: var(--bgc);
+  border: 1px solid var(--brd);
+  color: #999;
+  margin-bottom: 5px;
+  width: 100%;
+  line-height: 1.6;
+  &:last-child {
+    margin: 0;
+  }
+  &.align {
+    &-left {
+      text-align: left;
+    }
+
+    &-center {
+      text-align: center;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+  &.icon {
+    padding-left: 48px;
+    position: relative;
+    i.icon {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 1.6em;
+    }
+  }
+  & > .title {
+    font-weight: bold;
+  }
+}
+
+.be-messages {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  .be-message {
+    width: auto;
+    flex: 1 0 auto;
+    margin: 0;
+  }
+  &.list {
+    flex-direction: column;
+  }
+
+  .be-message {
+    &.selected {
+      color: $primary;
+      background-color: $lightPrimary;
+      border-color: $primary;
+    }
+
+    &:hover {
+      background-color: var(--suf);
+    }
+
+    &.disabled {
+      pointer-events: none;
+      color: #d4d4d4;
+      background-color: #ededed;
+      border-color: #ccc;
+    }
+  }
+
+  &.grid {
+    .column {
+      &.col {
+        @for $i from 1 through $gridWhole {
+          &-#{$i} {
+            width: $gridPercent * $i * 1%;
+          }
+        }
+      }
+    }
+
+    &.divide {
+      @for $i from 1 through $gridWhole {
+        &-#{$i} > .column {
+          width: calc(100% / $i);
+        }
+      }
+    }
+  }
+}
+
+@each $color, $value in $stateColors {
+  .be-message {
+    &.#{$color} {
+      background-color: color.adjust(
+        list.nth($value, 4),
+        $lightness: 6%
+      ) !important;
+      color: list.nth($value, 1) !important;
+      border-color: list.nth($value, 1) !important;
+    }
+  }
+}

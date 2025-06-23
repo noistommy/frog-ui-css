@@ -1,0 +1,38 @@
+@use 'sass:color';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:map';
+
+@function color-contrast($bg, $fg) {
+  $luminance1: luminance($fg) + 0.05;
+  $luminance2: luminance($bg) + 0.05;
+  $ratio: calc($luminance1 / $luminance2);
+
+  @if $luminance2 > $luminance1 {
+    $ratio: 1 / $ratio;
+  }
+
+  $ratio: calc(math.round($ratio * 100) / 100);
+
+  @return $ratio;
+}
+
+@function luminance($color) {
+  $red: list.nth(linear-rgb($color), 1);
+  $green: list.nth(linear-rgb($color), 2);
+  $blue: list.nth(linear-rgb($color), 3);
+
+  @return 0.2126 * $red + 0.7152 * $green + 0.0722 * $blue;
+}
+
+@function linear-rgb($color) {
+  $r: calc(color.channel($color, 'red', $space: rgb) / 255);
+  $g: calc(color.channel($color, 'green', $space: rgb) / 255);
+  $b: calc(color.channel($color, 'blue', $space: rgb) / 255);
+
+  $r: if($r <= 0.03928, calc($r / 12.92), pow(($r + 0.055) / 1.055, 2.4));
+  $g: if($g <= 0.03928, calc($g / 12.92), pow(($g + 0.055) / 1.055, 2.4));
+  $b: if($b <= 0.03928, calc($b / 12.92), pow(($b + 0.055) / 1.055, 2.4));
+
+  @return ($r, $g, $b);
+}

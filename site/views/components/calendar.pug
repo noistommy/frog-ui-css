@@ -4,28 +4,32 @@ block title
     title #{title} Page
 
 block contents
-    .page-wrapper
-        section#calendar
-            .section-title
-                h1 Calendar
-            .section-contents
-                h4 달력
-                .ga-card.attached
-                    .contents-wrapper
-                    
-                        .ga-calendar
-                            .calendar-header 
-                                span.year
-                                span.month 
-                            .week-wrapper
-                                - var weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-                                    each week in weeks
-                                        .cell.week-cell(data-name=`${week}`)
-                            .cell-wrapper
-                                // - var month = new Date().getMonth() + 1
-                                //span.reset-btn= `${month}`
+  .page-wrapper
+    section#calendar
+      .section-title
+        h1 Calendar
+      .section-contents
+        h4 달력
+        .ga-card.attached
+          .contents-wrapper.flex-wrap
+            .ga-calendar.border
+              .calendar-header 
+                .current-date  
+                  span.year
+                  span.month 
+                .controller 
+                  button.prev-month.ga-button.icon.text.small
+                    i.xi-angle-left
+                  button.next-month.ga-button.icon.text.small
+                    i.xi-angle-right
+              .week-wrapper
+                - var weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                  each week in weeks
+                    .cell.week-cell(data-name=`${week}`)
+              .cell-wrapper
 block module 
     script(src="/js/calendar.js")
     script. 
-        setCalendar()
+        var list = setCalendar()
+        console.log(list)
                     

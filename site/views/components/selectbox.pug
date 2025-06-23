@@ -14,9 +14,8 @@ block contents
                     .contents-wrapper
                         .ga-select-box.dropdown
                             .selected-item.ga-input.icon.right
-                                //i.icon.fa.fa-magnifying-glass
                                 input(type="text", placeholder="선택하세요", readonly)
-                                i.icon.fa.fa-chevron-down
+                                i.icon.xi-angle-down
                             .select-menu
                                 .ga-list.selection
                                     each col in [1, 2, 3, 4, 5, 6]
@@ -54,9 +53,9 @@ block contents
                     .contents-wrapper
                         .ga-select-box.float
                             .selected-item.ga-input.icon.both
-                                i.icon.fa.fa-magnifying-glass
+                                i.icon.xi-search
                                 input(type="text", placeholder="선택하세요")
-                                i.icon.fa.fa-chevron-down
+                                i.icon.xi-angle-down
                             .select-menu
                                 .ga-list.selection
                                     each col in [1, 2, 3, 4, 5, 6]
@@ -84,9 +83,9 @@ block contents
                     .contents-wrapper
                         .ga-select-box.dropdown.compact
                             .selected-item.ga-input.icon.both
-                                i.icon.fa.fa-magnifying-glass
+                                i.icon.xi-search
                                 input(type="text", placeholder="선택하세요")
-                                i.icon.fa.fa-chevron-down
+                                i.icon.xi-angle-down
                             .select-menu
                                 .ga-list.selection
                                     each col in [1, 2, 3, 4, 5, 6]
@@ -119,7 +118,7 @@ block contents
                                         option(default, value=`${col}`)= '선택'
                                     else
                                         option(value=`${col}`)= `option${col}`
-                            i.icon.fa.fa-chevron-down
+                            i.icon.xi-angle-down
                     .footer 
                         - var code_s_1 = `<div class="ga-select-box">`
                         - var code_s_2 = `      <select>`
@@ -150,7 +149,7 @@ block contents
                                         option(default, value=`${col}`)= '선택'
                                     else
                                         option(value=`${col}`)= `option${col}`
-                            i.icon.fa.fa-chevron-down
+                            i.icon.xi-angle-down
                     .footer 
                         - var code_s_1 = `<div class="ga-select-box compact">`
                         - var code_s_2 = `      <select>`

@@ -1,0 +1,431 @@
+@use 'sass:map';
+// Red
+$red-palette: (
+  50: #ffe9e7,
+  100: #ffd2d0,
+  200: #ffaba7,
+  300: #ff8986,
+  400: #f9706f,
+  500: #de5c5c,
+  600: #c34849,
+  700: #af3a3c,
+  800: #9c2b2f,
+  900: #7f151d,
+);
+
+// Orange
+$orange-palette: (
+  50: #ffeadc,
+  100: #ffd5b4,
+  200: #ffb06a,
+  300: #f49437,
+  400: #e08528,
+  500: #c77111,
+  600: #ac5e00,
+  700: #965200,
+  800: #814600,
+  900: #633400,
+);
+
+// Yellow
+$yellow-palette: (
+  50: #ffebcd,
+  100: #ffd790,
+  200: #f6b623,
+  300: #dda100,
+  400: #c99200,
+  500: #ae7e00,
+  600: #946b00,
+  700: #815d00,
+  800: #6f4f00,
+  900: #553b00,
+);
+
+// Lightgreen
+$lightgreen-palette: (
+  50: #edf673,
+  100: #dbe564,
+  200: #bfc94b,
+  300: #a9b237,
+  400: #99a227,
+  500: #848d0d,
+  600: #707800,
+  700: #626800,
+  800: #535900,
+  900: #3f4300,
+);
+
+// Green
+$green-palette: (
+  50: #b7fec8,
+  100: #a7edb8,
+  200: #8bd09e,
+  300: #76ba89,
+  400: #66a97a,
+  500: #519466,
+  600: #3d7f53,
+  700: #2d7046,
+  800: #1c6138,
+  900: #004a26,
+);
+
+// Lightblue
+$lightblue-palette: (
+  50: #c4f7ff,
+  100: #ade7f0,
+  200: #91cad3,
+  300: #7cb4bd,
+  400: #6ca4ad,
+  500: #578f98,
+  600: #417a83,
+  700: #316b74,
+  800: #205d65,
+  900: #00474f,
+);
+
+// Blue
+$blue-palette: (
+  50: #e0f0ff,
+  100: #bee1ff,
+  200: #94c7ef,
+  300: #7eb1d8,
+  400: #6ea1c8,
+  500: #588cb1,
+  600: #43779c,
+  700: #32688c,
+  800: #21597d,
+  900: #004465,
+);
+
+// Deepblue
+$deepblue-palette: (
+  50: #e7eeff,
+  100: #cbdeff,
+  200: #9cc3ff,
+  300: #86ade7,
+  400: #769dd6,
+  500: #6188c0,
+  600: #4c73aa,
+  700: #3c649a,
+  800: #2c568b,
+  900: #104074,
+);
+
+// Deeppurple
+$deeppurple-palette: (
+  50: #f4eaff,
+  100: #e5d6ff,
+  200: #cbb8f0,
+  300: #b5a2d9,
+  400: #a493c8,
+  500: #8f7eb2,
+  600: #7a6a9c,
+  700: #6b5b8c,
+  800: #5c4d7d,
+  900: #473866,
+);
+
+// Purple
+$purple-palette: (
+  50: #fee7ff,
+  100: #f7d0ff,
+  200: #e8abf9,
+  300: #d196e2,
+  400: #bf86d0,
+  500: #a972ba,
+  600: #935da4,
+  700: #834f94,
+  800: #734085,
+  900: #5c2a6e,
+);
+
+// Brown
+$brown-palette: (
+  50: #ffe8ee,
+  100: #ffd1e0,
+  200: #f4adc7,
+  300: #dc98b1,
+  400: #ca88a1,
+  500: #b3748c,
+  600: #9c6078,
+  700: #8b5169,
+  800: #7b435a,
+  900: #632f45,
+);
+
+// Gray
+$gray-palette: (
+  50: #efeded,
+  100: #dddcdc,
+  200: #c1c1c1,
+  300: #ababab,
+  400: #9b9b9b,
+  500: #868686,
+  600: #727272,
+  700: #636363,
+  800: #545555,
+  900: #3f4040,
+);
+
+// All colors collection
+// $color-palettes: (
+//   red: $red-palette,
+//   orange: $orange-palette,
+//   yellow: $yellow-palette,
+//   lightgreen: $lightgreen-palette,
+//   green: $green-palette,
+//   lightblue: $lightblue-palette,
+//   blue: $blue-palette,
+//   deepblue: $deepblue-palette,
+//   deeppurple: $deeppurple-palette,
+//   purple: $purple-palette,
+//   brown: $brown-palette,
+//   gray: $gray-palette,
+// );
+
+$red-o: (
+  50: #faebee,
+  100: #f4ccd2,
+  200: #de999b,
+  300: #cf7476,
+  400: #d75757,
+  // base
+  500: #da4941,
+  600: #cb413f,
+  700: #ba3939,
+  800: #ac3332,
+  900: #9e2927,
+);
+
+$orange-o: (
+  50: #fdf3e3,
+  100: #fbe0b9,
+  200: #f9cc8c,
+  300: #f7b861,
+  400: #f5a945,
+  500: #f39c37,
+  600: #ee9133,
+  700: #e7822f,
+  800: #e0742c,
+  900: #d35f28,
+);
+
+$yellow-o: (
+  50: #fffce6,
+  100: #fff6c1,
+  200: #fef199,
+  300: #fdeb70,
+  400: #fce64f,
+  500: #fae12d,
+  600: #fad12c,
+  700: #f8b925,
+  800: #f6a11e,
+  900: #f17712,
+);
+
+$lightgreen-o: (
+  50: #f9fce9,
+  100: #f1f7c8,
+  200: #e8f3a5,
+  300: #dfee82,
+  400: #d8e968,
+  500: #d2e54f,
+  600: #c5d248,
+  700: #b4bc40,
+  800: #a3a539,
+  900: #877e2c,
+);
+
+$green-o: (
+  50: #ebf5ee,
+  100: #cee7d6,
+  200: #b0d8be,
+  300: #93caa5,
+  400: #7dbf92,
+  500: #6ab380,
+  600: #61a475,
+  700: #589168,
+  800: #50805e,
+  900: #445f4b,
+);
+
+$lightblue-o: (
+  50: #e1f1f3,
+  100: #b5dce2,
+  200: #8cc5ce,
+  300: #66afbb,
+  400: #4ca2b0,
+  500: #3c94a5,
+  600: #398594,
+  700: #33727d,
+  800: #2c5f66,
+  900: #1f3e40,
+);
+
+$blue-o: (
+  50: #e6f1f7,
+  100: #c3dded,
+  200: #a1c8e1,
+  300: #83b3d3,
+  400: #70a3ca,
+  500: #6195c2,
+  600: #5788b6,
+  700: #4c76a4,
+  800: #436692,
+  900: #2e4b77,
+);
+
+$deepblue-o: (
+  50: #e7f2f9,
+  100: #c4def1,
+  200: #a2cae8,
+  300: #85b5dc,
+  400: #72a5d5,
+  500: #6497ce,
+  600: #5b8ac1,
+  700: #5178af,
+  800: #48689d,
+  900: #3a4c7c,
+);
+
+$deeppurple-o: (
+  50: #ece9f2,
+  100: #cfc8df,
+  200: #b0a4ca,
+  300: #9180b4,
+  400: #7b65a4,
+  500: #664b9b,
+  600: #5e4695,
+  700: #533e8c,
+  800: #4a3784,
+  900: #3a2b76,
+);
+
+$purple-o: (
+  50: #f1e7f4,
+  100: #dcc3e4,
+  200: #c69cd3,
+  300: #af77c0,
+  400: #9e5db2,
+  500: #9045a7,
+  600: #8340a0,
+  700: #723997,
+  800: #63338e,
+  900: #47297e,
+);
+
+$brown-o: (
+  50: #eee3e8,
+  100: #d8b9c7,
+  200: #bf8fa3,
+  300: #a86a82,
+  400: #98556c,
+  500: #944059,
+  600: #853d54,
+  700: #71384b,
+  800: #5e3143,
+  900: #3e2632,
+);
+
+$gray-o: (
+  50: #f7f7f7,
+  100: #eeeeee,
+  200: #e3e3e3,
+  300: #d1d1d1,
+  400: #acacac,
+  500: #8b8b8b,
+  600: #646464,
+  700: #515151,
+  800: #333333,
+  900: #131313,
+);
+
+$color-palettes: (
+  'red': $red-o,
+  'orange': $orange-o,
+  'yellow': $yellow-o,
+  'lightgreen': $lightgreen-o,
+  'green': $green-o,
+  'lightblue': $lightblue-o,
+  'blue': $blue-o,
+  'deepblue': $deepblue-o,
+  'deeppurple': $deeppurple-o,
+  'purple': $purple-o,
+  'brown': $brown-o,
+  'gray': $gray-o,
+);
+// 색상 접근 함수
+@function be-color($color-name, $shade: 400) {
+  @if map.has-key($color-palettes, $color-name) {
+    $palette: map.get($color-palettes, $color-name);
+    @if map.has-key($palette, $shade) {
+      @return map.get($palette, $shade);
+    } @else {
+      @error "shade `#{$shade}` not found in color `#{$color-name}`";
+    }
+  } @else {
+    @error "color `#{$color-name}` not found";
+  }
+}
+
+// 사용 예시 믹신
+@mixin generate-color-classes() {
+  // 배경색 클래스
+  @each $color-name, $palette in $color-palettes {
+    .bg-#{'' + $color-name} {
+      background-color: getUserColor($color-name);
+
+      &-light {
+        background-color: getUserColor($color-name, 200);
+      }
+
+      &-dark {
+        background-color: getUserColor($color-name, 700);
+      }
+    }
+
+    // 개별 색조 클래스
+    @each $shade, $value in $palette {
+      .bg-#{'' + $color-name}-#{$shade} {
+        background-color: $value;
+      }
+    }
+
+    // 텍스트 색상 클래스
+    .text-#{'' + $color-name} {
+      color: getUserColor($color-name);
+    }
+
+    @each $shade, $value in $palette {
+      .text-#{'' + $color-name}-#{$shade} {
+        color: $value;
+      }
+    }
+
+    // 테두리 색상 클래스
+    .border-#{'' + $color-name} {
+      border-color: getUserColor($color-name);
+    }
+  }
+}
+
+// 사용 예시:
+// @include generate-color-classes();
+
+/* 
+  사용 예시:
+  
+  1. 개별 색상 접근하기:
+  .my-element {
+    background-color: be-color(red);             // 기본 색상(400)
+    color: be-color(deepblue, 700);              // 특정 색조 지정
+    border: 1px solid be-color(lightgreen, 300);
+  }
+  
+  2. CSS 클래스 생성하기:
+  @include generate-color-classes();
+  
+  3. 생성된 클래스 사용하기:
+  <div class="bg-red text-white">빨간 배경</div>
+  <div class="bg-blue-200 text-deepblue-800">밝은 파란 배경, 어두운 글자</div>
+*/

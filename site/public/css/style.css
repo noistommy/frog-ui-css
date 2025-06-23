@@ -129,6 +129,10 @@ header.gnb .logo .sub-logo {
   color: #fff;
 }
 
+.flex-wrap {
+  display: flex;
+}
+
 section {
   width: 100%;
   max-width: 1000px;

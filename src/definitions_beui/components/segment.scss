@@ -1,0 +1,60 @@
+@use '../../theme.scss' as *;
+$segmentBgColor: var(--depth-bg);
+$segmentBoxShadow: var(--depth-bs);
+$segmentHorizontalPadding: 16px;
+$segmentVerticalPadding: 16px;
+
+.be-segments {
+  border-radius: 8px;
+  .be-segment {
+    margin: 0;
+    border-radius: 0;
+    &.border {
+      border: 0;
+    }
+    &.float {
+      box-shadow: none;
+    }
+  }
+  &.border {
+    border: 1px solid var(--brd);
+    .be-segment.border {
+      border-bottom: 1px solid var(--brd);
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+  &.float {
+    box-shadow: $segmentBoxShadow;
+  }
+}
+.be-segment {
+  border-radius: $baseBorderRadius;
+  padding: $segmentHorizontalPadding;
+  background-color: $segmentBgColor;
+  margin-bottom: 12px;
+  &:last-child {
+    margin: 0;
+  }
+  &.border {
+    border: 1px solid var(--brd);
+  }
+  &.float {
+    box-shadow: $segmentBoxShadow;
+  }
+  &.align {
+    &-left {
+      text-align: left;
+    }
+    &-center {
+      text-align: center;
+    }
+    &-right {
+      text-align: right;
+    }
+  }
+  &.surface {
+    background-color: var(--suf);
+  }
+}

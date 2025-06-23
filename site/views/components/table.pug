@@ -78,13 +78,13 @@ block contents
                                     .ga-pagination.number.align-center.small
                                         - var items = [2, 3, 4, 5]
                                         .pagination-nav
-                                            i.fa.fa-chevron-left
+                                            i.xi-angle-left
                                         .pagination-page-wrapper
                                             .pagination-num.active 1
                                             each item in items
                                                 .pagination-num=`${item}`
                                         .pagination-nav
-                                            i.fa.fa-chevron-right
+                                            i.xi-angle-right
             .section-contents
                 h4.contents-title table with Form Element
                 .contents-wrapper
@@ -105,7 +105,7 @@ block contents
                                                     option(default, value=`${col}`)= '선택'
                                                 else
                                                     option(value=`${col}`)= `option${col}`
-                                        i.icon.fa.fa-chevron-down
+                                        i.icon.xi-angle-down
                             tr
                                 td.label.align-center(rowspan="2") 택일
                                 td.label 택 1

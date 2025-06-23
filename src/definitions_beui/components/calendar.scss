@@ -1,0 +1,179 @@
+@use 'sass:color';
+@use '../../theme.scss' as *;
+
+$issue_red: #d75757;
+
+$calendarBorderRadius: 14px;
+.be-calendar {
+  --grid-size: 7;
+  --cell-size: 42px;
+  --cell-gap: 1px;
+  //background-color: #d4d4d4;
+  border-radius: $calendarBorderRadius;
+  padding: 1em;
+  height: auto;
+  &.border {
+    border: 1px solid var(--brd);
+  }
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin: 5px 0 1em;
+    > div {
+      order: 2;
+    }
+    .current-date {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      line-height: 1;
+    }
+    &.symmetry {
+      .current-date {
+        text-align: center;
+        flex-grow: 1;
+      }
+      .prev-month {
+        order: 1;
+      }
+    }
+  }
+  .calendar-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .week-wrapper,
+  .cell-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    //background-color: #666;
+    width: 100%;
+    height: calc((var(--cell-size) + var(--cell-gap) * 2) * 6);
+    .cell {
+      background-color: var(--bgc);
+      position: absolute;
+      z-index: 2;
+      border-radius: 2px;
+      width: var(--cell-size);
+      height: var(--cell-size);
+      top: calc(
+        var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap)
+      );
+      left: calc(
+        var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap)
+      );
+      transition: 250ms linear;
+      &.prev,
+      &.next,
+      &.disabled {
+        pointer-events: none;
+        color: #c4c4c499;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        inset: 2px;
+
+        // background-color: #fff;
+        // opacity: 0.3;
+      }
+      &:after {
+        content: attr(data-name);
+        position: absolute;
+        font-weight: 500;
+        font-size: 0.8em;
+        inset: 4px;
+        text-align: center;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &.sun:after {
+        color: #dc4444;
+      }
+      &.sat:after {
+        color: #5b81cf;
+      }
+      &.today:before {
+        background-color: #d6d6d6;
+        border-radius: 50%;
+      }
+      &.today:after {
+        color: #ffffff;
+      }
+      &:hover:not(.week-cell) {
+        background-color: #ebebeb;
+        transition-duration: 0.25s;
+      }
+      &.selected:not(.prev):not(.next):after {
+        border-radius: 50%;
+        background-color: $primary;
+        color: #ffffff;
+      }
+    }
+  }
+  .week-wrapper {
+    display: flex;
+    gap: var(--cell-gap);
+    margin: var(--cell-gap);
+    height: auto;
+    font-size: 0.8em;
+    .week-cell {
+      position: relative;
+      color: #676767;
+      text-align: center;
+      line-height: 1em;
+      vertical-align: baseline;
+      &:after {
+        font-weight: 700;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: calc(100% + 2px);
+        height: 80%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: #ebebeb;
+      }
+      &:first-child:before {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+      }
+      &:last-child:before {
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+      }
+    }
+  }
+}
+
+.be-date-picker {
+  position: relative;
+  .default-date-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    border-radius: $calendarBorderRadius;
+    box-shadow: 0 0 0 1px var(--brd);
+
+    input {
+      outline: 0;
+      font-weight: 600;
+      color: #555;
+    }
+  }
+  .calender-wrapper {
+    position: absolute;
+    top: 100%;
+    margin-top: 10px;
+    background-color: var(--bgc);
+  }
+}

@@ -1,0 +1,88 @@
+@use 'sass:color';
+@use 'sass:list';
+@use '../../theme.scss' as *;
+
+$badgeBg: var(--hover-suf);
+$badgeFontSize: relativePx(11);
+$badgeFontWeight: 600;
+$badgeSize: relativePx(16);
+$baseBadgeColor: $baseButtonBg;
+$badgeBorderRadius: $badgeSize;
+$badgeVerticalPadding: 4px;
+$badgeHorizontalPadding: 6px;
+$badgePadding: $badgeVerticalPadding $badgeHorizontalPadding;
+$badgeBorder: 0 0 0 1px rgba(255, 255, 255, 0.8);
+$badgeShadow: -2px 2px 0px 0px rgba(0, 0, 0, 0.2);
+$badgeOffset: ($badgeSize * 0.5);
+$badgeOffsetLeft: calc(100% - $badgeOffset);
+
+.be-badge {
+  cursor: default;
+  vertical-align: baseline;
+  display: inline-block;
+  font-size: $badgeFontSize;
+  font-weight: $badgeFontWeight;
+  text-align: center;
+  min-width: $badgeSize;
+  // min-height: $badgeSize;
+  line-height: 1em;
+  padding: $badgePadding;
+  border-radius: $badgeBorderRadius;
+  background-color: $badgeBg;
+  /*color: #ffffff;*/
+  /*text-shadow: 0 0 2px #909090;*/
+  position: absolute;
+  z-index: 999;
+  top: $badgeOffset * -1;
+  right: $badgeOffset * -1;
+  box-shadow: $badgeBorder;
+  &.shadow {
+    box-shadow: $badgeShadow;
+    // border: 0;
+  }
+  &.mark {
+    min-width: 8px;
+    min-height: 8px;
+    padding: 0;
+    top: -3px;
+    right: -3px;
+  }
+  &.align {
+    &-left {
+      left: $badgeOffsetLeft;
+      right: auto;
+    }
+    &-center {
+      left: 100%;
+      right: auto;
+      transform: translate(-50%, 0);
+    }
+    &-right {
+      left: auto;
+      right: $badgeOffset * -1;
+    }
+  }
+}
+
+@each $color, $values in list.join($brandColors, $stateColors) {
+  $bgColor: #{list.nth($values, 1)};
+  $hoverColor: #{list.nth($values, 2)};
+  $textColor: #{list.nth($values, 3)};
+  .be-badge {
+    &.#{$color} {
+      background-color: $hoverColor;
+      color: $textColor;
+    }
+  }
+}
+
+@each $color, $value in $colors {
+  $hoverColor: color.adjust($value, $lightness: -10%);
+  $textColor: $white;
+  .be-badge {
+    &.#{$color} {
+      background-color: $value;
+      color: $white;
+    }
+  }
+}

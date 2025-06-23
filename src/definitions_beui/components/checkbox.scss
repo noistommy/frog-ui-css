@@ -1,0 +1,130 @@
+@use '../../theme.scss' as *;
+
+.be-checkbox {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 14px;
+  vertical-align: baseline;
+  input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+  //라벨
+  label,
+  .label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1em;
+    &:before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      display: block;
+      border: 1px solid var(--brd);
+      background-color: var(--suf);
+      border-radius: 2px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      border: 2px solid var(--suf);
+      border-left: 0;
+      border-top: 0;
+      width: 8px;
+      height: 10px;
+      transition: transform 100ms ease;
+      transform: rotate(0deg) scale(0);
+    }
+  }
+  &.radio {
+    label,
+    .label {
+      &:before {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+      }
+      &:after {
+        background-color: var(--suf);
+        border-radius: 50%;
+        border: 0;
+        width: 8px;
+        height: 8px;
+        top: 4px;
+        left: 4px;
+        transform: scale(0);
+      }
+    }
+  }
+  &.checked {
+    label,
+    .label {
+      &:before {
+        background-color: $primary;
+        border-color: $primary;
+      }
+      &:after {
+        transform: translateY(-50%) rotate(45deg) scale(1);
+      }
+    }
+    &.radio {
+      label,
+      .label {
+        &:after {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  &.indeter:not(.radio) {
+    label,
+    .label {
+      &:after {
+        top: 8px;
+        left: 3px;
+        width: 10px;
+        height: 0;
+        border-width: 3px;
+        transform: translateY(-50%) rotate(0) scale(0);
+      }
+    }
+    &.checked {
+      label,
+      .label {
+        &:after {
+          transform: translateY(-50%) rotate(0) scale(1);
+        }
+      }
+    }
+  }
+  &.disabled {
+    .checkbox {
+      background-color: #d6d6d6;
+      border-color: #ebebeb;
+    }
+  }
+  &:last-child {
+    margin: 0;
+  }
+  &:hover {
+    label,
+    .label {
+      &:before {
+        border-color: $primary;
+      }
+    }
+  }
+  & + .be-checkbox {
+    margin-left: 10px;
+  }
+}

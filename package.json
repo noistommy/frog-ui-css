@@ -7,6 +7,7 @@
     "start": "node ./site/bin/www",
     "dev": "nodemon ./site/bin/www & npm run scss",
     "scss": "sass --watch ./site/public/**/*.scss ./site/public/css/*.css",
+    "xeicon": "bower install xeicon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "noistommy@gmail.com",
