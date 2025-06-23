@@ -1,45 +1,11 @@
-//- - var menuItems = [
-//- -   { name: 'Base', path: 'base' },
-//- -   { name: 'Colors', path: 'colors' },
-//- -   { name: 'Button', path: 'button' },
-//- -   { name: 'Input', path: 'input' },
-//- -   { name: 'Tag', path: 'tag' },
-//- -   { name: 'CheckBox', path: 'checkbox' },
-//- -   { name: 'Switch', path: 'switch' },
-//- -   { name: 'Badge', path: 'badge' },
-//- -   { name: 'Form', path: 'form' },
-//- -   { name: 'List', path: 'list' },
-//- -   { name: 'SelectBox', path: 'selectbox' },
-//- -   { name: 'Message', path: 'message' },
-//- -   { name: 'Tabs', path: 'tabs' },
-//- -   { name: 'Cards', path: 'cards' },
-//- -   { name: 'Table', path: 'table' },
-//- -   { name: 'Pagination', path: 'pagination' },
-//- -   { name: 'Panel', path: 'panel' },
-//- -   { name: 'Grid', path: 'grid' },
-//- -   { name: 'Grid2', path: 'grid2' },
-//- -   { name: 'Calendar', path: 'calendar' },
-//- -   { name: 'Modal', path: 'modal' },
-//- -   { name: 'Toast', path: 'toast' }
-//- - ]
-
-//- - var path = '/'
-
-//- .ui-list
-//-   .menu-header 
-//-     a(href=`${path}`).bold Frog UI
-//-   .ga-list
-//-     each item in menuItems
-//-       li.nav-item.item
-//-         a(href=`${path}/pages/${item.path}`)= item.name
-
 - var path = ''
+- var selected = title.toLowerCase()
 - var menuItems = ['base', 'colors', 'button', 'input', 'tag', 'checkbox', 'switch', 'badge', 'form', 'list', 'selectbox', 'message', 'tabs', 'cards', 'table', 'pagination', 'panel', 'grid', 'grid2', 'calendar', 'modal', 'toast']
 
 .ui-list
     .menu-header 
         a(href=`${path}`).bold Frog UI
-    .ga-list
+    .ga-list.selection
         each item in menuItems
-            li.nav-item.item
+            li.nav-item.item(class=`${selected === item ? 'selected' : '11'}`)
                 a(href=`${path}/pages/${item}`)= item

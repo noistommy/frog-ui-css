@@ -261,12 +261,9 @@ section {
 #list {
   .ga-list {
     max-width: 250px;
-    border: 1px solid #ebebeb;
+    border: 1px solid var(--brd);
     .item {
       padding: 10px;
-      &:hover {
-        background-color: #f2f2f2;
-      }
     }
   }
 }

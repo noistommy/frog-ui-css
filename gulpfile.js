@@ -80,31 +80,6 @@ const watcher = () => {
   watch(['src/themes/default/**/*.scss','src/definitions/**/**/*.scss'], build)
   watch(['src/themes/default/bases/variables.scss', 'src/themes/default/bases/reset.scss'], build)
   watch('src/definitions/components/*.js', buildJS)
-
-  // watch(['example/*.scss'], site)
-  // watch(['example/**/*.pug'], viewDev)
-}
-
-// 예제 사이트 watch & build
-// const siteWatcher = () => {
-//   watch(['example/style.scss'], site)
-//   watch(['example/**/*.pug'], viewDev)
-// }
-// 에제 페이지 컴파일
-const viewDev = () => {
-  return src(['example/index.pug', 'example/**/*.pug'])
-    .pipe(pug())
-    .pipe(dest('./demo',{sourcemaps:false}))
-}
-
-const site = () => {
-  return src(['example/style.scss'])
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(concat('style.css'))
-    .pipe(minifyCSS())
-    .pipe(dest('./demo'))
 }
 
 // install 여부 확인 (테스트 중...)
@@ -129,12 +104,10 @@ const question = () => {
         }
     }))
 }
-// ... existing code ...
 
 module.exports.question = question;
 module.exports.clean = clean;
 module.exports.build = build;
-// module.exports.devSite = series(site, siteWatcher);
-module.exports.default = series(clean, parallel(viewDev, site, build, buildJS, assets), watcher, () => {
+module.exports.default = series(clean, parallel(build, buildJS, assets), watcher, () => {
     log("Run gulp!!")
 });

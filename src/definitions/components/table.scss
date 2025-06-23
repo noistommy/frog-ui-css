@@ -1,17 +1,21 @@
+$tableBorderRaius: 14px;
+$thBorderRaius: 13px;
 .table-title {
-  background-color: lighten($headerBackgroundColor, 5);
+  background-color: var(--suf);
+  color: var(--txt);
   padding: 10px 20px;
 }
 table.ga-table {
   width: 100%;
   text-align: $textAlign;
-  background-color: $background;
+  background-color: var(--bgc);
   margin: $margin;
   border: $border;
-  color: $tableFontColor;
+  color: var(--txt);
   font-size: $tableFontSize;
   border-collapse: $borderCollapse;
   border-spacing: $borderSpacing;
+  border-radius: $tableBorderRaius;
   &:first-child {
     margin-top: 0;
   }
@@ -25,9 +29,9 @@ table.ga-table {
     tr {
       th {
         cursor: auto;
-        background: $headerBackgroundColor;
+        background: var(--suf);
         text-align: inherit;
-        color: rgba(0,0,0,.87);
+        color: var(--txt);
         padding: $inputPadding;
         vertical-align: inherit;
         text-transform: none;
@@ -36,6 +40,10 @@ table.ga-table {
         white-space: nowrap;
         &:first-child {
           border-left: none;
+          border-top-left-radius: $thBorderRaius;
+        }
+        &:last-child {
+          border-top-right-radius: $thBorderRaius;
         }
       }
     }
@@ -63,7 +71,7 @@ table.ga-table {
       border-top: $border;
       line-height: $inputLineHeight;
       &.label {
-        background-color: $headerBackgroundColor;
+        background-color: var(--suf);
       }
     }
     th, td {
