@@ -42,7 +42,7 @@
         top: -0.15em;
         left: -0.15em;
         background-color: #fff;
-        border-radius: $switchRadiusSize;
+        border-radius: $switchRadiusInside;
         //border: 1px solid #c4c4c4;
         box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.16);
         transition: all 250ms ease-out;
@@ -79,7 +79,7 @@
         background-color: $primary;
         color: $white;
         font-weight: 700;
-        border-radius: $switchRadiusSize;
+        border-radius: $switchRadiusInside;
         //box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.36);
       }
       & ~ .on {
@@ -91,7 +91,7 @@
         background-color: $primary;
         color: $white;
         font-weight: 700;
-        border-radius: $switchRadiusSize;
+        border-radius: $switchRadiusInside;
         //box-shadow: 0 0 5px 0 #2985DB;
       }
       & ~ .off {
@@ -101,7 +101,7 @@
       }
     }
     &.round {
-      border-radius: 1em;
+      border-radius: calc(1em + 2px);
       span.on, span.off {
         border-radius: 1em;
       }

@@ -123,7 +123,7 @@ section {
   //border: 1px solid #d6d6d6;
   margin-bottom: 20px;
   .section-title {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #efefef;
     h1 {
       font-size: 3em;
@@ -131,6 +131,7 @@ section {
     }
     .section-desc {
       color: #d6d6d6;
+      font-size: 1.2em;
     }
   }
   .section-contents {
@@ -183,9 +184,11 @@ section {
   .subWord {
     color: #ababab
   }
-  p {
-    letter-spacing: 5px;
-    font-weight: 500;
+  .contents-wrapper {
+    p {
+      letter-spacing: 5px;
+      font-weight: 500;
+    }
   }
   .pretendard {
     font-family: 'Pretendard';

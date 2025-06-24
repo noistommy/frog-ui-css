@@ -1,2 +1,3 @@
 $switchRadiusSize: $baseInputRadius;
 //$switchRadiusSize: 20px;
+$switchRadiusInside: calc($baseInputRadius - 2px);
