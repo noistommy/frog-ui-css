@@ -4,6 +4,7 @@
     --bgc: #{map.get($grays, 'gray-0')};
     --txt: #{map.get($grays, 'gray-95')};
     --brd: #{map.get($grays, 'gray-15')};
+    
     --suf: #{map.get($grays, 'gray-5')};
     --hover-suf: #{map.get($grays, 'gray-10')};
 
@@ -22,11 +23,12 @@
         --bgc: #{map.get($grays, 'gray-95')};
         --txt: #{map.get($grays, 'gray-0')};
         --brd: #{map.get($grays, 'gray-85')};
+
         --suf: #{map.get($grays, 'gray-90')};
         --hover-suf: #{map.get($grays, 'gray-90')};
 
-        // --depth-bg: #{map.get($grays, 'gray-80')};
-        --depth-bg: rgba(0, 0, 0, 0,2);
+        --depth-bg: #{map.get($grays, 'gray-80')};
+        // --depth-bg: rgba(0, 0, 0, 0.2);
         --depth-bs: none;
     }
 }

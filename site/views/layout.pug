@@ -38,9 +38,12 @@ html
                 .github
                     a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
                         i.xi-github
-        .main-container.container.main
+        .main-container.main
+            //- .left-part 
+            //-     include lnb
             .right-part
-                block contents
+                .container.center
+                    block contents
         block module
         block js-module
         
