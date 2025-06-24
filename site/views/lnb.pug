@@ -1,11 +1,12 @@
 - var path = ''
-- var selected = title.toLowerCase()
+- var selected = title?.toLowerCase()
 - var menuItems = ['base', 'colors', 'button', 'input', 'tag', 'checkbox', 'switch', 'badge', 'form', 'list', 'selectbox', 'message', 'tabs', 'cards', 'table', 'pagination', 'panel', 'grid', 'grid2', 'calendar', 'modal', 'toast']
 
 .ui-list
     .menu-header 
         a(href=`${path}`).bold Frog UI
-    .ga-list.selection
-        each item in menuItems
-            li.nav-item.item(class=`${selected === item ? 'selected' : '11'}`)
-                a(href=`${path}/pages/${item}`)= item
+    .menu-contents
+        .ga-list.selection
+            each item in menuItems
+                li.nav-item.item(class=`${selected === item ? 'selected' : '11'}`)
+                    a(href=`${path}/pages/${item}`)= item

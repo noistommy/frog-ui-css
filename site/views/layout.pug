@@ -18,31 +18,29 @@ html
         link(href="/frogui.css", rel="stylesheet")
         link(href="/css/style.css", rel="stylesheet")
     body
-        .side-menu
-            .background
-            .menu-wrapper
-                include lnb
-        header.gnb
-            .logo 
-                span FROG 
-                //- div.sub-logo Fix, Refactor, Optimize, Grow!!
-                div.sub-logo Frontend Renders On Grid...
-            nav.main-menu
-                .toggle-menu
-                    .ga-button.icon.circle.show-menu
-                        i.xi-bars
-            nav.sub-menu
-                .mode
-                    .ga-button.icon.circle.toggle-mode
-                        i.xi-sun-o
-                .github
-                    a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
-                        i.xi-github
-        .main-container.main
-            //- .left-part 
-            //-     include lnb
-            .right-part
-                .container.center
+        .container.center
+            header.gnb
+                nav.main-menu
+                    .toggle-menu
+                        .ga-button.icon.circle.show-menu
+                            i.xi-bars
+                .logo 
+                    span FROG 
+                    //- div.sub-logo Fix, Refactor, Optimize, Grow!!
+                    //- div.sub-logo Frontend Renders On Grid...
+                    div.sub-logo For Real, Only Good!!
+                nav.sub-menu
+                    .mode
+                        .ga-button.icon.circle.toggle-mode
+                            i.xi-sun-o
+                    .github
+                        a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
+                            i.xi-github
+            .main-container.main
+                .left-part 
+                    .side-menu
+                        include lnb
+                .right-part
                     block contents
         block module
         block js-module

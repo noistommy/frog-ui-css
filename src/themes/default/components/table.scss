@@ -9,7 +9,7 @@ $borderCollapse: separate;
 $borderSpacing: 0;
 $textAlign: left;
 
-$tableFontColor: #2c3e50;
+$tableFontColor: var(--txt);
 $tableFontSize: 13px;
 
 // Row
@@ -21,4 +21,4 @@ $cellHorizontalPadding: relativePx(8);
 $cellPadding: $cellVerticalPadding $cellHorizontalPadding;
 $cellTextAlign: inherit;
 
-$headerBackgroundColor: #ebebeb;
+$headerBackgroundColor: var(--hover-suf);

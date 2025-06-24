@@ -9,6 +9,7 @@ let currentMode;
 const sideMenu = document.querySelector('.side-menu');
 const toggleBtn = document.querySelector('.toggle-mode');
 const showMenu = document.querySelector('.show-menu');
+const mainContainer = document.querySelector('.main');
 function toggleMode()  {
     if (document.documentElement.classList.contains('light-mode')) {
         document.documentElement.classList.remove('light-mode')
@@ -25,27 +26,29 @@ function toggleMode()  {
         toggleBtn.innerHTML = `<i class="xi-${currentMode === "dark" ? "sun" : "moon"}"></i>`
     }
 }
-function toggleMenu() {
-    const sideMenu = document.querySelector('.side-menu')
-    let stateMenu = sideMenu.classList.contains('open')
-    if (stateMenu) {
-        sideMenu.classList.remove('open')
-    } else {
-        sideMenu.classList.add('open')
-    }
-}
+// function toggleMenu() {
+//     console.log('click')
+//     const mainContainer = document.querySelector('.main');
+//     let isOpen = mainContainer.classList.contains('open')
+//     if (isOpen) {
+//         mainContainer.classList.remove('open')
+//     } else {
+//         mainContainer.classList.add('open')
+//     }
+// }
 toggleMode()
 
 if (toggleBtn) {
     toggleBtn.addEventListener('click', () => toggleMode())
 }
+
 if(showMenu) {
     showMenu.addEventListener('click', () => {
-        sideMenu.classList.add('open')
-    })
-    
-    sideMenu.addEventListener('click', () => {
-        sideMenu.classList.remove('open')
-    })    
+        let isOpen = mainContainer.classList.contains('open')
+        if (isOpen) {
+            mainContainer.classList.remove('open')
+        } else {
+            mainContainer.classList.add('open')
+        }
+    })   
 }
-
