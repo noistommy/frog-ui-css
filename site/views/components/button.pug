@@ -225,10 +225,11 @@ block contents
                             .in-badge.secondary Sale
                     .footer
                         - var code = '<button class="ga-button badge">\n    <sapn class="in-badge">B</span>\n    버튼 텍스트\n</button>'
+                        - var code0 = '<!-- badge 사용 시 fluid 속성을 사용 할 수 없습니다 -->'
                             pre
                                 code.language-markup
                                     | #{code}
-                                    | //  badge 사용 시 fluid 속성을 사용 할 수 없습니다
+                                    | #{code0}
                 h4.contents-title Text
                 .ga-card.attached
                     .contents-wrapper

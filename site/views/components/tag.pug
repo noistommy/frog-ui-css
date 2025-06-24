@@ -38,11 +38,11 @@ block contents
                         - var code2= '<div class="ga-tag dot" />'
                             pre
                                 code.language-markup
-                                    | // 라벨 타입
+                                    | #{`<!-- Label Type -->`}
                                     | #{code}
-                                    | // 선 타입
+                                    | #{`<!-- Line Type -->`}
                                     | #{code1}
-                                    | // 점 타입
+                                    | #{`<!-- Dot Type -->`}
                                     | #{code2}
                 h4.contents-title icon (only label type)
                 .ga-card.attached
@@ -70,9 +70,9 @@ block contents
                         - var code1 = '<div class="ga-tag label">\n    <i class="icon right fa fa-icon" />\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
-                                    | // Left
+                                    | #{`<!-- Left -->`}
                                     | #{code}
-                                    | // Right
+                                    | #{`<!-- Right -->`}
                                     | #{code1}
                 h4.contents-title Tags
                 .ga-card.attached
@@ -112,7 +112,7 @@ block contents
                         - var code = '<div class="ga-tag label { Brand | Status }">{ Tag Contents }</div>'
                             pre
                                 code.language-markup
-                                    | // primary, secondary, success, danger, info, attention, importance
+                                    | #{`<!-- primary, secondary, success, danger, info, attention, importance -->`}
                                     | #{code}
                 h4.contents-title Colors
                 .ga-card.attached
@@ -132,5 +132,5 @@ block contents
                         - var code = '<div class="ga-tag label { Colors }">{ Tag Contents }</div>'
                             pre
                                 code.language-markup
-                                    | // red, orange, yellow, light-green, light-blue, blue, deep-blue, deep-purple, purple, brown, gray
+                                    | #{`<!-- red, orange, yellow, light-green, light-blue, blue, deep-blue, deep-purple, purple, brown, gray -->`}
                                     | #{code}

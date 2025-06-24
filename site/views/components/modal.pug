@@ -12,33 +12,35 @@ block contents
                     p Overlay dialog UI for alerts or focused interactions.
             .section-contents
                 h4.contents-title 기본
-                .contents-wrapper
-                    .ga-modal
-                        .modal
-                            .modal-header
-                                .title 모달 제목
-                                .close-btn
-                                    i.xi-close
-                            .modal-contents
-                                div.contents 모달 내용
-                            .modal-footer
-                                button.ga-button.primary 확인
-                                button.ga-button.secondary.outline 취소
-            .section-contents
-                h4.contents-title 실행
-                .contents-wrapper
-                    button.ga-button.green.show-btn SHOW MODAL
-                    .ga-modal-container.ga-modal-background
+                .ga-card
+                    .contents-wrapper
                         .ga-modal
                             .modal
                                 .modal-header
                                     .title 모달 제목
-                                    .close-btn.close
+                                    .close-btn
                                         i.xi-close
                                 .modal-contents
                                     div.contents 모달 내용
                                 .modal-footer
                                     button.ga-button.primary 확인
                                     button.ga-button.secondary.outline 취소
+            .section-contents
+                h4.contents-title 실행
+                .ga-card
+                    .contents-wrapper
+                        button.ga-button.green.show-btn SHOW MODAL
+                        .ga-modal-container.ga-modal-background
+                            .ga-modal
+                                .modal
+                                    .modal-header
+                                        .title 모달 제목
+                                        .close-btn.close
+                                            i.xi-close
+                                    .modal-contents
+                                        div.contents 모달 내용
+                                    .modal-footer
+                                        button.ga-button.primary 확인
+                                        button.ga-button.secondary.outline 취소
 block module 
     script(src="/js/modal.js")

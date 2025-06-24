@@ -19,10 +19,9 @@ block contents
                                 | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `<div class="ga-card">\n       <-- insert contents -->\n  </div>`
-                            pre 
-                                code.language-markup 
-                                    | #{code}
+                            - var code = `\n<div class=\"ga-card\">\n       <!-- insert contents -->\n  </div>\n`
+                            pre
+                                code.language-markup= code
                 h4.contents-title Title
                 .ga-card.attached
                     .contents-wrapper.contents
@@ -31,10 +30,9 @@ block contents
                             .contents Contents 영역
                     .footer 
                         .code-wrapper
-                            - var code = `<div class="ga-card">\n       <div class="title">Title</div>\n       <-- insert contents -->\n  </div>`
-                            pre 
-                                code.language-markup 
-                                    | #{code}
+                            - var code = `\n<div class=\"ga-card\">\n       <div class=\"title\">Title</div>\n       <!-- insert contents -->\n  </div>\n`
+                            pre
+                                code.language-markup= code
                 h4.contents-title Attached (header, footer)
                 .ga-card.attached
                     .contents-wrapper.contents
@@ -45,15 +43,6 @@ block contents
                             .footer Footer 영역
                     .footer 
                         .code-wrapper
-                            - var code_s = `<div class="ga-card"></div>`
-                            - var code_c_1 = `    <div class="header">Header contents</div>`
-                            - var code_c_2 = `    contents`
-                            - var code_c_3 = `    <div class="footer">Footer contents</div>`
-                            - var code_f = `</div>`
-                            pre 
-                                code.language-markup 
-                                    | #{code_s}
-                                    | #{code_c_1}
-                                    | #{code_c_2}
-                                    | #{code_c_3}
-                                    | #{code_f}
+                            - var code = `\n<div class=\"ga-card\"></div>\n    <div class=\"header\">Header contents</div>\n    <!-- contents -->\n    <div class=\"footer\">Footer contents</div>\n</div>\n`
+                            pre
+                                code.language-markup= code

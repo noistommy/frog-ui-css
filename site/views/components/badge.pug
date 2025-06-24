@@ -52,9 +52,9 @@ block contents
                         - var code1 = '<div class="some element">\n    <span class="ga-badge mark" />\n</div>'
                             pre
                                 code.language-markup
-                                    | // float type
+                                    | #{`<!-- Float Type -->`}
                                     | #{code}
-                                    | // mark type
+                                    |  #{`<!-- Mark Type -->`}
                                     | #{code1}
                 h4.contents-title 원과 함꼐
                 .ga-card.attached
@@ -165,6 +165,6 @@ block contents
                         - var code = '<div class="some element">\n    <span class="ga-badge { Colors }">{ Badge Contents }</span>\n</div>'
                             pre
                                 code.language-markup
-                                    | // red, orange, yellow, light-green, light-blue, blue, 
-                                    | // deep-blue, deep-purple, purple, brown, gray
+                                    | #{`<!-- red, orange, yellow, light-green, light-blue, blue -->`} 
+                                    | #{`<!-- deep-blue, deep-purple, purple, brown, gray -->`}  
                                     | #{code}

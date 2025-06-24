@@ -1,11 +1,11 @@
 const openBtn = document.querySelector('.open-btn');
 const clearBtn = document.querySelector('.clear-btn');
 const statusIcon = {
-  success: 'circle-check',
-  info: 'circle-info',
-  danger: 'circle-exclamation',
-  attention: 'triangle-exclamation',
-  importance: 'star'
+  success: 'xi-check-circle',
+  info: 'xi-info',
+  danger: 'xi-error',
+  attention: 'xi-warning',
+  importance: 'xi-star'
 
 }
 
@@ -98,7 +98,7 @@ function toastBoard () {
     }
     if (opt.toastIcon) {
       iconEl.classList.add('toast-close')
-      iconEl.innerHTML = `<i class="fa fa-${statusIcon[type] || 'hexagon-exclamation'}" />`
+      iconEl.innerHTML = `<i class="${statusIcon[type] || 'xi-info'}" />`
       toastEl.appendChild(iconEl)
     }
     if (opt.round) {
@@ -112,7 +112,7 @@ function toastBoard () {
   const setCloseButton = () => {
     const closeEl = document.createElement('div')
     closeEl.classList.add('toast-close')
-    closeEl.innerHTML = `<i class="fa fa-xmark" />`
+    closeEl.innerHTML = `<i class="xi-close" />`
     return closeEl
   }
   const clearContainer = () => {
@@ -142,7 +142,7 @@ openBtn.addEventListener('click', (e) => {
     toastIcon: true,
     closeButton: true,
     clickToClose: true,
-    theme: 'icon-bg',
+    theme: '',
     round: true
   })
   // setInterval( () => {

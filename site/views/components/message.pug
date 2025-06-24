@@ -19,7 +19,7 @@ block contents
                             .msg-title.bold Title
                             .msg-contents contents
                     .footer 
-                        - var code = `<div class="ga-message">\n        // contents\n  </div>`
+                        - var code = `<div class="ga-message">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
                                 | #{code}
@@ -32,7 +32,7 @@ block contents
                         .ga-message.attention Attention
                         .ga-message.importance Importance
                     .footer 
-                        - var code = `<div class="ga-message { status }">\n        // contents\n  </div>`
+                        - var code = `<div class="ga-message { status }">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
                                 | #{code}

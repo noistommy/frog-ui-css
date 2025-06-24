@@ -153,11 +153,11 @@ block contents
                         - var code2 = '<div class="ga-input icon both">\n    <i class="fa fa-icon"></i>\n    <input type="text" placeholder="입력하세요" />\n    <i class="fa fa-icon"></i>\n</div>'
                             pre
                                 code.language-markup
-                                    | // Left
+                                    | #{`<!-- Left -->`}
                                     | #{code}
-                                    | // Right + Icon link 연결
+                                    | #{`<!-- Right + Icon link 연결 -->`} 
                                     | #{code1}
-                                    | // Both
+                                    | #{`<!-- Both -->`}
                                     | #{code2}
                 h4.contents-title Badge
                 .ga-card.attached
@@ -187,9 +187,9 @@ block contents
                         - var code1 = '<div class="ga-input labeled right">\n    <input type="text" placeholder="입력하세요" />\n    <label>Label Text</label>\n</div>'
                             pre
                                 code.language-markup
-                                    | // Left
+                                    | #{`<!-- Left -->`}
                                     | #{code}
-                                    | // Right
+                                    | #{`<!-- Right -->`}
                                     | #{code1}
                 h4.contents-title Button
                 .ga-card.attached
@@ -206,9 +206,9 @@ block contents
                         - var code1 = '<div class="ga-input button right">\n    <input type="text" placeholder="입력하세요" />\n    <button class="ga-button">Button Text</button>\n</div>'
                             pre
                                 code.language-markup
-                                    | // Left
+                                    | #{`<!-- Left -->`}
                                     | #{code}
-                                    | // Right
+                                    | #{`<!-- Right -->`}
                                     | #{code1}
                 h4.contents-title Textarea
                 .ga-card.attached

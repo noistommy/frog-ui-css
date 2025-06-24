@@ -11,7 +11,7 @@ block contents
         .section-desc 
           p Date picker and scheduling UI component.
       .section-contents
-        h4 달력
+        h4 기본
         .ga-card.attached
           .contents-wrapper.flex-wrap
             .ga-calendar.border
@@ -29,6 +29,11 @@ block contents
                   each week in weeks
                     .cell.week-cell(data-name=`${week}`)
               .cell-wrapper
+          .footer
+            .code-wrapper
+              - var code = `\n<div class="ga-calendar">\n   <div class="calendar-header">\n   ...\n   </div>\n   <div class="week-wrapper">\n   ...\n   </div>\n    <div class="cell-wrapper">\n   ...\n    </div>\n</div>`
+              pre 
+                code.language-markup= code       
 block module 
     script(src="/js/calendar.js")
     script. 

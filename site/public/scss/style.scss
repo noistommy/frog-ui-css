@@ -55,6 +55,7 @@ header.gnb .logo {
   display: flex;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
   &.main {
     padding-top: $gnbHeight;
     .right-part {
@@ -129,8 +130,9 @@ section {
       font-size: 3em;
       margin-bottom: 14px;
     }
-    .section-desc {
-      color: #d6d6d6;
+    .section-desc p{
+      font-weight: 300;
+      color: #999;
       font-size: 1.2em;
     }
   }
@@ -140,6 +142,7 @@ section {
       margin-bottom: 10px;
     }
     .contents-wrapper {
+      overflow-x: auto;
       .contents-item {
         padding: 10px;
       }

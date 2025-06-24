@@ -57,6 +57,7 @@ header.gnb .logo .sub-logo {
   display: flex;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 .main-container.main {
   padding-top: 60px;
@@ -136,8 +137,9 @@ section .section-title h1 {
   font-size: 3em;
   margin-bottom: 14px;
 }
-section .section-title .section-desc {
-  color: #d6d6d6;
+section .section-title .section-desc p {
+  font-weight: 300;
+  color: #999;
   font-size: 1.2em;
 }
 section .section-contents {
@@ -145,6 +147,9 @@ section .section-contents {
 }
 section .section-contents .contents-title {
   margin-bottom: 10px;
+}
+section .section-contents .contents-wrapper {
+  overflow-x: auto;
 }
 section .section-contents .contents-wrapper .contents-item {
   padding: 10px;
