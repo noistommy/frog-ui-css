@@ -151,9 +151,6 @@ section .section-contents {
 section .section-contents .contents-title {
   margin-bottom: 10px;
 }
-section .section-contents .contents-wrapper {
-  overflow-x: auto;
-}
 section .section-contents .contents-wrapper .contents-item {
   padding: 10px;
 }
