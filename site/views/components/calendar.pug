@@ -14,7 +14,7 @@ block contents
         h4 기본
         .ga-card.attached
           .contents-wrapper.flex-wrap
-            .ga-calendar.border
+            .ga-calendar
               .calendar-header 
                 .current-date  
                   span.year
@@ -33,10 +33,9 @@ block contents
             .code-wrapper
               - var code = `\n<div class="ga-calendar">\n   <div class="calendar-header">\n   ...\n   </div>\n   <div class="week-wrapper">\n   ...\n   </div>\n    <div class="cell-wrapper">\n   ...\n    </div>\n</div>`
               pre 
-                code.language-markup= code       
+                code.language-markup= code            
 block module 
     script(src="/js/calendar.js")
     script. 
         var list = setCalendar()
-        console.log(list)
                     

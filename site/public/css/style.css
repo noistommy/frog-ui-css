@@ -230,7 +230,7 @@ section .section-contents .contents-wrapper .contents-item {
   color: #ccc;
 }
 
-#button .contents-wrapper, #input .contents-wrapper, #tag .contents-wrapper, #checkbox .contents-wrapper, #badge .contents-wrapper {
+#button .contents-wrapper, #input .contents-wrapper, #tag .contents-wrapper, #checkbox .contents-wrapper, #badge .contents-wrapper, #toast .contents-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
@@ -273,6 +273,7 @@ section .section-contents .contents-wrapper .contents-item {
   position: relative;
 }
 #toast .ex_toast_board .toast {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: 5px;
@@ -283,7 +284,7 @@ section .section-contents .contents-wrapper .contents-item {
   vertical-align: baseline;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--brd);
 }
 #toast .ex_toast_board .toast:hover {
   transform: translateX(10px);

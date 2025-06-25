@@ -151,7 +151,7 @@ $calendarBorderRadius: 14px;
         top: 50%;
         left: 0;
         transform: translateY(-50%);
-        background-color: #ebebeb;
+        background-color: var(--suf);
       }
       &:first-child:before {
         border-top-left-radius: 1rem;

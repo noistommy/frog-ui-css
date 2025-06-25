@@ -1,3 +1,4 @@
+const runBtn = document.querySelector('.run-btn');
 const openBtn = document.querySelector('.open-btn');
 const clearBtn = document.querySelector('.clear-btn');
 const statusIcon = {
@@ -21,14 +22,12 @@ function toastBoard () {
     if (options.closeButton) {
       toast.appendChild(close)
     }
-    console.log(toastId)
     container.classList.add(options.containerClass)
     // toast.classList.add(`ga-${type}`)
     const hideToast = () => {
       toastId--
       toast.classList.remove('fade')
       toast.addEventListener('transitionend', () => {
-        console.log('interval:', intervalId)
         removeToast()
         clearTimeout(intervalId)
       })
@@ -145,15 +144,25 @@ openBtn.addEventListener('click', (e) => {
     theme: '',
     round: true
   })
-  // setInterval( () => {
-  //   tBoard.addToast(type, 'This is Toast Testing.', {
-  //     containerClass: 'top-right',
-  //     toastIcon: true,
-  //     closeButton: true,
-  //     clickToClose: false,
-  //     theme: 'light'
-  //   })
-  // }, 2000)
+  
 });
+var typeList = [{name: 'red', text: '빨강'},{name: 'orange', text: '주황'},{name: 'yellow', text: '노랑'},{name: 'lightgreen', text: '연두'},{name: 'green', text: '초록'},{name: 'lightblue', text: '하늘'},{name: 'blue', text: '파랑'},
+{name: 'deepblue', text: '짙은파랑'},{name: 'deeppurple', text: '짙은보라'},{name: 'purple', text: '보라'},{name: 'brown', text: '팥색'},{name: 'gray', text: '회색'}];
 
+
+
+
+runBtn.addEventListener('click', () => { 
+  clearInterval(toast)
+  var toasts = setInterval( () => {
+    const type = typeList[(Math.round(Math.random(10) * 10)) % typeList.length].name
+    tBoard.addToast(type, 'This is Toast Testing.', {
+      containerClass: 'top-right',
+      toastIcon: true,
+      closeButton: true,
+      clickToClose: false,
+      theme: 'light'
+    })
+  }, 2000)
+})
 clearBtn.addEventListener('click', tBoard.clearContainer)

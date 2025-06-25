@@ -229,7 +229,7 @@ section {
     }
   }
 }
-#button, #input, #tag, #checkbox, #badge {
+#button, #input, #tag, #checkbox, #badge, #toast {
   .contents-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -293,6 +293,7 @@ section {
   .ex_toast_board {
     position: relative;
     .toast {
+      width :100%;
       display: flex;
       justify-content: space-between;
       //max-width: 450px;
@@ -304,7 +305,7 @@ section {
       vertical-align: baseline;
       border-radius: 4px;
       overflow: hidden;
-      border: 1px solid #ebebeb;
+      border: 1px solid var(--brd);
       &:hover {
         transform: translateX(10px);
       }

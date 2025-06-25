@@ -1,6 +1,7 @@
 .toast_board {
   position: fixed;
   z-index: 9999;
+  margin: 0 10px;
   &.top {
     &-left {
       top: 0;
@@ -58,7 +59,7 @@
     justify-content: space-between;
     width: 100%;
     max-width: 400px;
-    margin: 5px;
+    margin: 5px 0;
     //opacity: .95;
     border-radius: $baseBorderRadius;
     box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.16);
@@ -71,7 +72,7 @@
     border: 1px solid var(--brd);
     opacity: 0;
     transform: translateX(20px);
-    font-size: 1.2em;
+    font-size: 1em;
     overflow: hidden;
     &.fade {
       transition-delay: 1s;
@@ -83,7 +84,7 @@
     }
     .toast-contents {
       flex-grow: 1;
-      padding: 10px;
+      padding: 8px 10px;
       max-width: 80%;
       font-size: .8em;
       overflow-wrap: break-word;
@@ -91,7 +92,7 @@
     .toast-close {
       flex-shrink: 1;
       cursor: pointer;
-      padding: 10px;
+      padding: 8px;
       //opacity: .6;
       //&:hover {
       //  opacity: 1;
