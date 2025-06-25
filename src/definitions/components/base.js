@@ -5,7 +5,6 @@
 // } else {
 //     document.documentElement.classList.add('light-mode')
 // }
-let currentMode;
 const sideMenu = document.querySelector('.side-menu');
 const toggleBtn = document.querySelector('.toggle-mode');
 const showMenu = document.querySelector('.show-menu');
@@ -15,28 +14,26 @@ function toggleMode()  {
         document.documentElement.classList.remove('light-mode')
         document.documentElement.classList.add('dark-mode') 
         toggleBtn.innerHTML = '<i class="xi-sun"></i>'
-        currentMode = 'dark'
+        sessionStorage.setItem('theme-mode', 'dark')
     } else if (document.documentElement.classList.contains('dark-mode')) {
         document.documentElement.classList.remove('dark-mode')
         document.documentElement.classList.add('light-mode')
         toggleBtn.innerHTML = '<i class="xi-moon"></i>'
-        currentMode = 'light'
-    } else {
-        document.documentElement.classList.add(`${currentMode || 'light'}-mode`)
-        toggleBtn.innerHTML = `<i class="xi-${currentMode === "dark" ? "sun" : "moon"}"></i>`
+        sessionStorage.setItem('theme-mode', 'light')
     }
 }
-// function toggleMenu() {
-//     console.log('click')
-//     const mainContainer = document.querySelector('.main');
-//     let isOpen = mainContainer.classList.contains('open')
-//     if (isOpen) {
-//         mainContainer.classList.remove('open')
-//     } else {
-//         mainContainer.classList.add('open')
-//     }
-// }
-toggleMode()
+
+function setTheme () {
+    const mode = sessionStorage.getItem('theme-mode');
+    if(mode) {
+        document.documentElement.classList.add(`${mode}-mode`)
+        toggleBtn.innerHTML = `<i class="xi-${mode === "dark" ? "sun" : "moon"}"></i>`
+    } else {
+        sessionStorage.setItem('theme-mode', window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light')
+    }
+}
+
+setTheme()
 
 if (toggleBtn) {
     toggleBtn.addEventListener('click', () => toggleMode())

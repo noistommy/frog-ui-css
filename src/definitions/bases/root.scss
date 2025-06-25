@@ -4,7 +4,7 @@
     --bgc: #{map.get($grays, 'gray-0')};
     --txt: #{map.get($grays, 'gray-95')};
     --brd: #{map.get($grays, 'gray-15')};
-    
+
     --suf: #{map.get($grays, 'gray-5')};
     --hover-suf: #{map.get($grays, 'gray-10')};
 
@@ -27,7 +27,8 @@
         --suf: #{map.get($grays, 'gray-90')};
         --hover-suf: #{map.get($grays, 'gray-90')};
 
-        --depth-bg: #{map.get($grays, 'gray-80')};
+        --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.16));
+        // --depth-bg: #{map.get($grays, 'gray-80')};
         // --depth-bg: rgba(0, 0, 0, 0.2);
         --depth-bs: none;
     }
@@ -52,8 +53,8 @@
     --hover-suf: #{map.get($grays, 'gray-85')};
 
     // --depth-bg: #{map.get($grays, 'gray-80')};
-    --depth-bg: rgba(0, 0, 0, 0.16);
-    --depth-bs: none;
+    --depth-bg: color-mix(in srgb, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.16));
+    --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
 }
 
 @function color-contrast($bg, $fg) {
