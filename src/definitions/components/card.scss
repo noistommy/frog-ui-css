@@ -24,7 +24,8 @@
       // > div {
       //   padding: ($cardVerticalPadding * 0.5) $cardHorizontalPadding
       // }
-      
+      border-top-left-radius: $cardBorderRadius;
+      border-top-right-radius: $cardBorderRadius;
     }
     > .footer {
       // margin-left: $cardHorizontalPadding * -1;
@@ -34,6 +35,8 @@
       // > div {
       //   padding: ($cardVerticalPadding * 0.5) $cardHorizontalPadding
       // }
+      border-bottom-left-radius: $cardBorderRadius;
+      border-bottom-right-radius: $cardBorderRadius;
     }
   }
 }
