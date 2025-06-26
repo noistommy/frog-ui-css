@@ -1,13 +1,13 @@
 extends ../layout
 
 block title
-    title #{title}
+    title #{title} Page
 
 block contents
     .page-wrapper
         section#typography
             .section-title
-                h1 Foundation 
+                h1= title
                 .section-desc 
                     p Core design foundations like font sizes, spacing, and border radius.
             .section-contents

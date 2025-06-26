@@ -82,6 +82,7 @@ header.gnb .logo .sub-logo {
 
 .side-menu {
   width: 250px;
+  height: calc(100dvh - 60px);
   overflow-y: auto;
   flex-shrink: 0;
   position: relative;
@@ -195,9 +196,6 @@ section .section-contents .contents-wrapper .contents-item {
 #typography .contents-wrapper p {
   letter-spacing: 5px;
   font-weight: 500;
-}
-#typography .pretendard {
-  font-family: "Pretendard";
 }
 #typography .color-box {
   display: inline-block;
@@ -314,7 +312,7 @@ section pre {
 
 /* Extra Small Mobile */
 /* Small Mobile */
-@media (min-width: 360px) and (max-width: 599px) {
+@media (max-width: 599px) {
   header.gnb .logo {
     text-align: center;
     left: 50%;

@@ -79,6 +79,7 @@ header.gnb .logo {
 }
 .side-menu {
   width: 250px;
+  height: calc(100dvh - $gnbHeight);
   overflow-y: auto;
   flex-shrink: 0;
   position: relative;
@@ -194,9 +195,6 @@ section {
       letter-spacing: 5px;
       font-weight: 500;
     }
-  }
-  .pretendard {
-    font-family: 'Pretendard';
   }
   .color-box {
     display: inline-block;
@@ -354,12 +352,12 @@ section pre {
 }
 
 /* Extra Small Mobile */
-@media (max-width: 359px) {
-  // 초소형 모바일 대응 스타일
-}
+// @media (max-width: 359px) {
+//   // 초소형 모바일 대응 스타일
+// }
 
 /* Small Mobile */
-@media (min-width: 360px) and (max-width: 599px) {
+@media (max-width: 599px) {
   header.gnb {
     .logo {
       text-align: center;
