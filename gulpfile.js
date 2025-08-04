@@ -23,6 +23,7 @@ const prompt = require('gulp-prompt');
 const log = require('fancy-log');
 
 const baseFile = 'frogui'
+// const baseFile = 'beui'
 // fs module test
 // fa.writeFile('sample.json', JSON.stringify({ sample: 'data' }), () => {})
 

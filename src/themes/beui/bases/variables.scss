@@ -3,6 +3,7 @@
 @use 'sass:map';
 @use 'sass:math';
 
+$uiName: 'be';
 $baseFontSize: 16;
 
 @function relativePx($number) {

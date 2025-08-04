@@ -1,6 +1,7 @@
 @use 'sass:color';
 @use 'sass:list';
-@use '../../theme.scss' as *;
+@use '../../theme.beui.scss' as *;
+
 $switchRadiusSize: $baseInputRadius;
 
 .be-switch {
@@ -36,7 +37,7 @@ $switchRadiusSize: $baseInputRadius;
       // right: 0;
       display: inline-block;
       background-color: #c4c4c4;
-      border-radius: $switchRadiusSize;
+      border-radius: calc($switchRadiusSize + 2px);
       /*transition: all 400ms ease-out;*/
       &:before {
         content: '';
@@ -84,22 +85,30 @@ $switchRadiusSize: $baseInputRadius;
     font-size: 0.9em;
     background-color: #efefef;
     padding: 2px;
-    border-radius: $switchRadiusSize;
+    border-radius: calc($switchRadiusSize + 2px);
     //box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.16);
     &:before {
       content: '';
       position: absolute;
       border-radius: $switchRadiusSize;
       background-color: var(--primary);
-      width: calc(50% - 2px);
-      height: calc(100% - 4px);
+      // width: calc(50% - 2px);
+      max-height: calc(100% - 4px);
       top: 2px;
+      bottom: 2px;
+      left: 50%;
       right: 2px;
-      transition: right 250ms ease;
+      transition:
+        left 500ms ease,
+        right 150ms ease;
     }
     &:has(input:checked) {
       &:before {
+        left: 2px;
         right: 50%;
+        transition:
+          right 500ms ease,
+          left 150ms ease;
       }
     }
     span {
@@ -123,10 +132,9 @@ $switchRadiusSize: $baseInputRadius;
         color: $white;
         font-weight: 700;
         border-radius: $switchRadiusSize;
-        // margin-left: -5px;
-        //box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.36);
       }
       & ~ .on {
+        font-weight: 500;
         background-color: transparent;
       }
     }
@@ -136,8 +144,6 @@ $switchRadiusSize: $baseInputRadius;
         color: $white;
         font-weight: 700;
         border-radius: $switchRadiusSize;
-        // margin-right: -5px;
-        //box-shadow: 0 0 5px 0 #2985DB;
       }
       & ~ .off {
         background-color: transparent;

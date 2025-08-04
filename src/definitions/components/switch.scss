@@ -10,7 +10,9 @@
     position: relative;
     width: 3em;
     height: 1.3em;
-    top: 0.15em;
+    &:not(.inside) {
+      margin: 0.15em;
+    }
     input:checked + .switch {
       background-color: $primary
     }
@@ -20,10 +22,7 @@
     .switch {
       cursor: pointer;
       position: absolute;
-      top:0.15em;
-      bottom:0;
-      left: 0.15em;
-      right: 0;
+      inset: 0.1em;
       display: inline-block;
       background-color: #c4c4c4;
       border-radius: $switchRadiusSize;
@@ -39,8 +38,8 @@
         position:absolute;
         width: 1.6em;
         height: 1.6em;
-        top: -0.15em;
-        left: -0.15em;
+        top: -0.25em;
+        left: -0.25em;
         background-color: #fff;
         border-radius: $switchRadiusInside;
         //border: 1px solid #c4c4c4;
@@ -57,8 +56,7 @@
         transform: translateX(20px);
       }
       .switch {
-        top: 0;
-        left: 0;
+        inset: 0;
       }
       .switch:before {
         width: 18px;
@@ -80,22 +78,27 @@
       content: '';
       position: absolute;
       border-radius: $switchRadiusSize;
-      background-color: #6d9d72;
-      width: calc(50% - 2px);
-      height: calc(100% - 4px);
+      background-color: $primary;
+      // width: calc(50% - 2px);
+      // height: calc(100% - 4px);
       top: 2px;
+      bottom: 2px;
+      left: 50%;
       right: 2px;
-      transition: right 250ms ease;
+      transition: left 500ms ease, right 150ms ease;
     }
     &:has(input:checked) {
       &:before {
+        left: 2px;
         right: 50%;
+        transition: right 500ms ease, left 150ms ease;
       }
     }
     span {
       background-color: transparent !important;
       position: relative;
       z-index: 3;
+      border-radius: $switchRadiusInside;
     }
     &.round {
       border-radius: 1em;
@@ -112,10 +115,11 @@
         background-color: $primary;
         color: $white;
         font-weight: 700;
-        border-radius: $switchRadiusInside;
+        // border-radius: $switchRadiusInside;
         //box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.36);
       }
       & ~ .on {
+        font-weight: 500;
         background-color: transparent;
       }
     }
@@ -124,13 +128,14 @@
         background-color: $primary;
         color: $white;
         font-weight: 700;
-        border-radius: $switchRadiusInside;
+        // border-radius: $switchRadiusInside;
         //box-shadow: 0 0 5px 0 #2985DB;
       }
       & ~ .off {
         background-color: transparent;
         color: var(--txt);
         box-shadow: none;
+        font-weight: 500;
       }
     }
     // &.round {

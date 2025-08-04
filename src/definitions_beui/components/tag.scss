@@ -1,6 +1,6 @@
 @use 'sass:color';
 @use 'sass:list';
-@use '../../theme.scss' as *;
+@use '../../theme.beui.scss' as *;
 $baseTagColor: var(--base-color);
 $baseHoverTagColor: var(--base-hover-color);
 $tagDotSize: 16px;

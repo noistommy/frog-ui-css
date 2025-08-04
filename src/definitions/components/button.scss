@@ -29,10 +29,10 @@
     &.disabled,
     &[disabled], &:disabled {
         cursor: default;
-        //opacity: 0.5;
-        color: #C4C4C4 !important;
-        border-color: #C4C4C4 !important;
-        background-color: #F2F2f2 !important;
+        opacity: 0.3;
+        // color: #C4C4C4 !important;
+        // border-color: #C4C4C4 !important;
+        // background-color: #F2F2f2 !important;
         pointer-events: none;
     }
     &:not(.icon) {
@@ -101,14 +101,15 @@
         border-radius: 2em;
     }
     &.outline {
-        background-color: $white;
-        color: $black;
-        // background-color: var(--bgc);
+        // background-color: $white;
+        // color: $black;
+        background-color: var(--bgc);
+        color: var(--txt);
         //background-color: transparent;
         //border:1px solid $borderColor;
         box-shadow: 0 0 0 1px var(--brd) inset;
         &:hover {
-            background-color: var(----hover-suf);
+            background-color: var(--suf);
         }
     }
     &.border:not(.outline), &.border:not(.text) {
@@ -116,6 +117,9 @@
     }
     &.compact {
         padding: $compactPadding;
+        &.icon {
+            padding: $compactVerticalPadding;
+        }
     }
     i.icon {
         height: 0.85em;
@@ -280,10 +284,10 @@
             &.disabled,
             &[disabled], &:disabled {
                 cursor: default;
-                //opacity: 0.5;
-                color: #C4C4C4 !important;
-                border-color: #C4C4C4 !important;
-                background-color: #F2F2f2 !important;
+                opacity: 0.3;
+                // color: #C4C4C4 !important;
+                // border-color: #C4C4C4 !important;
+                // background-color: #F2F2f2 !important;
                 pointer-events: none;
                 box-shadow: none;
             }
@@ -337,10 +341,10 @@
             &.disabled,
             &[disabled], &:disabled {
                 cursor: default;
-                //opacity: 0.5;
-                color: #C4C4C4 !important;
-                border-color: #C4C4C4 !important;
-                background-color: #F2F2f2 !important;
+                opacity: 0.3;
+                // color: #C4C4C4 !important;
+                // border-color: #C4C4C4 !important;
+                // background-color: #F2F2f2 !important;
                 pointer-events: none;
                 box-shadow: none;
             }

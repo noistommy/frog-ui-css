@@ -1,6 +1,6 @@
 @use 'sass:color';
 @use 'sass:list';
-@use '../../theme.scss' as *;
+@use '../../theme.beui.scss' as *;
 
 $badgeBg: var(--hover-suf);
 $badgeFontSize: relativePx(11);

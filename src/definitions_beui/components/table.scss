@@ -1,5 +1,5 @@
 @use 'sass:color';
-@use '../../theme.scss' as *;
+@use '../../theme.beui.scss' as *;
 $verticalMargin: 1em;
 $horizontalMargin: 0;
 $margin: $verticalMargin $horizontalMargin;

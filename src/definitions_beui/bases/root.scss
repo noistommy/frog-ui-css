@@ -2,7 +2,7 @@
 @use 'sass:list';
 @use 'sass:math';
 @use 'sass:map';
-@use '../../theme.scss' as *;
+@use '../../theme.beui.scss' as *;
 
 :root {
   --bgc: #{map.get($grays, 'gray-0')};

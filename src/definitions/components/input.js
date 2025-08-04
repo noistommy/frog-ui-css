@@ -16,10 +16,10 @@ function useEditInput () {
     const hasEdit = editInput.classList.contains('editable')
     if (hasEdit) {
       result.useValue = inputEl.value;
-      editToggle.innerHTML = "<i class='fa fa-pen' />"
+      editToggle.innerHTML = "<i class='xi-pen' />"
       editInput.classList.remove('editable')
     } else {
-      editToggle.innerHTML = "<i class='fa fa-check' />"
+      editToggle.innerHTML = "<i class='xi-check' />"
       editInput.classList.add('editable')
       editInput.querySelector('input').focus()
       editInput.querySelector('input').select()

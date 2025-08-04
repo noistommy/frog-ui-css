@@ -1,7 +1,7 @@
 @use 'sass:list';
 @use 'sass:color';
 @use 'sass:map';
-@use '../../theme.scss' as *;
+@use '../../theme.beui.scss' as *;
 
 $amount: 0.5;
 
@@ -161,6 +161,7 @@ h5,
     color: $black;
   }
 }
+.#{$uiName}-white,
 .white {
   background-color: $white;
   border: 1px solid $gray;
