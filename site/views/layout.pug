@@ -33,6 +33,24 @@ html
                     //- div.sub-logo Frontend Renders On Grid...
                     div.sub-logo For Real, Only Good!!
                 nav.sub-menu
+                    //- .home
+                    //-     .ga-button.text Home
+                    //-         a.link(href="/")
+                    //- .components
+                    //-     .ga-button.text Components
+                    //-         a.link(href="/pages/base")
+                    .link-btn
+                        .ga-button.circle.badge
+                            | Be-UI 
+                            .in-badge.ga-deepblue React
+                            a.link(href="https://react-be-ui.vercel.app/", target="_blank") 
+                    .link-btn
+                        .ga-button.circle.badge
+                            | Be-UI 
+                            .in-badge.ga-green vue
+                            a.link(href="https://beui.vercel.app/", target="_blank") 
+                    .divide
+                        .ga-button.text |
                     .mode
                         .ga-button.icon.circle.toggle-mode
                             i.xi-sun-o
@@ -41,6 +59,7 @@ html
                             i.xi-github
             .main-container.main
                 .left-part
+                    //- if title !== 'Frog'
                     .side-menu
                         include lnb
                 .right-part
@@ -49,6 +68,6 @@ html
         block js-module
         
         script(src="/js/base.js")
-        scropt.
+        script.
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         script(defer, src="/_vercel/insights/script.js")

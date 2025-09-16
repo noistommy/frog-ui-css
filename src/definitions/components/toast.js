@@ -1,6 +1,7 @@
 const runBtn = document.querySelector('.run-btn');
 const openBtn = document.querySelector('.open-btn');
 const clearBtn = document.querySelector('.clear-btn');
+const selectTheme = document.querySelector('.theme-select');
 const statusIcon = {
   success: 'xi-check-circle',
   info: 'xi-info',
@@ -115,6 +116,7 @@ function toastBoard () {
     return closeEl
   }
   const clearContainer = () => {
+    clearInterval(toastInterval)
     const toasts = container.querySelectorAll('.toast')
     for ( let i = toasts.length - 1; i >= 0;i-- ) {
       clearToast(toasts[i])
@@ -141,7 +143,7 @@ openBtn.addEventListener('click', (e) => {
     toastIcon: true,
     closeButton: true,
     clickToClose: true,
-    theme: '',
+    theme: selTheme?.getAttribute('data-name') || '',
     round: true
   })
   
@@ -149,19 +151,27 @@ openBtn.addEventListener('click', (e) => {
 var typeList = [{name: 'red', text: '빨강'},{name: 'orange', text: '주황'},{name: 'yellow', text: '노랑'},{name: 'lightgreen', text: '연두'},{name: 'green', text: '초록'},{name: 'lightblue', text: '하늘'},{name: 'blue', text: '파랑'},
 {name: 'deepblue', text: '짙은파랑'},{name: 'deeppurple', text: '짙은보라'},{name: 'purple', text: '보라'},{name: 'brown', text: '팥색'},{name: 'gray', text: '회색'}];
 
+var selTheme;
+selectTheme.addEventListener('click', (e) => {
+  selTheme = e.target.parentElement
+  const themes = selectTheme.querySelectorAll('.radio')
+  themes.forEach(item => {
+    item.classList.remove('checked')
+    if (selTheme === item) item.classList.add('checked')
+  })
+})
 
-
-
+var toastInterval;
 runBtn.addEventListener('click', () => { 
-  clearInterval(toast)
-  var toasts = setInterval( () => {
+  clearInterval(toastInterval)
+  toastInterval = setInterval( () => {
     const type = typeList[(Math.round(Math.random(10) * 10)) % typeList.length].name
     tBoard.addToast(type, 'This is Toast Testing.', {
       containerClass: 'top-right',
       toastIcon: true,
       closeButton: true,
       clickToClose: false,
-      theme: 'light'
+      theme: selTheme?.getAttribute('data-name') || ''
     })
   }, 2000)
 })

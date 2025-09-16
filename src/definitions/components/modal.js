@@ -9,8 +9,8 @@ closeB = document.querySelector('.close');
 if(modal) {
   showB.onclick = () => {
     modal.classList.add('open')
-    // closeB = document.querySelector('.close');
-    // closeB.addEventListener('click', closeModal)
+    var cancel = document.querySelector('.cancel');
+    cancel.addEventListener('click', closeModal)
   }
   closeB.onclick = () => {
     closeModal()

@@ -5,7 +5,8 @@
   overflow: hidden;
   .modal {
     min-width: 350px;
-    background-color: #fff;
+    background-color: var(--bgc);
+    color: var(--txt);
     .modal-header {
       position: relative;
       padding: 8px 12px;

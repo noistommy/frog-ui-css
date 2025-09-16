@@ -79,7 +79,7 @@ block contents
                             .toast-close
                                 i.xi-close
                         .toast.border-left
-                            .toast-contents.ga-success-border Liune type
+                            .toast-contents.ga-success-border Line type
                             .toast-close
                                 i.xi-close
                         .toast
@@ -117,6 +117,22 @@ block contents
                         div.ga-tag.label.deeppurple deeppurple
                         div.ga-tag.label.purple purple
                         div.ga-tag.label.brown brown
+                    div.theme-select
+                        .ga-checkbox.radio.checked(data-name="")
+                            input(type="radio", name="theme")
+                            label Base
+                        .ga-checkbox.radio(data-name="icon-bg")
+                            input(type="radio", name="theme")
+                            label Icon + Bg
+                        .ga-checkbox.radio(data-name="icon")
+                            input(type="radio", name="theme")
+                            label Icon
+                        .ga-checkbox.radio(data-name="line")
+                            input(type="radio", name="theme")
+                            label Line
+                        .ga-checkbox.radio(data-name="light")
+                            input(type="radio", name="theme")
+                            label Light
                     .footer
                         button.ga-button.primary.run-btn 실행
                         button.ga-button.outline.clear-btn Clear
