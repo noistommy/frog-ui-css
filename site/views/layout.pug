@@ -32,7 +32,7 @@ html
                     //- div.sub-logo Fix, Refactor, Optimize, Grow!!
                     //- div.sub-logo Frontend Renders On Grid...
                     div.sub-logo For Real, Only Good!!
-                nav.sub-menu
+                nav.sub-menu.small
                     //- .home
                     //-     .ga-button.text Home
                     //-         a.link(href="/")
@@ -40,12 +40,10 @@ html
                     //-     .ga-button.text Components
                     //-         a.link(href="/pages/base")
                     .link-btn
-                        .ga-button.circle.badge
+                        .ga-button.circle.badge.compact
                             | Be-UI 
                             .in-badge.ga-deepblue React
-                            a.link(href="https://react-be-ui.vercel.app/", target="_blank") 
-                    .link-btn
-                        .ga-button.circle.badge
+                        .ga-button.circle.badge.compact
                             | Be-UI 
                             .in-badge.ga-green vue
                             a.link(href="https://beui.vercel.app/", target="_blank") 
@@ -59,9 +57,9 @@ html
                             i.xi-github
             .main-container.main
                 .left-part
-                    //- if title !== 'Frog'
-                    .side-menu
-                        include lnb
+                    if title !== 'Frog'
+                        .side-menu
+                            include lnb
                 .right-part
                     block contents
         block module

@@ -1,0 +1,124 @@
+extends ../layout
+
+block title
+    title #{title} Page
+
+block contents
+    .page-wrapper
+        section#typography
+            .section-title
+                h1= title
+                .section-desc 
+                    p 
+            .section-contents
+                h4 Brand
+                .ga-card
+                    .contents
+                        .ga-button.primary Primary
+                        .ga-tag.label.primary primary
+                        .ga-tag.line.primary
+                        .ga-tag.dot.primary
+                        .ga-button
+                            | Primary
+                            .ga-badge.primary P
+                        br
+                        br
+                        .ga-button.secondary Secondary
+                        .ga-tag.label.secondary Secondary
+                        .ga-tag.line.secondary
+                        .ga-tag.dot.secondary
+                        .ga-button
+                            | Secondary
+                            .ga-badge.secondary s
+            .section-contents
+                h4 Status
+                .ga-card
+                    .contents
+                        .ga-button.success Success
+                        .ga-input.success 
+                            input(placeholder="success")
+                        .ga-tag.label.success Success
+                        .ga-tag.line.success
+                        .ga-tag.dot.success
+                        .ga-button
+                            | Success
+                            .ga-badge.success S
+                        br
+                        br
+                        .ga-button.danger danger
+                        .ga-input.danger 
+                            input(placeholder="danger")
+                        .ga-tag.label.danger danger
+                        .ga-tag.line.danger
+                        .ga-tag.dot.danger
+                        .ga-button
+                            | danger
+                            .ga-badge.danger D
+                        br
+                        br
+                        .ga-button.info info
+                        .ga-input.info 
+                            input(placeholder="info")
+                        .ga-tag.label.info info
+                        .ga-tag.line.info
+                        .ga-tag.dot.info
+                        .ga-button
+                            | info
+                            .ga-badge.info I
+                        br
+                        br
+                        .ga-button.attention attention
+                        .ga-input.attention 
+                            input(placeholder="attention")
+                        .ga-tag.label.attention attention
+                        .ga-tag.line.attention
+                        .ga-tag.dot.attention
+                        .ga-button
+                            | attention
+                            .ga-badge.attention A
+                        br
+                        br
+                        .ga-button.importance importance
+                        .ga-input.importance 
+                            input(placeholder="importance")
+                        .ga-tag.label.importance importance
+                        .ga-tag.line.importance
+                        .ga-tag.dot.importance
+                        .ga-button
+                            | importance
+                            .ga-badge.importance I
+            .section-contents
+                h4 Disabled
+                .ga-card
+                    .contents
+                        .ga-button.disabled Disabled
+                        .ga-input.disabled 
+                            input(placeholder="disabled")
+                        .ga-tag.label.disabled disabled
+                        .ga-tag.line.disabled
+                        .ga-tag.dot.disabled
+                        .ga-button
+                            | Primary
+                            .ga-badge.disabled D
+                        .ga-switch.disabled.slide 
+                            input(type="checkbox")
+                            span.switch
+            .section-contents
+                h4 Fluid
+                .ga-card
+                    .contents
+                        .ga-button.fluid Fluid
+                        br
+                        br
+                        .ga-input.fluid 
+                            input(placeholder="fluid")
+            .section-contents
+                h4 Compact
+                .ga-card
+                    .contents
+                        .ga-button.compact Compact
+                        .ga-input.compact 
+                            input(placeholder="compact")
+
+                        
+    block module 

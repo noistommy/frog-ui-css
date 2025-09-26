@@ -10,6 +10,10 @@ router.get('/pages/base', function(req, res, next) {
   res.render('components/base',  {title: 'Base' });
 });
 
+router.get('/pages/semantic', function(req, res, next) {
+  res.render('components/semantic',  {title: 'Semantic' });
+});
+
 router.get('/pages/button', function(req, res, next) {
   res.render('components/button',  { title: 'Button' });
 });
