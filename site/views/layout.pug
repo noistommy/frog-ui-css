@@ -58,7 +58,7 @@ html
                             i.xi-github
             .main-container.main
                 .left-part
-                    if title !== 'Frog'
+                    if title !== 'Frog UI'
                         .side-menu
                             include lnb
                 .right-part
@@ -70,3 +70,8 @@ html
         script.
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         script(defer, src="/_vercel/insights/script.js")
+        <!-- Privacy-friendly analytics by Plausible -->
+        script(async, src="https://plausible.io/js/pa-PNF1ZKkVWIqCuHg5qB1bO.js")
+        script.
+            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+            plausible.init()
