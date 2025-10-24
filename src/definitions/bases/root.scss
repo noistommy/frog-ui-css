@@ -27,7 +27,8 @@
         --suf: #{map.get($grays, 'gray-90')};
         --hover-suf: #{map.get($grays, 'gray-90')};
 
-        --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(255, 255, 255, 0.04));
+        --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));
+        // --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-100')}, rgba(255, 255, 255, 0.04));
         // --depth-bg: #{map.get($grays, 'gray-80')};
         // --depth-bg: rgba(0, 0, 0, 0.2);
         --depth-bs: none;
@@ -53,7 +54,7 @@
     --hover-suf: #{map.get($grays, 'gray-85')};
 
     // --depth-bg: #{map.get($grays, 'gray-80')};
-    --depth-bg: color-mix(in srgb, #{map.get($grays, 'gray-95')}, rgba(255, 255, 255, 0.04));
+    --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));
     --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
 }
 
