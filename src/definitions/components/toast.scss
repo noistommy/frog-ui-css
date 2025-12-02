@@ -114,11 +114,11 @@
       }
     }
   }
-  .ga-primary {
+  .#{$ns}-primary {
     background-color: $primary;
     color: $white;
   }
-  .ga-secondary {
+  .#{$ns}-secondary {
     background-color: $secondary;
     color: $white;
   }

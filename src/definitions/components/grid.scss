@@ -1,4 +1,4 @@
-.ga {
+.#{$ns} {
   &-form .fields,
   &-grid {
     --gutter: $gridGutter;
@@ -44,8 +44,8 @@
     }
     .column {
       padding: $gridGutter * 1px;
-      > .ga-grid,
-      > .ga-form .fields {
+      > .#{$ns}-grid,
+      > .#{$ns}-form .fields {
         margin-bottom: $gridGutter * -1px;;
       }
     }
@@ -89,7 +89,7 @@
 }
 
 @media all and (max-width: #{$bp-tablet - 1px}) {
-  .ga {
+  .#{$ns} {
     &-form .fields,
     &-grid {
       .column {
@@ -113,7 +113,7 @@
   }
 }
 @media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 1px}) {
-  .ga {
+  .#{$ns} {
     &-form .fields,
     &-grid {
       .column {
@@ -139,7 +139,7 @@
 }
 @media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 1px}) {
   //@media all and (max-width: #{$bp-desktop - 1px}) {
-  .ga {
+  .#{$ns} {
     &-form .fields,
     &-grid {
       .column {

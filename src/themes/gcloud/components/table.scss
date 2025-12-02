@@ -1,0 +1,24 @@
+$verticalMargin: 1em;
+$horizontalMargin: 0;
+$margin: $verticalMargin $horizontalMargin;
+$borderWidth: 1px;
+$tableBorderColor: var(--brd);
+$border: $borderWidth solid $tableBorderColor;
+
+$borderCollapse: separate;
+$borderSpacing: 0;
+$textAlign: left;
+
+$tableFontColor: var(--txt);
+$tableFontSize: 13px;
+
+// Row
+$rowBorder: 1px solid $borderColor;
+// Cell
+$cellVerticalPadding: relativePx(8);
+$cellHorizontalPadding: relativePx(8);
+
+$cellPadding: $cellVerticalPadding $cellHorizontalPadding;
+$cellTextAlign: inherit;
+
+$headerBackgroundColor: var(--hover-suf);

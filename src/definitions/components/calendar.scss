@@ -1,7 +1,7 @@
 $issue_red: #D75757;
 $calendarBorderRadius: 14px;
 
-.ga-calendar {
+.#{$ns}-calendar {
   --grid-size: 7;
   --cell-size: 42px;
   --cell-gap: 1px;

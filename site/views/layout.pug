@@ -18,7 +18,7 @@ html
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css")
         script(src="/prism/prism.js")
         link(href="/prism/prism.css", rel="stylesheet")
-        link(href="/frogui.css", rel="stylesheet")
+        link(id="frogui-css", href="/frogui.css", rel="stylesheet")
         link(href="/css/style.css", rel="stylesheet")
         script(async, src="https://plausible.io/js/pa-PNF1ZKkVWIqCuHg5qB1bO.js")
         script.
@@ -32,7 +32,7 @@ html
                 }
             });
     body
-        .container.center
+        .root
             header.gnb
                 nav.main-menu
                     .toggle-menu
@@ -68,17 +68,22 @@ html
                     .github
                         a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
                             i.xi-github
-            .main-container.main
-                .left-part
-                    if title !== 'Frog UI'
+            if !error && title === 'Frog UI'
+                .main-container.main
+                    .right-part
+                        block contents
+            else     
+                .main-container.main.container.center
+                    .left-part
                         .side-menu
                             include lnb
-                .right-part
-                    block contents
+                    .right-part
+                        block contents
         block module
         block js-module
         
         script(src="/js/base.js")
+        script(src="/js/css-switcher.js")
         script.
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         script(defer, src="/_vercel/insights/script.js")

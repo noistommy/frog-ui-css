@@ -1,5 +1,5 @@
 $gridGutter: 4;
-.ga-form {
+.#{$ns}-form {
   max-width: 100%;
   > .field, > .fields {
     margin-bottom: 1rem;
@@ -50,8 +50,8 @@ $gridGutter: 4;
         opacity: 0.5;
       }
     }
-    .ga-input,
-    .ga-select-box {
+    .#{$ns}-input,
+    .#{$ns}-select-box {
       width: 100%;
     }
     label, .label {

@@ -8,8 +8,20 @@
     --suf: #{map.get($grays, 'gray-5')};
     --hover-suf: #{map.get($grays, 'gray-10')};
 
+    --base-color: #{map.get($grays, 'gray-10')};
+    --base-hover-color: #{map.get($grays, 'gray-15')};
+
     --depth-bg: #{map.get($grays, 'gray-0')};
     --depth-bs: 0 1px 8px 1px rgba(0, 0, 0, 0.16);
+
+    --primary: #{$primary};
+    --secondary: #{$secondary};
+
+    --success: #{$success};
+    --info: #{$info};
+    --error: #{$danger};
+    --warning: #{$attention};
+    --importance: #{$importance};
 
     --mobile-p: #{map.get($breakpoints, 'xs')};
     --mobile-l: #{map.get($breakpoints, 'sm')};
@@ -27,6 +39,9 @@
         --suf: #{map.get($grays, 'gray-90')};
         --hover-suf: #{map.get($grays, 'gray-90')};
 
+        --base-color: #{map.get($grays, 'gray-80')};
+        --base-hover-color: #{map.get($grays, 'gray-70')};
+
         --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));
         // --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-100')}, rgba(255, 255, 255, 0.04));
         // --depth-bg: #{map.get($grays, 'gray-80')};
@@ -42,6 +57,9 @@
     --suf: #{map.get($grays, 'gray-5')};
     --hover-suf: #{map.get($grays, 'gray-10')};
 
+    --base-color: #{map.get($grays, 'gray-10')};
+    --base-hover-color: #{map.get($grays, 'gray-15')};
+
     --depth-bg: #{map.get($grays, 'gray-0')};
     --depth-bs: 0 1px 8px 1px rgba(0, 0, 0, 0.16);
 }
@@ -52,6 +70,9 @@
     --brd: #{map.get($grays, 'gray-85')};
     --suf: #{map.get($grays, 'gray-90')};
     --hover-suf: #{map.get($grays, 'gray-85')};
+
+    --base-color: #{map.get($grays, 'gray-80')};
+    --base-hover-color: #{map.get($grays, 'gray-70')};
 
     // --depth-bg: #{map.get($grays, 'gray-80')};
     --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));

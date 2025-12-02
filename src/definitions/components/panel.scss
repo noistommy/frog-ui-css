@@ -1,4 +1,4 @@
-.ga-panel {
+.#{$ns}-panel {
   border: $panelBorder;
   transition: height 250ms ease;
   margin: $margin;

@@ -1,0 +1,32 @@
+// @import './assets/xeicon.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/xpressengine/XEIcon/xeicon.min.css');
+
+// theme
+@import 'themes/gcloud/bases/reset.scss';
+@import 'themes/gcloud/bases/variables.scss';
+
+//badge
+@import 'themes/gcloud/components/badge.scss';
+//button
+@import 'themes/gcloud/components/button.scss';
+//grid
+@import 'themes/gcloud/components/grid.scss';
+//grid2
+@import 'themes/gcloud/components/grid2.scss';
+//modal
+@import 'themes/gcloud/components/modal.scss';
+//panel
+@import 'themes/gcloud/components/panel.scss';
+//selectbox
+@import 'themes/gcloud/components/selectbox.scss';
+//switch
+@import 'themes/gcloud/components/switch.scss';
+//table
+@import 'themes/gcloud/components/table.scss';
+//tabs
+@import 'themes/gcloud/components/tabs.scss';
+//tag
+@import 'themes/gcloud/components/tag.scss';
+//card
+@import 'themes/gcloud/components/card.scss';

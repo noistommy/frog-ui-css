@@ -1,5 +1,5 @@
 
-.ga {
+.#{$ns} {
   &-grid2 {
     --grid-col-num: #{$gridWhole};
     --grid-row-num: #{$gridWhole};
@@ -107,14 +107,14 @@
         &.align-middle { align-items: center; }
         &.align-bottom { align-items: flex-end; }
       }
-      .ga-select-box, .ga-input {
+      .#{$ns}-select-box, .#{$ns}-input {
         margin: 0;
         width: 100%;
       }
-      .ga-input input {
+      .#{$ns}-input input {
         padding: $compactPadding;
       }
-      .ga-select-box {
+      .#{$ns}-select-box {
         select {
           padding: $compactPadding;
         }
@@ -122,7 +122,7 @@
           padding: $compactVerticalPadding+px;
         }
       }
-      .ga-button {
+      .#{$ns}-button {
         padding: $compactPadding;
       }
     }
@@ -131,7 +131,7 @@
 
 
 @media all and (max-width: #{$bp-tablet - 1px}) {
-  .ga-grid2 {
+  .#{$ns}-grid2 {
     --grid-gap: #{$gridGutterSmall}px;
     &.row {
       @for $i from 1 through $gridWhole {
@@ -155,7 +155,7 @@
   }
 }
 @media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 1px}) {
-  .ga-grid2 {
+  .#{$ns}-grid2 {
     --grid-gap: #{$gridGutterSmall}px;
     &.row {
       @for $i from 1 through $gridWhole {
@@ -180,7 +180,7 @@
 }
 @media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 1px}) {
   //@media all and (max-width: #{$bp-desktop - 1px}) {
-  .ga-grid2 {
+  .#{$ns}-grid2 {
     &.row {
       @for $i from 1 through $gridWhole {
         &-md-#{$i} {

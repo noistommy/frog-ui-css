@@ -1,74 +1,200 @@
-.ga-tag {
-  display: inline-block;
-  border-style: solid;
-  border-radius: 0.6em;
-  margin: 3px;
-  &.line {
-    border-width: ($tagLineHeight * 0.5);
-    width: $tagLineWidth;
-    min-width: 30px;
-    border-color: $baseTagColor;
-  }
-  &.dot {
-    border-radius: ($tagDotSize * 0.5);
-    border-width: ($tagDotSize * 0.5);
-    width:0;
-    height:0;
-    border-color: $baseTagColor;
-  }
-  &.label {
-    vertical-align: baseline;
-    font-size: 0.8em;
-    font-weight: 400;
-    line-height: 2em;
-    border-radius: 2em;
-    font-family: $fontName;
-    display: inline-block;
-    margin: 0 0.14285714em;
-    background-color: $baseTagColor;
-    background-image: none;
-    padding: 0 0.833em;
-    text-transform: none;
-    border: 0 solid transparent;
-    transition: background .1s ease;
-    &.hover, &.focus,
-    &:hover, &:focus {
-      background-color: var(--dark-suf);
+$tagHeight: 1.8em;
+.#{$ns} {
+  &-tag {
+    display: inline-flex;
+    align-items: center;
+    border-style: solid;
+    border-radius: 0.6em;
+    &.line {
+      border-width: ($tagLineHeight * 0.5);
+      width: $tagLineWidth;
+      height: 0;
+      min-width: 30px;
+      border-color: $baseTagColor;
     }
-    i.icon.left {
-      margin-right: 5px;
+    &.dot {
+      border-radius: ($tagDotSize * 0.5);
+      border-width: ($tagDotSize * 0.5);
+      width: 0;
+      height: 0;
+      border-color: $baseTagColor;
     }
-    i.icon.right {
-      margin-left: 5px;
+    &.kbd,
+    &.label,
+    &.pointing {
+      vertical-align: baseline;
+      font-size: 0.8em;
+      font-weight: 500;
+      line-height: 1.8em;
+      border-radius: $baseBorderRadius;
+      // margin: 0 0.2em;
+      background-color: $baseTagColor;
+      background-image: none;
+      padding: 0 0.8em;
+      text-transform: none;
+      border: 0 solid transparent;
+      transition: background 0.1s ease;
+      &.hover,
+      &.focus,
+      &:hover,
+      &:focus {
+        background-color: $baseHoverTagColor;
+      }
+      &.icon i {
+        line-height: 1.8em;
+      }
+      i.icon.left {
+        margin-right: 0.4em;
+        margin-left: -0.4em;
+      }
+      i.icon.right {
+        margin-left: 0.4em;
+        margin-right: -0.4em;
+      }
+      &.round {
+        border-radius: 2em;
+      }
+    }
+    &.pointing {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        clip-path: polygon(0 0, 100% 0, 50% 50%);
+        background-color: inherit;
+      }
+      &.up::after {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: -1px 0;
+      }
+      &.down::after {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%) rotate(180deg);
+        margin: -1px 0;
+      }
+      &.left::after {
+        clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        margin: 0 -1px;
+      }
+      &.right::after {
+        clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%) rotate(180deg);
+        margin: 0 -1px;
+      }
+    }
+    &.static {
+      pointer-events: none;
+    }
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    & + .#{$ns}-tag {
+      margin-left: 4px;
+    }
+    &.kbd {
+      display: inline-block;
+      text-transform: capitalize;
+      transform: translateY(-3px);
+      border-radius: 6px;
+      box-shadow:
+        inset 0 0 0 1px var(--brd),
+        0 3px 0 0 var(--brd);
+      &.active,
+      &:active {
+        transform: translateY(0);
+        box-shadow: inset 0 0 0 1px var(--brd);
+        &:after {
+          transform: translateY(-3px);
+        }
+      }
+      &.meta {
+        &:after {
+          content: '+';
+          color: var(--txt);
+          position: absolute;
+          font-size: 16px;
+          padding: 0 6px;
+          left: 100%;
+          display: inline-block;
+        }
+        & + .kbd {
+          margin-left: 20px;
+        }
+      }
+      &.space {
+        text-align: center;
+        width: 100px;
+      }
+      &.esc {
+        text-transform: uppercase;
+      }
+      &.enter {
+        &:before {
+          content: '↵';
+          margin-right: 5px;
+        }
+      }
+      &.cmd {
+        &:before {
+          content: '⌘';
+          margin-right: 5px;
+        }
+      }
+      &.opt,
+      &.alt {
+        &:before {
+          content: '⌥';
+          margin-right: 5px;
+        }
+      }
+      &.ctrl {
+        &:before {
+          content: '⌃';
+          margin-right: 5px;
+        }
+      }
+      &.shift {
+        &:before {
+          content: '⇧';
+          margin-right: 5px;
+        }
+      }
     }
   }
-}
-
-@keyframes bounce {
-  25% {transform: scale(1.1)}
-  75% {transform: scale(0.9)}
-}
-.ga-tags {
-  width: 100%;
-  display: inline-flex;
-  overflow-x: auto;
-  &.tagMap {
-    flex-wrap: wrap;
-  }
-  &.one-of-a-kind {
-    flex-wrap: wrap;
-    visibility: hidden;
-    &:hover > * {
-      opacity: .4;
-      transform: scale(.9);
+  &-tags {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    overflow-x: auto;
+    &.tagMap {
+      flex-wrap: wrap;
     }
-    > * {
-      visibility: visible;
-      transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
-      &:hover {
-        opacity: 1;
-        transform: scale(1);
-        transition-delay: 0ms, 0ms;
+    &.one-of-a-kind {
+      flex-wrap: wrap;
+      visibility: hidden;
+      &:hover > * {
+        opacity: .4;
+        transform: scale(.9);
+      }
+      > * {
+        visibility: visible;
+        transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+        &:hover {
+          opacity: 1;
+          transform: scale(1);
+          transition-delay: 0ms, 0ms;
+        }
       }
     }
   }
@@ -85,11 +211,16 @@
 
 }
 
+@keyframes bounce {
+  25% {transform: scale(1.1)}
+  75% {transform: scale(0.9)}
+}
+
 @each $color, $values in $brandColors{
   $bgColor: #{nth($values, 1)};
   $hoverColor: #{nth($values, 2)};
   $textColor: #{nth($values, 3)};
-  .ga-tag {
+  .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $bgColor;
       &.hover, &.focus,
@@ -110,7 +241,7 @@
 
 @each $color, $value in $colors {
   $hoverColor: darken($value, 10);
-  .ga-tag {
+  .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $value;
       &.hover, &.focus,

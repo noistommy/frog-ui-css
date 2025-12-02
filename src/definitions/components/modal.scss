@@ -1,4 +1,4 @@
-.ga-modal {
+.#{$ns}-modal {
   display: inline-block;
   border: 1px solid $tableBorderColor;
   border-radius: $modalBorderRadius;
@@ -35,7 +35,7 @@
     .align-center { text-align: center; }
   }
 }
-.ga-modal-container {
+.#{$ns}-modal-container {
   display: none;
   position: fixed;
   width: 100vw;
@@ -46,10 +46,10 @@
   &.open {
     display: block;
   }
-  &.ga-modal-background {
+  &.#{$ns}-modal-background {
     background-color: rgba(0, 0, 0, 0.16);
   }
-  .ga-modal {
+  .#{$ns}-modal {
     box-shadow: 2px 5px 4px rgba(0, 0, 0, 0.16);
     position: absolute;
     top: 50%;

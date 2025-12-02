@@ -1,4 +1,4 @@
-.ga-pagination {
+.#{$ns}-pagination {
   display: flex;
   outline: 0;
   &.hide {
@@ -53,7 +53,7 @@
       }
     }
   }
-  &.ga-flex,
+  &.#{$ns}-flex,
   &.align {
     &-left {justify-content: flex-start;}
     &-center {justify-content: center;}

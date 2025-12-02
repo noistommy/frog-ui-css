@@ -137,7 +137,7 @@ h5,.h5 {font-size: $h5;}
 }
 
 @each $color, $value in $colors {
-    .ga-#{$color} {
+    .#{$ns}-#{$color} {
         background-color: $value !important;
         color: $white !important;
         border-color: darken($value, 10) !important;
@@ -154,14 +154,14 @@ h5,.h5 {font-size: $h5;}
             border-color: $value !important;
         }
     }
-    .ga-#{$color}-light {
+    .#{$ns}-#{$color}-light {
         background-color: lighten($value, 35) !important;
         color: $value !important;
         border-color: darken($value, 10) !important;
     }
 }
 @each $color, $value in $colors2 {
-    .ga-#{$color}-2 {
+    .#{$ns}-#{$color}-2 {
         background-color: $value !important;
         color: $white !important;
         border-color: darken($value, 10) !important;
@@ -182,7 +182,7 @@ h5,.h5 {font-size: $h5;}
 
 @each $color, $value in $stateColors {
     .#{$color},
-    .ga-#{$color} {
+    .#{$ns}-#{$color} {
         background-color: nth($value, 1) !important;
         color: $white !important;
         // color: a11y-color($white, nth($value, 1)) !important;
@@ -200,7 +200,7 @@ h5,.h5 {font-size: $h5;}
             border-color: nth($value, 2) !important;
         }
     }
-    .ga-#{$color}-light {
+    .#{$ns}-#{$color}-light {
         background-color: lighten(nth($value, 1), 35) !important;
         color: nth($value, 1) !important;
         border-color: nth($value, 2) !important;

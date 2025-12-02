@@ -1,6 +1,12 @@
 extends layout
 
 block contents
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .error-container
+    .error-wrapper
+      h1.status= error.status
+      h1.message= message
+      br
+      .ga-button.circle.yellow.huge
+        i.icon.left.xi-arrow-left 
+        | 홈으로 가기
+        a.link(href="/")

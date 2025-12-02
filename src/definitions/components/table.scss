@@ -5,7 +5,7 @@ $thBorderRaius: 13px;
   color: var(--txt);
   padding: 10px 20px;
 }
-table.ga-table {
+table.#{$ns}-table {
   width: 100%;
   text-align: $textAlign;
   background-color: var(--bgc);
@@ -95,7 +95,7 @@ table.ga-table {
       }
     }
   }
-  //.ga-input, .ga-select-box, .ga-switch, .ga-button {
+  //.#{$ns}-input, .#{$ns}-select-box, .#{$ns}-switch, .#{$ns}-button {
   //  font-size: 0.8em;
   //}
   [class*="align-left"] {
@@ -133,10 +133,10 @@ table.ga-table {
       &-#{$i} {width: $gridPercent * $i * 1% }
     }
   }
-  .ga-input input {
+  .#{$ns}-input input {
     padding: $compactPadding;
   }
-  .ga-select-box {
+  .#{$ns}-select-box {
     select {
       padding: $compactPadding;
     }
@@ -144,7 +144,7 @@ table.ga-table {
       padding: $compactVerticalPadding+px;
     }
   }
-  .ga-button {
+  .#{$ns}-button {
     padding: $compactPadding;
   }
 }

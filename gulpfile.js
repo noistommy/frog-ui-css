@@ -23,6 +23,7 @@ const prompt = require('gulp-prompt');
 const log = require('fancy-log');
 
 const baseFile = 'frogui'
+// const baseFile = 'gcloud'
 // const baseFile = 'beui'
 // fs module test
 // fa.writeFile('sample.json', JSON.stringify({ sample: 'data' }), () => {})
@@ -38,7 +39,7 @@ let paths = {
 fs.readFile('config.json', 'utf-8', (err, data) => {
   if (err) return console.log(err)
   paths = JSON.parse(data)
-  log(paths)
+  log('print path:',paths)
 })
 
 // 빌드 전 이전 빌드 폴더 삭제
@@ -78,7 +79,7 @@ const assets = () => {
 
 // 작업 중 변경 감지 -> 빌드
 const watcher = () => {
-  watch(['src/themes/default/**/*.scss','src/definitions/**/**/*.scss'], build)
+  watch(['src/themes/**/**/*.scss','src/definitions/**/**/*.scss'], build)
   watch(['src/themes/default/bases/variables.scss', 'src/themes/default/bases/reset.scss'], build)
   watch('src/definitions/components/*.js', buildJS)
 }

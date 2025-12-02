@@ -76,6 +76,64 @@ block contents
                                     | #{`<!-- Right -->`}
                                     | #{code1}
             .section-contents
+                h4.contents-title Pointing
+                .ga-card.attached
+                    .contents-wrapper
+                        .ga-tag.label.pointing.left
+                            i.icon.left.xi-angle-left
+                            | Left
+                        .ga-tag.label.pointing.right
+                            | Right
+                            i.icon.right.xi-angle-right
+                        .ga-tag.label.pointing.up
+                            i.icon.left.xi-angle-up
+                            | Left
+                        .ga-tag.label.pointing.down
+                            | Right
+                            i.icon.right.xi-angle-down
+                    .footer
+                        - var code = '<div class="ga-tag label pointing left">\n    <i class="icon left xi-angle-left" />\n    { Tag Contents }\n</div>'
+                        - var code1 = '<div class="ga-tag label pointing right">\n    <i class="icon right xi-angle-right" />\n    { Tag Contents }\n</div>'
+                        - var code2 = '<div class="ga-tag label pointing up">\n    <i class="icon right xi-angle-up" />\n    { Tag Contents }\n</div>'
+                        - var code3 = '<div class="ga-tag label pointing down">\n    <i class="icon right xi-angle-down" />\n    { Tag Contents }\n</div>'
+                            pre
+                                code.language-markup
+                                    | #{`<!-- Left -->`}
+                                    | #{code}
+                                    | #{`<!-- Right -->`}
+                                    | #{code1}
+                                    | #{`<!-- Up -->`}
+                                    | #{code2}
+                                    | #{`<!-- Down -->`}
+                                    | #{code3}
+            .section-contents
+                h4.contents-title kbd
+                .ga-card.attached
+                    .contents-wrapper
+                        .ga-tag.label.kbd.enter
+                            | Enter
+                        .ga-tag.label.kbd.space
+                            | Space
+                        .ga-tag.label.kbd.meta.cmd
+                            | Commend
+                        .ga-tag.label.kbd
+                            | S
+                    .footer
+                        - var code = '<div class="ga-tag label kbd enter">\n    { Tag Contents }\n</div>'
+                        - var code1 = '<div class="ga-tag label kbd space">\n    { Tag Contents }\n</div>'
+                        - var code2 = '<div class="ga-tag label kbd meta cmd">\n    { Tag Contents }\n</div>'
+                        - var code3 = '<div class="ga-tag label kbd">\n    { Tag Contents }\n</div>'
+                            pre
+                                code.language-markup
+                                    | #{`<!-- kbd (Key Enter) -->`}
+                                    | #{code}
+                                    | #{`<!-- kbd (Key Space) -->`}
+                                    | #{code1}
+                                    | #{`<!-- kbd (Key Commend - Meta) -->`}
+                                    | #{code2}
+                                    | #{`<!-- kbd (Key S) -->`}
+                                    | #{code3}
+            .section-contents
                 h4.contents-title Tags
                 .ga-card.attached
                     .contents-wrapper

@@ -1,4 +1,4 @@
-.ga-list {
+.#{$ns}-list {
   max-height: 100%;
   > .item {
     position: relative;
@@ -26,7 +26,7 @@
       justify-content: flex-end;
       transform: translateY(-50%);
       padding: 5px;
-      .ga-button {
+      .#{$ns}-button {
         font-size: 0.8em;
         color: #909090;
       }
@@ -117,7 +117,7 @@
   //       justify-content: flex-end;
   //       padding: 0 5px;
   //       transform: translateY(-50%);
-  //       .ga-button {
+  //       .#{$ns}-button {
   //         color: #909090;
   //         margin: 0;
   //       }
@@ -166,7 +166,7 @@
   //     }
   //   }
   //   //&.draggable {
-  //   //  .ga-item {
+  //   //  .#{$ns}-item {
   //   //    position: relative;
   //   //    padding-left: 30px;
   //   //    &:before {
@@ -199,7 +199,7 @@
   //         background-color: #2985DB;
   //       }
   //     }
-  //     &.connect .ga-item {
+  //     &.connect .#{$ns}-item {
   //       &:before {
   //         content: "";
   //         position: absolute;

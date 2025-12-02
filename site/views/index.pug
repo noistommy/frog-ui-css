@@ -5,18 +5,55 @@ block title
 
 block contents
     .main-banner.page-wrapper
-        .title FROG UI 
-        .sub-title 
-            | Building 
-            span.ga-blue-text consistent 
-            | and 
-            span.ga-green-text meaningful 
-            | UI with Semantic CSS  
-        .main-link
-            .ga-button 
-                | Components
-                i.icon.right.xi-arrow-right
-                a.link(href="/pages/base") 
+        .container.center
+            .title FROG UI 
+            .sub-title 
+                | Building 
+                span.ga-blue-text consistent 
+                | and 
+                span.ga-green-text meaningful 
+                | UI with Semantic CSS  
+            .main-link
+                .ga-button 
+                    | Components
+                    i.icon.right.xi-arrow-right
+                    a.link(href="/pages/base") 
+    .page-wrapper#custom-theme
+        .container.center
+            .ga-grid
+                .column.span-6.span-xs-12 
+                    .user-custom-theme
+                        h1 User Customize Theme
+                        p 
+                .column.span-6.span-xs-12
+                    .select-css
+                        .ga-select-box.dropdown#css-selector
+                                .selected-item.ga-input.icon.right
+                                    input(type="text", readonly, value="Frog UI")
+                                    i.icon.xi-angle-down
+                                .select-menu
+                                    .ga-list.selection
+                                        .item.option-item(data-path="/frogui.css") Frog UI
+                                        .item.option-item(data-path="/gcloud.css") G Cloud UI
+                    .hr
+                    .preview-theme 
+                        .ga-button Button
+                        .ga-button.primary
+                            i.icon.left.xi-user 
+                            | Primary
+                        .ga-button.secondary
+                            i.icon.left.xi-file
+                            | Secondary
+                        .ga-button.red
+                            | Color:Red
+                        .ga-input.labeled.left.inline
+                                input(type="text", placeholder="입력하세요", value="Rate", disabled)
+                                label 
+                                    i.icon.xi-star
+                        .ga-buttons 
+                            .ga-button.selected A
+                            .ga-button B
+                            .ga-button C
     .page-wrapper.summary#typography
         section
             h5.header typography
@@ -228,3 +265,4 @@ block contents
                     .ga-button
                         | Badge In
                         span.ga-badge.mark.primary
+    script(src="/js/selectbox.js")
