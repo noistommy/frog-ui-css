@@ -1,15 +1,18 @@
 
+$gridBorderRadius: $baseBorderRadius * 2;
 .#{$ns} {
   &-grid2 {
     --grid-col-num: #{$gridWhole};
     --grid-row-num: #{$gridWhole};
-    --grid-gap: #{$gridGutterLarge}px;
+    --grid-gap: #{$gridGutterLarge};
+    --rows-height: '1ft';
+    width: 100%;
     display: grid;
-    grid-gap: var(--grid-gap);
+    grid-gap: calc(var(--grid-gap) * 1px);
     grid-template-columns: repeat(var(--grid-col-num), 1fr);
     margin-bottom: var(--grid-gap);
     &.set-rows {
-      grid-template-rows: repeat(var(--grid-row-num), 1fr);
+      grid-template-rows: repeat(var(--grid-row-num), var(--rows-height));
     }
     &.inline {
       display: inline-grid;
@@ -46,17 +49,79 @@
     &.dense {
       grid-auto-flow: dense;
     }
-    &.justify {
-      &-start {justify-items: start;}
-      &-center {justify-items: center;}
-      &-end {justify-items: end;}
-      &-strech {justify-items: stretch;}
+    &.justify-content {
+      &-left {
+        justify-content: start;
+      }
+      &-center {
+        justify-content: center;
+      }
+      &-right {
+        justify-content: end;
+      }
+      &-strech {
+        justify-content: stretch;
+      }
+      &-around {
+        justify-content: space-around;
+      }
+      &-between {
+        justify-content: space-between;
+      }
+      &-evenly {
+        justify-content: space-evenly;
+      }
     }
-    &.align {
-      &-start {align-items: start;}
-      &-center {align-items: center;}
-      &-end {align-items: end;}
-      &-strech {align-items: stretch;}
+    &.align-content {
+      &-top {
+        align-content: start;
+      }
+      &-center {
+        align-content: center;
+      }
+      &-bottom {
+        align-content: end;
+      }
+      &-strech {
+        align-content: stretch;
+      }
+      &-around {
+        align-content: space-around;
+      }
+      &-between {
+        align-content: space-between;
+      }
+      &-evenly {
+        align-content: space-evenly;
+      }
+    }
+    &.justify-items {
+      &-left {
+        justify-items: start;
+      }
+      &-center {
+        justify-items: center;
+      }
+      &-right {
+        justify-items: end;
+      }
+      &-strech {
+        justify-items: stretch;
+      }
+    }
+    &.align-items {
+      &-top {
+        align-items: start;
+      }
+      &-center {
+        align-items: center;
+      }
+      &-bottom {
+        align-items: end;
+      }
+      &-strech {
+        align-items: stretch;
+      }
     }
     > .column {
       &.col {
@@ -73,12 +138,44 @@
           }
         }
       }
+      &.justify {
+        &-start {
+          justify-self: start;
+        }
+        &-center {
+          justify-self: center;
+        }
+        &-end {
+          justify-self: end;
+        }
+        &-strech {
+          justify-self: stretch;
+        }
+      }
+      &.align {
+        &-start {
+          align-self: start;
+        }
+        &-center {
+          align-self: center;
+        }
+        &-end {
+          align-self: end;
+        }
+        &-strech {
+          align-self: stretch;
+        }
+      }
+    }
+    &.round {
+      > .column {
+        border-radius: 14px;
+      }
     }
     &.tabled {
       --grid-gap: #{$gridTableGutter}px;
       background-color: $tableBorderColor;
       border: 1px solid $tableBorderColor;
-      font-size: $tableFontSize;
       margin: $margin;
       &:first-child {
         margin-top: 0;
@@ -98,32 +195,67 @@
         &.label {
           background-color: $headerBackgroundColor;
           color: $tableBorderColor;
-          font-weight: 700;
+          font-weight: 900;
         }
-        &.align-left { justify-content: flex-start; }
-        &.align-center { justify-content: center; }
-        &.align-right { justify-content: flex-end; }
-        &.align-top { align-items: flex-start; }
-        &.align-middle { align-items: center; }
-        &.align-bottom { align-items: flex-end; }
+        &.align-left {
+          justify-content: flex-start;
+        }
+        &.align-center {
+          justify-content: center;
+        }
+        &.align-right {
+          justify-content: flex-end;
+        }
+        &.align-top {
+          align-items: flex-start;
+        }
+        &.align-middle {
+          align-items: center;
+        }
+        &.align-bottom {
+          align-items: flex-end;
+        }
       }
-      .#{$ns}-select-box, .#{$ns}-input {
+      .be-select-box,
+      .be-input {
         margin: 0;
         width: 100%;
       }
-      .#{$ns}-input input {
+      .be-input input {
         padding: $compactPadding;
       }
-      .#{$ns}-select-box {
+      .be-select-box {
         select {
           padding: $compactPadding;
         }
         i {
-          padding: $compactVerticalPadding+px;
+          padding: $compactVerticalPadding + px;
         }
       }
-      .#{$ns}-button {
+      .be-button {
         padding: $compactPadding;
+      }
+    }
+    &.dosirak {
+      --grid-auto-row: auto;
+      grid-auto-rows: calc(var(--grid-auto-row) * 1px);
+      > .column {}
+      &.round {
+        > .column {
+          border-radius: $gridBorderRadius;
+        }
+        &-s > .column {
+          border-radius: calc($gridBorderRadius * 0.5);
+        }
+        &-m > .column {
+          border-radius: $gridBorderRadius;
+        }
+        &-l > .column {
+          border-radius: calc($gridBorderRadius * 2);
+        }
+        &-xl > .column {
+          border-radius: calc($gridBorderRadius * 4);
+        }
       }
     }
   }
@@ -132,7 +264,7 @@
 
 @media all and (max-width: #{$bp-tablet - 1px}) {
   .#{$ns}-grid2 {
-    --grid-gap: #{$gridGutterSmall}px;
+    --grid-gap: #{$gridGutterSmall};
     &.row {
       @for $i from 1 through $gridWhole {
         &-xs-#{$i} {
@@ -156,7 +288,7 @@
 }
 @media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 1px}) {
   .#{$ns}-grid2 {
-    --grid-gap: #{$gridGutterSmall}px;
+    --grid-gap: #{$gridGutterSmall};
     &.row {
       @for $i from 1 through $gridWhole {
         &-sm-#{$i} {

@@ -1,6 +1,6 @@
-// Primary, Secondary
+@use 'sass:color';
+@use 'sass:list';
 
-//Colors
 .#{$ns} {
     &-button {
         position: relative;
@@ -237,11 +237,11 @@
 
 
 
-@each $color, $values in join($brandColors, $stateColors) {
-    $bgColor: #{nth($values, 1)};
-    $hoverColor: #{nth($values, 2)};
-    $textColor: #{nth($values, 3)};
-    @if color-contrast(nth($values, 1),nth($values, 3)) < 2.5 {
+@each $color, $values in list.join($brandColors, $stateColors) {
+    $bgColor: #{list.nth($values, 1)};
+    $hoverColor: #{list.nth($values, 2)};
+    $textColor: #{list.nth($values, 3)};
+    @if color-contrast(list.nth($values, 1),list.nth($values, 3)) < 2.5 {
         $textColor: $black;
     }
     .#{$ns}-button {
@@ -261,7 +261,7 @@
                 background-color: $hoverColor;
             }
             &.outline {
-                background-color: var(----hover-suf) !important;
+                background-color: var(--hover-suf) !important;
                 color: $bgColor!important;
                 box-shadow: 0 0 0 1px $hoverColor inset;
                 &.selected,
@@ -302,7 +302,7 @@
 
 
 @each $color, $value in $colors {
-    $hoverColor: darken($value, 10);
+    $hoverColor: color.adjust($value, $lightness: -10%);
     $textColor: $white;
     @if color-contrast($value, $textColor) < 1.8 {
         $textColor: $black;
@@ -320,7 +320,7 @@
                 background-color: $hoverColor;
             }
             &.outline{
-                background-color: var(----hover-suf);
+                background-color: var(--hover-suf);
                 color: $value;
                 box-shadow: 0 0 0 1px $hoverColor inset;
                 &.selected,

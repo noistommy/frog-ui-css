@@ -51,21 +51,6 @@ $calendarBorderRadius: 14px;
     //background-color: #666;
     width: 100%;
     height: calc((var(--cell-size) + var(--cell-gap) * 2) * 6);
-    .reset-btn {
-      position: absolute;
-      top: 0;
-      left: calc(100% + 5px);
-      background: linear-gradient(135deg, lighten($issue_red, 10), darken($issue_red, 30));
-      padding: var(--cell-gap);
-      border-bottom-right-radius: 2px;
-      border-top-right-radius: 2px;
-      color: #fff;
-      font-weight: 500;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      //font-size: 0.8em;
-    }
     .cell {
       background-color: var(--bgc);
       position: absolute;

@@ -22,7 +22,7 @@ const prompt = require('gulp-prompt');
 
 const log = require('fancy-log');
 
-const baseFile = 'frogui'
+let baseFile = 'frogui'
 // const baseFile = 'gcloud'
 // const baseFile = 'beui'
 // fs module test
@@ -50,8 +50,11 @@ const clean = () => {
 
 // scss 빌드
 const build = () => {
-  
-  log(baseFile, paths.base)
+  console.log('모든 인수:',process.argv)
+  const file = process.argv.find(arg => arg.startsWith('--file='))
+  if (file) {
+    baseFile = file.split('=')[1]
+  }
   return src([`src/${baseFile}.scss`])
     .pipe(sassGlob())
     .pipe(sass())

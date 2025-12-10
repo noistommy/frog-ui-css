@@ -12,10 +12,10 @@ block contents
                     p Text input fields with consistent styling and focus handling.
             .section-contents
                 h4.contents-title 기본
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input
-                            input(type="text", placeholder="입력하세요")
+                            input(type="text", placeholder="입력하세요", value="Frog")
                     .footer
                         - var code = '<div class="ga-input">\n    <input type="text" placeholder="입력하세요" />\n</div>'
                             pre
@@ -23,7 +23,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Disabled
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.disabled
                             input(type="text", placeholder="입력하세요")
@@ -34,7 +34,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Read only
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.readonly
                             input(type="text", placeholder="입력하세요")
@@ -45,7 +45,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Underline
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.underline
                             input(type="text", placeholder="입력하세요")
@@ -56,7 +56,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Transparent
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.transparent
                             input(type="text", placeholder="입력하세요")
@@ -67,7 +67,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Compact
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.compact
                             input(type="text", placeholder="입력하세요")
@@ -78,7 +78,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Edit
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.edit
                             input(type="text", placeholder="입력하세요", value="원래 값")
@@ -91,7 +91,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Status
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-grid
                             .column.span-3.span-xs-8
@@ -116,7 +116,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Fluid
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.fluid
                             input(type="text", placeholder="입력하세요")
@@ -127,7 +127,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Unit
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.unit(data-unit='대')
                             input.align-right(type="text", placeholder="0")
@@ -138,7 +138,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Icon
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-grid
                             .column.span-3.span-xs-8
@@ -171,7 +171,7 @@ block contents
                                     | #{code2}
             .section-contents
                 h4.contents-title Badge
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.badge
                             input(type="text", placeholder="입력하세요")
@@ -183,7 +183,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Label
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.labeled.right.inline
                             input(type="text", placeholder="입력하세요")
@@ -205,7 +205,7 @@ block contents
                                     | #{code1}
             .section-contents
                 h4.contents-title Button
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.button.left
                             input(type="text", placeholder="입력하세요")
@@ -225,7 +225,7 @@ block contents
                                     | #{code1}
             .section-contents
                 h4.contents-title Textarea
-                .ga-card.attached
+                .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-input.fluid
                             textarea(placeholder="입력하세요")

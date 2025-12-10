@@ -1,0 +1,148 @@
+extends ../layout
+
+block title
+    title #{title} | Frog UI CSS
+
+block contents
+    .page-wrapper
+        section#tabs
+            .section-title
+                h1= title
+                .section-desc 
+                    p Content containers for grouping text, images, and actions.
+            .section-contents
+                h4.contents-title 기본
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents
+                        .ga-segment
+                            .contents
+                                | Contents 영역         
+                        .ga-segment.border
+                            .contents
+                                | Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Border
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents    
+                        .ga-segment.border
+                            .contents
+                                | Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment border\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Float
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents    
+                        .ga-segment.float
+                            .contents
+                                | Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment float\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Surface
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents    
+                        .ga-segment.surface
+                            .contents
+                                | Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment surface\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Align
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents 
+                        .ga-segment.border.align-left
+                            .contents
+                                | Left Align Contents 영역         
+                        .ga-segment.border.align-center
+                            .contents
+                                | Center Align Contents 영역         
+                        .ga-segment.border.align-right
+                            .contents
+                                | Right Align Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment align-left\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code1 = `\n<div class=\"ga-segment align-center\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code2 = `\n<div class=\"ga-segment align-right\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code
+                                code.language-markup= code1
+                                code.language-markup= code2
+            .section-contents
+                h4.contents-title Round
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents 
+                        .ga-segment.border.round-s
+                            .contents
+                                | Contents 영역         
+                        .ga-segment.border.round-m
+                            .contents
+                                | Contents 영역         
+                        .ga-segment.border.round-l
+                            .contents
+                                | Contents 영역         
+                        .ga-segment.border.round-xl
+                            .contents
+                                | Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment round-{s | m | l | xl}\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Title
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents
+                        .ga-segment.border
+                            .title Title
+                            .contents Contents 영역
+                    .footer 
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-card\">\n       <div class=\"title\">Title</div>\n       <!-- insert contents -->\n  </div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Attached (header, footer)
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents
+                        .ga-segment.border.attached 
+                            .header 
+                                .title Header 영역
+                            .contents Contents 영역
+                            .footer Footer 영역
+                    .footer 
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-card\"></div>\n    <div class=\"header\">Header contents</div>\n    <!-- contents -->\n    <div class=\"footer\">Footer contents</div>\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
+                h4.contents-title Segments
+                .ga-segment.float.round-xl.attached
+                    .contents-wrapper.contents
+                        .ga-segments.border.round-l
+                            .ga-segment.border
+                                .contents
+                                    | Contents 영역         
+                            .ga-segment.border
+                                .contents
+                                    | Contents 영역         
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-segment\">\n       <!-- insert contents -->\n</div>\n`
+                            pre
+                                code.language-markup= code

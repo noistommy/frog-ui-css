@@ -1,4 +1,8 @@
-.ga-message {
+@use 'sass:color';
+@use 'sass:list';
+
+.#{$ns} {
+  &-message {
     padding: 15px 20px;
     border-radius: 4px;
     background-color: var(--bgc);
@@ -9,80 +13,78 @@
     &:last-child {
         margin: 0;
     }
-
     &:hover {
         background-color: var(--suf);
     }
-
     &.align {
-        &-left {
-            text-align: left;
-        }
+      &-left {
+          text-align: left;
+      }
 
-        &-center {
-            text-align: center;
-        }
+      &-center {
+          text-align: center;
+      }
 
-        &-right {
-            text-align: right;
-        }
+      &-right {
+          text-align: right;
+      }
     }
-}
-
-.ga-messages {
+  }
+  &-messages {
     display: flex;
     gap: 8px;
 
     &.list {
-        flex-direction: column;
+      flex-direction: column;
     }
+  
+    .#{$ns}-message {
+      &.selected {
+        color: $primary;
+        background-color: var(--suf);
+        border-color: $primary
+      }
 
-    .ga-message {
-        &.selected {
-            color: $primary;
-            background-color: var(--suf1);
-            border-color: $primary
-        }
+      &:hover {
+        background-color: var(--suf);
+      }
 
-        &:hover {
-            background-color: var(--suf1);
-        }
-
-        &.disabled {
-            pointer-events: none;
-            color: #d4d4d4;
-            background-color: #ededed;
-            border-color: #ccc;
-        }
+      &.disabled {
+        pointer-events: none;
+        color: #d4d4d4;
+        background-color: #ededed;
+        border-color: #ccc;
+      }
     }
-
+  
     &.grid {
-        .column {
-            &.col {
-                @for $i from 1 through $gridWhole {
-                    &-#{$i} {
-                        width: $gridPercent * $i * 1%;
-                    }
-                }
+      .column {
+        &.col {
+          @for $i from 1 through $gridWhole {
+            &-#{$i} {
+              width: $gridPercent * $i * 1%;
             }
+          }
         }
+      }
 
-        &.divide {
-            @for $i from 1 through $gridWhole {
-                &-#{$i}>.column {
-                    width: calc(100% / $i)
-                }
-            }
+      &.divide {
+        @for $i from 1 through $gridWhole {
+          &-#{$i}>.column {
+            width: calc(100% / $i)
+          }
         }
+      }
     }
+  }
 }
 
 @each $color, $value in $stateColors {
-    .ga-message {
-        &.#{$color} {
-            background-color: lighten(nth($value, 4), 6) !important;
-            color: nth($value, 1) !important;
-            border-color: nth($value, 1) !important;
-        }
+  .#{$ns}-message {
+    &.#{$color} {
+      background-color: color.adjust(list.nth($value, 4), $lightness: 6%) !important;
+      color: list.nth($value, 1) !important;
+      border-color: list.nth($value, 1) !important;
     }
+  }
 }

@@ -30,6 +30,10 @@ router.get('/pages/cards', function(req, res, next) {
   res.render('components/cards',  { title: 'Cards' });
 });
 
+router.get('/pages/segments', function(req, res, next) {
+  res.render('components/segments',  { title: 'Segments' });
+});
+
 router.get('/pages/checkbox', function(req, res, next) {
   res.render('components/checkbox',  { title: 'Checkbox' });
 });

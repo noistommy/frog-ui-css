@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:list';
+
 $tagHeight: 1.8em;
 .#{$ns} {
   &-tag {
@@ -217,9 +220,9 @@ $tagHeight: 1.8em;
 }
 
 @each $color, $values in $brandColors{
-  $bgColor: #{nth($values, 1)};
-  $hoverColor: #{nth($values, 2)};
-  $textColor: #{nth($values, 3)};
+  $bgColor: #{list.nth($values, 1)};
+  $hoverColor: #{list.nth($values, 2)};
+  $textColor: #{list.nth($values, 3)};
   .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $bgColor;
@@ -240,7 +243,7 @@ $tagHeight: 1.8em;
 }
 
 @each $color, $value in $colors {
-  $hoverColor: darken($value, 10);
+  $hoverColor: color.adjust($value, $lightness: -10%);
   .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $value;

@@ -1,4 +1,6 @@
 @use 'sass:map';
+@use 'sass:list';
+
 :root.light-mode {
   --input-brd-hover: #{map.get($grays, 'gray-20')};
 }
@@ -32,7 +34,7 @@
         border-color: var(--input-brd-hover);
       }
       &:focus {
-        // border-color: $primary;
+        border-color: $primary;
         &::placeholder {
           opacity: 1;
         }
@@ -269,8 +271,8 @@
 }
 
 @each $color, $values in $stateColors {
-  $textColor: #{nth($values, 1)};
-  $hoverColor: #{nth($values, 2)};
+  $textColor: #{list.nth($values, 1)};
+  $hoverColor: #{list.nth($values, 2)};
   .#{$ns}-input {
     background-color: transparent !important;
     border: none !important;

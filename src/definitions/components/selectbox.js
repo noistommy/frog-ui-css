@@ -7,7 +7,9 @@ const selectMenu = cssSelector.querySelector('.ga-list');
 
 let targetElement;
 
-let selectedItem = 'Frog UI'
+let cssFile = localStorage.getItem('selected-css-file') === '/gcloud.css' ? 'G Cloud UI' : 'Frog UI'
+
+let selectedItem = cssFile;
 
 selectBoxes.forEach(elem => {
     document.addEventListener('click', e => {

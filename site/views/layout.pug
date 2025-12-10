@@ -34,40 +34,36 @@ html
     body
         .root
             header.gnb
-                nav.main-menu
-                    .toggle-menu
-                        .ga-button.icon.circle.show-menu
-                            i.xi-bars
-                .logo 
-                    a(href="/")
-                        span FROG UI
-                    //- div.sub-logo Fix, Refactor, Optimize, Grow!!
-                    //- div.sub-logo Frontend Renders On Grid...
-                    //- div.sub-logo For Real, Only Good!!
-                nav.sub-menu.small
-                    //- .home
-                    //-     .ga-button.text Home
-                    //-         a.link(href="/")
-                    //- .components
-                    //-     .ga-button.text Components
-                    //-         a.link(href="/pages/base")
-                    .link-btn
-                        .ga-button.circle.badge.compact
-                            | Be-UI 
-                            .in-badge.ga-deepblue React
-                            a.link(href="https://react-be-ui.vercel.app/", target="_blank")
-                        .ga-button.circle.badge.compact
-                            | Be-UI 
-                            .in-badge.ga-green vue
-                            a.link(href="https://beui.vercel.app/", target="_blank") 
-                    .divide
-                        .ga-button.text |
-                    .mode
-                        .ga-button.icon.circle.toggle-mode
-                            i.xi-sun-o
-                    .github
-                        a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
-                            i.xi-github
+                .header-wrapper.container.center
+                    
+                    nav.main-menu
+                        .toggle-menu
+                            .ga-button.icon.circle.show-menu
+                                i.xi-bars
+                    .logo 
+                        a(href="/")
+                            span FROG UI
+                        //- div.sub-logo Fix, Refactor, Optimize, Grow!!
+                        //- div.sub-logo Frontend Renders On Grid...
+                        //- div.sub-logo For Real, Only Good!!
+                    nav.sub-menu.small
+                        .link-btn
+                            .ga-button.circle.badge.compact
+                                | Be-UI 
+                                .in-badge.ga-deepblue React
+                                a.link(href="https://react-be-ui.vercel.app/", target="_blank")
+                            .ga-button.circle.badge.compact
+                                | Be-UI 
+                                .in-badge.ga-green vue
+                                a.link(href="https://beui.vercel.app/", target="_blank") 
+                        .divide
+                            .ga-button.text |
+                        .mode
+                            .ga-button.icon.circle.toggle-mode
+                                i.xi-sun-o
+                        .github
+                            a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
+                                i.xi-github
             if !error && title === 'Frog UI'
                 .main-container.main
                     .right-part

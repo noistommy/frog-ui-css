@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:list';
+
 .#{$ns} {
   &-badge {
     cursor: default;
@@ -46,10 +49,10 @@
   }
 }
 
-@each $color, $values in join($brandColors, $stateColors) {
-  $bgColor: #{nth($values, 1)};
-  $hoverColor: #{nth($values, 2)};
-  $textColor: #{nth($values, 3)};
+@each $color, $values in list.join($brandColors, $stateColors) {
+  $bgColor: #{list.nth($values, 1)};
+  $hoverColor: #{list.nth($values, 2)};
+  $textColor: #{list.nth($values, 3)};
   .#{$ns}-badge {
     &.#{$color} {
       background-color: $hoverColor;
@@ -59,7 +62,7 @@
 }
 
 @each $color, $value in $colors {
-  $hoverColor: darken($value, 10);
+  $hoverColor: color.adjust($value, $lightness: -10%);
   $textColor: $white;
   .#{$ns}-badge {
     &.#{$color} {

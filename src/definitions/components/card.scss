@@ -1,42 +1,138 @@
-.#{$ns}-card {
-  width: 100%;
-  background-color: $cardBackgroundColor;
-  box-shadow: $cardBoxShadow;
-  margin: 20px 0;
-  border-radius: $cardBorderRadius;
-  > .title {
-    // font-family: 'Spoqa Han Sans Bold';
-    font-size: 2em;
-    font-weight: 700;
-    margin-bottom: 20px;
-    padding: $cardVerticalPadding $cardHorizontalPadding 0;
-  }
-  > div, .contents {
-    padding: $cardVerticalPadding $cardHorizontalPadding;
-  }
+// .#{$ns}-card {
+//   width: 100%;
+//   background-color: $cardBackgroundColor;
+//   box-shadow: $cardBoxShadow;
+//   margin: 20px 0;
+//   border-radius: $cardBorderRadius;
+//   > .title {
+//     // font-family: 'Spoqa Han Sans Bold';
+//     font-size: 2em;
+//     font-weight: 700;
+//     margin-bottom: 20px;
+//     padding: $cardVerticalPadding $cardHorizontalPadding 0;
+//   }
+//   > div, .contents {
+//     padding: $cardVerticalPadding $cardHorizontalPadding;
+//   }
 
-  &.attached {
-    > .header {
-      // margin-left: $cardHorizontalPadding * -1;
-      // margin-right: $cardHorizontalPadding * -1;
-      // margin-top: $cardVerticalPadding * -1;
-      // margin-bottom: $cardVerticalPadding;
-      // > div {
-      //   padding: ($cardVerticalPadding * 0.5) $cardHorizontalPadding
-      // }
-      border-top-left-radius: $cardBorderRadius;
-      border-top-right-radius: $cardBorderRadius;
+//   &.attached {
+//     > .header {
+//       // margin-left: $cardHorizontalPadding * -1;
+//       // margin-right: $cardHorizontalPadding * -1;
+//       // margin-top: $cardVerticalPadding * -1;
+//       // margin-bottom: $cardVerticalPadding;
+//       // > div {
+//       //   padding: ($cardVerticalPadding * 0.5) $cardHorizontalPadding
+//       // }
+//       border-top-left-radius: $cardBorderRadius;
+//       border-top-right-radius: $cardBorderRadius;
+//     }
+//     > .footer {
+//       // margin-left: $cardHorizontalPadding * -1;
+//       // margin-right: $cardHorizontalPadding * -1;
+//       // margin-bottom: $cardVerticalPadding * -1;
+//       // margin-top: $cardVerticalPadding;
+//       // > div {
+//       //   padding: ($cardVerticalPadding * 0.5) $cardHorizontalPadding
+//       // }
+//       border-bottom-left-radius: $cardBorderRadius;
+//       border-bottom-right-radius: $cardBorderRadius;
+//     }
+//   }
+// }
+
+
+$cardBackgroundColor: var(--depth-bg);
+$cardBoxShadow: var(--depth-bs);
+$cardHorizontalPadding: 14px;
+$cardVerticalPadding: 14px;
+
+.#{$ns} {
+  &-card {
+    position: relative;
+    max-width: 100%;
+    width: 290px;
+    background-color: $cardBackgroundColor;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.border {
+      border: 1px solid var(--brd);
+      > .extra {
+        border-top: 1px solid var(--brd);
+      }
     }
-    > .footer {
-      // margin-left: $cardHorizontalPadding * -1;
-      // margin-right: $cardHorizontalPadding * -1;
-      // margin-bottom: $cardVerticalPadding * -1;
-      // margin-top: $cardVerticalPadding;
-      // > div {
-      //   padding: ($cardVerticalPadding * 0.5) $cardHorizontalPadding
-      // }
-      border-bottom-left-radius: $cardBorderRadius;
-      border-bottom-right-radius: $cardBorderRadius;
+    &.float {
+      box-shadow: $cardBoxShadow;
+    }
+    &.surface {
+      background-color: var(--suf);
+    }
+    &.round {
+      &-s {
+        border-radius: calc($baseBorderRadius * 0.5);
+      }
+      &-m {
+        border-radius: $baseBorderRadius;
+      }
+      &-l {
+        border-radius: calc($baseBorderRadius * 2);
+      }
+      &-xl {
+        border-radius: calc($baseBorderRadius * 4);
+      }
+    }
+    > div {
+      padding: $cardVerticalPadding $cardHorizontalPadding;
+    }
+    > .image {
+      width: 100%;
+      padding: 0;
+      // border-top-left-radius: inherit;
+      // border-top-right-radius: inherit;
+      // overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .title {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  
+    > .extra {
+      padding: $cardVerticalPadding $cardHorizontalPadding;
+    }
+  
+    &.attached {
+      > .header {
+        padding: 0;
+        background-color: var(--suf);
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+      }
+      > .footer {
+        padding: 0;
+        background-color: var(--suf);
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+      }
+    }
+    > .contents {
+      flex-grow: 1;
+    }
+  }
+  
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    .#{$ns}-card {
+      .float {
+        box-shadow: none;
+      }
     }
   }
 }

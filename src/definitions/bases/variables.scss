@@ -1,5 +1,7 @@
+@use 'sass:list';
 @use 'sass:color';
 @use 'sass:map';
+
 
 $amount: 0.5;
 
@@ -15,6 +17,10 @@ body {
 a {
     color: var(--txt);
     text-decoration: none;
+}
+
+hr {
+    border-top-color: map.get($grays, 'gray-15');
 }
 
 // i {
@@ -140,9 +146,9 @@ h5,.h5 {font-size: $h5;}
     .#{$ns}-#{$color} {
         background-color: $value !important;
         color: $white !important;
-        border-color: darken($value, 10) !important;
+        border-color: color.adjust($value, $lightness: -10%) !important;
         &:hover {
-            background-color: darken($value, 10);
+            background-color: color.adjust($value, $lightness: -10%);
         }
         &-text {
             color: $value !important;
@@ -155,18 +161,18 @@ h5,.h5 {font-size: $h5;}
         }
     }
     .#{$ns}-#{$color}-light {
-        background-color: lighten($value, 35) !important;
+        background-color: color.adjust($value, $lightness: 35%) !important;
         color: $value !important;
-        border-color: darken($value, 10) !important;
+        border-color: color.adjust($value, $lightness: -10%) !important;
     }
 }
 @each $color, $value in $colors2 {
     .#{$ns}-#{$color}-2 {
         background-color: $value !important;
         color: $white !important;
-        border-color: darken($value, 10) !important;
+        border-color: color.adjust($value, $lightness: -10%) !important;
         &:hover {
-            background-color: darken($value, 10);
+            background-color: color.adjust($value, $lightness: -10%);
         }
         &-text {
             color: $value !important;
@@ -183,27 +189,26 @@ h5,.h5 {font-size: $h5;}
 @each $color, $value in $stateColors {
     .#{$color},
     .#{$ns}-#{$color} {
-        background-color: nth($value, 1) !important;
+        background-color: list.nth($value, 1) !important;
         color: $white !important;
-        // color: a11y-color($white, nth($value, 1)) !important;
-        border-color: nth($value, 2) !important;
+        border-color: list.nth($value, 2) !important;
         &:hover {
-            background-color: nth($value, 2);
+            background-color: list.nth($value, 2);
         }
         &-text {
-            color: nth($value, 1) !important;
+            color: list.nth($value, 1) !important;
         }
         &-bg {
-            background-color: nth($value, 1) !important;
+            background-color: list.nth($value, 1) !important;
         }
         &-border {
-            border-color: nth($value, 2) !important;
+            border-color: list.nth($value, 2) !important;
         }
     }
     .#{$ns}-#{$color}-light {
-        background-color: lighten(nth($value, 1), 35) !important;
-        color: nth($value, 1) !important;
-        border-color: nth($value, 2) !important;
+        background-color: color.adjust(list.nth($value, 1), $lightness: 35%) !important;
+        color: list.nth($value, 1) !important;
+        border-color: list.nth($value, 2) !important;
     }
 }
 
@@ -265,40 +270,59 @@ h5,.h5 {font-size: $h5;}
  //    }
  //}
  //
+ // media query @mixin
+
+ @mixin xs {
+   /* Mobile - Portrait */
+   @media (max-width: map.get($breakpoints, 'xs')) {
+     @content;
+   }
+ }
+ @mixin sm {
+   /* Mobile - Landscape */
+   @media (min-width: map.get($breakpoints, 'xs')) and (max-width: map.get($breakpoints, 'sm')) {
+     @content;
+   }
+ }
+ @mixin md {
+   /* Tablet */
+   @media (min-width: map.get($breakpoints, 'sm')) and (max-width: map.get($breakpoints, 'md')) {
+     @content;
+   }
+ }
+ @mixin lg {
+   /* Desktop */
+   @media (min-width: map.get($breakpoints, 'md')) and (max-width: map.get($breakpoints, 'lg')) {
+     @content;
+   }
+ }
+ @mixin xl {
+   /* Desktop - Large */
+   @media (min-width: map.get($breakpoints, 'xl')) {
+     @content;
+   }
+ }
+
+
  .container {
-    @if map.get($breakpoints, 'xs') {
-        /* Mobile - Portrait */
-        @media (max-width: map.get($breakpoints, 'xs')) {
-            max-width: map.get($breakpoints, 'xs');
-            padding-left: 0;
-            padding-right: 0;
-        }
+    @include xs {
+        max-width: map.get($breakpoints, 'xs');
+        padding-left: 0;
+        padding-right: 0;
     }
-    @if map.get($breakpoints, 'sm') {
-        /* Mobile - Landscape */
-        @media (min-width: map.get($breakpoints, 'xs')) and (max-width: map.get($breakpoints, 'sm')) {
-            max-width: map.get($breakpoints, 'sm');
-        }
+    @include sm {
+        max-width: map.get($breakpoints, 'sm');
     }
-    @if map.get($breakpoints, 'md') {
-        /* Tablet */
-        @media (min-width: map.get($breakpoints, 'sm')) and (max-width: map.get($breakpoints, 'md')) {
-            max-width: map.get($breakpoints, 'md');
-        }
+    @include md {
+        max-width: map.get($breakpoints, 'md');
     }
-    @if map.get($breakpoints, 'lg') {
-        /* Desktop */
-        @media (min-width: map.get($breakpoints, 'md')) and (max-width: map.get($breakpoints, 'lg')) {
-            max-width: map.get($breakpoints, 'lg');
-        }
+    @include lg {
+        max-width: map.get($breakpoints, 'lg');
     }
-    @if map.get($breakpoints, 'xl') {
-        /* Desktop - Large */
-        @media (min-width: map.get($breakpoints, 'xl')) {
-            max-width: map.get($breakpoints, 'xl');
-        }
+    @include xl {
+        max-width: map.get($breakpoints, 'xl');
     }
-    &.center {margin: 0 auto}
+    &.center {margin: 0 auto;}
     
  }
 @media (prefers-color-scheme: light) {
