@@ -9,9 +9,9 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Toggle-style input for on/off states with smooth transitions.
+                    p !{cont("ELEMENTS_SWITCH_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본 타입 1
+                h4.contents-title Base 1
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         label.ga-switch.slide
@@ -23,7 +23,7 @@ block contents
                             code.language-markup
                                 | #{code}
             .section-contents
-                h4.contents-title 기본 타입 2
+                h4.contents-title Base 2
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         label.ga-switch.slide.inside
@@ -35,7 +35,7 @@ block contents
                                 code.language-markup
                                     | #{code}
             .section-contents
-                h4.contents-title 둥그라미
+                h4.contents-title Round
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         label.ga-switch.slide.inside
@@ -51,7 +51,7 @@ block contents
                                 code.language-markup
                                     | #{code}
             .section-contents
-                h4.contents-title 버튼
+                h4.contents-title Button
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         label.ga-switch.button
@@ -61,8 +61,8 @@ block contents
                     .contents-wrapper
                         label.ga-switch.button.round
                             input(type="checkbox", checked)
-                            span.on.active 승인
-                            span.off 미승인
+                            span.on.active Tes
+                            span.off No
                     .footer
                         - var code = `<label class="ga-switch button">\n    <input type="checkbox" checked />\n    <span class="on active">ON</span>\n    <span class="off">OFF</span>\n</label>`
                             pre

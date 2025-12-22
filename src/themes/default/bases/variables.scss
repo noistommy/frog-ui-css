@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:math';
+@use 'sass:color';
 
 @function relativePx($number) {
     @return calc($number/14)*1em
@@ -37,7 +38,7 @@ $black: map.get($grays, 'gray-95');
 $fontName: 'Pretendard Variable';
 $fontSmoothing: antialiased;
 $baseFontColor: $black;
-$dModeBaseFontColor: $white;
+// $dModeBaseFontColor: $white;
 //
 //font weight
 //
@@ -64,17 +65,21 @@ $narrowerSpacing: -1px;
 //border color
 //
 $borderColor: #D6D6D6;
-$borderDarkColor: darken($borderColor, 27.4);
+$borderDarkColor: color.adjust($borderColor, $lightness: -27.4%);
 
 //
 //base background color
 //
 $background: #FFFFFF;
-$dModeBackground: #333333;
+// $dModeBackground: #333333;
 
-//#definitions
+// spacing
+$spacingUnit: 4px;
 
-//
+@function spacing($unit) {
+    @return calc($unit * $spacingUnit);
+}
+
 // colors
 //
 
@@ -105,16 +110,16 @@ $surface: #f2f2f2;
 $surfaceHover: #F4F4F4;
 
 $gray: #909090;
-$lightGray: lighten($gray, 16.1);
-$darkGray: lighten($black, 20.4);
+$lightGray: color.adjust($gray, $lightness: 16.1%);
+$darkGray: color.adjust($black, $lightness: 20.4%);
 
-$darkPrimary: darken(saturate($primary, 0), 10.6);
-$darkSecondary: darken($secondary, 35.7);
-$darkerPrimary: darken(saturate($primary, 0), 20.8);
-$darkerSecondary: darken($secondary, 58.1);
+$darkPrimary: color.adjust($primary, $lightness: -10.6%);
+$darkSecondary: color.adjust($secondary, $lightness: -35.7%);
+$darkerPrimary: color.adjust($primary, $lightness: -20.8%);
+$darkerSecondary: color.adjust($secondary, $lightness: -58.1%);
 
-$lightPrimary: lighten($primary, 35);
-$lightSecondary: lighten($secondary, 35);
+$lightPrimary: color.adjust($primary, $lightness: 35%);
+$lightSecondary: color.adjust($secondary, $lightness: 35%);
 
 $surface1: #F8F8F8;
 $surface2: #EFF4FC;
@@ -140,11 +145,11 @@ $brandColors: (
 );
 
 $stateColors: (
-    'success': ($success, darken($greenColor, 10), $white, $lightSuccess),
-    'info': ($info, darken($info, 10), $infoText, $lightInfo),
-    'danger': ($danger, darken($danger, 10), $dangerText, $lightDanger),
-    'attention': ($attention, darken($attention, 10), $attentionText, $lightAttention),
-    'importance': ($importance, darken($importance, 10), $importanceText, $lightImportance),
+    'success': ($success, color.adjust($greenColor, $lightness: -10%), $white, $lightSuccess),
+    'info': ($info, color.adjust($info, $lightness: -10%), $infoText, $lightInfo),
+    'danger': ($danger, color.adjust($danger, $lightness: -10%), $dangerText, $lightDanger),
+    'attention': ($attention, color.adjust($attention, $lightness: -10%), $attentionText, $lightAttention),
+    'importance': ($importance, color.adjust($importance, $lightness: -10%), $importanceText, $lightImportance),
 );
 
 @function grayHsl($per) {
@@ -198,12 +203,19 @@ $h4: absolutePx(16);
 $h5: absolutePx(14);
 
 //Size
-$tinySize: calc(10 / 14);
-$smallSize: calc(12 / 14);
-$mediumSize: calc(14 / 14);
-$largeSize: calc(18 / 14);
-$hugeSize: calc(20 / 14);
-$massiveSize: calc(24 / 14);
+$tinySize: relativePx(10);
+$smallSize: calrelativePxc(12);
+$mediumSize: relativePx(14);
+$largeSize: relativePx(18);
+$hugeSize: relativePx(20);
+$massiveSize: relativePx(24);
+
+// hero stype
+
+$heroLarge: relativePx(56); //4em (x14px)
+$hero: relativePx(42); //3em (x14px)
+$heroSub: relativePx(18); 
+$heroSmall: relativePx(24); 
 
 // Scroll Bars
 

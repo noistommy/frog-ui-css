@@ -103,7 +103,7 @@ $calendarBorderRadius: 14px;
         color: #ffffff;
       }
       &:hover:not(.week-cell) {
-        background-color: #ebebeb;
+        background-color: var(--hover-suf);
         transition-duration: 0.25s;
       }
       &.selected:not(.prev):not(.next):after {

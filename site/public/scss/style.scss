@@ -1,10 +1,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+@import '../fonts/isonorm3098.css';
+.isonorm {
+  font-family: Isonorm !important;
+}
+
 $gnbHeight: 60px;
+
+
 html, body {
   width: 100vw;
   height: 100vh;
+  font-size: 14px;
+  color: var(--txt);
+  background-color: var(--bgc);
 }
 header.gnb {
   position: fixed;
@@ -176,6 +186,9 @@ header.gnb .logo {
 .main-banner {
   text-align: center;
   height: 450px;
+  // height: 100dvh;
+  display: flex;
+  justify-content: center;
   padding: 12rem 0;
   .title {
     font-family: Ubuntu;
@@ -207,11 +220,14 @@ header.gnb .logo {
   .nav-item {
     border-radius: 4px;
     a {
+      position: absolute;
       width: 100%;
-      padding: 10px;
-      &::first-letter {
-        text-transform: uppercase;
-      }
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+    span::first-letter {
+      text-transform: uppercase;
     }
   }
 }
@@ -280,7 +296,25 @@ section {
   }
   .field {
     margin-bottom: 5px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    > button {
+      flex: 0 0 auto;
+    }
   }
+}
+#welcome {
+  .container {
+    margin-top: 50px;
+  }
+  .section-contents {
+    width: 80%;
+    line-height: 21px;
+  }
+
 }
 #custom-theme {
   padding: 50px 40px;
@@ -307,7 +341,6 @@ section {
 }
 #typography {
   .mainWord {
-    font-size: 4em;
     padding: 30px 0;
   }
   .subWord {
@@ -336,12 +369,14 @@ section {
     }
   }
 }
-.ga-grid2 > .column {
-  padding: 20px;
-  border-radius: 16px;
-  border: 1px solid var(--brd);
-  .title {
-    margin-bottom: 10px;
+#grids2 {
+  .ga-grid2 > .column {
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--brd);
+    .title {
+      margin-bottom: 20px;
+    }
   }
 }
 #colors {

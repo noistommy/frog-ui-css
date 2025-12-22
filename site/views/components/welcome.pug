@@ -1,0 +1,30 @@
+extends ../layout
+
+block title
+  title #{title} | Frog UI CSS
+
+block contents
+  .page-wrapper
+    section#welcome
+      .section-title
+        h1= title 
+        .section-desc 
+      .section-contents
+        .container
+          .ga-segment
+            .contents
+              .title !{cont("WELCOME_FROG_TITLE")}
+              p !{cont("WELCOME_FROG_DESC")}
+          .ga-segment
+            .contents
+              .title !{cont("WELCOME_SEMANTIC_TITLE")}
+              p !{cont("WELCOME_SEMANTIC_DESC")}
+          .ga-segment
+            .contents
+              .title !{cont("WELCOME_DRAWING_TITLE")}
+              p !{cont("WELCOME_DRAWING_DESC")}
+          .ga-segment
+            .contents
+              .title !{cont("WELCOME_USEFUL_TITLE")}
+              p !{cont("WELCOME_USEFUL_DESC")}
+    block module 

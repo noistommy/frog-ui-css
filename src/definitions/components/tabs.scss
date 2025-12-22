@@ -1,3 +1,5 @@
+$tabsItemPadding: $buttonPadding;
+
 .#{$ns}-tabs {
   display: inline-block;
   position: relative;
@@ -8,7 +10,7 @@
       flex-shrink: 0;
       cursor: pointer;
       display: inline-block;
-      padding: 4px 12px;
+      padding: $tabsItemPadding;
       padding-right: $tabItemGap;
       &:hover {
         //background-color: $surfaceHover;
@@ -68,7 +70,7 @@
           background-color: $hoverButtonBg;
         }
         &.active {
-          background-color: $surface;
+          background-color: var(--suf);
           opacity: 1;
         }
       }
@@ -76,7 +78,7 @@
   }
   .tab-contents {
     width: 100%;
-    background-color: $surface;
+    background-color: var(--suf);
     padding: 20px;
   }
   &.browser {
@@ -89,10 +91,10 @@
         padding: 0;
         min-width: 50px;
         max-width: 150px;
-        background-color: #fff;
+        background-color: var(--bgc);
         padding-right: 5px;
         &.active span{
-          background-color: $surface;
+          background-color: var(--suf);
           opacity: 1;
         }
         .btn-close {
@@ -114,7 +116,7 @@
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
           opacity: 0.5;
-          border: 1px solid #ebebeb;
+          border: 1px solid var(--brd);
           border-bottom: 0;
           margin-top: 1px;
           &:hover {
@@ -124,7 +126,7 @@
       }
     }
     .tab-contents {
-      border: 1px solid #ebebeb;
+      border: 1px solid var(--brd);
     }
   }
 }

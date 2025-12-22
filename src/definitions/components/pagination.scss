@@ -15,8 +15,8 @@
   .pagination {
     &-item {
       border:1px solid;
-      background-color: #fff;
-      border-color: #d5d5d5;
+      background-color: var(--bgc);
+      border-color: var(--brd);
     }
     &-page-wrapper {
       display: flex;
@@ -32,16 +32,16 @@
       margin: 0 4px;
       padding:  0 0.5em;
       user-select: none;
-      color:#909090;
+      color: var(--txt);
       transition-duration: .1s;
       transition: all 250ms ease;
       i {
         font-size: 1em;
       }
       &:hover {
-        background-color: #ccc;
-        border-color: #F8F8F8;
-        color:#fff;
+        background-color: var(--suf);
+        border-color: var(--brd);
+        color: var(--txt);
       }
       &.active {
         background-color: $primary;
@@ -65,7 +65,7 @@
     .pagination {
       &-info {
         font-size: 14px;
-        background-color: #fff;
+        background-color: var(--bgc);
         line-height: 1em;
         text-align: center;
         font-weight: 500;

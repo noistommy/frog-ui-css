@@ -9,24 +9,24 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Overlay dialog UI for alerts or focused interactions.
+                    p !{cont("MODULES_MODAL_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-xl
                     .contents-wrapper
                         .ga-modal
                             .modal
                                 .modal-header
-                                    .title 모달 제목
+                                    .title Title
                                     .close-btn
                                         i.xi-close
                                 .modal-contents
-                                    div.contents 모달 내용
+                                    div.contents Contants
                                 .modal-footer
-                                    button.ga-button.primary 확인
-                                    button.ga-button.text 취소
+                                    button.ga-button.primary OK
+                                    button.ga-button.text Cancel
             .section-contents
-                h4.contents-title 실행
+                h4.contents-title Run
                 .ga-segment.float.round-xl
                     .contents-wrapper
                         button.ga-button.green.show-btn SHOW MODAL
@@ -34,13 +34,13 @@ block contents
                             .ga-modal
                                 .modal
                                     .modal-header
-                                        .title 모달 제목
+                                        .title Title
                                         .close-btn.close
                                             i.xi-close
                                     .modal-contents
-                                        div.contents 모달 내용
+                                        div.contents Contents
                                     .modal-footer
-                                        button.ga-button.primary 확인
-                                        button.ga-button.text.cancel 취소
+                                        button.ga-button.primary OK
+                                        button.ga-button.text.cancel Cancel
 block module 
     script(src="/js/modal.js")

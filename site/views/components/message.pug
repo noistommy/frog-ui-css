@@ -9,9 +9,9 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Informational, warning, or error messages for user feedback.
+                    p !{cont("ELEMENTS_MESSAGE_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-message contents
@@ -24,7 +24,7 @@ block contents
                             code.language-markup 
                                 | #{code}
             .section-contents
-                h4.contents-title 상태
+                h4.contents-title State
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-message.success Success

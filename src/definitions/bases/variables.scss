@@ -9,9 +9,8 @@ $headerTopMargin: 2em - $lineHeight * 0.5;
 $headerMargin: $headerTopMargin 0 1rem;
 
 body {
-    background-color: var(--bgc);
-    color: var(--txt);
     font-family: $fontName;
+    line-height: $lineHeight;
 }
 
 a {
@@ -21,6 +20,10 @@ a {
 
 hr {
     border-top-color: map.get($grays, 'gray-15');
+}
+
+mark {
+    background-color: color.adjust($primary, $alpha: -0.6);
 }
 
 // i {
@@ -40,23 +43,32 @@ h5,.h5 {
         &:first-child { margin-top: ($lineHeight * 0.5) * 1em; }
     }
 }
-h1,.h1 {font-size: $h1;}
-h2,.h2 {font-size: $h2;}
-h3,.h3 {font-size: $h3;}
-h4,.h4 {font-size: $h4;}
-h5,.h5 {font-size: $h5;}
+h1,.h1 {font-size: $h1 !important;}
+h2,.h2 {font-size: $h2 !important;}
+h3,.h3 {font-size: $h3 !important;}
+h4,.h4 {font-size: $h4 !important;}
+h5,.h5 {font-size: $h5 !important;}
 
-.tiny {font-size: $tinySize+em !important;}
-.small {font-size: $smallSize+em !important;}
-.medium {font-size: $mediumSize+em !important;}
-.large {font-size: $largeSize+em !important;}
-.huge {font-size: $hugeSize+em !important}
-.massive {font-size: $massiveSize+em !important;}
+.tiny {font-size: $tinySize !important;}
+.small {font-size: $smallSize !important;}
+.medium {font-size: $mediumSize !important;}
+.large {font-size: $largeSize !important;}
+.huge {font-size: $hugeSize !important}
+.massive {font-size: $massiveSize !important;}
 
 .light {font-weight: $light !important;}
 .regular {font-weight: $regular !important;}
 .bold {font-weight: $bold !important;}
 .bolder {font-weight: $bolder !important;}
+
+.hero {
+    font-size: $hero !important;
+    &.large {font-size: $heroLarge !important;}
+    &.small {font-size: $heroLarge !important;}
+    &.sub {
+        font-size: $heroSub !important;
+    }
+}
 
 .spacing {
     &-wider {letter-spacing:$widerSpacing}
@@ -125,21 +137,40 @@ h5,.h5 {font-size: $h5;}
 
 //grayscale
 .gray {
-    &-0 {background-color: map.get($grays, 'gray-0');}
-    &-5 {background-color: map.get($grays, 'gray-5');}
-    &-10 {background-color: map.get($grays, 'gray-10');}
-    &-15 {background-color: map.get($grays, 'gray-15');}
-    &-20 {background-color: map.get($grays, 'gray-20');}
-    &-30 {background-color: map.get($grays, 'gray-30');}
-    &-40 {background-color: map.get($grays, 'gray-40');}
-    &-50 {background-color: map.get($grays, 'gray-50'); color: #ffffff;}
-    &-60 {background-color: map.get($grays, 'gray-60'); color: #ffffff;}
-    &-70 {background-color: map.get($grays, 'gray-70'); color: #ffffff;}
-    &-80 {background-color: map.get($grays, 'gray-80'); color: #ffffff;}
-    &-85 {background-color: map.get($grays, 'gray-85'); color: #ffffff;}
-    &-90 {background-color: map.get($grays, 'gray-90'); color: #ffffff;}
-    &-95 {background-color: map.get($grays, 'gray-95'); color: #ffffff;}
-    &-100 {background-color: map.get($grays, 'gray-100'); color: #ffffff;}
+    &-bg {
+        &-0 {background-color: map.get($grays, 'gray-0');}
+        &-5 {background-color: map.get($grays, 'gray-5');}
+        &-10 {background-color: map.get($grays, 'gray-10');}
+        &-15 {background-color: map.get($grays, 'gray-15');}
+        &-20 {background-color: map.get($grays, 'gray-20');}
+        &-30 {background-color: map.get($grays, 'gray-30');}
+        &-40 {background-color: map.get($grays, 'gray-40');}
+        &-50 {background-color: map.get($grays, 'gray-50'); color: #ffffff;}
+        &-60 {background-color: map.get($grays, 'gray-60'); color: #ffffff;}
+        &-70 {background-color: map.get($grays, 'gray-70'); color: #ffffff;}
+        &-80 {background-color: map.get($grays, 'gray-80'); color: #ffffff;}
+        &-85 {background-color: map.get($grays, 'gray-85'); color: #ffffff;}
+        &-90 {background-color: map.get($grays, 'gray-90'); color: #ffffff;}
+        &-95 {background-color: map.get($grays, 'gray-95'); color: #ffffff;}
+        &-100 {background-color: map.get($grays, 'gray-100'); color: #ffffff;}
+    }
+    &-txt {
+        &-0 {color: map.get($grays, 'gray-0');}
+        &-5 {color: map.get($grays, 'gray-5');}
+        &-10 {color: map.get($grays, 'gray-10');}
+        &-15 {color: map.get($grays, 'gray-15');}
+        &-20 {color: map.get($grays, 'gray-20');}
+        &-30 {color: map.get($grays, 'gray-30');}
+        &-40 {color: map.get($grays, 'gray-40');}
+        &-50 {color: map.get($grays, 'gray-50');}
+        &-60 {color: map.get($grays, 'gray-60');}
+        &-70 {color: map.get($grays, 'gray-70');}
+        &-80 {color: map.get($grays, 'gray-80');}
+        &-85 {color: map.get($grays, 'gray-85');}
+        &-90 {color: map.get($grays, 'gray-90');}
+        &-95 {color: map.get($grays, 'gray-95');}
+        &-100 {color: map.get($grays, 'gray-100');}
+    }
 }
 
 @each $color, $value in $colors {
@@ -187,7 +218,6 @@ h5,.h5 {font-size: $h5;}
 }
 
 @each $color, $value in $stateColors {
-    .#{$color},
     .#{$ns}-#{$color} {
         background-color: list.nth($value, 1) !important;
         color: $white !important;
@@ -211,12 +241,6 @@ h5,.h5 {font-size: $h5;}
         border-color: list.nth($value, 2) !important;
     }
 }
-
-//.success{background-color:$greenColor;}
-//.danger{background-color: $danger;}
-//.attention{background-color:$attention;}
-//.importance{background-color:$importance;}
-//.info{background-color:$secondary;}
 
  * {
      // ----- FireFox -----
@@ -257,19 +281,6 @@ h5,.h5 {font-size: $h5;}
  //     }
  }
 
- //.dark-mode {
- //    //* {
- //    //    color: $dModeBaseFontColor!important;
- //    //}
- //    body {
- //        color: $dModeBaseFontColor;
- //        background-color: $dModeBackground;
- //    }
- //    section {
- //        background-color: rgba(255, 255, 255, 0.1);
- //    }
- //}
- //
  // media query @mixin
 
  @mixin xs {
@@ -325,41 +336,5 @@ h5,.h5 {font-size: $h5;}
     &.center {margin: 0 auto;}
     
  }
-@media (prefers-color-scheme: light) {
-    .page-wrapper {
-        position: relative;
-        &:after {
-            content: 'light';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: 9999;
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-        }
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .page-wrapper {
-        position: relative;
-        &:after {
-            content: 'Dark mode';
-            position: fixed;
-            top: 5px;
-            left: 50%;
-            z-index: 9999;
-            background-color: #333;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 0.8em;
-            border-radius: 2em;
-            opacity: 0;
-        }
-    }
-}
-
-// grayscale
 
 

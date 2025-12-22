@@ -9,14 +9,14 @@ block contents
             .section-title
                 h1= title
                 .section-desc
-                    p Expandable/collapsible side or content panels.
+                    p !{cont("ELEMENTS_PANEL_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-panel
                             .panel-header
-                                .title 제목
+                                .title Title
                             .panel-content
                                 .content-wrapper CONTENT
                                     p
@@ -40,7 +40,7 @@ block contents
                     .contents-wrapper
                         .ga-panel.collapse
                             .panel-header
-                                .title 제목
+                                .title Title
                                 button.panel-toggle-btn.ga-button.icon.outline
                                     i.xi-caret-up
                             .panel-content
@@ -66,7 +66,7 @@ block contents
                     .contents-wrapper
                         .ga-panel.open
                             .panel-header
-                                .title 제목
+                                .title Title
                                 button.panel-toggle-btn.ga-button.icon.outline
                                     i.xi-angle-up
                             .panel-content
@@ -74,13 +74,13 @@ block contents
                                     .content-head
                                         | Head Area
                                     .content-body
-                                        - var rows = [{name: '김아무개', age: 11, job: '학생'},{name: '이아무개', age: 17, job: '대학생'},{name: '박아무개', age: 31, job: '대학원생'},]
+                                        - var rows = [{name: 'John Doe', age: 11, job: 'Student'},{name: 'Jane Roe', age: 17, job: 'College Student'},{name: 'Alex Kim', age: 31, job: 'Graduate Student'},]
                                         table.ga-table
                                             thead
                                                 tr.align-center
-                                                    th 이름
-                                                    th.align-right 나이
-                                                    th 직업
+                                                    th Name
+                                                    th.align-right Age
+                                                    th Job
                                             tbody
                                                 each row in rows
                                                     tr

@@ -10,25 +10,25 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Interactive buttons with variants for size, color, and state.
+                    p !{cont("ELEMENTS_BUTTON_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        .ga-button 기본
+                        .ga-button Base
                     .footer
-                        - var code = '<button class="ga-button">기본</button>';
+                        - var code = '<button class="ga-button">Base</button>';
                             pre
                                 code.language-markup #{code}
             .section-contents
                 h4.contents-title Element Type
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        button.ga-button 태그
-                        .ga-button 클레스
+                        button.ga-button Tags
+                        .ga-button Class
                     .footer
-                        - var code1 = '<button class="ga-button">태그</button>';
-                        - var code2 = '<div class="ga-button">클레스</div>';
+                        - var code1 = '<button class="ga-button">Tags</button>';
+                        - var code2 = '<div class="ga-button">Class</div>';
                         pre
                             code.language-markup
                                 | #{code1}
@@ -37,24 +37,24 @@ block contents
                 h4.contents-title Brand Color
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        button.ga-button.primary 메인
-                        button.ga-button.secondary 강조
-                        button.ga-button.success 성공
-                        button.ga-button.info 정보
-                        button.ga-button.danger 위험
-                        button.ga-button.attention 경고
-                        button.ga-button.importance 중요
+                        button.ga-button.primary Primary
+                        button.ga-button.secondary Secondary
+                        button.ga-button.success Success
+                        button.ga-button.info Info
+                        button.ga-button.danger Danger
+                        button.ga-button.attention Attention
+                        button.ga-button.importance Importance
                     .contents-wrapper
-                        button.ga-button.primary.outline 메인
-                        button.ga-button.secondary.outline 강조
-                        button.ga-button.success.outline 성공
-                        button.ga-button.info.outline 정보
-                        button.ga-button.danger.outline 위험
-                        button.ga-button.attention.outline 경고
-                        button.ga-button.importance.outline 중요
+                        button.ga-button.primary.outline Primary
+                        button.ga-button.secondary.outline Secondary
+                        button.ga-button.success.outline Success
+                        button.ga-button.info.outline Info
+                        button.ga-button.danger.outline Danger
+                        button.ga-button.attention.outline Attention
+                        button.ga-button.importance.outline Importance
                     .contents-wrapper
-                        button.ga-button.primary.active 메인
-                        button.ga-button.secondary.active 강조
+                        button.ga-button.primary.active 메Primary인
+                        button.ga-button.secondary.active Secondary
                     .footer
                         - var code = '<button class="ga-button { BRAND | STATUS }">Color</button>';
                             pre
@@ -67,16 +67,16 @@ block contents
                     - var colors2 = [{name: 'deepblue', text: '짙은파랑'},{name: 'deeppurple', text: '짙은보라'},{name: 'purple', text: '보라'},{name: 'brown', text: '팥색'},{name: 'gray', text: '회색'}];
                         .contents-wrapper
                             each color in colors1
-                                button(class=`ga-button ${color.name}`)=color.text
+                                button(class=`ga-button ${color.name}`)=color.name
                         .contents-wrapper
                             each color in colors2
-                                button(class=`ga-button ${color.name}`)=color.text
+                                button(class=`ga-button ${color.name}`)=color.name
                         .contents-wrapper
                             each color in colors1
-                                button(class=`ga-button ${color.name} outline`)=color.text
+                                button(class=`ga-button ${color.name} outline`)=color.name
                         .contents-wrapper
                             each color in colors2
-                                button(class=`ga-button ${color.name} outline`)=color.text
+                                button(class=`ga-button ${color.name} outline`)=color.name
                     .footer
                         - var code = '<button class="ga-button { COLORS }">Color</button>';
                             pre
@@ -108,7 +108,7 @@ block contents
                                 code.language-markup
                                     | #{code}
                                     | #{code1}
-            .section-contents
+            //- .section-contents
                 h4.contents-title Equal
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
@@ -133,13 +133,13 @@ block contents
                 h4.contents-title Fluid
                 .ga-segment.float.round-xl.attached
                     .contents-item
-                        .ga-button.fluid.primary 꽉차게
+                        .ga-button.fluid.primary Fluid
                     .contents-item
-                        .ga-button.fluid 꽉차게
+                        .ga-button.fluid Fluid
                     .contents-item
-                        .ga-button.fluid.outline 꽉차게
+                        .ga-button.fluid.outline Fluid
                     .contents-item
-                        .ga-button.fluid.circle 꽉차게
+                        .ga-button.fluid.circle Fluid
                     .footer
                         - var code = '<button class="ga-button fluid">Fluid</button>';
                             pre
@@ -149,21 +149,21 @@ block contents
                 h4.contents-title Compact
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        .ga-button.compact.primary 조그맣게
-                        .ga-button.compact 조그맣게
-                        .ga-button.compact.circle 조그맣게
-                        .ga-button.compact.outline 조그맣게
+                        .ga-button.compact.primary Compact
+                        .ga-button.compact Compact
+                        .ga-button.compact.circle Compact
+                        .ga-button.compact.outline Compact
                         .ga-button.compact
                             i.icon.left.xi-code
-                            | 코드
+                            | CODE
                         .ga-button.compact.icon
                             i.xi-crown
                     .contents-wrapper
-                        button.ga-button.success.compact 성공
-                        button.ga-button.info.compact 정보
-                        button.ga-button.danger.compact 위험
-                        button.ga-button.attention.compact 경고
-                        button.ga-button.importance.compact 중요
+                        button.ga-button.success.compact Success
+                        button.ga-button.info.compact Info
+                        button.ga-button.danger.compact Danger
+                        button.ga-button.attention.compact Attention
+                        button.ga-button.importance.compact Importance
                     .footer
                         - var code = '<button class="ga-button compact">Compact</button>';
                             pre
@@ -173,7 +173,7 @@ block contents
                 h4.contents-title Outline
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        .ga-button.outline 테두리
+                        .ga-button.outline Outline
                     .footer
                         - var code = '<button class="ga-button outline">Outline</button>';
                             pre
@@ -200,7 +200,7 @@ block contents
                     .contents-wrapper
                         .ga-button.icon.circle
                             i.xi-desktop
-                        .ga-button.circle 동그랗게
+                        .ga-button.circle Circle
                         .ga-button.circle A
                         .ga-button.circle.outline B
                     .footer
@@ -214,13 +214,13 @@ block contents
                     .contents-wrapper
                         .ga-button
                             i.icon.left.xi-angle-left
-                            | 왼쪽
+                            | Left
                         .ga-button
-                            | 오른쪽
+                            | Right
                             i.icon.right.xi-angle-right
                     .footer
-                        - var code = '<button class="ga-button">\n    <i class="icon left fa fa-icon"></i>\n    완쪽\n</button>'
-                        - var code1 = '<button class="ga-button">\n    오른쪽\n    <i class="icon right fa fa-icon"></i>\n</button>'
+                        - var code = '<button class="ga-button">\n    <i class="icon left fa fa-icon"></i>\n    Left\n</button>'
+                        - var code1 = '<button class="ga-button">\n    Right\n    <i class="icon right fa fa-icon"></i>\n</button>'
                             pre
                                 code.language-markup
                                     | #{code}
@@ -236,8 +236,8 @@ block contents
                             | Sale
                             .in-badge.secondary Sale
                     .footer
-                        - var code = '<button class="ga-button badge">\n    <sapn class="in-badge">B</span>\n    버튼 텍스트\n</button>'
-                        - var code0 = '<!-- badge 사용 시 fluid 속성을 사용 할 수 없습니다 -->'
+                        - var code = '<button class="ga-button badge">\n    <sapn class="in-badge">B</span>\n    Contents\n</button>'
+                        - var code0 = '<!-- Can`t use attribute fluid with badge type -->'
                             pre
                                 code.language-markup
                                     | #{code}
@@ -248,23 +248,23 @@ block contents
                     .contents-wrapper
                         .ga-grid
                             .column.span-4.span-xs-6
-                                .ga-button.text 텍스트
+                                .ga-button.text Text
                             .column.span-4.span-xs-6
-                                .ga-button.text.primary 텍스트
+                                .ga-button.text.primary Text
                             .column.span-4.span-xs-6
                                 .ga-button.text
                                     i.icon.left.xi-text-size
-                                    | 텍스트
+                                    | Text
                             .column.span-4.span-xs-6
                                 .ga-button.text.green
-                                    | 텍스트
+                                    | Text
                                     i.icon.right.xi-angle-right
                             .column.span-4.span-xs-6
                                 .ga-button.text.badge
-                                    | 업데이트
+                                    | Update
                                     .in-badge.ga-red  123
                     .footer
-                        - var code = '<button class="ga-button text">\n    버튼 텍스트\n</button>'
+                        - var code = '<button class="ga-button text">\n    Contents\n</button>'
                             pre
                                 code.language-markup
                                     | #{code}
@@ -273,9 +273,9 @@ block contents
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-buttons
-                            .ga-button.selected 재생
-                            .ga-button 정지
-                            .ga-button 일시정지
+                            .ga-button.selected Play
+                            .ga-button Stop
+                            .ga-button Pause
                             //- .ga-button 재시작
                             //- .ga-button 종료
                     .contents-wrapper
@@ -292,20 +292,20 @@ block contents
                                 i.xi-power-off
                     .contents-wrapper
                         .ga-buttons.outline
-                            .ga-button 위
-                            .ga-button 중앙
-                            .ga-button 아래
+                            .ga-button UP
+                            .ga-button CENTER
+                            .ga-button BOTTOM
                     .contents-wrapper
                         .ga-button-groups
                             .ga-button.outline.mini.primary
                                 i.icon.left.xi-play
-                                | 시작
+                                | Play
                             .ga-button.outline.mini.primary
                                 i.icon.left.xi-stop
-                                | 정지
+                                | Stop
                             .ga-button.outline.mini.primary
                                 i.icon.left.xi-pause
-                                | 일시정지
+                                | Pause
                             //- .ga-button.outline.mini.primary
                             //-     i.icon.left.fal.fa-arrow-rotate-right
                             //-     | 재시작

@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Isonorm';
+    src: url('Isonorm3098.eot');
+    src: local('Isonorm3098'),
+        url('Isonorm3098.eot?#iefix') format('embedded-opentype'),
+        url('Isonorm3098.woff2') format('woff2'),
+        url('Isonorm3098.woff') format('woff'),
+        url('Isonorm3098.ttf') format('truetype'),
+        url('Isonorm3098.svg#Isonorm3098') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

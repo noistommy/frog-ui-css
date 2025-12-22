@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .#{$ns}-switch {
   display: inline-block;
   input {
@@ -63,6 +65,12 @@
         height: 18px;
         top: 2px;
         left: 2px;
+      }
+    }
+    &:hover {
+      .switch:before {
+        // box-shadow: 0 0 0 4px rgba(109, 157, 114, 0.3);
+        box-shadow: 0 0 0 4px color.change($primary, $alpha: 0.3);
       }
     }
   }

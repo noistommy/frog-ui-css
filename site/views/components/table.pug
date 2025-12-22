@@ -9,18 +9,18 @@ block contents
             .section-title
                 h1= title
                 .section-desc
-                    p Data tables with support for rows, headers, and styling.
-            - var rows = [{name: '김아무개', age: 11, job: '학생'},{name: '이아무개', age: 17, job: '대학생'},{name: '박아무개', age: 31, job: '대학원생'},]
+                    p !{cont("ELEMENTS_TABLE_SUB_TITLE")}
+            - var rows = [{name: 'John Doe', age: 11, job: 'Student'},{name: 'Jane Roe', age: 17, job: 'College Student'},{name: 'Alex Kim', age: 31, job: 'Graduate Student'},]
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Basic
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         table.ga-table
                             thead
                                 tr.align-center
-                                    th 이름
-                                    th.align-right 나이
-                                    th 직업
+                                    th Name
+                                    th.align-right Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -48,9 +48,9 @@ block contents
                         table.ga-table.single
                             thead
                                 tr
-                                    th 이름
-                                    th 나이
-                                    th 직업
+                                    th Name
+                                    th Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -78,9 +78,9 @@ block contents
                         table.ga-table.labeled
                             thead
                                 tr
-                                    th 이름
-                                    th 나이
-                                    th 직업
+                                    th Name
+                                    th Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -107,9 +107,9 @@ block contents
                         table.ga-table
                             thead
                                 tr
-                                    th 이름
-                                    th 나이
-                                    th 직업
+                                    th Name
+                                    th Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -145,48 +145,48 @@ block contents
                                     |     #{code_f}
                                     | #{code_e}
             .section-contents
-                h4.contents-title table with Form Element
+                h4.contents-title Table with Form Element
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         table.ga-table.structured
                             tbody
                                 tr
-                                    td.label.align-center 입력
+                                    td.label.align-center Input
                                     td(colspan="3")
                                         .ga-input.transparent
-                                            input(type="text", placeholder="입력하세요")
+                                            input(type="text", placeholder="Enter text")
                                 tr
-                                    td.label.align-center 선택
+                                    td.label.align-center Select
                                     td(colspan="3")
                                         .ga-select-box(style={width: '300px'})
                                             select
                                                 each col in ['', 1, 2, 3, 4, 5, 6]
                                                     if col == ''
-                                                        option(default, value=`${col}`)= '선택'
+                                                        option(default, value=`${col}`)= 'Select'
                                                     else
                                                         option(value=`${col}`)= `option${col}`
                                             i.icon.xi-angle-down
                                 tr
-                                    td.label.align-center(rowspan="2") 택일
-                                    td.label 택 1
+                                    td.label.align-center(rowspan="2") Choice
+                                    td.label Choice 1
                                     td(colspan="2")
                                         label.ga-switch.slide
                                             input(type="checkbox", checked)
                                             span.switch.round
                                 tr
-                                    td.label 택 2
+                                    td.label Choice 2
                                     td(colspan="2")
                                         label.ga-switch.button
                                             input(type="checkbox", checked)
-                                            span.on.active 승인
-                                            span.off 미승인
+                                            span.on.active Approve
+                                            span.off Decline
                                 tr
-                                    td.align-center.label 실행
+                                    td.align-center.label Execute
                                     td
-                                        button.ga-button.primary 저장
-                                    td.align-center.label 취소
+                                        button.ga-button.primary Save
+                                    td.align-center.label Cancel
                                     td
-                                        button.ga-button.secondary.outline 취소
+                                        button.ga-button.secondary.outline Cancel
                     .footer
                         .code-wrapper
                             - var code_s = `<table class="ga-table structured">`
@@ -205,9 +205,9 @@ block contents
                         table.ga-table
                             thead
                                 tr.align-center
-                                    th 이름
-                                    th.align-right 나이
-                                    th 직업
+                                    th Name
+                                    th.align-right Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -217,9 +217,9 @@ block contents
                         table.ga-table
                             thead
                                 tr.align-center
-                                    th 이름
-                                    th.align-right 나이
-                                    th 직업
+                                    th Name
+                                    th.align-right Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -237,15 +237,15 @@ block contents
                                    
             .section-contents
                 h4.contents-title table column count
-                h5.contents-desc 지정된 갯수로 균등 전체 컬럼 균등 분할 (10 단계 퍼센트 분할)
+                h5.contents-desc Evenly divide columns by the specified count (10-step percentage split)
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         table.ga-table.column.three
                             thead
                                 tr
-                                    th 이름
-                                    th 나이
-                                    th 직업
+                                    th Name
+                                    th Age
+                                    th Job
                             tbody
                                 each row in rows
                                     tr
@@ -255,9 +255,9 @@ block contents
                         table.ga-table.column.four
                             thead
                                 tr
-                                    th 이름
-                                    th 나이
-                                    th 직업
+                                    th Name
+                                    th Age
+                                    th Job
                                     th Lorem
                             tbody
                                 each row in rows
@@ -273,8 +273,8 @@ block contents
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{`<!-- 등분 컬럼 구성. -->`} 
-                                    | #{`<!-- two, three, four, five... ten 까지 class로 적용 가능 -->`} 
+                                    | #{`<!-- Evenly divided column layout. -->`} 
+                                    | #{`<!-- two, three, four, five... up to ten can be applied via class -->`} 
                                     | #{code_3}
                                     | #{code_4}
             .section-contents
@@ -284,9 +284,9 @@ block contents
                         table.ga-table
                             thead
                                 tr
-                                    th 이름 (Auto)
-                                    th.col-6 나이 (Column 6)
-                                    th.col-1 직업 학생만 (Column 1)
+                                    th Name (Auto)
+                                    th.col-6 Age (Column 6)
+                                    th.col-1 Job (Students only) (Column 1)
                             tbody
                                 each row in rows
                                     tr
@@ -296,14 +296,14 @@ block contents
                     .footer
                         .code-wrapper
                             - var code_s = `<table class="ga-table">`
-                            - var code_h = `<thead>\n       <tr>\n          <th class="col-1">...</th>\n          <th class="col-6">...</th>\n          ...\n       </tr>\n       ...\n     </thead>`
+                            - var code_h = `<thead>\n       <tr>\n          <th class=\"col-1\">...</th>\n          <th class=\"col-6\">...</th>\n          ...\n       </tr>\n       ...\n     </thead>`
                             - var code_b = `<tbody>\n       ...\n     </tbody>`
                             - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{`<!-- 그리드 시스템 컬럼 구성. -->`} 
-                                    | #{`<!-- header column에  col-{그리드 수}로 적용 가능 -->`} 
+                                    | #{`<!-- Grid system column composition. -->`} 
+                                    | #{`<!-- Apply col-{grid count} on header columns -->`} 
                                     |
                                     | #{code_s}
                                     |     #{code_h}

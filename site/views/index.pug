@@ -6,18 +6,24 @@ block title
 block contents
     .main-banner.page-wrapper
         .container.center
-            .title FROG UI 
-            .sub-title 
-                | Building 
-                span.ga-blue-text consistent 
-                | and 
-                span.ga-green-text meaningful 
-                | UI with Semantic CSS  
+            p 
+            .title 
+                | FROG UI 
+            .sub-title
+                |!{cont("SUB_TITLE")}
             .main-link
+                .ga-button 
+                    | What is Frog?
+                    a.link(href="/pages/welcome") 
                 .ga-button 
                     | Components
                     i.icon.right.xi-arrow-right
-                    a.link(href="/pages/base") 
+                    a.link(href="/pages/typography") 
+    // .page-wrapper#semantic.surface1
+        .container.center
+            .page-header
+                .page-title.hero Semantic CSS
+                .hero.sub Intuitive Semantic CSS Created by Natural Language-Based Classes
     .page-wrapper#custom-theme
         .container.center
             .ga-grid
@@ -25,7 +31,7 @@ block contents
                     .user-custom-theme.page-header
                         .page-icon
                             i.xi-border-color
-                        .page-title User Customize Theme
+                        .page-title Customize Theme
                         //- .page-desc
                             p Semantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.
                             p Develop your UI once, then deploy with the same code everywhere. 
@@ -58,19 +64,19 @@ block contents
                             .ga-button.selected A
                             .ga-button B
                             .ga-button C
-    .page-wrapper.summary#typography
+    .page-wrapper.summary#grids2
         section
             .page-header.ui-elements
                 .page-icon
                     i.xi-package
                 .page-title Preview UI Element
                 //- .page-desc Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.
-            .ga-grid2.dosirak.round-xl(style="--grid-row-num: 6")
+            .ga-grid2.dosirak.round-l(style="--grid-row-num: 6; --grid-gap: 20")
                 .column.col-6.row-4.col-xs-12
                     h5.title Typography
                     .ga-grid
-                        .column.span-6.mainWord ABC
-                        .column.span-6.mainWord 가나다
+                        .column.span-6.mainWord.hero.large ABC
+                        .column.span-6.mainWord.hero.large 가나다
                         .column.span-6.subWord
                             p ABCDEFGHIJKLMNOPQRSTUVWXYZ
                             p abcdefghijklmnopqrstuvwxyz
@@ -83,21 +89,44 @@ block contents
                     h3.header [H3] Frog UI System (18px)
                     h4.header [H4] Frog UI System (16px)
                     h5.header [H5] Frog UI System (14px)
-                
+                .column.col-6.row-4.col-xs-12
+                    h5.title Letter Spacing
+                    .ga-grid 
+                        .column.span-3
+                            .ga-tag.label Wider
+                        .column.span-9.spacing-wider 
+                            | Frog UI System 
+                        .column.span-3
+                            .ga-tag.label Wide
+                        .column.span-9.spacing-wide 
+                            | Frog UI System 
+                        .column.span-3
+                            .ga-tag.label Normal
+                        .column.span-9
+                            | Frog UI System 
+                        .column.span-3
+                            .ga-tag.label Narrow
+                        .column.span-9.spacing-narrow 
+                            | Frog UI System 
+                        .column.span-3                        
+                            .ga-tag.label Narrower
+                        .column.span-9.spacing-narrower
+                            | Frog UI System 
                 .column.col-6.row-2.col-xs-12
+                    h5.title Font Weight
                     .ga-grid
-                        .column.span-2 [light]
-                        .column.span-6.light Frog UI System (300)
-                        .column.span-4
-                        .column.span-2 [regular]
-                        .column.span-6 Frog UI System (400)
-                        .column.span-4
-                        .column.span-2 [bold]
-                        .column.span-6.bold Frog UI System (600)
-                        .column.span-4
-                        .column.span-2 [bolder]
-                        .column.span-6.bolder Frog UI System (900)
-                        .column.span-4
+                        .column.span-3 
+                            .ga-tag.label Light
+                        .column.span-9.light Frog UI System (300)
+                        .column.span-3
+                            .ga-tag.label Regular
+                        .column.span-9 Frog UI System (400)
+                        .column.span-3 
+                            .ga-tag.label Bold
+                        .column.span-9.bold Frog UI System (600)
+                        .column.span-3 
+                            .ga-tag.label Bolder
+                        .column.span-9.bolder Frog UI System (900)
     .page-wrapper.summary#colors
         section
             h5.header Colors
@@ -128,61 +157,61 @@ block contents
                         .name importance
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-0
+                        .chip.gray-bg-0
                         .name white
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-100
+                        .chip.gray-bg-100
                         .name black
             h5.header Grayscale
             .ga-grid
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-5
+                        .chip.gray-bg-5
                         .name gray-5
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-10
+                        .chip.gray-bg-10
                         .name gray-10
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-15
+                        .chip.gray-bg-15
                         .name gray-15
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-20
+                        .chip.gray-bg-20
                         .name gray-20
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-30
+                        .chip.gray-bg-30
                         .name gray-30
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-40
+                        .chip.gray-bg-40
                         .name gray-40
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-50
+                        .chip.gray-bg-50
                         .name gray-50
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-60
+                        .chip.gray-bg-60
                         .name gray-60
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-70
+                        .chip.gray-bg-70
                         .name gray-70
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-80
+                        .chip.gray-bg-80
                         .name gray-80 
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-90
+                        .chip.gray-bg-90
                         .name gray-90 
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-95
+                        .chip.gray-bg-95
                         .name gray-95
     .page-wrapper.summary#grids
         section
@@ -191,66 +220,57 @@ block contents
                 each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
                     .column
                         .gray-item.gray-15
-    .page-wrapper.summary
+    .page-wrapper.summary#grids2
         section
-            h5.header Elements
-            .ga-grid2.dosirak.round-xl(style="--grid-row-num: 6")
+            .ga-grid2.dosirak.round-l(style="--grid-row-num: 6; --grid-gap: 20")
                 .column.col-6.col-xs-12
                     h5.title Button
                     .field
-                        button.ga-button.primary 메인
-                        button.ga-button.secondary 강조
+                        button.ga-button.primary Primary
+                        button.ga-button.secondary Secondary
                     .field
-                        button.ga-button.success 성공
-                        button.ga-button.info 정보
-                        button.ga-button.danger 위험
-                        button.ga-button.attention 경고
-                        button.ga-button.importance 중요
+                        button.ga-button.success Success
+                        button.ga-button.info Info
+                        button.ga-button.danger Danger
+                        button.ga-button.attention Attention
+                        button.ga-button.importance Importance
                 .column.col-6.col-xs-12
                     h5.title Input
                     .field
                         .ga-input
-                            input(type="text", placeholder="입력하세요") 
+                            input(type="text", placeholder="Insert text") 
                     .field
                         .ga-input.disabled
-                            input(type="text", placeholder="입력하세요") 
+                            input(type="text", placeholder="Insert text") 
                 
                 .column.col-6.col-xs-12
                     h5.title Select box
                     .field
                         .ga-select-box.dropdown
                             .selected-item.ga-input.icon.right.fluid
-                                input(type="text", placeholder="선택하세요", readonly)
+                                input(type="text", placeholder="Select option", readonly)
                                 i.icon.xi-angle-down
                             .select-menu
                                 .ga-list.selection
                                     each col in [1, 2, 3, 4, 5, 6]
-                                        .icon.item.option-item
+                                        .icon.item(style="padding: 10px")
                                             = `option${col}`
                     .field
                         .ga-select-box.float
                             .selected-item.ga-input.icon.right
-                                input(type="text", placeholder="선택하세요", readonly)
+                                input(type="text", placeholder="Select option", readonly)
                                 i.icon.xi-angle-down
                             .select-menu
                                 .ga-list.selection
                                     each col in [1, 2, 3, 4, 5, 6]
-                                        .icon.item.option-item
+                                        .icon.item(style="padding: 10px")
                                             = `option${col}`
                 .column.col-6.col-xs-12
-                    h5.title Bedge
-                    .ga-button
-                        | Badge
-                        span.ga-badge.float 0
-                    .ga-button
-                        | Badge 1
-                        span.ga-badge.float.primary 1
-                    .ga-button
-                        | Badge New
-                        span.ga-badge.float.red N
-                    .ga-button
-                        | Badge In
-                        span.ga-badge.mark.primary
+                    h5.title List
+                    .ga-list.selection.border
+                        .item(style="padding: 10px").selected Item 1
+                        .item(style="padding: 10px") Item 2
+                        .item(style="padding: 10px") Item 3
                 .column.col-6.col-xs-12
                     h5.title Tag
                     .ga-tag.label Tag
@@ -272,11 +292,48 @@ block contents
                     .ga-tag.kbd.meta.cmd Commend
                     .ga-tag.kbd ESC
                 .column.col-6.col-xs-12
-                    h5.title List
-                    .ga-list.selection.border
-                        .item(style="padding: 10px").selected Item 1
-                        .item(style="padding: 10px") Item 2
-                        .item(style="padding: 10px") Item 3
+                    h5.title Bedge
+                    .ga-button
+                        | Badge
+                        span.ga-badge.float 0
+                    .ga-button
+                        | Badge 1
+                        span.ga-badge.float.primary 1
+                    .ga-button
+                        | Badge New
+                        span.ga-badge.float.red N
+                    .ga-button
+                        | Badge In
+                        span.ga-badge.mark.primary
+                .column.col-6.col-xs-12
+                    h5.title Switch
+                    .field
+                        label.ga-switch.slide
+                            input(type="checkbox" checked)
+                            span.switch
+                        label.ga-switch.slide
+                            input(type="checkbox" checked)
+                            span.switch.round
+                        label.ga-switch.slide.inside
+                            input(type="checkbox" checked)
+                            span.switch.round
+                        label.ga-switch.button
+                            input(type="checkbox" checked)
+                            span.on.round A
+                            span.off.round B
+                .column.col-6.col-xs-12
+                    h5.title Checkbox
+                    .field
+                        .ga-checkbox
+                            input(id="ch1" type="checkbox")
+                            label(for="ch1") Checkbox 1
+                        .ga-checkbox
+                            input(id="ch2" type="checkbox" checked="true")
+                            label(for="ch2") Checkbox 2
+                        .ga-checkbox.radio
+                            input(id="ch3" type="checkbox")
+                            label(for="ch3") radio
+                        
                     
                     
     script(src="/js/selectbox.js")

@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import '../fonts/isonorm3098.css';
+.isonorm {
+  font-family: Isonorm !important;
+}
+
 html, body {
   width: 100vw;
   height: 100vh;
+  font-size: 14px;
+  color: var(--txt);
+  background-color: var(--bgc);
 }
 
 header.gnb {
@@ -169,6 +177,8 @@ header.gnb .logo .sub-logo {
 .main-banner {
   text-align: center;
   height: 450px;
+  display: flex;
+  justify-content: center;
   padding: 12rem 0;
 }
 .main-banner .title {
@@ -202,10 +212,13 @@ header.gnb .logo .sub-logo {
   border-radius: 4px;
 }
 .ui-list .nav-item a {
+  position: absolute;
   width: 100%;
-  padding: 10px;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-.ui-list .nav-item a::first-letter {
+.ui-list .nav-item span::first-letter {
   text-transform: uppercase;
 }
 
@@ -273,6 +286,22 @@ section .section-contents .contents-wrapper .contents-item {
 }
 .summary .field {
   margin-bottom: 5px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.summary .field > button {
+  flex: 0 0 auto;
+}
+
+#welcome .container {
+  margin-top: 50px;
+}
+#welcome .section-contents {
+  width: 80%;
+  line-height: 21px;
 }
 
 #custom-theme {
@@ -300,7 +329,6 @@ section .section-contents .contents-wrapper .contents-item {
 }
 
 #typography .mainWord {
-  font-size: 4em;
   padding: 30px 0;
 }
 #typography .subWord {
@@ -326,13 +354,13 @@ section .section-contents .contents-wrapper .contents-item {
   min-width: 30px;
 }
 
-.ga-grid2 > .column {
+#grids2 .ga-grid2 > .column {
   padding: 20px;
   border-radius: 16px;
   border: 1px solid var(--brd);
 }
-.ga-grid2 > .column .title {
-  margin-bottom: 10px;
+#grids2 .ga-grid2 > .column .title {
+  margin-bottom: 20px;
 }
 
 #colors .color-item {

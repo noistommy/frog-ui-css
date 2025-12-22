@@ -242,6 +242,7 @@
     $hoverColor: #{list.nth($values, 2)};
     $textColor: #{list.nth($values, 3)};
     @if color-contrast(list.nth($values, 1),list.nth($values, 3)) < 2.5 {
+        @debug $color;
         $textColor: $black;
     }
     .#{$ns}-button {
@@ -261,24 +262,24 @@
                 background-color: $hoverColor;
             }
             &.outline {
-                background-color: var(--hover-suf) !important;
-                color: $bgColor!important;
+                background-color: var(--bgc) !important;
+                color: $bgColor !important;
                 box-shadow: 0 0 0 1px $hoverColor inset;
                 &.selected,
                 &:hover {
-                    background-color: $bgColor!important;
-                    color: $textColor!important;
+                    background-color: $bgColor !important;
+                    color: $textColor !important;
                 }
                 &.active {
                     color: $hoverColor;
                 }
             }
             &.text {
-                background-color: transparent!important;
-                color: $bgColor!important;
+                background-color: transparent !important;
+                color: $bgColor !important;
                 box-shadow: none;
                 &:hover {
-                    color: $hoverColor!important;
+                    color: $hoverColor !important;
                 }
                 &.active {
                     color: $hoverColor;
@@ -320,7 +321,7 @@
                 background-color: $hoverColor;
             }
             &.outline{
-                background-color: var(--hover-suf);
+                background-color: var(--bgc);
                 color: $value;
                 box-shadow: 0 0 0 1px $hoverColor inset;
                 &.selected,
@@ -330,11 +331,11 @@
                 }
             }
             &.text {
-                background-color: transparent!important;
-                color: $value!important;
+                background-color: transparent !important;
+                color: $value !important;
                 box-shadow: none;
                 &:hover {
-                    color: $hoverColor!important;
+                    color: $hoverColor !important;
                 }
                 &.selected,
                 &.active {

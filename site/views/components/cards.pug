@@ -5,18 +5,18 @@ block title
 
 block contents
     .page-wrapper
+        - var content = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
         section#cards
             .section-title
                 h1= title
                 .section-desc 
-                    p Content containers for grouping text, images, and actions.
+                    p !{cont("ELEMENTS_CARDS_SUB_TITLE")}
             .section-contents
                 h4.contents-title 기본
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
                         .ga-card.border
-                            .contents
-                                | Contents 영역         
+                            .contents= content         
                     .footer
                         .code-wrapper
                             - var code = `\n<div class=\"ga-card border\">\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`
@@ -27,22 +27,24 @@ block contents
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
                         .ga-card.border
-                            .title Title
-                            .contents Contents 영역
+                            .contents 
+                                .title.huge Title
+                                = content 
                     .footer 
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-card border\">\n       <div class=\"title\">Title</div>\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`
+                            - var code = `\n<div class=\"ga-card border\">\n     <div class=\"contents\">\n         <div class=\"title\">Title</div>\n        <!-- insert contents -->\n    </div>\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
                 h4.contents-title Image
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
-                        .ga-card.border.image
+                        .ga-card.border.media
                             .image
                                 img(src="/img/profile_img.png", alt="profile")
-                            .title Title
-                            .contents Contents 영역
+                            .contents 
+                                .title.huge Title
+                                = content
                     .footer 
                         .code-wrapper
                             - var code = `\n<div class=\"ga-card border image\">\n       <div class=\"image\"><img src="..." alt="..." /></div>\n       <div class=\"title\">Title</div>\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`
@@ -53,8 +55,9 @@ block contents
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
                         .ga-card.border.extra
-                            .title Title
-                            .contents Contents 영역
+                            .contents
+                                .title.huge Title
+                                = content
                             .extra 
                                 | Extra
                     .footer 
@@ -68,8 +71,9 @@ block contents
                     .contents-wrapper.contents
                         .ga-card.border.attached 
                             .header Header 영역
-                            .title Header 영역
-                            .contents Contents 영역
+                            .contents 
+                                .title.huge Title
+                                = content
                             .footer Footer 영역
                     .footer 
                         .code-wrapper
@@ -81,8 +85,7 @@ block contents
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
                         .ga-card.border
-                            .contents
-                                | Contents 영역         
+                            .contents= content         
                     .footer
                         .code-wrapper
                             - var code = `\n<div class=\"ga-card border\">\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`
@@ -93,8 +96,7 @@ block contents
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
                         .ga-card.float
-                            .contents
-                                | Contents 영역         
+                            .contents= content         
                     .footer
                         .code-wrapper
                             - var code = `\n<div class=\"ga-card float\">\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`
@@ -104,23 +106,23 @@ block contents
                 h4.contents-title Cards
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
-                        .ga-cards
+                        .ga-cards.column-3
                             .ga-card.border
-                                .title Card 1
                                 .contents
-                                    | Contents 영역         
+                                    .title.huge Card 1
+                                    = content         
                             .ga-card.border
-                                .title Card 2
                                 .contents
-                                    | Contents 영역         
+                                    .title.huge Card 2
+                                    = content         
                             .ga-card.border
-                                .title Card 3
                                 .contents
-                                    | Contents 영역         
+                                    .title.huge Card 3
+                                    = content         
                             .ga-card.border
-                                .title Card 4
                                 .contents
-                                    | Contents 영역         
+                                    .title.huge Card 4
+                                    = content         
                     .footer
                         .code-wrapper
                             - var code = `\n<div class=\"ga-cards \">\n       <!-- cards -->\n  </div>\n`

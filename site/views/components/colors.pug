@@ -9,7 +9,7 @@ block contents
             .section-title
                 h1= title
                 .section-desc
-                    p Defined color tokens for branding, backgrounds, and UI states. 
+                    p !{cont("BASE_COLORS_SUB_TITLE")}
             .section-contents
                 h4.contents-title Brands
                 .ga-segment.float.round-xl.attached
@@ -35,17 +35,17 @@ block contents
                 h4.contents-title Status
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        .color-box.success 성공
-                        .color-box.info 정보
-                        .color-box.danger 위험
-                        .color-box.attention 경고
-                        .color-box.importance 중요
+                        .color-box.ga-success 성공
+                        .color-box.ga-info 정보
+                        .color-box.ga-danger 위험
+                        .color-box.ga-attention 경고
+                        .color-box.ga-importance 중요
                     .footer
-                        - var code_state_succ = '<div class="success">성공</div>'
-                        - var code_state_info = '<div class="info">정보</div>'
-                        - var code_state_dang = '<div class="error">위험</div>'
-                        - var code_state_atte = '<div class="attention">주위</div>'
-                        - var code_state_impo = '<div class="importance">중요</div>'
+                        - var code_state_succ = '<div class="ga-success">성공</div>'
+                        - var code_state_info = '<div class="ga-info">정보</div>'
+                        - var code_state_dang = '<div class="ga-danger">위험</div>'
+                        - var code_state_atte = '<div class="ga-attention">주위</div>'
+                        - var code_state_impo = '<div class="ga-importance">중요</div>'
                         pre 
                             code.language-markup 
                                 |
@@ -78,25 +78,25 @@ block contents
                 h4.contents-title Grayscale
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
-                        .color-box.small.gray-0 White (0)
-                        .color-box.small.gray-5 5
-                        .color-box.small.gray-10 10
-                        .color-box.small.gray-15 15
-                        .color-box.small.gray-20 20
-                        .color-box.small.gray-30 30
-                        .color-box.small.gray-40 40
-                        .color-box.small.gray-50 50
-                        .color-box.small.gray-60 60
-                        .color-box.small.gray-70 70
-                        .color-box.small.gray-80 80
-                        .color-box.small.gray-85 85
-                        .color-box.small.gray-90 90
-                        .color-box.small.gray-95 95
-                        .color-box.small.gray-100 Black (100)
+                        .color-box.small.gray-bg-0 White (0)
+                        .color-box.small.gray-bg-5 5
+                        .color-box.small.gray-bg-10 10
+                        .color-box.small.gray-bg-15 15
+                        .color-box.small.gray-bg-20 20
+                        .color-box.small.gray-bg-30 30
+                        .color-box.small.gray-bg-40 40
+                        .color-box.small.gray-bg-50 50
+                        .color-box.small.gray-bg-60 60
+                        .color-box.small.gray-bg-70 70
+                        .color-box.small.gray-bg-80 80
+                        .color-box.small.gray-bg-85 85
+                        .color-box.small.gray-bg-90 90
+                        .color-box.small.gray-bg-95 95
+                        .color-box.small.gray-bg-100 Black (100)
                     .footer 
                         - var code_type_colors = '<!-- grays = [0, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, 100] -->'
-                        - var code_type_color_0 = '<div class="gray-0">...</div>'
-                        - var code_type_color_100 = '<div class="gray-100">...</div>'
+                        - var code_type_color_0 = '<div class="gray-bg-0">...</div>'
+                        - var code_type_color_100 = '<div class="gray-bg-100">...</div>'
                         pre 
                             code.language-markup 
                                 |

@@ -8,10 +8,10 @@ block contents
         section#typography
             .section-title
                 h1= title
-                .section-desc 
-                    p Core design foundations like font sizes, spacing, weight and Heading System.
+                .section-desc
+                    p !{cont("BASE_TYPOGRAPHY_SUB_TITLE")}
             .section-contents
-                h4 Typography
+                h4.header Typography
                 .ga-segment.float.round-xl
                     .contents
                         .ga-tag.label.primary
@@ -20,15 +20,15 @@ block contents
                         span.bold.large  
                         .contents-wrapper.pretendard
                             .ga-grid
-                                .column.span-3.span-xs-12.mainWord AaBb
-                                .column.span-9.span-xs-12.mainWord 가나다
+                                .column.span-3.span-xs-12.mainWord.hero AaBb
+                                .column.span-9.span-xs-12.mainWord.hero 가나다
                                 .column.span-10.span-xs-12.subWord
                                     p ABCDEFGHIJKLMNOPQRSTUVWXYZ
                                     p abcdefghijklmnopqrstuvwxyz
                                     p 1234567890 ,./(){}[]\|:;"'?
                                     p 가나다라마바사
             .section-contents
-                h4 Weight
+                h4.header Weight
                 .ga-segment.float.round-xl
                     .contents
                         .contents-wrapper
@@ -36,28 +36,28 @@ block contents
                                 thead
                                     tr 
                                         th Name 
-                                        th Value
+                                        //- th Value
                                         th Usage
                                 tbody
                                     tr 
                                         td Light 
-                                        td 300 
+                                        //- td 300 
                                         td.light Frontend Renders On Grid. 
                                     tr 
                                         td Regular 
-                                        td 400 
+                                        //- td 400 
                                         td Frontend Renders On Grid. 
                                     tr 
                                         td Bold 
-                                        td 600 
+                                        //- td 600 
                                         td.bold Frontend Renders On Grid. 
                                     tr 
                                         td Bolder 
-                                        td 900 
+                                        //- td 900 
                                         td.bolder Frontend Renders On Grid. 
 
             .section-contents
-                h4 Letter Spacing
+                h4.header Letter Spacing
                 .ga-segment.float.round-xl
                     .contetns
                         .contents-wrapper
@@ -65,33 +65,33 @@ block contents
                                 thead
                                     tr 
                                         th Name 
-                                        th Value
+                                        //- th Value
                                         th Class
                                         th Usage
                                 tbody
                                     tr 
                                         td Wider 
-                                        td 1 
+                                        //- td 1 
                                         td spacing-wider 
                                         td.spacing-wider Frontend Renders On Grid. 
                                     tr 
                                         td Wide 
-                                        td 0.5 
+                                        //- td 0.5 
                                         td spacing-wide 
                                         td.spacing-wide Frontend Renders On Grid. 
                                     tr 
                                         td Normal 
-                                        td 0 
+                                        //- td 0 
                                         td  
                                         td Frontend Renders On Grid. 
                                     tr 
                                         td Narrow 
-                                        td -0.5 
+                                        //- td -0.5 
                                         td spacing-narrow 
                                         td.spacing-narrow  Frontend Renders On Grid. 
                                     tr 
                                         td Narrower 
-                                        td -1 
+                                        //- td -1 
                                         td spacing-narrower 
                                         td.spacing-narrower Frontend Renders On Grid. 
             .section-contents
@@ -99,27 +99,29 @@ block contents
                 .ga-segment.float.round-xl
                     .contents
                         .contents-wrapper
-                            h1.header [H1] Frontend Renders On Grid. (28px)
-                            h2.header [H2] Frontend Renders On Grid. (24px)
-                            h3.header [H3] Frontend Renders On Grid. (18px)
-                            h4.header [H4] Frontend Renders On Grid. (16px)
-                            h5.header [H5] Frontend Renders On Grid. (14px)
+                            h1.header [H1] Frontend Renders On Grid.
+                            h2.header [H2] Frontend Renders On Grid.
+                            h3.header [H3] Frontend Renders On Grid.
+                            h4.header [H4] Frontend Renders On Grid.
+                            h5.header [H5] Frontend Renders On Grid.
             .section-contents
-                h4 Size
+                h4.header Hero
                 .ga-segment.float.round-xl
                     .contents
                         .contents-wrapper
-                            .ga-button.tiny Tiny
-                            .ga-button.small Small
-                            .ga-button.medium.toast-open Medium
-                            .ga-button.large Large
-                            .ga-button.huge Huge
-                            .ga-button.massive Massive
+                            .contents-item.hero.large FROG
+                            .contents-item.hero Frontend Renders On Grid.
+                            //- .contents-item.hero.sub Frontend Renders On Grid.
+
+            .section-contents
+                h4.header Size
+                .ga-segment.float.round-xl
+                    .contents
                         .contents-wrapper
-                            .contents-item.tiny [Tiny] Frontend Renders On Grid. (10px)
-                            .contents-item.small [Small] Frontend Renders On Grid. (12px)
-                            .contents-item.medium [Medium] Frontend Renders On Grid. (14px)
-                            .contents-item.large [Large] Frontend Renders On Grid. (18px)
-                            .contents-item.huge [Huge] Frontend Renders On Grid. (20px)
-                            .contents-item.massive [Massive] Frontend Renders On Grid. (22px)
+                            .contents-item.tiny [Tiny] Frontend Renders On Grid.
+                            .contents-item.small [Small] Frontend Renders On Grid.
+                            .contents-item.medium [Medium] Frontend Renders On Grid.
+                            .contents-item.large [Large] Frontend Renders On Grid.
+                            .contents-item.huge [Huge] Frontend Renders On Grid.
+                            .contents-item.massive [Massive] Frontend Renders On Grid.
     block module 

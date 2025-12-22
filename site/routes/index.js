@@ -6,8 +6,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Frog UI' });
 });
 
-router.get('/pages/base', function(req, res, next) {
-  res.render('components/base',  {title: 'Base' });
+router.get('/pages/welcome', function(req, res, next) {
+  res.render('components/welcome',  {title: 'Welcome to Frog' });
+});
+
+router.get('/pages/faqs', function(req, res, next) {
+  res.render('components/faqs',  {title: 'FAQs' });
+});
+
+router.get('/pages/typography', function(req, res, next) {
+  res.render('components/base',  {title: 'Typography' });
 });
 
 router.get('/pages/semantic', function(req, res, next) {

@@ -67,6 +67,7 @@
       }
     }
   }
+  &:has(input:checked),
   &.checked {
     label, .label {
       &:before {

@@ -1,0 +1,120 @@
+extends ../layout
+
+block title
+  title #{title} | Frog UI CSS
+
+block contents
+  .page-wrapper
+    section#welcome
+      .section-title
+        h1= title 
+        .section-desc 
+      .container.center
+        .ga-tabs.line
+          .tab-menu
+            .tab-item.tab.active(data-item="concepts") !{cont("FAQS_TABS_ITEM_1")}
+            .tab-item.tab(data-item="semantic")  !{cont("FAQS_TABS_ITEM_2")}
+            .tab-item.tab(data-item="experience")  !{cont("FAQS_TABS_ITEM_3")}
+            .tab-item.tab(data-item="architecture")  !{cont("FAQS_TABS_ITEM_4")}
+            .tab-item.tab(data-item="performance")  !{cont("FAQS_TABS_ITEM_5")}
+        .tab-contants.section-contents(style="margin-top: 30px")
+          .tab-content.active(data-tab="concepts")
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_CONCEPT_1_Q")}
+                p !{cont("FAQS_CONCEPT_1_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_CONCEPT_2_Q")}
+                p !{cont("FAQS_CONCEPT_2_A")}
+          .tab-content(data-tab="semantic")
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_SEMANTIC_1_Q")}
+                p !{cont("FAQS_SEMANTIC_1_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_SEMANTIC_2_Q")}
+                p !{cont("FAQS_SEMANTIC_2_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_SEMANTIC_3_Q")}
+                p !{cont("FAQS_SEMANTIC_3_A")}
+          .tab-content(data-tab="experience")
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_EXPERIENCE_1_Q")}
+                p !{cont("FAQS_EXPERIENCE_1_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_EXPERIENCE_2_Q")}
+                p !{cont("FAQS_EXPERIENCE_2_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_EXPERIENCE_3_Q")}
+                p !{cont("FAQS_EXPERIENCE_3_A")}
+          .tab-content(data-tab="architecture")
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_ARCHITECTURE_1_Q")}
+                p !{cont("FAQS_ARCHITECTURE_1_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_ARCHITECTURE_2_Q")}
+                p !{cont("FAQS_ARCHITECTURE_2_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_ARCHITECTURE_3_Q")}
+                p !{cont("FAQS_ARCHITECTURE_3_A")}
+          .tab-content(data-tab="performance")
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_PERPORMANCE_1_Q")}
+                p !{cont("FAQS_PERPORMANCE_1_A")}
+            .ga-segment
+              .contents
+                .title !{cont("FAQS_PERPORMANCE_2_Q")}
+                p !{cont("FAQS_PERPORMANCE_2_A")}
+    block module
+      script.
+        document.addEventListener('DOMContentLoaded', function() {
+          const tabItems = document.querySelectorAll('.tab-item.tab');
+          const tabContents = document.querySelectorAll('.tab-content');
+          
+          tabItems.forEach(function(tabItem) {
+            tabItem.addEventListener('click', function() {
+              const targetTab = this.getAttribute('data-item');
+              
+              // 모든 탭 아이템에서 active 클래스 제거
+              tabItems.forEach(function(item) {
+                item.classList.remove('active');
+              });
+              
+              // 클릭한 탭 아이템에 active 클래스 추가
+              this.classList.add('active');
+              
+              // 모든 탭 콘텐츠에서 active 클래스 제거 및 숨김
+              tabContents.forEach(function(content) {
+                content.classList.remove('active');
+                content.style.display = 'none';
+              });
+              
+              // 해당하는 탭 콘텐츠 표시
+              const targetContent = document.querySelector(`.tab-content[data-tab="${targetTab}"]`);
+              if (targetContent) {
+                targetContent.classList.add('active');
+                targetContent.style.display = 'block';
+              }
+            });
+          });
+          
+          // 초기 상태 설정: 첫 번째 탭 콘텐츠만 표시
+          tabContents.forEach(function(content, index) {
+            if (index === 0) {
+              content.classList.add('active');
+              content.style.display = 'block';
+            } else {
+              content.style.display = 'none';
+            }
+          });
+        }); 

@@ -82,7 +82,7 @@
 @each $color, $value in $stateColors {
   .#{$ns}-message {
     &.#{$color} {
-      background-color: color.adjust(list.nth($value, 4), $lightness: 6%) !important;
+      background-color: color.change(list.nth($value, 1), $alpha: 0.16) !important;
       color: list.nth($value, 1) !important;
       border-color: list.nth($value, 1) !important;
     }

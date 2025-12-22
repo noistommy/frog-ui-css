@@ -1,12 +1,49 @@
 - var path = '/'
 - var selected = title?.toLowerCase()
+- var welcomeItems = ['welcome', 'FAQs']
+- var baseItems = ['typography', 'colors']
+- var elementItems = ['button', 'input', 'tag', 'checkbox', 'switch', 'badge', 'form', 'list', 'selectbox', 'message', 'tabs', 'cards', 'segments', 'table', 'pagination', 'panel', 'calendar']
+- var layoutItems = ['grid', 'grid2']
+- var moduleItems = ['modal', 'toast']
 - var menuItems = ['base', 'colors', 'button', 'input', 'tag', 'checkbox', 'switch', 'badge', 'form', 'list', 'selectbox', 'message', 'tabs', 'cards', 'segments', 'table', 'pagination', 'panel', 'grid', 'grid2', 'calendar', 'modal', 'toast']
 
 .ui-list
     .menu-header 
         //- a(href=`${path}`).bold Frog UI
-    .menu-contents
+    .menu-contents.ga-list-group
+        .group-title Frog
         .ga-list.selection
+            each item in welcomeItems
+                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                    a(href=`${path}pages/${item}`)
+                    span=item
+        .group-title Base
+        .ga-list.selection
+            each item in baseItems
+                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                    a(href=`${path}pages/${item}`)
+                    span=item
+        .group-title Elements
+        .ga-list.selection
+            each item in elementItems
+                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                    a(href=`${path}pages/${item}`)
+                    span=item
+        .group-title Layout
+        .ga-list.selection
+            each item in layoutItems
+                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                    a(href=`${path}pages/${item}`)
+                    span=item
+        .group-title Elements
+        .ga-list.selection
+            each item in moduleItems
+                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                    a(href=`${path}pages/${item}`)
+                    span=item
+        //.group-title Base
+        //.ga-list.selection
             each item in menuItems
-                li.nav-item.item(class=`${selected === item ? 'selected' : '11'}`)
-                    a(href=`${path}pages/${item}`)= item
+                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                    a(href=`${path}pages/${item}`)
+                    span=item

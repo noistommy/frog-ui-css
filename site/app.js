@@ -1,13 +1,13 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 // var pagesRouter = require('./routes/pages');
-
-var app = express();
+const i18n = require('./i18n');
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,7 +19,26 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(i18n);
+
+app.get(/^\/ko(\/.*)?$/, (req, res, next) => {
+  res.cookie('lang', 'ko');
+  console.log('ko')
+  const path = req.path.replace(/^\/ko/, '') || '/';
+  res.redirect(path);
+});
+
+app.get(/^\/en(\/.*)?$/, (req, res, next) => {
+  res.cookie('lang', 'en');
+  console.log('en')
+  const path = req.path.replace(/^\/en/, '') || '/';
+  res.redirect(path);
+});
+
+
 app.use('/', indexRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

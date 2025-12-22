@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./site/bin/www",
     "dev": "nodemon ./site/bin/www & npm run scss",
-    "scss": "sass --watch ./site/public/**/*.scss ./site/public/css/*.css",
+    "scss": "sass --watch ./site/public/scss:./site/public/css",
     "xeicon": "bower install xeicon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -43,6 +43,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass-import-json": "^1.0.2",
     "http-errors": "~1.6.3",
+    "i18n": "^0.15.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1"
   }

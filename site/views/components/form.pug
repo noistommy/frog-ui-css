@@ -9,15 +9,15 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Grouped input structure with labels, validation, and layout.
+                    p !{cont("ELEMENTS_FORM_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-form
                             .field
                                 label Title
-                                input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
                     .footer
                         -var code = `<div class="ga-form">\n    <div class="field">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
                         pre
@@ -32,9 +32,9 @@ block contents
                                 .title Form
                             .field
                                 label Title
-                                input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
                     .footer
-                        -var code = `<div class="ga-form">\n    <div class="header">\n       <div class="title">제목</div>\n    </div>\n    <div class="field">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
+                        -var code = `<div class="ga-form">\n    <div class="header">\n       <div class="title">Title</div>\n    </div>\n    <div class="field">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
                             pre
                                 code.language-markup
                                     | #{code}
@@ -45,9 +45,9 @@ block contents
                         .ga-form
                             .field.inline
                                 label Title
-                                input(type="text", placeholder="입력")
-                                //input(type="text", placeholder="입력")
-                                //input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
+                                //input(type="text", placeholder="Insert text")
+                                //input(type="text", placeholder="Insert text")
                     .footer
                         -var code = `<div class="ga-form">\n    <div class="field inline">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
                             pre
@@ -60,24 +60,24 @@ block contents
                         .ga-form
                             .field
                                 label Title
-                                input(type="text", placeholder="기본 라벨")
+                                input(type="text", placeholder="Base Label")
                             .field
-                                input(type="text", placeholder="라벨 없음")
+                                input(type="text", placeholder="No Label")
                             .fields.right-side
                                 .field.column.span-3.span-xs-12
-                                    label.title 타이틀 1
+                                    label.title Title 1
                                 .field.column
-                                    input(type="text", placeholder="입력")
+                                    input(type="text", placeholder="Insert text")
                             .fields.right-side
                                 .field.column.span-3.span-xs-12
-                                    label.title 타이틀 2
+                                    label.title Title 2
                                 .field.column
-                                    input(type="text", placeholder="입력")
+                                    input(type="text", placeholder="Insert text")
                             .fields.right-side
                                 .field.column.span-3.span-xs-12
-                                    label.title 타이틀 3
+                                    label.title Title 3
                                 .field.column
-                                    input(type="text", placeholder="입력")
+                                    input(type="text", placeholder="Insert text")
                     .footer
                         - var code = `<div class="ga-form">\n    <div class="field">\n        <label>label</label>\n        <input type="text" />\n    </div>\n</div>`
                         - var code1_1 = `<div class="ga-form">`
@@ -103,10 +103,10 @@ block contents
                         .ga-form
                             .field
                                 label Field 1
-                                input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
                             .field
                                 label Field 2
-                                input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
                     .footer
                         - var code = `<div class="ga-form">\n    <div class="field">\n        <label>label</label>\n        <input type="text" />\n    </div>\n</div>`
                             pre
@@ -120,13 +120,13 @@ block contents
                             .fields
                                 .field
                                     label Field 1
-                                    input(type="text", placeholder="입력")
+                                    input(type="text", placeholder="Insert text")
                                 .field
                                     label Field 2
-                                    input(type="text", placeholder="입력")
+                                    input(type="text", placeholder="Insert text")
                                 .field
                                     label Field 3
-                                    input(type="text", placeholder="입력")
+                                    input(type="text", placeholder="Insert text")
                     .footer
                         - var code_1_s = `<div class="ga-form">`
                         - var code_2_s = `    <div class="fields">`
@@ -151,44 +151,44 @@ block contents
                         .ga-form
                             .field.disabled
                                 label Field 1
-                                input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
                             .field.disabled
                                 label Field 2
-                                input(type="text", placeholder="입력")
+                                input(type="text", placeholder="Insert text")
                     .footer
                         - var code = `<div class="ga-form">\n    <div class="field disabled">\n        <label>label</label>\n        <input type="text" />\n    </div>\n</div>`
                             pre
                                 code.language-markup
                                     | #{code}
             .section-contents
-                h4.contents-title Fields 균등 분할 구성
+                h4.contents-title Fields Divide
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-form
                             .field
-                                label 2분할 구성
+                                label Divide-2
                                 .fields.divide-2
                                     .field.column
                                         label field 1
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                                     .field.column
                                         label field 2
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                             .field
-                                label 4분할 구성
+                                label Divide-4
                                 .fields.divide-4
                                     .field.column
                                         label field 1
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                                     .field.column
                                         label field 2
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                                     .field.column
                                         label field 3
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                                     .field.column
                                         label field 4
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                     .footer
                         - var code_1_s = `<div class="ga-form">`
                         - var code_2_s = `    <div class="fields divide-{ 2|4|6|8|10 }">`
@@ -209,7 +209,7 @@ block contents
                                     | #{code_2_e}
                                     | #{code_1_e}
             .section-contents
-                h4.contents-title Fields 지정 분할 구성
+                h4.contents-title Fields grids
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper
                         .ga-form
@@ -217,13 +217,13 @@ block contents
                                 .fields
                                     .column.span-3
                                         label span 3
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                                     .column.span-5
                                         label span 5
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                                     .column.span-4
                                         label span 4
-                                        input(type="text", placeholder="입력")
+                                        input(type="text", placeholder="Insert text")
                     .footer
                         - var code_1_s = `<div class="ga-form">`
                         - var code_2_s = `    <div class="fields">`
@@ -250,10 +250,10 @@ block contents
                         .ga-form
                             .field
                                 label Textarea
-                                textarea(placeholder="글 입력")
+                                textarea(placeholder="Insert text")
                             .field.short
                                 label Textarea Short
-                                textarea(placeholder="글 입력")
+                                textarea(placeholder="Insert text")
                     .footer
                         - var code = `<div class="ga-form">\n    <div class="field">\n        <label>label</label>\n        <textarea />\n    </div>\n</div>`
                         - var code1 = `<div class="ga-form">\n    <div class="field short">\n        <label>label</label>\n        <textarea />\n    </div>\n</div>`
@@ -269,11 +269,11 @@ block contents
                     .contents-wrapper
                         .ga-form
                             .field
-                                input(type='text', placeholder='입력')
+                                input(type='text', placeholder='Insert text')
                             .field
                                 .ga-checkbox
                                     input(type="checkbox")
-                                    label 체크박스를 표시합니다.
+                                    label Display checkbox
                     .footer
                         - var code = `<div class="ga-form">\n    <!-- something form element field -->\n    <div class="field">\n        <div class="ga-checkbox">\n          <input type="checkbox" />\n          <label>label</label>\n        </div>\n    </div>\n</div>`
                             pre
@@ -285,7 +285,7 @@ block contents
                     .contents-wrapper
                         .ga-form
                             .field
-                                label 교통 수단을 선택하세요
+                                label Select transportation you want?
                                 .fields
                                     .field
                                         .ga-checkbox.radio
@@ -300,20 +300,20 @@ block contents
                                             input(type="radio", name="traffic")
                                             label Subway
                             .field
-                                label.h4 이슈발생 시 올바른 행동은? (Field list)
+                                label.h4  What is the right thing to do when an issue?
                                 .fields.listed
                                     .field
                                         .ga-checkbox.radio
                                             input(type="radio", name="traffic")
-                                            label 1번. 야근한다
+                                            label 1. Working overtime
                                     .field
                                         .ga-checkbox.radio
                                             input(type="radio", name="traffic")
-                                            label 2번. 퇴근한다.
+                                            label 2. Leaving work.
                                     .field
                                         .ga-checkbox.radio
                                             input(type="radio", name="traffic")
-                                            label 3번. 아무것도 하지 않는다.
+                                            label 3. Do noting.
                     .footer
                         - var code = `<div class="ga-form">\n    <!-- something form element field -->\n    <div class="field">\n        <div class="ga-checkbox radio">\n          <input type="radio" name="radios" />\n          <label>label</label>\n        </div>\n    </div>\n</div>`
                             pre
@@ -329,7 +329,7 @@ block contents
                                     select
                                         each col in ['', 1, 2, 3, 4, 5, 6]
                                             if col == ''
-                                                option(default, value=`${col}`)= '선택'
+                                                option(default, value=`${col}`)= 'Select'
                                             else
                                                 option(value=`${col}`)= `option${col}`
                                     i.arrow.icon.xi-angle-down

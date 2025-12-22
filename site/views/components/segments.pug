@@ -9,7 +9,7 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Content containers for grouping text, images, and actions.
+                    p !{cont("ELEMENTS_SEGMENTS_SUB_TITLE")}
             .section-contents
                 h4.contents-title 기본
                 .ga-segment.float.round-xl.attached
@@ -22,7 +22,7 @@ block contents
                                 | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segment\">\n       <!-- insert contents -->\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -34,7 +34,7 @@ block contents
                                 | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment border\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segment border\">\n       <!-- insert contents -->\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -46,7 +46,7 @@ block contents
                                 | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment float\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segment float\">\n       <!-- insert contents -->\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -58,7 +58,7 @@ block contents
                                 | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment surface\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segment surface\">\n       <!-- insert contents -->\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -76,9 +76,9 @@ block contents
                                 | Right Align Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment align-left\">\n       <!-- insert contents -->\n</div>\n`
-                            - var code1 = `\n<div class=\"ga-segment align-center\">\n       <!-- insert contents -->\n</div>\n`
-                            - var code2 = `\n<div class=\"ga-segment align-right\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segment align-left\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code1 = `<div class=\"ga-segment align-center\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code2 = `<div class=\"ga-segment align-right\">\n       <!-- insert contents -->\n</div>\n`
                             pre
                                 code.language-markup= code
                                 code.language-markup= code1
@@ -101,7 +101,7 @@ block contents
                                 | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment round-{s | m | l | xl}\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segment round-{s | m | l | xl}\">\n       <!-- insert contents -->\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -109,11 +109,12 @@ block contents
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.contents
                         .ga-segment.border
-                            .title Title
-                            .contents Contents 영역
+                            .contents
+                                .title.h1 Title
+                                | Contents 영역
                     .footer 
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-card\">\n       <div class=\"title\">Title</div>\n       <!-- insert contents -->\n  </div>\n`
+                            - var code = `<div class=\"ga-card\">\n   <div class=\"contents\">\n       <div class=\"title\">Title</div>\n        <!-- insert contents -->\n    </div>\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -127,7 +128,7 @@ block contents
                             .footer Footer 영역
                     .footer 
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-card\"></div>\n    <div class=\"header\">Header contents</div>\n    <!-- contents -->\n    <div class=\"footer\">Footer contents</div>\n</div>\n`
+                            - var code = `<div class=\"ga-card\"></div>\n    <div class=\"header\">Header contents</div>\n    <!-- contents -->\n    <div class=\"footer\">Footer contents</div>\n</div>\n`
                             pre
                                 code.language-markup= code
             .section-contents
@@ -137,12 +138,14 @@ block contents
                         .ga-segments.border.round-l
                             .ga-segment.border
                                 .contents
+                                    .title Segment 1
                                     | Contents 영역         
                             .ga-segment.border
                                 .contents
+                                    .title Segment 2
                                     | Contents 영역         
                     .footer
                         .code-wrapper
-                            - var code = `\n<div class=\"ga-segment\">\n       <!-- insert contents -->\n</div>\n`
+                            - var code = `<div class=\"ga-segments\">\n   <div class=\"ga-segment\">\n       <!-- insert contents 1 -->\n  </div>\n  <div class=\"ga-segment\">\n       <!-- insert contents 2 -->\n  </div>\n</div>\n`
                             pre
                                 code.language-markup= code

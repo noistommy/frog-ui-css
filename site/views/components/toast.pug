@@ -9,15 +9,15 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p Temporary, auto-dismissable message for quick user feedback.
+                    p !{cont("MODULES_TOAST_SUB_TITLE")}
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.ex_toast_board
                         .toast.ga-success
                             .toast-contents success
             .section-contents
-                h4.contents-title 닫기 버튼 사용
+                h4.contents-title Use close button
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.ex_toast_board
                         .toast.ga-success
@@ -25,7 +25,7 @@ block contents
                             .toast-close
                                 i.xi-close
             .section-contents
-                h4.contents-title 아이콘 표시
+                h4.contents-title Display icon
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.ex_toast_board
                         .toast.ga-success
@@ -53,7 +53,7 @@ block contents
                                 i.xi-info
                             .toast-contents Importance
             .section-contents
-                h4.contents-title 동그랗게
+                h4.contents-title Round
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.ex_toast_board
                         .toast.ga-success.round
@@ -63,7 +63,7 @@ block contents
                             .toast-close
                                 i.xi-close
             .section-contents
-                h4.contents-title 스타일
+                h4.contents-title Style
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.ex_toast_board
                         .toast.ga-success
@@ -96,14 +96,14 @@ block contents
                             .toast-close
                                 i.xi-close
             .section-contents
-                h4.contents-title 테스트
+                h4.contents-title Test
                 .ga-segment.float.round-xl.attached
                     .contents-wrapper.open-btn
-                        div.ga-tag.label.success success
-                        div.ga-tag.label.info info
-                        div.ga-tag.label.danger danger
-                        div.ga-tag.label.attention attention
-                        div.ga-tag.label.importance importance
+                        div.ga-tag.label.ga-success success
+                        div.ga-tag.label.ga-info info
+                        div.ga-tag.label.ga-danger danger
+                        div.ga-tag.label.ga-attention attention
+                        div.ga-tag.label.ga-importance importance
                         div.ga-tag.label.primary primary
                         div.ga-tag.label.secondary secondary
                         div.ga-tag.label.red red
@@ -134,7 +134,7 @@ block contents
                             input(type="radio", name="theme")
                             label Light
                     .footer
-                        button.ga-button.primary.run-btn 실행
+                        button.ga-button.primary.run-btn Run
                         button.ga-button.outline.clear-btn Clear
 block module 
     script(src="/js/toast.js")
