@@ -48,7 +48,9 @@ html
                         //- div.sub-logo Frontend Renders On Grid...
                         //- div.sub-logo For Real, Only Good!!
                     nav.sub-menu.small
-                        .link-btn
+                        .locale
+                            .ga-button.circle
+                        //- .link-btn
                             .ga-button.circle.badge.compact
                                 | Be-UI 
                                 .in-badge.ga-deepblue React
@@ -57,17 +59,28 @@ html
                                 | Be-UI 
                                 .in-badge.ga-green vue
                                 a.link(href="https://beui.vercel.app/", target="_blank") 
-                        .divide
-                            .ga-button.text |
-                        .locale
-                        .divide
-                            .ga-button.text |
-                        .mode
-                            .ga-button.icon.circle.toggle-mode
-                                i.xi-sun-o
-                        .github
-                            a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
-                                i.xi-github
+                        
+                        .buttons-part
+                            .ga-button.circle.badge.compact
+                                | Be-UI 
+                                .in-badge.ga-deepblue React
+                                a.link(href="https://react-be-ui.vercel.app/", target="_blank")
+                            .ga-button.circle.badge.compact
+                                | Be-UI 
+                                .in-badge.ga-green vue
+                                a.link(href="https://beui.vercel.app/", target="_blank") 
+                        
+                            .mode
+                                .ga-button.icon.circle.toggle-mode
+                                    i.xi-sun-o
+                            .github
+                                a.ga-button.icon.circle.toggle-mode(href="https://github.com/noistommy/frog-ui-css")
+                                    i.xi-github
+                        .more 
+                            .ga-button.icon.circle.toggle-sub
+                                i.xi-ellipsis-h
+                        
+
             if !error && title === 'Frog UI'
                 .main-container.main
                     .right-part

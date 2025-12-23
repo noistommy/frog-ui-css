@@ -93,6 +93,13 @@ header.gnb .logo .sub-logo {
   align-items: center;
   gap: 10px;
 }
+.main-menu .buttons-part, .sub-menu .buttons-part {
+  display: flex;
+  gap: inherit;
+}
+.main-menu .more, .sub-menu .more {
+  display: none;
+}
 
 .pages .main-menu .toggle-menu {
   display: none;
@@ -100,8 +107,8 @@ header.gnb .logo .sub-logo {
 
 .sub-menu.float {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 100%;
+  right: 10px;
   z-index: 999;
 }
 
@@ -491,6 +498,31 @@ section pre {
     right: 5px;
     padding: 5px;
   }
+  header.gnb .sub-menu .more {
+    display: flex;
+  }
+  header.gnb .buttons-part {
+    background-color: var(--bgc);
+    padding: 5px;
+    border-radius: 2em;
+    border: 1px solid var(--brd);
+    width: max-content;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    margin-right: -100%;
+    display: flex;
+    gap: 10px;
+    z-index: 9999;
+    transition: margin-right 250ms ease;
+  }
+  header.gnb .buttons-part.on {
+    margin-right: 0;
+  }
+  header.gnb .buttons-part > div {
+    flex-shrink: 0;
+    margin: 0;
+  }
   .main-container .left-part .side-menu {
     position: absolute;
     width: 100%;
@@ -504,6 +536,12 @@ section pre {
   #typography .color-box {
     min-width: 90px;
     height: 90px;
+  }
+  #welcome .container {
+    margin-top: 10px;
+  }
+  #welcome .section-contents {
+    width: 100%;
   }
 }
 /* Mobile - Landscape */

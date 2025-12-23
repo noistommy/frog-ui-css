@@ -8,7 +8,9 @@
 const sideMenu = document.querySelector('.side-menu');
 const toggleBtn = document.querySelector('.toggle-mode');
 const showMenu = document.querySelector('.show-menu');
+const showMore = document.querySelector('.more')
 const mainContainer = document.querySelector('.main');
+
 function toggleMode()  {
     if (document.documentElement.classList.contains('light-mode')) {
         document.documentElement.classList.remove('light-mode')
@@ -32,11 +34,22 @@ function setTheme () {
         sessionStorage.setItem('theme-mode', window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light')
     }
 }
+function toggleMore () {
+    const target = document.querySelector('.buttons-part');
+   if(target.classList.contains('on')) {
+        target.classList.remove('on')
+   } else {
+        target.classList.add('on')
+   }
+}
 
 setTheme()
 
 if (toggleBtn) {
     toggleBtn.addEventListener('click', () => toggleMode())
+}
+if (showMore) {
+    showMore.addEventListener('click', () => toggleMore())
 }
 
 if(showMenu) {
@@ -53,6 +66,7 @@ if(showMenu) {
 // Locale 변경 버튼 동적 생성
 function initLocaleButton() {
     const localeContainer = document.querySelector('.locale');
+    
     if (!localeContainer) return;
 
     // 쿠키에서 현재 locale 가져오기
@@ -66,10 +80,8 @@ function initLocaleButton() {
     const currentLocale = getCookie('lang') || 'ko';
     const currentPath = window.location.pathname;
     
+    const button = localeContainer.querySelector('.ga-button');
     // 버튼 생성
-    const button = document.createElement('div');
-    button.className = 'ga-button';
-    
     const link = document.createElement('a');
     link.className = 'link';
     

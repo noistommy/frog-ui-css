@@ -6,6 +6,7 @@ $tabsItemPadding: $buttonPadding;
   width: 100%;
   .tab-menu {
     display: flex;
+    flex-wrap: wrap;
     .tab-item {
       flex-shrink: 0;
       cursor: pointer;
