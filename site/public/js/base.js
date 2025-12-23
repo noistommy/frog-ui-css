@@ -7,6 +7,7 @@
 // }
 const sideMenu = document.querySelector('.side-menu');
 const toggleBtn = document.querySelector('.toggle-mode');
+const changeBtn = document.querySelector('.change-mode');
 const showMenu = document.querySelector('.show-menu');
 const showMore = document.querySelector('.more')
 const mainContainer = document.querySelector('.main');
@@ -16,11 +17,13 @@ function toggleMode()  {
         document.documentElement.classList.remove('light-mode')
         document.documentElement.classList.add('dark-mode') 
         toggleBtn.innerHTML = '<i class="xi-sun"></i>'
+        changeBtn.innerHTML = '<i class="icon left xi-sun"></i> Light Mode'
         sessionStorage.setItem('theme-mode', 'dark')
     } else if (document.documentElement.classList.contains('dark-mode')) {
         document.documentElement.classList.remove('dark-mode')
         document.documentElement.classList.add('light-mode')
         toggleBtn.innerHTML = '<i class="xi-moon"></i>'
+        changeBtn.innerHTML = '<i class="icon left xi-moon"></i> Dark Mode'
         sessionStorage.setItem('theme-mode', 'light')
     }
 }
@@ -47,6 +50,9 @@ setTheme()
 
 if (toggleBtn) {
     toggleBtn.addEventListener('click', () => toggleMode())
+}
+if (changeBtn) {
+    changeBtn.addEventListener('click', () => toggleMode())
 }
 if (showMore) {
     showMore.addEventListener('click', () => toggleMore())

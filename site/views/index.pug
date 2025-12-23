@@ -24,17 +24,21 @@ block contents
             .page-header
                 .page-title.hero Semantic CSS
                 .hero.sub Intuitive Semantic CSS Created by Natural Language-Based Classes
+    .page-wrapper
+        section 
+            .page-header 
+                .page-title !{cont("MAIN_SECTION_TOKEN_TITLE")}
+                .page-desc !{cont("MAIN_SECTION_TOKEN_DESC")}
     .page-wrapper#custom-theme
-        .container.center
+        section
             .ga-grid
                 .column.span-6.span-xs-12 
                     .user-custom-theme.page-header
                         .page-icon
                             i.xi-border-color
-                        .page-title Customize Theme
-                        //- .page-desc
-                            p Semantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.
-                            p Develop your UI once, then deploy with the same code everywhere. 
+                        .page-title !{cont("MAIN_SECTION_STYLE_TITLE")}
+                        .page-desc
+                            p !{cont("MAIN_SECTION_STYLE_DESC")}
                 .column.span-6.span-xs-12.cell
                     .select-css
                         .ga-select-box.dropdown#css-selector
@@ -64,12 +68,46 @@ block contents
                             .ga-button.selected A
                             .ga-button B
                             .ga-button C
+    .page-wrapper
+        section 
+            .page-header 
+                .page-title !{cont("MAIN_SECTION_THEME_TITLE")}
+                .page-desc !{cont("MAIN_SECTION_THEME_DESC")}
+            .page-contents
+                .buttons
+                    .ga-button.change-mode
+                        i.icon.left.xi-sun-o
+                        | Light Mode
+    .page-wrapper
+        section 
+            .page-header 
+                .page-title !{cont("MAIN_SECTION_CSS_TITLE")}
+                .page-desc !{cont("MAIN_SECTION_CSS_DESC")}
+            .page-contents
+                .buttons
+                    .ga-button
+                        i.icon.left.xi-link
+                        | BE-UI-REACT
+                        img(src="/img/react.svg", alt="react", style="width: 1rem; margin-left: 10px")
+                        a.link(href="https://react-be-ui.vercel.app/", target="_blank") 
+                    .ga-button
+                        i.icon.left.xi-link
+                        |  BE-UI-VUE
+                        img(src="/img/vue.svg", alt="vue", style="width: 1rem; margin-left: 10px")
+                        a.link(href="https://beui.vercel.app/", target="_blank")  
+                //.ga-cards.column-2
+                    .ga-card.border 
+                        .contents 
+                            img(src="/img/react.svg", alt="react")
+                            | React + Frog
+                    .ga-card.border 
+                        .contents 
+                            img(src="/img/vue.svg", alt="vue")
+                            | Vue + Frog
     .page-wrapper.summary#grids2
         section
             .page-header.ui-elements
-                .page-icon
-                    i.xi-package
-                .page-title Preview UI Element
+                .page-title !{cont("MAIN_SECTION_ELEMENT_TITLE")}
                 //- .page-desc Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.
             .ga-grid2.dosirak.round-l(style="--grid-row-num: 6; --grid-gap: 20")
                 .column.col-6.row-4.col-xs-12

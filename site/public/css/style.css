@@ -140,11 +140,18 @@ header.gnb .logo .sub-logo {
 .main-container .page-wrapper .page-header {
   padding: 0 20px;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   line-height: 1.4;
+}
+.main-container .page-wrapper .page-contents {
+  margin: 50px 0;
+}
+.main-container .page-wrapper .page-contents .buttons {
+  display: flex;
+  justify-content: center;
 }
 .main-container .page-wrapper .page-icon {
   font-size: 6em;
@@ -238,7 +245,7 @@ section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  margin-bottom: 20px;
+  border-top: 1px solid var(--brd);
 }
 section .section-title {
   padding-bottom: 20px;
@@ -311,9 +318,6 @@ section .section-contents .contents-wrapper .contents-item {
   line-height: 21px;
 }
 
-#custom-theme {
-  padding: 50px 40px;
-}
 #custom-theme .user-custom-theme {
   text-align: center;
 }
