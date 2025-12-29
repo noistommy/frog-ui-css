@@ -29,7 +29,7 @@
         &.disabled,
         &[disabled], &:disabled {
             cursor: default;
-            opacity: 0.3;
+            opacity: 0.5;
             // color: #C4C4C4 !important;
             // border-color: #C4C4C4 !important;
             // background-color: #F2F2f2 !important;
@@ -52,7 +52,7 @@
             img {
                 margin:0;
             }
-            //&.circle {
+            //&.round {
             //    border-radius: 50%;
             //}
             &:active {
@@ -67,6 +67,7 @@
             &:hover,
             &:focus {
                 color: $baseButtonColor;
+                background-color: $hoverButtonBg;
             }
             &[disabled],
             &:disabled {
@@ -97,7 +98,7 @@
         &.fluid:not(.badge) {
             width: 100%;
         }
-        &.circle {
+        &.round {
             border-radius: 2em;
         }
         &.outline {
@@ -193,8 +194,10 @@
         }
     }
     &-buttons {
-        display: inline-block;
+        display: inline-flex;
+        overflow-x: auto;
         .#{$ns}-button {
+            flex: 1 0 auto;
             //padding: $verticalPadding;
             border-radius: 0;
             margin:0;
@@ -210,6 +213,9 @@
                 border-top-right-radius: $baseBorderRadius;
                 border-bottom-right-radius: $baseBorderRadius;
             }
+            & + .#{$ns}-button {
+                margin-left: 1px;
+            }
         }
         &.outline {
             border-radius: $baseBorderRadius;
@@ -217,6 +223,7 @@
             overflow: hidden;
             //box-sizing: content-box;
             .#{$ns}-button {
+                margin: 0;
                 box-shadow: none;
                 border-left: 1px solid var(--brd);
                 &:first-child {
@@ -275,11 +282,12 @@
                 }
             }
             &.text {
-                background-color: transparent !important;
-                color: $bgColor !important;
+                background-color: transparent;
+                color: $bgColor;
                 box-shadow: none;
                 &:hover {
                     color: $hoverColor !important;
+                    background-color: $hoverButtonBg !important;
                 }
                 &.active {
                     color: $hoverColor;
@@ -335,7 +343,8 @@
                 color: $value !important;
                 box-shadow: none;
                 &:hover {
-                    color: $hoverColor !important;
+                    color: $hoverColor;
+                    background-color: $hoverButtonBg;
                 }
                 &.selected,
                 &.active {
@@ -351,6 +360,13 @@
                 // background-color: #F2F2f2 !important;
                 pointer-events: none;
                 box-shadow: none;
+            }
+            &-light {
+                background-color: color.adjust($value, $lightness: 35%) !important;
+                color: $value !important;
+                &.border {
+                    box-shadow: 0 0 0 1px $value inset;
+                }
             }
         }
     }

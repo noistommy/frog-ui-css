@@ -12,6 +12,8 @@
     &.right-side .column:last-child {flex-grow: 1}
     &.divide {
       @for $i from 1 through $gridWhole {
+        &-#{$i} > .field .column,
+        &-#{$i} > .rows .column,
         &-#{$i} > .column {
           width: calc(100% / $i);
         }
@@ -49,6 +51,7 @@
         margin-bottom: $gridGutter * -1px;;
       }
     }
+    .field > .column,
     .rows > .column,
     .column {
       width: $gridPercent * 1%;
@@ -78,6 +81,7 @@
       }
     }
   }
+  &-form .fields > .field,
   &-grid > .rows {
     width: 100%;
     position: relative;

@@ -17,14 +17,59 @@ function toggleMode()  {
         document.documentElement.classList.remove('light-mode')
         document.documentElement.classList.add('dark-mode') 
         toggleBtn.innerHTML = '<i class="xi-sun"></i>'
-        changeBtn.innerHTML = '<i class="icon left xi-sun"></i> Light Mode'
+        if (changeBtn) changeBtn.innerHTML = '<i class="icon left xi-sun"></i> Light Mode'
+        // Giscus 테마 변경
+        updateGiscusTheme('noborder_dark')
         sessionStorage.setItem('theme-mode', 'dark')
     } else if (document.documentElement.classList.contains('dark-mode')) {
         document.documentElement.classList.remove('dark-mode')
         document.documentElement.classList.add('light-mode')
         toggleBtn.innerHTML = '<i class="xi-moon"></i>'
-        changeBtn.innerHTML = '<i class="icon left xi-moon"></i> Dark Mode'
+        if (changeBtn) changeBtn.innerHTML = '<i class="icon left xi-moon"></i> Dark Mode'
+        // Giscus 테마 변경
+        updateGiscusTheme('noborder_light')
         sessionStorage.setItem('theme-mode', 'light')
+    }
+}
+
+function updateGiscusTheme(theme) {
+    // Giscus 스크립트 태그 찾기
+    const giscusScript = document.querySelector('script[src*="giscus.app"]');
+    if (giscusScript) {
+        giscusScript.setAttribute('data-theme', theme);
+        
+        // Giscus iframe 찾기
+        const giscusFrame = document.querySelector('iframe.giscus-frame');
+        if (giscusFrame && giscusFrame.contentWindow) {
+            // Giscus iframe에 테마 변경 메시지 전송
+            giscusFrame.contentWindow.postMessage({
+                giscus: {
+                    setConfig: {
+                        theme: theme
+                    }
+                }
+            }, 'https://giscus.app');
+        }
+    }
+}
+function updateGiscuLocals(locale) {
+    // Giscus 스크립트 태그 찾기
+    const giscusScript = document.querySelector('script[src*="giscus.app"]');
+    if (giscusScript) {
+        giscusScript.setAttribute('data-lang', locale);
+        
+        // Giscus iframe 찾기
+        const giscusFrame = document.querySelector('iframe.giscus-frame');
+        if (giscusFrame && giscusFrame.contentWindow) {
+            // Giscus iframe에 테마 변경 메시지 전송
+            giscusFrame.contentWindow.postMessage({
+                giscus: {
+                    setConfig: {
+                        lang: locale
+                    }
+                }
+            }, 'https://giscus.app');
+        }
     }
 }
 
@@ -33,6 +78,9 @@ function setTheme () {
     if(mode) {
         document.documentElement.classList.add(`${mode}-mode`)
         toggleBtn.innerHTML = `<i class="xi-${mode === "dark" ? "sun" : "moon"}"></i>`
+        // 초기 로드 시에도 Giscus 테마 설정
+        const giscusTheme = mode === 'dark' ? 'noborder_dark' : 'noborder_light';
+        updateGiscusTheme(giscusTheme);
     } else {
         sessionStorage.setItem('theme-mode', window.matchMedia('(prefers-color-scheme: dark)') ? 'dark' : 'light')
     }
@@ -100,6 +148,7 @@ function initLocaleButton() {
         // button.textContent = 'ENGLISH -> 한국어';
         link.href = `/ko${currentPath}`;
     }
+    updateGiscuLocals(currentLocale)
     
     button.appendChild(link);
     localeContainer.appendChild(button);

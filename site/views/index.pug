@@ -69,7 +69,7 @@ block contents
                             .ga-button B
                             .ga-button C
     .page-wrapper
-        section 
+        section
             .page-header 
                 .page-title !{cont("MAIN_SECTION_THEME_TITLE")}
                 .page-desc !{cont("MAIN_SECTION_THEME_DESC")}
@@ -122,11 +122,11 @@ block contents
                             p 가나다라마바사
                 .column.col-6.row-4.col-xs-12
                     h5.title Heading
-                    h1.header [H1] Frog UI System (28px)
-                    h2.header [H2] Frog UI System (24px)
-                    h3.header [H3] Frog UI System (18px)
-                    h4.header [H4] Frog UI System (16px)
-                    h5.header [H5] Frog UI System (14px)
+                    h1.header [H1] Frog UI System
+                    h2.header [H2] Frog UI System
+                    h3.header [H3] Frog UI System
+                    h4.header [H4] Frog UI System
+                    h5.header [H5] Frog UI System
                 .column.col-6.row-4.col-xs-12
                     h5.title Letter Spacing
                     .ga-grid 
@@ -155,16 +155,16 @@ block contents
                     .ga-grid
                         .column.span-3 
                             .ga-tag.label Light
-                        .column.span-9.light Frog UI System (300)
+                        .column.span-9.light Frog UI System
                         .column.span-3
                             .ga-tag.label Regular
-                        .column.span-9 Frog UI System (400)
+                        .column.span-9 Frog UI System
                         .column.span-3 
                             .ga-tag.label Bold
-                        .column.span-9.bold Frog UI System (600)
+                        .column.span-9.bold Frog UI System
                         .column.span-3 
                             .ga-tag.label Bolder
-                        .column.span-9.bolder Frog UI System (900)
+                        .column.span-9.bolder Frog UI System
     .page-wrapper.summary#colors
         section
             h5.header Colors
@@ -179,19 +179,19 @@ block contents
                         .name secondary
                 .column.span-xs-4
                     .color-item
-                        .chip.success
+                        .chip.ga-success
                         .name success
                 .column.span-xs-4
                     .color-item
-                        .chip.danger
+                        .chip.ga-danger
                         .name danger
                 .column.span-xs-4
                     .color-item
-                        .chip.attention
+                        .chip.ga-attention
                         .name attention
                 .column.span-xs-4
                     .color-item
-                        .chip.importance
+                        .chip.ga-importance
                         .name importance
                 .column.span-xs-4
                     .color-item
@@ -371,7 +371,10 @@ block contents
                         .ga-checkbox.radio
                             input(id="ch3" type="checkbox")
                             label(for="ch3") radio
-                        
-                    
-                    
+    .page-wrapper 
+        section 
+            .page-header 
+                .page-title !{cont("MAIN_SECTION_CONTACT_TITLE")}
+                .page-desc !{cont("MAIN_SECTION_CONTACT_DESC")}
+            include comments
     script(src="/js/selectbox.js")

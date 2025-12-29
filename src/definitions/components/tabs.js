@@ -70,7 +70,7 @@ function createNewTab () {
 function createCloseButton () {
     const item = document.createElement('div');
     const icon = document.createElement('i');
-    item.classList.add('btn-close','ga-button','icon','tiny','circle');
+    item.classList.add('btn-close','ga-button','icon','tiny','round');
     icon.classList.add('fa', 'fa-close');
     item.append(icon);
     item.addEventListener('click', e => removeTab(e));

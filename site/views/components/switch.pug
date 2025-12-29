@@ -12,7 +12,7 @@ block contents
                     p !{cont("ELEMENTS_SWITCH_SUB_TITLE")}
             .section-contents
                 h4.contents-title Base 1
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         label.ga-switch.slide
                             input(type="checkbox", checked)
@@ -24,7 +24,7 @@ block contents
                                 | #{code}
             .section-contents
                 h4.contents-title Base 2
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         label.ga-switch.slide.inside
                             input(type="checkbox", checked)
@@ -36,15 +36,15 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Round
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        label.ga-switch.slide.inside
+                        label.ga-switch.slide.inside.round
                             input(type="checkbox", checked)
-                            span.switch.round
+                            span.switch
                     .contents-wrapper
-                        label.ga-switch.slide
+                        label.ga-switch.slide.round
                             input(type="checkbox", checked)
-                            span.switch.round
+                            span.switch
                     .footer
                         - var code = `<label class="ga-switch slide">\n    <input type="checkbox" checked />\n    <span class="switch round"/>\n</label>`
                             pre
@@ -52,7 +52,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Button
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         label.ga-switch.button
                             input(type="checkbox", checked)
@@ -61,7 +61,7 @@ block contents
                     .contents-wrapper
                         label.ga-switch.button.round
                             input(type="checkbox", checked)
-                            span.on.active Tes
+                            span.on.active Yes
                             span.off No
                     .footer
                         - var code = `<label class="ga-switch button">\n    <input type="checkbox" checked />\n    <span class="on active">ON</span>\n    <span class="off">OFF</span>\n</label>`

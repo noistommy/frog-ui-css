@@ -1,16 +1,22 @@
 .#{$ns}-panel {
+  --max-height: 200px;
   border: $panelBorder;
   transition: height 250ms ease;
   margin: $margin;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
   .panel-header {
     background-color: $panelBackgroundColor;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: $panelVerticalPadding relativePx(12);;
+    padding: $panelVerticalPadding relativePx(12);
+    gap: 4px;
     .title {
+      flex-grow: 1;
       min-width: 14em;
-      font-weight: 700;
+      font-weight: 600;
     }
     .panel-toggle-btn {
       margin-left: 5px;
@@ -21,6 +27,7 @@
     }
   }
   .panel-content {
+    margin: -1px;
     .content-wrapper {
       border-top: $panelBorder;
       padding: $panelPadding;
@@ -39,14 +46,30 @@
       }
     }
   }
+  &.border {
+    border: $panelBorder;
+    .panel-content {
+      border-top: $panelBorder;
+    }
+  }
   &.collapse {
     .panel-content {
+      height: 0;
+      overflow: auto;
+      transition: height 250ms ease;
       .content-wrapper {
-        display: none;
+      }
+    }
+    &.icon {
+      &.left {
+        .panel-toggle-btn {
+          order: -1;
+        }
       }
     }
     &.open {
       .panel-content {
+        height: var(--max-height);
         .content-wrapper {
           display: inline-block;
         }

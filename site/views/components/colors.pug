@@ -12,18 +12,18 @@ block contents
                     p !{cont("BASE_COLORS_SUB_TITLE")}
             .section-contents
                 h4.contents-title Brands
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .color-box.primary 메인
-                        .color-box.primary.dark 어두운
+                        .color-box.primary Primary
+                        .color-box.primary.dark Darker
                     .contents-wrapper
-                        .color-box.secondary 강조
-                        .color-box.secondary.dark 어두운
+                        .color-box.secondary Secondary
+                        .color-box.secondary.dark Darker
                     .footer
-                        - var code_p = `<div class="primary">메인</div>`
-                        - var code_pd = `<div class="primary dark">메인 - 어두운</div>`
-                        - var code_s = `<div class="secondary">강조</div>`
-                        - var code_sd = `<div class="secondary dark">강조 - 어두운</div>`
+                        - var code_p = `<div class="primary">Primary</div>`
+                        - var code_pd = `<div class="primary dark">Primary - Darker</div>`
+                        - var code_s = `<div class="secondary">Secondary</div>`
+                        - var code_sd = `<div class="secondary dark">Secondary - Darker</div>`
                         pre 
                             code.language-markup 
                                 | #{code_p}
@@ -33,19 +33,19 @@ block contents
 
             .section-contents
                 h4.contents-title Status
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .color-box.ga-success 성공
-                        .color-box.ga-info 정보
-                        .color-box.ga-danger 위험
-                        .color-box.ga-attention 경고
-                        .color-box.ga-importance 중요
+                        .color-box.ga-success Success
+                        .color-box.ga-info Info
+                        .color-box.ga-danger Danger
+                        .color-box.ga-attention Attention
+                        .color-box.ga-importance Importance
                     .footer
-                        - var code_state_succ = '<div class="ga-success">성공</div>'
-                        - var code_state_info = '<div class="ga-info">정보</div>'
-                        - var code_state_dang = '<div class="ga-danger">위험</div>'
-                        - var code_state_atte = '<div class="ga-attention">주위</div>'
-                        - var code_state_impo = '<div class="ga-importance">중요</div>'
+                        - var code_state_succ = '<div class="ga-success">Success</div>'
+                        - var code_state_info = '<div class="ga-info">Info</div>'
+                        - var code_state_dang = '<div class="ga-danger">Danger</div>'
+                        - var code_state_atte = '<div class="ga-attention">Attention</div>'
+                        - var code_state_impo = '<div class="ga-importance">Importance</div>'
                         pre 
                             code.language-markup 
                                 |
@@ -56,17 +56,17 @@ block contents
                                 | #{code_state_impo}
             .section-contents
                 h4.contents-title Types
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .color-box.ga-success.bordered 기본
-                        .color-box.ga-success-text 텍스트
-                        .color-box.ga-success-bg 배경
-                        .color-box.bordered.ga-success-border 테두리
+                        .color-box.ga-success.bordered Basic
+                        .color-box.ga-success-text Text
+                        .color-box.ga-success-bg Background
+                        .color-box.bordered.ga-success-border Border
                     .footer 
-                        - var code_type_base = '<div class="ga-success">기본</div>'
-                        - var code_type_text = '<div class="ga-success-text">텍스트</div>'
-                        - var code_type_bg = '<div class="ga-success-bg">배경</div>'
-                        - var code_type_brd = '<div class="ga-success-border">테두리</div>'
+                        - var code_type_base = '<div class="ga-success">Basic</div>'
+                        - var code_type_text = '<div class="ga-success-text">Text</div>'
+                        - var code_type_bg = '<div class="ga-success-bg">Background</div>'
+                        - var code_type_brd = '<div class="ga-success-border">Border</div>'
                         pre 
                             code.language-markup 
                                 |
@@ -76,7 +76,7 @@ block contents
                                 | #{code_type_brd}
             .section-contents
                 h4.contents-title Grayscale
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .color-box.small.gray-bg-0 White (0)
                         .color-box.small.gray-bg-5 5
@@ -106,12 +106,16 @@ block contents
                                 | #{code_type_color_100}
             .section-contents
                 h4.contents-title Palette Colors
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         - var colors = [{name: 'red', text: '빨강'},{name: 'orange', text: '주황'},{name: 'yellow', text: '노랑'},{name: 'lightgreen', text: '연두'},{name: 'green', text: '초록'},{name: 'lightblue', text: '하늘'},{name: 'blue', text: '파랑'},{name: 'deepblue', text: '짙은파랑'},{name: 'deeppurple', text: '짙은보라'},{name: 'purple', text: '보라'},{name: 'brown', text: '팥색'},{name: 'gray', text: '회색'}]
                         each color in colors
-                            div(class=`color-box ga-${color.name} bordered`)=color.text
-                    .contents-wrapper
+                            div(class=`color-box ga-${color.name} bordered`)=color.name
+                    //- .contents-wrapper
+                        - var colors = [{name: 'red', text: '빨강'},{name: 'orange', text: '주황'},{name: 'yellow', text: '노랑'},{name: 'lightgreen', text: '연두'},{name: 'green', text: '초록'},{name: 'lightblue', text: '하늘'},{name: 'blue', text: '파랑'},{name: 'deepblue', text: '짙은파랑'},{name: 'deeppurple', text: '짙은보라'},{name: 'purple', text: '보라'},{name: 'brown', text: '팥색'},{name: 'gray', text: '회색'}]
+                        each color in colors
+                            div(class=`color-box bg-${color.name} bordered`)=color.text
+                    // .contents-wrapper
                         - var colors = [{name: 'red', text: '빨강'},{name: 'sunset', text: '썬셋'},{name: 'orange', text: '주황'},{name: 'amber', text: '엠버'},{name: 'yellow', text: '노랑'},{name: 'citron', text: '시트론'},{name: 'lime', text: '라임'},{name: 'green', text: '초록'},{name: 'mint', text: '민트'},{name: 'teal', text: '틸'},{name: 'cyan', text: '시안'},{name: 'blue', text: '파랑'},{name: 'indigo', text: '인디고'},{name: 'purple', text: '보라'},{name: 'pink', text: '핑크'},{name: 'rose', text: '로즈'}]
                         each color in colors
                             div(class=`color-box ga-${color.name}-2 bordered`)=color.text

@@ -1,35 +1,33 @@
-@use './colors.scss' as *;
-@use 'sass:color';
 @use 'sass:map';
 @use 'sass:math';
-
-$uiName: 'be';
-$baseFontSize: 16;
+@use 'sass:color';
 
 @function relativePx($number) {
-  @return calc($number/$baseFontSize) * 1em;
-}
+    @return calc($number/14)*1em
+};
 
 @function absolutePx($number) {
-  @return calc($number/$baseFontSize) * 1rem;
-}
+    @return calc($number/14)*1rem
+};
+
+$ns: 'be';
 
 $grays: (
-  'gray-0': #ffffff,
-  'gray-5': #f2f2f2,
-  'gray-10': #e9e9e9,
-  'gray-15': #dfdfdf,
-  'gray-20': #cccccc,
-  'gray-30': #b9b9b9,
-  'gray-40': #a6a6a6,
-  'gray-50': #939393,
-  'gray-60': #808080,
-  'gray-70': #6c6c6c,
-  'gray-80': #595959,
-  'gray-85': #464646,
-  'gray-90': #3d3d3d,
-  'gray-95': #333333,
-  'gray-100': #000000,
+    "gray-0": #ffffff,
+    "gray-5": #f2f2f2,
+    "gray-10": #e9e9e9,
+    "gray-15": #dfdfdf,
+    "gray-20": #cccccc,
+    "gray-30": #b9b9b9,
+    "gray-40": #a6a6a6,
+    "gray-50": #939393,
+    "gray-60": #808080,
+    "gray-70": #6c6c6c,
+    "gray-80": #595959,
+    "gray-85": #464646,
+    "gray-90": #3d3d3d,
+    "gray-95": #333333,
+    "gray-100": #000000,
 );
 $white: map.get($grays, 'gray-0');
 $black: map.get($grays, 'gray-95');
@@ -38,22 +36,21 @@ $black: map.get($grays, 'gray-95');
 //font family
 //
 $fontName: 'Pretendard Variable';
-$fontSize: calc($baseFontSize * 1px);
 $fontSmoothing: antialiased;
 $baseFontColor: $black;
-$dModeBaseFontColor: $white;
+// $dModeBaseFontColor: $white;
 //
 //font weight
 //
 $light: 300;
 $regular: 400;
 $bold: 600;
-$bolder: 900;
+$bolder: 800;
 
 //
 //line height
 //
-$lineHeight: calc(18 / $baseFontSize);
+$lineHeight: calc(24 / 14);
 
 //
 //letter spacing
@@ -67,37 +64,39 @@ $narrowerSpacing: -1px;
 //
 //border color
 //
-$borderColor: #d6d6d6;
+$borderColor: #D6D6D6;
 $borderDarkColor: color.adjust($borderColor, $lightness: -27.4%);
 
 //
 //base background color
 //
-$background: #ffffff;
-$dModeBackground: #333333;
+$background: #FFFFFF;
+// $dModeBackground: #333333;
 
-//#definitions
+// spacing
+$spacingUnit: 4px;
 
-//
+@function spacing($unit) {
+    @return calc($unit * $spacingUnit);
+}
+
 // colors
 //
 
-// $primary: #d9550d;
 $primary: #6d9d72;
 $secondary: #35363a;
 
-$success: #528e64;
-$info: #5178af;
-// $info: #909090;
-$danger: #d50000;
-$attention: #ec6e00;
-$importance: #fdc036;
+$success: #528E64;
+$info: #909090;
+$danger: #D50000;
+$attention: #EC6E00;
+$importance: #FDC036;
 
-$lightSuccess: #cbe1d2;
-$lightInfo: #d4e9ed;
-$lightDanger: #fbe0da;
-$lightAttention: #ffe9d6;
-$lightImportance: #fff3d7;
+$lightSuccess: #CBE1D2;
+$lightInfo: #D4E9ED;
+$lightDanger: #FBE0DA;
+$lightAttention: #FFE9D6;
+$lightImportance: #FFF3D7;
 
 $primaryText: $white;
 $secondaryText: $white;
@@ -108,151 +107,115 @@ $attentionText: $white;
 $importanceText: $white;
 
 $surface: #f2f2f2;
-$surfaceHover: #f4f4f4;
+$surfaceHover: #F4F4F4;
 
 $gray: #909090;
 $lightGray: color.adjust($gray, $lightness: 16.1%);
 $darkGray: color.adjust($black, $lightness: 20.4%);
 
-$darkPrimary: color.adjust(
-  color.adjust($primary, $saturation: 0%),
-  $lightness: -10.6%
-);
+$darkPrimary: color.adjust($primary, $lightness: -10.6%);
 $darkSecondary: color.adjust($secondary, $lightness: -35.7%);
-$darkerPrimary: color.adjust(
-  color.adjust($primary, $saturation: 0%),
-  $lightness: -20.8%
-);
+$darkerPrimary: color.adjust($primary, $lightness: -20.8%);
 $darkerSecondary: color.adjust($secondary, $lightness: -58.1%);
 
 $lightPrimary: color.adjust($primary, $lightness: 35%);
 $lightSecondary: color.adjust($secondary, $lightness: 35%);
 
-$surface1: #f8f8f8;
-$surface2: #eff4fc;
-$surface3: #dae8f8;
+$surface1: #F8F8F8;
+$surface2: #EFF4FC;
+$surface3: #DAE8F8;
 
-$redColor: #d75757;
-$orangeColor: #ee9033;
-$yellowColor: #f8b825;
-$lightgreenColor: #b3bc40;
-$greenColor: #61a475;
-$lightblueColor: #8cc5ce;
-$blueColor: #70a3ca;
-$deepblueColor: #5178af;
-$deeppurpleColor: #9180b4;
-$purpleColor: #af77c0;
-$brownColor: #a86a82;
-$grayColor: #8b8b8b;
+
+$redColor: #D75757;
+$orangeColor: #EE9033;
+$yellowColor: #F8B825;
+$lightgreenColor: #B3BC40;
+$greenColor: #61A475;
+$lightblueColor: #8CC5CE;
+$blueColor: #70A3CA;
+$deepblueColor: #5178AF;
+$deeppurpleColor: #9180B4;
+$purpleColor: #AF77C0;
+$brownColor: #A86A82;
+$grayColor: #8B8B8B;
 
 $brandColors: (
-  'primary': (
-    $primary,
-    $darkPrimary,
-    $primaryText,
-  ),
-  'secondary': (
-    $secondary,
-    $darkSecondary,
-    $secondaryText,
-  ),
+        'primary': ($primary, $darkPrimary, $primaryText),
+        'secondary': ($secondary, $darkSecondary, $secondaryText),
 );
 
 $stateColors: (
-  'success': (
-    $success,
-    color.adjust($greenColor, $lightness: -10%),
-    $white,
-    $lightSuccess,
-  ),
-  'info': (
-    $info,
-    color.adjust($info, $lightness: -10%),
-    $infoText,
-    $lightInfo,
-  ),
-  'error': (
-    $danger,
-    color.adjust($danger, $lightness: -10%),
-    $dangerText,
-    $lightDanger,
-  ),
-  'danger': (
-    $danger,
-    color.adjust($danger, $lightness: -10%),
-    $dangerText,
-    $lightDanger,
-  ),
-  'attention': (
-    $attention,
-    color.adjust($attention, $lightness: -10%),
-    $attentionText,
-    $lightAttention,
-  ),
-  'importance': (
-    $importance,
-    color.adjust($importance, $lightness: -10%),
-    $importanceText,
-    $lightImportance,
-  ),
+    'success': ($success, color.adjust($greenColor, $lightness: -10%), $white, $lightSuccess),
+    'info': ($info, color.adjust($info, $lightness: -10%), $infoText, $lightInfo),
+    'danger': ($danger, color.adjust($danger, $lightness: -10%), $dangerText, $lightDanger),
+    'attention': ($attention, color.adjust($attention, $lightness: -10%), $attentionText, $lightAttention),
+    'importance': ($importance, color.adjust($importance, $lightness: -10%), $importanceText, $lightImportance),
 );
 
 @function grayHsl($per) {
-  @return hsl(0, 0, $per);
+    @return hsl(0, 0, $per) 
 }
 
 $colors: (
-  'red': $redColor,
-  'orange': $orangeColor,
-  'yellow': $yellowColor,
-  'lightgreen': $lightgreenColor,
-  'green': $greenColor,
-  'lightblue': $lightblueColor,
-  'blue': $blueColor,
-  'deepblue': $deepblueColor,
-  'deeppurple': $deeppurpleColor,
-  'purple': $purpleColor,
-  'brown': $brownColor,
-  'gray': $grayColor,
+    'red': $redColor,
+    'orange': $orangeColor,
+    'yellow': $yellowColor,
+    'lightgreen': $lightgreenColor,
+    'green': $greenColor,
+    'lightblue': $lightblueColor,
+    'blue': $blueColor,
+    'deepblue': $deepblueColor,
+    'deeppurple': $deeppurpleColor,
+    'purple': $purpleColor,
+    'brown': $brownColor,
+    'gray': $grayColor,
 );
 
 $colors2: (
-  'red': #d93b3b,
-  'sunset': #d44d32,
-  'orange': #d95b2c,
-  'amber': #d3873f,
-  'yellow': #f5b54d,
-  'citron': #cac747,
-  'lime': #85ab39,
-  'green': #48992f,
-  'mint': #3a874f,
-  'teal': #449698,
-  'cyan': #4d9bcc,
-  'blue': #4e7af8,
-  'indigo': #5642ed,
-  'purple': #8756f3,
-  'pink': #bf3da0,
-  'rose': #bb3a62,
+    'red': #D93B3B,
+    'sunset': #D44D32,
+    'orange': #D95B2C,
+    'amber': #D3873F,
+    'yellow': #F5B54D,
+    'citron': #CAC747,
+    'lime': #85AB39,
+    'green': #48992F,
+    'mint': #3A874F,
+    'teal': #449698,
+    'cyan': #4D9BCC,
+    'blue': #4E7AF8,
+    'indigo': #5642ED,
+    'purple': #8756F3,
+    'pink': #BF3DA0,
+    'rose': #BB3A62,
 );
+
+
 
 //
 //heading
 //
 $headerFontWeight: $bold;
-$h1: absolutePx(32);
-$h2: absolutePx(26);
-$h3: absolutePx(22);
-$h4: absolutePx(18);
-$h5: absolutePx(16);
-$h6: absolutePx(14);
+$h1: absolutePx(22);
+$h2: absolutePx(20);
+$h3: absolutePx(18);
+$h4: absolutePx(16);
+$h5: absolutePx(14);
 
 //Size
 $tinySize: relativePx(10);
 $smallSize: relativePx(12);
 $mediumSize: relativePx(14);
 $largeSize: relativePx(18);
-$hugeSize: relativePx(26);
-$massiveSize: relativePx(32);
+$hugeSize: relativePx(20);
+$massiveSize: relativePx(24);
+
+// hero stype
+
+$heroLarge: relativePx(56); //4em (x14px)
+$hero: relativePx(42); //3em (x14px)
+$heroSub: relativePx(18); 
+$heroSmall: relativePx(24); 
 
 // Scroll Bars
 
@@ -263,6 +226,7 @@ $thumbBorderWidth: 2;
 
 $customScrollbarWidth: $thumbWidth + ($thumbBorderWidth * 2);
 $customScrollbarHeight: $customScrollbarWidth;
+
 
 $trackBackground: rgba(0, 0, 0, 0);
 $trackBorderRadius: 0px;
@@ -283,16 +247,15 @@ $thumbInvertedBackground: rgba(255, 255, 255, 0.25);
 $thumbInvertedInactiveBackground: rgba(255, 255, 255, 0.15);
 $thumbInvertedHoverBackground: rgba(255, 255, 255, 0.35);
 
-$baseBorderRadius: relativePx(4);
+$baseBorderRadius: relativePx(8);
 //$baseBorderRadius: 2em;
-$baseInputRadius: relativePx(4);
+$baseInputRadius: relativePx(8);
 
 // button & input
 $baseButtonColor: $black;
 $baseButtonBg: #efefef;
-$hoverButtonBg: #e9e9e9;
 
-$horizontalInputPadding: relativePx(18);
+$horizontalInputPadding: relativePx(16);
 $verticalInputPadding: relativePx(12);
 // $horizontalPadding: $horizontalInputPadding + ($horizontalInputPadding * 0.5);
 $horizontalPadding: $horizontalInputPadding;
@@ -315,28 +278,15 @@ $equalLargeBtnWidth: 200px;
 $equalLargeBtnPadding: 18px 30px;
 
 //input base
-$inputLineHeight: relativePx(18);
-$lineHeightOffset: (($inputLineHeight - 1em) * 0.5);
+$inputLineHeight: relativePx(17);
+$lineHeightOffset:(( $inputLineHeight - 1em) * 0.5);
+//$inputLineHeight: 17 / 14;
+//$lineHeightOffset:(( $inputLineHeight - 1) * 0.5) * 14;
 
-$inputVerticalOffsetPadding: calc(
-  $verticalInputPadding - $lineHeightOffset - 1px
-);
+$inputVerticalOffsetPadding: calc($verticalInputPadding - $lineHeightOffset - 1px);
 
 //$inputPadding: $inputVerticalOffsetPadding+px $horizontalInputPadding+px;
 $inputPadding: $inputVerticalOffsetPadding $horizontalInputPadding;
-
-// table
-$tableBorderColor: #d7dae2;
-$headerBackgroundColor: #e5e9f2;
-
-$cellVerticalPadding: relativePx(8);
-$cellHorizontalPadding: relativePx(13);
-
-$cellPadding: $cellVerticalPadding $cellHorizontalPadding;
-
-$tableVerticalMargin: 1em;
-$tableHorizontalMargin: 0;
-$tableMargin: $tableVerticalMargin $tableHorizontalMargin;
 // Grid system
 
 $gridWhole: 12;
@@ -360,6 +310,7 @@ $bp-tablet: 768px;
 $bp-laptop: 1280px;
 $bp-desktop: 1440px;
 
+
 //Dark Mode
 //$dModeBaseFontColor: $white;
 //$dModeBorderColor: #494F61;
@@ -369,13 +320,9 @@ $bp-desktop: 1440px;
 
 //breakpoint
 $breakpoints: (
-  xs: 320px,
-  //mobile-portrait
-  sm: 576px,
-  //mobile-landscape
-  md: 768px,
-  //tablet
-  lg: 1280px,
-  //desktop
-  xl: 1440px, //desktop-large
+    xs: 0, //mobile-portrait
+    sm: 576px, //mobile-landscape
+    md: 768px, //tablet
+    lg: 992px, //desktop
+    xl: 1200px, //desktop-large
 ) !default;

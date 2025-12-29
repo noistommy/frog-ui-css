@@ -54,7 +54,7 @@ $gridGutter: 4;
     .#{$ns}-select-box {
       width: 100%;
     }
-    label, .label {
+    & > label, & > .label {
       font-size: 1em;
       display: block;
       margin: 0 0 5px !important;

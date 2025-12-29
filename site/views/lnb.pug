@@ -1,6 +1,6 @@
 - var path = '/'
 - var selected = title?.toLowerCase()
-- var welcomeItems = ['welcome', 'FAQs']
+- var welcomeItems = ['welcome', 'faqs']
 - var baseItems = ['typography', 'colors']
 - var elementItems = ['button', 'input', 'tag', 'checkbox', 'switch', 'badge', 'form', 'list', 'selectbox', 'message', 'tabs', 'cards', 'segments', 'table', 'pagination', 'panel', 'calendar']
 - var layoutItems = ['grid', 'grid2']
@@ -12,31 +12,31 @@
         //- a(href=`${path}`).bold Frog UI
     .menu-contents.ga-list-group
         .group-title Frog
-        .ga-list.selection
+        .ga-list.selection.mark
             each item in welcomeItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                     span=item
         .group-title Base
-        .ga-list.selection
+        .ga-list.selection.mark
             each item in baseItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                     span=item
         .group-title Elements
-        .ga-list.selection
+        .ga-list.selection.mark
             each item in elementItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                     span=item
         .group-title Layout
-        .ga-list.selection
+        .ga-list.selection.mark
             each item in layoutItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                     span=item
         .group-title Elements
-        .ga-list.selection
+        .ga-list.selection.mark
             each item in moduleItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)

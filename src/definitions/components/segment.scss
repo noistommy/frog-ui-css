@@ -5,6 +5,8 @@ $segmentText: var(--txt-light);
 $segmentHorizontalPadding: 20px;
 $segmentVerticalPadding: 16px;
 
+$segmentRadius: 1rem;
+
 .#{$ns} {
   &-segment {
     border-radius: $baseBorderRadius;
@@ -51,16 +53,16 @@ $segmentVerticalPadding: 16px;
     }
     &.round {
       &-s {
-        border-radius: calc($baseBorderRadius * 0.5);
+        border-radius: calc($segmentRadius * 0.5);
       }
       &-m {
-        border-radius: $baseBorderRadius;
+        border-radius: $segmentRadius;
       }
       &-l {
-        border-radius: calc($baseBorderRadius * 2);
+        border-radius: calc($segmentRadius * 2);
       }
       &-xl {
-        border-radius: calc($baseBorderRadius * 4);
+        border-radius: calc($segmentRadius * 4);
       }
     }
     &.collapse {
@@ -148,16 +150,16 @@ $segmentVerticalPadding: 16px;
     }
     &.round {
       &-s {
-        border-radius: calc($baseBorderRadius * 0.5);
+        border-radius: calc($segmentRadius * 0.5);
       }
       &-m {
-        border-radius: $baseBorderRadius;
+        border-radius: $segmentRadius;
       }
       &-l {
-        border-radius: calc($baseBorderRadius * 2);
+        border-radius: calc($segmentRadius * 2);
       }
       &-xl {
-        border-radius: calc($baseBorderRadius * 4);
+        border-radius: calc($segmentRadius * 4);
       }
     }
   }

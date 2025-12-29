@@ -11,6 +11,7 @@
 
 .#{$ns} {
   &-input {
+    --radius: #{$baseInputRadius};
     position: relative;
     display: inline-flex;
     max-width: 100%;
@@ -27,21 +28,34 @@
       transition-duration: .2s;
       border-radius: $baseInputRadius;
       outline: none;
-      flex: 1 0 auto;
+      // flex: 1 0 auto;
       max-width: 100%;
       box-sizing: border-box;
       &:hover {
-        border-color: var(--input-brd-hover);
+        border-color: var(--brd);
       }
       &:focus {
         border-color: $primary;
         &::placeholder {
           opacity: 1;
         }
+        & + i.icon.clear-btn {
+          pointer-events: auto;
+          border-radius: 50%;
+          background-color: var(--base-color);
+          opacity: 1;
+          z-index: 100;
+          &.disabled {
+            pointer-events: none;
+            color: var(--base-hover-color);
+            opacity: 1;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
       }
       &::placeholder {
-        // font-weight: 100;
-        // color: #c4c4c4;
         opacity: 0.8;
       }
       &.align {
@@ -81,7 +95,7 @@
         background: transparent;
         border-color: transparent;
         &:hover {
-          border: 1px dashed var(--input-brd-hover);
+          border: 1px dashed var(--brd);
         }
         &:focus {
           border: 1px solid $primary;
@@ -147,6 +161,13 @@
           top: 50%;
           transform: translate(-50%, -50%);
         }
+        &.clear-btn {
+          right: 0;
+          transform: translate(-5px, -50%);
+          font-size: 12px;
+          cursor: pointer;
+          opacity: 0;
+        }
       }
       &.both {
         input {
@@ -182,7 +203,7 @@
         > i.icon {
           pointer-events: auto;
           cursor: pointer;
-          &.circle {
+          &.round {
             border-radius: 50%;
           }
           &:hover {
@@ -245,6 +266,50 @@
         }
       }
     }
+    &.number {
+      input {
+        text-align: center;
+        border-top-left-radius: var(--radius);
+        border-bottom-left-radius: var(--radius);
+      }
+      & > .#{$ns}-button {
+        margin: 0;
+        margin-left: -1px;
+        flex-shrink: 0;
+      }
+      .dec {
+        // margin-right: -1px;
+        // order: -1;
+        border-radius: 0;
+      }
+      .inc {
+        // margin-left: -1px;
+        border-top-right-radius: var(--radius);
+        border-bottom-right-radius: var(--radius);
+      }
+      &.between {
+        input {
+          border-radius: 0;
+        }
+        .dec {
+          order: -1;
+          margin-right: -1px;
+          border-top-left-radius: var(--radius);
+          border-bottom-left-radius: var(--radius);
+        }
+      }
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+  
+      /* Firefox  */
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+    }
   
     textarea {
       width: 100%;
@@ -286,6 +351,11 @@
         }
         &::placeholder {
           color: $textColor;
+        }
+      }
+      &.labeled {
+        label {
+          background-color: $textColor;
         }
       }
     }

@@ -13,7 +13,7 @@ block contents
                     p !{cont("ELEMENTS_BUTTON_SUB_TITLE")}
             .section-contents
                 h4.contents-title Base
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button Base
                     .footer
@@ -22,7 +22,7 @@ block contents
                                 code.language-markup #{code}
             .section-contents
                 h4.contents-title Element Type
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         button.ga-button Tags
                         .ga-button Class
@@ -35,7 +35,7 @@ block contents
                                 | #{code2}
             .section-contents
                 h4.contents-title Brand Color
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         button.ga-button.primary Primary
                         button.ga-button.secondary Secondary
@@ -62,7 +62,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Colors
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     - var colors1 = [{name: 'red', text: '빨강'},{name: 'orange', text: '주황'},{name: 'yellow', text: '노랑'},{name: 'lightgreen', text: '연두'},{name: 'green', text: '초록'},{name: 'lightblue', text: '하늘'},{name: 'blue', text: '파랑'}];
                     - var colors2 = [{name: 'deepblue', text: '짙은파랑'},{name: 'deeppurple', text: '짙은보라'},{name: 'purple', text: '보라'},{name: 'brown', text: '팥색'},{name: 'gray', text: '회색'}];
                         .contents-wrapper
@@ -71,6 +71,12 @@ block contents
                         .contents-wrapper
                             each color in colors2
                                 button(class=`ga-button ${color.name}`)=color.name
+                        .contents-wrapper
+                            each color in colors1
+                                button(class=`ga-button ${color.name}-light`)=color.name
+                        .contents-wrapper
+                            each color in colors2
+                                button(class=`ga-button ${color.name}-light`)=color.name
                         .contents-wrapper
                             each color in colors1
                                 button(class=`ga-button ${color.name} outline`)=color.name
@@ -84,7 +90,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Disabled
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button.disabled Disabled
                         .ga-button(disabled) Disabled(attr)
@@ -97,7 +103,7 @@ block contents
                                     | #{code1}
             .section-contents
                 h4.contents-title Border
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button.border Border
                         .ga-button.primary.border Border(Primary)
@@ -110,7 +116,7 @@ block contents
                                     | #{code1}
             //- .section-contents
                 h4.contents-title Equal
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .contents-item
                             .ga-button.equal.primary 저장
@@ -131,7 +137,7 @@ block contents
                                     | #{code1}
             .section-contents
                 h4.contents-title Fluid
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-item
                         .ga-button.fluid.primary Fluid
                     .contents-item
@@ -139,7 +145,7 @@ block contents
                     .contents-item
                         .ga-button.fluid.outline Fluid
                     .contents-item
-                        .ga-button.fluid.circle Fluid
+                        .ga-button.fluid.round Fluid
                     .footer
                         - var code = '<button class="ga-button fluid">Fluid</button>';
                             pre
@@ -147,11 +153,11 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Compact
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button.compact.primary Compact
                         .ga-button.compact Compact
-                        .ga-button.compact.circle Compact
+                        .ga-button.compact.round Compact
                         .ga-button.compact.outline Compact
                         .ga-button.compact
                             i.icon.left.xi-code
@@ -171,9 +177,10 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Outline
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button.outline Outline
+                        .ga-button.outline.primary Outline
                     .footer
                         - var code = '<button class="ga-button outline">Outline</button>';
                             pre
@@ -181,13 +188,13 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Icon (* required - Xeicon 2.3.3)
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button.icon
                             i.xi-laptop
                         .ga-button.icon.outline
                             i.xi-plug
-                        .ga-button.icon.circle
+                        .ga-button.icon.round
                             i.xi-flight-on
                     .footer
                         - var code = '<button class="ga-button icon">\n    <i class="fa fa-icon"></i>\n</button>'
@@ -195,22 +202,22 @@ block contents
                                 code.language-markup
                                     | #{code}
             .section-contents
-                h4.contents-title Circle
-                .ga-segment.float.round-xl.attached
+                h4.contents-title Round
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.icon.circle
+                        .ga-button.icon.round
                             i.xi-desktop
-                        .ga-button.circle Circle
-                        .ga-button.circle A
-                        .ga-button.circle.outline B
+                        .ga-button.round Round
+                        .ga-button.round A
+                        .ga-button.round.outline B
                     .footer
-                        - var code = '<button class="ga-button circle">Circle</button>'
+                        - var code = '<button class="ga-button round">Round</button>'
                             pre
                                 code.language-markup
                                     | #{code}
             .section-contents
                 h4.contents-title Icon
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button
                             i.icon.left.xi-angle-left
@@ -227,7 +234,7 @@ block contents
                                     | #{code1}
             .section-contents
                 h4.contents-title With Badge
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-button.badge
                             | Best
@@ -244,7 +251,7 @@ block contents
                                     | #{code0}
             .section-contents
                 h4.contents-title Text
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-grid
                             .column.span-4.span-xs-6
@@ -256,9 +263,12 @@ block contents
                                     i.icon.left.xi-text-size
                                     | Text
                             .column.span-4.span-xs-6
-                                .ga-button.text.green
-                                    | Text
+                                .ga-button.text.green.no-hover
+                                    | Text(no-hover)
                                     i.icon.right.xi-angle-right
+                            .column.span-4.span-xs-6
+                                .ga-button.text.icon
+                                    i.xi-lock
                             .column.span-4.span-xs-6
                                 .ga-button.text.badge
                                     | Update
@@ -270,7 +280,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Buttons
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-buttons
                             .ga-button.selected Play

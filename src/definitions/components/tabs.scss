@@ -18,7 +18,7 @@ $tabsItemPadding: $buttonPadding;
       }
       &.active {
         color: $primary;
-        //font-weight: 600;
+        font-weight: 600;
       }
     }
   }
@@ -29,17 +29,19 @@ $tabsItemPadding: $buttonPadding;
     }
   }
   &.line {
-    border-bottom: $tabLineWidth solid $tabsLineColor;
-    .tab-item.active {
-      position: relative;
-      &:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: $tabLineWidth;
-        background-color: $primary;
+    .tab-menu {
+      border-bottom: $tabLineWidth solid $tabsLineColor;
+      .tab-item.active {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: $tabLineWidth;
+          background-color: $primary;
+        }
       }
     }
     &.vertical {
@@ -79,7 +81,6 @@ $tabsItemPadding: $buttonPadding;
   }
   .tab-contents {
     width: 100%;
-    background-color: var(--suf);
     padding: 20px;
   }
   &.browser {
@@ -128,6 +129,7 @@ $tabsItemPadding: $buttonPadding;
     }
     .tab-contents {
       border: 1px solid var(--brd);
+      background-color: 1px solid var(--suf);
     }
   }
 }

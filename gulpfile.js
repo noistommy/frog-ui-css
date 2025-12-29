@@ -50,10 +50,10 @@ const clean = () => {
 
 // scss 빌드
 const build = () => {
-  console.log('모든 인수:',process.argv)
   const file = process.argv.find(arg => arg.startsWith('--file='))
   if (file) {
     baseFile = file.split('=')[1]
+    log(`${baseFile}`)
   }
   return src([`src/${baseFile}.scss`])
     .pipe(sassGlob())

@@ -12,7 +12,7 @@ block contents
                     p !{cont("ELEMENTS_TAG_SUB_TITLE")} 
             .section-contents
                 h4.contents-title 기본
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label Standard
                         .ga-tag.label Label
@@ -46,7 +46,7 @@ block contents
                                     | #{code2}
             .section-contents
                 h4.contents-title icon (only label type)
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label
                             i.icon.left.xi-angle-left
@@ -77,7 +77,7 @@ block contents
                                     | #{code1}
             .section-contents
                 h4.contents-title Pointing
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label.pointing.left
                             i.icon.left.xi-angle-left
@@ -108,7 +108,7 @@ block contents
                                     | #{code3}
             .section-contents
                 h4.contents-title kbd
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label.kbd.enter
                             | Enter
@@ -135,7 +135,7 @@ block contents
                                     | #{code3}
             .section-contents
                 h4.contents-title Tags
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tags
                             .ga-tag.label.red red
@@ -148,7 +148,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Hover Effect
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tags.one-of-a-kind
                             .ga-tag.label.blue blue
@@ -162,7 +162,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Brand Colors
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label.primary Primary
                         .ga-tag.label.secondary Secondary
@@ -178,7 +178,7 @@ block contents
                                     | #{code}
             .section-contents
                 h4.contents-title Colors
-                .ga-segment.float.round-xl.attached
+                .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label.red Red
                         .ga-tag.label.orange Orange
@@ -191,9 +191,23 @@ block contents
                         .ga-tag.label.purple Purple
                         .ga-tag.label.brown Brown
                         .ga-tag.label.gray Gray
+                    .contents-wrapper
+                        .ga-tag.label.red.light Red
+                        .ga-tag.label.orange.light Orange
+                        .ga-tag.label.yellow.light Yellow
+                        .ga-tag.label.lightgreen.light Light Green
+                        .ga-tag.label.lightblue.light Light Blue
+                        .ga-tag.label.blue.light Blue
+                        .ga-tag.label.deepblue.light Deep Blue
+                        .ga-tag.label.deeppurple.light Deep Purple
+                        .ga-tag.label.purple.light Purple
+                        .ga-tag.label.brown.light Brown
+                        .ga-tag.label.gray.light Gray
                     .footer
                         - var code = '<div class="ga-tag label { Colors }">{ Tag Contents }</div>'
+                        - var code1 = '<div class="ga-tag label { Colors } light">{ Tag Contents }</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- red, orange, yellow, light-green, light-blue, blue, deep-blue, deep-purple, purple, brown, gray -->`}
                                     | #{code}
+                                    | #{code1}

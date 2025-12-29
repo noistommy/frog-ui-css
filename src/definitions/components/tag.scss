@@ -226,18 +226,11 @@ $tagHeight: 1.8em;
   .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $bgColor;
-      &.hover, &.focus,
-      &:hover, &:focus {
-        border-color: $hoverColor;
-      }
     }
+    &.#{$color}.pointing,
     &.#{$color}.label {
       background-color: $bgColor;
       color: $white;
-      &.hover, &.focus,
-      &:hover, &:focus {
-        background-color: $hoverColor;
-      }
     }
   }
 }
@@ -247,18 +240,20 @@ $tagHeight: 1.8em;
   .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $value;
-      &.hover, &.focus,
-      &:hover, &:focus {
-        border-color: $hoverColor;
-      }
+
     }
+    &.#{$color}.pointing,
     &.#{$color}.label {
       background-color: $value;
       color: $white;
-      &.hover, &.focus,
-      &:hover, &:focus {
-        background-color: $hoverColor;
-      }
+    }
+    &.light.#{$color}.pointing,
+    &.light.#{$color}.label {
+      background-color: color.adjust($value, $lightness: 32%);
+      color: $value;
+      border: 1px solid;
+      border-color: color.adjust($value, $lightness: 10%);
+      font-weight: 500 !important;
     }
   }
 }

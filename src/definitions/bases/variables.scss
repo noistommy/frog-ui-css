@@ -1,17 +1,13 @@
 @use 'sass:list';
 @use 'sass:color';
 @use 'sass:map';
-
+// @use '../../utils/colors.scss' as *;
 
 $amount: 0.5;
 
 $headerTopMargin: 2em - $lineHeight * 0.5;
 $headerMargin: $headerTopMargin 0 1rem;
 
-body {
-    font-family: $fontName;
-    line-height: $lineHeight;
-}
 
 a {
     color: var(--txt);
@@ -23,7 +19,15 @@ hr {
 }
 
 mark {
-    background-color: color.adjust($primary, $alpha: -0.6);
+    color: var(--txt);
+    background-color: color.adjust($primary, $alpha: -0.7);
+    text-shadow: 0 0 5px 1px var(--txt);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 // i {
@@ -134,7 +138,7 @@ h5,.h5 {font-size: $h5 !important;}
         background-color: $darkGray;
     }
 }
-
+// @include generate-color-classes();
 //grayscale
 .gray {
     &-bg {
@@ -336,5 +340,27 @@ h5,.h5 {font-size: $h5 !important;}
     &.center {margin: 0 auto;}
     
  }
+
+ .be-popper-container {
+    outline: none;
+    z-index: 9999;
+    .be-popper {
+      background-color: var(--bgc);
+      border-radius: $baseBorderRadius;
+      border: 1px solid var(--brd);
+      box-shadow: var(--depth-bs);
+      overflow-y: auto;
+    }
+  }
+
+  @keyframes scale-up-center {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
 
 

@@ -1,21 +1,26 @@
 @use 'sass:color';
 @use 'sass:list';
 
+$msgHorizontalPadding: 20px;
+$msgVerticalPadding: 16px;
+$msgPadding: $msgVerticalPadding $msgHorizontalPadding;
+
 .#{$ns} {
   &-message {
-    padding: 15px 20px;
+    padding: $msgPadding;
     border-radius: 4px;
     background-color: var(--bgc);
     border: 1px solid var(--brd);
-    color: #999;
-    margin-bottom: 5px;
-
+    color: var(--txt-light);
+    margin-bottom: 4px;
+    width: 100%;
+    line-height: $lineHeight;
     &:last-child {
         margin: 0;
     }
-    &:hover {
-        background-color: var(--suf);
-    }
+    // &:hover {
+    //     background-color: var(--suf);
+    // }
     &.align {
       &-left {
           text-align: left;
@@ -29,9 +34,23 @@
           text-align: right;
       }
     }
+    &.icon {
+      padding-left: 48px;
+      position: relative;
+      i.icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 1.6em;
+      }
+    }
+    & > .title {
+      font-weight: bold;
+    }
   }
   &-messages {
     display: flex;
+    width: 100%;
     gap: 8px;
 
     &.list {
@@ -39,6 +58,9 @@
     }
   
     .#{$ns}-message {
+      width: auto;
+      flex: 1 0 auto;
+      margin: 0;
       &.selected {
         color: $primary;
         background-color: var(--suf);

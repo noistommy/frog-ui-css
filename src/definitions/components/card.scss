@@ -7,6 +7,8 @@ $cardHorizontalPadding: 20px;
 $cardVerticalPadding: 16px;
 $maxCardColumn: 12;
 $cardsGap: 12px;
+
+$cardRadius: 1rem;
 .#{$ns} {
   &-card {
     --card-width: 300px;
@@ -33,16 +35,16 @@ $cardsGap: 12px;
 
     &.round {
       &-s {
-        border-radius: calc($baseBorderRadius * 0.5);
+        border-radius: calc($cardRadius * 0.5);
       }
       &-m {
-        border-radius: $baseBorderRadius;
+        border-radius: $cardRadius;
       }
       &-l {
-        border-radius: calc($baseBorderRadius * 2);
+        border-radius: calc($cardRadius * 2);
       }
       &-xl {
-        border-radius: calc($baseBorderRadius * 4);
+        border-radius: calc($cardRadius * 4);
       }
     }
     > div {

@@ -29,12 +29,6 @@
       background-color: #c4c4c4;
       border-radius: $switchRadiusSize;
       /*transition: all 400ms ease-out;*/
-      &.round {
-        border-radius: 1em;
-        &:before {
-          border-radius: 50%;
-        }
-      }
       &:before {
         content: '';
         position:absolute;
@@ -42,7 +36,7 @@
         height: 1.6em;
         top: -0.25em;
         left: -0.25em;
-        background-color: #fff;
+        background-color: var(--bgc);
         border-radius: $switchRadiusInside;
         //border: 1px solid #c4c4c4;
         box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.16);
@@ -67,6 +61,14 @@
         left: 2px;
       }
     }
+    &.round {
+      .switch {
+        border-radius: 1.5em;
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
     &:hover {
       .switch:before {
         // box-shadow: 0 0 0 4px rgba(109, 157, 114, 0.3);
@@ -78,9 +80,9 @@
     position: relative;
     font-size: 0.9em;
     background-color: var(--suf);
-    box-shadow: 0 0 0 1px var(--brd);
+    // box-shadow: 0 0 0 1px var(--brd);
     padding: 2px;
-    border-radius: $switchRadiusSize;
+    border-radius: calc($switchRadiusSize + 2px);
     // box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.16);
     &:before {
       content: '';
@@ -146,23 +148,11 @@
         font-weight: 500;
       }
     }
-    // &.round {
-    //   border-radius: calc(1em + 2px);
-    //   span.on, span.off {
-    //     border-radius: 1em;
-    //   }
-    // }
     span {
       display: inline-block;
       padding: 0.5em 0.8em;
       line-height: 1em;
     }
-    //.active {
-    //  background-color: #2985DB;
-    //  color: #ffffff;
-    //  font-weight: 700;
-    //  border-radius: 4px;
-    //}
   }
 }
 
@@ -171,4 +161,33 @@
   margin-left: 20px;
   position: relative;
   top:0;
+}
+
+@each $color, $value in $colors {
+  $hoverColor: color.adjust($value, $lightness: -10%);
+  $textColor: $white;
+  @if color-contrast($value, $textColor) < 1.8 {
+    $textColor: $black;
+  }
+  .#{$ns}-switch {
+    background-color: transparent;
+    &.#{$color} {
+      &.slide {
+        input:checked + .switch {
+          background-color: $value;
+        }
+      }
+      &.button {
+        &:before {
+          background-color: $value;
+        }
+      }
+      &:hover {
+        .switch:before {
+          // box-shadow: 0 0 0 4px rgba(109, 157, 114, 0.3);
+          box-shadow: 0 0 0 4px color.change($value, $alpha: 0.3);
+        }
+      }
+    }
+  }
 }

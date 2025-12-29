@@ -1,26 +1,49 @@
 .#{$ns}-select-box {
+  --radius: #{$baseInputRadius};
+  &.round {
+    --radius: 2em;
+  }
   position: relative;
   font-size: 1em;
-  border-radius: $baseBorderRadius;
+  border-radius: var(--radius);
   display: inline-flex;
-  //.selected-item {
-  //  position: relative;
-  //  display: flex;
-  //
-  //  padding: $inputPadding;
-  //  vertical-align: baseline;
-  //  flex-grow: 1;
-  //  .item-icon {
-  //    margin-right: 10px;
-  //  }
-  //  .select-icon {
-  //    position: absolute;
-  //    top: 0;
-  //    right: 0;
-  //    padding: $verticalInputPadding;
-  //    color: #D4D4D4;
-  //  }
-  //}
+  flex-direction: column;
+  .selected-item {
+    position: relative;
+    display: inline-flex;
+    .default-text {
+      padding: $inputPadding;
+      line-height: $inputLineHeight;
+      border: 1px solid var(--brd);
+      background-color: var(--bgc);
+      border-radius: var(--radius);
+      max-width: 100%;
+      width: 100%;
+      min-width: 205px;
+      color: #33333388;
+      &.has {
+        color: #333;
+      }
+    }
+    & > i.icon {
+      position: absolute;
+      height: 2em;
+      width: 2em;
+      text-align: center;
+      opacity: 0.5;
+      top: 50%;
+      right: 0;
+      transform: translate(-5px, -50%);
+      z-index: 10;
+      &:before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+  &.show,
   &.open {
     .selected-item.right,
     select + i.icon {
@@ -30,8 +53,16 @@
     }
     .select-menu {
       display: inline-block;
-      transform: translateY(0);
+      // transform: translateY(0);
       opacity: 1;
+    }
+  }
+  &.multiple {
+    .selected-list {
+      padding: $compactVerticalPadding;
+      max-width: 200px;
+      display: flex;
+      gap: 5px;
     }
   }
   .select-menu {
@@ -44,7 +75,7 @@
     transition: all 250ms ease;
     transition-delay: 250ms;
     transform: translateY(-10px);
-    opacity: 1;
+    opacity: 0;
     //.option-item.selected {
     //  background-color: #eff4fc;
     //}
@@ -90,7 +121,8 @@
         cursor: pointer;
       }
     }
-    &.open .select-menu{
+    &.show .select-menu,
+    &.open .select-menu {
       display: inline-block;
       box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.16);
     }
@@ -104,6 +136,7 @@
         cursor: pointer;
       }
     }
+    &.show .select-menu,
     &.open .select-menu{
       display: inline-block;
       box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.16);
@@ -156,6 +189,26 @@
     }
     i {
       padding: $selectboxCompactVerticalPadding;
+    }
+  }
+}
+
+.#{$ns}-popper {
+  &.select-menu {
+    padding: 0.5rem;
+    .option-item {
+      height: $itemHeight;
+      padding: 10px;
+      max-height: $itemHeight;
+      border-radius: var(--radius);
+      cursor: pointer;
+      &.icon {
+        display: block;
+        i {
+          font-size: 0.9em;
+          margin-right: 10px;
+        }
+      }
     }
   }
 }

@@ -3,7 +3,12 @@
 @use 'sass:math';
 @use 'sass:color';
 
+
 :root {
+    font-family: $fontName;
+    line-height: $lineHeight;
+
+
     --bgc: #{map.get($grays, 'gray-0')};
     --txt: #{map.get($grays, 'gray-95')};
     --txt-light: #{map.get($grays, 'gray-85')};
@@ -16,7 +21,7 @@
     --base-hover-color: #{map.get($grays, 'gray-15')};
 
     --depth-bg: #{map.get($grays, 'gray-0')};
-    --depth-bs: 0 1px 8px 1px rgba(0, 0, 0, 0.16);
+    --depth-bs: 0 0 16px 2px rgba(0, 0, 0, 0.16);
 
     --primary: #{$primary};
     --secondary: #{$secondary};
@@ -85,6 +90,21 @@
     --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));
     --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
 }
+
+@each $color, $value in $stateColors {
+    $lightValue: color.adjust(list.nth($value, 1), $lightness: 35%);
+    :root {
+      --#{$ns}-#{$color}-color: #{$value};
+      --#{$ns}-#{$color}-light: #{$lightValue};
+    }
+  }
+  @each $color, $value in $colors {
+    $lightValue: color.adjust(list.nth($value, 1), $lightness: 35%);
+    :root {
+      --#{$ns}-#{$color}-color: #{$value};
+      --#{$ns}-#{$color}-light: #{$lightValue};
+    }
+  }
 
 @function color-contrast($bg, $fg) {
     $luminance1: luminance($fg) + 0.05;
