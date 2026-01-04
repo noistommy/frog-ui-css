@@ -144,7 +144,7 @@ openBtn.addEventListener('click', (e) => {
     closeButton: true,
     clickToClose: true,
     theme: selTheme?.getAttribute('data-name') || '',
-    round: true
+    round: false
   })
   
 });

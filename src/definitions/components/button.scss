@@ -21,6 +21,9 @@
         box-shadow: 0 0 0 1px transparent inset;
         transition: opacity .1s ease,
         background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+        & button {
+            font-family: inherit;
+        }
         &.hover, &.focus,
         &:hover, &:focus {
             background-color: $hoverButtonBg;

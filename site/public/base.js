@@ -20,6 +20,8 @@ function toggleMode()  {
         document.documentElement.classList.add('light-mode')
         toggleBtn.innerHTML = '<i class="xi-moon"></i>'
         sessionStorage.setItem('theme-mode', 'light')
+    } else {
+        // when use system theme
     }
 }
 

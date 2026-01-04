@@ -67,8 +67,8 @@ block contents
                             i.icon.left.xi-mobile
                             | Sale
                     .footer
-                        - var code = '<div class="ga-tag label">\n    <i class="icon left fa fa-icon" />\n    { Tag Contents }\n</div>'
-                        - var code1 = '<div class="ga-tag label">\n    <i class="icon right fa fa-icon" />\n    { Tag Contents }\n</div>'
+                        - var code = '<div class="ga-tag label">\n    <i class="icon left xi-icon" />\n    { Tag Contents }\n</div>'
+                        - var code1 = '<div class="ga-tag label">\n    <i class="icon right xi-icon" />\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Left -->`}
@@ -79,18 +79,18 @@ block contents
                 h4.contents-title Pointing
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-tag.label.pointing.left
-                            i.icon.left.xi-angle-left
+                        .ga-tag.label.primary.pointing.left
+                            i.icon.left.xi-arrow-left
                             | Left
-                        .ga-tag.label.pointing.right
+                        .ga-tag.label.primary.pointing.right
                             | Right
-                            i.icon.right.xi-angle-right
-                        .ga-tag.label.pointing.up
-                            i.icon.left.xi-angle-up
+                            i.icon.right.xi-arrow-right
+                        .ga-tag.label.primary.pointing.up
+                            i.icon.left.xi-arrow-up
                             | Left
-                        .ga-tag.label.pointing.down
+                        .ga-tag.label.primary.pointing.down
                             | Right
-                            i.icon.right.xi-angle-down
+                            i.icon.right.xi-arrow-down
                     .footer
                         - var code = '<div class="ga-tag label pointing left">\n    <i class="icon left xi-angle-left" />\n    { Tag Contents }\n</div>'
                         - var code1 = '<div class="ga-tag label pointing right">\n    <i class="icon right xi-angle-right" />\n    { Tag Contents }\n</div>'

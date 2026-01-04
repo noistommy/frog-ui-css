@@ -1,7 +1,12 @@
 .toast_board {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   z-index: 9999;
   margin: 0 10px;
+  &.on-top {
+    flex-direction: column-reverse;
+  }
   &.top {
     &-left {
       top: 0;
@@ -55,8 +60,9 @@
     }
   }
   .toast {
+    position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     max-width: 400px;
     margin: 5px 0;
@@ -102,6 +108,9 @@
     .toast-icon {
       flex-shrink: 1;
       padding: 10px;
+      > svg {
+        height: 1em;
+      }
     }
     &.line-left {
       .toast-contents {

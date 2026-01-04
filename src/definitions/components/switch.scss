@@ -26,7 +26,7 @@
       position: absolute;
       inset: 0.1em;
       display: inline-block;
-      background-color: #c4c4c4;
+      background-color: var(--base-color);
       border-radius: $switchRadiusSize;
       /*transition: all 400ms ease-out;*/
       &:before {
@@ -36,7 +36,7 @@
         height: 1.6em;
         top: -0.25em;
         left: -0.25em;
-        background-color: var(--bgc);
+        background-color: var(--suf);
         border-radius: $switchRadiusInside;
         //border: 1px solid #c4c4c4;
         box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.16);
@@ -170,8 +170,8 @@
     $textColor: $black;
   }
   .#{$ns}-switch {
-    background-color: transparent;
     &.#{$color} {
+      background-color: transparent;
       &.slide {
         input:checked + .switch {
           background-color: $value;
