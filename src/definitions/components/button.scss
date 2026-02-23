@@ -4,7 +4,11 @@
 .#{$ns} {
     &-button {
         position: relative;
-        display: inline-block;
+        // display: inline-block;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: $buttonIconDistance;
         font-weight: 400;
         line-height: 1em;
         vertical-align: baseline;
@@ -41,7 +45,7 @@
         &:not(.icon) {
             border-radius: $baseBorderRadius;
         }
-        i {pointer-events: none;}
+        // i {pointer-events: none;}
         &.icon {
             min-width: 1em;
             min-height: 1em;
@@ -126,16 +130,16 @@
             }
         }
         i.icon {
-            height: 0.85em;
+            // height: 0.85em;
             margin: 0;
             text-align: center;
             font-size: 1em;
-            &.left {
-                margin: 0 $buttonIconDistance 0 0;
-            }
-            &.right {
-                margin: 0 0 0 $buttonIconDistance;
-            }
+            // &.left {
+            //     margin: 0 $buttonIconDistance 0 0;
+            // }
+            // &.right {
+            //     margin: 0 0 0 $buttonIconDistance;
+            // }
         }
         a.link {
             position: absolute;
@@ -148,7 +152,7 @@
             align-items: center;
             .in-badge {
                 vertical-align: baseline;
-                margin-left: 10px;
+                // margin-left: 10px;
                 font-size: 11px;
                 //font-weight: 600;
                 text-align: center;
@@ -184,17 +188,14 @@
         }
         &.mini {
             padding: $verticalPadding;
-            i.icon {
-                margin-right: 5px;
-            }
+            // i.icon {
+            //     margin-right: 5px;
+            // }
         }
     
     }
-    &-button {
-        margin: 0 0.5em 0 0;
-        &:last-child {
-            margin: 0;
-        }
+    &-button + .#{$ns}-button {
+        margin-left: 1em;
     }
     &-buttons {
         display: inline-flex;

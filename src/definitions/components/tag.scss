@@ -86,6 +86,7 @@ $tagHeight: 1.8em;
         right: 100%;
         transform: translateY(-50%);
         margin: 0 -1px;
+        height: .8em;
       }
       &.right::after {
         clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
@@ -93,6 +94,7 @@ $tagHeight: 1.8em;
         left: 100%;
         transform: translateY(-50%) rotate(180deg);
         margin: 0 -1px;
+        height: .8em;
       }
     }
     &.static {

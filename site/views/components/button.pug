@@ -24,39 +24,48 @@ block contents
                 h4.contents-title Element Type
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        button.ga-button Tags
-                        .ga-button Class
+                        button.ga-button Tag
+                        .ga-button Class name
                     .footer
-                        - var code1 = '<button class="ga-button">Tags</button>';
-                        - var code2 = '<div class="ga-button">Class</div>';
+                        - var code1 = '<button class="ga-button">Tag</button>';
+                        - var code2 = '<div class="ga-button">Class name</div>';
                         pre
                             code.language-markup
                                 | #{code1}
                                 | #{code2}
             .section-contents
-                h4.contents-title Brand Color
+                h4.contents-title Brand
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         button.ga-button.primary Primary
+                        button.ga-button.primary.outline Primary Outline
+                        button.ga-button.primary.active Primary Active
+                    .contents-wrapper
                         button.ga-button.secondary Secondary
+                        button.ga-button.secondary.outline Secondary Outline
+                        button.ga-button.secondary.active Secondary Active
+                    .footer
+                        - var code = '<button class="ga-button { brand }">Brand</button>';
+                            pre
+                                code.language-markup
+                                    | #{code}
+            .section-contents
+                h4.contents-title Status
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
                         button.ga-button.success Success
                         button.ga-button.info Info
                         button.ga-button.danger Danger
                         button.ga-button.attention Attention
                         button.ga-button.importance Importance
                     .contents-wrapper
-                        button.ga-button.primary.outline Primary
-                        button.ga-button.secondary.outline Secondary
                         button.ga-button.success.outline Success
                         button.ga-button.info.outline Info
                         button.ga-button.danger.outline Danger
                         button.ga-button.attention.outline Attention
                         button.ga-button.importance.outline Importance
-                    .contents-wrapper
-                        button.ga-button.primary.active Primary
-                        button.ga-button.secondary.active Secondary
                     .footer
-                        - var code = '<button class="ga-button { BRAND | STATUS }">Color</button>';
+                        - var code = '<button class="ga-button { status }">Status</button>';
                             pre
                                 code.language-markup
                                     | #{code}
@@ -84,7 +93,7 @@ block contents
                             each color in colors2
                                 button(class=`ga-button ${color.name} outline`)=color.name
                     .footer
-                        - var code = '<button class="ga-button { COLORS }">Color</button>';
+                        - var code = '<button class="ga-button { colors }">Color</button>';
                             pre
                                 code.language-markup
                                     | #{code}
@@ -108,12 +117,10 @@ block contents
                         .ga-button.border Border
                         .ga-button.primary.border Border(Primary)
                     .footer
-                        - var code = '<button class="ga-button border">Disabled(class)</button>';
-                        - var code1 = '<button class="ga-button" border>Disabled(attr)</button>';
+                        - var code = '<button class="ga-button border">Border</button>';
                             pre
                                 code.language-markup
                                     | #{code}
-                                    | #{code1}
             //- .section-contents
                 h4.contents-title Equal
                 .ga-segment.float.round-m.attached
@@ -146,6 +153,10 @@ block contents
                         .ga-button.fluid.outline Fluid
                     .contents-item
                         .ga-button.fluid.round Fluid
+                    .contents-item
+                        .ga-button.fluid.round
+                            .icon.left.xi-arrows-h
+                            | Fluid
                     .footer
                         - var code = '<button class="ga-button fluid">Fluid</button>';
                             pre

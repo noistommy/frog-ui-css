@@ -161,15 +161,17 @@ block contents
                                 code.language-markup
                                     | #{code}
             .section-contents
-                h4.contents-title Brand Colors
+                h4.contents-title Brand & Status Colors
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label.primary Primary
                         .ga-tag.label.secondary Secondary
-                        .ga-tag.label.info Info
-                        .ga-tag.label.danger Danger
-                        .ga-tag.label.attention Attention
-                        .ga-tag.label.importance Importance
+                        span |
+                        .ga-tag.label.ga-success Success
+                        .ga-tag.label.ga-info Info
+                        .ga-tag.label.ga-danger Danger
+                        .ga-tag.label.ga-attention Attention
+                        .ga-tag.label.ga-importance Importance
                     .footer
                         - var code = '<div class="ga-tag label { Brand | Status }">{ Tag Contents }</div>'
                             pre

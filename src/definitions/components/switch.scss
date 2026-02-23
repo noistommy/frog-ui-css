@@ -2,6 +2,7 @@
 
 .#{$ns}-switch {
   display: inline-block;
+  flex-shrink: 0;
   input {
     display: none;
     position: absolute;
@@ -11,6 +12,7 @@
   &.slide {
     position: relative;
     width: 3em;
+    min-width: 3em;
     height: 1.3em;
     &:not(.inside) {
       margin: 0.15em;

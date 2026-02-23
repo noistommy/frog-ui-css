@@ -43,7 +43,7 @@ $black: map.get($grays, 'gray-95');
 //
 //font family
 //
-$fontName: 'Ubuntu';
+$fontName: 'Ubuntu Mono';
 $fontSize: calc($baseFontSize * 1px);
 $fontSmoothing: antialiased;
 $baseFontColor: $black;
@@ -92,7 +92,7 @@ $spacingUnit: 4px;
 // colors
 //
 
-$primary: #5178af;
+$primary: #ec5d73;
 $secondary: #35363a;
 
 $success: #528E64;
@@ -274,7 +274,7 @@ $thumbInvertedBackground: rgba(255, 255, 255, 0.25);
 $thumbInvertedInactiveBackground: rgba(255, 255, 255, 0.15);
 $thumbInvertedHoverBackground: rgba(255, 255, 255, 0.35);
 
-$baseBorderRadius: relativePx(2);
+$baseBorderRadius: relativePx(14);
 //$baseBorderRadius: 2em;
 $baseInputRadius: $baseBorderRadius;
 
@@ -282,7 +282,7 @@ $baseInputRadius: $baseBorderRadius;
 $baseButtonColor: $black;
 $baseButtonBg: #efefef;
 
-$horizontalInputPadding: relativePx(12);
+$horizontalInputPadding: relativePx(16);
 $verticalInputPadding: relativePx(8);
 // $horizontalPadding: $horizontalInputPadding + ($horizontalInputPadding * 0.5);
 $horizontalPadding: $horizontalInputPadding;

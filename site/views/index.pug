@@ -43,12 +43,13 @@ block contents
                     .select-css
                         .ga-select-box.dropdown#css-selector
                                 .selected-item.ga-input.icon.right
-                                    input(type="text", readonly, value="Frog UI")
+                                    input(type="text", readonly)
                                     i.icon.xi-angle-down
                                 .select-menu
-                                    .ga-list.selection
-                                        .item.option-item(data-path="/frogui.css") Frog UI
-                                        .item.option-item(data-path="/gcloud.css") G Cloud UI
+                                    .ga-list.selection.mark.bg.text
+                                        .item.option-item(data-path="/frogui.css") Theme A
+                                        .item.option-item(data-path="/gcloud.css") Theme B
+                                        .item.option-item(data-path="/gcloud_p.css") Theme C
                     hr
                     .preview-theme 
                         .ga-button Button
@@ -68,6 +69,7 @@ block contents
                             .ga-button.selected A
                             .ga-button B
                             .ga-button C
+                        h1.gray-txt-80 Text Style
     .page-wrapper
         section
             .page-header 

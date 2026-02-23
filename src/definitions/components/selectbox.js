@@ -1,15 +1,26 @@
 const selectBoxes = document.querySelectorAll('.ga-select-box');
 
 const cssSelector = document.getElementById('css-selector');
-const selectedCss = cssSelector.querySelector('input');
-const selectMenu = cssSelector.querySelector('.ga-list');
+const selectedCss = cssSelector?.querySelector('input');
+const selectMenu = cssSelector?.querySelector('.ga-list');
 
 
 let targetElement;
 
-let cssFile = localStorage.getItem('selected-css-file') === '/gcloud.css' ? 'G Cloud UI' : 'Frog UI'
+const cssFile = localStorage.getItem('selected-css-file')
+let cssFileName;
 
-let selectedItem = cssFile;
+if (cssFile === '/gcloud.css') {
+    cssFileName = 'Theme B'
+} else if (cssFile === '/gcloud_p.css') {
+    cssFileName = 'Theme C'
+} else {
+    cssFileName = 'Theme A'
+}
+
+let selectedItem = cssFileName;
+
+setSelected()
 
 selectBoxes.forEach(elem => {
     document.addEventListener('click', e => {
@@ -29,22 +40,23 @@ function toggleSelectBox(elem) {
     }
 }
 
-console.log(cssSelector, selectedCss)
 
 if (cssSelector) {
     selectedCss.value = selectedItem;
 
-    const items = selectMenu.querySelectorAll('.item')
-
     selectMenu.addEventListener('click', e => {
         selectedItem = e.target.textContent
         selectedCss.value = selectedItem;
-        items.forEach(item => {
-            console.log(item.textContent)
-            item.classList.remove('selected')
-            if( item.textContent === selectedItem) {
-                item.classList.add('selected')
-            }
-        })
+        setSelected()
+    })
+
+}
+function setSelected() {
+    const items = selectMenu.querySelectorAll('.item')
+    items.forEach(item => {
+        item.classList.remove('selected')
+        if( item.textContent === selectedCss.value) {
+            item.classList.add('selected')
+        }
     })
 }

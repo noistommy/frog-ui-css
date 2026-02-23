@@ -18,6 +18,10 @@ router.get('/pages/typography', function(req, res, next) {
   res.render('components/base',  {title: 'Typography' });
 });
 
+router.get('/pages/breakpoint', function(req, res, next) {
+  res.render('components/breakpoint',  {title: 'BreakPoint' });
+});
+
 router.get('/pages/semantic', function(req, res, next) {
   res.render('components/semantic',  {title: 'Semantic' });
 });

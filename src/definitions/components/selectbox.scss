@@ -124,6 +124,7 @@
     &.show .select-menu,
     &.open .select-menu {
       display: inline-block;
+      transform: translateY(0);
       box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.16);
     }
   }

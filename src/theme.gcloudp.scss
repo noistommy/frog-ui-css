@@ -1,0 +1,34 @@
+// @forward 'theme/gcloud/bases/colors.scss';
+// @forward 'theme/gcloud/bases/variables.scss';
+// @forward 'utils/func.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/xpressengine/XEIcon/xeicon.min.css');
+
+// theme
+@import 'themes/gcloud_p/bases/variables.scss';
+
+//badge
+@import 'themes/gcloud_p/components/badge.scss';
+//button
+@import 'themes/gcloud_p/components/button.scss';
+//grid
+@import 'themes/gcloud_p/components/grid.scss';
+//grid2
+@import 'themes/gcloud_p/components/grid2.scss';
+//modal
+@import 'themes/gcloud_p/components/modal.scss';
+//panel
+@import 'themes/gcloud_p/components/panel.scss';
+//selectbox
+@import 'themes/gcloud_p/components/selectbox.scss';
+//switch
+@import 'themes/gcloud_p/components/switch.scss';
+//table
+@import 'themes/gcloud_p/components/table.scss';
+//tabs
+@import 'themes/gcloud_p/components/tabs.scss';
+//tag
+@import 'themes/gcloud_p/components/tag.scss';
+//card
+@import 'themes/gcloud_p/components/card.scss';

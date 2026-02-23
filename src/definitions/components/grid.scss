@@ -80,6 +80,10 @@
         }
       }
     }
+    &:not(:has(> .column, > .rows)) {
+      align-items: center;
+      gap: #{$gridGutter * 2}px;
+    }
   }
   &-form .fields > .field,
   &-grid > .rows {
