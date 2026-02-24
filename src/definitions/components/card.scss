@@ -1,5 +1,6 @@
 
 @use 'sass:color';
+@use 'sass:map';
 
 $cardBackgroundColor: var(--depth-bg);
 $cardBoxShadow: var(--depth-bs);
@@ -35,16 +36,17 @@ $cardRadius: 1rem;
 
     &.round {
       &-s {
-        border-radius: calc($cardRadius * 0.5);
+        // border-radius: calc($segmentRadius * 0.5);
+        border-radius: map.get($layoutRadiuses, 's');
       }
       &-m {
-        border-radius: $cardRadius;
+        border-radius: map.get($layoutRadiuses, 'm');
       }
       &-l {
-        border-radius: calc($cardRadius * 2);
+        border-radius: map.get($layoutRadiuses, 'l');
       }
       &-xl {
-        border-radius: calc($cardRadius * 4);
+        border-radius: map.get($layoutRadiuses, 'xl');
       }
     }
     > div {
@@ -100,6 +102,21 @@ $cardRadius: 1rem;
         &-#{$i} > .#{$ns}-card {
           width: calc(100% / $i - $cardsGap);
         }
+      }
+    }
+    &.round {
+      &-s > .#{$ns}-card {
+        // border-radius: calc($segmentRadius * 0.5);
+        border-radius: map.get($layoutRadiuses, 's');
+      }
+      &-m > .#{$ns}-card  {
+        border-radius: map.get($layoutRadiuses, 'm');
+      }
+      &-l > .#{$ns}-card  {
+        border-radius: map.get($layoutRadiuses, 'l');
+      }
+      &-xl > .#{$ns}-card  {
+        border-radius: map.get($layoutRadiuses, 'xl');
       }
     }
     .#{$ns}-card {

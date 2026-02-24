@@ -1,4 +1,6 @@
 
+@use 'sass:map';
+
 $segmentBgColor: var(--depth-bg);
 $segmentBoxShadow: var(--depth-bs);
 $segmentText: var(--txt-light);
@@ -6,6 +8,7 @@ $segmentHorizontalPadding: 20px;
 $segmentVerticalPadding: 16px;
 
 $segmentRadius: 1rem;
+
 
 .#{$ns} {
   &-segment {
@@ -53,16 +56,17 @@ $segmentRadius: 1rem;
     }
     &.round {
       &-s {
-        border-radius: calc($segmentRadius * 0.5);
+        // border-radius: calc($segmentRadius * 0.5);
+        border-radius: map.get($layoutRadiuses, 's');
       }
       &-m {
-        border-radius: $segmentRadius;
+        border-radius: map.get($layoutRadiuses, 'm');
       }
       &-l {
-        border-radius: calc($segmentRadius * 2);
+        border-radius: map.get($layoutRadiuses, 'l');
       }
       &-xl {
-        border-radius: calc($segmentRadius * 4);
+        border-radius: map.get($layoutRadiuses, 'xl');
       }
     }
     &.collapse {
@@ -150,16 +154,17 @@ $segmentRadius: 1rem;
     }
     &.round {
       &-s {
-        border-radius: calc($segmentRadius * 0.5);
+        // border-radius: calc($segmentRadius * 0.5);
+        border-radius: map.get($layoutRadiuses, 's');
       }
       &-m {
-        border-radius: $segmentRadius;
+        border-radius: map.get($layoutRadiuses, 'm');
       }
       &-l {
-        border-radius: calc($segmentRadius * 2);
+        border-radius: map.get($layoutRadiuses, 'l');
       }
       &-xl {
-        border-radius: calc($segmentRadius * 4);
+        border-radius: map.get($layoutRadiuses, 'xl');
       }
     }
   }

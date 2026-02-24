@@ -103,10 +103,36 @@ block contents
                             pre
                                 code.language-markup= code
             .section-contents
+                h4.contents-title Round
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.contents
+                        .ga-cards.column-4
+                            .ga-card.border.round-s
+                                .contents
+                                    .title.h5 round s
+                                    = content         
+                            .ga-card.border.round-m
+                                .contents
+                                    .title.h5 round m
+                                    = content          
+                            .ga-card.border.round-l
+                                .contents
+                                    .title.h5 round l
+                                    = content        
+                            .ga-card.border.round-xl
+                                .contents
+                                    .title.h5 round xl
+                                    = content          
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-card float\">\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
                 h4.contents-title Cards
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents
-                        .ga-cards.column-3
+                        .ga-cards.column-3.round-s
                             .ga-card.border
                                 .contents
                                     .title.huge Card 1

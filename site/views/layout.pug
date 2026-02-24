@@ -38,9 +38,10 @@ html
                 .header-wrapper.container.center
                     
                     nav.main-menu
-                        .toggle-menu
-                            .ga-button.icon.round.show-menu
-                                i.xi-bars
+                         if error || title !== 'Frog UI'
+                            .toggle-menu
+                                .ga-button.icon.round.show-menu
+                                    i.xi-bars
                     .logo 
                         a(href="/")
                             span FROG UI

@@ -96,7 +96,7 @@
   }
 }
 
-@media all and (max-width: #{$bp-tablet - 1px}) {
+@media all and (max-width: #{$bp-tablet - 0.02px}) {
   .#{$ns} {
     &-form .fields,
     &-grid {
@@ -120,7 +120,7 @@
     }
   }
 }
-@media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 1px}) {
+@media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 0.02px}) {
   .#{$ns} {
     &-form .fields,
     &-grid {
@@ -145,7 +145,7 @@
   }
 
 }
-@media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 1px}) {
+@media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 0.02px}) {
   //@media all and (max-width: #{$bp-desktop - 1px}) {
   .#{$ns} {
     &-form .fields,

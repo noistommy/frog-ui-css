@@ -160,6 +160,7 @@ header.gnb .logo {
       .buttons {
         display: flex;
         justify-content: center;
+        gap: 8px;
       }
     }
     .page-icon {
@@ -315,7 +316,7 @@ section {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
     > button {
       flex: 0 0 auto;
     }
@@ -420,7 +421,7 @@ section {
   .contents-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
   }
 }
 #grid {

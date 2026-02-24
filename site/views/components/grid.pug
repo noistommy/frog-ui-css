@@ -167,3 +167,19 @@ block contents
                             pre
                                 code.language-markup
                                     | #{code}
+            .section-contents
+                h4.contents-title Reponsive
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-grid
+                            .column.span-2.span-md-4.span-sm-6.span-xs-12
+                            .column.span-2.span-md-4.span-sm-6.span-xs-12
+                            .column.span-2.span-md-4.span-sm-6.span-xs-12
+                            .column.span-2.span-md-4.span-sm-6.span-xs-12
+                            .column.span-2.span-md-4.span-sm-6.span-xs-12
+                            .column.span-2.span-md-4.span-sm-6.span-xs-12
+                    .footer
+                        - var code = `<div class="ga-grid">\n    <!-- columns -->\n   <div class="column span-{n} span-md-{n} span-sm-{n} span-xs-{n}" />\n   ... ...\n</div>`
+                            pre
+                                code.language-markup
+                                    | #{code}

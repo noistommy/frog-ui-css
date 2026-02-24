@@ -133,7 +133,7 @@ $darkerPrimary: color.adjust(
 );
 $darkerSecondary: color.adjust($secondary, $lightness: -58.1%);
 
-$lightPrimary: color.adjust($primary, $lightness: 35%);
+$lightPrimary: color.adjust($primary, $lightness: 30%);
 $lightSecondary: color.adjust($secondary, $lightness: 35%);
 
 $surface1: #F8F8F8;
@@ -275,6 +275,7 @@ $thumbInvertedInactiveBackground: rgba(255, 255, 255, 0.15);
 $thumbInvertedHoverBackground: rgba(255, 255, 255, 0.35);
 
 $baseBorderRadius: relativePx(14);
+$baseLayoutRadius: relativePx(14);
 //$baseBorderRadius: 2em;
 $baseInputRadius: $baseBorderRadius;
 
@@ -353,3 +354,10 @@ $breakpoints: (
     lg: 992px, //desktop
     xl: 1200px, //desktop-large
 ) !default;
+
+$layoutRadiuses: (
+    s: $baseLayoutRadius * 0.5,
+    m: $baseLayoutRadius,
+    l: $baseLayoutRadius * 1.5,
+    xl: $baseLayoutRadius * 2
+);

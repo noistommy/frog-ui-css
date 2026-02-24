@@ -11,7 +11,7 @@ block contents
                 | FROG UI 
             .sub-title
                 |!{cont("SUB_TITLE")}
-            .main-link
+            .main-link.ga-grid.justify-center
                 .ga-button 
                     | What is Frog?
                     a.link(href="/pages/welcome") 
@@ -333,18 +333,19 @@ block contents
                     .ga-tag.kbd ESC
                 .column.col-6.col-xs-12
                     h5.title Bedge
-                    .ga-button
-                        | Badge
-                        span.ga-badge.float 0
-                    .ga-button
-                        | Badge 1
-                        span.ga-badge.float.primary 1
-                    .ga-button
-                        | Badge New
-                        span.ga-badge.float.red N
-                    .ga-button
-                        | Badge In
-                        span.ga-badge.mark.primary
+                    .field
+                        button.ga-button
+                            | Badge
+                            span.ga-badge.float 0
+                        button.ga-button
+                            | Badge 1
+                            span.ga-badge.float.primary 1
+                        button.ga-button
+                            | Badge New
+                            span.ga-badge.float.red N
+                        button.ga-button
+                            | Badge In
+                            span.ga-badge.mark.primary
                 .column.col-6.col-xs-12
                     h5.title Switch
                     .field

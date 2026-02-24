@@ -353,3 +353,12 @@ $breakpoints: (
     lg: 992px, //desktop
     xl: 1200px, //desktop-large
 ) !default;
+
+$baseLayoutRadius: relativePx(14);
+
+$layoutRadiuses: (
+    s: $baseLayoutRadius * 0.5,
+    m: $baseLayoutRadius,
+    l: $baseLayoutRadius * 1.5,
+    xl: $baseLayoutRadius * 2
+);
