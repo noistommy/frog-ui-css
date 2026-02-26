@@ -1,13 +1,16 @@
 @use 'sass:map';
 @use 'sass:list';
 
+:root,
 :root.light-mode {
-  --input-brd-hover: #{map.get($grays, 'gray-20')};
+  --input-brd-hover: #{map.get($grays, 'gray-40')};
 }
 
 :root.dark-mode {
   --input-brd-hover: #{map.get($grays, 'gray-80')};
 }
+
+$iconAreaSize: 2em;
 
 .#{$ns} {
   &-input {
@@ -89,6 +92,8 @@
       &:focus {
         border-color: $primary
       }
+      padding-left: 0;
+      padding-right: 0;
     }
     &.transparent {
       label {
@@ -98,7 +103,7 @@
         background: transparent;
         border-color: transparent;
         &:focus {
-          border: 1px solid $primary;
+          border: 1px solid $primary !important;
         }
       }
       &:hover input {
@@ -116,13 +121,18 @@
         border-color: transparent;
         pointer-events: none;
       }
-      label { color: transparent; }
+      label { opacity: 0; }
       &.editable {
         input {
           pointer-events: auto;
           border: 1px solid $primary;
         }
-        label { color: $primary; }
+        label {  
+          opacity: 1;
+         }
+         &:has(+ input:focus) {
+          color: $primary;
+         }
       }
     }
     &.fluid {
@@ -158,8 +168,8 @@
       > i.icon {
         pointer-events: none;
         position: absolute;
-        height: 2em;
-        width: 2em;
+        height: $iconAreaSize;
+        width: $iconAreaSize;
         text-align: center;
         opacity: .5;
         top: 50%;
@@ -172,7 +182,7 @@
         }
         &.clear-btn {
           right: 0;
-          transform: translate(-5px, -50%);
+          transform: translate(0, -50%);
           font-size: 12px;
           cursor: pointer;
           opacity: 0;
@@ -180,32 +190,32 @@
       }
       &.both {
         input {
-          padding-left: 2.5em !important;
-          padding-right: 2.5em !important;
+          padding-left: $iconAreaSize !important;
+          padding-right: $iconAreaSize !important;
         }
         i.icon {
           &:first-child {
             left: 0;
-            transform: translate(5px, -50%);
+            transform: translate(0, -50%);
           }
           &:last-child {
             right: 0;
-            transform: translate(-5px, -50%);
+            transform: translate(0, -50%);
           }
         }
       }
       &.left {
-        input {padding-left: 2.5em;}
+        input {padding-left: $iconAreaSize;}
         i.icon {
           left: 0;
-          transform: translate(5px, -50%);
+          transform: translate(0, -50%);
         }
       }
       &.right {
-        input {padding-right: 2.5em;}
+        input {padding-right: $iconAreaSize;}
         i.icon {
           right: 0;
-          transform: translate(-5px, -50%);
+          transform: translate(0, -50%);
         }
       }
       &.link {
@@ -224,15 +234,16 @@
     }
     &.labeled {
       label, .label {
-        display: flex;
-        align-items: center;
-        background-color: var(--brd);
+        // display: flex;
+        // align-items: center;
+        background-color: var(--base-color);
+        border: 1px solid var(--brd);
         padding: $verticalPadding;
         line-height: 1;
         vertical-align: baseline;
         &.outline {
           background-color: var(--bgc);
-          border: 1px solid var(--brd);
+          // border: 1px solid var(--brd);
           opacity: .8;
         }
       }
@@ -341,20 +352,19 @@
         padding: $compactPadding;
       }
     }
-    &:has(label) {
-      margin-top: 0.5em;
-    }
     &:not(.labeled) {
       label {
         position: absolute;
         top: 50%;
         left: 10px;
+        z-index: 20;
         transform: translate(0, -50%);
         line-height: $inputLineHeight;
-        padding: 5px;
+        padding: 0 5px;
         background-color: var(--bgc);
         color: var(--input-brd-hover);
         transition: all 250ms;
+        pointer-events: none;
         &:has(+ input:focus, + textarea:focus) {
           color: $primary;
         }

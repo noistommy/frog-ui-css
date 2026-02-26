@@ -96,6 +96,7 @@ $cardRadius: 1rem;
   &-cards {
     display: flex;
     flex-wrap: wrap;
+
     gap: 12px;
     &.column {
       @for $i from 1 through $maxCardColumn {
@@ -125,4 +126,40 @@ $cardRadius: 1rem;
       }
     }
   }
+}
+
+
+@media all and (max-width: #{$bp-tablet - 0.02px}) {
+  .#{$ns} {
+    &-cards {
+      &.column {
+        @for $i from 1 through $maxCardColumn {
+          &-xs-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 0.02px}) {
+  .#{$ns} {
+    &-cards {
+      &.column {
+        @for $i from 1 through $maxCardColumn {
+          &-sm-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
+        }
+      }
+    }
+  }
+}
+@media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 0.02px}) {
+  //@media all and (max-width: #{$bp-desktop - 1px}) {
+    .#{$ns} {
+      &-cards {
+        &.column {
+          @for $i from 1 through $maxCardColumn {
+            &-md-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
+          }
+        }
+      }
+    }
 }
