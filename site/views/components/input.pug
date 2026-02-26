@@ -22,6 +22,18 @@ block contents
                                 code.language-markup
                                     | #{code}
             .section-contents
+                h4.contents-title With Label
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-input
+                            label Title
+                            input(type="text", placeholder="" value="text")
+                    .footer
+                        - var code = '<div class="ga-input">\n    <input type="text" placeholder="Insert text" />\n</div>'
+                            pre
+                                code.language-markup
+                                    | #{code}
+            .section-contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
@@ -59,6 +71,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.transparent
+                            label Transparent
                             input(type="text", placeholder="Insert text")
                     .footer
                         - var code = '<div class="ga-input transparent">\n    <input type="text" placeholder="Insert text" />\n</div>'
@@ -81,6 +94,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.edit
+                            label Editable 
                             input(type="text", placeholder="Insert text", value="원래 값")
                         .ga-button.icon.round.edit-btn
                             i.xi-pen
@@ -187,12 +201,12 @@ block contents
                     .contents-wrapper
                         .ga-input.labeled.right.inline
                             input(type="text", placeholder="Insert text")
-                            label 원
+                            .label 원
                         .ga-input.labeled.right.inline
                             input(type="text", placeholder="Insert text")
-                            label.outline 0/30
+                            .label.outline 0/30
                         .ga-input.labeled.left.inline
-                            label Name
+                            .label Name
                             input(type="text", placeholder="Insert text")
                     .footer
                         - var code = '<div class="ga-input labeled left">\n    <input type="text" placeholder="Insert text" />\n    <label>Label Text</label>\n</div>'
@@ -228,6 +242,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.fluid
+                            label textare title 
                             textarea(placeholder="Insert text")
                         .ga-input.short.fluid
                             textarea(placeholder="Insert text")

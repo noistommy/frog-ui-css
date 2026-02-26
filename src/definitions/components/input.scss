@@ -91,16 +91,23 @@
       }
     }
     &.transparent {
+      label {
+        color: transparent;
+      }
       input {
         background: transparent;
         border-color: transparent;
-        &:hover {
-          border: 1px dashed var(--brd);
-        }
         &:focus {
           border: 1px solid $primary;
         }
       }
+      &:hover input {
+        border: 1px dashed var(--brd);
+      }
+      &:hover label {
+        color: var(--brd);
+      }
+      
     }
     &.edit {
       input {
@@ -109,11 +116,13 @@
         border-color: transparent;
         pointer-events: none;
       }
+      label { color: transparent; }
       &.editable {
         input {
           pointer-events: auto;
           border: 1px solid $primary;
         }
+        label { color: $primary; }
       }
     }
     &.fluid {
@@ -330,6 +339,32 @@
       input,
       .#{$ns}-button {
         padding: $compactPadding;
+      }
+    }
+    &:has(label) {
+      margin-top: 0.5em;
+    }
+    &:not(.labeled) {
+      label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translate(0, -50%);
+        line-height: $inputLineHeight;
+        padding: 5px;
+        background-color: var(--bgc);
+        color: var(--input-brd-hover);
+        transition: all 250ms;
+        &:has(+ input:focus, + textarea:focus) {
+          color: $primary;
+        }
+        &:has(+ input:focus, + textarea),
+        &:has(+ input:not(:placeholder-shown)) {
+          top: 0;
+          font-size: .8em;
+          line-height: 1;
+          transform: translate(0, -50%);
+        }
       }
     }
   }
