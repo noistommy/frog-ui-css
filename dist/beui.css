@@ -1388,6 +1388,12 @@ h5, .h5 {
 .be-button.mini {
   padding: 0.8571428571em;
 }
+.be-button {
+  margin: 0 0.5em 0 0;
+}
+.be-button:last-child {
+  margin: 0;
+}
 .be-buttons {
   display: inline-flex;
   overflow-x: auto;
@@ -2557,6 +2563,7 @@ h5, .h5 {
 }
 .be-input.number input {
   text-align: center;
+  border-radius: 0;
   border-top-left-radius: var(--radius);
   border-bottom-left-radius: var(--radius);
 }
@@ -2569,6 +2576,7 @@ h5, .h5 {
   border-radius: 0;
 }
 .be-input.number .inc {
+  border-radius: 0;
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
 }

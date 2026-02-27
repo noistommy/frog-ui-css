@@ -60,8 +60,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.underline
-                            input(type="text", placeholder=" ")
-                            label UNDERLINE
+                            input(type="text", placeholder="Insert text")
                     .footer
                         - var code = '<div class="ga-input underline">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
@@ -72,8 +71,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.transparent
-                            input(type="text", name="transparent", placeholder="")
-                            label(for="transparent") Transparent
+                            input(type="text", name="transparent", placeholder="Insert text")
                     .footer
                         - var code = '<div class="ga-input transparent">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
@@ -95,8 +93,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.edit
-                            input(type="text", placeholder="", value="원래 값")
-                            label Editable 
+                            input(type="text", placeholder="Insert text", value="원래 값")
                         .ga-button.icon.round.edit-btn
                             i.xi-pen
                     .footer
@@ -159,8 +156,7 @@ block contents
                             .column.span-3.span-xs-8
                                 | Left
                                 .ga-input.icon.left
-                                    input(type="text", placeholder=" ")
-                                    label Label
+                                    input(type="text", placeholder="Insert text")
                                     i.icon.xi-search
                             .column.span-3.span-xs-8
                                 | Right
@@ -172,7 +168,6 @@ block contents
                                 .ga-input.icon.both
                                     i.icon.xi-search
                                     input(type="text", placeholder="Insert text")
-                                    label Label
                                     i.icon.xi-angle-up
                     .footer
                         - var code = '<div class="ga-input icon left">\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'

@@ -194,8 +194,11 @@
         }
     
     }
-    &-button + .#{$ns}-button {
-        // margin-left: 1em;
+    &-button {
+        margin: 0 .5em 0 0;
+        &:last-child {
+            margin: 0;
+        }
     }
     &-buttons {
         display: inline-flex;
