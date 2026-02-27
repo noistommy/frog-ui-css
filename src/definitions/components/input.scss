@@ -353,7 +353,8 @@ $iconAreaSize: 2em;
       }
     }
     &:not(.labeled) {
-      label {
+      textarea + label,
+      input + label {
         position: absolute;
         top: 50%;
         left: 10px;
@@ -365,16 +366,28 @@ $iconAreaSize: 2em;
         color: var(--input-brd-hover);
         transition: all 250ms;
         pointer-events: none;
-        &:has(+ input:focus, + textarea:focus) {
-          color: $primary;
-        }
-        &:has(+ input:focus, + textarea),
-        &:has(+ input:not(:placeholder-shown)) {
-          top: 0;
-          font-size: .8em;
-          line-height: 1;
-          transform: translate(0, -50%);
-        }
+        // &:has(+ input:focus, + textarea:focus) {
+        //   color: $primary;
+        // }
+        // &:has(+ input:focus, + textarea),
+        // &:has(+ input:not(:placeholder-shown)) {
+        //   top: 0;
+        //   font-size: .8em;
+        //   line-height: 1;
+        //   transform: translate(0, -50%);
+        // }
+      }
+      textarea:focus + label,
+      input:focus + label {
+        color: $primary;
+      }
+      input:not(:placeholder-shown) + label,
+      textarea + label,
+      input:focus + label {
+        top: 0;
+        font-size: .8em;
+        line-height: 1;
+        transform: translate(0, -50%);
       }
     }
   }

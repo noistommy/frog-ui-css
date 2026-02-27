@@ -26,13 +26,16 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input
-                            label Title 1
                             input(type="text", placeholder=" ")
+                            label Title 1
                         .ga-input
+                            input(type="text", placeholder="")
                             label Title 2
+                        .ga-input
                             input(type="text")
+                            label Title 3
                     .footer
-                        - var code = '<div class="ga-input">\n    <input type="text" placeholder="Insert text" />\n</div>'
+                        - var code = '<div class="ga-input">\n    <!-- label system -->\n    <input type="text" placeholder=" " />\n    <label>Title</label>\n</div>'
                             pre
                                 code.language-markup
                                     | #{code}
@@ -245,8 +248,8 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.fluid
-                            label textare title 
                             textarea(placeholder="Insert text")
+                            label textare title 
                         .ga-input.short.fluid
                             textarea(placeholder="Insert text")
                     .footer
