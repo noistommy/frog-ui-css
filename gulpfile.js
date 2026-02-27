@@ -36,6 +36,8 @@ let paths = {
   }
 }
 
+const fileList = ['beui', 'frogui', 'gcloud', 'gcloud_p'];
+
 fs.readFile('config.json', 'utf-8', (err, data) => {
   if (err) return console.log(err)
   paths = JSON.parse(data)
@@ -64,6 +66,7 @@ const build = () => {
     .pipe(minifyCSS())
     .pipe(dest('./site/public'))
 }
+
 // JS 빌드
 const buildJS = () => {
   return src(['src/definitions/components/*.js'])

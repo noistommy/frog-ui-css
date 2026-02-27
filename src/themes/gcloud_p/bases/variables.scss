@@ -4,7 +4,7 @@
 @use 'sass:math';
 
 $baseFontSize: 14;
-
+$heightRhythm: 34;
 
 @function relativePx($number) {
     @return calc($number/$baseFontSize)*1em
@@ -274,7 +274,7 @@ $thumbInvertedBackground: rgba(255, 255, 255, 0.25);
 $thumbInvertedInactiveBackground: rgba(255, 255, 255, 0.15);
 $thumbInvertedHoverBackground: rgba(255, 255, 255, 0.35);
 
-$baseBorderRadius: relativePx(14);
+$baseBorderRadius: relativePx($heightRhythm / 2);
 $baseLayoutRadius: relativePx(14);
 //$baseBorderRadius: 2em;
 $baseInputRadius: $baseBorderRadius;
@@ -284,7 +284,7 @@ $baseButtonColor: $black;
 $baseButtonBg: #efefef;
 
 $horizontalInputPadding: relativePx(16);
-$verticalInputPadding: relativePx(8);
+$verticalInputPadding: relativePx(calc(($heightRhythm - $baseFontSize) / 2));
 // $horizontalPadding: $horizontalInputPadding + ($horizontalInputPadding * 0.5);
 $horizontalPadding: $horizontalInputPadding;
 $verticalPadding: $verticalInputPadding;

@@ -11,7 +11,7 @@
 }
 
 $iconAreaSize: 2em;
-
+$iconAreaOffset: 5px;
 .#{$ns} {
   &-input {
     --radius: #{$baseInputRadius};
@@ -33,7 +33,6 @@ $iconAreaSize: 2em;
       outline: none;
       // flex: 1 0 auto;
       max-width: 100%;
-      box-sizing: border-box;
       &:hover {
         border-color: var(--brd);
       }
@@ -77,10 +76,19 @@ $iconAreaSize: 2em;
         opacity: 0.5;
         pointer-events: none;
       }
+      label {
+        background-color: transparent !important;
+      }
     }
     &.readonly {
       > input, > textarea {
         pointer-events: none;
+      }
+    }
+    &.round {
+      --radius: 2em;
+      > input {
+        border-radius: var(--radius);
       }
     }
     &.underline > input {
@@ -94,6 +102,9 @@ $iconAreaSize: 2em;
       }
       padding-left: 0;
       padding-right: 0;
+      & + label {
+        left: 0 !important;
+      }
     }
     &.transparent {
       label {
@@ -152,6 +163,7 @@ $iconAreaSize: 2em;
         top: 50%;
         right: 0;
         transform: translate(-100%, -50%);
+        line-height: 1;
       }
     }
     &.badge {
@@ -181,7 +193,7 @@ $iconAreaSize: 2em;
           transform: translate(-50%, -50%);
         }
         &.clear-btn {
-          right: 0;
+          right: $iconAreaOffset;
           transform: translate(0, -50%);
           font-size: 12px;
           cursor: pointer;
@@ -190,31 +202,31 @@ $iconAreaSize: 2em;
       }
       &.both {
         input {
-          padding-left: $iconAreaSize !important;
-          padding-right: $iconAreaSize !important;
+          padding-left: calc($iconAreaSize + $iconAreaOffset) !important;
+          padding-right: calc($iconAreaSize + $iconAreaOffset) !important;
         }
         i.icon {
           &:first-child {
-            left: 0;
+            left: $iconAreaOffset;
             transform: translate(0, -50%);
           }
           &:last-child {
-            right: 0;
+            right: $iconAreaOffset;
             transform: translate(0, -50%);
           }
         }
       }
       &.left {
-        input {padding-left: $iconAreaSize;}
+        input {padding-left: calc($iconAreaSize + $iconAreaOffset);}
         i.icon {
-          left: 0;
+          left: $iconAreaOffset;
           transform: translate(0, -50%);
         }
       }
       &.right {
-        input {padding-right: $iconAreaSize;}
+        input {padding-right: calc($iconAreaSize + $iconAreaOffset);}
         i.icon {
-          right: 0;
+          right: $iconAreaOffset;
           transform: translate(0, -50%);
         }
       }
@@ -233,23 +245,22 @@ $iconAreaSize: 2em;
       }
     }
     &.labeled {
-      label, .label {
-        // display: flex;
-        // align-items: center;
-        background-color: var(--base-color);
+      .label {
+        display: flex;
+        align-items: center;
         border: 1px solid var(--brd);
         padding: $verticalPadding;
         line-height: 1;
         vertical-align: baseline;
         &.outline {
           background-color: var(--bgc);
-          // border: 1px solid var(--brd);
+          border: 1px solid var(--brd);
           opacity: .8;
         }
       }
     }
-    &.button, &.labeled {
-      input, .#{$ns}-button, label, .label {
+    &.withButton, &.labeled {
+      input, .#{$ns}-button, .label {
         border-radius: 0;
       }
       input {
@@ -267,7 +278,7 @@ $iconAreaSize: 2em;
           border-top-right-radius: $baseInputRadius;
           border-bottom-right-radius: $baseInputRadius;
         }
-        .#{$ns}-button, label, .label {
+        .#{$ns}-button, .label {
           margin-right: -1px;
           border-top-left-radius: $baseInputRadius;
           border-bottom-left-radius: $baseInputRadius;
@@ -279,7 +290,7 @@ $iconAreaSize: 2em;
           border-top-left-radius: $baseInputRadius;
           border-bottom-left-radius: $baseInputRadius;
         }
-        .#{$ns}-button, label, .label {
+        .#{$ns}-button, .label {
           margin-left: -1px;
           border-top-right-radius: $baseInputRadius;
           border-bottom-right-radius: $baseInputRadius;
@@ -366,16 +377,6 @@ $iconAreaSize: 2em;
         color: var(--input-brd-hover);
         transition: all 250ms;
         pointer-events: none;
-        // &:has(+ input:focus, + textarea:focus) {
-        //   color: $primary;
-        // }
-        // &:has(+ input:focus, + textarea),
-        // &:has(+ input:not(:placeholder-shown)) {
-        //   top: 0;
-        //   font-size: .8em;
-        //   line-height: 1;
-        //   transform: translate(0, -50%);
-        // }
       }
       textarea:focus + label,
       input:focus + label {
@@ -385,9 +386,46 @@ $iconAreaSize: 2em;
       textarea + label,
       input:focus + label {
         top: 0;
-        font-size: .8em;
+        left: 10px !important;
+        font-size: .9em;
         line-height: 1;
         transform: translate(0, -50%);
+      }
+      label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        z-index: 20;
+        transform: translate(0, -50%);
+        line-height: $inputLineHeight;
+        padding: 0 5px;
+        background-color: var(--bgc);
+        color: var(--input-brd-hover);
+        transition: all 250ms;
+        pointer-events: none;
+        &:has(+ input:focus, + textarea:focus) {
+          color: $primary;
+        }
+        &:has(+ input:focus, + textarea),
+        &:has(+ input:not(:placeholder-shown)) {
+          top: 0;
+          left: 10px !important;
+          font-size: .9em;
+          line-height: 1;
+          transform: translate(0, -50%);
+        }
+      }
+    }
+    &.icon.both,
+    &.icon.left {
+      label {
+        left: $iconAreaSize;
+      }
+    }
+    &.underline {
+      input:focus + label,
+      input:not(:placeholder-shown) + label {
+        left: 0 !important;
       }
     }
   }

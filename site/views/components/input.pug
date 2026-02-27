@@ -28,12 +28,6 @@ block contents
                         .ga-input
                             input(type="text", placeholder=" ")
                             label Title 1
-                        .ga-input
-                            input(type="text", placeholder="")
-                            label Title 2
-                        .ga-input
-                            input(type="text")
-                            label Title 3
                     .footer
                         - var code = '<div class="ga-input">\n    <!-- label system -->\n    <input type="text" placeholder=" " />\n    <label>Title</label>\n</div>'
                             pre
@@ -66,7 +60,8 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.underline
-                            input(type="text", placeholder="Insert text")
+                            input(type="text", placeholder=" ")
+                            label UNDERLINE
                     .footer
                         - var code = '<div class="ga-input underline">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
@@ -77,8 +72,8 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.transparent
-                            label(for="transparent") Transparent
                             input(type="text", name="transparent", placeholder="")
+                            label(for="transparent") Transparent
                     .footer
                         - var code = '<div class="ga-input transparent">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
@@ -100,8 +95,8 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-input.edit
-                            label Editable 
                             input(type="text", placeholder="", value="원래 값")
+                            label Editable 
                         .ga-button.icon.round.edit-btn
                             i.xi-pen
                     .footer
@@ -164,7 +159,8 @@ block contents
                             .column.span-3.span-xs-8
                                 | Left
                                 .ga-input.icon.left
-                                    input(type="text", placeholder="Insert text")
+                                    input(type="text", placeholder=" ")
+                                    label Label
                                     i.icon.xi-search
                             .column.span-3.span-xs-8
                                 | Right
@@ -176,6 +172,7 @@ block contents
                                 .ga-input.icon.both
                                     i.icon.xi-search
                                     input(type="text", placeholder="Insert text")
+                                    label Label
                                     i.icon.xi-angle-up
                     .footer
                         - var code = '<div class="ga-input icon left">\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
@@ -227,10 +224,10 @@ block contents
                 h4.contents-title Button
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-input.button.left
+                        .ga-input.withButton.left
                             input(type="text", placeholder="Insert text")
                             .ga-button 저장
-                        .ga-input.button.right
+                        .ga-input.withButton.right
                             input(type="text", placeholder="Insert text")
                             .ga-button.icon
                                 i.xi-documents-o

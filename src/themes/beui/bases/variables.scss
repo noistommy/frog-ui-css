@@ -10,6 +10,9 @@
     @return calc($number/14)*1rem
 };
 
+$baseFontSize: 14;
+$heightRhythm: 34;
+
 $ns: 'be';
 
 $grays: (
@@ -32,29 +35,30 @@ $grays: (
 $white: map.get($grays, 'gray-0');
 $black: map.get($grays, 'gray-95');
 
-//
-//font family
-//
+
+// font family
+
 $fontName: 'Pretendard Variable';
+$fontSize: calc($baseFontSize * 1px);
 $fontSmoothing: antialiased;
 $baseFontColor: $black;
 // $dModeBaseFontColor: $white;
-//
-//font weight
-//
+
+// font weight
+
 $light: 300;
 $regular: 400;
 $bold: 600;
 $bolder: 800;
 
-//
-//line height
-//
+
+// line height
+
 $lineHeight: calc(24 / 14);
 
-//
-//letter spacing
-//
+
+// letter spacing
+
 $widerSpacing: 1px;
 $wideSpacing: 0.5px;
 $baseSpacing: normal;
@@ -83,7 +87,7 @@ $spacingUnit: 4px;
 // colors
 //
 
-$primary: #6d9d72;
+$primary: #5178af;
 $secondary: #35363a;
 
 $success: #528E64;
@@ -247,15 +251,15 @@ $thumbInvertedBackground: rgba(255, 255, 255, 0.25);
 $thumbInvertedInactiveBackground: rgba(255, 255, 255, 0.15);
 $thumbInvertedHoverBackground: rgba(255, 255, 255, 0.35);
 
-$baseBorderRadius: relativePx(8);
+$baseBorderRadius: relativePx(4);
 //$baseBorderRadius: 2em;
-$baseInputRadius: relativePx(8);
+$baseInputRadius: relativePx(4);
 
 // button & input
 $baseButtonColor: $black;
 $baseButtonBg: #efefef;
 
-$horizontalInputPadding: relativePx(16);
+$horizontalInputPadding: relativePx(18);
 $verticalInputPadding: relativePx(12);
 // $horizontalPadding: $horizontalInputPadding + ($horizontalInputPadding * 0.5);
 $horizontalPadding: $horizontalInputPadding;
