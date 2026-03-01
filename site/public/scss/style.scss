@@ -523,7 +523,7 @@ section {
 }
 .ga-segment,
 .ga-card {
-  .footer {
+  > .footer {
     background-color: var(--suf);
     overflow-x: auto;
   }

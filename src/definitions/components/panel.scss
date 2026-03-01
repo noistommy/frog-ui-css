@@ -1,26 +1,25 @@
 .#{$ns}-panel {
   --max-height: 200px;
-  border: $panelBorder;
   transition: height 250ms ease;
   margin: $margin;
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
   .panel-header {
-    background-color: $panelBackgroundColor;
+    // background-color: $panelBackgroundColor;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: $panelVerticalPadding relativePx(12);
+    padding: $panelPadding;
     gap: 4px;
     .title {
       flex-grow: 1;
       min-width: 14em;
-      font-weight: 600;
+      font-weight: 700;
     }
     .panel-toggle-btn {
-      margin-left: 5px;
-      font-size: $tinySize+em;
+      line-height: 1;
+      padding: 0 4px;
       i {
         transition: transform 150ms ease;
       }
@@ -29,21 +28,10 @@
   .panel-content {
     margin: -1px;
     .content-wrapper {
-      border-top: $panelBorder;
       padding: $panelPadding;
-      .content {
-        &-head {
-          background-color: var(--suf);
-          padding: 10px;
-          margin-bottom: $panelVerticalPadding;
-        }
-        &-body {
-
-        }
-        &-foot {
-          margin-top: $panelVerticalPadding;
-        }
-      }
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
     }
   }
   &.border {
@@ -57,8 +45,6 @@
       height: 0;
       overflow: auto;
       transition: height 250ms ease;
-      .content-wrapper {
-      }
     }
     &.icon {
       &.left {

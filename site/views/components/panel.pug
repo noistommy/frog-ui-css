@@ -18,7 +18,8 @@ block contents
                             .panel-header
                                 .title Title
                             .panel-content
-                                .content-wrapper CONTENT
+                                .content-wrapper 
+                                    .header CONTENT
                                     p
                                         | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         | Commodi consequuntur corporis expedita fuga, incidunt obcaecati qui,
@@ -35,14 +36,33 @@ block contents
                             pre
                                 code.language-markup= code
             .section-contents
+                h4.contents-title Border
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-panel.border
+                            .panel-header
+                                .title Title
+                            .panel-content
+                                .content-wrapper 
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        | Commodi consequuntur corporis expedita fuga, incidunt obcaecati qui,
+                                        | quis, rem reprehenderit rerum sed sit. Distinctio doloremque dolorum
+                                        | eius est facere pariatur voluptas!
+                    .footer
+                        .code-wrapper
+                            - var code = `\n<div class=\"ga-panel border\">\n    <div class=\"panel-header\"> ... </div>\n    <div class=\"panel-contents\"> ... </div>\n</div>\n`
+                            pre
+                                code.language-markup= code
+            .section-contents
                 h4.contents-title Collapse
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-panel.collapse
+                        .ga-panel.collapse.border
                             .panel-header
                                 .title Title
-                                button.panel-toggle-btn.ga-button.icon.outline
-                                    i.xi-caret-up
+                                .panel-toggle-btn.small
+                                    i.xi-caret-down
                             .panel-content
                                 .content-wrapper
                                     p
@@ -61,19 +81,59 @@ block contents
                             pre
                                 code.language-markup= code
             .section-contents
+                h4.contents-title Collapse toggle Button
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-panel.collapse.border.icon.left
+                            .panel-header
+                                .title Toggle Button on left
+                                .panel-toggle-btn.small
+                                    i.xi-caret-down
+                        .ga-panel.collapse.border.icon
+                            .panel-header
+                                .title Toggle Button on right
+                                .panel-toggle-btn.small
+                                    i.xi-caret-down
+                    .footer
+                        .code-wrapper
+                            - var code = `<!-- Toggle button on left --> \n<div class=\"ga-panel collapse icon left\">...</div>\n`
+                            - var code1 = `<!-- Toggle button on right(default) --> \n<div class=\"ga-panel collapse\">...</div>\n`
+                            pre
+                                code.language-markup= code
+                                code.language-markup= code1
+            .section-contents
+                h4.contents-title Contents
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-panel.border
+                            .panel-header
+                                .title Title
+                            .panel-content
+                                .content-wrapper
+                                    .header Header
+                                    .body
+                                        p
+                                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            | Commodi consequuntur corporis expedita fuga, incidunt obcaecati qui,
+                                            | quis, rem reprehenderit rerum sed sit. Distinctio doloremque dolorum
+                                            | eius est facere pariatur voluptas!
+                                    .footer Footer
+                    .footer
+                        .code-wrapper
+                        - var code = `\n<div class=\"ga-panel collapse\">\n    <div class=\"panel-header\"> ... </div>\n    <div class=\"panel-contents\">\n        <!-- header -->\n        <!-- body -->\n        <!-- footer -->\n     </div>\n</div>\n`
+                            pre
+                                code.language-markup= code
+            //- .section-contents
                 h4.contents-title Example
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-panel.open
                             .panel-header
                                 .title Title
-                                button.panel-toggle-btn.ga-button.icon.outline
-                                    i.xi-angle-up
                             .panel-content
                                 .content-wrapper
-                                    .content-head
-                                        | Head Area
-                                    .content-body
+                                    .header Student List
+                                    .body
                                         - var rows = [{name: 'John Doe', age: 11, job: 'Student'},{name: 'Jane Roe', age: 17, job: 'College Student'},{name: 'Alex Kim', age: 31, job: 'Graduate Student'},]
                                         table.ga-table
                                             thead
@@ -87,7 +147,7 @@ block contents
                                                         td= `${row.name}`
                                                         td.align-right= `${row.age}`
                                                         td= `${row.job}`
-                                    .content-foot
+                                    .footer
                                         .ga-pagination.number.align-center.small
                                             - var items = [2, 3, 4, 5]
                                             .pagination-nav

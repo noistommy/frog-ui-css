@@ -483,8 +483,8 @@ section .section-contents .contents-wrapper .contents-item {
   border-left: 5px solid;
 }
 
-.ga-segment .footer,
-.ga-card .footer {
+.ga-segment > .footer,
+.ga-card > .footer {
   background-color: var(--suf);
   overflow-x: auto;
 }

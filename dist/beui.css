@@ -2817,34 +2817,30 @@ h5, .h5 {
 }
 .be-checkbox label, .be-checkbox .label {
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   font-size: 1em;
-  padding-left: 1.7857142857em;
 }
 .be-checkbox label:before, .be-checkbox .label:before {
   content: "";
   width: 16px;
   height: 16px;
-  position: absolute;
-  top: 50%;
-  left: 0;
   display: block;
   border: 1px solid var(--brd);
   background-color: var(--bgc);
   border-radius: 2px;
-  transform: translateY(-50%);
 }
 .be-checkbox label:after, .be-checkbox .label:after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 5px;
+  top: 6px;
+  left: 4px;
   border: 2px solid var(--suf);
   border-left: 0;
   border-top: 0;
-  width: 6px;
-  height: 9px;
-  margin-top: -2px;
+  width: 8px;
+  height: 10px;
   transition: transform 100ms ease;
   transform: rotate(0deg) scale(0);
 }
@@ -2856,11 +2852,11 @@ h5, .h5 {
 .be-checkbox.radio label:after, .be-checkbox.radio .label:after {
   background-color: var(--suf);
   border-radius: 50%;
-  width: 6px;
-  height: 6px;
-  top: 5px;
-  left: 5px;
-  margin-top: 0;
+  border: 0;
+  width: 8px;
+  height: 8px;
+  top: 4px;
+  left: 4px;
   transform: scale(0);
 }
 .be-checkbox:has(input:checked) label:before, .be-checkbox:has(input:checked) .label:before, .be-checkbox.checked label:before, .be-checkbox.checked .label:before {
@@ -2868,8 +2864,26 @@ h5, .h5 {
   border-color: #5178af;
 }
 .be-checkbox:has(input:checked) label:after, .be-checkbox:has(input:checked) .label:after, .be-checkbox.checked label:after, .be-checkbox.checked .label:after {
-  top: 50%;
   transform: translateY(-50%) rotate(45deg) scale(1);
+}
+.be-checkbox:has(input:checked).radio label:after,
+.be-checkbox:has(input:checked).radio .label:after, .be-checkbox.checked.radio label:after,
+.be-checkbox.checked.radio .label:after {
+  transform: scale(1);
+}
+.be-checkbox.indeter:not(.radio) label:after,
+.be-checkbox.indeter:not(.radio) .label:after {
+  top: 6px;
+  left: 3px;
+  width: 10px;
+  height: 3px;
+  background-color: #fff;
+  border-width: 0;
+  transform: translateY(0) rotate(0) scale(0);
+}
+.be-checkbox.indeter:not(.radio).checked label:after,
+.be-checkbox.indeter:not(.radio).checked .label:after {
+  transform: translateY(0) rotate(0) scale(1);
 }
 .be-checkbox.disabled .checkbox {
   background-color: #D6D6D6;
@@ -3027,7 +3041,7 @@ h5, .h5 {
   top: 0;
 }
 
-.be-switch.red {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.red.slide input:checked + .switch {
@@ -3040,7 +3054,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(215, 87, 87, 0.3);
 }
 
-.be-switch.orange {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.orange.slide input:checked + .switch {
@@ -3053,7 +3067,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(238, 144, 51, 0.3);
 }
 
-.be-switch.yellow {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.yellow.slide input:checked + .switch {
@@ -3066,7 +3080,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(248, 184, 37, 0.3);
 }
 
-.be-switch.lightgreen {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.lightgreen.slide input:checked + .switch {
@@ -3079,7 +3093,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(179, 188, 64, 0.3);
 }
 
-.be-switch.green {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.green.slide input:checked + .switch {
@@ -3092,7 +3106,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(97, 164, 117, 0.3);
 }
 
-.be-switch.lightblue {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.lightblue.slide input:checked + .switch {
@@ -3105,7 +3119,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(140, 197, 206, 0.3);
 }
 
-.be-switch.blue {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.blue.slide input:checked + .switch {
@@ -3118,7 +3132,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(112, 163, 202, 0.3);
 }
 
-.be-switch.deepblue {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.deepblue.slide input:checked + .switch {
@@ -3131,7 +3145,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(81, 120, 175, 0.3);
 }
 
-.be-switch.deeppurple {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.deeppurple.slide input:checked + .switch {
@@ -3144,7 +3158,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(145, 128, 180, 0.3);
 }
 
-.be-switch.purple {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.purple.slide input:checked + .switch {
@@ -3157,7 +3171,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(175, 119, 192, 0.3);
 }
 
-.be-switch.brown {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.brown.slide input:checked + .switch {
@@ -3170,7 +3184,7 @@ h5, .h5 {
   box-shadow: 0 0 0 4px rgba(168, 106, 130, 0.3);
 }
 
-.be-switch.gray {
+.be-switch {
   background-color: transparent;
 }
 .be-switch.gray.slide input:checked + .switch {
@@ -6543,7 +6557,6 @@ table.be-table .be-button {
 
 .be-panel {
   --max-height: 200px;
-  border: 1px solid var(--brd);
   transition: height 250ms ease;
   margin: 1em 0;
   width: 100%;
@@ -6551,7 +6564,6 @@ table.be-table .be-button {
   overflow: hidden;
 }
 .be-panel .panel-header {
-  background-color: var(--suf);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -6561,11 +6573,11 @@ table.be-table .be-button {
 .be-panel .panel-header .title {
   flex-grow: 1;
   min-width: 14em;
-  font-weight: 600;
+  font-weight: 700;
 }
 .be-panel .panel-header .panel-toggle-btn {
-  margin-left: 5px;
-  font-size: 0.7142857143emem;
+  line-height: 1;
+  padding: 0 4px;
 }
 .be-panel .panel-header .panel-toggle-btn i {
   transition: transform 150ms ease;
@@ -6574,16 +6586,10 @@ table.be-table .be-button {
   margin: -1px;
 }
 .be-panel .panel-content .content-wrapper {
-  border-top: 1px solid var(--brd);
-  padding: 0.5714285714em 0.5714285714em;
-}
-.be-panel .panel-content .content-wrapper .content-head {
-  background-color: var(--suf);
-  padding: 10px;
-  margin-bottom: 0.5714285714em;
-}
-.be-panel .panel-content .content-wrapper .content-foot {
-  margin-top: 0.5714285714em;
+  padding: 0.5714285714em 0.8571428571em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 .be-panel.border {
   border: 1px solid var(--brd);

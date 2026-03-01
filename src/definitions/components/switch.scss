@@ -172,8 +172,8 @@
     $textColor: $black;
   }
   .#{$ns}-switch {
+    background-color: transparent;
     &.#{$color} {
-      background-color: transparent;
       &.slide {
         input:checked + .switch {
           background-color: $value;

@@ -65,6 +65,18 @@ block contents
                                 code.language-markup
                                     | #{code}
             .section-contents
+                h4.contents-title Indeterminate
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.check1
+                        .ga-checkbox.indeter
+                            input(type="checkbox", name="part")
+                            label Indeterminate
+                    .footer
+                        - var code = '<div class="ga-checkbox {checked}">\n    <input type="checkbox" />\n    <label>Larbel Text</label>\n</div>'
+                            pre
+                                code.language-markup
+                                    | #{code}
+            .section-contents
                 h4.contents-title Radio
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
