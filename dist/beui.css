@@ -5950,7 +5950,7 @@ h5, .h5 {
   padding-right: 5px;
 }
 .be-tabs.browser .tab-menu .tab-item.active span {
-  background-color: var(--suf);
+  background-color: var(--bgc);
   opacity: 1;
 }
 .be-tabs.browser .tab-menu .tab-item .btn-close {
@@ -5959,6 +5959,9 @@ h5, .h5 {
   right: 10px;
   padding: 0.4em;
   transform: translateY(-50%);
+}
+.be-tabs.browser .tab-menu .tab-item .btn-close i {
+  pointer-events: none;
 }
 .be-tabs.browser .tab-menu .tab-item .tabText {
   display: block;
