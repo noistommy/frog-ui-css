@@ -21,7 +21,7 @@ $ns: 'ga';
 // referrence
 
 $grays: (
-    "gray-0": #ffffff,
+    "gray-0": #fafafa,
     "gray-5": #f2f2f2,
     "gray-10": #e9e9e9,
     "gray-15": #dfdfdf,
@@ -35,19 +35,54 @@ $grays: (
     "gray-85": #464646,
     "gray-90": #3d3d3d,
     "gray-95": #333333,
-    "gray-100": #000000,
+    "gray-100": #1a1a1a,
 );
-$white: map.get($grays, 'gray-0');
-$black: map.get($grays, 'gray-95');
 
+@function getGray($index, $isDMode: false) {
+    $resolvedIndex: if($isDMode, 100 - $index, $index);
+    $key: 'gray-#{$resolvedIndex}';
+    @return map.get($grays, $key);
+}
+
+$white: map.get($grays, 'gray-0');
+$black: map.get($grays, 'gray-100');
+
+// base color
+$baseColor: getGray(10);
+$baseColorHover: getGray(15);
+
+$background: getGray(0);
+
+$baseFontColor: getGray(95);
+$subFontColor: getGray(85);
+
+$surface: getGray(5);
+$surfaceHover: getGray(10);
+
+$borderColor: getGray(15);
+$borderDarkColor: getGray(25);
+
+//dark mode base color
+$dModeBaseColor: getGray(10, true);
+$dModeBaseColorHover: getGray(15, true);
+
+$dModeBackground: getGray(0, true);
+
+$dModeBaseFontColor: getGray(95, true);
+$dModeSubFontColor: getGray(85, true);
+
+$dModeSurface: getGray(5, true);
+$dModeSurfaceHover: getGray(10, true);
+
+$dModeBorderColor: getGray(15, true);
+$dModeBorderDarkColor: getGray(25, true);
 //
 //font family
 //
 $fontName: 'Ubuntu Mono';
 $fontSize: calc($baseFontSize * 1px);
 $fontSmoothing: antialiased;
-$baseFontColor: $black;
-$dModeBaseFontColor: $white;
+
 //
 //font weight
 //
@@ -59,29 +94,19 @@ $bolder: 900;
 //
 //line height
 //
-$lineHeight: calc(24 / $baseFontSize);
+// $lineHeight: calc(24 / $baseFontSize);
+$lineHeight: 1.5;
 
 //
 //letter spacing
 //
-$widerSpacing: 1px;
-$wideSpacing: 0.5px;
+$baseLetterSpacing: 0.5px;
+$widerSpacing: $baseLetterSpacing * 2;
+$wideSpacing: $baseLetterSpacing * 1;
 $baseSpacing: normal;
-$narrowSpacing: -0.5px;
-$narrowerSpacing: -1px;
+$narrowSpacing:$baseLetterSpacing * -1;
+$narrowerSpacing:$baseLetterSpacing * -2;
 
-//
-//border color
-//
-$borderColor:  map.get($grays, 'gray-15');
-$borderDarkColor:  map.get($grays, 'gray-25');
-
-
-//
-//base background color
-//
-$background: #FFFFFF;
-$dModeBackground: #333333;
 
 // spacing
 $spacingUnit: 4px;
@@ -115,8 +140,7 @@ $dangerText: $white;
 $attentionText: $white;
 $importanceText: $white;
 
-$surface: #f2f2f2;
-$surfaceHover: #F4F4F4;
+
 
 $gray: #909090;
 $lightGray: color.adjust($gray, $lightness: 16.1%);
@@ -284,7 +308,8 @@ $baseButtonColor: $black;
 $baseButtonBg: #efefef;
 
 $horizontalInputPadding: relativePx(16);
-$verticalInputPadding: relativePx(calc(($heightRhythm - $baseFontSize) / 2));
+$verticalInputPadding: relativePx(10);
+// $verticalInputPadding: relativePx(calc(($heightRhythm - $baseFontSize) / 2));
 // $horizontalPadding: $horizontalInputPadding + ($horizontalInputPadding * 0.5);
 $horizontalPadding: $horizontalInputPadding;
 $verticalPadding: $verticalInputPadding;
@@ -297,13 +322,13 @@ $compactVerticalPadding: $verticalInputPadding * 0.5;
 
 $compactPadding: $compactVerticalPadding $compactHorizontalPadding;
 
-//Button + Equal
+//Button + CTA
 
-$equalBtnWidth: 150px;
-$equalBtnPadding: 11px 20px;
+$ctaBtnWidth: 150px;
+$ctaBtnPadding: 11px 20px;
 
-$equalLargeBtnWidth: 200px;
-$equalLargeBtnPadding: 18px 30px;
+$ctaLargeBtnWidth: 200px;
+$ctaLargeBtnPadding: 18px 30px;
 
 //input base
 $inputLineHeight: relativePx(17);

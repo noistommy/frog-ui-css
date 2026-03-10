@@ -9,19 +9,19 @@
     line-height: $lineHeight;
 
 
-    --bgc: #{map.get($grays, 'gray-0')};
-    --txt: #{map.get($grays, 'gray-95')};
-    --txt-light: #{map.get($grays, 'gray-85')};
-    --brd: #{map.get($grays, 'gray-15')};
+    --bgc: #{$background};
+    --txt: #{$baseFontColor};
+    --txt-light: #{$subFontColor};
+    --brd: #{$borderColor};
 
-    --suf: #{map.get($grays, 'gray-5')};
-    --hover-suf: #{map.get($grays, 'gray-10')};
+    --suf: #{$surface};
+    --hover-suf: #{$surfaceHover};
 
-    --base-color: #{map.get($grays, 'gray-10')};
-    --base-hover-color: #{map.get($grays, 'gray-15')};
+    --base-color: #{$baseColor};
+    --base-hover-color: #{$baseColorHover};
 
-    --depth-bg: #{map.get($grays, 'gray-0')};
-    --depth-bs: 0 0 16px 2px rgba(0, 0, 0, 0.16);
+    --depth-bg: #{$background};
+    --depth-bs: 0 1px 8px 2px rgba(0, 0, 0, 0.16);
 
     --primary: #{$primary};
     --secondary: #{$secondary};
@@ -41,53 +41,55 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bgc: #{map.get($grays, 'gray-95')};
-        --txt: #{map.get($grays, 'gray-0')};
-        --txt-light: #{map.get($grays, 'gray-10')};
-        --brd: #{map.get($grays, 'gray-85')};
+        --bgc: #{$dModeBackground};
+        --txt: #{$dModeBaseFontColor};
+        --txt-light: #{$dModeSubFontColor};
+        --brd: #{$dModeBorderColor};
 
-        --suf: #{map.get($grays, 'gray-90')};
-        --hover-suf: #{map.get($grays, 'gray-90')};
+        --suf: #{$dModeSurface};
+        --hover-suf: #{$dModeSurfaceHover};
 
-        --base-color: #{map.get($grays, 'gray-80')};
-        --base-hover-color: #{map.get($grays, 'gray-70')};
+        --base-color: #{$dModeBaseColor};
+        --base-hover-color: #{$dModeBaseColorHover};
 
-        --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));
+        --depth-bg: color-mix(in oklab, #{$dModeBackground}, rgba(0, 0, 0, 0.04));
         // --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-100')}, rgba(255, 255, 255, 0.04));
         // --depth-bg: #{map.get($grays, 'gray-80')};
         // --depth-bg: rgba(0, 0, 0, 0.2);
-        --depth-bs: none;
+        --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
 
     }
 }
 
 :root.light-mode {
-    --bgc: #{map.get($grays, 'gray-0')};
-    --txt: #{map.get($grays, 'gray-95')};
-    --txt-light: #{map.get($grays, 'gray-85')};
-    --brd: #{map.get($grays, 'gray-15')};
-    --suf: #{map.get($grays, 'gray-5')};
-    --hover-suf: #{map.get($grays, 'gray-10')};
+    --bgc: #{$background};
+    --txt: #{$baseFontColor};
+    --txt-light: #{$subFontColor};
+    --brd: #{$borderColor};
 
-    --base-color: #{map.get($grays, 'gray-10')};
-    --base-hover-color: #{map.get($grays, 'gray-15')};
+    --suf: #{$surface};
+    --hover-suf: #{$surfaceHover};
 
-    --depth-bg: #{map.get($grays, 'gray-0')};
-    --depth-bs: 0 1px 8px 1px rgba(0, 0, 0, 0.16);
+    --base-color: #{$baseColor};
+    --base-hover-color: #{$baseColorHover};
+
+    --depth-bg: #{$background};
+    --depth-bs: 0 1px 8px 2px rgba(0, 0, 0, 0.16);
 }
 
 :root.dark-mode {
-    --bgc: #{map.get($grays, 'gray-95')};
-    --txt: #{map.get($grays, 'gray-0')};
-    --txt-light: #{map.get($grays, 'gray-10')};
-    --brd: #{map.get($grays, 'gray-85')};
-    --suf: #{map.get($grays, 'gray-90')};
-    --hover-suf: #{map.get($grays, 'gray-85')};
+    --bgc: #{$dModeBackground};
+    --txt: #{$dModeBaseFontColor};
+    --txt-light: #{$dModeSubFontColor};
+    --brd: #{$dModeBorderColor};
 
-    --base-color: #{map.get($grays, 'gray-80')};
-    --base-hover-color: #{map.get($grays, 'gray-70')};
+    --suf: #{$dModeSurface};
+    --hover-suf: #{$dModeSurfaceHover};
 
-    --depth-bg: color-mix(in oklab, #{map.get($grays, 'gray-95')}, rgba(0, 0, 0, 0.04));
+    --base-color: #{$dModeBaseColor};
+    --base-hover-color: #{$dModeBaseColorHover};
+
+    --depth-bg: color-mix(in oklab, #{$dModeBackground}, rgba(0, 0, 0, 0.16));
     --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
 }
 

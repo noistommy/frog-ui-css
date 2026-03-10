@@ -29,8 +29,46 @@ $grays: (
     "gray-95": #333333,
     "gray-100": #000000,
 );
+
+@function getGray($index, $isDMode: false) {
+    $resolvedIndex: if($isDMode, 100 - $index, $index);
+    $key: 'gray-#{$resolvedIndex}';
+    @return map.get($grays, $key);
+}
+
 $white: map.get($grays, 'gray-0');
-$black: map.get($grays, 'gray-95');
+$black: map.get($grays, 'gray-100');
+
+// base color
+$baseColor: getGray(10);
+$baseColorHover: getGray(15);
+
+$background: getGray(0);
+
+$baseFontColor: getGray(95);
+$subFontColor: getGray(85);
+
+$surface: getGray(10);
+$surfaceHover: getGray(15);
+
+$borderColor: getGray(15);
+$borderDarkColor: getGray(25);
+
+//dark mode base color
+$dModeBaseColor: getGray(10, true);
+$dModeBaseColorHover: getGray(15, true);
+
+$dModeBackground: getGray(5, true);
+
+$dModeBaseFontColor: getGray(95, true);
+$dModeSubFontColor: getGray(85, true);
+
+$dModeSurface: getGray(10, true);
+$dModeSurfaceHover: getGray(15, true);
+
+$dModeBorderColor: getGray(15, true);
+$dModeBorderDarkColor: getGray(25, true);
+
 
 //
 //font family
@@ -269,13 +307,14 @@ $compactVerticalPadding: $verticalInputPadding * 0.5;
 
 $compactPadding: $compactVerticalPadding $compactHorizontalPadding;
 
-//Button + Equal
+//Button + CTA
 
-$equalBtnWidth: 150px;
-$equalBtnPadding: 11px 20px;
+$ctaBtnWidth: 150px;
+$ctaBtnPadding: 11px 20px;
 
-$equalLargeBtnWidth: 200px;
-$equalLargeBtnPadding: 18px 30px;
+$ctaLargeBtnWidth: 200px;
+$ctaLargeBtnPadding: 18px 30px;
+
 
 //input base
 $inputLineHeight: relativePx(17);

@@ -177,13 +177,13 @@
     
             }
         }
-        &.equal {
-            min-width: $equalBtnWidth;
-            padding: $equalBtnPadding;
+        &.cta {
+            min-width: $ctaBtnWidth;
+            padding: $ctaBtnPadding;
             &.large {
                 font-size: 1rem !important;
-                min-width: $equalLargeBtnWidth;
-                padding: $equalLargeBtnPadding;
+                min-width: $ctaLargeBtnWidth;
+                padding: $ctaLargeBtnPadding;
             }
         }
         &.mini {
@@ -277,7 +277,7 @@
             }
             &.outline {
                 background-color: var(--bgc) !important;
-                color: $bgColor !important;
+                color: $hoverColor !important;
                 box-shadow: 0 0 0 1px $hoverColor inset;
                 &.selected,
                 &:hover {

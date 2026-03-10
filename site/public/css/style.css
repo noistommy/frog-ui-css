@@ -31,6 +31,11 @@ header.gnb .logo {
   padding: 0 10px;
   order: 0;
 }
+header.gnb .logo svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
 header.gnb .toggle-menu {
   display: none;
 }

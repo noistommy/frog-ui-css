@@ -6,16 +6,16 @@
 :root {
   font-family: "Pretendard Variable";
   line-height: 1.7142857143;
-  --bgc: #ffffff;
-  --txt: #333333;
+  --bgc: #FFFFFF;
+  --txt: #000000;
   --txt-light: #464646;
-  --brd: #dfdfdf;
+  --brd: #D6D6D6;
   --suf: #f2f2f2;
-  --hover-suf: #e9e9e9;
+  --hover-suf: #F4F4F4;
   --base-color: #e9e9e9;
   --base-hover-color: #dfdfdf;
-  --depth-bg: #ffffff;
-  --depth-bs: 0 0 16px 2px rgba(0, 0, 0, 0.16);
+  --depth-bg: #FFFFFF;
+  --depth-bs: 0 1px 8px 2px rgba(0, 0, 0, 0.16);
   --primary: #5178af;
   --secondary: #35363a;
   --success: #528E64;
@@ -33,40 +33,40 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bgc: #333333;
-    --txt: #ffffff;
-    --txt-light: #e9e9e9;
+    --txt: #f2f2f2;
+    --txt-light: #dfdfdf;
     --brd: #464646;
     --suf: #3d3d3d;
-    --hover-suf: #3d3d3d;
-    --base-color: #595959;
-    --base-hover-color: #6c6c6c;
+    --hover-suf: #464646;
+    --base-color: #3d3d3d;
+    --base-hover-color: #464646;
     --depth-bg: color-mix(in oklab, #333333, rgba(0, 0, 0, 0.04));
-    --depth-bs: none;
+    --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
   }
 }
 :root.light-mode {
-  --bgc: #ffffff;
-  --txt: #333333;
+  --bgc: #FFFFFF;
+  --txt: #000000;
   --txt-light: #464646;
-  --brd: #dfdfdf;
+  --brd: #D6D6D6;
   --suf: #f2f2f2;
-  --hover-suf: #e9e9e9;
+  --hover-suf: #F4F4F4;
   --base-color: #e9e9e9;
   --base-hover-color: #dfdfdf;
-  --depth-bg: #ffffff;
-  --depth-bs: 0 1px 8px 1px rgba(0, 0, 0, 0.16);
+  --depth-bg: #FFFFFF;
+  --depth-bs: 0 1px 8px 2px rgba(0, 0, 0, 0.16);
 }
 
 :root.dark-mode {
   --bgc: #333333;
-  --txt: #ffffff;
-  --txt-light: #e9e9e9;
+  --txt: #f2f2f2;
+  --txt-light: #dfdfdf;
   --brd: #464646;
   --suf: #3d3d3d;
   --hover-suf: #464646;
-  --base-color: #595959;
-  --base-hover-color: #6c6c6c;
-  --depth-bg: color-mix(in oklab, #333333, rgba(0, 0, 0, 0.04));
+  --base-color: #3d3d3d;
+  --base-hover-color: #464646;
+  --depth-bg: color-mix(in oklab, #333333, rgba(0, 0, 0, 0.16));
   --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
 }
 
@@ -326,10 +326,10 @@ h5, .h5 {
 }
 
 .black {
-  background-color: #333333;
+  background-color: #000000;
 }
 .black-text {
-  color: #333333;
+  color: #000000;
 }
 
 .white {
@@ -351,7 +351,7 @@ h5, .h5 {
   background-color: rgb(185.055, 185.055, 185.055);
 }
 .gray.dark {
-  background-color: rgb(103.02, 103.02, 103.02);
+  background-color: rgb(52.02, 52.02, 52.02);
 }
 
 .gray-bg-0 {
@@ -1301,7 +1301,7 @@ h5, .h5 {
   opacity: 0.5;
 }
 .be-button.text.readOnly {
-  color: #333333;
+  color: #000000;
   pointer-events: none;
 }
 .be-button.text.readOnly:hover {
@@ -1376,11 +1376,11 @@ h5, .h5 {
   display: inline-block;
   transform: scale(1);
 }
-.be-button.equal {
+.be-button.cta {
   min-width: 150px;
   padding: 11px 20px;
 }
-.be-button.equal.large {
+.be-button.cta.large {
   font-size: 1rem !important;
   min-width: 200px;
   padding: 18px 30px;
@@ -1455,7 +1455,7 @@ h5, .h5 {
 }
 .be-button.primary.outline {
   background-color: var(--bgc) !important;
-  color: #5178af !important;
+  color: rgb(63.6031496063, 94.6096850394, 138.3368503937) !important;
   box-shadow: 0 0 0 1px rgb(63.6031496063, 94.6096850394, 138.3368503937) inset;
 }
 .be-button.primary.outline.selected, .be-button.primary.outline:hover {
@@ -1499,7 +1499,7 @@ h5, .h5 {
 }
 .be-button.secondary.outline {
   background-color: var(--bgc) !important;
-  color: #35363a !important;
+  color: hsl(228, 4.5045045045%, -13.9352941176%) !important;
   box-shadow: 0 0 0 1px hsl(228, 4.5045045045%, -13.9352941176%) inset;
 }
 .be-button.secondary.outline.selected, .be-button.secondary.outline:hover {
@@ -1543,7 +1543,7 @@ h5, .h5 {
 }
 .be-button.success.outline {
   background-color: var(--bgc) !important;
-  color: #528E64 !important;
+  color: rgb(76.7469879518, 133.2530120482, 93.6144578313) !important;
   box-shadow: 0 0 0 1px rgb(76.7469879518, 133.2530120482, 93.6144578313) inset;
 }
 .be-button.success.outline.selected, .be-button.success.outline:hover {
@@ -1587,7 +1587,7 @@ h5, .h5 {
 }
 .be-button.info.outline {
   background-color: var(--bgc) !important;
-  color: #909090 !important;
+  color: rgb(118.5, 118.5, 118.5) !important;
   box-shadow: 0 0 0 1px rgb(118.5, 118.5, 118.5) inset;
 }
 .be-button.info.outline.selected, .be-button.info.outline:hover {
@@ -1631,7 +1631,7 @@ h5, .h5 {
 }
 .be-button.danger.outline {
   background-color: var(--bgc) !important;
-  color: #D50000 !important;
+  color: #a20000 !important;
   box-shadow: 0 0 0 1px #a20000 inset;
 }
 .be-button.danger.outline.selected, .be-button.danger.outline:hover {
@@ -1675,7 +1675,7 @@ h5, .h5 {
 }
 .be-button.attention.outline {
   background-color: var(--bgc) !important;
-  color: #EC6E00 !important;
+  color: rgb(185, 86.2288135593, 0) !important;
   box-shadow: 0 0 0 1px rgb(185, 86.2288135593, 0) inset;
 }
 .be-button.attention.outline.selected, .be-button.attention.outline:hover {
@@ -1706,7 +1706,7 @@ h5, .h5 {
 
 .be-button.importance {
   background-color: #FDC036;
-  color: #333333;
+  color: #000000;
 }
 .be-button.importance.border:not(.outline), .be-button.importance.border:not(.text) {
   box-shadow: 0 0 0 1px rgb(252.4975369458, 176.1724137931, 3.5024630542) inset;
@@ -1719,12 +1719,12 @@ h5, .h5 {
 }
 .be-button.importance.outline {
   background-color: var(--bgc) !important;
-  color: #FDC036 !important;
+  color: rgb(252.4975369458, 176.1724137931, 3.5024630542) !important;
   box-shadow: 0 0 0 1px rgb(252.4975369458, 176.1724137931, 3.5024630542) inset;
 }
 .be-button.importance.outline.selected, .be-button.importance.outline:hover {
   background-color: #FDC036 !important;
-  color: #333333 !important;
+  color: #000000 !important;
 }
 .be-button.importance.outline.active {
   color: rgb(252.4975369458, 176.1724137931, 3.5024630542);
@@ -1840,7 +1840,7 @@ h5, .h5 {
 
 .be-button.yellow {
   background-color: #F8B825;
-  color: #333333;
+  color: #000000;
 }
 .be-button.yellow.border:not(.outline), .be-button.yellow.border:not(.text) {
   box-shadow: 0 0 0 1px rgb(226.72, 160.16, 7.28) inset;
@@ -1854,7 +1854,7 @@ h5, .h5 {
   box-shadow: 0 0 0 1px rgb(226.72, 160.16, 7.28) inset;
 }
 .be-button.yellow.outline.selected, .be-button.yellow.outline:hover {
-  color: #333333;
+  color: #000000;
   background-color: #F8B825;
 }
 .be-button.yellow.text {
