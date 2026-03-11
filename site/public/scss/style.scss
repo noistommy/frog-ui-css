@@ -235,13 +235,6 @@ header.gnb .logo {
   }
   .nav-item {
     border-radius: 4px;
-    a {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-    }
     span::first-letter {
       text-transform: uppercase;
     }
@@ -464,17 +457,6 @@ section {
   .ga-list {
     max-width: 250px;
     border: 1px solid var(--brd);
-    .item {
-      padding: 10px;
-    }
-  }
-}
-
-#selectbox {
-  .select-menu {
-    .option-item {
-      padding: 10px;
-    }
   }
 }
 

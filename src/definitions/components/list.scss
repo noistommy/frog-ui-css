@@ -8,6 +8,13 @@ $listItemPadding: calc($verticalInputPadding + 2px);
     align-items: center;
     color: var(--txt);
     padding: $listItemPadding;
+    &:has(a) {
+       padding: 0;
+       a {
+        width: 100%;
+        padding: $listItemPadding;
+       }
+    }
     .item-title {
       flex: 0 1 auto;
     }

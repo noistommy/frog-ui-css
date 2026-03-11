@@ -2877,7 +2877,7 @@ h5, .h5 {
   left: 3px;
   width: 10px;
   height: 3px;
-  background-color: #fff;
+  background-color: var(--suf);
   border-width: 0;
   transform: translateY(0) rotate(0) scale(0);
 }
@@ -5701,6 +5701,13 @@ h5, .h5 {
   display: flex;
   align-items: center;
   color: var(--txt);
+  padding: calc(0.8571428571em + 2px);
+}
+.be-list > .item:has(a) {
+  padding: 0;
+}
+.be-list > .item:has(a) a {
+  width: 100%;
   padding: calc(0.8571428571em + 2px);
 }
 .be-list > .item .item-title {
