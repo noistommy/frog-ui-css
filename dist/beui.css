@@ -4828,6 +4828,7 @@ h5, .h5 {
   font-weight: 500;
   line-height: 1.8em;
   border-radius: 0.2857142857em;
+  color: var(--txt);
   background-color: var(--base-color);
   background-image: none;
   padding: 0 0.8em;
@@ -6004,6 +6005,7 @@ h5, .h5 {
 
 .be-pagination {
   display: flex;
+  align-items: center;
   width: 100%;
   outline: 0;
 }
