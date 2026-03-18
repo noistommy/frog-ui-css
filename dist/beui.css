@@ -1224,7 +1224,7 @@ h5, .h5 {
 
 @keyframes scale-up-center {
   0% {
-    transform: scale(0.5);
+    transform: scale(0.95);
   }
   100% {
     transform: scale(1);
@@ -1237,7 +1237,7 @@ h5, .h5 {
   align-items: center;
   gap: 0.6428571429em;
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1;
   vertical-align: baseline;
   cursor: pointer;
   color: var(--txt);
@@ -1254,9 +1254,6 @@ h5, .h5 {
   box-shadow: 0 0 0 1px transparent inset;
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 }
-.be-button button {
-  font-family: inherit;
-}
 .be-button.hover, .be-button.focus, .be-button:hover, .be-button:focus {
   background-color: var(--hover-suf);
   outline: none;
@@ -1266,8 +1263,8 @@ h5, .h5 {
   opacity: 0.5;
   pointer-events: none;
 }
-.be-button:not(.icon) {
-  border-radius: 0.2857142857em;
+.be-button:active {
+  animation: scale-up-center 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 .be-button.icon {
   min-width: 1em;
@@ -1388,6 +1385,9 @@ h5, .h5 {
 .be-button.mini {
   padding: 0.8571428571em;
 }
+.be-button.static {
+  pointer-events: none;
+}
 .be-button {
   margin: 0 0.5em 0 0;
 }
@@ -1438,6 +1438,10 @@ h5, .h5 {
 }
 .be-buttons.outline .be-button:hover {
   background-color: var(--hover-suf);
+}
+
+button.be-button {
+  font-family: inherit;
 }
 
 .be-button.primary {
