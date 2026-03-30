@@ -45,6 +45,12 @@ block contents
                             .contents 
                                 .title.huge Title
                                 = content
+                        .ga-card.border.media
+                            .image.gray-bg-50
+                                img(src="https://nt-cabinet.vercel.app/ui-el-img/button.svg", alt="button")
+                            .contents 
+                                .title.huge Title
+                                = content
                     .footer 
                         .code-wrapper
                             - var code = `\n<div class=\"ga-card border image\">\n       <div class=\"image\"><img src="..." alt="..." /></div>\n       <div class=\"title\">Title</div>\n       <div class=\"contents\"><!-- insert contents --></div>\n  </div>\n`

@@ -1,0 +1,24 @@
+extends ../layout
+
+block title
+  title #{title} | Components
+
+block contents
+
+  - var menuItems = ['button', 'input', 'tag', 'checkbox', 'switch', 'badge', 'form', 'list', 'selectbox', 'message', 'tabs', 'card', 'segment', 'table', 'pagination', 'panel', 'grid', 'calendar', 'modal', 'toast']
+
+  .page-wrapper
+    section#components
+      .section-title
+        h1 #{title}
+        .section-desc 
+      .section-contents
+        .container
+          .ga-cards.column-3.column-md-2.column-xs-1.round-s
+            each item in menuItems
+              a.ga-card.border.media(href=`/pages/${item}`)
+                .image.gray-bg-5
+                    img(src=`https://nt-cabinet.vercel.app/ui-el-img/${item}.svg`, alt=`${item}`)
+                .contents 
+                    span.large=item
+    block module 

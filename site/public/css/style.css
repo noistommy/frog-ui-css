@@ -142,6 +142,9 @@ header.gnb .logo .sub-logo {
   height: 100%;
   overflow-y: auto;
 }
+.main-container .page-wrapper > section {
+  border-top: 1px solid var(--brd);
+}
 .main-container .page-wrapper .page-header {
   padding: 0 20px;
   text-align: center;
@@ -231,6 +234,9 @@ header.gnb .logo .sub-logo {
 .ui-list .nav-item {
   border-radius: 4px;
 }
+.ui-list .nav-item span {
+  display: inline-block;
+}
 .ui-list .nav-item span::first-letter {
   text-transform: uppercase;
 }
@@ -244,7 +250,6 @@ section {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  border-top: 1px solid var(--brd);
 }
 section .section-title {
   padding-bottom: 20px;
@@ -336,11 +341,6 @@ section .section-contents .contents-wrapper .contents-item {
   width: 100%;
   height: 1px;
   background-color: #d6d6d6;
-}
-#custom-theme .preview-theme {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 #custom-theme .preview-theme > div {
   margin: 0;

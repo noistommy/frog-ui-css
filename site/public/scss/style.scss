@@ -147,6 +147,9 @@ header.gnb .logo {
     overflow-y: auto;
   }
   .page-wrapper {
+    > section {
+      border-top: 1px solid var(--brd);
+    }
     .page-header {
       padding: 0 20px;
       text-align: center;
@@ -235,8 +238,11 @@ header.gnb .logo {
   }
   .nav-item {
     border-radius: 4px;
-    span::first-letter {
-      text-transform: uppercase;
+    span {
+      display: inline-block;
+      &::first-letter {
+        text-transform: uppercase;
+      }
     }
   }
 }
@@ -250,7 +256,7 @@ section {
   padding: 20px;
   //border: 1px solid #d6d6d6;
   // margin-bottom: 20px;
-  border-top: 1px solid var(--brd);
+  // border-top: 1px solid var(--brd);
   .section-title {
     padding-bottom: 20px;
     border-bottom: 1px solid #efefef;
@@ -348,9 +354,6 @@ section {
     background-color: #d6d6d6;
   }
   .preview-theme {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: 10px;
     > div {
       margin: 0;
     }

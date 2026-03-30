@@ -14,6 +14,10 @@ router.get('/pages/faqs', function(req, res, next) {
   res.render('components/faqs',  {title: 'faqs' });
 });
 
+router.get('/pages/components', function(req, res, next) {
+  res.render('components/components',  {title: 'Components' });
+});
+
 router.get('/pages/typography', function(req, res, next) {
   res.render('components/base',  {title: 'Typography' });
 });

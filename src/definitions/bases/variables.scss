@@ -30,6 +30,11 @@ mark {
   box-sizing: border-box;
 }
 
+*:focus-visible:not(input, textarea) {
+    outline: 2px dotted $primary !important;
+    outline-offset: 2px;
+}
+
 // i {
 //     font-size: 1.2em;
 // }
@@ -138,6 +143,65 @@ h5,.h5 {font-size: $h5 !important;}
         background-color: $darkGray;
     }
 }
+
+// #{$ns}-utility-first CSS
+
+.#{$ns} {
+    &.flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        &.inline {display: inline-flex;}
+        &.nowrap {flex-wrap: nowrap;}
+        &:not(.column) {
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+            &.start {justify-content: flex-start;}
+            &.center {justify-content: center;}
+            &.end {justify-content: flex-end;}
+            &.top {align-items: flex-start;}
+            &.mid {align-items: center;}
+            &.bottom {align-items: flex-end;}
+            &.stretch {align-items: stretch;}
+        }
+        &.column {
+            flex-direction: column;
+            &.reverse {
+                flex-direction: column-reverse;
+            }
+            &.start {align-items: flex-start;}
+            &.center {align-items: center;}
+            &.end {align-items: flex-end;}
+            &.stretch {align-items: stretch;}
+            &.top {justify-content: flex-start;}
+            &.mid {justify-content: center;}
+            &.bottom {justify-content: flex-end;}
+        }
+        @for $num from 1 to 10 {
+            &.gap-#{$num} {
+                gap: $num * 4px;
+            }
+        }
+    }
+    &.code {
+        width: 100%;
+        font-family: monospace;
+        padding-block: 10px;
+        padding-inline: 10px;
+        display: inline-flex;
+        flex-direction: column;
+        background-color: var(--base-color);
+        font-weight: 100;
+        &.single {
+            display: inline;
+            line-height: 1;
+
+        }
+    }
+}
+
 // @include generate-color-classes();
 //grayscale
 .gray {
@@ -341,10 +405,10 @@ h5,.h5 {font-size: $h5 !important;}
     
  }
 
- .be-popper-container {
+ .#{$ns}-popper-container {
     outline: none;
     z-index: 9999;
-    .be-popper {
+    .#{$ns}-popper {
       background-color: var(--bgc);
       border-radius: $baseBorderRadius;
       border: 1px solid var(--brd);
@@ -353,14 +417,17 @@ h5,.h5 {font-size: $h5 !important;}
     }
   }
 
-  @keyframes scale-up-center {
-    0% {
-      transform: scale(0.5);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
 
+@keyframes scale-up-center {
+0% {
+    @if $isButtonActivation {
+    transform: scale(0.95);
+    } @else {
+    transform: scale(1);
+    }
+}
+100% {
+    transform: scale(1);
+}
+}
 

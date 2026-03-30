@@ -4,13 +4,12 @@
 .#{$ns} {
     &-button {
         position: relative;
-        // display: inline-block;
         display: inline-flex;
         justify-content: center;
         align-items: center;
         gap: $buttonIconDistance;
         font-weight: 400;
-        line-height: 1em;
+        line-height: 1;
         vertical-align: baseline;
         cursor: pointer;
         color: $baseButtonColor;
@@ -25,13 +24,10 @@
         box-shadow: 0 0 0 1px transparent inset;
         transition: opacity .1s ease,
         background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
-        & button {
-            font-family: inherit;
-        }
         &.hover, &.focus,
         &:hover, &:focus {
             background-color: $hoverButtonBg;
-            outline: none;
+            // outline: none;
         }
         &.disabled,
         &[disabled], &:disabled {
@@ -42,9 +38,12 @@
             // background-color: #F2F2f2 !important;
             pointer-events: none;
         }
-        &:not(.icon) {
-            border-radius: $baseBorderRadius;
-        }
+        &:active {
+            animation: scale-up-center 0.15s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          }
+        // &:not(.icon) {
+        //     border-radius: $baseBorderRadius;
+        // }
         // i {pointer-events: none;}
         &.icon {
             min-width: 1em;
@@ -192,6 +191,9 @@
             //     margin-right: 5px;
             // }
         }
+        &.static {
+            pointer-events: none;
+        }
     
     }
     &-button {
@@ -248,6 +250,9 @@
         }
     }
 }
+button.#{$ns}-button {
+    font-family: inherit;
+}
 
 
 
@@ -292,7 +297,7 @@
                 background-color: transparent;
                 color: $bgColor;
                 box-shadow: none;
-                &:hover {
+                &:hover,  &:focus {
                     color: $hoverColor !important;
                     background-color: $hoverButtonBg !important;
                 }
@@ -369,7 +374,7 @@
                 box-shadow: none;
             }
             &-light {
-                background-color: color.adjust($value, $lightness: 35%) !important;
+                background-color: color.adjust($value, $alpha: -0.8) !important;
                 color: $value !important;
                 &.border {
                     box-shadow: 0 0 0 1px $value inset;

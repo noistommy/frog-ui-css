@@ -124,7 +124,7 @@ $tagHeight: 1.8em;
           transform: translateY(-3px);
         }
       }
-      &.meta {
+      &.meta:not(.shortcut) {
         &:after {
           content: '+';
           color: var(--txt);
@@ -176,14 +176,17 @@ $tagHeight: 1.8em;
           margin-right: 5px;
         }
       }
+      &.shortcut {
+        &:before {
+          margin-right: 2px;
+        }
+      }
     }
   }
   &-tags {
-    width: 100%;
     display: inline-flex;
     align-items: center;
-    overflow-x: auto;
-    &.tagMap {
+    &.tag-map {
       flex-wrap: wrap;
     }
     &.one-of-a-kind {
@@ -200,6 +203,22 @@ $tagHeight: 1.8em;
           opacity: 1;
           transform: scale(1);
           transition-delay: 0ms, 0ms;
+        }
+      }
+    }
+    &.attached {
+      align-items: stretch;
+      gap: 0;
+      .#{$ns}-tag {
+        margin: 0;
+        border-radius: 0;
+        &:first-child {
+          border-top-left-radius: $baseBorderRadius;
+          border-bottom-left-radius: $baseBorderRadius;
+        }
+        &:last-child {
+          border-top-right-radius: $baseBorderRadius;
+          border-bottom-right-radius: $baseBorderRadius;
         }
       }
     }
@@ -252,7 +271,7 @@ $tagHeight: 1.8em;
     }
     &.light.#{$color}.pointing,
     &.light.#{$color}.label {
-      background-color: color.adjust($value, $lightness: 32%);
+      background-color: color.adjust($value, $alpha: -0.8);
       color: $value;
       border: 1px solid;
       border-color: color.adjust($value, $lightness: 10%);

@@ -34,7 +34,7 @@ $iconAreaOffset: 5px;
       // flex: 1 0 auto;
       max-width: 100%;
       &:hover {
-        border-color: var(--brd);
+        border-color: var(--input-brd-hover);
       }
       &:focus {
         border-color: $primary;
@@ -66,9 +66,6 @@ $iconAreaOffset: 5px;
         &-right {text-align: right;}
       }
     }
-    // .focus {
-  
-    // }
     &[disabled], &.disabled {
       > input, > textarea {
         background-color: var(--suf);
@@ -249,7 +246,7 @@ $iconAreaOffset: 5px;
         display: flex;
         align-items: center;
         border: 1px solid var(--brd);
-        padding: $verticalPadding;
+        padding: calc($verticalPadding - 1px);
         line-height: 1;
         vertical-align: baseline;
         &.outline {
@@ -270,8 +267,8 @@ $iconAreaOffset: 5px;
       .#{$ns}-button {
         display: flex;
         align-items: center;
-        border: 1px solid var(--brd);
-        //box-shadow: 0 0 2px $borderColor inset;
+        // border: 1px solid var(--brd);
+        box-shadow: 0 0 0 1px var(--brd) inset;
       }
       &.left {
         input {
@@ -347,7 +344,7 @@ $iconAreaOffset: 5px;
     textarea {
       width: 100%;
       min-height: 10em;
-      padding: 6px 10px;
+      padding: 1rem;
       resize: none;
     }
     &.short textarea {

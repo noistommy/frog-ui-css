@@ -16,6 +16,7 @@ block contents
                     .contents-wrapper
                         .ga-tag.label Standard
                         .ga-tag.label Label
+                        .ga-tag.label.red.prefix(data-prefix="prefix") Tag
                         .ga-tag.label.icon
                             i.xi-user
                         .ga-tag.label.icon
@@ -110,32 +111,39 @@ block contents
                 h4.contents-title kbd
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-tag.label.kbd.enter
+                        .ga-tag.kbd.enter
                             | Enter
-                        .ga-tag.label.kbd.space
+                        .ga-tag.kbd.space
                             | Space
-                        .ga-tag.label.kbd.meta.cmd
-                            | Commend
-                        .ga-tag.label.kbd
-                            | S
+                        .ga-tags
+                            .ga-tag.kbd.meta.cmd
+                                | Command
+                            .ga-tag.kbd
+                                | S
+                        kbd.ga-tag.kbd.shortcut.cmd
+                            | K
                     .footer
-                        - var code = '<div class="ga-tag label kbd enter">\n    { Tag Contents }\n</div>'
-                        - var code1 = '<div class="ga-tag label kbd space">\n    { Tag Contents }\n</div>'
-                        - var code2 = '<div class="ga-tag label kbd meta cmd">\n    { Tag Contents }\n</div>'
-                        - var code3 = '<div class="ga-tag label kbd">\n    { Tag Contents }\n</div>'
+                        - var code = '<div class="ga-tag kbd enter">\n    { Tag Contents }\n</div>'
+                        - var code1 = '<div class="ga-tag kbd space">\n    { Tag Contents }\n</div>'
+                        - var code2 = '<div class="ga-tag kbd meta cmd">\n    { Tag Contents }\n</div>'
+                        - var code3 = '<div class="ga-tag kbd">\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- kbd (Key Enter) -->`}
                                     | #{code}
                                     | #{`<!-- kbd (Key Space) -->`}
                                     | #{code1}
-                                    | #{`<!-- kbd (Key Commend - Meta) -->`}
+                                    | #{`<!-- kbd (Key Command - Meta) -->`}
                                     | #{code2}
                                     | #{`<!-- kbd (Key S) -->`}
                                     | #{code3}
             .section-contents
                 h4.contents-title Tags
                 .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-tags.attached
+                            .ga-tag.label.deeppurple purple
+                            .ga-tag.label.orange orange
                     .contents-wrapper
                         .ga-tags
                             .ga-tag.label.red red

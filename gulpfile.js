@@ -36,7 +36,7 @@ let paths = {
   }
 }
 
-const fileList = ['beui', 'frogui', 'gcloud', 'gcloud_p'];
+const fileList = ['frogui', 'gcloud', 'gcloud_p'];
 
 fs.readFile('config.json', 'utf-8', (err, data) => {
   if (err) return console.log(err)
@@ -50,22 +50,35 @@ const clean = () => {
   return deleteAsync(['dist/'])
 };
 
-// scss 빌드
+// 단일 테마 entry(예: frogui.scss)로 CSS 빌드 — Gulp가 스트림 완료를 추적할 수 있도록 반환
+const buildThemeCss = (themeFile) => {
+  return src([`src/${themeFile}.scss`])
+    .pipe(sassGlob())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(dest('./dist', {sourcemaps:false}))
+    .pipe(rename(`${themeFile}.css`))
+    .pipe(minifyCSS())
+    .pipe(dest('./site/public'))
+}
+
+// scss 빌드 (--file= 이름이 있으면 해당 엔트리만)
 const build = () => {
   const file = process.argv.find(arg => arg.startsWith('--file='))
   if (file) {
     baseFile = file.split('=')[1]
     log(`${baseFile}`)
   }
-  return src([`src/${baseFile}.scss`])
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(postcss([autoprefixer()]))
-    .pipe(dest('./dist', {sourcemaps:false}))
-    .pipe(rename(`${baseFile}.css`))
-    .pipe(minifyCSS())
-    .pipe(dest('./site/public'))
+  return buildThemeCss(baseFile)
 }
+
+// 여러 테마 순차 빌드 — 각 단계가 스트림을 반환해야 Gulp 4에서 "async completion" 오류가 나지 않음
+const buildAll = series(
+  ...fileList.map((themeName) => () => {
+    baseFile = themeName
+    return buildThemeCss(themeName)
+})
+)
 
 // JS 빌드
 const buildJS = () => {
@@ -116,6 +129,7 @@ const question = () => {
 module.exports.question = question;
 module.exports.clean = clean;
 module.exports.build = build;
+module.exports.buildAll = buildAll;
 module.exports.default = series(clean, parallel(build, buildJS, assets), watcher, () => {
     log("Run gulp!!")
 });

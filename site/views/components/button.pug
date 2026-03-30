@@ -101,8 +101,8 @@ block contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.disabled Disabled
-                        .ga-button(disabled) Disabled(attr)
+                        button.ga-button.disabled Disabled
+                        button.ga-button(disabled) Disabled(attr)
                     .footer
                         - var code = '<button class="ga-button disabled">Disabled(class)</button>';
                         - var code1 = '<button class="ga-button" disabled>Disabled(attr)</button>';
@@ -114,8 +114,8 @@ block contents
                 h4.contents-title Border
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.border Border
-                        .ga-button.primary.border Border(Primary)
+                        button.ga-button.border Border
+                        button.ga-button.primary.border Border(Primary)
                     .footer
                         - var code = '<button class="ga-button border">Border</button>';
                             pre
@@ -146,15 +146,15 @@ block contents
                 h4.contents-title Fluid
                 .ga-segment.float.round-m.attached
                     .contents-item
-                        .ga-button.fluid.primary Fluid
+                        button.ga-button.fluid.primary Fluid
                     .contents-item
-                        .ga-button.fluid Fluid
+                        button.ga-button.fluid Fluid
                     .contents-item
-                        .ga-button.fluid.outline Fluid
+                        button.ga-button.fluid.outline Fluid
                     .contents-item
-                        .ga-button.fluid.round Fluid
+                        button.ga-button.fluid.round Fluid
                     .contents-item
-                        .ga-button.fluid.round
+                        button.ga-button.fluid.round
                             .icon.left.xi-arrows-h
                             | Fluid
                     .footer
@@ -166,14 +166,14 @@ block contents
                 h4.contents-title Compact
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.compact.primary Compact
-                        .ga-button.compact Compact
-                        .ga-button.compact.round Compact
-                        .ga-button.compact.outline Compact
-                        .ga-button.compact
+                        button.ga-button.compact.primary Compact
+                        button.ga-button.compact Compact
+                        button.ga-button.compact.round Compact
+                        button.ga-button.compact.outline Compact
+                        button.ga-button.compact
                             i.icon.left.xi-code
                             | CODE
-                        .ga-button.compact.icon
+                        button.ga-button.compact.icon
                             i.xi-crown
                     .contents-wrapper
                         button.ga-button.success.compact Success
@@ -190,8 +190,8 @@ block contents
                 h4.contents-title Outline
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.outline Outline
-                        .ga-button.outline.primary Outline
+                        button.ga-button.outline Outline
+                        button.ga-button.outline.primary Outline
                     .footer
                         - var code = '<button class="ga-button outline">Outline</button>';
                             pre
@@ -201,11 +201,11 @@ block contents
                 h4.contents-title Icon (* required - Xeicon 2.3.3)
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.icon
+                        button.ga-button.icon
                             i.xi-laptop
-                        .ga-button.icon.outline
+                        button.ga-button.icon.outline
                             i.xi-plug
-                        .ga-button.icon.round
+                        button.ga-button.icon.round
                             i.xi-flight-on
                     .footer
                         - var code = '<button class="ga-button icon">\n    <i class="xi-icon"></i>\n</button>'
@@ -216,11 +216,11 @@ block contents
                 h4.contents-title Round
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.icon.round
+                        button.ga-button.icon.round
                             i.xi-desktop
-                        .ga-button.round Round
-                        .ga-button.round A
-                        .ga-button.round.outline B
+                        button.ga-button.round Round
+                        button.ga-button.round A
+                        button.ga-button.round.outline B
                     .footer
                         - var code = '<button class="ga-button round">Round</button>'
                             pre
@@ -230,10 +230,10 @@ block contents
                 h4.contents-title Icon
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button
+                        button.ga-button
                             i.icon.left.xi-angle-left
                             | Left
-                        .ga-button
+                        button.ga-button
                             | Right
                             i.icon.right.xi-angle-right
                     .footer
@@ -247,10 +247,10 @@ block contents
                 h4.contents-title With Badge
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-button.badge
+                        button.ga-button.badge
                             | Best
                             .in-badge.primary Best
-                        .ga-button.badge.fluid
+                        button.ga-button.badge.fluid
                             | Sale
                             .in-badge.secondary Sale
                     .footer
@@ -266,22 +266,22 @@ block contents
                     .contents-wrapper
                         .ga-grid
                             .column.span-4.span-xs-6
-                                .ga-button.text Text
+                                button.ga-button.text Text
                             .column.span-4.span-xs-6
-                                .ga-button.text.primary Text
+                                button.ga-button.text.primary Text
                             .column.span-4.span-xs-6
-                                .ga-button.text
+                                button.ga-button.text
                                     i.icon.left.xi-text-size
                                     | Text
                             .column.span-4.span-xs-6
-                                .ga-button.text.green.no-hover
+                                button.ga-button.text.green.no-hover
                                     | Text(no-hover)
                                     i.icon.right.xi-angle-right
                             .column.span-4.span-xs-6
-                                .ga-button.text.icon
+                                button.ga-button.text.icon
                                     i.xi-lock
                             .column.span-4.span-xs-6
-                                .ga-button.text.badge
+                                button.ga-button.text.badge
                                     | Update
                                     .in-badge.ga-red  123
                     .footer
@@ -294,37 +294,37 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-buttons
-                            .ga-button.selected Play
-                            .ga-button Stop
-                            .ga-button Pause
+                            button.ga-button.selected Play
+                            button.ga-button Stop
+                            button.ga-button Pause
                             //- .ga-button 재시작
                             //- .ga-button 종료
                     .contents-wrapper
                         .ga-buttons
-                            .ga-button.icon
+                            button.ga-button.icon
                                 i.xi-play
-                            .ga-button.icon
+                            button.ga-button.icon
                                 i.xi-stop
-                            .ga-button.icon
+                            button.ga-button.icon
                                 i.xi-pause
-                            .ga-button.icon
+                            button.ga-button.icon
                                 i.xi-rotate-right
-                            .ga-button.icon
+                            button.ga-button.icon
                                 i.xi-power-off
                     .contents-wrapper
                         .ga-buttons.outline
-                            .ga-button UP
-                            .ga-button CENTER
-                            .ga-button BOTTOM
+                            button.ga-button UP
+                            button.ga-button CENTER
+                            button.ga-button BOTTOM
                     .contents-wrapper
                         .ga-button-groups
-                            .ga-button.outline.mini.primary
+                            button.ga-button.outline.mini.primary
                                 i.icon.left.xi-play
                                 | Play
-                            .ga-button.outline.mini.primary
+                            button.ga-button.outline.mini.primary
                                 i.icon.left.xi-stop
                                 | Stop
-                            .ga-button.outline.mini.primary
+                            button.ga-button.outline.mini.primary
                                 i.icon.left.xi-pause
                                 | Pause
                             //- .ga-button.outline.mini.primary
