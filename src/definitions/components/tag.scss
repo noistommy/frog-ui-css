@@ -34,7 +34,7 @@ $tagHeight: 1.8em;
       color: var(--txt);
       background-color: $baseTagColor;
       background-image: none;
-      padding: 0 0.8em;
+      padding-inline: 0.8em;
       text-transform: none;
       border: 0 solid transparent;
       transition: background 0.1s ease;
@@ -180,6 +180,34 @@ $tagHeight: 1.8em;
         &:before {
           margin-right: 2px;
         }
+      }
+    }
+    &.prefix {
+      > .detail:first-child,
+      &[data-prefix]::before {
+        padding-inline: 0.8em;
+        background-color: var(--base-color);
+        color: var(--txt);
+        transform: translateX(-0.8em);
+        border-top-left-radius: $baseBorderRadius;
+        border-bottom-left-radius: $baseBorderRadius;
+      }
+      &[data-prefix]::before {
+        content: attr(data-prefix);
+      }
+    }
+    &.suffix {
+      > .detail:last-child,
+      &[data-suffix]::after {
+        padding-inline: 0.8em;
+        background-color: var(--base-color);
+        color: var(--txt);
+        transform: translateX(0.8em);
+        border-top-right-radius: $baseBorderRadius;
+        border-bottom-right-radius: $baseBorderRadius;
+      }
+      &[data-suffix]::after {
+        content: attr(data-suffix);
       }
     }
   }

@@ -4944,7 +4944,7 @@ button.be-button {
   color: var(--txt);
   background-color: var(--base-color);
   background-image: none;
-  padding: 0 0.8em;
+  padding-inline: 0.8em;
   text-transform: none;
   border: 0 solid transparent;
   transition: background 0.1s ease;
@@ -5070,6 +5070,28 @@ button.be-button {
 }
 .be-tag.kbd.shortcut:before {
   margin-right: 2px;
+}
+.be-tag.prefix > .detail:first-child, .be-tag.prefix[data-prefix]::before {
+  padding-inline: 0.8em;
+  background-color: var(--base-color);
+  color: var(--txt);
+  transform: translateX(-0.8em);
+  border-top-left-radius: 0.2857142857em;
+  border-bottom-left-radius: 0.2857142857em;
+}
+.be-tag.prefix[data-prefix]::before {
+  content: attr(data-prefix);
+}
+.be-tag.suffix > .detail:last-child, .be-tag.suffix[data-suffix]::after {
+  padding-inline: 0.8em;
+  background-color: var(--base-color);
+  color: var(--txt);
+  transform: translateX(0.8em);
+  border-top-right-radius: 0.2857142857em;
+  border-bottom-right-radius: 0.2857142857em;
+}
+.be-tag.suffix[data-suffix]::after {
+  content: attr(data-suffix);
 }
 .be-tags {
   display: inline-flex;
