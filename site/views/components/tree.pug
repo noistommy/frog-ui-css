@@ -1,0 +1,62 @@
+extends ../layout
+
+
+
+block title
+    title #{title} | Frog UI CSS
+
+block contents
+    .page-wrapper
+        section#tree
+            .section-title
+                h1= title
+                .section-desc 
+                    p
+            .section-contents
+                h4.contents-title Base
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-tree-list
+                            .tree-branch(aria-show="false")
+                                .node 
+                                    .node-title 
+                                        .node-label Tree Title 1
+                                .node-children
+                                    .tree-branch(aria-show="false") 
+                                        .node 
+                                            .node-title 
+                                                .node-label Child Node 2
+                                    .tree-branch(aria-show="false") 
+                                        .node 
+                                            .node-title 
+                                                .node-label Child Node 2
+                                        .node-children
+                                            .tree-branch(aria-show="false") 
+                                                .node 
+                                                    .node-title 
+                                                        .node-label Child Node 2-1
+                            .tree-branch(aria-show="false")
+                                .node 
+                                    .node-title 
+                                        .node-label Tree Title 
+                                .node-children
+                                    .tree-branch(aria-show="false") 
+                                        .node 
+                                            .node-title 
+                                                .node-label Child Node 2
+                                    .tree-branch(aria-show="false") 
+                                        .node 
+                                            .node-title 
+                                                .node-label Child Node 2
+                                        .node-children
+                                            .tree-branch(aria-show="false") 
+                                                .node 
+                                                    .node-title 
+                                                        .node-label Child Node 2-1
+                    .footer 
+                        - var code =`\n<div class="ga-tree-list">\n     <div class="tree">\n        <!-- contents -->\n     </div>\n</div>`
+                        pre 
+                            code.language-markup 
+                                | #{code}
+block module 
+    script(src="/js/tree.js")

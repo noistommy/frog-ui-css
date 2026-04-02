@@ -30,7 +30,7 @@ mark {
   box-sizing: border-box;
 }
 
-*:focus-visible:not(input, textarea) {
+*:focus-visible:not(input, textarea, select) {
     outline: 2px dotted $primary !important;
     outline-offset: 2px;
 }

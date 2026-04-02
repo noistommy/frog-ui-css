@@ -118,5 +118,9 @@ router.get('/pages/toast', function(req, res, next) {
   res.render('components/toast',  { title: 'Toast' });
 });
 
+router.get('/pages/tree_list', function(req, res, next) {
+  res.render('components/tree',  { title: 'Tree' });
+});
+
 
 module.exports = router;

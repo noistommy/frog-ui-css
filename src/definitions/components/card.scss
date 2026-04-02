@@ -94,6 +94,8 @@ $cardRadius: 1rem;
   }
   
   &-cards {
+    container-name: card-container;
+    container-type: inline-size;
     display: flex;
     flex-wrap: wrap;
 
@@ -128,8 +130,7 @@ $cardRadius: 1rem;
   }
 }
 
-
-@media all and (max-width: #{$bp-tablet - 0.02px}) {
+@media (max-width: #{$bp-mobile - 0.02px}) {
   .#{$ns} {
     &-cards {
       &.column {
@@ -140,7 +141,7 @@ $cardRadius: 1rem;
     }
   }
 }
-@media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 0.02px}) {
+@media (min-width: #{$bp-mobile}) and (max-width: #{$bp-tablet - 0.02px}) {
   .#{$ns} {
     &-cards {
       &.column {
@@ -151,15 +152,15 @@ $cardRadius: 1rem;
     }
   }
 }
-@media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 0.02px}) {
+@media (min-width: #{$bp-tablet}) and (max-width: #{$bp-desktop - 0.02px}) {
   //@media all and (max-width: #{$bp-desktop - 1px}) {
-    .#{$ns} {
-      &-cards {
-        &.column {
-          @for $i from 1 through $maxCardColumn {
-            &-md-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
-          }
+  .#{$ns} {
+    &-cards {
+      &.column {
+        @for $i from 1 through $maxCardColumn {
+          &-md-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
         }
       }
     }
+  }
 }
