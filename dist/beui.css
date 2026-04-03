@@ -1546,9 +1546,6 @@ h5, .h5 {
   background-color: #5178af;
   color: #fff;
 }
-.be-buttons.border .be-button:hover, .be-buttons.outline .be-button:hover {
-  background-color: var(--hover-suf);
-}
 .be-buttons.round {
   border-radius: 2em;
 }
