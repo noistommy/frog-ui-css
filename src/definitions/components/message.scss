@@ -1,8 +1,8 @@
 @use 'sass:color';
 @use 'sass:list';
 
-$msgHorizontalPadding: 20px;
-$msgVerticalPadding: 16px;
+$msgHorizontalPadding: 16px;
+$msgVerticalPadding: 12px;
 $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
 
 .#{$ns} {
@@ -35,17 +35,18 @@ $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
       }
     }
     &.icon {
-      padding-left: 48px;
+      padding-left: 42px;
       position: relative;
-      i.icon {
+      i {
         position: absolute;
-        top: 15px;
-        left: 15px;
-        font-size: 1.6em;
+        top: 12px;
+        left: 16px;
+        font-size: 1.2rem;
+        line-height: 1.5;
       }
     }
     & > .title {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
   &-messages {
@@ -107,6 +108,15 @@ $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
       background-color: color.change(list.nth($value, 1), $alpha: 0.16) !important;
       color: list.nth($value, 1) !important;
       border-color: list.nth($value, 1) !important;
+      &-text {
+        color: list.nth($value, 1) !important;
+      }
+      &-bg {
+        background-color: color.change(list.nth($value, 1), $alpha: 0.16) !important;
+      }
+      &-border {
+        border-color: list.nth($value, 1) !important;
+      }
     }
   }
 }

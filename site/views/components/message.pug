@@ -14,10 +14,14 @@ block contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-message contents
+                        .ga-message base message
                         .ga-message 
-                            .msg-title.bold Title
-                            .msg-contents contents
+                            .title Title 
+                            .contents title + contents
+                        .ga-message.icon 
+                            i.icon.xi-check-circle-o
+                            .title Title
+                            .contents icon + title + contents
                     .footer 
                         - var code = `<div class="ga-message">\n        <!-- contents -->\n  </div>`
                         pre 
@@ -27,13 +31,115 @@ block contents
                 h4.contents-title State
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-message.success Success
-                        .ga-message.danger Danger
-                        .ga-message.info Info
-                        .ga-message.attention Attention
-                        .ga-message.importance Importance
+                        .ga-message.icon.success 
+                            i.xi-check-circle
+                            .title Success
+                            .contents Display contents about success status.
+                        .ga-message.icon.danger
+                            i.xi-error 
+                            .title Danger
+                            .contents Display contents about danger status.
+                        .ga-message.icon.info
+                            i.xi-info
+                            .title Info
+                            .contents Display contents about information status.
+                        .ga-message.icon.attention
+                            i.xi-warning
+                            .title Attention
+                            .contents Display contents about attention status.
+                        .ga-message.icon.importance
+                            i.xi-star
+                            .title Importance
+                            .contents Display contents about important status.
                     .footer 
                         - var code = `<div class="ga-message { status }">\n        <!-- contents -->\n  </div>`
+                        pre 
+                            code.language-markup 
+                                | #{code}
+            .section-contents
+                h4.contents-title State text
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-message.icon.success-text
+                            i.xi-check-circle
+                            .title Success
+                            .contents Display contents about success status.
+                        .ga-message.icon.danger-text
+                            i.xi-error 
+                            .title Danger
+                            .contents Display contents about danger status.
+                        .ga-message.icon.info-text
+                            i.xi-info
+                            .title Info
+                            .contents Display contents about information status.
+                        .ga-message.icon.attention-text
+                            i.xi-warning
+                            .title Attention
+                            .contents Display contents about attention status.
+                        .ga-message.icon.importance-text
+                            i.xi-star
+                            .title Importance
+                            .contents Display contents about important status.
+                    .footer 
+                        - var code = `<div class="ga-message { status }-text">\n        <!-- contents -->\n  </div>`
+                        pre 
+                            code.language-markup 
+                                | #{code}
+            .section-contents
+                h4.contents-title State background
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-message.icon.success-bg
+                            i.xi-check-circle
+                            .title Success
+                            .contents Display contents about success status.
+                        .ga-message.icon.danger-bg
+                            i.xi-error 
+                            .title Danger
+                            .contents Display contents about danger status.
+                        .ga-message.icon.info-bg
+                            i.xi-info
+                            .title Info
+                            .contents Display contents about information status.
+                        .ga-message.icon.attention-bg
+                            i.xi-warning
+                            .title Attention
+                            .contents Display contents about attention status.
+                        .ga-message.icon.importance-bg
+                            i.xi-star
+                            .title Importance
+                            .contents Display contents about important status.
+                    .footer 
+                        - var code = `<div class="ga-message { status }-bg">\n        <!-- contents -->\n  </div>`
+                        pre 
+                            code.language-markup 
+                                | #{code}
+            .section-contents
+                h4.contents-title State border
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-message.icon.success-border
+                            i.xi-check-circle
+                            .title Success
+                            .contents Display contents about success status.
+                        .ga-message.icon.danger-border
+                            i.xi-error 
+                            .title Danger
+                            .contents Display contents about danger status.
+                        .ga-message.icon.info-border
+                            i.xi-info
+                            .title Info
+                            .contents Display contents about information status.
+                        .ga-message.icon.attention-border
+                            i.xi-warning
+                            .title Attention
+                            .contents Display contents about attention status.
+                        .ga-message.icon.importance-border
+                            i.xi-star
+                            .title Importance
+                            .contents Display contents about important status.
+                    .footer 
+                        - var code = `<div class="ga-message { status }-border">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
                                 | #{code}

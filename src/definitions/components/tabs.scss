@@ -45,19 +45,21 @@ $tabsItemPadding: $buttonPadding;
       }
     }
     &.vertical {
-      border-bottom: 0;
-      border-left: $tabLineWidth solid $tabsLineColor;
-      .tab-item.active {
-        position: relative;
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: auto;
-          right: 100%;
-          width: $tabLineWidth;
-          height: 100%;
-          background-color: $primary;
+      .tab-menu {
+        border: 0;
+        border-left: $tabLineWidth solid $tabsLineColor;
+        .tab-item.active {
+          position: relative;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: auto;
+            right: 100%;
+            width: $tabLineWidth;
+            height: 100%;
+            background-color: $primary;
+          }
         }
       }
     }
@@ -87,6 +89,8 @@ $tabsItemPadding: $buttonPadding;
     .tab-menu {
       display: flex;
       //overflow: hidden;
+      flex-wrap: nowrap;
+      overflow-x: auto;
       padding: 0 10px;
       .tab-item {
         position: relative;
