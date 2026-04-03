@@ -1451,6 +1451,7 @@ h5, .h5 {
   text-align: center;
   font-size: 1em;
 }
+.be-button.link a,
 .be-button a.link {
   position: absolute;
   inset: 0;
@@ -1516,37 +1517,48 @@ h5, .h5 {
   background-color: #5178af;
   color: #fff;
 }
-.be-buttons .be-button:first-child:not(.icon) {
+.be-buttons .be-button:first-child {
   border-top-left-radius: 0.2857142857em;
   border-bottom-left-radius: 0.2857142857em;
 }
-.be-buttons .be-button:last-child:not(.icon) {
+.be-buttons .be-button:last-child {
   border-top-right-radius: 0.2857142857em;
   border-bottom-right-radius: 0.2857142857em;
 }
 .be-buttons .be-button + .be-button {
   margin-left: 1px;
 }
-.be-buttons.outline {
+.be-buttons.border, .be-buttons.outline {
   border-radius: 0.2857142857em;
   border: 1px solid var(--brd);
   overflow: hidden;
 }
-.be-buttons.outline .be-button {
+.be-buttons.border .be-button, .be-buttons.outline .be-button {
   margin: 0;
   box-shadow: none;
   border-left: 1px solid var(--brd);
 }
-.be-buttons.outline .be-button:first-child {
+.be-buttons.border .be-button:first-child, .be-buttons.outline .be-button:first-child {
   border-left: none;
   border-left: 0;
 }
-.be-buttons.outline .be-button.active, .be-buttons.outline .be-button.selected {
+.be-buttons.border .be-button.active, .be-buttons.border .be-button.selected, .be-buttons.outline .be-button.active, .be-buttons.outline .be-button.selected {
   background-color: #5178af;
   color: #fff;
 }
-.be-buttons.outline .be-button:hover {
+.be-buttons.border .be-button:hover, .be-buttons.outline .be-button:hover {
   background-color: var(--hover-suf);
+}
+.be-buttons.round {
+  border-radius: 2em;
+}
+.be-buttons.round .be-button:first-child {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+.be-buttons.round .be-button:last-child {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
 }
 
 button.be-button {
@@ -2458,6 +2470,12 @@ button.be-button {
 .be-input input:focus + i.icon.clear-btn:hover, .be-input textarea:focus + i.icon.clear-btn:hover, .be-input .input:focus + i.icon.clear-btn:hover {
   opacity: 1;
 }
+.be-input input:focus + .be-button, .be-input textarea:focus + .be-button, .be-input .input:focus + .be-button {
+  box-shadow: 0 0 0 1px #5178af inset;
+}
+.be-input input:focus + .label, .be-input textarea:focus + .label, .be-input .input:focus + .label {
+  border-color: #5178af !important;
+}
 .be-input input::-moz-placeholder, .be-input textarea::-moz-placeholder, .be-input .input::-moz-placeholder {
   opacity: 0.8;
 }
@@ -2634,6 +2652,7 @@ button.be-button {
   padding: calc(0.8571428571em - 1px);
   line-height: 1;
   vertical-align: baseline;
+  background-color: var(--base-color);
 }
 .be-input.labeled .label.outline {
   background-color: var(--bgc);

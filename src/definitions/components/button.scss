@@ -140,6 +140,7 @@
             //     margin: 0 0 0 $buttonIconDistance;
             // }
         }
+        &.link a,
         a.link {
             position: absolute;
             inset: 0;
@@ -214,11 +215,11 @@
                 background-color: $primary;
                 color: #fff;
             }
-            &:first-child:not(.icon) {
+            &:first-child {
                 border-top-left-radius: $baseBorderRadius;
                 border-bottom-left-radius: $baseBorderRadius;
             }
-            &:last-child:not(.icon) {
+            &:last-child {
                 border-top-right-radius: $baseBorderRadius;
                 border-bottom-right-radius: $baseBorderRadius;
             }
@@ -226,6 +227,7 @@
                 margin-left: 1px;
             }
         }
+        &.border,
         &.outline {
             border-radius: $baseBorderRadius;
             border: 1px solid var(--brd);
@@ -245,6 +247,19 @@
                 }
                 &:hover {
                     background-color: $hoverButtonBg;
+                }
+            }
+        }
+        &.round {
+            border-radius: 2em;
+            .#{$ns}-button {
+                &:first-child {
+                border-top-left-radius: 2em;
+                border-bottom-left-radius: 2em;
+                }
+                &:last-child {
+                border-top-right-radius: 2em;
+                border-bottom-right-radius: 2em;
                 }
             }
         }

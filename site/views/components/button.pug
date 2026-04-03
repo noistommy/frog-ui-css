@@ -297,10 +297,8 @@ block contents
                             button.ga-button.selected Play
                             button.ga-button Stop
                             button.ga-button Pause
-                            //- .ga-button 재시작
-                            //- .ga-button 종료
                     .contents-wrapper
-                        .ga-buttons
+                        .ga-buttons.round
                             button.ga-button.icon
                                 i.xi-play
                             button.ga-button.icon
@@ -313,11 +311,11 @@ block contents
                                 i.xi-power-off
                     .contents-wrapper
                         .ga-buttons.outline
-                            button.ga-button UP
+                            button.ga-button TOP
                             button.ga-button CENTER
                             button.ga-button BOTTOM
                     .contents-wrapper
-                        .ga-button-groups
+                        .ga-buttons
                             button.ga-button.outline.mini.primary
                                 i.icon.left.xi-play
                                 | Play
@@ -327,12 +325,6 @@ block contents
                             button.ga-button.outline.mini.primary
                                 i.icon.left.xi-pause
                                 | Pause
-                            //- .ga-button.outline.mini.primary
-                            //-     i.icon.left.fal.fa-arrow-rotate-right
-                            //-     | 재시작
-                            //- .ga-button.outline.mini.primary
-                            //-     i.icon.left.fal.fa-power-off
-                            //-     | 종료
                     .footer
                         - var code = '<div class="ga-buttons">\n    <div class="ga-button selected">BTN 1</div>\n    <div class="ga-button">BTN 2</div>\n    <div class="ga-button">BTN 3</div>\n    <div class="ga-button">BTN 4</div>\n    ...\n </div>'
                             pre
