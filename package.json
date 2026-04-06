@@ -1,7 +1,7 @@
 {
-  "name": "gitris-ui",
+  "name": "frog-ui",
   "version": "1.0.0",
-  "description": "gtris-ui is stypesheet library",
+  "description": "Frog UI is CSS Framework",
   "main": "index.js",
   "scripts": {
     "start": "node ./site/bin/www",

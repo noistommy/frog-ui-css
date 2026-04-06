@@ -5511,7 +5511,7 @@ button.be-button {
   border: 1px solid var(--brd);
   color: var(--txt-light);
   margin-bottom: 4px;
-  width: 100%;
+  min-width: 300px;
   line-height: 1.7142857143;
 }
 .be-message:last-child {

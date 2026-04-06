@@ -13,7 +13,7 @@ $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
     border: 1px solid var(--brd);
     color: var(--txt-light);
     margin-bottom: 4px;
-    width: 100%;
+    min-width: 300px;
     line-height: $lineHeight;
     &:last-child {
         margin: 0;
