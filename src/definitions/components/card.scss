@@ -94,12 +94,12 @@ $cardRadius: 1rem;
   }
   
   &-cards {
-    container-name: card-container;
-    container-type: inline-size;
+    // container-name: card-container;
+    // container-type: inline-size;
     display: flex;
     flex-wrap: wrap;
-
     gap: 12px;
+    width: 100%;
     &.column {
       @for $i from 1 through $maxCardColumn {
         &-#{$i} > .#{$ns}-card {

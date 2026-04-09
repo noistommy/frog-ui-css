@@ -7254,11 +7254,10 @@ table.be-table .be-button {
   margin-bottom: 20px;
 }
 .be-cards {
-  container-name: card-container;
-  container-type: inline-size;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  width: 100%;
 }
 .be-cards.column-1 > .be-card {
   width: calc(100% - 12px);
