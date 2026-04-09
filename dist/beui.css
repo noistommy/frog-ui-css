@@ -6784,11 +6784,10 @@ table.be-table .be-button {
 }
 
 .be-panel {
-  --max-height: 200px;
-  transition: height 250ms ease;
+  --max-height: 100dvh;
   margin: 1em 0;
   width: 100%;
-  border-radius: 4px;
+  border-radius: 0.2857142857em;
   overflow: hidden;
 }
 .be-panel .panel-header {
@@ -6826,21 +6825,38 @@ table.be-table .be-button {
   border-top: 1px solid var(--brd);
 }
 .be-panel.collapse .panel-content {
-  height: 0;
+  max-height: 0;
   overflow: auto;
-  transition: height 250ms ease;
+  transition: all 0.25s ease;
 }
 .be-panel.collapse.icon.left .panel-toggle-btn {
   order: -1;
 }
 .be-panel.collapse.open .panel-content {
-  height: var(--max-height);
-}
-.be-panel.collapse.open .panel-content .content-wrapper {
-  display: inline-block;
+  max-height: var(--max-height);
 }
 .be-panel.collapse.open .panel-toggle-btn i {
   transform: rotate(180deg);
+}
+
+.be-accordion {
+  border-radius: 0.2857142857em;
+}
+.be-accordion .be-panel {
+  margin: 0;
+  border-radius: 0;
+}
+.be-accordion .be-panel .panel-content {
+  transition: none;
+}
+.be-accordion.border {
+  border: 1px solid var(--brd);
+}
+.be-accordion.border .be-panel {
+  border-bottom: 1px solid var(--brd);
+}
+.be-accordion.border .be-panel:last-child {
+  border-bottom: 0;
 }
 
 .be-segment {
