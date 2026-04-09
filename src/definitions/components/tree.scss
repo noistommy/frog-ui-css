@@ -26,28 +26,26 @@
   }
   &[aria-show="true"],
   &.show {
-    & > .node {
+    & > .node-title {
       .expend-icon {
         transform: rotate(0) !important;
       }
     }
   }
-  .node {
+  .node-title {
     position: relative;
+    display: flex;
+    align-items: center;
     margin-bottom: 1px;
-    .node-title {
-      display: flex;
-      align-items: center;
-      .node-label {
-        padding: 4px;
-        flex: 1 0 auto;
-        &:hover {
-          background-color: var(--hover-suf);
-        }
-        .sub-title {
-          color: var(--text-light);
-          line-height: 1;
-        }
+    .node-label {
+      padding: 4px;
+      flex: 1 0 auto;
+      &:hover {
+        background-color: var(--hover-suf);
+      }
+      .sub-title {
+        color: var(--txt-light);
+        line-height: 1;
       }
     }
     .sub-node-title {

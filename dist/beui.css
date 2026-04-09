@@ -6862,7 +6862,7 @@ table.be-table .be-button {
 .be-segment {
   border-radius: 0.2857142857em;
   background-color: var(--depth-bg);
-  color: var(--txt-light);
+  color: var(--txt);
   margin-bottom: 12px;
   overflow: auto;
 }
@@ -7604,40 +7604,38 @@ table.be-table .be-button {
 .tree-branch[aria-show=false] > .node-children {
   display: none;
 }
-.tree-branch[aria-show=true] > .node .expend-icon, .tree-branch.show > .node .expend-icon {
+.tree-branch[aria-show=true] > .node-title .expend-icon, .tree-branch.show > .node-title .expend-icon {
   transform: rotate(0) !important;
 }
-.tree-branch .node {
+.tree-branch .node-title {
   position: relative;
-  margin-bottom: 1px;
-}
-.tree-branch .node .node-title {
   display: flex;
   align-items: center;
+  margin-bottom: 1px;
 }
-.tree-branch .node .node-title .node-label {
+.tree-branch .node-title .node-label {
   padding: 4px;
   flex: 1 0 auto;
 }
-.tree-branch .node .node-title .node-label:hover {
+.tree-branch .node-title .node-label:hover {
   background-color: var(--hover-suf);
 }
-.tree-branch .node .node-title .node-label .sub-title {
-  color: var(--text-light);
+.tree-branch .node-title .node-label .sub-title {
+  color: var(--txt-light);
   line-height: 1;
 }
-.tree-branch .node .sub-node-title {
+.tree-branch .node-title .sub-node-title {
   font-size: 0.85;
   color: #909090;
   padding: 0;
 }
-.tree-branch .node i.icon {
+.tree-branch .node-title i.icon {
   width: 22px;
   aspect-ratio: 1;
   transition: transform 250ms;
   padding: 4px;
 }
-.tree-branch .node i.icon.expend-icon {
+.tree-branch .node-title i.icon.expend-icon {
   transform: rotate(-90deg);
 }
 .tree-branch .node-children {
