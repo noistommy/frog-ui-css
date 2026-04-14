@@ -10,6 +10,14 @@
   const STORAGE_KEY = 'selected-css-file';
   const DEFAULT_CSS = '/frogui.css';
 
+  function normalizeCssPath(path) {
+      try {
+          return new URL(path, window.location.origin).pathname;
+      } catch (e) {
+          return path;
+      }
+  }
+
   /**
    * CSS 파일을 동적으로 교체하는 함수
    * @param {string} cssPath - 교체할 CSS 파일 경로
@@ -19,6 +27,13 @@
       
       if (!linkElement) {
           console.warn('CSS link element not found');
+          return;
+      }
+
+      const currentPath = normalizeCssPath(linkElement.getAttribute('href'));
+      const nextPath = normalizeCssPath(cssPath);
+
+      if (currentPath === nextPath) {
           return;
       }
 
@@ -78,14 +93,16 @@
       try {
           const savedCSS = localStorage.getItem(STORAGE_KEY) || DEFAULT_CSS;
           const linkElement = document.getElementById(CSS_LINK_ID);
+          const currentPath = linkElement ? normalizeCssPath(linkElement.getAttribute('href')) : '';
+          const savedPath = normalizeCssPath(savedCSS);
+
+          if (linkElement && currentPath === savedPath) {
+              return;
+          }
           
           // 초기 로드 시에는 전환 효과 없이 바로 교체
           if (skipTransition && linkElement) {
-              const newLink = document.createElement('link');
-              newLink.id = CSS_LINK_ID;
-              newLink.rel = 'stylesheet';
-              newLink.href = savedCSS;
-              linkElement.parentNode.replaceChild(newLink, linkElement);
+              linkElement.href = savedCSS;
           } else {
               switchCSS(savedCSS);
           }

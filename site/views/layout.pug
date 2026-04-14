@@ -19,7 +19,26 @@ html
         script(src="/prism/prism.js")
         link(href="/prism/prism.css", rel="stylesheet")
         link(href="/css/reset.css", rel="stylesheet")
-        link(id="frogui-css", href="/frogui.css", rel="stylesheet")
+        script.
+            (function () {
+                var cssPath = '/frogui.css';
+                try {
+                    var saved = localStorage.getItem('selected-css-file');
+                    if (saved) cssPath = saved;
+                } catch (e) {}
+
+                var preload = document.createElement('link');
+                preload.rel = 'preload';
+                preload.as = 'style';
+                preload.href = cssPath;
+                document.head.appendChild(preload);
+
+                var link = document.createElement('link');
+                link.id = 'frogui-css';
+                link.rel = 'stylesheet';
+                link.href = cssPath;
+                document.head.appendChild(link);
+            })();
         link(href="/css/style.css", rel="stylesheet")
         script(async, src="https://plausible.io/js/pa-PNF1ZKkVWIqCuHg5qB1bO.js")
         script.

@@ -3,11 +3,11 @@
 @use 'sass:color';
 
 @function relativePx($number) {
-    @return calc($number/14)*1em
+    @return calc($number/$baseFontSize)*1em
 };
 
 @function absolutePx($number) {
-    @return calc($number/14)*1rem
+    @return calc($number/$baseFontSize)*1rem
 };
 
 $baseFontSize: 14;
@@ -181,8 +181,8 @@ $brownColor: #A86A82;
 $grayColor: #8B8B8B;
 
 $brandColors: (
-        'primary': ($primary, $darkPrimary, $primaryText),
-        'secondary': ($secondary, $darkSecondary, $secondaryText),
+    'primary': ($primary, $darkPrimary, $primaryText, $lightPrimary),
+    'secondary': ($secondary, $darkSecondary, $secondaryText, $lightPrimary),
 );
 
 $stateColors: (

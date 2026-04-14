@@ -304,7 +304,31 @@ h5,.h5 {font-size: $h5 !important;}
         }
     }
     .#{$ns}-#{$color}-light {
-        background-color: color.adjust(list.nth($value, 1), $lightness: 35%) !important;
+        background-color: color.adjust(list.nth($value, 1), $alpha: -0.8) !important;
+        color: list.nth($value, 1) !important;
+        border-color: list.nth($value, 2) !important;
+    }
+}
+@each $color, $value in $brandColors {
+    .#{$ns}-#{$color} {
+        background-color: list.nth($value, 1) !important;
+        color: $white !important;
+        border-color: list.nth($value, 2) !important;
+        &:hover {
+            background-color: list.nth($value, 2);
+        }
+        &-text {
+            color: list.nth($value, 1) !important;
+        }
+        &-bg {
+            background-color: list.nth($value, 1) !important;
+        }
+        &-border {
+            border-color: list.nth($value, 2) !important;
+        }
+    }
+    .#{$ns}-#{$color}-light {
+        background-color: list.nth($value, 4) !important;
         color: list.nth($value, 1) !important;
         border-color: list.nth($value, 2) !important;
     }
