@@ -333,4 +333,10 @@ block contents
 block module 
     script(src="/js/button.js")
     script. 
-        useSelectButton()
+       ( function () {
+            const buttons = document.querySelectorAll('.ga-buttons');
+
+            buttons.forEach(elem => {
+                new Buttons(elem).init()
+            })
+        })()

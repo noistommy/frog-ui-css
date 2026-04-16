@@ -1,13 +1,16 @@
 var express = require('express');
 var router = express.Router();
 
+var codes = require('../codes')
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Frog UI' });
 });
 
 router.get('/pages/welcome', function(req, res, next) {
-  res.render('components/welcome',  {title: 'Welcome' });
+  res.render('components/welcome',  {title: 'Welcome'});
 });
 
 router.get('/pages/faqs', function(req, res, next) {
@@ -59,7 +62,7 @@ router.get('/pages/colors', function(req, res, next) {
 });
 
 router.get('/pages/form', function(req, res, next) {
-  res.render('components/form',  { title: 'Form' });
+  res.render('components/form',  { title: 'Form', codes: codes.form  });
 });
 
 router.get('/pages/grid', function(req, res, next) {

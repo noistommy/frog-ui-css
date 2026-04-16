@@ -93,3 +93,11 @@ block contents
                                 | #{code}
 block module 
     script(src="/js/tree.js")
+    script.
+        (function () {
+            const treeList = document.querySelectorAll('.ga-tree-list');
+            treeList.forEach((tree) => {
+                const treeInstance = new TreeList(tree)
+                treeInstance.init()
+            })
+        })()

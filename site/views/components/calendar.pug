@@ -37,5 +37,15 @@ block contents
 block module 
     script(src="/js/calendar.js")
     script. 
-        var list = setCalendar()
-                    
+        ( function () {
+            const calendars = document.querySelectorAll('.ga-calendar');
+            calendars.forEach(elem => { 
+              const calendar = new Calendar(elem);
+              calendar.init();
+              // 필요할 때 해당 인스턴스 선택값 조회
+              const selected = calendar.getSelectedDate();
+              elem.addEventListener('calendar:change', (e) => {
+                console.log(e.detail.selectedDate);
+              });
+            })
+        })()

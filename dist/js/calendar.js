@@ -38,6 +38,7 @@ const getStartDay = (year, month) => {
 
 function setCalendar (year = dy, month = dm, date = dd) {
     if (!wrapper) return;
+    wrapper.innerHTML = '';
     // if (month != dm) date = 1;
     let startDay = getStartDay(year, month);
 
@@ -96,8 +97,141 @@ function setCalendar (year = dy, month = dm, date = dd) {
 
 
 
-//
-// document.getElementById('calDate').addEventListener('click', () => {
-//     const result = setCalendar(2022, 11);
-//     console.log(result);
-// })
+
+class Calendar {
+    constructor(root, dateString = '') {
+        this.root = root
+        this.calendar = this.root
+        this.selectedDate = ''
+        this.dateString = dateString
+        this.currentYear = null
+        this.currentMonth = null
+        this.currentDate = 1
+        this.selectedYear = null
+        this.selectedMonth = null
+        this.selectedDay = null
+        this.prevButton = this.calendar.querySelector('.prev-month')
+        this.nextButton = this.calendar.querySelector('.next-month')
+    }
+
+    parseDateString() {
+        if (typeof this.dateString !== 'string') return null
+
+        const value = this.dateString.trim()
+        let match = value.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+
+        if (match) {
+            const year = Number(match[1])
+            const month = Number(match[2])
+            const date = Number(match[3])
+            const maxDate = new Date(year, month, 0).getDate()
+
+            if (month < 1 || month > 12) return null
+            if (date < 1 || date > maxDate) return null
+
+            return { year, month, date }
+        }
+
+        match = value.match(/^(\d{4})-(\d{2})$/)
+        if (!match) return null
+
+        const year = Number(match[1])
+        const month = Number(match[2])
+        if (month < 1 || month > 12) return null
+
+        return { year, month, date: 1 }
+    }
+
+    init() {
+        const parsedDate = this.parseDateString()
+        const { dy, dm, dd } = getDate();
+
+        if (parsedDate) {
+            this.currentYear = parsedDate.year
+            this.currentMonth = parsedDate.month
+            this.currentDate = parsedDate.date
+            this.selectedYear = parsedDate.year
+            this.selectedMonth = parsedDate.month
+            this.selectedDay = parsedDate.date
+        } else {
+            this.currentYear = dy
+            this.currentMonth = dm
+            this.currentDate = dd
+            this.selectedYear = dy
+            this.selectedMonth = dm
+            this.selectedDay = dd
+        }
+
+        this.selectedDate = `${this.selectedYear}-${String(this.selectedMonth).padStart(2, '0')}-${String(this.selectedDay).padStart(2, '0')}`
+
+        this.render()
+
+        const initialSelectedCell = this.calendar.querySelector('.cell.selected')
+        if (initialSelectedCell) {
+            this.selectedDay = Number(initialSelectedCell.dataset.name || this.selectedDay)
+            this.selectedDate = `${this.selectedYear}-${String(this.selectedMonth).padStart(2, '0')}-${String(this.selectedDay).padStart(2, '0')}`
+        }
+        this.calendar.addEventListener('click', e => { this.selectDate(e.target) })
+        if (this.prevButton) {
+            this.prevButton.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                this.moveMonth(-1)
+            })
+        }
+        if (this.nextButton) {
+            this.nextButton.addEventListener('click', (e) => {
+                e.preventDefault()
+                e.stopPropagation()
+                this.moveMonth(1)
+            })
+        }
+    }
+
+    getSelectedDate() {
+        return this.selectedDate
+    }
+
+    render() {
+        const shouldShowSelectedDate = this.selectedYear === this.currentYear && this.selectedMonth === this.currentMonth
+        const date = shouldShowSelectedDate ? this.selectedDay : undefined
+        setCalendar(this.currentYear, this.currentMonth, date)
+    }
+
+    moveMonth(step) {
+        const nextMonth = this.currentMonth + step
+
+        if (nextMonth < 1) {
+            this.currentYear -= 1
+            this.currentMonth = 12
+        } else if (nextMonth > 12) {
+            this.currentYear += 1
+            this.currentMonth = 1
+        } else {
+            this.currentMonth = nextMonth
+        }
+
+        this.render()
+    }
+
+    selectDate(el) {
+        const cell = el.closest('.cell')
+        if (!cell || !this.calendar.contains(cell)) return
+        if (cell.classList.contains('disabled')) return
+
+        const selectedCells = this.calendar.querySelectorAll('.cell.selected')
+        selectedCells.forEach((selectedCell) => selectedCell.classList.remove('selected'))
+
+        cell.classList.add('selected')
+        this.selectedYear = this.currentYear
+        this.selectedMonth = this.currentMonth
+        this.selectedDay = Number(cell.dataset.name || 1)
+        this.selectedDate = `${this.selectedYear}-${String(this.selectedMonth).padStart(2, '0')}-${String(this.selectedDay).padStart(2, '0')}`
+
+        this.calendar.dispatchEvent(new CustomEvent('calendar:change', {
+            detail: { selectedDate: this.selectedDate },
+        }))
+    }
+}
+
+// export default Calendar;

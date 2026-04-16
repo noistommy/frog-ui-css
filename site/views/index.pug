@@ -381,3 +381,42 @@ block contents
                 .page-desc !{cont("MAIN_SECTION_CONTACT_DESC")}
             include comments
     script(src="/js/selectbox.js")
+    script. 
+        const cssSelector = document.getElementById('css-selector');
+        const selectedCss = cssSelector?.querySelector('input');
+        const selectMenu = cssSelector?.querySelector('.ga-list'); 
+        let selectBox;
+        if(cssSelector) {
+            selectBox = new SelectBox(cssSelector) 
+            selectBox.init()
+        }
+
+
+        const cssFile = localStorage.getItem('selected-css-file')
+        let cssFileName;
+
+        if (cssFile === '/gcloud.css') {
+            cssFileName = 'Theme B'
+        } else if (cssFile === '/gcloud_p.css') {
+            cssFileName = 'Theme C'
+        } else {
+            cssFileName = 'Theme A'
+        }
+
+        let selectedItem = cssFileName;
+        console.log(selectedItem)
+        selectBox.setSelectedItem(selectedItem)
+
+        cssSelector.addEventListener('selectbox:change', (e) => {
+            const value = e.detail.selectedItem;
+            console.log('변경된 selectedItem:', value);
+        });
+
+        (function () {
+            const selectBoxes = document.querySelectorAll('#grids2 .ga-select-box')
+            selectBoxes.forEach((sb) => {
+                const selectBox = new SelectBox(sb)
+                selectBox.init()
+            })
+        })()
+

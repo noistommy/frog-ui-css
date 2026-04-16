@@ -14,7 +14,6 @@ class TreeList {
     const isShow = el.getAttribute('aria-show')
     el.setAttribute('aria-show', isShow === 'true' ? 'false' : 'true')
     if (this.type === 'file') {
-
       node.querySelector('.icon').classList.toggle(isShow ? folderOpenIcon : folderIcon)
     }
   }
@@ -59,15 +58,12 @@ class TreeList {
       node.addEventListener('click', () => this.toggleNode(node))
     })
   }
-
-  static initAll(selector = '.ga-tree-list') {
-    const treeList = document.querySelectorAll(selector)
-    treeList.forEach((tree) => {
-      const treeInstance = new TreeList(tree)
-      treeInstance.init()
-    })
-  }
 }
 
-TreeList.initAll()
-
+// (function () {
+//   const treeList = document.querySelectorAll('.ga-tree-list');
+//   treeList.forEach((tree) => {
+//       const treeInstance = new TreeList(tree)
+//       treeInstance.init()
+//   })
+// })()

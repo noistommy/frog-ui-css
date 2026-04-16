@@ -177,3 +177,11 @@ block contents
                                 | #{code_f_1}
 block module 
     script(src="/js/selectbox.js")
+    script. 
+        (function () {
+            const selectBoxes = document.querySelectorAll('.ga-select-box')
+            selectBoxes.forEach((sb) => {
+                const selectBox = new SelectBox(sb)
+                selectBox.init()
+            })
+        })()

@@ -420,7 +420,11 @@ section {
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    
   }
+}
+.contents-wrapper {
+  white-space: pre-wrap;
 }
 #grid {
   .ga-grid > .rows .column,

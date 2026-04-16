@@ -1,10 +1,12 @@
 .#{$ns} {
-  &-form .fields,
+  &-form > .fields.grid,
   &-grid {
     --gutter: $gridGutter;
     position: relative;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    gap: 0;
     align-items: stretch;
     margin: $gridGutter * -1px;
     margin-bottom: $gridGutter * 1px;
@@ -85,7 +87,7 @@
       gap: #{$gridGutter * 2}px;
     }
   }
-  &-form .fields > .field,
+  &-form > .fields.grid,
   &-grid > .rows {
     width: 100%;
     position: relative;
@@ -98,7 +100,7 @@
 
 @media all and (max-width: #{$bp-tablet - 0.02px}) {
   .#{$ns} {
-    &-form .fields,
+    &-form > .fields.grid,
     &-grid {
       .column {
         &.span {
@@ -122,7 +124,7 @@
 }
 @media all and (min-width: #{$bp-tablet}) and (max-width: #{$bp-laptop - 0.02px}) {
   .#{$ns} {
-    &-form .fields,
+    &-form > .fields.grid,
     &-grid {
       .column {
         &.span {
@@ -148,7 +150,7 @@
 @media all and (min-width: #{$bp-laptop}) and (max-width: #{$bp-desktop - 0.02px}) {
   //@media all and (max-width: #{$bp-desktop - 1px}) {
   .#{$ns} {
-    &-form .fields,
+    &-form > .fields.grid,
     &-grid {
       .column {
         &.span {

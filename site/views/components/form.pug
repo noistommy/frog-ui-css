@@ -13,111 +13,101 @@ block contents
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
-                    .contents-wrapper
+                    .contents-wrapper#code1
                         .ga-form
-                            .field
-                                label Title
-                                input(type="text", placeholder="Insert text")
+                            .header
+                                .title Form
+                                p.desc form is very important element in HTML.
+                            .fields
+                                //- legend Legend
+                                .field 
+                                    label Title 1
+                                    input(type="text", placeholder="Insert text", value="Frog")
+                                    .help-text Help text
+                                    //.error-text Error text
+                                .field.inline
+                                    label Title 1
+                                    input(type="text", placeholder="Insert text", value="Frog")
+                                    .error-text Error text
+                            .divider
+                            .fields 
                     .footer
-                        -var code = `<div class="ga-form">\n    <div class="field">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
                         pre
                             code.language-markup
-                                | #{code}
+                                | #{codes.base}
+
             .section-contents
-                h4.contents-title Header
+                h4.contents-title Form Header
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
                             .header
                                 .title Form
+                                .desc Form description is important element attrebute. 
                             .field
                                 label Title
                                 input(type="text", placeholder="Insert text")
                     .footer
-                        -var code = `<div class="ga-form">\n    <div class="header">\n       <div class="title">Title</div>\n    </div>\n    <div class="field">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.header}      
             .section-contents
-                h4.contents-title Inline
+                h4.contents-title Filed
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-form
+                            .field 
+                                label field title
+                                input(type="text", placeholder="Insert text", value="Frog")
+                                .help-text Help text
+                            .divider
+                            .field.error
+                                label field title
+                                input(type="text", placeholder="Insert text", value="Frog")
+                                .error-text Error text
+                    .footer
+                        pre
+                            code.language-markup
+                                | #{codes.field}
+            .section-contents
+                h4.contents-title Inline field
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
                             .field.inline
                                 label Title
                                 input(type="text", placeholder="Insert text")
-                                //input(type="text", placeholder="Insert text")
-                                //input(type="text", placeholder="Insert text")
+                                .help-text Help text
                     .footer
-                        -var code = `<div class="ga-form">\n    <div class="field inline">\n        <!-- form contents(label, input ...) -->\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.inline}
             .section-contents
                 h4.contents-title Label
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
                             .field
+                                input(type="text", placeholder="No Label")
+                            .field
                                 label Title
                                 input(type="text", placeholder="Base Label")
-                            .field
-                                input(type="text", placeholder="No Label")
-                            .fields.right-side
+                            .fields.grid.right-side
                                 .field.column.span-3.span-xs-12
                                     label.title Title 1
                                 .field.column
                                     input(type="text", placeholder="Insert text")
-                            .fields.right-side
-                                .field.column.span-3.span-xs-12
-                                    label.title Title 2
-                                .field.column
-                                    input(type="text", placeholder="Insert text")
-                            .fields.right-side
-                                .field.column.span-3.span-xs-12
-                                    label.title Title 3
-                                .field.column
-                                    input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = `<div class="ga-form">\n    <div class="field">\n        <label>label</label>\n        <input type="text" />\n    </div>\n</div>`
-                        - var code1_1 = `<div class="ga-form">`
-                        - var code1_2 = `    <div class="fields">`
-                        - var code1_3 = `        <div class="field column span-3">\n             <label>label</label>\n        </div>`
-                        - var code1_4 = `        <div class="field column span-9">\n             <input type="text">\n        </div>`
-                        - var code1_5 = `    </div>`
-                        - var code1_6 = `</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
-                                    // form + grid
-                                    | #{code1_1}
-                                    | #{code1_2}
-                                    | #{code1_3}
-                                    | #{code1_4}
-                                    | #{code1_5}
-                                    | #{code1_6}
-            .section-contents
-                h4.contents-title Field
-                .ga-segment.float.round-m.attached
-                    .contents-wrapper
-                        .ga-form
-                            .field
-                                label Field 1
-                                input(type="text", placeholder="Insert text")
-                            .field
-                                label Field 2
-                                input(type="text", placeholder="Insert text")
-                    .footer
-                        - var code = `<div class="ga-form">\n    <div class="field">\n        <label>label</label>\n        <input type="text" />\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.label}
             .section-contents
                 h4.contents-title Fields
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
                             .fields
+                                legend Field Title
                                 .field
                                     label Field 1
                                     input(type="text", placeholder="Insert text")
@@ -128,24 +118,12 @@ block contents
                                     label Field 3
                                     input(type="text", placeholder="Insert text")
                     .footer
-                        - var code_1_s = `<div class="ga-form">`
-                        - var code_2_s = `    <div class="fields">`
-                        - var code_3_1 = `        <div class="field">\n             <input type="text">\n        </div>`
-                        - var code_3_2 = `        <div class="field">\n             <input type="text">\n        </div>`
-                        - var code_3_3 = `        <div class="field">\n             <input type="text">\n        </div>`
-                        - var code_2_e = `    </div>`
-                        - var code_1_e = `</div>`
-                            pre
-                                code.language-markup
-                                    | #{code_1_s}
-                                    | #{code_2_s}
-                                    | #{code_3_1}
-                                    | #{code_3_2}
-                                    | #{code_3_3}
-                                    | #{code_2_e}
-                                    | #{code_1_e}
+                        pre
+                            code.language-markup
+                                | #{codes.fields}
+                              
             .section-contents
-                h4.contents-title Field
+                h4.contents-title Disabled Field
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
@@ -156,93 +134,62 @@ block contents
                                 label Field 2
                                 input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = `<div class="ga-form">\n    <div class="field disabled">\n        <label>label</label>\n        <input type="text" />\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.disabled}
             .section-contents
                 h4.contents-title Fields Divide
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
-                            .field
-                                label Divide-2
-                                .fields.divide-2
-                                    .field.column
-                                        label field 1
-                                        input(type="text", placeholder="Insert text")
-                                    .field.column
-                                        label field 2
-                                        input(type="text", placeholder="Insert text")
-                            .field
-                                label Divide-4
-                                .fields.divide-4
-                                    .field.column
-                                        label field 1
-                                        input(type="text", placeholder="Insert text")
-                                    .field.column
-                                        label field 2
-                                        input(type="text", placeholder="Insert text")
-                                    .field.column
-                                        label field 3
-                                        input(type="text", placeholder="Insert text")
-                                    .field.column
-                                        label field 4
-                                        input(type="text", placeholder="Insert text")
+                            .fields.grid.divide-2
+                                legend Divide-2
+                                .field.column
+                                    label field 1
+                                    input(type="text", placeholder="Insert text")
+                                .field.column
+                                    label field 2
+                                    input(type="text", placeholder="Insert text")
+                            .divider
+                            .fields.grid.divide-4
+                                legend Divide-4
+                                .field.column
+                                    label field 1
+                                    input(type="text", placeholder="Insert text")
+                                .field.column
+                                    label field 2
+                                    input(type="text", placeholder="Insert text")
+                                .field.column
+                                    label field 3
+                                    input(type="text", placeholder="Insert text")
+                                .field.column
+                                    label field 4
+                                    input(type="text", placeholder="Insert text")
                     .footer
-                        - var code_1_s = `<div class="ga-form">`
-                        - var code_2_s = `    <div class="fields divide-{ 2|4|6|8|10 }">`
-                        - var code_3_1 = `        <div class="field column">\n             <input type="text">\n        </div>`
-                        - var code_3_2 = `        <div class="field column">\n             <input type="text">\n        </div>`
-                        - var code_e = `        ... ...`
-                        - var code_3_3 = `        <div class="field column">\n             <input type="text">\n        </div>`
-                        - var code_2_e = `    </div>`
-                        - var code_1_e = `</div>`
-                            pre
-                                code.language-markup
-                                    | #{code_1_s}
-                                    | #{code_2_s}
-                                    | #{code_3_1}
-                                    | #{code_3_2}
-                                    | #{code_e}
-                                    | #{code_3_3}
-                                    | #{code_2_e}
-                                    | #{code_1_e}
+                        pre
+                            code.language-markup
+                                | #{codes.divide}
+                              
             .section-contents
                 h4.contents-title Fields grids
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
-                            .field
-                                .fields
-                                    .column.span-3
-                                        label span 3
-                                        input(type="text", placeholder="Insert text")
-                                    .column.span-5
-                                        label span 5
-                                        input(type="text", placeholder="Insert text")
-                                    .column.span-4
-                                        label span 4
-                                        input(type="text", placeholder="Insert text")
+                            .fields.grid
+                                .field.column.span-3
+                                    label span 3
+                                    input(type="text", placeholder="Insert text")
+                                .field.column.span-5
+                                    label span 5
+                                    input(type="text", placeholder="Insert text")
+                                .field.column.span-4
+                                    label span 4
+                                    input(type="text", placeholder="Insert text")
                     .footer
-                        - var code_1_s = `<div class="ga-form">`
-                        - var code_2_s = `    <div class="fields">`
-                        - var code_3_1 = `        <div class="field column span-{num}">\n             <input type="text">\n        </div>`
-                        - var code_3_2 = `        <div class="field column span-{num}">\n             <input type="text">\n        </div>`
-                        - var code_e = `        ... ...`
-                        - var code_3_3 = `        <div class="field column span-{num}">\n             <input type="text">\n        </div>`
-                        - var code_2_e = `    </div>`
-                        - var code_1_e = `</div>`
-                            pre
-                                code.language-markup
-                                    | #{code_1_s}
-                                    | #{code_2_s}
-                                    | #{code_3_1}
-                                    | #{code_3_2}
-                                    | #{code_e}
-                                    | #{code_3_3}
-                                    | #{code_2_e}
-                                    | #{code_1_e}
+                        pre
+                            code.language-markup
+                                | #{codes.grids}
+                               
             .section-contents
                 h4.contents-title Text Area
                 .ga-segment.float.round-m.attached
@@ -255,70 +202,61 @@ block contents
                                 label Textarea Short
                                 textarea(placeholder="Insert text")
                     .footer
-                        - var code = `<div class="ga-form">\n    <div class="field">\n        <label>label</label>\n        <textarea />\n    </div>\n</div>`
-                        - var code1 = `<div class="ga-form">\n    <div class="field short">\n        <label>label</label>\n        <textarea />\n    </div>\n</div>`
                             pre
                                 code.language-markup
-                                    | #{`<!-- Normal -->`}
-                                    | #{code}
-                                    |  #{`<!-- Short -->`}
-                                    | #{code1}
+                                    | #{codes.textarea}
             .section-contents
-                h4.contents-title Check Box
+                h4.contents-title Extra
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
                             .field
+                                label Input field 
                                 input(type='text', placeholder='Insert text')
+                                .help-text help
+                                .extra
+                                    .ga-checkbox
+                                        input(type="checkbox")
+                                        label Display checkbox
                             .field
-                                .ga-checkbox
-                                    input(type="checkbox")
-                                    label Display checkbox
                     .footer
-                        - var code = `<div class="ga-form">\n    <!-- something form element field -->\n    <div class="field">\n        <div class="ga-checkbox">\n          <input type="checkbox" />\n          <label>label</label>\n        </div>\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.extra}
             .section-contents
-                h4.contents-title Radio Button
+                h4.contents-title Checkboxes & Radios
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-form
-                            .field
-                                label Select transportation you want?
-                                .fields
-                                    .field
-                                        .ga-checkbox.radio
-                                            input(type="radio", name="traffic")
-                                            label Bus
-                                    .field
-                                        .ga-checkbox.radio
-                                            input(type="radio", name="traffic")
-                                            label Taxi
-                                    .field
-                                        .ga-checkbox.radio
-                                            input(type="radio", name="traffic")
-                                            label Subway
-                            .field
-                                label.h4  What is the right thing to do when an issue?
-                                .fields.listed
-                                    .field
-                                        .ga-checkbox.radio
-                                            input(type="radio", name="traffic")
-                                            label 1. Working overtime
-                                    .field
-                                        .ga-checkbox.radio
-                                            input(type="radio", name="traffic")
-                                            label 2. Leaving work.
-                                    .field
-                                        .ga-checkbox.radio
-                                            input(type="radio", name="traffic")
-                                            label 3. Do noting.
+                            .fields
+                                legend Select all transportation you want?
+                                .field
+                                    .ga-checkbox
+                                        input(type="checkbox", name="traffic")
+                                        label Bus
+                                    .ga-checkbox
+                                        input(type="checkbox", name="traffic")
+                                        label Taxi
+                                    .ga-checkbox
+                                        input(type="checkbox", name="traffic")
+                                        label Subway
+                            .devider
+                            .fields.listed
+                                legend  What is the right thing to do when an issue?
+                                .field.inline
+                                    .ga-checkbox.radio
+                                        input(type="radio", name="traffic")
+                                        label 1. Working overtime
+                                    .ga-checkbox.radio
+                                        input(type="radio", name="traffic")
+                                        label 2. Leaving work.
+                                    .ga-checkbox.radio
+                                        input(type="radio", name="traffic")
+                                        label 3. Do noting.
                     .footer
-                        - var code = `<div class="ga-form">\n    <!-- something form element field -->\n    <div class="field">\n        <div class="ga-checkbox radio">\n          <input type="radio" name="radios" />\n          <label>label</label>\n        </div>\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.radios}
             .section-contents
                 h4.contents-title Select Box
                 .ga-segment.float.round-m.attached
@@ -334,8 +272,7 @@ block contents
                                                 option(value=`${col}`)= `option${col}`
                                     i.arrow.icon.xi-angle-down
                     .footer
-                        - var code = `<div class="ga-form">\n    <!-- something form element field -->\n    <div class="field">\n        <div class="ga-select-box">\n          <select />\n        </div>\n    </div>\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.selectbox}
                 
