@@ -23,10 +23,9 @@ block contents
                             .title Title
                             .contents icon + title + contents
                     .footer 
-                        - var code = `<div class="ga-message">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
-                                | #{code}
+                                | #{codes.base}
             .section-contents
                 h4.contents-title State
                 .ga-segment.float.round-m.attached
@@ -52,10 +51,9 @@ block contents
                             .title Importance
                             .contents Display contents about important status.
                     .footer 
-                        - var code = `<div class="ga-message { status }">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
-                                | #{code}
+                                | #{codes.state}
             .section-contents
                 h4.contents-title State text
                 .ga-segment.float.round-m.attached
@@ -81,10 +79,9 @@ block contents
                             .title Importance
                             .contents Display contents about important status.
                     .footer 
-                        - var code = `<div class="ga-message { status }-text">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
-                                | #{code}
+                                | #{codes.stateText}
             .section-contents
                 h4.contents-title State background
                 .ga-segment.float.round-m.attached
@@ -110,10 +107,9 @@ block contents
                             .title Importance
                             .contents Display contents about important status.
                     .footer 
-                        - var code = `<div class="ga-message { status }-bg">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
-                                | #{code}
+                                | #{codes.stateBackground}
             .section-contents
                 h4.contents-title State border
                 .ga-segment.float.round-m.attached
@@ -139,7 +135,6 @@ block contents
                             .title Importance
                             .contents Display contents about important status.
                     .footer 
-                        - var code = `<div class="ga-message { status }-border">\n        <!-- contents -->\n  </div>`
                         pre 
                             code.language-markup 
-                                | #{code}
+                                | #{codes.stateBorder}

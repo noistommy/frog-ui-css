@@ -7,7 +7,7 @@ $gridGutter: 4;
       margin-bottom: 1rem;
     }
     .divider {
-      margin-bottom: 1rem;
+      margin-block: 1rem;
       width: 100%;
       border-top: 1px solid #f8f8f8;
       border-bottom: 1px solid #d6d6d6;
@@ -41,7 +41,7 @@ $gridGutter: 4;
         transition-duration: .2s;
         box-sizing: border-box;
         outline: none;
-        // width: 100%;
+        width: 100%;
         &:hover {
           border-color: #c0c4cc;
         }
@@ -52,15 +52,28 @@ $gridGutter: 4;
           }
         }
         &::placeholder {
-          line-height: 1em;
           font-weight: 100;
-          color: #c4c4c4;
-          opacity: 0.5;
         }
       }
-      & > label, & > .label {
+      &.error {
+        > input, > textarea {
+          color: var(--#{$ns}-danger-color);
+          border-color: var(--#{$ns}-danger-color);
+          background-color: var(--#{$ns}-danger-light);
+        }
+         > label,  > .labe {
+          color: var(--#{$ns}-danger-color);
+        }
+      }
+      > label, > .label {
         font-size: 1em;
         display: block;
+        &.required, &[required] {
+          &:after {
+            content: '*';
+            color: var(--#{$ns}-orange-color);
+          }
+        }
       }
       &[disabled], &.disabled {
         cursor: not-allowed;
@@ -137,6 +150,7 @@ $gridGutter: 4;
       }
       &.grid {
         margin-bottom: 1rem;
+        align-items: center;
         input {
           width: 100%;
         }

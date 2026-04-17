@@ -21,16 +21,31 @@ block contents
                             .fields
                                 //- legend Legend
                                 .field 
-                                    label Title 1
-                                    input(type="text", placeholder="Insert text", value="Frog")
+                                    label(required) Title 1
+                                    input(type="text", placeholder="Insert text")
                                     .help-text Help text
                                     //.error-text Error text
+                            .fields.grid
+                                .field.column.span-8
+                                    label Title A
+                                    input(type="text", placeholder="Insert text")
+                                .field.column.span-4
+                                    label Title B
+                                    input(type="text", placeholder="Insert text")
+                            .divider
+                            .fields
                                 .field.inline
                                     label Title 1
-                                    input(type="text", placeholder="Insert text", value="Frog")
+                                    input(type="text", placeholder="Insert text")
                                     .error-text Error text
-                            .divider
-                            .fields 
+                                .field.inline
+                                    label Title 2
+                                    input(type="text", placeholder="Insert text")
+                                    .extra 
+                                        .ga-checkbox
+                                            input(type="checkbox")
+                                            label checkbox
+
                     .footer
                         pre
                             code.language-markup
@@ -101,6 +116,21 @@ block contents
                         pre
                             code.language-markup
                                 | #{codes.label}
+            .section-contents
+                h4.contents-title Display required
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-form  
+                            .field
+                                label.required Classname type
+                                input(type="text", placeholder="classname required")
+                            .field
+                                label(required) Attribute type
+                                input(type="text", placeholder="attribute required")
+                    .footer
+                        pre
+                            code.language-markup
+                                | #{codes.required}
             .section-contents
                 h4.contents-title Fields
                 .ga-segment.float.round-m.attached
@@ -263,7 +293,8 @@ block contents
                     .contents-wrapper
                         .ga-form
                             .field
-                                .ga-select-box
+                                label Select Item
+                                .ga-select-box.fluid
                                     select
                                         each col in ['', 1, 2, 3, 4, 5, 6]
                                             if col == ''

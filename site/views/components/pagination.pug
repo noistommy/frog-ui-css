@@ -16,40 +16,25 @@ block contents
                     .contents-wrapper
                         .ga-pagination
                             - var items = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
                                 each item in items
                                     .pagination-num=`${item}`
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .footer 
-                        - var code_s = `<div class="ga-pagination">`
-                        - var code_c_l = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_c_s = `      <div class="pagination-page-wrapper">`
-                        - var code_c_1 = `          <div class="pagination-num"> {n} </div>`
-                        - var code_c_2 = `          ... ...`
-                        - var code_c_f = `      </div>`
-                        - var code_c_r = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_f = `  </div>`
                         pre 
                             code.language-markup 
-                                | #{code_s}
-                                | #{code_c_l}
-                                | #{code_c_s}
-                                | #{code_c_1}
-                                | #{code_c_2}
-                                | #{code_c_f}
-                                | #{code_c_r}
-                                | #{code_f}
+                                | #{codes.base}
             .section-contents
                 h4.contents-title  Limit displayed Number
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-pagination
                             - var items = [2, 3, 4]
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
@@ -60,73 +45,37 @@ block contents
                                 .pagination-num.block-next
                                     i.xi-ellipsis-h
                                 .pagination-num 10
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .footer 
-                        - var code_s = `<div class="ga-pagination">`
-                        - var code_c_l = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_c_s = `      <div class="pagination-page-wrapper">`
-                        - var code_c_1 = `          <div class="pagination-num"> 1 </div>`
-                        - var code_c_2 = `          <div class="pagination-num block-prev"><i class="xi-ellipsis" /></div>`
-                        - var code_c_3 = `          <div class="pagination-num"> {n} </div>`
-                        - var code_c_e = `          ... ...`
-                        - var code_c_4 = `          <div class="pagination-num block-next"><i class="xi-ellipsis" /></div>`
-                        - var code_c_5 = `          <div class="pagination-num"> {Last num} </div>`
-                        - var code_c_f = `      </div>`
-                        - var code_c_r = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_f = `  </div>`
                         pre 
                             code.language-markup 
-                                | #{code_s}
-                                | #{code_c_l}
-                                | #{code_c_s}
-                                | #{code_c_1}
-                                | #{code_c_2}
-                                | #{code_c_3}
-                                | #{code_c_e}
-                                | #{code_c_4}
-                                | #{code_c_5}
-                                | #{code_c_f}
-                                | #{code_c_r}
-                                | #{code_f}
+                                | #{codes.limit}
             .section-contents
                 h4.contents-title Button
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-pagination.number.round
                             - var items = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
                                 each item in items
                                     .pagination-num=`${item}`
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .footer 
-                        - var code_s = `<div class="ga-pagination number round">`
-                        - var code_c_l = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_c_s = `      <div class="pagination-page-wrapper">`
-                        - var code_c_e = `          ... ...`
-                        - var code_c_f = `      </div>`
-                        - var code_c_r = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_f = `  </div>`
                         pre 
                             code.language-markup 
-                                | #{code_s}
-                                | #{code_c_l}
-                                | #{code_c_s}
-                                | #{code_c_e}
-                                | #{code_c_f}
-                                | #{code_c_r}
-                                | #{code_f}
+                                | #{codes.round}
             .section-contents
                 h4.contents-title User costom Style
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-pagination.number
                             - var items = [2, 3, 4]
-                            .pagination-nav.pagination-item
+                            .pagination-nav.pagination-item.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.pagination-item.active 1
@@ -137,87 +86,48 @@ block contents
                                 .pagination-num.pagination-item.block-next
                                     i.xi-ellipsis-h
                                 .pagination-num.pagination-item 1000
-                            .pagination-nav.pagination-item
+                            .pagination-nav.pagination-item.next
                                 i.xi-angle-right
                     .footer 
-                        - var code_s = `<div class="ga-pagination number">`
-                        - var code_c_l = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_c_s = `      <div class="pagination-page-wrapper">`
-                        - var code_c_e = `          ... ...`
-                        - var code_c_f = `      </div>`
-                        - var code_c_r = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_f = `  </div>`
                         pre 
                             code.language-markup 
-                                | #{code_s}
-                                | #{code_c_l}
-                                | #{code_c_s}
-                                | #{code_c_e}
-                                | #{code_c_f}
-                                | #{code_c_r}
-                                | #{code_f}
+                                | #{codes.custom}
             .section-contents
                 h4.contents-title Page type
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-pagination.page
-                            .pagination-nav.pagination-item
+                            .pagination-nav.pagination-item.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-info
                                     .pagination-nav 1
                                     span /
                                     .pagination-nav 10
-                            .pagination-nav.pagination-item
+                            .pagination-nav.pagination-item.next
                                 i.xi-angle-right
                     .footer 
-                        - var code_s = `<div class="ga-pagination page">`
-                        - var code_c_l = `      <div class="pagination-nav pagination-item"><i class="xi-chevron-left" /></div>`
-                        - var code_c_s = `      <div class="pagination-page-wrapper">`
-                        - var code_c_e = `          <div class="pagination-info"> 1/10 </div>`
-                        - var code_c_f = `      </div>`
-                        - var code_c_r = `      <div class="pagination-nav pagination-item"><i class="xi-chevron-left" /></div>`
-                        - var code_f = `  </div>`
                         pre 
                             code.language-markup 
-                                | #{code_s}
-                                | #{code_c_l}
-                                | #{code_c_s}
-                                | #{code_c_e}
-                                | #{code_c_f}
-                                | #{code_c_r}
-                                | #{code_f}
+                                | #{codes.page}
             .section-contents
                 h4.contents-title Compact
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-pagination.compact.number
                             - var items = [2, 3, 4, 5, 6, 7, 8, 9, 10]
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
                                 each item in items
                                     .pagination-num=`${item}`
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .footer 
-                        - var code_s = `<div class="ga-pagination number compact">`
-                        - var code_c_l = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_c_s = `      <div class="pagination-page-wrapper">`
-                        - var code_c_e = `          ... ...`
-                        - var code_c_f = `      </div>`
-                        - var code_c_r = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                        - var code_f = `  </div>`
                         pre 
                             code.language-markup 
-                                | #{code_s}
-                                | #{code_c_l}
-                                | #{code_c_s}
-                                | #{code_c_e}
-                                | #{code_c_f}
-                                | #{code_c_r}
-                                | #{code_f}
+                                | #{codes.compact}
             .section-contents
                 h4.contents-title Align
                 .ga-segment.float.round-m.attached
@@ -225,50 +135,39 @@ block contents
                     .contents-wrapper
                         h5 LEFT
                         .ga-pagination.number.align-left
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
                                 each item in items
                                     .pagination-num=`${item}`
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .contents-wrapper
                         h5 CENTER
                         .ga-pagination.number.align-center
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
                                 each item in items
                                     .pagination-num=`${item}`
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .contents-wrapper
                         h5 RIGHT
                         .ga-pagination.number.align-right
-                            .pagination-nav
+                            .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
                                 .pagination-num.active 1
                                 each item in items
                                     .pagination-num=`${item}`
-                            .pagination-nav
+                            .pagination-nav.next
                                 i.xi-angle-right
                     .footer 
-                            - var code_s = `<div class="ga-pagination number align-{left | center | right}">`
-                            - var code_c_l = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                            - var code_c_s = `      <div class="pagination-page-wrapper">`
-                            - var code_c_e = `          ... ...`
-                            - var code_c_f = `      </div>`
-                            - var code_c_r = `      <div class="pagination-nav"><i class="xi-chevron-left" /></div>`
-                            - var code_f = `  </div>`
                             pre 
                                 code.language-markup 
-                                    | #{code_s}
-                                    | #{code_c_l}
-                                    | #{code_c_s}
-                                    | #{code_c_e}
-                                    | #{code_c_f}
-                                    | #{code_c_r}
-                                    | #{code_f}
+                                    | #{codes.align}
+block module 
+    script(src="/js/pagination.js")

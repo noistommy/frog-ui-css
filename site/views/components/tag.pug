@@ -37,17 +37,14 @@ block contents
                         .ga-tag.dot.blue
                         .ga-tag.dot.green
                     .footer
-                        - var code = '<div class="ga-tag label">{ Tag Contents }</div>'
-                        - var code1 = '<div class="ga-tag line" />'
-                        - var code2= '<div class="ga-tag dot" />'
                             pre
                                 code.language-markup
                                     | #{`<!-- Label Type -->`}
-                                    | #{code}
+                                    | #{codes.code_1_1}
                                     | #{`<!-- Line Type -->`}
-                                    | #{code1}
+                                    | #{codes.code1_1_1}
                                     | #{`<!-- Dot Type -->`}
-                                    | #{code2}
+                                    | #{codes.code2_1_1}
             .section-contents
                 h4.contents-title icon (only label type)
                 .ga-segment.float.round-m.attached
@@ -71,14 +68,12 @@ block contents
                             i.icon.left.xi-mobile
                             | Sale
                     .footer
-                        - var code = '<div class="ga-tag label">\n    <i class="icon left xi-icon" />\n    { Tag Contents }\n</div>'
-                        - var code1 = '<div class="ga-tag label">\n    <i class="icon right xi-icon" />\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Left -->`}
-                                    | #{code}
+                                    | #{codes.code_2_1}
                                     | #{`<!-- Right -->`}
-                                    | #{code1}
+                                    | #{codes.code1_2_1}
             .section-contents
                 h4.contents-title Pointing
                 .ga-segment.float.round-m.attached
@@ -96,20 +91,16 @@ block contents
                             | Down
                             i.icon.right.xi-arrow-down
                     .footer
-                        - var code = '<div class="ga-tag label pointing left">\n    <i class="icon left xi-angle-left" />\n    { Tag Contents }\n</div>'
-                        - var code1 = '<div class="ga-tag label pointing right">\n    <i class="icon right xi-angle-right" />\n    { Tag Contents }\n</div>'
-                        - var code2 = '<div class="ga-tag label pointing up">\n    <i class="icon right xi-angle-up" />\n    { Tag Contents }\n</div>'
-                        - var code3 = '<div class="ga-tag label pointing down">\n    <i class="icon right xi-angle-down" />\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Left -->`}
-                                    | #{code}
+                                    | #{codes.code_3_1}
                                     | #{`<!-- Right -->`}
-                                    | #{code1}
+                                    | #{codes.code1_3_1}
                                     | #{`<!-- Up -->`}
-                                    | #{code2}
+                                    | #{codes.code2_3_1}
                                     | #{`<!-- Down -->`}
-                                    | #{code3}
+                                    | #{codes.code3_3_1}
             .section-contents
                 h4.contents-title Prefix, Suffix
                 .ga-segment.float.round-m.attached
@@ -118,14 +109,12 @@ block contents
                         .ga-tag.label.blue.suffix(data-suffix="suffix") Tag
                         .ga-tag.label.green.prefix.suffix(data-prefix="pre", data-suffix="suf") Tag
                     .footer
-                        - var code = '<div class="ga-tag label prefix" data-prefix="{prefix value}">\n    { Tag Contents }\n</div>'
-                        - var code1 = '<div class="ga-tag label suffix" data-suffix="{suffix value}">\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- with prefix -->`}
-                                    | #{code}
+                                    | #{codes.code_4_1}
                                     | #{`<!-- with suffix -->`}
-                                    | #{code1}
+                                    | #{codes.code1_4_1}
             .section-contents
                 h4.contents-title kbd
                 .ga-segment.float.round-m.attached
@@ -142,20 +131,16 @@ block contents
                         kbd.ga-tag.kbd.shortcut.cmd
                             | K
                     .footer
-                        - var code = '<div class="ga-tag kbd enter">\n    { Tag Contents }\n</div>'
-                        - var code1 = '<div class="ga-tag kbd space">\n    { Tag Contents }\n</div>'
-                        - var code2 = '<div class="ga-tag kbd meta cmd">\n    { Tag Contents }\n</div>'
-                        - var code3 = '<div class="ga-tag kbd">\n    { Tag Contents }\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- kbd (Key Enter) -->`}
-                                    | #{code}
+                                    | #{codes.code_5_1}
                                     | #{`<!-- kbd (Key Space) -->`}
-                                    | #{code1}
+                                    | #{codes.code1_5_1}
                                     | #{`<!-- kbd (Key Command - Meta) -->`}
-                                    | #{code2}
+                                    | #{codes.code2_5_1}
                                     | #{`<!-- kbd (Key S) -->`}
-                                    | #{code3}
+                                    | #{codes.code3_5_1}
             .section-contents
                 h4.contents-title Tags
                 .ga-segment.float.round-m.attached
@@ -165,10 +150,9 @@ block contents
                             .ga-tag.label.orange orange
                             .ga-tag.label.yellow yellow
                     .footer
-                        - var code = '<div class="ga-tags">\n    <div class="ga-tag label">Tag 1</div>\n    <div class="ga-tag label">Tag 2</div>\n    <div class="ga-tag label">Tag 3</div>    \n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_6_1}
             .section-contents
                 h4.contents-title Attached tags
                 .ga-segment.float.round-m.attached
@@ -184,10 +168,9 @@ block contents
                             .ga-tag.label.blue tag
                             .ga-tag.label.blue.light tag
                     .footer
-                        - var code = '<div class="ga-tags attached">\n    <div class="ga-tag label">Tag 1</div>\n    <div class="ga-tag label">Tag 2</div>\n    <div class="ga-tag label">Tag 3</div>    \n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_7_1}
             .section-contents
                 h4.contents-title Hover Effect
                 .ga-segment.float.round-m.attached
@@ -198,10 +181,9 @@ block contents
                             .ga-tag.label.deeppurple deep purple
                             .ga-tag.label.purple purple
                     .footer
-                        - var code = '<div class="ga-tags one-of-a-kind">\n    <div class="ga-tag label">Tag 1</div>\n    <div class="ga-tag label">Tag 2</div>\n    <div class="ga-tag label">Tag 3</div>    \n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_8_1}
             .section-contents
                 h4.contents-title Brand & Status Colors
                 .ga-segment.float.round-m.attached
@@ -215,11 +197,10 @@ block contents
                         .ga-tag.label.ga-attention Attention
                         .ga-tag.label.ga-importance Importance
                     .footer
-                        - var code = '<div class="ga-tag label { Brand | Status }">{ Tag Contents }</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- primary, secondary, success, danger, info, attention, importance -->`}
-                                    | #{code}
+                                    | #{codes.code_9_1}
             .section-contents
                 h4.contents-title Colors
                 .ga-segment.float.round-m.attached
@@ -248,10 +229,8 @@ block contents
                         .ga-tag.label.brown.light Brown
                         .ga-tag.label.gray.light Gray
                     .footer
-                        - var code = '<div class="ga-tag label { Colors }">{ Tag Contents }</div>'
-                        - var code1 = '<div class="ga-tag label { Colors } light">{ Tag Contents }</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- red, orange, yellow, light-green, light-blue, blue, deep-blue, deep-purple, purple, brown, gray -->`}
-                                    | #{code}
-                                    | #{code1}
+                                    | #{codes.code_10_1}
+                                    | #{codes.code1_10_1}

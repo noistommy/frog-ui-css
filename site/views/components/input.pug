@@ -17,10 +17,9 @@ block contents
                         .ga-input
                             input(type="text", placeholder="Insert text", value="Frog")
                     .footer
-                        - var code = '<div class="ga-input">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_1_1}
             .section-contents
                 h4.contents-title With Label
                 .ga-segment.float.round-m.attached
@@ -29,10 +28,9 @@ block contents
                             input(type="text", placeholder=" ")
                             label Title 1                       
                     .footer
-                        - var code = '<div class="ga-input">\n    <!-- label system -->\n    <input type="text" placeholder=" " />\n    <label>Title</label>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_2_1}
             .section-contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
@@ -40,10 +38,9 @@ block contents
                         .ga-input.disabled
                             input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input disabled">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_3_1}
             .section-contents
                 h4.contents-title Read only
                 .ga-segment.float.round-m.attached
@@ -51,10 +48,9 @@ block contents
                         .ga-input.readonly
                             input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input disabled">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_4_1}
             .section-contents
                 h4.contents-title Underline
                 .ga-segment.float.round-m.attached
@@ -62,10 +58,9 @@ block contents
                         .ga-input.underline
                             input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input underline">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_5_1}
             .section-contents
                 h4.contents-title Transparent
                 .ga-segment.float.round-m.attached
@@ -73,10 +68,9 @@ block contents
                         .ga-input.transparent
                             input(type="text", name="transparent", placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input transparent">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_6_1}
             .section-contents
                 h4.contents-title Compact
                 .ga-segment.float.round-m.attached
@@ -84,10 +78,9 @@ block contents
                         .ga-input.compact
                             input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input compact">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_7_1}
             .section-contents
                 h4.contents-title Edit
                 .ga-segment.float.round-m.attached
@@ -97,10 +90,9 @@ block contents
                         .ga-button.icon.round.edit-btn
                             i.xi-pen
                     .footer
-                        - var code = '<div class="ga-input edit">\n    <input type="text" placeholder="Insert text" />\n    <button class="ga-button icon edit-btn">\n        <i class="xi-pen"></i>\n    </button>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_8_1}
             .section-contents
                 h4.contents-title Status
                 .ga-segment.float.round-m.attached
@@ -122,10 +114,9 @@ block contents
                                 .ga-input.importance
                                     input(type="text", placeholder="Impotance")
                     .footer
-                        - var code = '<div class="ga-input { STATUS }">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_9_1}
             .section-contents
                 h4.contents-title Fluid
                 .ga-segment.float.round-m.attached
@@ -133,10 +124,9 @@ block contents
                         .ga-input.fluid
                             input(type="text", placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input fluid">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_10_1}
             .section-contents
                 h4.contents-title Unit
                 .ga-segment.float.round-m.attached
@@ -144,10 +134,9 @@ block contents
                         .ga-input.unit(data-unit='대')
                             input.align-right(type="text", placeholder="0")
                     .footer
-                        - var code = '<div class="ga-input unit" data-unit="{ unit text }">\n    <input type="text" placeholder="Insert text" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_11_1}
             .section-contents
                 h4.contents-title Icon
                 .ga-segment.float.round-m.attached
@@ -170,17 +159,14 @@ block contents
                                     input(type="text", placeholder="Insert text")
                                     i.icon.xi-angle-up
                     .footer
-                        - var code = '<div class="ga-input icon left">\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
-                        - var code1 = '<div class="ga-input icon right link">\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
-                        - var code2 = '<div class="ga-input icon both">\n    <i class="xi-icon"></i>\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Left -->`}
-                                    | #{code}
+                                    | #{codes.code_12_1}
                                     | #{`<!-- Right + Icon link 연결 -->`} 
-                                    | #{code1}
+                                    | #{codes.code1_12_1}
                                     | #{`<!-- Both -->`}
-                                    | #{code2}
+                                    | #{codes.code2_12_1}
             .section-contents
                 h4.contents-title Badge
                 .ga-segment.float.round-m.attached
@@ -189,10 +175,9 @@ block contents
                             input(type="text", placeholder="Insert text")
                             .ga-badge.secondary 30
                     .footer
-                        - var code = '<div class="ga-input badge">\n    <input type="text" placeholder="Insert text" />\n    <span class="ga-badge">B</span>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_13_1}
             .section-contents
                 h4.contents-title Label
                 .ga-segment.float.round-m.attached
@@ -207,14 +192,12 @@ block contents
                             input(type="text", placeholder="Insert text")
                             .label Name
                     .footer
-                        - var code = '<div class="ga-input labeled left">\n    <input type="text" placeholder="Insert text" />\n    <label>Label Text</label>\n</div>'
-                        - var code1 = '<div class="ga-input labeled right">\n    <input type="text" placeholder="Insert text" />\n    <label>Label Text</label>\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Left -->`}
-                                    | #{code}
+                                    | #{codes.code_14_1}
                                     | #{`<!-- Right -->`}
-                                    | #{code1}
+                                    | #{codes.code1_14_1}
             .section-contents
                 h4.contents-title Button
                 .ga-segment.float.round-m.attached
@@ -227,14 +210,12 @@ block contents
                             .ga-button.icon
                                 i.xi-documents-o
                     .footer
-                        - var code = '<div class="ga-input button left">\n    <input type="text" placeholder="Insert text" />\n    <button class="ga-button">Button Text</button>\n</div>'
-                        - var code1 = '<div class="ga-input button right">\n    <input type="text" placeholder="Insert text" />\n    <button class="ga-button">Button Text</button>\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Left -->`}
-                                    | #{code}
+                                    | #{codes.code_15_1}
                                     | #{`<!-- Right -->`}
-                                    | #{code1}
+                                    | #{codes.code1_15_1}
             .section-contents
                 h4.contents-title Textarea
                 .ga-segment.float.round-m.attached
@@ -245,12 +226,10 @@ block contents
                         .ga-input.short.fluid
                             textarea(placeholder="Insert text")
                     .footer
-                        - var code = '<div class="ga-input">\n    <textarea placeholder="Insert text" />\n</div>'
-                        - var code1 = '<div class="ga-input short">\n    <textarea placeholder="Insert text`" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
-                                    | #{code1}
+                                    | #{codes.code_16_1}
+                                    | #{codes.code1_16_1}
 block module 
     script(src="/js/input.js")
     script. 

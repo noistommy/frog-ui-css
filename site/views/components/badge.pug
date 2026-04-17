@@ -34,10 +34,9 @@ block contents
                             | Badge In
                             span.ga-badge.mark.primary
                     .footer
-                        - var code = '<div class="some element">\n    <span class="ga-badge">{ Badge Contents }</span>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_1_1}
             .section-contents
                 h4.contents-title Type
                 .ga-segment.float.round-m.attached
@@ -49,14 +48,12 @@ block contents
                             | Mark
                             span.ga-badge.mark.green
                     .footer
-                        - var code = '<div class="some element">\n    <span class="ga-badge float">{ Badge Contents }</span>\n</div>'
-                        - var code1 = '<div class="some element">\n    <span class="ga-badge mark" />\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- Float Type -->`}
-                                    | #{code}
+                                    | #{codes.code_2_1}
                                     |  #{`<!-- Mark Type -->`}
-                                    | #{code1}
+                                    | #{codes.code1_2_1}
             .section-contents
                 h4.contents-title Round
                 .ga-segment.float.round-m.attached
@@ -68,12 +65,10 @@ block contents
                             | Counting Star
                             span.ga-badge.mark.green
                     .footer
-                        - var code = '<div class="ga-button icon round">\n    <i class="some icon" />\n    <span class="ga-badge float">{ Badge Contents }</span>\n</div>'
-                        - var code1 = '<div class="ga-button icon round">\n    Button Text\n    <span class="ga-badge mark" />\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
-                                    | #{code1}
+                                    | #{codes.code_3_1}
+                                    | #{codes.code1_3_1}
             .section-contents
                 h4.contents-title Text
                 .ga-segment.float.round-m.attached
@@ -88,10 +83,9 @@ block contents
                             | UPDATE
                             span.ga-badge.float.green Update
                     .footer
-                        - var code = '<div class="some element">\n    <span class="ga-badge float">{ Badge Text }</span>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_4_1}
             .section-contents
                 h4.contents-title Shadow
                 .ga-segment.float.round-m.attached
@@ -105,10 +99,9 @@ block contents
                             span.ga-badge.float.secondary
                                 i.xi-close
                     .footer
-                        - var code = '<div class="some element">\n    <span class="ga-badge float">{ Badge Contents }</span>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_5_1}
             .section-contents
                 h4.contents-title Align
                 .ga-segment.float.round-m.attached
@@ -123,10 +116,9 @@ block contents
                             | Right
                             span.ga-badge.float.secondary.shadow.align-right 30000
                     .footer
-                        - var code = '<div class="some element">\n    <span class="ga-badge float shadow align-left">{ Badge Contents }</span>\n</div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_6_1}
             .section-contents
                 h4.contents-title Colors
                 .ga-segment.float.round-m.attached
@@ -168,9 +160,8 @@ block contents
                             | Gray
                             span.ga-badge.gray 12
                     .footer
-                        - var code = '<div class="some element">\n    <span class="ga-badge { Colors }">{ Badge Contents }</span>\n</div>'
                             pre
                                 code.language-markup
                                     | #{`<!-- red, orange, yellow, light-green, light-blue, blue -->`} 
                                     | #{`<!-- deep-blue, deep-purple, purple, brown, gray -->`}  
-                                    | #{code}
+                                    | #{codes.code_7_1}

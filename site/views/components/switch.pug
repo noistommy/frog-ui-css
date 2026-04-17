@@ -18,10 +18,9 @@ block contents
                             input(type="checkbox", checked)
                             span.switch
                     .footer
-                        - var code = `<label class="ga-switch slide">\n    <input type="checkbox" checked />\n    <span class="switch"/>\n</label>`
                         pre
                             code.language-markup
-                                | #{code}
+                                | #{codes.base1}
             .section-contents
                 h4.contents-title Base 2
                 .ga-segment.float.round-m.attached
@@ -30,10 +29,9 @@ block contents
                             input(type="checkbox", checked)
                             span.switch
                     .footer
-                        - var code = `<label class="ga-switch slide inside">\n    <input type="checkbox" checked />\n    <span class="switch"/>\n</label>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.base2}
             .section-contents
                 h4.contents-title Round
                 .ga-segment.float.round-m.attached
@@ -46,10 +44,9 @@ block contents
                             input(type="checkbox", checked)
                             span.switch
                     .footer
-                        - var code = `<label class="ga-switch slide">\n    <input type="checkbox" checked />\n    <span class="switch round"/>\n</label>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.round}
             .section-contents
                 h4.contents-title Button
                 .ga-segment.float.round-m.attached
@@ -64,7 +61,6 @@ block contents
                             span.on.active Yes
                             span.off No
                     .footer
-                        - var code = `<label class="ga-switch button">\n    <input type="checkbox" checked />\n    <span class="on active">ON</span>\n    <span class="off">OFF</span>\n</label>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.button}

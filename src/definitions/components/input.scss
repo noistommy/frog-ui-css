@@ -64,9 +64,9 @@ $iconAreaOffset: 5px;
           border-color: $primary !important;
         }
       }
-      &::placeholder {
-        opacity: 0.8;
-      }
+      // &::placeholder {
+      //   opacity: 0.8;
+      // }
       &.align {
         &-left {text-align: left;}
         &-center {text-align: center;}

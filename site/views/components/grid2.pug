@@ -20,10 +20,9 @@ block contents
                             each col in [1, 2, 3, 4, 5, 6]
                                 .column
                     .footer
-                        - var code = `<div class="ga-grid2 divide-column-{num} row-{num}">\n    <div class="column" />\n    <div class="column" />\n    ...\n    <div class="column" />\n</div>`
                         pre
                             code.language-markup
-                                | #{code}
+                                | #{codes.base}
             .section-contents
                 h4.contents-title Dosirak
                 .ga-segment.float.round-m.attached
@@ -32,10 +31,9 @@ block contents
                             each col in [[2, 1],[1, 1],[1, 2],[1, 1],[2, 1],]
                                 .column(class=`col-${col[0]} row-${col[1]}`)
                     .footer
-                        - var code = `<div class="ga-grid2 divide-column-{num} row-{num}">\n    <div class="column" />\n    <div class="column" />\n    ...\n    <div class="column" />\n</div>`
                         pre
                             code.language-markup
-                                | #{code}
+                                | #{codes.base}
             .section-contents
                 h4.contents-title Divide
                 .ga-segment.float.round-m.attached
@@ -54,10 +52,9 @@ block contents
                             .column.col-1
                             .column.col-3
                     .footer
-                        - var code = `<div class="ga-grid2">\n    <div class="column col-{num}" />\n    <div class="column col-{num}" />\n    ...\n    <div class="column col-{num}" />\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.divide}
             .section-contents
                 h4.contents-title Divide (+ROW)
                 .ga-segment.float.round-m.attached
@@ -71,10 +68,9 @@ block contents
                             .column.col-6.row-2
                             
                     .footer
-                        - var code = `<div class="ga-grid2 set-rows"\n style="--grid-row-num: {num}">\n    <div class="column col-{num} row-{num}" />\n    <div class="column col-{num}" />\n    ...\n    <div class="column col-{num}" />\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.divideRow}
             .section-contents
                 h4.contents-title Auto-fit
                 .ga-segment.float.round-m.attached
@@ -85,10 +81,9 @@ block contents
                             .column
                             .column
                     .footer
-                        - var code = `<div class="ga-grid2 auto-fit">\n    <div class="column" />\n    <div class="column" />\n    ...\n    <div class="column" />\n <!-- if (grid column > column)--> \n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.autoFit}
             //- .section-contents
                 h4.contents-title  Grid + Table
                 .ga-segment.float.round-m.attached
@@ -114,7 +109,6 @@ block contents
                             .column.label.col-1 직업
                             .column.col-3.align-bottom 아래
                     .footer
-                        - var code = `<div class="ga-grid2 tabled row-{num}">\n    <div class="column label col-{num}" /> // <th />\n    <div class="column align-{left|center|right}" /> // <td />\n    ...\n</div>`
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.table}

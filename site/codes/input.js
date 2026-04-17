@@ -1,0 +1,25 @@
+const code_1_1 = '<div class="ga-input">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_2_1 = '<div class="ga-input">\n    <!-- label system -->\n    <input type="text" placeholder=" " />\n    <label>Title</label>\n</div>'
+const code_3_1 = '<div class="ga-input disabled">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_4_1 = '<div class="ga-input disabled">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_5_1 = '<div class="ga-input underline">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_6_1 = '<div class="ga-input transparent">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_7_1 = '<div class="ga-input compact">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_8_1 = '<div class="ga-input edit">\n    <input type="text" placeholder="Insert text" />\n    <button class="ga-button icon edit-btn">\n        <i class="xi-pen"></i>\n    </button>\n</div>'
+const code_9_1 = '<div class="ga-input { STATUS }">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_10_1 = '<div class="ga-input fluid">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_11_1 = '<div class="ga-input unit" data-unit="{ unit text }">\n    <input type="text" placeholder="Insert text" />\n</div>'
+const code_12_1 = '<div class="ga-input icon left">\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
+const code1_12_1 = '<div class="ga-input icon right link">\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
+const code2_12_1 = '<div class="ga-input icon both">\n    <i class="xi-icon"></i>\n    <input type="text" placeholder="Insert text" />\n    <i class="xi-icon"></i>\n</div>'
+const code_13_1 = '<div class="ga-input badge">\n    <input type="text" placeholder="Insert text" />\n    <span class="ga-badge">B</span>\n</div>'
+const code_14_1 = '<div class="ga-input labeled left">\n    <input type="text" placeholder="Insert text" />\n    <label>Label Text</label>\n</div>'
+const code1_14_1 = '<div class="ga-input labeled right">\n    <input type="text" placeholder="Insert text" />\n    <label>Label Text</label>\n</div>'
+const code_15_1 = '<div class="ga-input button left">\n    <input type="text" placeholder="Insert text" />\n    <button class="ga-button">Button Text</button>\n</div>'
+const code1_15_1 = '<div class="ga-input button right">\n    <input type="text" placeholder="Insert text" />\n    <button class="ga-button">Button Text</button>\n</div>'
+const code_16_1 = '<div class="ga-input">\n    <textarea placeholder="Insert text" />\n</div>'
+const code1_16_1 = '<div class="ga-input short">\n    <textarea placeholder="Insert text`" />\n</div>'
+
+module.exports = {
+  code_1_1, code_2_1, code_3_1, code_4_1, code_5_1, code_6_1, code_7_1, code_8_1, code_9_1, code_10_1, code_11_1, code_12_1, code1_12_1, code2_12_1, code_13_1, code_14_1, code1_14_1, code_15_1, code1_15_1, code_16_1, code1_16_1
+}

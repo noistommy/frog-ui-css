@@ -30,17 +30,13 @@ block contents
                             tfoot
                     .footer
                         .code-wrapper
-                            - var code_s = `<table class="ga-table">`
-                            - var code_h = `<thead>\n       <tr>\n          <th>column</th>\n           ...\n       </tr>\n    </thead>`
-                            - var code_b = `<tbody>\n       <tr>\n          <td>column value</td>\n           ...\n       </tr>\n     </tbody>`
-                            - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{code_s}
-                                    |     #{code_h}
-                                    |     #{code_b}
-                                    | #{code_e}
+                                    | #{codes.code_s_1_1}
+                                    |     #{codes.code_h_1_1}
+                                    |     #{codes.code_b_1_1}
+                                    | #{codes.code_e_1_1}
             .section-contents
                 h4.contents-title Single Rows
                 .ga-segment.float.round-m.attached
@@ -59,17 +55,13 @@ block contents
                                         td= `${row.job}`
                     .footer
                         .code-wrapper
-                            - var code_s = `<table class="ga-table single">`
-                            - var code_h = `<thead>\n       ...\n    </thead>`
-                            - var code_b = `<tbody>\n       ...\n     </tbody>`
-                            - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{code_s}
-                                    |     #{code_h}
-                                    |     #{code_b}
-                                    | #{code_e}
+                                    | #{codes.code_s_2_1}
+                                    |     #{codes.code_h_2_1}
+                                    |     #{codes.code_b_2_1}
+                                    | #{codes.code_e_2_1}
             .section-contents
                 h4.contents-title Table Label
                 .ga-segment.float.round-m.attached
@@ -89,17 +81,13 @@ block contents
                                         td= `${row.job}`
                     .footer
                         .code-wrapper
-                            - var code_s = `<table class="ga-table labeled">`
-                            - var code_h = `<thead>\n       ...\n    </thead>`
-                            - var code_b = `<tbody>\n       ...\n     </tbody>`
-                            - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{code_s}
-                                    |     #{code_h}
-                                    |     #{code_b}
-                                    | #{code_e}
+                                    | #{codes.code_s_3_1}
+                                    |     #{codes.code_h_3_1}
+                                    |     #{codes.code_b_3_1}
+                                    | #{codes.code_e_3_1}
             .section-contents
                 h4.contents-title Footer + Pagination
                 .ga-segment.float.round-m.attached
@@ -131,19 +119,14 @@ block contents
                                                 i.xi-angle-right
                     .footer
                         .code-wrapper
-                            - var code_s = `<table class="ga-table">`
-                            - var code_h = `<thead>\n       ...\n    </thead>`
-                            - var code_b = `<tbody>\n       ...\n     </tbody>`
-                            - var code_f = `<tfoot>\n       <!-- <pagination /> --> \n     </tfoot>`
-                            - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{code_s}
-                                    |     #{code_h}
-                                    |     #{code_b}
-                                    |     #{code_f}
-                                    | #{code_e}
+                                    | #{codes.code_s_4_1}
+                                    |     #{codes.code_h_4_1}
+                                    |     #{codes.code_b_4_1}
+                                    |     #{codes.code_f_4_1}
+                                    | #{codes.code_e_4_1}
             .section-contents
                 h4.contents-title Table with Form Element
                 .ga-segment.float.round-m.attached
@@ -189,15 +172,12 @@ block contents
                                         button.ga-button.secondary.outline Cancel
                     .footer
                         .code-wrapper
-                            - var code_s = `<table class="ga-table structured">`
-                            - var code_b = `<tbody>\n       <tr>\n          <td>...</td>\n          <td>...</td>\n          ...\n       </tr>\n       ...\n     </tbody>`
-                            - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{code_s}
-                                    |     #{code_b}
-                                    | #{code_e}
+                                    | #{codes.code_s_5_1}
+                                    |     #{codes.code_b_5_1}
+                                    | #{codes.code_e_5_1}
             .section-contents
                 h4.contents-title tables
                 .ga-segment.float.round-m.attached
@@ -228,12 +208,11 @@ block contents
                                         td= `${row.job}`
                     .footer
                         .code-wrapper
-                            - var code = `<table class="ga-table"> ... </table>`
                             pre 
                                 code.language-markup 
                                     | 
-                                    | #{code}
-                                    | #{code}
+                                    | #{codes.code_6_1}
+                                    | #{codes.code_6_1}
                                    
             .section-contents
                 h4.contents-title table column count
@@ -268,15 +247,13 @@ block contents
                                         td= `Lorem ipsum dolor sit amet, consectetur adipisicing elit.`
                     .footer
                         .code-wrapper
-                            - var code_3 = `<table class="ga-table column three"> ... </table>`
-                            - var code_4 = `<table class="ga-table column four"> ... </table>`
                             pre 
                                 code.language-markup 
                                     | 
                                     | #{`<!-- Evenly divided column layout. -->`} 
                                     | #{`<!-- two, three, four, five... up to ten can be applied via class -->`} 
-                                    | #{code_3}
-                                    | #{code_4}
+                                    | #{codes.code_3_7_1}
+                                    | #{codes.code_4_7_1}
             .section-contents
                 h4.contents-title table + grid - column width
                 .ga-segment.float.round-m.attached
@@ -295,17 +272,13 @@ block contents
                                         td= `${row.job}`
                     .footer
                         .code-wrapper
-                            - var code_s = `<table class="ga-table">`
-                            - var code_h = `<thead>\n       <tr>\n          <th class=\"col-1\">...</th>\n          <th class=\"col-6\">...</th>\n          ...\n       </tr>\n       ...\n     </thead>`
-                            - var code_b = `<tbody>\n       ...\n     </tbody>`
-                            - var code_e = `</table>`
                             pre 
                                 code.language-markup 
                                     | 
                                     | #{`<!-- Grid system column composition. -->`} 
                                     | #{`<!-- Apply col-{grid count} on header columns -->`} 
                                     |
-                                    | #{code_s}
-                                    |     #{code_h}
-                                    |     #{code_b}
-                                    | #{code_e}
+                                    | #{codes.code_s_8_1}
+                                    |     #{codes.code_h_8_1}
+                                    |     #{codes.code_b_8_1}
+                                    | #{codes.code_e_8_1}

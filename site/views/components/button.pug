@@ -17,9 +17,8 @@ block contents
                     .contents-wrapper
                         .ga-button Base
                     .footer
-                        - var code = '<button class="ga-button">Base</button>';
                             pre
-                                code.language-markup #{code}
+                                code.language-markup #{codes.code_1_1}
             .section-contents
                 h4.contents-title Element Type
                 .ga-segment.float.round-m.attached
@@ -27,12 +26,10 @@ block contents
                         button.ga-button Tag
                         .ga-button Class name
                     .footer
-                        - var code1 = '<button class="ga-button">Tag</button>';
-                        - var code2 = '<div class="ga-button">Class name</div>';
                         pre
                             code.language-markup
-                                | #{code1}
-                                | #{code2}
+                                | #{codes.code1_2_1}
+                                | #{codes.code2_2_1}
             .section-contents
                 h4.contents-title Brand
                 .ga-segment.float.round-m.attached
@@ -45,10 +42,9 @@ block contents
                         button.ga-button.secondary.outline Secondary Outline
                         button.ga-button.secondary.active Secondary Active
                     .footer
-                        - var code = '<button class="ga-button { brand }">Brand</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_3_1}
             .section-contents
                 h4.contents-title Status
                 .ga-segment.float.round-m.attached
@@ -65,10 +61,9 @@ block contents
                         button.ga-button.attention.outline Attention
                         button.ga-button.importance.outline Importance
                     .footer
-                        - var code = '<button class="ga-button { status }">Status</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_4_1}
             .section-contents
                 h4.contents-title Colors
                 .ga-segment.float.round-m.attached
@@ -93,10 +88,9 @@ block contents
                             each color in colors2
                                 button(class=`ga-button ${color.name} outline`)=color.name
                     .footer
-                        - var code = '<button class="ga-button { colors }">Color</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_5_1}
             .section-contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
@@ -104,12 +98,10 @@ block contents
                         button.ga-button.disabled Disabled
                         button.ga-button(disabled) Disabled(attr)
                     .footer
-                        - var code = '<button class="ga-button disabled">Disabled(class)</button>';
-                        - var code1 = '<button class="ga-button" disabled>Disabled(attr)</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
-                                    | #{code1}
+                                    | #{codes.code_6_1}
+                                    | #{codes.code1_6_1}
             .section-contents
                 h4.contents-title Border
                 .ga-segment.float.round-m.attached
@@ -117,10 +109,9 @@ block contents
                         button.ga-button.border Border
                         button.ga-button.primary.border Border(Primary)
                     .footer
-                        - var code = '<button class="ga-button border">Border</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_7_1}
             //- .section-contents
                 h4.contents-title Equal
                 .ga-segment.float.round-m.attached
@@ -136,12 +127,10 @@ block contents
                             .ga-button.equal.large.outline 보기
                             .ga-button.equal.large FROG UI System
                     .footer
-                        - var code = '<button class="ga-button equal">Equal</button>';
-                        - var code1 = '<button class="ga-button equal large" disabled>Equal L</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
-                                    | #{code1}
+                                    | #{codes.code_7_2}
+                                    | #{codes.code1_7_1}
             .section-contents
                 h4.contents-title Fluid
                 .ga-segment.float.round-m.attached
@@ -158,10 +147,9 @@ block contents
                             .icon.left.xi-arrows-h
                             | Fluid
                     .footer
-                        - var code = '<button class="ga-button fluid">Fluid</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_8_1}
             .section-contents
                 h4.contents-title Compact
                 .ga-segment.float.round-m.attached
@@ -182,10 +170,9 @@ block contents
                         button.ga-button.attention.compact Attention
                         button.ga-button.importance.compact Importance
                     .footer
-                        - var code = '<button class="ga-button compact">Compact</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_9_1}
             .section-contents
                 h4.contents-title Outline
                 .ga-segment.float.round-m.attached
@@ -193,10 +180,9 @@ block contents
                         button.ga-button.outline Outline
                         button.ga-button.outline.primary Outline
                     .footer
-                        - var code = '<button class="ga-button outline">Outline</button>';
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_10_1}
             .section-contents
                 h4.contents-title Icon (* required - Xeicon 2.3.3)
                 .ga-segment.float.round-m.attached
@@ -208,10 +194,9 @@ block contents
                         button.ga-button.icon.round
                             i.xi-flight-on
                     .footer
-                        - var code = '<button class="ga-button icon">\n    <i class="xi-icon"></i>\n</button>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_11_1}
             .section-contents
                 h4.contents-title Round
                 .ga-segment.float.round-m.attached
@@ -222,10 +207,9 @@ block contents
                         button.ga-button.round A
                         button.ga-button.round.outline B
                     .footer
-                        - var code = '<button class="ga-button round">Round</button>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_12_1}
             .section-contents
                 h4.contents-title Icon
                 .ga-segment.float.round-m.attached
@@ -237,12 +221,10 @@ block contents
                             | Right
                             i.icon.right.xi-angle-right
                     .footer
-                        - var code = '<button class="ga-button">\n    <i class="icon left xi-icon"></i>\n    Left\n</button>'
-                        - var code1 = '<button class="ga-button">\n    Right\n    <i class="icon right xi-icon"></i>\n</button>'
                             pre
                                 code.language-markup
-                                    | #{code}
-                                    | #{code1}
+                                    | #{codes.code_13_1}
+                                    | #{codes.code1_13_1}
             .section-contents
                 h4.contents-title With Badge
                 .ga-segment.float.round-m.attached
@@ -254,12 +236,10 @@ block contents
                             | Sale
                             .in-badge.secondary Sale
                     .footer
-                        - var code = '<button class="ga-button badge">\n    <sapn class="in-badge">B</span>\n    Contents\n</button>'
-                        - var code0 = '<!-- Can`t use attribute fluid with badge type -->'
                             pre
                                 code.language-markup
-                                    | #{code}
-                                    | #{code0}
+                                    | #{codes.code_14_1}
+                                    | #{codes.code0_14_1}
             .section-contents
                 h4.contents-title Text
                 .ga-segment.float.round-m.attached
@@ -285,10 +265,9 @@ block contents
                                     | Update
                                     .in-badge.ga-red  123
                     .footer
-                        - var code = '<button class="ga-button text">\n    Contents\n</button>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_15_1}
             .section-contents
                 h4.contents-title Buttons
                 .ga-segment.float.round-m.attached
@@ -326,10 +305,9 @@ block contents
                                 i.icon.left.xi-pause
                                 | Pause
                     .footer
-                        - var code = '<div class="ga-buttons">\n    <div class="ga-button selected">BTN 1</div>\n    <div class="ga-button">BTN 2</div>\n    <div class="ga-button">BTN 3</div>\n    <div class="ga-button">BTN 4</div>\n    ...\n </div>'
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_16_1}
 block module 
     script(src="/js/button.js")
     script. 

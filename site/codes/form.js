@@ -61,6 +61,20 @@ const label = `
   </div> 
 </form>
 `
+const required = `
+<form class="ga-form">
+  <div class="filed">
+    <!-- class required -->
+    <label for="name" class="required"> label
+    <input name="name" />
+  </div>
+  <div class="filed">
+    <!-- use label -->
+    <label for="name" required> label
+    <input name="name" />
+  </div>
+</form>
+`
 const fields = `
 <form class="ga-form">
   <div class="fields">
@@ -188,6 +202,7 @@ const selectbox = `
 
 
 module.exports = {
-  base, header, field, inline, label, fields, disabled, divide, grids, textarea,
+  base, header, field, inline, label, required,
+  fields, disabled, divide, grids, textarea,
   extra, radios, selectbox
 }

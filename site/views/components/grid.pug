@@ -28,10 +28,9 @@ block contents
                             each col in [1, 2, 3, 4, 5, 6]
                                 .column
                     .footer
-                        - var code = `<div class="ga-grid">\n    <!-- columns -->\n    <div class="column" />\n    <div class="column" />\n    ...\n    <div class="column" />\n</div>`
                         pre
                             code.language-markup
-                                | #{code}
+                                | #{codes.code_1_1}
             .section-contents
                 h4.contents-title Divide (equaly)
                 // .contents-desc Equaly divide
@@ -51,10 +50,9 @@ block contents
                             .column
                             .column
                     .footer
-                        - var code = `<div class="ga-grid divide-{2|4|6|8|10}">\n    <!-- columns -->\n    <div class="column" />\n    <div class="column" />\n    ...\n    <div class="column" />\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_2_1}
             .section-contents
                 h4.contents-title Widths
                 .ga-segment.float.round-m.attached
@@ -73,10 +71,9 @@ block contents
                                 .column.span-1
                                 .column
                     .footer
-                        - var code = `<div class="ga-grid">\n    <!-- columns -->\n    <div class="column span-{number}" />\n    <div class="column span-{number}" />\n    ...\n    <div class="column span-{number}" />\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_3_1}
             .section-contents
                 h4.contents-title Fill(Left | Right) Side
                 .ga-segment.float.round-m.attached
@@ -88,10 +85,9 @@ block contents
                             .column.span-2
                             .column
                     .footer
-                        - var code = `<div class="ga-grid {left | right}-side">\n    <!-- columns -->\n    <div class="column" />\n    <div class="column" />\n    ... ...\n    <div class="column" />\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_4_1}
             .section-contents
                 h4.contents-title Align items
                 .ga-segment.float.round-m.attached
@@ -131,10 +127,9 @@ block contents
                             .column
                             .column
                     .footer
-                        - var code = `<div class="ga-grid justify-{left | center | right | between | around}">\n    <!-- columns -->\n    <div class="column" />\n    <div class="column" />\n    ... ...\n    <div class="column" />\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_5_1}
             .section-contents
                 h4.contents-title Offset
                 .ga-segment.float.round-m.attached
@@ -146,10 +141,9 @@ block contents
                             .column.span-7.offset-3
                             .column
                     .footer
-                        - var code = `<div class="ga-grid">\n    <!-- columns -->\n    <div class="column span-{number} offset-{number}" />\n    ... ...\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_6_1}
             .section-contents
                 h4.contents-title Rows
                 .ga-segment.float.round-m.attached
@@ -163,10 +157,9 @@ block contents
                                 .column.span-8
                                 .column.span-4
                     .footer
-                        - var code = `<div class="ga-grid">\n    <!-- rows -->\n    <div class="rows">\n       <!-- columns -->\n       <div class="column" />\n       ... ...\n    <!-- rows -->\n    <div class="rows">\n       <!-- columns -->\n       <div class="column" />\n       ... ...\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_7_1}
             .section-contents
                 h4.contents-title Reponsive
                 .ga-segment.float.round-m.attached
@@ -179,7 +172,6 @@ block contents
                             .column.span-2.span-md-4.span-sm-6.span-xs-12
                             .column.span-2.span-md-4.span-sm-6.span-xs-12
                     .footer
-                        - var code = `<div class="ga-grid">\n    <!-- columns -->\n   <div class="column span-{n} span-md-{n} span-sm-{n} span-xs-{n}" />\n   ... ...\n</div>`
                             pre
                                 code.language-markup
-                                    | #{code}
+                                    | #{codes.code_8_1}

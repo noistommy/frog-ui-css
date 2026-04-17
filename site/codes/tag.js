@@ -1,0 +1,25 @@
+const code_1_1 = '<div class="ga-tag label">{ Tag Contents }</div>'
+const code1_1_1 = '<div class="ga-tag line" />'
+const code2_1_1 = '<div class="ga-tag dot" />'
+const code_2_1 = '<div class="ga-tag label">\n    <i class="icon left xi-icon" />\n    { Tag Contents }\n</div>'
+const code1_2_1 = '<div class="ga-tag label">\n    <i class="icon right xi-icon" />\n    { Tag Contents }\n</div>'
+const code_3_1 = '<div class="ga-tag label pointing left">\n    <i class="icon left xi-angle-left" />\n    { Tag Contents }\n</div>'
+const code1_3_1 = '<div class="ga-tag label pointing right">\n    <i class="icon right xi-angle-right" />\n    { Tag Contents }\n</div>'
+const code2_3_1 = '<div class="ga-tag label pointing up">\n    <i class="icon right xi-angle-up" />\n    { Tag Contents }\n</div>'
+const code3_3_1 = '<div class="ga-tag label pointing down">\n    <i class="icon right xi-angle-down" />\n    { Tag Contents }\n</div>'
+const code_4_1 = '<div class="ga-tag label prefix" data-prefix="{prefix value}">\n    { Tag Contents }\n</div>'
+const code1_4_1 = '<div class="ga-tag label suffix" data-suffix="{suffix value}">\n    { Tag Contents }\n</div>'
+const code_5_1 = '<div class="ga-tag kbd enter">\n    { Tag Contents }\n</div>'
+const code1_5_1 = '<div class="ga-tag kbd space">\n    { Tag Contents }\n</div>'
+const code2_5_1 = '<div class="ga-tag kbd meta cmd">\n    { Tag Contents }\n</div>'
+const code3_5_1 = '<div class="ga-tag kbd">\n    { Tag Contents }\n</div>'
+const code_6_1 = '<div class="ga-tags">\n    <div class="ga-tag label">Tag 1</div>\n    <div class="ga-tag label">Tag 2</div>\n    <div class="ga-tag label">Tag 3</div>    \n</div>'
+const code_7_1 = '<div class="ga-tags attached">\n    <div class="ga-tag label">Tag 1</div>\n    <div class="ga-tag label">Tag 2</div>\n    <div class="ga-tag label">Tag 3</div>    \n</div>'
+const code_8_1 = '<div class="ga-tags one-of-a-kind">\n    <div class="ga-tag label">Tag 1</div>\n    <div class="ga-tag label">Tag 2</div>\n    <div class="ga-tag label">Tag 3</div>    \n</div>'
+const code_9_1 = '<div class="ga-tag label { Brand | Status }">{ Tag Contents }</div>'
+const code_10_1 = '<div class="ga-tag label { Colors }">{ Tag Contents }</div>'
+const code1_10_1 = '<div class="ga-tag label { Colors } light">{ Tag Contents }</div>'
+
+module.exports = {
+  code_1_1, code1_1_1, code2_1_1, code_2_1, code1_2_1, code_3_1, code1_3_1, code2_3_1, code3_3_1, code_4_1, code1_4_1, code_5_1, code1_5_1, code2_5_1, code3_5_1, code_6_1, code_7_1, code_8_1, code_9_1, code_10_1, code1_10_1
+}

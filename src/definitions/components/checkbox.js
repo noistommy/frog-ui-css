@@ -35,3 +35,35 @@ function useCheckBox(wrapper = document) {
     })
 
 }
+
+class Checkbox {
+    constructor(el) {
+        this.el = el
+        this.input = this.el.querySelector('input')
+        this.type = this.input.type
+    }
+    init() {
+        this.el.addEventListener('click', e => this.type === 'checkbox' ? this.changChecked() : this.selectRadio())
+    }
+    changChecked() {
+        this.input.checked = !this.input.checked;
+        this.el.classList.toggle('checked')
+    }
+    selectRadio() {
+        const name = this.input.name;
+        const radioList = document.querySelectorAll(`[name="${name}"]`)
+        for(let r of radioList) {
+            r.checked = false
+            r.parentElement.classList.remove('checked')
+        }
+        this.changChecked()
+    }
+}
+
+(function () {
+    const checkboxes = document.querySelectorAll('label.ga-checkbox')
+    checkboxes.forEach(checkbox => {
+        const cb = new Checkbox(checkbox);
+        cb.init()
+    })
+})()

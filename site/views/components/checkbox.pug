@@ -14,87 +14,76 @@ block contents
                 h4.contents-title 기본
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-checkbox
+                        label.ga-checkbox
                             input(type="checkbox")
-                            label Label
-                        .ga-checkbox.checked
-                            input(type="checkbox", checked)
-                            label Checked Label
-                        .ga-checkbox.radio
-                            input(type="radio")
-                            label Radio Button
-                        .ga-checkbox.radio.checked
-                            input(type="radio", checked)
-                            label Radio Button
+                            | Label
+                        label.ga-checkbox
+                            input(type="checkbox")
+                            | Checked Label
+                        label.ga-checkbox.radio
+                            input(type="radio" name="radio")
+                            | Radio 1
+                        label.ga-checkbox.radio.checked
+                            input(type="radio",  name="radio", checked )
+                            | Radio 2
                     .footer
-                        - var code = '<div class="ga-checkbox {checked}">\n    <input type="checkbox" />\n    <label>Larbel Text</label>\n</div>'
-                        - var code1 = '<!-- use checkbox -->\n<!-- useWrapper(pram)); // pram(default: document) is wrapper selector -->'
-                            pre
-                                code.language-markup
-                                    | #{code}
-                                    | #{code1}
+                        pre
+                            code.language-markup
+                                | #{codes.base}
             .section-contents
-                h4.contents-title Check Box
+                h4.contents-title No label
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-checkbox
+                        label.ga-checkbox
                             input(type="checkbox")
-                            label 
-                            
                     .footer
-                        - var code = '<div class="ga-checkbox {checked}">\n    <input type="checkbox" />\n    <label>Larbel Text</label>\n</div>'
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.label}
             .section-contents
-                h4.contents-title Check Box
+                h4.contents-title Checkbox
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.check1
-                        .ga-checkbox
+                        label.ga-checkbox
                             input(type="checkbox", name="part")
-                            label Front-End
-                        .ga-checkbox
+                            | Front-End
+                        label.ga-checkbox
                             input(type="checkbox", name="part")
-                            label Back-End
-                        .ga-checkbox
+                            | Back-End
+                        label.ga-checkbox
                             input(type="checkbox", name="part")
-                            label Design
+                            | Design
                     .footer
-                        - var code = '<div class="ga-checkbox {checked}">\n    <input type="checkbox" />\n    <label>Larbel Text</label>\n</div>'
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.checkbox}
             .section-contents
                 h4.contents-title Indeterminate
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.check1
-                        .ga-checkbox.indeter
+                        label.ga-checkbox.indeter
                             input(type="checkbox", name="part")
-                            label Indeterminate
+                            | Indeterminate
                     .footer
-                        - var code = '<div class="ga-checkbox {checked}">\n    <input type="checkbox" />\n    <label>Larbel Text</label>\n</div>'
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.indeter}
             .section-contents
                 h4.contents-title Radio
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-checkbox.radio
+                        label.ga-checkbox.radio
                             input(type="radio", name="option")
-                            label option 1
-                        .ga-checkbox.radio
+                            | option 1
+                        label.ga-checkbox.radio
                             input(type="radio", name="option")
-                            label option 2
-                        .ga-checkbox.radio
+                            | option 2
+                        label.ga-checkbox.radio
                             input(type="radio", name="option")
-                            label option 3
+                            | option 3
                     .footer
-                        - var code = '<div class="ga-checkbox radio {checked}">\n    <input type="checkbox" />\n    <label>Larbel Text</label>\n</div>'
-                            pre
-                                code.language-markup
-                                    | #{code}
+                        pre
+                            code.language-markup
+                                | #{codes.radio}
 block module 
     script(src="/js/checkbox.js")
-    script(type="text/javascript").
-        useCheckBox();

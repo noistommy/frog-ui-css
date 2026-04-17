@@ -184,11 +184,11 @@ $brandColors: (
 );
 
 $stateColors: (
-    'success': ($success, color.adjust($greenColor, $lightness: -10%), $white, $lightSuccess),
-    'info': ($info, color.adjust($info, $lightness: -10%), $infoText, $lightInfo),
-    'danger': ($danger, color.adjust($danger, $lightness: -10%), $dangerText, $lightDanger),
-    'attention': ($attention, color.adjust($attention, $lightness: -10%), $attentionText, $lightAttention),
-    'importance': ($importance, color.adjust($importance, $lightness: -10%), $importanceText, $lightImportance),
+    'success': ($success, color.adjust($success, $lightness: -10%), $white, color.adjust($success, $alpha: -0.8)),
+    'info': ($info, color.adjust($info, $lightness: -10%), $infoText, color.adjust($info, $alpha: -0.8)),
+    'danger': ($danger, color.adjust($danger, $lightness: -10%), $dangerText, color.adjust($danger, $alpha: -0.8)),
+    'attention': ($attention, color.adjust($attention, $lightness: -10%), $attentionText, color.adjust($attention, $alpha: -0.8)),
+    'importance': ($importance, color.adjust($importance, $lightness: -10%), $importanceText, color.adjust($importance, $alpha: -0.8)),
 );
 
 @function grayHsl($per) {

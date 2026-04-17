@@ -94,19 +94,20 @@
 }
 
 @each $color, $value in $stateColors {
-    $lightValue: color.adjust(list.nth($value, 1), $lightness: 35%);
+    :root {
+      --#{$ns}-#{$color}-color: #{list.nth($value, 1)};
+      --#{$ns}-#{$color}-dark: #{list.nth($value, 2)};
+      --#{$ns}-#{$color}-on: #{list.nth($value, 3)};
+      --#{$ns}-#{$color}-light: #{list.nth($value, 4)};
+    }
+}
+@each $color, $value in $colors {
+    $lightValue: color.adjust(list.nth($value, 1), $alpha: -0.8);
     :root {
       --#{$ns}-#{$color}-color: #{$value};
       --#{$ns}-#{$color}-light: #{$lightValue};
     }
-  }
-  @each $color, $value in $colors {
-    $lightValue: color.adjust(list.nth($value, 1), $lightness: 35%);
-    :root {
-      --#{$ns}-#{$color}-color: #{$value};
-      --#{$ns}-#{$color}-light: #{$lightValue};
-    }
-  }
+}
 
 @function color-contrast($bg, $fg) {
     $luminance1: luminance($fg) + 0.05;

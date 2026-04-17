@@ -20,16 +20,12 @@ block contents
                         .color-box.secondary Secondary
                         .color-box.secondary.dark Darker
                     .footer
-                        - var code_p = `<div class="primary">Primary</div>`
-                        - var code_pd = `<div class="primary dark">Primary - Darker</div>`
-                        - var code_s = `<div class="secondary">Secondary</div>`
-                        - var code_sd = `<div class="secondary dark">Secondary - Darker</div>`
                         pre 
                             code.language-markup 
-                                | #{code_p}
-                                |   #{code_pd}
-                                |   #{code_s}
-                                |   #{code_sd}
+                                | #{codes.code_p_1_1}
+                                |   #{codes.code_pd_1_1}
+                                |   #{codes.code_s_1_1}
+                                |   #{codes.code_sd_1_1}
 
             .section-contents
                 h4.contents-title Status
@@ -47,19 +43,14 @@ block contents
                         .color-box.ga-attention-light Attention
                         .color-box.ga-importance-light Importance
                     .footer
-                        - var code_state_succ = '<div class="ga-success">Success</div>'
-                        - var code_state_info = '<div class="ga-info">Info</div>'
-                        - var code_state_dang = '<div class="ga-danger">Danger</div>'
-                        - var code_state_atte = '<div class="ga-attention">Attention</div>'
-                        - var code_state_impo = '<div class="ga-importance">Importance</div>'
                         pre 
                             code.language-markup 
                                 |
-                                | #{code_state_succ}
-                                | #{code_state_info}
-                                | #{code_state_dang}
-                                | #{code_state_atte}
-                                | #{code_state_impo}
+                                | #{codes.code_state_succ_2_1}
+                                | #{codes.code_state_info_2_1}
+                                | #{codes.code_state_dang_2_1}
+                                | #{codes.code_state_atte_2_1}
+                                | #{codes.code_state_impo_2_1}
             .section-contents
                 h4.contents-title Types
                 .ga-segment.float.round-m.attached
@@ -76,21 +67,15 @@ block contents
                         .color-box.ga-success-light Light
                         .color-box.bordered.ga-success-border Border
                     .footer 
-                        - var code_type = `// @type: primary | secondary | success | info | ...`
-                        - var code_type_base = '<div class="ga-{type}">Basic</div>'
-                        - var code_type_text = '<div class="ga-{type}-text">Text</div>'
-                        - var code_type_bg = '<div class="ga-{type}-bg">Background</div>'
-                        - var code_type_light = '<div class="ga-{type}-light">Light</div>'
-                        - var code_type_brd = '<div class="ga-{type}-border">Border</div>'
                         pre 
                             code.language-markup 
                                 |
-                                | #{code_type}
-                                | #{code_type_base}
-                                | #{code_type_text}
-                                | #{code_type_bg}
-                                | #{code_type_light}
-                                | #{code_type_brd}
+                                | #{codes.code_type_3_1}
+                                | #{codes.code_type_base_3_1}
+                                | #{codes.code_type_text_3_1}
+                                | #{codes.code_type_bg_3_1}
+                                | #{codes.code_type_light_3_1}
+                                | #{codes.code_type_brd_3_1}
             .section-contents
                 h4.contents-title Grayscale
                 .ga-segment.float.round-m.attached
@@ -111,16 +96,13 @@ block contents
                         .color-box.small.gray-bg-95 95
                         .color-box.small.gray-bg-100 Black (100)
                     .footer 
-                        - var code_type_colors = '<!-- grays = [0, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 85, 90, 95, 100] -->'
-                        - var code_type_color_0 = '<div class="gray-bg-0">...</div>'
-                        - var code_type_color_100 = '<div class="gray-bg-100">...</div>'
                         pre 
                             code.language-markup 
                                 |
-                                | #{code_type_colors}
-                                | #{code_type_color_0}
+                                | #{codes.code_type_colors_4_1}
+                                | #{codes.code_type_color_0_4_1}
                                 | ...
-                                | #{code_type_color_100}
+                                | #{codes.code_type_color_100_4_1}
             .section-contents
                 h4.contents-title Palette Colors
                 .ga-segment.float.round-m.attached
@@ -129,14 +111,11 @@ block contents
                         each color in colors
                             div(class=`color-box ga-${color.name} bordered`)=color.name
                     .footer 
-                        - var code_type_colors = '<!-- colors = [red, orange, yellow, lightgreen, green, lightblue, blue, deepblue, deeppurple, brown, gray] -->'
-                        - var code_type_color_red = '<div class="ga red">...</div>'
-                        - var code_type_color_orange = '<div class=" ga orange">...</div>'
                         pre 
                             code.language-markup 
                                 |
-                                | #{code_type_colors}
-                                | #{code_type_color_red}
-                                | #{code_type_color_orange}
+                                | #{codes.code_type_colors_5_1}
+                                | #{codes.code_type_color_red_5_1}
+                                | #{codes.code_type_color_orange_5_1}
                                 | ...
                                 
