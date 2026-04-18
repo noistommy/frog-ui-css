@@ -67,7 +67,6 @@ $gridGutter: 4;
       }
       > label, > .label {
         font-size: 1em;
-        display: block;
         &.required, &[required] {
           &:after {
             content: '*';

@@ -61,7 +61,7 @@ class Checkbox {
 }
 
 (function () {
-    const checkboxes = document.querySelectorAll('label.ga-checkbox')
+    const checkboxes = document.querySelectorAll('.ga-checkbox')
     checkboxes.forEach(checkbox => {
         const cb = new Checkbox(checkbox);
         cb.init()

@@ -42,9 +42,9 @@ block contents
                                     label Title 2
                                     input(type="text", placeholder="Insert text")
                                     .extra 
-                                        .ga-checkbox
+                                        label.ga-checkbox
                                             input(type="checkbox")
-                                            label checkbox
+                                            | checkbox
 
                     .footer
                         pre
@@ -245,9 +245,9 @@ block contents
                                 input(type='text', placeholder='Insert text')
                                 .help-text help
                                 .extra
-                                    .ga-checkbox
+                                    label.ga-checkbox
                                         input(type="checkbox")
-                                        label Display checkbox
+                                        | Display checkbox
                             .field
                     .footer
                         pre
@@ -262,13 +262,13 @@ block contents
                                 legend Select all transportation you want?
                                 .field
                                     .ga-checkbox
-                                        input(type="checkbox", name="traffic")
-                                        label Bus
+                                        input(type="checkbox", name="bus")
+                                        | Bus
                                     .ga-checkbox
-                                        input(type="checkbox", name="traffic")
+                                        input(type="checkbox", name="taxi")
                                         label Taxi
                                     .ga-checkbox
-                                        input(type="checkbox", name="traffic")
+                                        input(type="checkbox", name="subway")
                                         label Subway
                             .devider
                             .fields.listed
@@ -306,4 +306,5 @@ block contents
                         pre
                             code.language-markup
                                 | #{codes.selectbox}
-                
+block module 
+    script(src="/js/checkbox.js")

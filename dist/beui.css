@@ -2977,7 +2977,7 @@ button.be-button {
   background-color: #FDC036;
 }
 
-label.be-checkbox {
+.be-checkbox {
   cursor: pointer;
   position: relative;
   display: inline-flex;
@@ -2992,14 +2992,14 @@ label.be-checkbox {
   vertical-align: baseline;
   margin-right: 10px;
 }
-label.be-checkbox input {
+.be-checkbox input {
   position: absolute;
   width: 0;
   height: 0;
   opacity: 0;
   z-index: -1;
 }
-label.be-checkbox:before {
+.be-checkbox:before {
   content: "";
   width: 16px;
   height: 16px;
@@ -3008,7 +3008,7 @@ label.be-checkbox:before {
   background-color: var(--bgc);
   border-radius: 2px;
 }
-label.be-checkbox:after {
+.be-checkbox:after {
   content: "";
   position: absolute;
   top: 6px;
@@ -3021,12 +3021,12 @@ label.be-checkbox:after {
   transition: transform 100ms ease;
   transform: rotate(0deg) scale(0);
 }
-label.be-checkbox.radio:before {
+.be-checkbox.radio:before {
   width: 16px;
   height: 16px;
   border-radius: 50%;
 }
-label.be-checkbox.radio:after {
+.be-checkbox.radio:after {
   background-color: var(--suf);
   border-radius: 50%;
   border: 0;
@@ -3036,17 +3036,17 @@ label.be-checkbox.radio:after {
   left: 4px;
   transform: scale(0);
 }
-label.be-checkbox:has(input:checked):before, label.be-checkbox.checked:before {
+.be-checkbox:has(input:checked):before, .be-checkbox.checked:before {
   background-color: #5178af;
   border-color: #5178af;
 }
-label.be-checkbox:has(input:checked):after, label.be-checkbox.checked:after {
+.be-checkbox:has(input:checked):after, .be-checkbox.checked:after {
   transform: translateY(-50%) rotate(45deg) scale(1);
 }
-label.be-checkbox:has(input:checked).radio:after, label.be-checkbox.checked.radio:after {
+.be-checkbox:has(input:checked).radio:after, .be-checkbox.checked.radio:after {
   transform: scale(1);
 }
-label.be-checkbox.indeter:not(.radio):after {
+.be-checkbox.indeter:not(.radio):after {
   top: 6px;
   left: 3px;
   width: 10px;
@@ -3055,17 +3055,17 @@ label.be-checkbox.indeter:not(.radio):after {
   border-width: 0;
   transform: translateY(0) rotate(0) scale(0);
 }
-label.be-checkbox.indeter:not(.radio):has(input:checked):after, label.be-checkbox.indeter:not(.radio).checked:after {
+.be-checkbox.indeter:not(.radio):has(input:checked):after, .be-checkbox.indeter:not(.radio).checked:after {
   transform: translateY(0) rotate(0) scale(1);
 }
-label.be-checkbox.disabled .checkbox {
+.be-checkbox.disabled .checkbox {
   background-color: #D6D6D6;
   border-color: #EBEBEB;
 }
-label.be-checkbox:last-child {
+.be-checkbox:last-child {
   margin: 0;
 }
-label.be-checkbox:hover:before {
+.be-checkbox:hover:before {
   border-color: #5178af;
 }
 
@@ -4916,7 +4916,6 @@ label.be-checkbox:hover:before {
 }
 .be-form .field > label, .be-form .field > .label {
   font-size: 1em;
-  display: block;
 }
 .be-form .field > label.required:after, .be-form .field > label[required]:after, .be-form .field > .label.required:after, .be-form .field > .label[required]:after {
   content: "*";
