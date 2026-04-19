@@ -1975,7 +1975,7 @@ button.be-button {
 
 .be-button.orange {
   background-color: #EE9033;
-  color: #ffffff;
+  color: #000000;
 }
 .be-button.orange.border:not(.outline), .be-button.orange.border:not(.text) {
   box-shadow: 0 0 0 1px rgb(219.6923076923, 118.4615384615, 18.3076923077) inset;
@@ -1989,7 +1989,7 @@ button.be-button {
   box-shadow: 0 0 0 1px rgb(219.6923076923, 118.4615384615, 18.3076923077) inset;
 }
 .be-button.orange.outline.selected, .be-button.orange.outline:hover {
-  color: #ffffff;
+  color: #000000;
   background-color: #EE9033;
 }
 .be-button.orange.text {
@@ -2065,7 +2065,7 @@ button.be-button {
 
 .be-button.lightgreen {
   background-color: #B3BC40;
-  color: #ffffff;
+  color: #000000;
 }
 .be-button.lightgreen.border:not(.outline), .be-button.lightgreen.border:not(.text) {
   box-shadow: 0 0 0 1px rgb(142.7738095238, 149.9523809524, 51.0476190476) inset;
@@ -2079,7 +2079,7 @@ button.be-button {
   box-shadow: 0 0 0 1px rgb(142.7738095238, 149.9523809524, 51.0476190476) inset;
 }
 .be-button.lightgreen.outline.selected, .be-button.lightgreen.outline:hover {
-  color: #ffffff;
+  color: #000000;
   background-color: #B3BC40;
 }
 .be-button.lightgreen.text {
@@ -2155,7 +2155,7 @@ button.be-button {
 
 .be-button.lightblue {
   background-color: #8CC5CE;
-  color: #ffffff;
+  color: #000000;
 }
 .be-button.lightblue.border:not(.outline), .be-button.lightblue.border:not(.text) {
   box-shadow: 0 0 0 1px rgb(104.237804878, 178.9634146341, 190.762195122) inset;
@@ -2169,7 +2169,7 @@ button.be-button {
   box-shadow: 0 0 0 1px rgb(104.237804878, 178.9634146341, 190.762195122) inset;
 }
 .be-button.lightblue.outline.selected, .be-button.lightblue.outline:hover {
-  color: #ffffff;
+  color: #000000;
   background-color: #8CC5CE;
 }
 .be-button.lightblue.text {
@@ -5257,6 +5257,46 @@ button.be-button {
   color: #ffffff;
 }
 
+.be-tag.success:not(.label) {
+  border-color: #528E64;
+}
+.be-tag.success.pointing, .be-tag.success.label {
+  background-color: #528E64;
+  color: #ffffff;
+}
+
+.be-tag.info:not(.label) {
+  border-color: #909090;
+}
+.be-tag.info.pointing, .be-tag.info.label {
+  background-color: #909090;
+  color: #ffffff;
+}
+
+.be-tag.danger:not(.label) {
+  border-color: #D50000;
+}
+.be-tag.danger.pointing, .be-tag.danger.label {
+  background-color: #D50000;
+  color: #ffffff;
+}
+
+.be-tag.attention:not(.label) {
+  border-color: #EC6E00;
+}
+.be-tag.attention.pointing, .be-tag.attention.label {
+  background-color: #EC6E00;
+  color: #ffffff;
+}
+
+.be-tag.importance:not(.label) {
+  border-color: #FDC036;
+}
+.be-tag.importance.pointing, .be-tag.importance.label {
+  background-color: #FDC036;
+  color: #000000;
+}
+
 .be-tag.red:not(.label) {
   border-color: #D75757;
 }
@@ -5277,7 +5317,7 @@ button.be-button {
 }
 .be-tag.orange.pointing, .be-tag.orange.label {
   background-color: #EE9033;
-  color: #ffffff;
+  color: #000000;
 }
 .be-tag.light.orange.pointing, .be-tag.light.orange.label {
   background-color: rgba(238, 144, 51, 0.2);
@@ -5292,7 +5332,7 @@ button.be-button {
 }
 .be-tag.yellow.pointing, .be-tag.yellow.label {
   background-color: #F8B825;
-  color: #ffffff;
+  color: #000000;
 }
 .be-tag.light.yellow.pointing, .be-tag.light.yellow.label {
   background-color: rgba(248, 184, 37, 0.2);
@@ -5307,7 +5347,7 @@ button.be-button {
 }
 .be-tag.lightgreen.pointing, .be-tag.lightgreen.label {
   background-color: #B3BC40;
-  color: #ffffff;
+  color: #000000;
 }
 .be-tag.light.lightgreen.pointing, .be-tag.light.lightgreen.label {
   background-color: rgba(179, 188, 64, 0.2);
@@ -5337,7 +5377,7 @@ button.be-button {
 }
 .be-tag.lightblue.pointing, .be-tag.lightblue.label {
   background-color: #8CC5CE;
-  color: #ffffff;
+  color: #000000;
 }
 .be-tag.light.lightblue.pointing, .be-tag.light.lightblue.label {
   background-color: rgba(140, 197, 206, 0.2);
@@ -5513,7 +5553,7 @@ button.be-button {
 
 .be-badge.importance {
   background-color: rgb(252.4975369458, 176.1724137931, 3.5024630542);
-  color: #ffffff;
+  color: #000000;
 }
 
 .be-badge.red {
@@ -6531,6 +6571,7 @@ button.be-button {
   --grid-size: 7;
   --cell-size: 42px;
   --cell-gap: 1px;
+  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1ems);
   border-radius: 14px;
   padding: 1em;
   height: auto;

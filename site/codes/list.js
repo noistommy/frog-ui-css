@@ -1,52 +1,117 @@
-const code_s_1_1 = `<div class="ga-list">`
-const code_c_1_1_1 = `    <div class="item"> option1 </div>`
-const code_c_2_1_1 = `    <div class="item"> option2 </div>`
-const code_e_1_1 = `    ...`
-const code_c_3_1_1 = `    <div class="item"> option3 </div>`
-const code_f_1_1 = `</div>`
-const code_s_2_1 = `<div class="ga-list">`
-const code_c_1_2_1 = `    <div class="item"> option1 </div>`
-const code_c_2_2_1 = `    <div class="item"> option2 </div>`
-const code_e_2_1 = `    ...`
-const code_c_3_2_1 = `    <div class="item"> option3 </div>`
-const code_f_2_1 = `</div>`
-const code_s_3_1 = `<div class="ga-list ul">`
-const code_c_1_3_1 = `    <div class="item"> option1 </div>`
-const code_c_2_3_1 = `    <div class="item"> option2 </div>`
-const code_e_3_1 = `    ...`
-const code_c_3_3_1 = `    <div class="item"> option3 </div>`
-const code_f_3_1 = `</div>`
-const code_s_4_1 = `<div class="ga-list selection {mark|bg|text}">`
-const code_c_1_4_1 = `    <div class="item selected"> option1 </div>`
-const code_c_2_4_1 = `    <div class="item"> option2 </div>`
-const code_e_4_1 = `    ...`
-const code_c_3_4_1 = `    <div class="item"> option3 </div>`
-const code_f_4_1 = `</div>`
-const code_s_5_1 = `<div class="ga-list">`
-const code_c_1_5_1 = `    <div class="item">\n         <div class="item-title">\n             option1\n             <div class="sub-title">sub text</div>\n         </div>\n    </div>`
-const code_c_2_5_1 = `    <div class="item">\n         <div class="item-title">\n             option2\n             <div class="sub-title">sub text</div>\n         </div>\n    </div>`
-const code_e_5_1 = `    ...`
-const code_c_3_5_1 = `    <div class="item">\n         <div class="item-title">\n             option3\n             <div class="sub-title">sub text</div>\n         </div>\n    </div>`
-const code_f_5_1 = `</div>`
-const code_s_6_1 = `<div class="ga-list">`
-const code_c_1_6_1 = `    <div class="item">\n        <i class="list-icon icon xi-icon"></i>\n        <div class="item-title">option1</div>\n    </div>`
-const code_c_2_6_1 = `    <div class="item">\n        <i class="list-icon icon xi-icon"></i>\n        <div class="item-title">option2</div>\n    </div>`
-const code_e_6_1 = `    ...`
-const code_c_3_6_1 = `    <div class="item">\n        <i class="list-icon icon xi-icon"></i>\n        <div class="item-title">option3</div>\n    </div>`
-const code_f_6_1 = `</div>`
-const code_s_8_1 = `<div class="ga-list border">`
-const code_c_1_8_1 = `    <div class="item"> option1 </div>`
-const code_c_2_8_1 = `    <div class="item"> option2 </div>`
-const code_e_8_1 = `    ...`
-const code_c_3_8_1 = `    <div class="item"> option3 </div>`
-const code_f_8_1 = `</div>`
-const code_s_9_1 = `<div class="ga-list">`
-const code_c_1_9_1 = `    <div class="item">\n        <img src="{image_path}" />\n        <div class="item-title">option1</div>\n    </div>`
-const code_c_2_9_1 = `    <div class="item">\n        <img src="{image_path}" />\n        <div class="item-title">option2</div>\n    </div>`
-const code_e_9_1 = `    ...`
-const code_c_3_9_1 = `    <div class="item">\n        <img src="{image_path}" />\n        <div class="item-title">option3</div>\n    </div>`
-const code_f_9_1 = `</div>`
+const base = 
+`<div class="ga-list">
+  <div class="item"> option1 </div>
+  <div class="item"> option2 </div>
+  ...
+  <div class="item"> option3 </div>
+</div>`
+
+const link = 
+`<div class="ga-list">
+  <div class="item"> 
+    <a class="link">option 1</a> 
+  </div>
+  <div class="item"> 
+    <a class="link">option 2</a> 
+  </div>
+  <div class="item"> 
+    <a class="link">option 3</a> 
+  </div>
+  ... ...
+</div>`
+
+const list = 
+`<div class="ga-list ul">
+  <div class="item"> option1 </div>
+  <div class="item"> option2 </div>
+  ...
+  <div class="item"> option3 </div>
+</div>`
+
+const select = 
+`<div class="ga-list selection {mark|bg|text}">
+  <div class="item selected"> option1 </div>
+  <div class="item"> option2 </div>
+  ...
+  <div class="item"> option3 </div>
+</div>`
+
+const subTitle = 
+`<div class="ga-list">
+  <div class="item">         
+    <div class="item-title">             
+      option 1            
+      <div class="sub-title">sub text</div>  
+    </div>
+  </div>    
+  <div class="item">         
+    <div class="item-title">             
+      option 2            
+      <div class="sub-title">sub text</div>  
+    </div>
+  </div>    
+  <div class="item">         
+    <div class="item-title">             
+      option 3            
+      <div class="sub-title">sub text</div>  
+    </div>
+  </div> 
+  ... ...   
+</div>`
+
+const icon = 
+`<div class="ga-list">
+  <div class="item">        
+    <i class="list-icon icon xi-icon"></i>        
+    <div class="item-title">option 1</div>    
+  </div>
+  <div class="item">        
+    <i class="list-icon icon xi-icon"></i>        
+    <div class="item-title">option 2</div>    
+  </div>
+  <div class="item">        
+    <i class="list-icon icon xi-icon"></i>        
+    <div class="item-title">option 3</div>    
+  </div>
+  ... ...
+</div>`
+
+const button = 
+`<div class="ga-list border">
+    <div class="item"> 
+      <div class="item-title">option</div>
+      <div class="btn-set">
+        <!-- button element -->
+      </div>
+    </div>
+    ...
+</div>`
+
+const border = 
+`<div class="ga-list border">
+  <div class="item"> option1 </div>
+  <div class="item"> option2 </div>
+  ...
+  <div class="item"> option3 </div>
+</div>`
+
+const image = 
+`<div class="ga-list">
+  <div class="item">        
+    <img src="{image_path}" />        
+    <div class="item-title">option 1</div>    
+  </div>
+  <div class="item">        
+    <img src="{image_path}" />        
+    <div class="item-title">option 2</div>    
+  </div>
+  <div class="item">        
+    <img src="{image_path}" />        
+    <div class="item-title">option 3</div>    
+  </div>
+  ... ...
+</div>`
 
 module.exports = {
-  code_s_1_1, code_c_1_1_1, code_c_2_1_1, code_e_1_1, code_c_3_1_1, code_f_1_1, code_s_2_1, code_c_1_2_1, code_c_2_2_1, code_e_2_1, code_c_3_2_1, code_f_2_1, code_s_3_1, code_c_1_3_1, code_c_2_3_1, code_e_3_1, code_c_3_3_1, code_f_3_1, code_s_4_1, code_c_1_4_1, code_c_2_4_1, code_e_4_1, code_c_3_4_1, code_f_4_1, code_s_5_1, code_c_1_5_1, code_c_2_5_1, code_e_5_1, code_c_3_5_1, code_f_5_1, code_s_6_1, code_c_1_6_1, code_c_2_6_1, code_e_6_1, code_c_3_6_1, code_f_6_1, code_s_8_1, code_c_1_8_1, code_c_2_8_1, code_e_8_1, code_c_3_8_1, code_f_8_1, code_s_9_1, code_c_1_9_1, code_c_2_9_1, code_e_9_1, code_c_3_9_1, code_f_9_1
+  base, link, list, select, subTitle, icon, button, border, image
 }

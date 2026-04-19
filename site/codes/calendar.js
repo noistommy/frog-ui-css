@@ -1,5 +1,10 @@
-const code_1_1 = `\n<div class="ga-calendar">\n   <div class="calendar-header">\n   ...\n   </div>\n   <div class="week-wrapper">\n   ...\n   </div>\n    <div class="cell-wrapper">\n   ...\n    </div>\n</div>`
+const base = 
+`<div class="ga-calendar">
+  <div class="calendar-header">   ...   </div>
+  <div class="week-wrapper">   ...   </div>
+  <div class="cell-wrapper">   ...    </div>
+</div>`
 
 module.exports = {
-  code_1_1
+  base
 }

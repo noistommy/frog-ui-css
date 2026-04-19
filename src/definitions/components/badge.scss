@@ -53,6 +53,10 @@
   $bgColor: #{list.nth($values, 1)};
   $hoverColor: #{list.nth($values, 2)};
   $textColor: #{list.nth($values, 3)};
+  $ratio: color-contrast(list.nth($values, 1), list.nth($values, 3));
+  @if $ratio < 2.5 {
+      $textColor: $black;
+  }
   .#{$ns}-badge {
     &.#{$color} {
       background-color: $hoverColor;
@@ -64,6 +68,10 @@
 @each $color, $value in $colors {
   $hoverColor: color.adjust($value, $lightness: -10%);
   $textColor: $white;
+  $ratio: color-contrast($value, $textColor);
+  @if $ratio < 2.5 {
+      $textColor: $black;
+  }
   .#{$ns}-badge {
     &.#{$color} {
       background-color: $value;

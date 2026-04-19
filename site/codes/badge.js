@@ -1,13 +1,42 @@
-const code_1_1 = '<div class="some element">\n    <span class="ga-badge">{ Badge Contents }</span>\n</div>'
-const code_2_1 = '<div class="some element">\n    <span class="ga-badge float">{ Badge Contents }</span>\n</div>'
-const code1_2_1 = '<div class="some element">\n    <span class="ga-badge mark" />\n</div>'
-const code_3_1 = '<div class="ga-button icon round">\n    <i class="some icon" />\n    <span class="ga-badge float">{ Badge Contents }</span>\n</div>'
-const code1_3_1 = '<div class="ga-button icon round">\n    Button Text\n    <span class="ga-badge mark" />\n</div>'
-const code_4_1 = '<div class="some element">\n    <span class="ga-badge float">{ Badge Text }</span>\n</div>'
-const code_5_1 = '<div class="some element">\n    <span class="ga-badge float">{ Badge Contents }</span>\n</div>'
-const code_6_1 = '<div class="some element">\n    <span class="ga-badge float shadow align-left">{ Badge Contents }</span>\n</div>'
-const code_7_1 = '<div class="some element">\n    <span class="ga-badge { Colors }">{ Badge Contents }</span>\n</div>'
+const base = 
+`<div class="target-element">
+  <span class="ga-badge">{ Badge Contents }</span>
+</div>`
+
+const type = 
+`<!-- Float Type -->
+<div class="target-element">
+  <span class="ga-badge float">{ Badge Contents }</span>
+</div>
+<!-- Mark Type -->
+<div class="target-element">
+  <span class="ga-badge mark" />
+</div>
+`
+
+const text = 
+`<div class="target-element">
+  <span class="ga-badge float">{ Badge Text }</span>
+</div>`
+
+const shadow = 
+`<div class="target-element">
+  <span class="ga-badge float shadow">{ Badge Contents }</span>
+</div>`
+
+const align = 
+`<!-- @align: left | center | right -->
+<div class="target-element">
+  <span class="ga-badge float align-{@align}">{ Badge Contents }</span>
+</div>`
+
+const colors = 
+`<!--@colors: red, orange, yellow, light-green, light-blue, blue
+deep-blue, deep-purple, purple, brown, gray -->
+<div class="target-element">
+  <span class="ga-badge { @colors }">{ Badge Contents }</span>
+</div>`
 
 module.exports = {
-  code_1_1, code_2_1, code1_2_1, code_3_1, code1_3_1, code_4_1, code_5_1, code_6_1, code_7_1
+  base, type, text, shadow, align, colors
 }

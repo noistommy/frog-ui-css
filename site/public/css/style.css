@@ -402,10 +402,6 @@ section .section-contents .contents-wrapper .contents-item {
   gap: 10px;
 }
 
-.contents-wrapper {
-  white-space: pre-wrap;
-}
-
 #grid .ga-grid > .rows .column:after,
 #grid .ga-grid > .column:after {
   content: "";

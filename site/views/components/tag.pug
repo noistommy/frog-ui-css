@@ -11,7 +11,7 @@ block contents
                 .section-desc 
                     p !{cont("ELEMENTS_TAG_SUB_TITLE")} 
             .section-contents
-                h4.contents-title 기본
+                h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-tag.label Standard
@@ -39,12 +39,8 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{`<!-- Label Type -->`}
-                                    | #{codes.code_1_1}
-                                    | #{`<!-- Line Type -->`}
-                                    | #{codes.code1_1_1}
-                                    | #{`<!-- Dot Type -->`}
-                                    | #{codes.code2_1_1}
+                                    | #{codes.base}
+                                   
             .section-contents
                 h4.contents-title icon (only label type)
                 .ga-segment.float.round-m.attached
@@ -70,10 +66,8 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{`<!-- Left -->`}
-                                    | #{codes.code_2_1}
-                                    | #{`<!-- Right -->`}
-                                    | #{codes.code1_2_1}
+                                    | #{codes.icon}
+
             .section-contents
                 h4.contents-title Pointing
                 .ga-segment.float.round-m.attached
@@ -93,14 +87,7 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{`<!-- Left -->`}
-                                    | #{codes.code_3_1}
-                                    | #{`<!-- Right -->`}
-                                    | #{codes.code1_3_1}
-                                    | #{`<!-- Up -->`}
-                                    | #{codes.code2_3_1}
-                                    | #{`<!-- Down -->`}
-                                    | #{codes.code3_3_1}
+                                    | #{codes.pointing}
             .section-contents
                 h4.contents-title Prefix, Suffix
                 .ga-segment.float.round-m.attached
@@ -111,10 +98,7 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{`<!-- with prefix -->`}
-                                    | #{codes.code_4_1}
-                                    | #{`<!-- with suffix -->`}
-                                    | #{codes.code1_4_1}
+                                    | #{codes.prefix_suffix}
             .section-contents
                 h4.contents-title kbd
                 .ga-segment.float.round-m.attached
@@ -133,14 +117,7 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{`<!-- kbd (Key Enter) -->`}
-                                    | #{codes.code_5_1}
-                                    | #{`<!-- kbd (Key Space) -->`}
-                                    | #{codes.code1_5_1}
-                                    | #{`<!-- kbd (Key Command - Meta) -->`}
-                                    | #{codes.code2_5_1}
-                                    | #{`<!-- kbd (Key S) -->`}
-                                    | #{codes.code3_5_1}
+                                    | #{codes.kbd}
             .section-contents
                 h4.contents-title Tags
                 .ga-segment.float.round-m.attached
@@ -152,7 +129,7 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{codes.code_6_1}
+                                    | #{codes.tags}
             .section-contents
                 h4.contents-title Attached tags
                 .ga-segment.float.round-m.attached
@@ -170,7 +147,7 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{codes.code_7_1}
+                                    | #{codes.attached}
             .section-contents
                 h4.contents-title Hover Effect
                 .ga-segment.float.round-m.attached
@@ -183,7 +160,7 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{codes.code_8_1}
+                                    | #{codes.hover}
             .section-contents
                 h4.contents-title Brand & Status Colors
                 .ga-segment.float.round-m.attached
@@ -191,16 +168,16 @@ block contents
                         .ga-tag.label.primary Primary
                         .ga-tag.label.secondary Secondary
                         span |
-                        .ga-tag.label.ga-success Success
-                        .ga-tag.label.ga-info Info
-                        .ga-tag.label.ga-danger Danger
-                        .ga-tag.label.ga-attention Attention
-                        .ga-tag.label.ga-importance Importance
+                        .ga-tag.label.success Success
+                        .ga-tag.label.info Info
+                        .ga-tag.label.danger Danger
+                        .ga-tag.label.attention Attention
+                        .ga-tag.label.importance Importance
                     .footer
                             pre
                                 code.language-markup
                                     | #{`<!-- primary, secondary, success, danger, info, attention, importance -->`}
-                                    | #{codes.code_9_1}
+                                    | #{codes.brand_status}
             .section-contents
                 h4.contents-title Colors
                 .ga-segment.float.round-m.attached
@@ -231,6 +208,4 @@ block contents
                     .footer
                             pre
                                 code.language-markup
-                                    | #{`<!-- red, orange, yellow, light-green, light-blue, blue, deep-blue, deep-purple, purple, brown, gray -->`}
-                                    | #{codes.code_10_1}
-                                    | #{codes.code1_10_1}
+                                    | #{codes.colors}

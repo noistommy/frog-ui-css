@@ -269,10 +269,14 @@ $tagHeight: 1.8em;
   75% {transform: scale(0.9)}
 }
 
-@each $color, $values in $brandColors{
+@each $color, $values in list.join($brandColors, $stateColors) {
   $bgColor: #{list.nth($values, 1)};
   $hoverColor: #{list.nth($values, 2)};
   $textColor: #{list.nth($values, 3)};
+  $ratio: color-contrast(list.nth($values, 1), list.nth($values, 3));
+  @if $ratio < 2.5 {
+      $textColor: $black;
+  }
   .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $bgColor;
@@ -280,13 +284,18 @@ $tagHeight: 1.8em;
     &.#{$color}.pointing,
     &.#{$color}.label {
       background-color: $bgColor;
-      color: $white;
+      color: $textColor;
     }
   }
 }
 
 @each $color, $value in $colors {
   $hoverColor: color.adjust($value, $lightness: -10%);
+  $textColor: $white;
+  $ratio: color-contrast($value, $textColor);
+  @if $ratio < 2.5 {
+      $textColor: $black;
+  }
   .#{$ns}-tag {
     &.#{$color}:not(.label) {
       border-color: $value;
@@ -295,7 +304,7 @@ $tagHeight: 1.8em;
     &.#{$color}.pointing,
     &.#{$color}.label {
       background-color: $value;
-      color: $white;
+      color: $textColor;
     }
     &.light.#{$color}.pointing,
     &.light.#{$color}.label {

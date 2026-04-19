@@ -12,7 +12,7 @@ block contents
                     p !{cont("ELEMENTS_TABLE_SUB_TITLE")}
             - var rows = [{name: 'John Doe', age: 11, job: 'Student'},{name: 'Jane Roe', age: 17, job: 'College Student'},{name: 'Alex Kim', age: 31, job: 'Graduate Student'},]
             .section-contents
-                h4.contents-title Basic
+                h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         table.ga-table
@@ -32,11 +32,7 @@ block contents
                         .code-wrapper
                             pre 
                                 code.language-markup 
-                                    | 
-                                    | #{codes.code_s_1_1}
-                                    |     #{codes.code_h_1_1}
-                                    |     #{codes.code_b_1_1}
-                                    | #{codes.code_e_1_1}
+                                    | #{codes.base}
             .section-contents
                 h4.contents-title Single Rows
                 .ga-segment.float.round-m.attached
@@ -57,13 +53,9 @@ block contents
                         .code-wrapper
                             pre 
                                 code.language-markup 
-                                    | 
-                                    | #{codes.code_s_2_1}
-                                    |     #{codes.code_h_2_1}
-                                    |     #{codes.code_b_2_1}
-                                    | #{codes.code_e_2_1}
+                                    | #{codes.single}
             .section-contents
-                h4.contents-title Table Label
+                h4.contents-title Table Title
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .table-title Table Title
@@ -83,13 +75,9 @@ block contents
                         .code-wrapper
                             pre 
                                 code.language-markup 
-                                    | 
-                                    | #{codes.code_s_3_1}
-                                    |     #{codes.code_h_3_1}
-                                    |     #{codes.code_b_3_1}
-                                    | #{codes.code_e_3_1}
+                                    | #{codes.labeled}
             .section-contents
-                h4.contents-title Footer + Pagination
+                h4.contents-title Footer
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         table.ga-table
@@ -120,13 +108,8 @@ block contents
                     .footer
                         .code-wrapper
                             pre 
-                                code.language-markup 
-                                    | 
-                                    | #{codes.code_s_4_1}
-                                    |     #{codes.code_h_4_1}
-                                    |     #{codes.code_b_4_1}
-                                    |     #{codes.code_f_4_1}
-                                    | #{codes.code_e_4_1}
+                                code.language-markup
+                                    | #{codes.footer}
             .section-contents
                 h4.contents-title Table with Form Element
                 .ga-segment.float.round-m.attached
@@ -173,50 +156,11 @@ block contents
                     .footer
                         .code-wrapper
                             pre 
-                                code.language-markup 
-                                    | 
-                                    | #{codes.code_s_5_1}
-                                    |     #{codes.code_b_5_1}
-                                    | #{codes.code_e_5_1}
-            .section-contents
-                h4.contents-title tables
-                .ga-segment.float.round-m.attached
-                    .contents-wrapper
-                        table.ga-table
-                            thead
-                                tr.align-center
-                                    th Name
-                                    th.align-right Age
-                                    th Job
-                            tbody
-                                each row in rows
-                                    tr
-                                        td= `${row.name}`
-                                        td.align-right= `${row.age}`
-                                        td= `${row.job}`
-                        table.ga-table
-                            thead
-                                tr.align-center
-                                    th Name
-                                    th.align-right Age
-                                    th Job
-                            tbody
-                                each row in rows
-                                    tr
-                                        td= `${row.name}`
-                                        td.align-right= `${row.age}`
-                                        td= `${row.job}`
-                    .footer
-                        .code-wrapper
-                            pre 
-                                code.language-markup 
-                                    | 
-                                    | #{codes.code_6_1}
-                                    | #{codes.code_6_1}
-                                   
+                                code.language-markup
+                                    | #{codes.structured}
             .section-contents
                 h4.contents-title table column count
-                h5.contents-desc Evenly divide columns by the specified count (10-step percentage split)
+                .contents-desc Evenly divide columns by the specified count (10-step percentage split)
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         table.ga-table.column.three
@@ -249,11 +193,7 @@ block contents
                         .code-wrapper
                             pre 
                                 code.language-markup 
-                                    | 
-                                    | #{`<!-- Evenly divided column layout. -->`} 
-                                    | #{`<!-- two, three, four, five... up to ten can be applied via class -->`} 
-                                    | #{codes.code_3_7_1}
-                                    | #{codes.code_4_7_1}
+                                    | #{codes.columns}
             .section-contents
                 h4.contents-title table + grid - column width
                 .ga-segment.float.round-m.attached
@@ -274,11 +214,4 @@ block contents
                         .code-wrapper
                             pre 
                                 code.language-markup 
-                                    | 
-                                    | #{`<!-- Grid system column composition. -->`} 
-                                    | #{`<!-- Apply col-{grid count} on header columns -->`} 
-                                    |
-                                    | #{codes.code_s_8_1}
-                                    |     #{codes.code_h_8_1}
-                                    |     #{codes.code_b_8_1}
-                                    | #{codes.code_e_8_1}
+                                    | #{codes.grid}
