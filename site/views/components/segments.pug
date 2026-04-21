@@ -15,11 +15,12 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents
                         .ga-segment
-                            .contents
-                                | Contents 영역         
+                            | Contents 영역 
+                            | #{contents.lorem_text}        
                         .ga-segment.border
                             .contents
-                                | Contents 영역         
+                                | Contents 영역   
+                                p #{contents.lorem_text}           
                     .footer
                         .code-wrapper
                             pre
@@ -29,8 +30,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents    
                         .ga-segment.border
-                            .contents
-                                | Contents 영역         
+                            | #{contents.lorem_text}          
                     .footer
                         .code-wrapper
                             pre
@@ -40,8 +40,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents    
                         .ga-segment.float
-                            .contents
-                                | Contents 영역         
+                            | #{contents.lorem_text}            
                     .footer
                         .code-wrapper
                             pre
@@ -51,8 +50,7 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents    
                         .ga-segment.surface
-                            .contents
-                                | Contents 영역         
+                            | #{contents.lorem_text}            
                     .footer
                         .code-wrapper
                             pre
@@ -62,14 +60,17 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents 
                         .ga-segment.border.align-left
-                            .contents
-                                | Left Align Contents 영역         
+                            .contents 
+                                .title Left Align
+                                | Contents 영역         
                         .ga-segment.border.align-center
                             .contents
-                                | Center Align Contents 영역         
+                                .title Center Align
+                                | Contents 영역  
                         .ga-segment.border.align-right
-                            .contents
-                                | Right Align Contents 영역         
+                            .contents     
+                                .title Right Align
+                                | Contents 영역
                     .footer
                         .code-wrapper
                             pre
@@ -104,7 +105,7 @@ block contents
                     .contents-wrapper.contents
                         .ga-segment.border
                             .contents
-                                .title.h1 Title
+                                .title.h5 Title
                                 | Contents 영역
                     .footer 
                         .code-wrapper
@@ -115,14 +116,32 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.contents
                         .ga-segment.border.attached 
-                            .header 
+                            .header
                                 .title Header 영역
-                            .contents Contents 영역
-                            .footer Footer 영역
+                            .contents 
+                                | #{contents.lorem_text}
+                            .footer.ga.flex.between 
+                                | Footer 영역
                     .footer 
                         .code-wrapper
                             pre
                                 code.language-markup= codes.attached
+            .section-contents
+                h4.contents-title Extra
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.contents
+                        .ga-segment.border 
+                            .contents 
+                                | #{contents.lorem_text}
+                            .extra.ga.flex.between 
+                                | Extra 영역
+                                div
+                                    .button.ga-button.primary View 
+                                    .button.ga-button.secondary Detail 
+                    .footer 
+                        .code-wrapper
+                            pre
+                                code.language-markup= codes.extra
             .section-contents
                 h4.contents-title Segments
                 .ga-segment.float.round-m.attached

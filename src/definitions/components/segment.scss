@@ -18,7 +18,11 @@ $segmentRadius: 1rem;
     color: $segmentText;
     margin-bottom: 12px;
     overflow: auto;
-    & > div {
+    padding: $segmentVerticalPadding $segmentHorizontalPadding;
+    &:has(div){
+      padding: 0;
+    }
+    & > div:not(.title) {
       padding: $segmentVerticalPadding $segmentHorizontalPadding;
     }
     &:last-child {
@@ -45,14 +49,19 @@ $segmentRadius: 1rem;
       background-color: var(--suf);
     }
     &.attached {
+      display: flex;
+      flex-direction: column;
       > .header {
         border-top-left-radius: inherit;
         border-top-right-radius: inherit;
+        padding-bottom: 0;
       }
       > .footer {
         border-bottom-left-radius: inherit;
         border-bottom-right-radius: inherit;
+        padding-top: 0;
       }
+      
     }
     &.round {
       &-s {
@@ -115,13 +124,17 @@ $segmentRadius: 1rem;
         }
       }
     }
-     > .contents {
-      padding: $segmentHorizontalPadding;
+    >.contents {
       > .title {
-        font-size: 1.5em;
-        margin-bottom: 20px;
+        font-weight: 500;
+        margin-bottom: 12px;
         color: var(--txt);
       }
+    }
+    .extra {
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      border-top: inherit;
     }
   }
   &-segments {

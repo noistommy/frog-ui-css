@@ -7,20 +7,21 @@ $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
 
 .#{$ns} {
   &-message {
+    --min-width: 250px;
     padding: $msgPadding;
     border-radius: 4px;
     background-color: var(--bgc);
     border: 1px solid var(--brd);
     color: var(--txt-light);
     margin-bottom: 4px;
-    min-width: 300px;
+    min-width: var(--min-width);
     line-height: $lineHeight;
     &:last-child {
         margin: 0;
     }
-    // &:hover {
-    //     background-color: var(--suf);
-    // }
+    &.inline {
+        display: inline-block;
+    }
     &.align {
       &-left {
           text-align: left;
@@ -53,11 +54,16 @@ $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
     display: flex;
     width: 100%;
     gap: 8px;
-
+    // flex-wrap: wrap;
     &.list {
       flex-direction: column;
     }
-  
+    &.inline {
+      // flex-wrap: nowrap;
+      .#{$ns}-message {
+        display: inline-block;
+      }
+    }
     .#{$ns}-message {
       width: auto;
       flex: 1 0 auto;
@@ -79,26 +85,27 @@ $msgPadding: $msgVerticalPadding $msgHorizontalPadding;
         border-color: #ccc;
       }
     }
-  
-    &.grid {
-      .column {
-        &.col {
-          @for $i from 1 through $gridWhole {
-            &-#{$i} {
-              width: $gridPercent * $i * 1%;
-            }
-          }
-        }
-      }
+    
+    // &.grid {
+    //   flex-wrap: wrap;
+    //   .column {
+    //     &.col {
+    //       @for $i from 1 through $gridWhole {
+    //         &-#{$i} {
+    //           width: $gridPercent * $i * 1%;
+    //         }
+    //       }
+    //     }
+    //   }
 
-      &.divide {
-        @for $i from 1 through $gridWhole {
-          &-#{$i}>.column {
-            width: calc(100% / $i)
-          }
-        }
-      }
-    }
+    //   &.divide {
+    //     @for $i from 1 through $gridWhole {
+    //       &-#{$i}>.column {
+    //         width: calc(100% / $i)
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 

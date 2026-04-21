@@ -161,6 +161,9 @@ h5,.h5 {font-size: $h5 !important;}
             &.start {justify-content: flex-start;}
             &.center {justify-content: center;}
             &.end {justify-content: flex-end;}
+            &.between {justify-content: space-between;}
+            &.around {justify-content: space-around;}
+            &.evenly {justify-content: space-evenly;}
             &.top {align-items: flex-start;}
             &.mid {align-items: center;}
             &.bottom {align-items: flex-end;}
@@ -178,6 +181,9 @@ h5,.h5 {font-size: $h5 !important;}
             &.top {justify-content: flex-start;}
             &.mid {justify-content: center;}
             &.bottom {justify-content: flex-end;}
+            &.between {justify-content: space-between;}
+            &.around {justify-content: space-around;}
+            &.evenly {justify-content: space-evenly;}
         }
         @for $num from 1 to 10 {
             &.gap-#{$num} {
@@ -260,7 +266,7 @@ h5,.h5 {font-size: $h5 !important;}
         }
     }
     .#{$ns}-#{$color}-light {
-        background-color: color.adjust($value, $lightness: 35%) !important;
+        background-color: color.adjust($value, $alpha: -0.8) !important;
         color: $value !important;
         border-color: color.adjust($value, $lightness: -10%) !important;
     }

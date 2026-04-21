@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var codes = require('../codes')
+var contents = require('../contents')
 
 
 /* GET home page. */
@@ -50,7 +51,7 @@ router.get('/pages/cards', function(req, res, next) {
 });
 
 router.get('/pages/segments', function(req, res, next) {
-  res.render('components/segments',  { title: 'Segments' , codes: codes.segments });
+  res.render('components/segments',  { title: 'Segments' , codes: codes.segments, contents });
 });
 
 router.get('/pages/checkbox', function(req, res, next) {

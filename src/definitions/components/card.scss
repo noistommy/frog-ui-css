@@ -71,16 +71,16 @@ $cardRadius: 1rem;
     }
     &.attached {
       > .header {
-        // padding: 0;
         background-color: var(--suf);
         border-top-left-radius: inherit;
         border-top-right-radius: inherit;
+        padding-bottom: 0;
       }
       > .footer {
-        // padding: 0;
         background-color: var(--suf);
         border-bottom-left-radius: inherit;
         border-bottom-right-radius: inherit;
+        padding-top: 0;
       }
     }
     > .contents {

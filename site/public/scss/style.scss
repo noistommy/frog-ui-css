@@ -511,7 +511,7 @@ section {
 }
 .ga-segment,
 .ga-card {
-  > .footer {
+  > .footer:has(>.code-wrapper) {
     background-color: var(--suf);
     overflow-x: auto;
   }

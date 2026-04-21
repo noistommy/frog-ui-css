@@ -28,8 +28,8 @@ const grayscale = `
 const palette = `
 <!-- colors = [red, orange, yellow, lightgreen, green, lightblue,
  blue, deepblue, deeppurple, brown, gray] -->
-<div class="ga-red">...</div>
-<div class=" ga-orange">...</div>
+<div class="ga-{colors}">...</div>
+<div class=" ga-{colors}-light">...</div>
 ... ...`
 
 module.exports = {

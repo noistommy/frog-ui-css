@@ -1,53 +1,67 @@
 const base = 
-`<div class="ga-segment">      
-  <!-- insert contents -->
-</div>`
+`
+<!-- string contents -->
+<div class="ga-segment">      
+  "String Contents"
+</div>
+<!-- html elements contents -->
+<div class="ga-segment"> 
+  <div class="contents">
+    <!-- contents -->
+  </div>     
+</div>
+`
 const border = 
 `<div class="ga-segment border">       
-  <!-- insert contents -->
+  <!-- contents -->
 </div>`
 const float = 
 `<div class="ga-segment float">       
-  <!-- insert contents -->
+  <!-- contents -->
 </div>`
 const surface = 
 `<div class="ga-segment surface">       
-  <!-- insert contents -->
+  <!-- contents -->
 </div>`
 const align = 
 `<div class="ga-segment align-left">      
-  <!-- insert contents -->
+  <!-- contents -->
 </div>
 <div class="ga-segment align-center">       
-  <!-- insert contents -->
+  <!-- contents -->
 </div>
 <div class="ga-segment align-right">       
-  <!-- insert contents -->
+  <!-- contents -->
 </div>`
 const round =
 `<div class="ga-segment round-{s | m | l | xl}">       
-  <!-- insert contents -->
+  <!-- contents -->
 </div>`
 const title = 
 `<div class="ga-segment">   
   <div class="contents">       
     <div class="title">Title</div>        
-    <!-- insert contents -->    
+    <!-- contents -->    
   </div>
 </div>`
 const attached = 
-`<div class="ga-segment">  
+`<div class="ga-segment attached">  
   <div class="header">Header contents</div>    
-  <!-- contents -->    
+  <div class="contents">contents</div>    
   <div class="footer">Footer contents</div>
+</div>`
+const extra = 
+`<div class="ga-segment">  
+  <div class="contents">contents</div>    
+  <div class="extra">Extra contents</div>
 </div>`
 const segments =
  `<div class="ga-segments">   
-  <div class="ga-segment"><!-- insert contents 1 --></div>  
-  <div class="ga-segment"><!-- insert contents 2 --></div>
-  ...
+    <div class="ga-segment"><!-- contents 1 --></div>  
+    <div class="ga-segment"><!-- contents 2 --></div>
+    ...
  </div>`
 
 module.exports = {
-  base, border, float, surface, align, round, title, attached, segments
+  base, border, float, surface, align, round, title, attached, extra, segments
 }
