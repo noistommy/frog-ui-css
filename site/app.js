@@ -23,14 +23,12 @@ app.use(i18n);
 
 app.get(/^\/ko(\/.*)?$/, (req, res, next) => {
   res.cookie('lang', 'ko');
-  console.log('ko')
   const path = req.path.replace(/^\/ko/, '') || '/';
   res.redirect(path);
 });
 
 app.get(/^\/en(\/.*)?$/, (req, res, next) => {
   res.cookie('lang', 'en');
-  console.log('en')
   const path = req.path.replace(/^\/en/, '') || '/';
   res.redirect(path);
 });

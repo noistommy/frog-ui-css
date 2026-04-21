@@ -20,7 +20,7 @@ block contents
                         .color-box.secondary Secondary
                         .color-box.secondary.dark Darker
                     .footer
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.brand}
 
@@ -40,7 +40,7 @@ block contents
                         .color-box.ga-attention-light Attention
                         .color-box.ga-importance-light Importance
                     .footer
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.state}
             .section-contents
@@ -59,7 +59,7 @@ block contents
                         .color-box.ga-success-light Light
                         .color-box.bordered.ga-success-border Border
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.types}
             .section-contents
@@ -82,7 +82,7 @@ block contents
                         .color-box.small.gray-bg-95 95
                         .color-box.small.gray-bg-100 Black (100)
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.grayscale}
             .section-contents
@@ -97,7 +97,7 @@ block contents
                         each color in colors
                             div(class=`color-box ga-${color.name}-light bordered`)=color.name
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.palette}
                                 

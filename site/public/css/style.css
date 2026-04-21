@@ -474,8 +474,8 @@ section .section-contents .contents-wrapper .contents-item {
   border-left: 5px solid;
 }
 
-.ga-segment > .footer:has(> .code-wrapper),
-.ga-card > .footer:has(> .code-wrapper) {
+.ga-segment > .footer:has(pre),
+.ga-card > .footer:has(pre) {
   background-color: var(--suf);
   overflow-x: auto;
 }

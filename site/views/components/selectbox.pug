@@ -24,7 +24,7 @@ block contents
                                         .icon.item.option-item
                                             = `option${col}`
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.dropdown}
             .section-contents
@@ -42,7 +42,7 @@ block contents
                                         .icon.item.option-item
                                             = `option${col}`
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.float}
             .section-contents
@@ -60,7 +60,7 @@ block contents
                                         .icon.item.option-item
                                             = `option${col}`
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.compact}
             .section-contents
@@ -76,7 +76,7 @@ block contents
                                         option(value=`${col}`)= `option${col}`
                             i.icon.xi-angle-down
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.tag_select}
                                 
@@ -93,7 +93,7 @@ block contents
                                         option(value=`${col}`)= `option${col}`
                             i.icon.xi-angle-down
                     .footer 
-                        pre 
+                        pre.code-wrapper
                             code.language-markup 
                                 | #{codes.tag_select_compact}
 block module 

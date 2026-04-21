@@ -68,16 +68,17 @@ $cardRadius: 1rem;
           width: 100%;
         }
       }
+      &.vertical {
+        flex-direction: row;
+      }
     }
     &.attached {
       > .header {
-        background-color: var(--suf);
         border-top-left-radius: inherit;
         border-top-right-radius: inherit;
         padding-bottom: 0;
       }
       > .footer {
-        background-color: var(--suf);
         border-bottom-left-radius: inherit;
         border-bottom-right-radius: inherit;
         padding-top: 0;
@@ -85,10 +86,9 @@ $cardRadius: 1rem;
     }
     > .contents {
       flex-grow: 1;
-      flex-shrink: 0;
       padding: $cardHorizontalPadding;
       .title {
-        margin-bottom: 20px;
+        margin-bottom: 12px;
       }
     }
   }

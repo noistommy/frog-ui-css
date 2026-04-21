@@ -26,10 +26,17 @@ const button = `
     <span class="off">OFF</span>
 </label>
 `
+const colors = `
+<label class="ga-switch { @colors }">
+    <input type="checkbox" checked />
+    <span class="switch" />
+</label>
+`
 
 module.exports = {
   base1,
   base2,
   round,
   button,
+  colors
 }

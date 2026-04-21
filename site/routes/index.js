@@ -4,6 +4,17 @@ var router = express.Router();
 var codes = require('../codes')
 var contents = require('../contents')
 
+var markdownIt = require('markdown-it')
+
+var md = new markdownIt({
+  html: true,
+  linkify: true,
+  typographer: true
+})
+
+
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

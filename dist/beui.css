@@ -5505,15 +5505,15 @@ button.be-button {
   min-width: 1.1428571429em;
   min-height: 1.1428571429em;
   line-height: 1em;
-  padding: 4px 6px;
+  padding: 0.2857142857em 0.4285714286em;
   border-radius: 1.1428571429em;
   background-color: var(--hover-suf);
   /*color: #ffffff;*/
   /*text-shadow: 0 0 2px #909090;*/
   position: absolute;
   z-index: 999;
-  top: -0.5714285714em;
-  right: -0.5714285714em;
+  top: -9.5px;
+  right: -9.5px;
 }
 .be-badge.shadow {
   box-shadow: -2px 2px 0px 0px rgba(0, 0, 0, 0.2);
@@ -5526,7 +5526,7 @@ button.be-button {
   right: 1px;
 }
 .be-badge.align-left {
-  left: calc(100% - 0.5714285714em);
+  left: calc(100% - 9.5px);
   right: auto;
 }
 .be-badge.align-center {
@@ -5536,7 +5536,7 @@ button.be-button {
 }
 .be-badge.align-right {
   left: auto;
-  right: -0.5714285714em;
+  right: -9.5px;
 }
 
 .be-badge.primary {
@@ -7313,25 +7313,25 @@ table.be-table .be-button {
 .be-card.media > .image img {
   width: 100%;
 }
+.be-card.media.vertical {
+  flex-direction: row;
+}
 .be-card.attached > .header {
-  background-color: var(--suf);
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   padding-bottom: 0;
 }
 .be-card.attached > .footer {
-  background-color: var(--suf);
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
   padding-top: 0;
 }
 .be-card > .contents {
   flex-grow: 1;
-  flex-shrink: 0;
   padding: 20px;
 }
 .be-card > .contents .title {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .be-cards {
   display: flex;
