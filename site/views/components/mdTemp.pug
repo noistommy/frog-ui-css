@@ -1,0 +1,14 @@
+extends ../layout
+
+block title
+  title #{title} | Frog UI CSS
+
+block contents
+  .page-wrapper
+    section#welcome
+      .section-title
+        h1 #{title}
+        .section-desc 
+      .section-contents
+          .contents#mdContents
+            != document

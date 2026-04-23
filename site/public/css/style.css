@@ -4,6 +4,10 @@
   font-family: Isonorm !important;
 }
 
+pre[class*=langage-] {
+  background: var(--base-color) !important;
+}
+
 html, body {
   width: 100vw;
   height: 100vh;
@@ -481,7 +485,6 @@ section .section-contents .contents-wrapper .contents-item {
 }
 
 section pre {
-  background-color: transparent !important;
   margin: 0 !important;
 }
 
@@ -554,5 +557,46 @@ section pre {
 /* Tablet */
 /* Desktop */
 /* Desktop (Large) */
+#mdContents h1, #mdContents h2, #mdContents h3, #mdContents h4 {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+#mdContents p {
+  margin-bottom: 1rem;
+  color: var(--txt);
+}
+#mdContents p > code {
+  font-family: monospace;
+  padding-inline: 2px;
+  margin-inline: 2px;
+  background-color: var(--ga-lightblue-light);
+  border: 1px solid var(--ga-lightblue-color);
+}
+#mdContents strong {
+  font-weight: bold;
+}
+#mdContents pre {
+  width: 100%;
+  border: 1px solid var(--brd);
+  border-radius: 1rem;
+  position: relative;
+  margin-bottom: 5em;
+}
+#mdContents pre:after {
+  content: "SCSS";
+  position: absolute;
+  font-size: 0.85em;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  opacity: 0.5;
+}
+#mdContents hr {
+  border-style: solid;
+  border-color: var(--brd);
+  border-width: 1px;
+  margin: 4rem 0 1rem;
+}
 
 /*# sourceMappingURL=style.css.map */

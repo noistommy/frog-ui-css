@@ -8,6 +8,10 @@
 
 $gnbHeight: 60px;
 
+pre[class*="langage-"] {
+  background: var(--base-color) !important;
+}
+
 
 html, body {
   width: 100vw;
@@ -525,7 +529,7 @@ section {
 }
 
 section pre {
-  background-color: transparent !important;
+  // background-color: transparent !important;
   // background-color: rgba(255, 255, 255, 0.75) !important;
   margin: 0 !important;
   // padding: 40px !important;
@@ -629,3 +633,51 @@ section pre {
 
 /* Desktop (Large) */
 @media (min-width: 1800px) {}
+
+
+#mdContents {
+
+  h1, h2, h3, h4 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-weight: 500;
+  }
+  p {
+    margin-bottom: 1rem;
+    color: var(--txt);
+    > code {
+      font-family: monospace;
+      padding-inline: 2px;
+      margin-inline: 2px;
+      background-color: var(--ga-lightblue-light);
+      border: 1px solid var(--ga-lightblue-color);
+    }
+  }
+  strong {
+    font-weight: bold;
+  }
+  
+  pre {
+    width :100%;
+    // display: inline-block;
+    border: 1px solid var(--brd);
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 5em;
+    &:after {
+      content: 'SCSS';
+      position: absolute;
+      font-size: 0.85em;
+      top: 0;
+      right: 0;
+      padding: 10px;
+      opacity: 0.5;
+    }
+  }
+  hr {
+    border-style: solid;
+    border-color: var(--brd);
+    border-width: 1px;
+    margin: 4rem 0 1rem;
+  }
+}

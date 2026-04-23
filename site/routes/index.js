@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+const fs = require('fs');
+const path = require('path');
+
 var codes = require('../codes')
 var contents = require('../contents')
 
@@ -23,6 +26,13 @@ router.get('/', function(req, res, next) {
 
 router.get('/pages/welcome', function(req, res, next) {
   res.render('components/welcome',  {title: 'Welcome'});
+});
+
+router.get('/pages/theme', function(req, res, next) {
+  const mdPath = path.join(__dirname, '../mds/theme.md');
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const htmlContent = md.render(mdContent);
+  res.render('components/mdTemp',  {title: 'Theme' , document: htmlContent});
 });
 
 router.get('/pages/faqs', function(req, res, next) {
