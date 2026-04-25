@@ -12,6 +12,7 @@ $segmentRadius: 1rem;
 
 .#{$ns} {
   &-segment {
+    text-align: unset;
     border-radius: $baseBorderRadius;
   
     background-color: $segmentBgColor;

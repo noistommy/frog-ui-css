@@ -13,7 +13,7 @@ var md = new markdownIt({
   html: true,
   linkify: true,
   typographer: true
-})
+}).use(require('markdown-it-anchor'), {})
 
 
 
@@ -28,11 +28,12 @@ router.get('/pages/welcome', function(req, res, next) {
   res.render('components/welcome',  {title: 'Welcome'});
 });
 
-router.get('/pages/theme', function(req, res, next) {
-  const mdPath = path.join(__dirname, '../mds/theme.md');
+router.get('/pages/principle', function(req, res, next) {
+  const lang = req.cookies.lang || 'ko'
+  const mdPath = path.join(__dirname, `../mds/${lang}/principle.md`);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const htmlContent = md.render(mdContent);
-  res.render('components/mdTemp',  {title: 'Theme' , document: htmlContent});
+  res.render('components/mdTemp',  {title: 'Principles' , document: htmlContent});
 });
 
 router.get('/pages/faqs', function(req, res, next) {
@@ -41,6 +42,24 @@ router.get('/pages/faqs', function(req, res, next) {
 
 router.get('/pages/components', function(req, res, next) {
   res.render('components/components',  {title: 'Components' });
+});
+
+router.get('/pages/semantic', function(req, res, next) {
+  const lang = req.cookies.lang || 'ko'
+  const mdPath = path.join(__dirname, `../mds/${lang}/semantic.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const htmlContent = md.render(mdContent);
+  res.render('components/mdTemp',  {title: 'Semantic Classes' , document: htmlContent});
+});
+
+// Base 
+
+router.get('/pages/theme', function(req, res, next) {
+  const lang = req.cookies.lang || 'ko'
+  const mdPath = path.join(__dirname, `../mds/${lang}/theme.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const htmlContent = md.render(mdContent);
+  res.render('components/mdTemp',  {title: 'Theme' , document: htmlContent});
 });
 
 router.get('/pages/typography', function(req, res, next) {
@@ -54,6 +73,8 @@ router.get('/pages/breakpoint', function(req, res, next) {
 router.get('/pages/semantic', function(req, res, next) {
   res.render('components/semantic',  {title: 'Semantic' });
 });
+
+// Elements
 
 router.get('/pages/button', function(req, res, next) {
   res.render('components/button',  { title: 'Button' , codes: codes.button });
@@ -139,13 +160,17 @@ router.get('/pages/tag', function(req, res, next) {
   res.render('components/tag',  { title: 'Tag' , codes: codes.tag });
 });
 
-router.get('/pages/toast', function(req, res, next) {
-  res.render('components/toast',  { title: 'Toast' });
-});
-
 router.get('/pages/tree_list', function(req, res, next) {
   res.render('components/tree',  { title: 'Tree', codes: codes.tree });
 });
 
+// Layout
+
+// Modules
+
+
+router.get('/pages/toast', function(req, res, next) {
+  res.render('components/toast',  { title: 'Toast' });
+});
 
 module.exports = router;

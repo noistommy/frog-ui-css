@@ -1,10 +1,12 @@
 **Frog UI**는 토큰을 통해 테마별 정적 스타일 파일을 생성하는 디자인 시스템 도구입니다.  여기서 사용자가 새로운 테마를 적용할 때 제어 할 핵심 토큰들을 소개하고,  일관된 UI를 위한 설계 규칙을 함께 정리한 문서를 제공합니다. 이 문서를 가이드로 원하는 스타일 요소를 적용하고, CSS 변수와 토큰을 조합해 라이트·다크 모드를 포함한 다양한 테마를 손쉽게 확장할 수 있도록 구성되어 있습니다.
 
-## Faundation
+## Foundation
 
 #### Font size
 
 `baseFontSize` 는 프로젝트 전체에 사용되는 크기의 기준이 되는 절대 값입니다. 해당 값을 기준으로 다른 요소 값을 상대값으로 관리하여 전체적인 크기 비율을 동일하게 유지시킬 수 있도록 합니다. 
+
+[Colors](/pages/theme/#colors)
 
 ```scss
 $baseFontSize: {number};
@@ -104,15 +106,24 @@ $black: map.get($grays, 'gray-100');
 ```scss
 @use 'sass:map';
 
-$baseColor: getGray(10); // base element item color
-$baseColorHover: getGray(15); // base hovered element item color
-$background: getGray(0); // base background color
-$baseFontColor: getGray(95); // base font color
-$subFontColor: getGray(85); // sub font color
-$surface: getGray(5); // base surface color
-$surfaceHover: getGray(10); // base hovered surface color
-$borderColor: getGray(15); //base border color
-$borderDarkColor: getGray(25); // base hovered border color
+// base element item color
+$baseColor: getGray(10); 
+// base hovered element item color
+$baseColorHover: getGray(15); 
+// base background color
+$background: getGray(0); 
+// base font color
+$baseFontColor: getGray(95); 
+// sub font color
+$subFontColor: getGray(85); 
+// base surface color
+$surface: getGray(5); 
+// base hovered surface color
+$surfaceHover: getGray(10); 
+//base border color
+$borderColor: getGray(15); 
+// base hovered border color
+$borderDarkColor: getGray(25); 
 ```
 
 #### *Base color - Dark*
@@ -148,7 +159,7 @@ $bold: 700;
 $bolder: 900;
 ```
 
-#### *Line height*
+#### Line height
 
 `line-height` 는 **css** 에서 텍스트가 차지하는 총 높이를 말합니다. 줄간격 또는 행간이라 하며 해당 토큰은 시스템 전체의 기본 크기를 지정합니다. 단위 없는 실수값은 비율을 나타내며 기준은 `font-size` 입니다.
 
@@ -157,7 +168,7 @@ $bolder: 900;
 $lineHeight: 1.5;
 ```
 
-#### *Letter spacing*
+#### Letter spacing
 
 `letter-spacing` 은 글자와 글자 사이의 간격 크기로 **자간**을 의미합니다. 자간을 조정하는 일은 많이 사용되는 속성은 아니지만 미묘한 자간 차이를 두어 텍스트 레이어 구분으로 사용 할 수도 있습니다. 
 
@@ -234,7 +245,7 @@ $heroSub: relativePx(18);
 $heroSmall: relativePx(24); 
 ```
 
-#### Sizes system
+#### Size system
 
 시스템 내에서 일관된 비율을 유지하는 것이 기본이지만 예외적으로 다른 비율로 대상을 표시해야 할때 다음의 지정된 사이즈 단계에서  선택하여 적용합니다. 
 
@@ -270,10 +281,15 @@ $layoutRadiuses: (
 
 #### Color types
 
-- base color
-- on-background color
-- lightness color
-- darkness color
+색상이 결정되면 해당 색을 원시 값으로 다음과 같은 색상 그룹을 생성합니다. 
+
+| Type | Description |
+| --- | --- |
+| Base color | 원시 색상값 |
+| On background color | base color 배경에 대한 텍스트 색상 값. 색 대비에 따라 밝거나 어두운 색으로 결정됩니다. |
+| Lightness color | base color 보다 밝은 색상 값. 색 중요도가 원시 값보다 낮거나 배경의 surface로 사용됩니다.  |
+| Darkness color | base color 보다 어두운 값. 원시값의 hover 또는 focus 값으로 사용 됩니다. | 
+
 
 ```scss
 @use 'sass:color';
@@ -392,10 +408,6 @@ $compactPadding: $compactVerticalPadding $compactHorizontalPadding;
 ```
 
 #### Input padding
-
-tip. input padding 값이 base padding 과 다른 이유?
-
-input은 값을 입력하는 곳입니다. 경우에 따라 많은 텍스트를 입력 했을때 `ellipsis` (말줄임) 처리를 해야 할 수 있습니다. **css** 에서 말줄임 처리 시 반드시 `text-overflow: hidden` 을 지정 해야 하는데 그럼 button와 동일하게 `line-height: 1rem` 를 사용 시  *g, y, q* 같은 글자들이 잘리게 됩니다. 그래서 input에선 `line-height` 를 별도록 지정하고 이른 보정하기 위해 계산된 값을 적용 합니다. 
 
 <div class="ga-message info inline small">
     <div class="title">tip. input padding 값이 base padding 과 다른 이유?</div>
@@ -546,7 +558,7 @@ $isButtonActivation: {boolean};
 
 ```scss
 :root {
-		--primary: #{$primary};
+    --primary: #{$primary};
     --secondary: #{$secondary};
 
     --success: #{$success};
@@ -561,7 +573,7 @@ $isButtonActivation: {boolean};
 
 ```scss
 :root {
-		--mobile-p: #{map.get($breakpoints, 'xs')};
+    --mobile-p: #{map.get($breakpoints, 'xs')};
     --mobile-l: #{map.get($breakpoints, 'sm')};
     --tablet: #{map.get($breakpoints, 'md')};
     --desktop: #{map.get($breakpoints, 'lg')};

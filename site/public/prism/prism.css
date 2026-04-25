@@ -5,6 +5,7 @@ code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shad
 
 .dark-mode {
     code[class*=language-],pre[class*=language-] {
+        background-color: var(--depth-bg);
         text-shadow: none;
         color: #ebebeb;
     }

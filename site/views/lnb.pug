@@ -1,7 +1,7 @@
 - var path = '/'
 - var selected = title?.toLowerCase()
-- var welcomeItems = ['welcome', 'FAQs', 'components', 'Theme']
-- var baseItems = ['typography', 'colors']
+- var welcomeItems = ['welcome', 'principle', 'FAQs', 'semantic', 'components']
+- var baseItems = ['theme', 'typography', 'colors']
 - var elementItems = ['badge', 'button', 'calendar', 'cards', 'checkbox', 'input', 'list', 'message', 'pagination', 'panel', 'segments', 'selectbox', 'switch', 'table', 'tabs', 'tag']
 - var layoutItems = ['form', 'grid', 'grid2']
 - var moduleItems = ['modal', 'toast']
@@ -11,7 +11,8 @@
     .menu-header 
         //- a(href=`${path}`).bold Frog UI
     .menu-contents.ga-list-group
-        .group-title Overviews
+        .ga.hr(data-text="Frog")
+        .group-title Frog
         .ga-list.selection.mark.text
             each item in welcomeItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)

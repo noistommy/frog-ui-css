@@ -480,12 +480,13 @@ section .section-contents .contents-wrapper .contents-item {
 
 .ga-segment > .footer:has(pre),
 .ga-card > .footer:has(pre) {
-  background-color: var(--suf);
+  padding: 0;
   overflow-x: auto;
 }
-
-section pre {
-  margin: 0 !important;
+.ga-segment pre,
+.ga-card pre {
+  margin: 0;
+  padding: 20px;
 }
 
 /* Extra Small Mobile */
@@ -596,7 +597,30 @@ section pre {
   border-style: solid;
   border-color: var(--brd);
   border-width: 1px;
-  margin: 4rem 0 1rem;
+  margin: 1rem 0;
+}
+#mdContents table {
+  width: 100%;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+#mdContents table tr {
+  border-bottom: 1px solid var(--brd);
+}
+#mdContents table th, #mdContents table td {
+  background-color: var(--suf);
+  padding: 5px;
+}
+#mdContents ul {
+  list-style: disc;
+  margin-bottom: 1rem;
+}
+#mdContents ul li {
+  margin-left: 1rem;
+}
+#mdContents .ga-message {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

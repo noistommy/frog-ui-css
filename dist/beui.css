@@ -491,6 +491,24 @@ h5, .h5 {
   display: inline;
   line-height: 1;
 }
+.be.hr {
+  width: 100%;
+  border-top: 1px solid var(--brd);
+  margin: 1rem 0;
+  position: relative;
+  background-color: red;
+  background-color: inherit;
+}
+.be.hr[data-text]:after {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--txt-light);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-inline: 4px;
+  background-color: inherit;
+}
 
 .gray-bg-0 {
   background-color: #ffffff;
@@ -6926,6 +6944,7 @@ table.be-table .be-button {
 }
 
 .be-segment {
+  text-align: unset;
   border-radius: 0.2857142857em;
   background-color: var(--depth-bg);
   color: var(--txt);

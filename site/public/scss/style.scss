@@ -515,24 +515,18 @@ section {
 }
 .ga-segment,
 .ga-card {
+  .contents-wrapper {
+    // padding-block: 80px !important;
+  }
   > .footer:has(pre) {
-    background-color: var(--suf);
+    padding: 0;
     overflow-x: auto;
   }
-  // .contents-wrapper {
-  //   padding: 0 40px 80px;
-  //   &:first-child {
-  //     padding-top: 80px;
-  //   }
-  // }
+  pre {
+    margin: 0;
+    padding: 20px;
+  }
   
-}
-
-section pre {
-  // background-color: transparent !important;
-  // background-color: rgba(255, 255, 255, 0.75) !important;
-  margin: 0 !important;
-  // padding: 40px !important;
 }
 
 
@@ -659,7 +653,6 @@ section pre {
   
   pre {
     width :100%;
-    // display: inline-block;
     border: 1px solid var(--brd);
     border-radius: 1rem;
     position: relative;
@@ -678,6 +671,31 @@ section pre {
     border-style: solid;
     border-color: var(--brd);
     border-width: 1px;
-    margin: 4rem 0 1rem;
+    margin: 1rem 0;
+  }
+  table {
+    width: 100%;
+    border-radius: 8px;
+    // background-color: var(--suf);
+    background-color: white;
+    margin-bottom: 1rem;
+    tr {
+      border-bottom: 1px solid var(--brd);
+    }
+    th,td {
+      background-color: var(--suf);
+      padding: 5px;
+    }
+  }
+  ul {
+    list-style: disc;
+    margin-bottom: 1rem;
+    li {
+      margin-left: 1rem;
+    }
+  }
+  .ga-message {
+    // max-width: 450px;
+    margin-bottom: 1rem;
   }
 }

@@ -206,6 +206,24 @@ h5,.h5 {font-size: $h5 !important;}
 
         }
     }
+    &.hr {
+        width: 100%;
+        border-top: 1px solid var(--brd);
+        margin: 1rem 0;
+        position: relative;
+        background-color: red;
+        background-color: inherit;
+        &[data-text]:after {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--txt-light);
+            top:0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-inline: 4px;
+            background-color: inherit;
+        }
+    }
 }
 
 // @include generate-color-classes();
