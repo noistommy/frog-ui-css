@@ -574,8 +574,15 @@ section .section-contents .contents-wrapper .contents-item {
   background-color: var(--ga-lightblue-light);
   border: 1px solid var(--ga-lightblue-color);
 }
+#mdContents img {
+  width: 100%;
+}
 #mdContents strong {
   font-weight: bold;
+}
+#mdContents a {
+  color: var(--ga-deepblue-color);
+  text-decoration: underline;
 }
 #mdContents pre {
   width: 100%;
@@ -610,7 +617,7 @@ section .section-contents .contents-wrapper .contents-item {
 }
 #mdContents table th, #mdContents table td {
   background-color: var(--suf);
-  padding: 5px;
+  padding: 5px 8px;
 }
 #mdContents ul {
   list-style: disc;
@@ -621,6 +628,15 @@ section .section-contents .contents-wrapper .contents-item {
 }
 #mdContents .ga-message {
   margin-bottom: 1rem;
+}
+#mdContents > .ga-segment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+}
+#mdContents > .ga-segment .fluid {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

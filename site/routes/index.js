@@ -52,6 +52,14 @@ router.get('/pages/semantic', function(req, res, next) {
   res.render('components/mdTemp',  {title: 'Semantic Classes' , document: htmlContent});
 });
 
+router.get('/pages/tokens', function(req, res, next) {
+  const lang = req.cookies.lang || 'ko'
+  const mdPath = path.join(__dirname, `../mds/${lang}/tokens.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const htmlContent = md.render(mdContent);
+  res.render('components/mdTemp',  {title: 'Design tokens' , document: htmlContent});
+});
+
 // Base 
 
 router.get('/pages/theme', function(req, res, next) {

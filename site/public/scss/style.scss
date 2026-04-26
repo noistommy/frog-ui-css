@@ -647,8 +647,15 @@ section {
       border: 1px solid var(--ga-lightblue-color);
     }
   }
+  img {
+    width: 100%;
+  }
   strong {
     font-weight: bold;
+  }
+  a {
+    color: var(--ga-deepblue-color);
+    text-decoration: underline;
   }
   
   pre {
@@ -684,7 +691,7 @@ section {
     }
     th,td {
       background-color: var(--suf);
-      padding: 5px;
+      padding: 5px 8px;
     }
   }
   ul {
@@ -697,5 +704,14 @@ section {
   .ga-message {
     // max-width: 450px;
     margin-bottom: 1rem;
+  }
+  > .ga-segment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    .fluid {
+      width: 100%;
+    }
   }
 }

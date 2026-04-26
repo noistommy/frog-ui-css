@@ -1,8 +1,8 @@
 Frog UI was created based on the wealth of experiences—both successes and failures—we’ve accumulated while designing and managing design systems and UI libraries across various organizations and projects.
 
-Through this process, three principles naturally emerged: “Make it usable across various frameworks,” “Enable the easy creation of systems optimized for each project,” and “Ensure it is easy to use for the developers who actually use it.” Frog UI is both an experiment and the result of implementing these principles.
+Through this process, three principles naturally emerged: **“Make it usable across various frameworks,”** **“Enable the easy creation of systems optimized for each project,”** and **“Ensure it is easy to use for the developers who actually use it.”** Frog UI is both an experiment and the result of implementing these principles.
 
-### No framework constraints
+#### No framework constraints
 
 The core of Frog UI**is its framework-independent CSS layer**. By separating styles from component behavior, it is designed to integrate with Vue, React, or any other UI layer.
 
@@ -12,7 +12,7 @@ The core of Frog UI**is its framework-independent CSS layer**. By separating sty
 
 With this principle, users can focus more on creating screens and UX using core styling techniques rather than framework-specific technologies.  
 
-### Ability to create a system optimized for your project
+#### Ability to create a system optimized for your project
 
 Commonly used external libraries offer a high level of completeness, but they must be customized to fit the project. Due to the many limitations involved in such customization, it is not easy to fully apply brand identity.  
 
@@ -24,7 +24,7 @@ Rather than a finished library, Frog UI can be described as a tool that enables 
 
 The goal is to create “projects that have their own systems through the application of Frog UI.”
 
-### Make it easy for system users to use
+#### Make it easy for system users to use
 
 Frog UI prioritizes the following experiences to ensure developers using the system can work quickly and comfortably:
 

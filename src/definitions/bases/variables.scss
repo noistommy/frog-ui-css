@@ -211,8 +211,7 @@ h5,.h5 {font-size: $h5 !important;}
         border-top: 1px solid var(--brd);
         margin: 1rem 0;
         position: relative;
-        background-color: red;
-        background-color: inherit;
+        background-color: var(--bgc);
         &[data-text]:after {
             content: attr(data-text);
             position: absolute;

@@ -1,6 +1,6 @@
 - var path = '/'
 - var selected = title?.toLowerCase()
-- var welcomeItems = ['welcome', 'principle', 'FAQs', 'semantic', 'components']
+- var welcomeItems = ['welcome', 'FAQs', 'principle', 'semantic', 'tokens', 'components']
 - var baseItems = ['theme', 'typography', 'colors']
 - var elementItems = ['badge', 'button', 'calendar', 'cards', 'checkbox', 'input', 'list', 'message', 'pagination', 'panel', 'segments', 'selectbox', 'switch', 'table', 'tabs', 'tag']
 - var layoutItems = ['form', 'grid', 'grid2']
@@ -12,31 +12,35 @@
         //- a(href=`${path}`).bold Frog UI
     .menu-contents.ga-list-group
         .ga.hr(data-text="Frog")
-        .group-title Frog
+        //- .group-title Frog
         .ga-list.selection.mark.text
             each item in welcomeItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                         span=item
-        .group-title Bases
+        .ga.hr(data-text="Base")
+        //- .group-title Bases
         .ga-list.selection.mark.text
             each item in baseItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                         span=item
-        .group-title Elements
+        .ga.hr(data-text="Elements")
+        //- .group-title Elements
         .ga-list.selection.mark.text
             each item in elementItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                         span=item
-        .group-title Layouts
+        .ga.hr(data-text="Layouts")
+        //- .group-title Layouts
         .ga-list.selection.mark.text
             each item in layoutItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                         span=item
-        .group-title Modules
+        .ga.hr(data-text="Modules")
+        //- .group-title Modules
         .ga-list.selection.mark.text
             each item in moduleItems
                 li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
