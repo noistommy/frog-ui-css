@@ -29,47 +29,84 @@ block contents
             .page-header 
                 .page-title !{cont("MAIN_SECTION_TOKEN_TITLE")}
                 .page-desc !{cont("MAIN_SECTION_TOKEN_DESC")}
+            .page-contents
+                .ga-grid.justify-center
+                    button.ga-button.outline
+                        | Design Token
+                        i.icon.right.xi-arrow-right
+                        a.link(href="/pages/tokens") 
+                    button.ga-button.outline
+                        | Semantic Classes
+                        i.icon.right.xi-arrow-right
+                        a.link(href="/pages/semantic")
+        
+        //- .page-contents
+            .ga-segments.border
+                .ga-segment
+                    .contents
+                        | frog ui 는 sass 기반 디자인 시스템으로 모든 토큰은 scss 문법에 따라 작성 됩니다.
+                        .ga-button.outline
+                            | Design Tokens
+                .ga-segment
+                    .contents 
+                        | frog ui 는 sass 기반 디자인 시스템으로 모든 토큰은 scss 문법에 따라 작성 됩니다.
+                        .ga-button.outline
+                            | Design Tokens
     .page-wrapper#custom-theme
         section
-            .ga-grid
+            .ga-grid.align-center
                 .column.span-6.span-xs-12 
                     .user-custom-theme.page-header
-                        .page-icon
-                            i.xi-border-color
+                        //- .page-icon
+                        //-     i.xi-border-color
                         .page-title !{cont("MAIN_SECTION_STYLE_TITLE")}
                         .page-desc
                             p !{cont("MAIN_SECTION_STYLE_DESC")}
+                        .select-css
+                            .ga-select-box.dropdown#css-selector
+                                    .selected-item.ga-input.icon.right.fluid 
+                                        input(type="text", readonly)
+                                        i.icon.xi-angle-down
+                                    .select-menu
+                                        .ga-list.selection.mark.bg.text
+                                            .item.option-item(data-path="/frogui.css") Theme A
+                                            .item.option-item(data-path="/gcloud.css") Theme B
+                                            .item.option-item(data-path="/gcloud_p.css") Theme C
                 .column.span-6.span-xs-12.cell
-                    .select-css
-                        .ga-select-box.dropdown#css-selector
-                                .selected-item.ga-input.icon.right
-                                    input(type="text", readonly)
-                                    i.icon.xi-angle-down
-                                .select-menu
-                                    .ga-list.selection.mark.bg.text
-                                        .item.option-item(data-path="/frogui.css") Theme A
-                                        .item.option-item(data-path="/gcloud.css") Theme B
-                                        .item.option-item(data-path="/gcloud_p.css") Theme C
-                    hr
-                    .preview-theme.ga.flex.gap-2
-                        .ga-button Button
-                        .ga-button.primary
-                            i.icon.left.xi-user 
-                            | Primary
-                        .ga-button.secondary
-                            i.icon.left.xi-file
-                            | Secondary
-                        .ga-button.red.outline
-                            | Color:Red
-                        .ga-input.labeled.left.inline
-                                input(type="text", placeholder="입력하세요", value="Rate", disabled)
-                                .label 
-                                    i.icon.xi-star
-                        .ga-buttons 
-                            .ga-button.selected A
-                            .ga-button B
-                            .ga-button C
-                        h1.gray-txt-80 Text Style
+                    .ga-card.border.round-s(style="--card-width: 400px")
+                        .ga-form 
+                            .header 
+                                .title Sign in
+                                .desc Create an account and discover the worlds' best UI component framework.
+                            .fields
+                                .field
+                                    .ga.flex.around.ga-buttons
+                                        button.ga-button.selected
+                                            i.icon.left.xi-google
+                                            | Google
+                                        button.ga-button
+                                            i.icon.left.xi-github
+                                            | Github
+                                        button.ga-button
+                                            i.icon.left.xi-apple 
+                                            | Apple
+                            .ga.hr(data-text="E-mail")
+                            .field 
+                                label.required Name
+                                input(type="text", placeholder="Your Name")
+                                .help-text Insert name or e-mail
+                            .field 
+                                label.required Password
+                                .ga-input.icon.right.fluid
+                                    input(type="password", placeholder="Your Password")
+                                    i.icon.xi-eye
+                            .field 
+                                label.ga-checkbox(for="signin")
+                                    input(type="checkbox" name="signin") 
+                                    | Please prove that you are not an AI.
+                        .extra.text-right
+                            button.ga-button.primary.fluid Create                                
+
     .page-wrapper
         section
             .page-header 
@@ -404,7 +441,6 @@ block contents
         }
 
         let selectedItem = cssFileName;
-        console.log(selectedItem)
         selectBox.setSelectedItem(selectedItem)
 
         cssSelector.addEventListener('selectbox:change', (e) => {
@@ -419,4 +455,3 @@ block contents
                 selectBox.init()
             })
         })()
-

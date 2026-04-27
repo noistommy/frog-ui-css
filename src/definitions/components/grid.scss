@@ -109,7 +109,7 @@
           }
         }
         &.offset {
-          @for $i from 1 through $gridWhole {
+          @for $i from 0 through $gridWhole - 1 {
             &-xs-#{$i} {margin-left: $gridPercent * $i * 1% !important; }
           }
         }
@@ -133,7 +133,7 @@
           }
         }
         &.offset {
-          @for $i from 1 through $gridWhole {
+          @for $i from 0 through $gridWhole - 1 {
             &-sm-#{$i} {margin-left: $gridPercent * $i * 1% !important; }
           }
         }
@@ -159,7 +159,7 @@
           }
         }
         &.offset {
-          @for $i from 1 through $gridWhole {
+          @for $i from 0 through $gridWhole - 1 {
             &-md-#{$i} {margin-left: $gridPercent * $i * 1% !important; }
           }
         }

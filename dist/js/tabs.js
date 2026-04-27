@@ -90,3 +90,36 @@ function setWidth() {
 //     }
 // }
 
+class Tabs {
+    constructor(el) {
+        this.el = el
+        this.menu = this.el.querySelector('.tab-menu')
+        this.items = this.menu.querySelectorAll('.tab-item') || null
+        this.selectedIndex = 0
+        this.contents = this.el.querySelector('.tab-contents')
+    }
+
+    init() {
+        if (this.items) {
+            this.items.forEach((tab, i) => {
+                tab.addEventListener('click', e => selectTab(e, i));
+            })
+        }
+    }
+
+    selectTab({target}, i) {
+        for (let t of this.tabs) {
+            t.classList.remove('active')
+        }
+        target.classList.add('active')
+        this.setDisplayContents(target.textContent)
+    }
+
+    setDisplayContents(item) {
+        const contents = this.contents.querySelectorAll('[data-tab]')
+        console.log(contents)
+        contents.forEach(cont => {
+            console.log(item, cont.dataset('tab'))
+        })
+    }
+}
