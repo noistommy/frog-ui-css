@@ -8,7 +8,6 @@
 
 `baseFontSize` 는 프로젝트 전체에 사용되는 크기의 기준이 되는 절대 값입니다. 해당 값을 기준으로 다른 요소 값을 상대값으로 관리하여 전체적인 크기 비율을 동일하게 유지시킬 수 있도록 합니다. 
 
-[Colors](/pages/theme/#colors)
 
 ```scss
 $baseFontSize: {number};

@@ -510,6 +510,126 @@ h5, .h5 {
   background-color: inherit;
 }
 
+.pd-1 {
+  padding: 2px !important;
+}
+.pdh-1 {
+  padding-inline: 2px !important;
+}
+.pdv-1 {
+  padding-block: 2px !important;
+}
+
+.pd-2 {
+  padding: 4px !important;
+}
+.pdh-2 {
+  padding-inline: 4px !important;
+}
+.pdv-2 {
+  padding-block: 4px !important;
+}
+
+.pd-3 {
+  padding: 6px !important;
+}
+.pdh-3 {
+  padding-inline: 6px !important;
+}
+.pdv-3 {
+  padding-block: 6px !important;
+}
+
+.pd-4 {
+  padding: 8px !important;
+}
+.pdh-4 {
+  padding-inline: 8px !important;
+}
+.pdv-4 {
+  padding-block: 8px !important;
+}
+
+.pd-5 {
+  padding: 12px !important;
+}
+.pdh-5 {
+  padding-inline: 12px !important;
+}
+.pdv-5 {
+  padding-block: 12px !important;
+}
+
+.pd-6 {
+  padding: 16px !important;
+}
+.pdh-6 {
+  padding-inline: 16px !important;
+}
+.pdv-6 {
+  padding-block: 16px !important;
+}
+
+.pd-7 {
+  padding: 20px !important;
+}
+.pdh-7 {
+  padding-inline: 20px !important;
+}
+.pdv-7 {
+  padding-block: 20px !important;
+}
+
+.pd-8 {
+  padding: 24px !important;
+}
+.pdh-8 {
+  padding-inline: 24px !important;
+}
+.pdv-8 {
+  padding-block: 24px !important;
+}
+
+.pd-9 {
+  padding: 28px !important;
+}
+.pdh-9 {
+  padding-inline: 28px !important;
+}
+.pdv-9 {
+  padding-block: 28px !important;
+}
+
+.pd-10 {
+  padding: 32px !important;
+}
+.pdh-10 {
+  padding-inline: 32px !important;
+}
+.pdv-10 {
+  padding-block: 32px !important;
+}
+
+.pd-11 {
+  padding: 36px !important;
+}
+.pdh-11 {
+  padding-inline: 36px !important;
+}
+.pdv-11 {
+  padding-block: 36px !important;
+}
+
+.pd-12 {
+  padding: 40px !important;
+}
+.pdh-12 {
+  padding-inline: 40px !important;
+}
+.pdv-12 {
+  padding-block: 40px !important;
+}
+
 .gray-bg-0 {
   background-color: #ffffff;
 }
@@ -3206,6 +3326,9 @@ button.be-button {
   position: relative;
   z-index: 3;
   border-radius: calc(0.2857142857em - 2px);
+}
+.be-switch.button span i {
+  margin-right: 8px;
 }
 .be-switch.button.round {
   border-radius: 1em;
@@ -6240,7 +6363,6 @@ button.be-button {
 }
 .be-tabs .tab-contents {
   width: 100%;
-  padding: 20px;
 }
 .be-tabs.browser .tab-menu {
   display: flex;
@@ -6542,7 +6664,7 @@ button.be-button {
   --grid-size: 7;
   --cell-size: 42px;
   --cell-gap: 1px;
-  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1ems);
+  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1em);
   border-radius: 14px;
   padding: 1em;
   height: auto;

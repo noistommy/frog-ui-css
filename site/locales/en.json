@@ -2,6 +2,7 @@
 	"SUB_TITLE": "Building <span class='ga-blue-text'>consistent</span> and <span class='ga-green-text'>meaningful</span> UI with Semantic CSS",
   "MAIN_SECTION_STYLE_TITLE": "Custom Style Systems",
 	"MAIN_SECTION_STYLE_DESC": "Build unified style systems from your own design tokens.",
+	"MAIN_SECTION_STYLE_LABEL": "Create your own theme.",
 	"MAIN_SECTION_THEME_TITLE": "Dark Theme Ready",
 	"MAIN_SECTION_THEME_DESC": "Switch seamlessly between light and dark themes out of the box.",
 	"MAIN_SECTION_CSS_TITLE": "Framework-Agnostic CSS",

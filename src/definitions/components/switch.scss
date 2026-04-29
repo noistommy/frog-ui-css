@@ -111,6 +111,9 @@
       position: relative;
       z-index: 3;
       border-radius: $switchRadiusInside;
+      i {
+        margin-right: 8px;
+      }
     }
     &.round {
       border-radius: 1em;

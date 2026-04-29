@@ -157,8 +157,8 @@ $darkerPrimary: color.adjust(
 );
 $darkerSecondary: color.adjust($secondary, $lightness: -58.1%);
 
-$lightPrimary: color.adjust($primary, $lightness: 30%);
-$lightSecondary: color.adjust($secondary, $lightness: 35%);
+$lightPrimary: color.adjust($primary, $alpha: -0.8);
+$lightSecondary: color.adjust($secondary, $alpha: -0.85);
 
 $surface1: #F8F8F8;
 $surface2: #EFF4FC;

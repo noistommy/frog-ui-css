@@ -4,13 +4,10 @@ block title
     title Design System #{title}
 
 block contents
-    .main-banner.page-wrapper
-        .container.center
-            p 
-            .title 
-                | FROG
-            .sub-title
-                |!{cont("SUB_TITLE")}
+    .page-wrapper
+        #main-banner
+            .title FROG
+            .sub-title !{cont("SUB_TITLE")}
             .main-link.ga-grid.justify-center
                 .ga-button.primary
                     | What is Frog?
@@ -19,11 +16,6 @@ block contents
                     | Components
                     i.icon.right.xi-arrow-right
                     a.link(href="/pages/components") 
-    //- .page-wrapper#semantic.surface1
-        .container.center
-            .page-header
-                .page-title.hero Semantic CSS
-                .hero.sub Intuitive Semantic CSS Created by Natural Language-Based Classes
     .page-wrapper
         section 
             .page-header 
@@ -40,28 +32,21 @@ block contents
                         i.icon.right.xi-arrow-right
                         a.link(href="/pages/semantic")
         
-        //- .page-contents
-            .ga-segments.border
-                .ga-segment
-                    .contents
-                        | frog ui 는 sass 기반 디자인 시스템으로 모든 토큰은 scss 문법에 따라 작성 됩니다.
-                        .ga-button.outline
-                            | Design Tokens
-                .ga-segment
-                    .contents 
-                        | frog ui 는 sass 기반 디자인 시스템으로 모든 토큰은 scss 문법에 따라 작성 됩니다.
-                        .ga-button.outline
-                            | Design Tokens
     .page-wrapper#custom-theme
         section
             .ga-grid.align-center
                 .column.span-6.span-xs-12 
                     .user-custom-theme.page-header
-                        //- .page-icon
-                        //-     i.xi-border-color
                         .page-title !{cont("MAIN_SECTION_STYLE_TITLE")}
                         .page-desc
                             p !{cont("MAIN_SECTION_STYLE_DESC")}
+                        
+                        button.ga-button
+                            | !{cont("MAIN_SECTION_STYLE_LABEL")}
+                            i.icon.right.xi-arrow-right
+                            a.link(href="/pages/theme")
+                        
+                    .page-contents.ga.flex.center
                         .select-css
                             .ga-select-box.dropdown#css-selector
                                     .selected-item.ga-input.icon.right.fluid 
@@ -72,7 +57,7 @@ block contents
                                             .item.option-item(data-path="/frogui.css") Theme A
                                             .item.option-item(data-path="/gcloud.css") Theme B
                                             .item.option-item(data-path="/gcloud_p.css") Theme C
-                .column.span-6.span-xs-12.cell
+                .column.span-6.span-xs-12
                     .ga-card.border.round-s(style="--card-width: 400px")
                         .ga-form 
                             .header 
@@ -112,11 +97,27 @@ block contents
             .page-header 
                 .page-title !{cont("MAIN_SECTION_THEME_TITLE")}
                 .page-desc !{cont("MAIN_SECTION_THEME_DESC")}
+                button.ga-button.text.link 
+                    i.icon.left.xi-link 
+                    | CSS Variable with mode 
+                    a.link(href="/pages/theme/#light-mode")
             .page-contents
-                .buttons
+                .ga.flex.center
+                    label.ga-switch.button(for="change-mode")
+                        input(type="checkbox" id="change-mode")
+                        span.on
+                            i.icon.xi-sun
+                            | Light 
+                        span.off
+                            i.icon.xi-moon
+                            | Dark 
+                //- .ga-buttons.align-center
+                    .ga-button.change-mode.selection
+                        i.icon.left.xi-sun-o
+                        | Light
                     .ga-button.change-mode
                         i.icon.left.xi-sun-o
-                        | Light Mode
+                        | Dark
     .page-wrapper
         section 
             .page-header 

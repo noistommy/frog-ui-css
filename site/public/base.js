@@ -1,6 +1,7 @@
 const sideMenu = document.querySelector('.side-menu');
 const toggleBtn = document.querySelector('.toggle-mode');
 const changeBtn = document.querySelector('.change-mode');
+const changeInput = document.querySelector('#change-mode');
 const showMenu = document.querySelector('.show-menu');
 const showMore = document.querySelector('.more')
 const mainContainer = document.querySelector('.main');
@@ -31,6 +32,7 @@ function toggleMode()  {
         } else {
             document.documentElement.classList.add('light-mode')
         }
+        changeInput.checked = modeMatch.matches
     }
 }
 
@@ -80,6 +82,7 @@ function setTheme () {
     if(mode) {
         document.documentElement.classList.add(`${mode}-mode`)
         toggleBtn.innerHTML = `<i class="xi-${mode === "dark" ? "sun" : "moon"}"></i>`
+        if(changeInput) changeInput.checked = mode !== 'dark'
         // 초기 로드 시에도 Giscus 테마 설정
         const giscusTheme = mode === 'dark' ? 'noborder_dark' : 'noborder_light';
         updateGiscusTheme(giscusTheme);
@@ -106,6 +109,9 @@ if (changeBtn) {
 }
 if (showMore) {
     showMore.addEventListener('click', () => toggleMore())
+}
+if (changeInput) {
+    changeInput.addEventListener('change', () => toggleMode())
 }
 
 if(showMenu) {

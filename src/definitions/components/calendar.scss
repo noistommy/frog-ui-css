@@ -5,7 +5,7 @@ $calendarBorderRadius: 14px;
   --grid-size: 7;
   --cell-size: 42px;
   --cell-gap: 1px;
-  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1ems);
+  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1em);
   border-radius: $calendarBorderRadius;
   padding: 1em;
   height: auto;
