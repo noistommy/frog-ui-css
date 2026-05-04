@@ -55,8 +55,10 @@ $tagHeight: 1.8em;
         margin-left: 0.4em;
         margin-right: -0.4em;
       }
+    }
+    &.label:not(.pointing) {
       &.round {
-        border-radius: 2em;
+        border-radius: $tagHeight * 0.5;
       }
     }
     &.pointing {
@@ -73,20 +75,20 @@ $tagHeight: 1.8em;
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        margin: -1px 0;
+        margin: -0.5px 0;
       }
       &.down::after {
         bottom: 100%;
         left: 50%;
         transform: translateX(-50%) rotate(180deg);
-        margin: -1px 0;
+        margin: -0.5px 0;
       }
       &.left::after {
         clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
         top: 50%;
         right: 100%;
         transform: translateY(-50%);
-        // margin: 0 -1px;
+        margin: 0 -0.5px;
         height: .8em;
       }
       &.right::after {
@@ -94,7 +96,7 @@ $tagHeight: 1.8em;
         top: 50%;
         left: 100%;
         transform: translateY(-50%) rotate(180deg);
-        // margin: 0 -1px;
+        margin: 0 -0.5px;
         height: .8em;
       }
     }
@@ -273,6 +275,7 @@ $tagHeight: 1.8em;
   $bgColor: #{list.nth($values, 1)};
   $hoverColor: #{list.nth($values, 2)};
   $textColor: #{list.nth($values, 3)};
+  $lightColor: #{list.nth($values, 4)};
   $ratio: color-contrast(list.nth($values, 1), list.nth($values, 3));
   @if $ratio < 2.5 {
       $textColor: $black;
@@ -285,6 +288,20 @@ $tagHeight: 1.8em;
     &.#{$color}.label {
       background-color: $bgColor;
       color: $textColor;
+    }
+    &.#{$color}-light.pointing,
+    &.#{$color}-light.label {
+      background-color: $lightColor;
+      color: $bgColor;
+      border: 1px solid;
+      border-color: color.adjust(list.nth($values, 1), $lightness: 10%);
+      font-weight: 500 !important;
+    }
+    &.#{$color}-light.pointing{
+      &:after {
+        margin: 0;
+        background-color: color.adjust(list.nth($values, 1), $lightness: 10%);
+      }
     }
   }
 }
@@ -316,6 +333,7 @@ $tagHeight: 1.8em;
     }
     &.#{$color}-light.pointing{
       &:after {
+        margin: 0;
         background-color: color.adjust($value, $lightness: 10%);
       }
     }

@@ -19,6 +19,15 @@ const icon =
   { Tag Contents }
 </div>`
 
+const round = 
+`<!-- Round: only label type -->
+<div class="ga-tag label round">    
+  { Tag Contents }
+</div>
+<div class="ga-tag label round">    
+  <i class="icon left xi-icon" />    
+  { Tag Contents }
+</div>`
 
 const pointing = 
 `<!-- Left -->
@@ -86,14 +95,16 @@ const hover =
 </div>`
 
 const brand_status = 
-`<div class="ga-tag label { Brand | Status }">{ Tag Contents }</div>`
+`<!-- primary, secondary | success, danger, info, attention, importance -->
+<div class="ga-tag label { Brand | Status }">{ Tag Contents }</div>
+<div class="ga-tag label { Brand | Status }-light">{ Tag Contents }</div>`
 
 const colors = 
 `<!-- red, orange, yellow, light-green, light-blue, blue,
  deep-blue, deep-purple, purple, brown, gray -->
 <div class="ga-tag label { Colors }">{ Tag Contents }</div>
-<div class="ga-tag label { Colors } light">{ Tag Contents }</div>`
+<div class="ga-tag label { Colors }-light">{ Tag Contents }</div>`
 
 module.exports = {
-  base, icon, pointing, prefix_suffix, kbd, tags, attached, hover, brand_status, colors
+  base, icon, round, pointing, prefix_suffix, kbd, tags, attached, hover, brand_status, colors
 }

@@ -5210,8 +5210,8 @@ button.be-button {
   margin-left: 0.4em;
   margin-right: -0.4em;
 }
-.be-tag.kbd.round, .be-tag.label.round, .be-tag.pointing.round {
-  border-radius: 2em;
+.be-tag.label:not(.pointing).round {
+  border-radius: 0.9em;
 }
 .be-tag.pointing {
   position: relative;
@@ -5228,19 +5228,20 @@ button.be-button {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  margin: -1px 0;
+  margin: -0.5px 0;
 }
 .be-tag.pointing.down::after {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%) rotate(180deg);
-  margin: -1px 0;
+  margin: -0.5px 0;
 }
 .be-tag.pointing.left::after {
   clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
   top: 50%;
   right: 100%;
   transform: translateY(-50%);
+  margin: 0 -0.5px;
   height: 0.8em;
 }
 .be-tag.pointing.right::after {
@@ -5248,6 +5249,7 @@ button.be-button {
   top: 50%;
   left: 100%;
   transform: translateY(-50%) rotate(180deg);
+  margin: 0 -0.5px;
   height: 0.8em;
 }
 .be-tag.static {
@@ -5405,6 +5407,17 @@ button.be-button {
   background-color: #5178af;
   color: #ffffff;
 }
+.be-tag.primary-light.pointing, .be-tag.primary-light.label {
+  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409);
+  color: #5178af;
+  border: 1px solid;
+  border-color: rgb(115.937007874, 147.1062992126, 191.062992126);
+  font-weight: 500 !important;
+}
+.be-tag.primary-light.pointing:after {
+  margin: 0;
+  background-color: rgb(115.937007874, 147.1062992126, 191.062992126);
+}
 
 .be-tag.secondary:not(.label) {
   border-color: #35363a;
@@ -5412,6 +5425,17 @@ button.be-button {
 .be-tag.secondary.pointing, .be-tag.secondary.label {
   background-color: #35363a;
   color: #ffffff;
+}
+.be-tag.secondary-light.pointing, .be-tag.secondary-light.label {
+  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409);
+  color: #35363a;
+  border: 1px solid;
+  border-color: rgb(77.3513513514, 78.8108108108, 84.6486486486);
+  font-weight: 500 !important;
+}
+.be-tag.secondary-light.pointing:after {
+  margin: 0;
+  background-color: rgb(77.3513513514, 78.8108108108, 84.6486486486);
 }
 
 .be-tag.success:not(.label) {
@@ -5421,6 +5445,17 @@ button.be-button {
   background-color: #528E64;
   color: #ffffff;
 }
+.be-tag.success-light.pointing, .be-tag.success-light.label {
+  background-color: rgba(82, 142, 100, 0.2);
+  color: #528E64;
+  border: 1px solid;
+  border-color: rgb(106.0267857143, 168.9732142857, 124.9107142857);
+  font-weight: 500 !important;
+}
+.be-tag.success-light.pointing:after {
+  margin: 0;
+  background-color: rgb(106.0267857143, 168.9732142857, 124.9107142857);
+}
 
 .be-tag.info:not(.label) {
   border-color: #909090;
@@ -5428,6 +5463,17 @@ button.be-button {
 .be-tag.info.pointing, .be-tag.info.label {
   background-color: #909090;
   color: #ffffff;
+}
+.be-tag.info-light.pointing, .be-tag.info-light.label {
+  background-color: rgba(144, 144, 144, 0.2);
+  color: #909090;
+  border: 1px solid;
+  border-color: rgb(169.5, 169.5, 169.5);
+  font-weight: 500 !important;
+}
+.be-tag.info-light.pointing:after {
+  margin: 0;
+  background-color: rgb(169.5, 169.5, 169.5);
 }
 
 .be-tag.danger:not(.label) {
@@ -5437,6 +5483,17 @@ button.be-button {
   background-color: #D50000;
   color: #ffffff;
 }
+.be-tag.danger-light.pointing, .be-tag.danger-light.label {
+  background-color: rgba(213, 0, 0, 0.2);
+  color: #D50000;
+  border: 1px solid;
+  border-color: #ff0909;
+  font-weight: 500 !important;
+}
+.be-tag.danger-light.pointing:after {
+  margin: 0;
+  background-color: #ff0909;
+}
 
 .be-tag.attention:not(.label) {
   border-color: #EC6E00;
@@ -5445,6 +5502,17 @@ button.be-button {
   background-color: #EC6E00;
   color: #ffffff;
 }
+.be-tag.attention-light.pointing, .be-tag.attention-light.label {
+  background-color: rgba(236, 110, 0, 0.2);
+  color: #EC6E00;
+  border: 1px solid;
+  border-color: rgb(255, 135.9406779661, 32);
+  font-weight: 500 !important;
+}
+.be-tag.attention-light.pointing:after {
+  margin: 0;
+  background-color: rgb(255, 135.9406779661, 32);
+}
 
 .be-tag.importance:not(.label) {
   border-color: #FDC036;
@@ -5452,6 +5520,17 @@ button.be-button {
 .be-tag.importance.pointing, .be-tag.importance.label {
   background-color: #FDC036;
   color: #000000;
+}
+.be-tag.importance-light.pointing, .be-tag.importance-light.label {
+  background-color: rgba(253, 192, 54, 0.2);
+  color: #FDC036;
+  border: 1px solid;
+  border-color: rgb(253.5024630542, 207.8275862069, 104.4975369458);
+  font-weight: 500 !important;
+}
+.be-tag.importance-light.pointing:after {
+  margin: 0;
+  background-color: rgb(253.5024630542, 207.8275862069, 104.4975369458);
 }
 
 .be-tag.red:not(.label) {
@@ -5469,6 +5548,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.red-light.pointing:after {
+  margin: 0;
   background-color: rgb(224.8076923077, 128.1923076923, 128.1923076923);
 }
 
@@ -5487,6 +5567,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.orange-light.pointing:after {
+  margin: 0;
   background-color: rgb(241.9230769231, 169.6153846154, 98.0769230769);
 }
 
@@ -5505,6 +5586,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.yellow-light.pointing:after {
+  margin: 0;
   background-color: rgb(249.5866666667, 200.0933333333, 86.4133333333);
 }
 
@@ -5523,6 +5605,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.lightgreen-light.pointing:after {
+  margin: 0;
   background-color: rgb(195.0357142857, 202.4285714286, 100.5714285714);
 }
 
@@ -5541,6 +5624,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.green-light.pointing:after {
+  margin: 0;
   background-color: rgb(129.3614457831, 182.6385542169, 145.265060241);
 }
 
@@ -5559,6 +5643,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.lightblue-light.pointing:after {
+  margin: 0;
   background-color: rgb(175.762195122, 215.0365853659, 221.237804878);
 }
 
@@ -5577,6 +5662,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.blue-light.pointing:after {
+  margin: 0;
   background-color: rgb(149.2091836735, 186.9387755102, 215.7908163265);
 }
 
@@ -5595,6 +5681,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.deepblue-light.pointing:after {
+  margin: 0;
   background-color: rgb(115.937007874, 147.1062992126, 191.062992126);
 }
 
@@ -5613,6 +5700,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.deeppurple-light.pointing:after {
+  margin: 0;
   background-color: rgb(172.7722772277, 160.0643564356, 198.9356435644);
 }
 
@@ -5631,6 +5719,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.purple-light.pointing:after {
+  margin: 0;
   background-color: rgb(195.5025125628, 153.8542713568, 208.1457286432);
 }
 
@@ -5649,6 +5738,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.brown-light.pointing:after {
+  margin: 0;
   background-color: rgb(186.8008474576, 138.1991525424, 157.0127118644);
 }
 
@@ -5667,6 +5757,7 @@ button.be-button {
   font-weight: 500 !important;
 }
 .be-tag.gray-light.pointing:after {
+  margin: 0;
   background-color: rgb(164.5, 164.5, 164.5);
 }
 
