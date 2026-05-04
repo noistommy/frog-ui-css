@@ -144,10 +144,11 @@ header.gnb .logo {
     height: 100%;
     overflow-y: auto;
   }
+  .section-wrapper > section {
+    border-top: 1px solid var(--brd);
+  }
+  .section-wrapper,
   .page-wrapper {
-    > section {
-      border-top: 1px solid var(--brd);
-    }
     .page-header {
       padding: 0 20px;
       text-align: center;
@@ -325,7 +326,8 @@ section {
   padding: 30px;
   margin: 50px 0 20px;
 }
-#welcome {
+
+#welcome, #faqs {
   .container {
     margin-top: 50px;
   }
@@ -335,6 +337,19 @@ section {
   }
 
 }
+#faqs {
+  .tab-contents {
+    padding: 20px;
+    h5 {
+      margin: 2em 0 1em;
+      font-weight: 500;
+    }
+    p {
+      margin-bottom: 3em;
+    }
+  }
+}
+
 #components {
   img {
     background-color: var(--suf);

@@ -5,10 +5,11 @@ block title
 
 block contents
   .page-wrapper
-    section#welcome
+    section#faqs
       .section-title
         h1 FAQs 
         .section-desc 
+          //- a.ga-tag.blue(href='/').pointing.down here
       .container.center
         .ga-tabs.line
           .tab-menu
@@ -17,64 +18,8 @@ block contents
             .tab-item.tab(data-item="experience")  !{cont("FAQS_TABS_ITEM_3")}
             .tab-item.tab(data-item="architecture")  !{cont("FAQS_TABS_ITEM_4")}
             .tab-item.tab(data-item="performance")  !{cont("FAQS_TABS_ITEM_5")}
-        .tab-contants.section-contents(style="margin-top: 30px")
-          .tab-content.active(data-tab="concepts")
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_CONCEPT_1_Q")}
-                p !{cont("FAQS_CONCEPT_1_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_CONCEPT_2_Q")}
-                p !{cont("FAQS_CONCEPT_2_A")}
-          .tab-content(data-tab="semantic")
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_SEMANTIC_1_Q")}
-                p !{cont("FAQS_SEMANTIC_1_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_SEMANTIC_2_Q")}
-                p !{cont("FAQS_SEMANTIC_2_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_SEMANTIC_3_Q")}
-                p !{cont("FAQS_SEMANTIC_3_A")}
-          .tab-content(data-tab="experience")
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_EXPERIENCE_1_Q")}
-                p !{cont("FAQS_EXPERIENCE_1_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_EXPERIENCE_2_Q")}
-                p !{cont("FAQS_EXPERIENCE_2_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_EXPERIENCE_3_Q")}
-                p !{cont("FAQS_EXPERIENCE_3_A")}
-          .tab-content(data-tab="architecture")
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_ARCHITECTURE_1_Q")}
-                p !{cont("FAQS_ARCHITECTURE_1_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_ARCHITECTURE_2_Q")}
-                p !{cont("FAQS_ARCHITECTURE_2_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_ARCHITECTURE_3_Q")}
-                p !{cont("FAQS_ARCHITECTURE_3_A")}
-          .tab-content(data-tab="performance")
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_PERPORMANCE_1_Q")}
-                p !{cont("FAQS_PERPORMANCE_1_A")}
-            .ga-segment
-              .contents
-                .title !{cont("FAQS_PERPORMANCE_2_Q")}
-                p !{cont("FAQS_PERPORMANCE_2_A")}
+        .tab-contents.section-contents(style="margin-top: 30px")
+          != document
   include ../comments
     block module
       script.

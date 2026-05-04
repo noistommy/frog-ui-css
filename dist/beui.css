@@ -5241,7 +5241,6 @@ button.be-button {
   top: 50%;
   right: 100%;
   transform: translateY(-50%);
-  margin: 0 -1px;
   height: 0.8em;
 }
 .be-tag.pointing.right::after {
@@ -5249,7 +5248,6 @@ button.be-button {
   top: 50%;
   left: 100%;
   transform: translateY(-50%) rotate(180deg);
-  margin: 0 -1px;
   height: 0.8em;
 }
 .be-tag.static {
@@ -5463,12 +5461,15 @@ button.be-button {
   background-color: #D75757;
   color: #ffffff;
 }
-.be-tag.light.red.pointing, .be-tag.light.red.label {
+.be-tag.red-light.pointing, .be-tag.red-light.label {
   background-color: rgba(215, 87, 87, 0.2);
   color: #D75757;
   border: 1px solid;
   border-color: rgb(224.8076923077, 128.1923076923, 128.1923076923);
   font-weight: 500 !important;
+}
+.be-tag.red-light.pointing:after {
+  background-color: rgb(224.8076923077, 128.1923076923, 128.1923076923);
 }
 
 .be-tag.orange:not(.label) {
@@ -5478,12 +5479,15 @@ button.be-button {
   background-color: #EE9033;
   color: #000000;
 }
-.be-tag.light.orange.pointing, .be-tag.light.orange.label {
+.be-tag.orange-light.pointing, .be-tag.orange-light.label {
   background-color: rgba(238, 144, 51, 0.2);
   color: #EE9033;
   border: 1px solid;
   border-color: rgb(241.9230769231, 169.6153846154, 98.0769230769);
   font-weight: 500 !important;
+}
+.be-tag.orange-light.pointing:after {
+  background-color: rgb(241.9230769231, 169.6153846154, 98.0769230769);
 }
 
 .be-tag.yellow:not(.label) {
@@ -5493,12 +5497,15 @@ button.be-button {
   background-color: #F8B825;
   color: #000000;
 }
-.be-tag.light.yellow.pointing, .be-tag.light.yellow.label {
+.be-tag.yellow-light.pointing, .be-tag.yellow-light.label {
   background-color: rgba(248, 184, 37, 0.2);
   color: #F8B825;
   border: 1px solid;
   border-color: rgb(249.5866666667, 200.0933333333, 86.4133333333);
   font-weight: 500 !important;
+}
+.be-tag.yellow-light.pointing:after {
+  background-color: rgb(249.5866666667, 200.0933333333, 86.4133333333);
 }
 
 .be-tag.lightgreen:not(.label) {
@@ -5508,12 +5515,15 @@ button.be-button {
   background-color: #B3BC40;
   color: #000000;
 }
-.be-tag.light.lightgreen.pointing, .be-tag.light.lightgreen.label {
+.be-tag.lightgreen-light.pointing, .be-tag.lightgreen-light.label {
   background-color: rgba(179, 188, 64, 0.2);
   color: #B3BC40;
   border: 1px solid;
   border-color: rgb(195.0357142857, 202.4285714286, 100.5714285714);
   font-weight: 500 !important;
+}
+.be-tag.lightgreen-light.pointing:after {
+  background-color: rgb(195.0357142857, 202.4285714286, 100.5714285714);
 }
 
 .be-tag.green:not(.label) {
@@ -5523,12 +5533,15 @@ button.be-button {
   background-color: #61A475;
   color: #ffffff;
 }
-.be-tag.light.green.pointing, .be-tag.light.green.label {
+.be-tag.green-light.pointing, .be-tag.green-light.label {
   background-color: rgba(97, 164, 117, 0.2);
   color: #61A475;
   border: 1px solid;
   border-color: rgb(129.3614457831, 182.6385542169, 145.265060241);
   font-weight: 500 !important;
+}
+.be-tag.green-light.pointing:after {
+  background-color: rgb(129.3614457831, 182.6385542169, 145.265060241);
 }
 
 .be-tag.lightblue:not(.label) {
@@ -5538,12 +5551,15 @@ button.be-button {
   background-color: #8CC5CE;
   color: #000000;
 }
-.be-tag.light.lightblue.pointing, .be-tag.light.lightblue.label {
+.be-tag.lightblue-light.pointing, .be-tag.lightblue-light.label {
   background-color: rgba(140, 197, 206, 0.2);
   color: #8CC5CE;
   border: 1px solid;
   border-color: rgb(175.762195122, 215.0365853659, 221.237804878);
   font-weight: 500 !important;
+}
+.be-tag.lightblue-light.pointing:after {
+  background-color: rgb(175.762195122, 215.0365853659, 221.237804878);
 }
 
 .be-tag.blue:not(.label) {
@@ -5553,12 +5569,15 @@ button.be-button {
   background-color: #70A3CA;
   color: #ffffff;
 }
-.be-tag.light.blue.pointing, .be-tag.light.blue.label {
+.be-tag.blue-light.pointing, .be-tag.blue-light.label {
   background-color: rgba(112, 163, 202, 0.2);
   color: #70A3CA;
   border: 1px solid;
   border-color: rgb(149.2091836735, 186.9387755102, 215.7908163265);
   font-weight: 500 !important;
+}
+.be-tag.blue-light.pointing:after {
+  background-color: rgb(149.2091836735, 186.9387755102, 215.7908163265);
 }
 
 .be-tag.deepblue:not(.label) {
@@ -5568,12 +5587,15 @@ button.be-button {
   background-color: #5178AF;
   color: #ffffff;
 }
-.be-tag.light.deepblue.pointing, .be-tag.light.deepblue.label {
+.be-tag.deepblue-light.pointing, .be-tag.deepblue-light.label {
   background-color: rgba(81, 120, 175, 0.2);
   color: #5178AF;
   border: 1px solid;
   border-color: rgb(115.937007874, 147.1062992126, 191.062992126);
   font-weight: 500 !important;
+}
+.be-tag.deepblue-light.pointing:after {
+  background-color: rgb(115.937007874, 147.1062992126, 191.062992126);
 }
 
 .be-tag.deeppurple:not(.label) {
@@ -5583,12 +5605,15 @@ button.be-button {
   background-color: #9180B4;
   color: #ffffff;
 }
-.be-tag.light.deeppurple.pointing, .be-tag.light.deeppurple.label {
+.be-tag.deeppurple-light.pointing, .be-tag.deeppurple-light.label {
   background-color: rgba(145, 128, 180, 0.2);
   color: #9180B4;
   border: 1px solid;
   border-color: rgb(172.7722772277, 160.0643564356, 198.9356435644);
   font-weight: 500 !important;
+}
+.be-tag.deeppurple-light.pointing:after {
+  background-color: rgb(172.7722772277, 160.0643564356, 198.9356435644);
 }
 
 .be-tag.purple:not(.label) {
@@ -5598,12 +5623,15 @@ button.be-button {
   background-color: #AF77C0;
   color: #ffffff;
 }
-.be-tag.light.purple.pointing, .be-tag.light.purple.label {
+.be-tag.purple-light.pointing, .be-tag.purple-light.label {
   background-color: rgba(175, 119, 192, 0.2);
   color: #AF77C0;
   border: 1px solid;
   border-color: rgb(195.5025125628, 153.8542713568, 208.1457286432);
   font-weight: 500 !important;
+}
+.be-tag.purple-light.pointing:after {
+  background-color: rgb(195.5025125628, 153.8542713568, 208.1457286432);
 }
 
 .be-tag.brown:not(.label) {
@@ -5613,12 +5641,15 @@ button.be-button {
   background-color: #A86A82;
   color: #ffffff;
 }
-.be-tag.light.brown.pointing, .be-tag.light.brown.label {
+.be-tag.brown-light.pointing, .be-tag.brown-light.label {
   background-color: rgba(168, 106, 130, 0.2);
   color: #A86A82;
   border: 1px solid;
   border-color: rgb(186.8008474576, 138.1991525424, 157.0127118644);
   font-weight: 500 !important;
+}
+.be-tag.brown-light.pointing:after {
+  background-color: rgb(186.8008474576, 138.1991525424, 157.0127118644);
 }
 
 .be-tag.gray:not(.label) {
@@ -5628,12 +5659,15 @@ button.be-button {
   background-color: #8B8B8B;
   color: #ffffff;
 }
-.be-tag.light.gray.pointing, .be-tag.light.gray.label {
+.be-tag.gray-light.pointing, .be-tag.gray-light.label {
   background-color: rgba(139, 139, 139, 0.2);
   color: #8B8B8B;
   border: 1px solid;
   border-color: rgb(164.5, 164.5, 164.5);
   font-weight: 500 !important;
+}
+.be-tag.gray-light.pointing:after {
+  background-color: rgb(164.5, 164.5, 164.5);
 }
 
 .be-badge {

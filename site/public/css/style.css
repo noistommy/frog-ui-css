@@ -139,9 +139,10 @@ header.gnb .logo .sub-logo {
   height: 100%;
   overflow-y: auto;
 }
-.main-container .page-wrapper > section {
+.main-container .section-wrapper > section {
   border-top: 1px solid var(--brd);
 }
+.main-container .section-wrapper .page-header,
 .main-container .page-wrapper .page-header {
   padding: 0 20px;
   text-align: center;
@@ -152,22 +153,27 @@ header.gnb .logo .sub-logo {
   line-height: 1.4;
   align-items: center;
 }
+.main-container .section-wrapper .page-contents,
 .main-container .page-wrapper .page-contents {
   margin: 50px 0;
 }
+.main-container .section-wrapper .page-contents .buttons,
 .main-container .page-wrapper .page-contents .buttons {
   display: flex;
   justify-content: center;
   gap: 8px;
 }
+.main-container .section-wrapper .page-icon,
 .main-container .page-wrapper .page-icon {
   font-size: 6em;
 }
+.main-container .section-wrapper .page-title,
 .main-container .page-wrapper .page-title {
   font-size: 2em;
   font-weight: 300;
   margin-bottom: 10px;
 }
+.main-container .section-wrapper .page-desc,
 .main-container .page-wrapper .page-desc {
   padding: 0px 30px;
   font-size: 18px;
@@ -313,12 +319,23 @@ section .section-contents .contents-wrapper .contents-item {
   margin: 50px 0 20px;
 }
 
-#welcome .container {
+#welcome .container, #faqs .container {
   margin-top: 50px;
 }
-#welcome .section-contents {
+#welcome .section-contents, #faqs .section-contents {
   width: 80%;
   line-height: 25px;
+}
+
+#faqs .tab-contents {
+  padding: 20px;
+}
+#faqs .tab-contents h5 {
+  margin: 2em 0 1em;
+  font-weight: 500;
+}
+#faqs .tab-contents p {
+  margin-bottom: 3em;
 }
 
 #components img {

@@ -86,7 +86,7 @@ $tagHeight: 1.8em;
         top: 50%;
         right: 100%;
         transform: translateY(-50%);
-        margin: 0 -1px;
+        // margin: 0 -1px;
         height: .8em;
       }
       &.right::after {
@@ -94,7 +94,7 @@ $tagHeight: 1.8em;
         top: 50%;
         left: 100%;
         transform: translateY(-50%) rotate(180deg);
-        margin: 0 -1px;
+        // margin: 0 -1px;
         height: .8em;
       }
     }
@@ -306,13 +306,18 @@ $tagHeight: 1.8em;
       background-color: $value;
       color: $textColor;
     }
-    &.light.#{$color}.pointing,
-    &.light.#{$color}.label {
+    &.#{$color}-light.pointing,
+    &.#{$color}-light.label {
       background-color: color.adjust($value, $alpha: -0.8);
       color: $value;
       border: 1px solid;
       border-color: color.adjust($value, $lightness: 10%);
       font-weight: 500 !important;
+    }
+    &.#{$color}-light.pointing{
+      &:after {
+        background-color: color.adjust($value, $lightness: 10%);
+      }
     }
   }
 }

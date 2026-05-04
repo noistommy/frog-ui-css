@@ -4,8 +4,8 @@ block title
     title Design System #{title}
 
 block contents
-    .page-wrapper
-        #main-banner
+    .section-wrapper
+        section#main-banner
             .title FROG
             .sub-title !{cont("SUB_TITLE")}
             .main-link.ga-grid.justify-center
@@ -16,7 +16,7 @@ block contents
                     | Components
                     i.icon.right.xi-arrow-right
                     a.link(href="/pages/components") 
-    .page-wrapper
+    .section-wrapper
         section 
             .page-header 
                 .page-title !{cont("MAIN_SECTION_TOKEN_TITLE")}
@@ -32,7 +32,7 @@ block contents
                         i.icon.right.xi-arrow-right
                         a.link(href="/pages/semantic")
         
-    .page-wrapper#custom-theme
+    .section-wrapper#custom-theme
         section
             .ga-grid.align-center
                 .column.span-6.span-xs-12 
@@ -92,7 +92,7 @@ block contents
                         .extra.text-right
                             button.ga-button.primary.fluid Create                                
 
-    .page-wrapper
+    .section-wrapper
         section
             .page-header 
                 .page-title !{cont("MAIN_SECTION_THEME_TITLE")}
@@ -118,7 +118,7 @@ block contents
                     .ga-button.change-mode
                         i.icon.left.xi-sun-o
                         | Dark
-    .page-wrapper
+    .section-wrapper
         section 
             .page-header 
                 .page-title !{cont("MAIN_SECTION_CSS_TITLE")}
@@ -144,7 +144,7 @@ block contents
                         .contents 
                             img(src="/img/vue.svg", alt="vue")
                             | Vue + Frog
-    .page-wrapper.summary#grids2
+    .section-wrapper.summary#grids2
         section
             .page-header.ui-elements
                 .page-title !{cont("MAIN_SECTION_ELEMENT_TITLE")}
@@ -205,7 +205,7 @@ block contents
                         .column.span-3 
                             .ga-tag.label Bolder
                         .column.span-9.bolder Frog UI System
-    .page-wrapper.summary#colors
+    .section-wrapper.summary#colors
         section
             h5.header Colors
             .ga-grid
@@ -291,14 +291,14 @@ block contents
                     .color-item
                         .chip.gray-bg-95
                         .name gray-95
-    .page-wrapper.summary#grids
+    .section-wrapper.summary#grids
         section
             h5.header Grid System
             .ga-grid
                 each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
                     .column
                         .gray-item.gray-15
-    .page-wrapper.summary#grids2
+    .section-wrapper.summary#grids2
         section
             .ga-grid2.dosirak.round-l(style="--grid-row-num: 6; --grid-gap: 20")
                 .column.col-6.col-xs-12
@@ -412,7 +412,7 @@ block contents
                         .ga-checkbox.radio
                             input(id="ch3" type="checkbox")
                             label(for="ch3") radio
-    .page-wrapper 
+    .section-wrapper 
         section 
             .page-header 
                 .page-title !{cont("MAIN_SECTION_CONTACT_TITLE")}

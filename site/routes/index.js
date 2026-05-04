@@ -24,8 +24,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Frog UI' });
 });
 
+// router.get('/pages/welcome', function(req, res, next) {
+//   res.render('components/welcome',  {title: 'Welcome'});
+// });
+
 router.get('/pages/welcome', function(req, res, next) {
-  res.render('components/welcome',  {title: 'Welcome'});
+  const lang = req.cookies.lang || 'ko'
+  const mdPath = path.join(__dirname, `../mds/${lang}/welcome.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const htmlContent = md.render(mdContent);
+  res.render('components/mdTemp',  {title: 'Welcome to Frog' , document: htmlContent});
 });
 
 router.get('/pages/principle', function(req, res, next) {
@@ -37,7 +45,11 @@ router.get('/pages/principle', function(req, res, next) {
 });
 
 router.get('/pages/faqs', function(req, res, next) {
-  res.render('components/faqs',  {title: 'faqs' });
+  const lang = req.cookies.lang || 'ko'
+  const mdPath = path.join(__dirname, `../mds/${lang}/faqs.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  const htmlContent = md.render(mdContent);
+  res.render('components/faqs',  {title: 'faqs', document: htmlContent});
 });
 
 router.get('/pages/components', function(req, res, next) {
