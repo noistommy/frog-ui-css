@@ -1,11 +1,13 @@
 $issue_red: #D75757;
 $calendarBorderRadius: 14px;
+$calendarPadding: 1em;
 
 .#{$ns}-calendar {
   --grid-size: 7;
   --cell-size: 42px;
   --cell-gap: 1px;
-  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1em);
+  display: inline-block;
+  max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1em + $calendarPadding * 2);
   border-radius: $calendarBorderRadius;
   padding: 1em;
   height: auto;

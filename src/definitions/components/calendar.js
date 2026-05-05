@@ -36,72 +36,13 @@ const getStartDay = (year, month) => {
     return startIndex;
 };
 
-function setCalendar (year = dy, month = dm, date = dd) {
-    if (!wrapper) return;
-    wrapper.innerHTML = '';
-    // if (month != dm) date = 1;
-    let startDay = getStartDay(year, month);
-
-    let dayList = [];
-
-    let currLast = lastDayList[month-1];
-    let prevLast = (month === 1) ? 31 : lastDayList[month - 2];
-
-    let currDay = 1;
-    let nextDay = 1;
-
-    for(let i=0;i<6; i++) {
-        for(let j=0; j<7; j++) {
-            const cell = document.createElement('span')
-            cell.style['--x'] = j;
-            cell.style['--y'] = i;
-            cell.setAttribute('style', `--x:${j};--y: ${i}` )
-            cell.classList.add('cell')
-            if(i===0 && j < startDay) {
-                cell.classList.add('disabled')
-                cell.dataset.name = prevLast + (j - startDay) + 1
-                dayList.push(prevLast + (j - startDay) + 1)
-            } else if(currDay <= currLast) {
-                if( j === 0) {
-                    cell.classList.add('sun')
-                }
-                if( j === 6) {
-                    cell.classList.add('sat')
-                }
-                if( currDay === date) {
-                    cell.classList.add('today')
-                    cell.classList.add('selected')
-                }
-                cell.dataset.name = currDay;
-                dayList.push(currDay)
-                currDay++
-            } else {
-                cell.classList.add('disabled')
-                cell.dataset.name = nextDay
-                dayList.push(nextDay)
-                nextDay++
-            }
-            // dayList.push(currDay)
-            wrapper.append(cell)
-        }
-    }
-    if(nextDay > 7) {
-        dayList = dayList.slice(0,-7)
-    }
-
-    calendar.querySelector('span.year').innerHTML = year+'년';
-    calendar.querySelector('span.month').innerHTML = month+'월';
-
-    return dayList;
-}
-
-
 
 
 class Calendar {
     constructor(root, dateString = '') {
         this.root = root
         this.calendar = this.root
+        this.wrapper = this.calendar.querySelector('.cell-wrapper')
         this.selectedDate = ''
         this.dateString = dateString
         this.currentYear = null
@@ -195,7 +136,7 @@ class Calendar {
     render() {
         const shouldShowSelectedDate = this.selectedYear === this.currentYear && this.selectedMonth === this.currentMonth
         const date = shouldShowSelectedDate ? this.selectedDay : undefined
-        setCalendar(this.currentYear, this.currentMonth, date)
+        this.setCalendar(this.currentYear, this.currentMonth, date)
     }
 
     moveMonth(step) {
@@ -231,6 +172,64 @@ class Calendar {
         this.calendar.dispatchEvent(new CustomEvent('calendar:change', {
             detail: { selectedDate: this.selectedDate },
         }))
+    }
+    setCalendar (year = dy, month = dm, date = dd) {
+        if (!this.wrapper) return;
+       this. wrapper.innerHTML = '';
+        // if (month != dm) date = 1;
+        let startDay = getStartDay(year, month);
+    
+        let dayList = [];
+    
+        let currLast = lastDayList[month-1];
+        let prevLast = (month === 1) ? 31 : lastDayList[month - 2];
+    
+        let currDay = 1;
+        let nextDay = 1;
+    
+        for(let i=0;i<6; i++) {
+            for(let j=0; j<7; j++) {
+                const cell = document.createElement('span')
+                cell.style['--x'] = j;
+                cell.style['--y'] = i;
+                cell.setAttribute('style', `--x:${j};--y: ${i}` )
+                cell.classList.add('cell')
+                if(i===0 && j < startDay) {
+                    cell.classList.add('disabled')
+                    cell.dataset.name = prevLast + (j - startDay) + 1
+                    dayList.push(prevLast + (j - startDay) + 1)
+                } else if(currDay <= currLast) {
+                    if( j === 0) {
+                        cell.classList.add('sun')
+                    }
+                    if( j === 6) {
+                        cell.classList.add('sat')
+                    }
+                    if( currDay === date) {
+                        cell.classList.add('today')
+                        cell.classList.add('selected')
+                    }
+                    cell.dataset.name = currDay;
+                    dayList.push(currDay)
+                    currDay++
+                } else {
+                    cell.classList.add('disabled')
+                    cell.dataset.name = nextDay
+                    dayList.push(nextDay)
+                    nextDay++
+                }
+                // dayList.push(currDay)
+                this.wrapper.append(cell)
+            }
+        }
+        if(nextDay > 7) {
+            dayList = dayList.slice(0,-7)
+        }
+    
+        this.calendar.querySelector('span.year').innerHTML = year+'년';
+        this.calendar.querySelector('span.month').innerHTML = month+'월';
+    
+        return dayList;
     }
 }
 

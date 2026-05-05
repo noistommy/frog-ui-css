@@ -33,6 +33,29 @@ block contents
             .code-wrapper
               pre.code-wrapper
                 code.language-markup= codes.base            
+      .section-contents
+        h4 Border
+        .ga-segment.float.round-m.attached
+          .contents-wrapper.flex-wrap
+            .ga-calendar.border
+              .calendar-header 
+                .current-date  
+                  span.year
+                  span.month 
+                .controller 
+                  button.prev-month.ga-button.icon.text.small
+                    i.xi-angle-left
+                  button.next-month.ga-button.icon.text.small
+                    i.xi-angle-right
+              .week-wrapper
+                - var weeks = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+                  each week in weeks
+                    .cell.week-cell(data-name=`${week}`)
+              .cell-wrapper
+          .footer
+            .code-wrapper
+              pre.code-wrapper
+                code.language-markup= codes.base            
 block module 
     script(src="/js/calendar.js")
     script. 
