@@ -1,7 +1,7 @@
 - var path = '/'
 - var selected = title?.toLowerCase()
-- var welcomeItems = ['welcome', 'FAQs', 'principle', 'semantic', 'tokens', 'components']
-- var baseItems = ['theme', 'typography', 'colors']
+- var welcomeItems = ['welcome', 'faqs', 'principle', 'semantic', 'tokens', 'components']
+- var baseItems = ['theming', 'typography', 'colors']
 - var elementItems = ['badge', 'button', 'calendar', 'cards', 'checkbox', 'input', 'list', 'message', 'pagination', 'panel', 'segments', 'selectbox', 'switch', 'table', 'tabs', 'tag']
 - var layoutItems = ['form', 'grid', 'grid2']
 - var moduleItems = ['modal', 'toast']
@@ -15,7 +15,7 @@
         //- .group-title Frog
         .ga-list.selection.mark.text
             each item in welcomeItems
-                li.nav-item.item(class=`${selected === item ? 'selected' : ''}`)
+                li.nav-item.item(class=`${selected.indexOf(item) > -1 ? 'selected' : ''}`)
                     a(href=`${path}pages/${item}`)
                         span=item
         .ga.hr(data-text="Base")

@@ -74,12 +74,12 @@ router.get('/pages/tokens', function(req, res, next) {
 
 // Base 
 
-router.get('/pages/theme', function(req, res, next) {
+router.get('/pages/theming', function(req, res, next) {
   const lang = req.cookies.lang || 'ko'
   const mdPath = path.join(__dirname, `../mds/${lang}/theme.md`);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const htmlContent = md.render(mdContent);
-  res.render('components/mdTemp',  {title: 'Theme' , document: htmlContent});
+  res.render('components/mdTemp',  {title: 'Theming' , document: htmlContent});
 });
 
 router.get('/pages/typography', function(req, res, next) {
