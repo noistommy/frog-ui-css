@@ -36,7 +36,7 @@ let paths = {
   }
 }
 
-const fileList = ['frogui', 'gcloud', 'gcloud_p'];
+const fileList = ['frogui', 'gcloud', 'gcloud_p', 'beui'];
 
 fs.readFile('config.json', 'utf-8', (err, data) => {
   if (err) return console.log(err)

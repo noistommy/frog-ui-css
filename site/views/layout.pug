@@ -51,6 +51,8 @@ html
                     plausible.init();
                 }
             });
+        script(src="/pagefind/pagefind-component-ui.js" type="module")
+        link(href="/pagefind/pagefind-component-ui.css", rel="stylesheet")
     body
         #root
             header.gnb
@@ -71,6 +73,9 @@ html
                         //- div.sub-logo Frontend Renders On Grid...
                         //- div.sub-logo For Real, Only Good!!
                     nav.sub-menu.small
+                        //- #search
+                            <pagefind-modal-trigger></pagefind-modal-trigger>
+                            <pagefind-modal></pagefind-modal>
                         .locale
                             .ga-button.round
                         .buttons-part

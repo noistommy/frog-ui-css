@@ -99,6 +99,7 @@ block contents
                 h4.contents-title Test
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.open-btn
+                        div.ga-tag.label default
                         div.ga-tag.label.ga-success success
                         div.ga-tag.label.ga-info info
                         div.ga-tag.label.ga-danger danger
@@ -118,21 +119,21 @@ block contents
                         div.ga-tag.label.purple purple
                         div.ga-tag.label.brown brown
                     div.theme-select
-                        .ga-checkbox.radio.checked(data-name="")
+                        label.ga-checkbox.radio.checked(data-name="")
                             input(type="radio", name="theme")
-                            label Base
-                        .ga-checkbox.radio(data-name="icon-bg")
+                            | Base
+                        label.ga-checkbox.radio(data-name="icon-bg")
                             input(type="radio", name="theme")
-                            label Icon + Bg
-                        .ga-checkbox.radio(data-name="icon")
+                            | Icon + Bg
+                        label.ga-checkbox.radio(data-name="icon")
                             input(type="radio", name="theme")
-                            label Icon
-                        .ga-checkbox.radio(data-name="line")
+                            | Icon
+                        label.ga-checkbox.radio(data-name="line")
                             input(type="radio", name="theme")
-                            label Line
-                        .ga-checkbox.radio(data-name="light")
+                            | Line
+                        label.ga-checkbox.radio(data-name="light")
                             input(type="radio", name="theme")
-                            label Light
+                            | Light
                     .footer
                         button.ga-button.primary.run-btn Run
                         button.ga-button.outline.clear-btn Clear

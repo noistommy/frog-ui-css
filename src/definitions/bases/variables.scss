@@ -281,9 +281,13 @@ $unitList: (1: 0.5,2: 1,3: 1.5,4: 2,5: 3,6: 4,7: 5,8: 6,9: 7,10: 8,11: 9,12: 10)
 }
 
 @each $color, $value in $colors {
+    $textColor: $white;
+    $ratio: color-contrast($value,$textColor);
+    @if $ratio < 2.5 {$textColor: $black;}
+
     .#{$ns}-#{$color} {
         background-color: $value !important;
-        color: $white !important;
+        color: $textColor !important;
         border-color: color.adjust($value, $lightness: -10%) !important;
         &:hover {
             background-color: color.adjust($value, $lightness: -10%);
@@ -299,30 +303,31 @@ $unitList: (1: 0.5,2: 1,3: 1.5,4: 2,5: 3,6: 4,7: 5,8: 6,9: 7,10: 8,11: 9,12: 10)
         }
     }
     .#{$ns}-#{$color}-light {
+        // background-color: mix($value, $background, 20%) !important;
         background-color: color.adjust($value, $alpha: -0.8) !important;
         color: $value !important;
         border-color: color.adjust($value, $lightness: -10%) !important;
     }
 }
-@each $color, $value in $colors2 {
-    .#{$ns}-#{$color}-2 {
-        background-color: $value !important;
-        color: $white !important;
-        border-color: color.adjust($value, $lightness: -10%) !important;
-        &:hover {
-            background-color: color.adjust($value, $lightness: -10%);
-        }
-        &-text {
-            color: $value !important;
-        }
-        &-bg {
-            background-color: $value !important;
-        }
-        &-border {
-            border-color: $value !important;
-        }
-    }
-}
+// @each $color, $value in $colors2 {
+//     .#{$ns}-#{$color}-2 {
+//         background-color: $value !important;
+//         color: $white !important;
+//         border-color: color.adjust($value, $lightness: -10%) !important;
+//         &:hover {
+//             background-color: color.adjust($value, $lightness: -10%);
+//         }
+//         &-text {
+//             color: $value !important;
+//         }
+//         &-bg {
+//             background-color: $value !important;
+//         }
+//         &-border {
+//             border-color: $value !important;
+//         }
+//     }
+// }
 
 @each $color, $value in $stateColors {
     .#{$ns}-#{$color} {
@@ -387,6 +392,7 @@ $unitList: (1: 0.5,2: 1,3: 1.5,4: 2,5: 3,6: 4,7: 5,8: 6,9: 7,10: 8,11: 9,12: 10)
      scrollbar-face-color: $thumbBackground;
      scrollbar-track-color: $trackBackground;
      scrollbar-arrow-color: #f1f1f1;
+     
      // ----- Webkit(Chrome, Edge, Safari) -----
      &::-webkit-scrollbar{
          // 스크롤바의 크기를 정의합니다.
