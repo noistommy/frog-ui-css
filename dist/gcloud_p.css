@@ -1289,6 +1289,7 @@ h5, .h5 {
   justify-content: center;
   align-items: center;
   gap: 0.5714285714em;
+  font-size: 1em;
   font-weight: 400;
   line-height: 1;
   vertical-align: baseline;

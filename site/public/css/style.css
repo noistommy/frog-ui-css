@@ -323,7 +323,7 @@ section .section-contents .contents-wrapper .contents-item {
   margin-top: 50px;
 }
 #welcome .section-contents, #faqs .section-contents {
-  width: 80%;
+  max-width: 780px;
   line-height: 25px;
 }
 
