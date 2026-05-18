@@ -57,7 +57,7 @@ $iconAreaOffset: 5px;
             opacity: 1;
           }
         }
-        & + .#{$ns}-button {
+        & ~ .#{$ns}-button {
           box-shadow: 0 0 0 1px $primary inset;
         }
         & + .label {

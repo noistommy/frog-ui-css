@@ -2394,7 +2394,7 @@ button.be-button {
 .be-input input:focus + i.icon.clear-btn:hover, .be-input textarea:focus + i.icon.clear-btn:hover, .be-input .input:focus + i.icon.clear-btn:hover {
   opacity: 1;
 }
-.be-input input:focus + .be-button, .be-input textarea:focus + .be-button, .be-input .input:focus + .be-button {
+.be-input input:focus ~ .be-button, .be-input textarea:focus ~ .be-button, .be-input .input:focus ~ .be-button {
   box-shadow: 0 0 0 1px #5178af inset;
 }
 .be-input input:focus + .label, .be-input textarea:focus + .label, .be-input .input:focus + .label {
@@ -6371,6 +6371,7 @@ button.be-button {
 }
 .be-pagination.red .pagination-num.active {
   background-color: #D75757;
+  color: #ffffff;
 }
 .be-pagination.text.red .pagination-num.active {
   background-color: transparent;
@@ -6382,6 +6383,7 @@ button.be-button {
 }
 .be-pagination.orange .pagination-num.active {
   background-color: #EE9033;
+  color: #ffffff;
 }
 .be-pagination.text.orange .pagination-num.active {
   background-color: transparent;
@@ -6393,6 +6395,7 @@ button.be-button {
 }
 .be-pagination.yellow .pagination-num.active {
   background-color: #F8B825;
+  color: #000000;
 }
 .be-pagination.text.yellow .pagination-num.active {
   background-color: transparent;
@@ -6404,6 +6407,7 @@ button.be-button {
 }
 .be-pagination.lightgreen .pagination-num.active {
   background-color: #B3BC40;
+  color: #ffffff;
 }
 .be-pagination.text.lightgreen .pagination-num.active {
   background-color: transparent;
@@ -6415,6 +6419,7 @@ button.be-button {
 }
 .be-pagination.green .pagination-num.active {
   background-color: #61A475;
+  color: #ffffff;
 }
 .be-pagination.text.green .pagination-num.active {
   background-color: transparent;
@@ -6426,6 +6431,7 @@ button.be-button {
 }
 .be-pagination.lightblue .pagination-num.active {
   background-color: #8CC5CE;
+  color: #ffffff;
 }
 .be-pagination.text.lightblue .pagination-num.active {
   background-color: transparent;
@@ -6437,6 +6443,7 @@ button.be-button {
 }
 .be-pagination.blue .pagination-num.active {
   background-color: #70A3CA;
+  color: #ffffff;
 }
 .be-pagination.text.blue .pagination-num.active {
   background-color: transparent;
@@ -6448,6 +6455,7 @@ button.be-button {
 }
 .be-pagination.deepblue .pagination-num.active {
   background-color: #5178AF;
+  color: #ffffff;
 }
 .be-pagination.text.deepblue .pagination-num.active {
   background-color: transparent;
@@ -6459,6 +6467,7 @@ button.be-button {
 }
 .be-pagination.deeppurple .pagination-num.active {
   background-color: #9180B4;
+  color: #ffffff;
 }
 .be-pagination.text.deeppurple .pagination-num.active {
   background-color: transparent;
@@ -6470,6 +6479,7 @@ button.be-button {
 }
 .be-pagination.purple .pagination-num.active {
   background-color: #AF77C0;
+  color: #ffffff;
 }
 .be-pagination.text.purple .pagination-num.active {
   background-color: transparent;
@@ -6481,6 +6491,7 @@ button.be-button {
 }
 .be-pagination.brown .pagination-num.active {
   background-color: #A86A82;
+  color: #ffffff;
 }
 .be-pagination.text.brown .pagination-num.active {
   background-color: transparent;
@@ -6492,6 +6503,7 @@ button.be-button {
 }
 .be-pagination.gray .pagination-num.active {
   background-color: #8B8B8B;
+  color: #ffffff;
 }
 .be-pagination.text.gray .pagination-num.active {
   background-color: transparent;

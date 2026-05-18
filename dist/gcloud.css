@@ -2411,7 +2411,7 @@ button.ga-button {
 .ga-input input:focus + i.icon.clear-btn:hover, .ga-input textarea:focus + i.icon.clear-btn:hover, .ga-input .input:focus + i.icon.clear-btn:hover {
   opacity: 1;
 }
-.ga-input input:focus + .ga-button, .ga-input textarea:focus + .ga-button, .ga-input .input:focus + .ga-button {
+.ga-input input:focus ~ .ga-button, .ga-input textarea:focus ~ .ga-button, .ga-input .input:focus ~ .ga-button {
   box-shadow: 0 0 0 1px #5178af inset;
 }
 .ga-input input:focus + .label, .ga-input textarea:focus + .label, .ga-input .input:focus + .label {
@@ -6388,6 +6388,7 @@ button.ga-button {
 }
 .ga-pagination.red .pagination-num.active {
   background-color: #de5c5c;
+  color: #ffffff;
 }
 .ga-pagination.text.red .pagination-num.active {
   background-color: transparent;
@@ -6399,6 +6400,7 @@ button.ga-button {
 }
 .ga-pagination.orange .pagination-num.active {
   background-color: #e08528;
+  color: #ffffff;
 }
 .ga-pagination.text.orange .pagination-num.active {
   background-color: transparent;
@@ -6410,6 +6412,7 @@ button.ga-button {
 }
 .ga-pagination.yellow .pagination-num.active {
   background-color: #f6b623;
+  color: #ffffff;
 }
 .ga-pagination.text.yellow .pagination-num.active {
   background-color: transparent;
@@ -6421,6 +6424,7 @@ button.ga-button {
 }
 .ga-pagination.lightgreen .pagination-num.active {
   background-color: #bfc94b;
+  color: #ffffff;
 }
 .ga-pagination.text.lightgreen .pagination-num.active {
   background-color: transparent;
@@ -6432,6 +6436,7 @@ button.ga-button {
 }
 .ga-pagination.green .pagination-num.active {
   background-color: #66a97a;
+  color: #ffffff;
 }
 .ga-pagination.text.green .pagination-num.active {
   background-color: transparent;
@@ -6443,6 +6448,7 @@ button.ga-button {
 }
 .ga-pagination.lightblue .pagination-num.active {
   background-color: #7cb4bd;
+  color: #ffffff;
 }
 .ga-pagination.text.lightblue .pagination-num.active {
   background-color: transparent;
@@ -6454,6 +6460,7 @@ button.ga-button {
 }
 .ga-pagination.blue .pagination-num.active {
   background-color: #6ea1c8;
+  color: #ffffff;
 }
 .ga-pagination.text.blue .pagination-num.active {
   background-color: transparent;
@@ -6465,6 +6472,7 @@ button.ga-button {
 }
 .ga-pagination.deepblue .pagination-num.active {
   background-color: #6188c0;
+  color: #ffffff;
 }
 .ga-pagination.text.deepblue .pagination-num.active {
   background-color: transparent;
@@ -6476,6 +6484,7 @@ button.ga-button {
 }
 .ga-pagination.deeppurple .pagination-num.active {
   background-color: #8f7eb2;
+  color: #ffffff;
 }
 .ga-pagination.text.deeppurple .pagination-num.active {
   background-color: transparent;
@@ -6487,6 +6496,7 @@ button.ga-button {
 }
 .ga-pagination.purple .pagination-num.active {
   background-color: #bf86d0;
+  color: #ffffff;
 }
 .ga-pagination.text.purple .pagination-num.active {
   background-color: transparent;
@@ -6498,6 +6508,7 @@ button.ga-button {
 }
 .ga-pagination.brown .pagination-num.active {
   background-color: #b3748c;
+  color: #ffffff;
 }
 .ga-pagination.text.brown .pagination-num.active {
   background-color: transparent;
@@ -6509,6 +6520,7 @@ button.ga-button {
 }
 .ga-pagination.gray .pagination-num.active {
   background-color: #868686;
+  color: #ffffff;
 }
 .ga-pagination.text.gray .pagination-num.active {
   background-color: transparent;

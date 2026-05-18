@@ -129,6 +129,7 @@
     &.#{$color} {
       .pagination-num.active {
         background-color: $value;
+        color: $textColor;
       }
     }
     &.text.#{$color} {
