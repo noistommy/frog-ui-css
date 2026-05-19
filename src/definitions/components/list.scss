@@ -9,6 +9,11 @@ $listItemPadding: calc($verticalInputPadding + 2px);
     align-items: center;
     color: var(--txt);
     padding: $listItemPadding;
+    margin-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    &:last-child {
+      border: 0
+    }
     &:has(a) {
        padding: 0;
        a {
@@ -56,10 +61,7 @@ $listItemPadding: calc($verticalInputPadding + 2px);
   }
   &.border {
     > .item {
-      border-bottom: 1px solid var(--brd);
-      &:last-child {
-        border: 0
-      }
+      border-color: var(--brd);
     }
   }
   &.selection {

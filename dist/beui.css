@@ -5961,6 +5961,11 @@ button.be-button {
   align-items: center;
   color: var(--txt);
   padding: calc(0.8571428571em + 2px);
+  margin-bottom: 1px;
+  border-bottom: 1px solid transparent;
+}
+.be-list > .item:last-child {
+  border: 0;
 }
 .be-list > .item:has(a) {
   padding: 0;
@@ -6002,10 +6007,7 @@ button.be-button {
   margin-right: 10px;
 }
 .be-list.border > .item {
-  border-bottom: 1px solid var(--brd);
-}
-.be-list.border > .item:last-child {
-  border: 0;
+  border-color: var(--brd);
 }
 .be-list.selection > .item {
   cursor: pointer;

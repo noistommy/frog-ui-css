@@ -5960,6 +5960,11 @@ button.ga-button {
   align-items: center;
   color: var(--txt);
   padding: calc(0.8571428571em + 2px);
+  margin-bottom: 1px;
+  border-bottom: 1px solid transparent;
+}
+.ga-list > .item:last-child {
+  border: 0;
 }
 .ga-list > .item:has(a) {
   padding: 0;
@@ -6001,10 +6006,7 @@ button.ga-button {
   margin-right: 10px;
 }
 .ga-list.border > .item {
-  border-bottom: 1px solid var(--brd);
-}
-.ga-list.border > .item:last-child {
-  border: 0;
+  border-color: var(--brd);
 }
 .ga-list.selection > .item {
   cursor: pointer;
