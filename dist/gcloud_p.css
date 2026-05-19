@@ -6552,11 +6552,13 @@ button.ga-button {
 }
 .ga-calendar .calendar-header .current-date {
   display: flex;
-  justify-content: center;
   gap: 5px;
   line-height: 1;
+  width: 100%;
+  padding-inline: 10px;
 }
 .ga-calendar .calendar-header.symmetry .current-date {
+  justify-content: center;
   text-align: center;
   flex-grow: 1;
 }
@@ -6578,7 +6580,6 @@ button.ga-button {
 }
 .ga-calendar .week-wrapper .cell,
 .ga-calendar .cell-wrapper .cell {
-  background-color: var(--bgc);
   position: absolute;
   z-index: 2;
   border-radius: 2px;
@@ -6629,7 +6630,7 @@ button.ga-button {
 }
 .ga-calendar .week-wrapper .cell.today:after,
 .ga-calendar .cell-wrapper .cell.today:after {
-  color: #ffffff;
+  color: #1a1a1a;
 }
 .ga-calendar .week-wrapper .cell:hover:not(.week-cell),
 .ga-calendar .cell-wrapper .cell:hover:not(.week-cell) {
@@ -6651,7 +6652,7 @@ button.ga-button {
 }
 .ga-calendar .week-wrapper .week-cell {
   position: relative;
-  color: #676767;
+  color: var(--txt-light);
   text-align: center;
   line-height: 1em;
   vertical-align: baseline;

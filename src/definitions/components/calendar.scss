@@ -25,12 +25,14 @@ $calendarPadding: 1em;
     }
     .current-date {
       display: flex;
-      justify-content: center;
       gap: 5px;
       line-height: 1;
+      width: 100%;
+      padding-inline: 10px;
     }
     &.symmetry {
       .current-date {
+        justify-content: center;
         text-align: center;
         flex-grow: 1;
       }
@@ -54,7 +56,6 @@ $calendarPadding: 1em;
     width: 100%;
     height: calc((var(--cell-size) + var(--cell-gap) * 2) * 6);
     .cell {
-      background-color: var(--bgc);
       position: absolute;
       z-index: 2;
       border-radius: 2px;
@@ -102,7 +103,7 @@ $calendarPadding: 1em;
         border-radius: 50%;
       }
       &.today:after {
-        color: #ffffff;
+        color: $black;
       }
       &:hover:not(.week-cell) {
         background-color: var(--hover-suf);
@@ -123,7 +124,8 @@ $calendarPadding: 1em;
     font-size: 0.8em;
     .week-cell {
       position: relative;
-      color: #676767;
+      // color: #676767;
+      color: var(--txt-light);
       text-align: center;
       line-height: 1em;
       vertical-align: baseline;
