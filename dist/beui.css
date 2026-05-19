@@ -1156,7 +1156,7 @@ h5, .h5 {
 }
 
 .be-primary-light {
-  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409) !important;
+  background-color: rgba(81, 120, 175, 0.2) !important;
   color: #5178af !important;
   border-color: rgb(63.6031496063, 94.6096850394, 138.3368503937) !important;
 }
@@ -1180,7 +1180,7 @@ h5, .h5 {
 }
 
 .be-secondary-light {
-  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409) !important;
+  background-color: rgba(81, 120, 175, 0.2) !important;
   color: #35363a !important;
   border-color: hsl(228, 4.5045045045%, -13.9352941176%) !important;
 }
@@ -5121,7 +5121,7 @@ button.be-button {
   color: #ffffff;
 }
 .be-tag.primary-light.pointing, .be-tag.primary-light.label {
-  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409);
+  background-color: rgba(81, 120, 175, 0.2);
   color: #5178af;
   border: 1px solid;
   border-color: rgb(115.937007874, 147.1062992126, 191.062992126);
@@ -5140,7 +5140,7 @@ button.be-button {
   color: #ffffff;
 }
 .be-tag.secondary-light.pointing, .be-tag.secondary-light.label {
-  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409);
+  background-color: rgba(81, 120, 175, 0.2);
   color: #35363a;
   border: 1px solid;
   border-color: rgb(77.3513513514, 78.8108108108, 84.6486486486);
@@ -6035,7 +6035,7 @@ button.be-button {
   font-weight: bold;
 }
 .be-list.selection.bg > .item.include, .be-list.selection.bg > .item.selected:not(.include), .be-list.selection.bg > .item.active {
-  background-color: rgb(203.2795275591, 214.8720472441, 231.2204724409);
+  background-color: rgba(81, 120, 175, 0.2);
 }
 .be-list.extend > .item {
   cursor: pointer;
