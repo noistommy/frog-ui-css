@@ -6984,6 +6984,7 @@ table.ga-table .ga-button {
   --max-line: 10em;
   height: var(--max-line);
   overflow-y: hidden;
+  position: relative;
 }
 .ga-segment.collapse.detail {
   height: -moz-max-content;
@@ -7006,7 +7007,7 @@ table.ga-table .ga-button {
   width: 100%;
   height: 30%;
   text-align: center;
-  background: linear-gradient(0, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.5) 100%);
+  background: linear-gradient(0, var(--bgc) 0%, transparent 100%);
 }
 .ga-segment.collapse .toggle-detail:after {
   content: "Detail";
@@ -7014,7 +7015,7 @@ table.ga-table .ga-button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: var(--suf);
   padding: 4px 10px;
   border-radius: 1em;
   opacity: 0.5;

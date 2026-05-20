@@ -4,11 +4,11 @@
 $segmentBgColor: var(--depth-bg);
 $segmentBoxShadow: var(--depth-bs);
 $segmentText: var(--txt);
+$segmentBg: var(--bgc);
 $segmentHorizontalPadding: 20px;
 $segmentVerticalPadding: 16px;
 
 $segmentRadius: 1rem;
-
 
 .#{$ns} {
   &-segment {
@@ -83,6 +83,7 @@ $segmentRadius: 1rem;
       --max-line: 10em;
       height: var(--max-line);
       overflow-y: hidden;
+      position: relative;
       &.detail {
         height: max-content;
         transition: all 500ms;
@@ -105,8 +106,8 @@ $segmentRadius: 1rem;
         text-align: center;
         background: linear-gradient(
           0,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 0.5) 100%
+          $segmentBg 0%,
+          transparent 100%
         );
         &:after {
           content: 'Detail';
@@ -114,7 +115,7 @@ $segmentRadius: 1rem;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background-color: #fff;
+          background-color: var(--suf);
           padding: 4px 10px;
           border-radius: 1em;
           opacity: 0.5;
