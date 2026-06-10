@@ -61,7 +61,7 @@
     --depth-bs: 0 0 0 1px rgba(0, 0, 0, 0.16);
   }
 }
-:root.light-mode {
+:root[class*=light] {
   --bgc: #FFFFFF;
   --txt: #000000;
   --txt-light: #939393;
@@ -74,7 +74,7 @@
   --depth-bs: 0 1px 8px 2px rgba(0, 0, 0, 0.16);
 }
 
-:root.dark-mode {
+:root[class*=dark] {
   --bgc: #333333;
   --txt: #ffffff;
   --txt-light: #dfdfdf;
