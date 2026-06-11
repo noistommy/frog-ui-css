@@ -7355,40 +7355,40 @@ table.ga-table .ga-button {
   width: 100%;
 }
 .ga-cards.column-1 > .ga-card {
-  width: calc(100% - 12px);
+  width: calc((100% + 12px) / 1 - 12px);
 }
 .ga-cards.column-2 > .ga-card {
-  width: calc(50% - 12px);
+  width: calc((100% + 12px) / 2 - 12px);
 }
 .ga-cards.column-3 > .ga-card {
-  width: calc(33.3333333333% - 12px);
+  width: calc((100% + 12px) / 3 - 12px);
 }
 .ga-cards.column-4 > .ga-card {
-  width: calc(25% - 12px);
+  width: calc((100% + 12px) / 4 - 12px);
 }
 .ga-cards.column-5 > .ga-card {
-  width: calc(20% - 12px);
+  width: calc((100% + 12px) / 5 - 12px);
 }
 .ga-cards.column-6 > .ga-card {
-  width: calc(16.6666666667% - 12px);
+  width: calc((100% + 12px) / 6 - 12px);
 }
 .ga-cards.column-7 > .ga-card {
-  width: calc(14.2857142857% - 12px);
+  width: calc((100% + 12px) / 7 - 12px);
 }
 .ga-cards.column-8 > .ga-card {
-  width: calc(12.5% - 12px);
+  width: calc((100% + 12px) / 8 - 12px);
 }
 .ga-cards.column-9 > .ga-card {
-  width: calc(11.1111111111% - 12px);
+  width: calc((100% + 12px) / 9 - 12px);
 }
 .ga-cards.column-10 > .ga-card {
-  width: calc(10% - 12px);
+  width: calc((100% + 12px) / 10 - 12px);
 }
 .ga-cards.column-11 > .ga-card {
-  width: calc(9.0909090909% - 12px);
+  width: calc((100% + 12px) / 11 - 12px);
 }
 .ga-cards.column-12 > .ga-card {
-  width: calc(8.3333333333% - 12px);
+  width: calc((100% + 12px) / 12 - 12px);
 }
 .ga-cards.round-s > .ga-card {
   border-radius: 0.5em;

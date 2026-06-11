@@ -7338,40 +7338,40 @@ table.be-table .be-button {
   width: 100%;
 }
 .be-cards.column-1 > .be-card {
-  width: calc(100% - 12px);
+  width: calc((100% + 12px) / 1 - 12px);
 }
 .be-cards.column-2 > .be-card {
-  width: calc(50% - 12px);
+  width: calc((100% + 12px) / 2 - 12px);
 }
 .be-cards.column-3 > .be-card {
-  width: calc(33.3333333333% - 12px);
+  width: calc((100% + 12px) / 3 - 12px);
 }
 .be-cards.column-4 > .be-card {
-  width: calc(25% - 12px);
+  width: calc((100% + 12px) / 4 - 12px);
 }
 .be-cards.column-5 > .be-card {
-  width: calc(20% - 12px);
+  width: calc((100% + 12px) / 5 - 12px);
 }
 .be-cards.column-6 > .be-card {
-  width: calc(16.6666666667% - 12px);
+  width: calc((100% + 12px) / 6 - 12px);
 }
 .be-cards.column-7 > .be-card {
-  width: calc(14.2857142857% - 12px);
+  width: calc((100% + 12px) / 7 - 12px);
 }
 .be-cards.column-8 > .be-card {
-  width: calc(12.5% - 12px);
+  width: calc((100% + 12px) / 8 - 12px);
 }
 .be-cards.column-9 > .be-card {
-  width: calc(11.1111111111% - 12px);
+  width: calc((100% + 12px) / 9 - 12px);
 }
 .be-cards.column-10 > .be-card {
-  width: calc(10% - 12px);
+  width: calc((100% + 12px) / 10 - 12px);
 }
 .be-cards.column-11 > .be-card {
-  width: calc(9.0909090909% - 12px);
+  width: calc((100% + 12px) / 11 - 12px);
 }
 .be-cards.column-12 > .be-card {
-  width: calc(8.3333333333% - 12px);
+  width: calc((100% + 12px) / 12 - 12px);
 }
 .be-cards.round-s > .be-card {
   border-radius: 0.5em;

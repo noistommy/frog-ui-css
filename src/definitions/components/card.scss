@@ -100,10 +100,10 @@ $cardRadius: 1rem;
     flex-wrap: wrap;
     gap: 12px;
     width: 100%;
-    &.column {
+    &.column { 
       @for $i from 1 through $maxCardColumn {
         &-#{$i} > .#{$ns}-card {
-          width: calc(100% / $i - $cardsGap);
+          width: calc((100% + $cardsGap) / $i - $cardsGap);
         }
       }
     }
