@@ -3029,6 +3029,7 @@ button.ga-button {
   box-shadow: 0 0 0 4px rgba(81, 120, 175, 0.3);
 }
 .ga-switch.button {
+  --length: attr(data-length ch);
   position: relative;
   font-size: 0.9em;
   background-color: var(--suf);
@@ -3056,12 +3057,15 @@ button.ga-button {
   position: relative;
   z-index: 3;
   border-radius: calc(0.1428571429em - 2px);
+  text-align: center;
+  width: var(--length);
+  box-sizing: content-box;
 }
 .ga-switch.button span i {
   margin-right: 8px;
 }
 .ga-switch.button.round {
-  border-radius: 1em;
+  border-radius: calc(1em + 2px);
 }
 .ga-switch.button.round span.on,
 .ga-switch.button.round span.off {
@@ -3094,6 +3098,12 @@ button.ga-button {
   display: inline-block;
   padding: 0.5em 0.8em;
   line-height: 1em;
+}
+.ga-switch.button.border {
+  box-shadow: 0 0 0 1px var(--brd);
+}
+.ga-switch.button.icon span i {
+  margin: 0;
 }
 
 .label-text {
@@ -6951,6 +6961,9 @@ table.ga-table .ga-button {
 .ga-segment > div:not(.title) {
   padding: 16px 20px;
 }
+.ga-segment > div, .ga-segment > ul {
+  margin: 0;
+}
 .ga-segment:last-child {
   margin: 0;
 }
@@ -7408,116 +7421,116 @@ table.ga-table .ga-button {
 
 @media (max-width: 319.98px) {
   .ga-cards.column-xs-1 > .ga-card {
-    width: calc(100% - 12px) !important;
+    width: calc((100% + 12px) / 1 - 12px) !important;
   }
   .ga-cards.column-xs-2 > .ga-card {
-    width: calc(50% - 12px) !important;
+    width: calc((100% + 12px) / 2 - 12px) !important;
   }
   .ga-cards.column-xs-3 > .ga-card {
-    width: calc(33.3333333333% - 12px) !important;
+    width: calc((100% + 12px) / 3 - 12px) !important;
   }
   .ga-cards.column-xs-4 > .ga-card {
-    width: calc(25% - 12px) !important;
+    width: calc((100% + 12px) / 4 - 12px) !important;
   }
   .ga-cards.column-xs-5 > .ga-card {
-    width: calc(20% - 12px) !important;
+    width: calc((100% + 12px) / 5 - 12px) !important;
   }
   .ga-cards.column-xs-6 > .ga-card {
-    width: calc(16.6666666667% - 12px) !important;
+    width: calc((100% + 12px) / 6 - 12px) !important;
   }
   .ga-cards.column-xs-7 > .ga-card {
-    width: calc(14.2857142857% - 12px) !important;
+    width: calc((100% + 12px) / 7 - 12px) !important;
   }
   .ga-cards.column-xs-8 > .ga-card {
-    width: calc(12.5% - 12px) !important;
+    width: calc((100% + 12px) / 8 - 12px) !important;
   }
   .ga-cards.column-xs-9 > .ga-card {
-    width: calc(11.1111111111% - 12px) !important;
+    width: calc((100% + 12px) / 9 - 12px) !important;
   }
   .ga-cards.column-xs-10 > .ga-card {
-    width: calc(10% - 12px) !important;
+    width: calc((100% + 12px) / 10 - 12px) !important;
   }
   .ga-cards.column-xs-11 > .ga-card {
-    width: calc(9.0909090909% - 12px) !important;
+    width: calc((100% + 12px) / 11 - 12px) !important;
   }
   .ga-cards.column-xs-12 > .ga-card {
-    width: calc(8.3333333333% - 12px) !important;
+    width: calc((100% + 12px) / 12 - 12px) !important;
   }
 }
 @media (min-width: 320px) and (max-width: 767.98px) {
   .ga-cards.column-sm-1 > .ga-card {
-    width: calc(100% - 12px) !important;
+    width: calc((100% + 12px) / 1 - 12px) !important;
   }
   .ga-cards.column-sm-2 > .ga-card {
-    width: calc(50% - 12px) !important;
+    width: calc((100% + 12px) / 2 - 12px) !important;
   }
   .ga-cards.column-sm-3 > .ga-card {
-    width: calc(33.3333333333% - 12px) !important;
+    width: calc((100% + 12px) / 3 - 12px) !important;
   }
   .ga-cards.column-sm-4 > .ga-card {
-    width: calc(25% - 12px) !important;
+    width: calc((100% + 12px) / 4 - 12px) !important;
   }
   .ga-cards.column-sm-5 > .ga-card {
-    width: calc(20% - 12px) !important;
+    width: calc((100% + 12px) / 5 - 12px) !important;
   }
   .ga-cards.column-sm-6 > .ga-card {
-    width: calc(16.6666666667% - 12px) !important;
+    width: calc((100% + 12px) / 6 - 12px) !important;
   }
   .ga-cards.column-sm-7 > .ga-card {
-    width: calc(14.2857142857% - 12px) !important;
+    width: calc((100% + 12px) / 7 - 12px) !important;
   }
   .ga-cards.column-sm-8 > .ga-card {
-    width: calc(12.5% - 12px) !important;
+    width: calc((100% + 12px) / 8 - 12px) !important;
   }
   .ga-cards.column-sm-9 > .ga-card {
-    width: calc(11.1111111111% - 12px) !important;
+    width: calc((100% + 12px) / 9 - 12px) !important;
   }
   .ga-cards.column-sm-10 > .ga-card {
-    width: calc(10% - 12px) !important;
+    width: calc((100% + 12px) / 10 - 12px) !important;
   }
   .ga-cards.column-sm-11 > .ga-card {
-    width: calc(9.0909090909% - 12px) !important;
+    width: calc((100% + 12px) / 11 - 12px) !important;
   }
   .ga-cards.column-sm-12 > .ga-card {
-    width: calc(8.3333333333% - 12px) !important;
+    width: calc((100% + 12px) / 12 - 12px) !important;
   }
 }
 @media (min-width: 768px) and (max-width: 1439.98px) {
   .ga-cards.column-md-1 > .ga-card {
-    width: calc(100% - 12px) !important;
+    width: calc((100% + 12px) / 1 - 12px) !important;
   }
   .ga-cards.column-md-2 > .ga-card {
-    width: calc(50% - 12px) !important;
+    width: calc((100% + 12px) / 2 - 12px) !important;
   }
   .ga-cards.column-md-3 > .ga-card {
-    width: calc(33.3333333333% - 12px) !important;
+    width: calc((100% + 12px) / 3 - 12px) !important;
   }
   .ga-cards.column-md-4 > .ga-card {
-    width: calc(25% - 12px) !important;
+    width: calc((100% + 12px) / 4 - 12px) !important;
   }
   .ga-cards.column-md-5 > .ga-card {
-    width: calc(20% - 12px) !important;
+    width: calc((100% + 12px) / 5 - 12px) !important;
   }
   .ga-cards.column-md-6 > .ga-card {
-    width: calc(16.6666666667% - 12px) !important;
+    width: calc((100% + 12px) / 6 - 12px) !important;
   }
   .ga-cards.column-md-7 > .ga-card {
-    width: calc(14.2857142857% - 12px) !important;
+    width: calc((100% + 12px) / 7 - 12px) !important;
   }
   .ga-cards.column-md-8 > .ga-card {
-    width: calc(12.5% - 12px) !important;
+    width: calc((100% + 12px) / 8 - 12px) !important;
   }
   .ga-cards.column-md-9 > .ga-card {
-    width: calc(11.1111111111% - 12px) !important;
+    width: calc((100% + 12px) / 9 - 12px) !important;
   }
   .ga-cards.column-md-10 > .ga-card {
-    width: calc(10% - 12px) !important;
+    width: calc((100% + 12px) / 10 - 12px) !important;
   }
   .ga-cards.column-md-11 > .ga-card {
-    width: calc(9.0909090909% - 12px) !important;
+    width: calc((100% + 12px) / 11 - 12px) !important;
   }
   .ga-cards.column-md-12 > .ga-card {
-    width: calc(8.3333333333% - 12px) !important;
+    width: calc((100% + 12px) / 12 - 12px) !important;
   }
 }
 .ga-tooltip {

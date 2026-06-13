@@ -135,7 +135,7 @@ $cardRadius: 1rem;
     &-cards {
       &.column {
         @for $i from 1 through $maxCardColumn {
-          &-xs-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
+          &-xs-#{$i} > .#{$ns}-card {width: calc((100% + $cardsGap) / $i - $cardsGap) !important; }
         }
       }
     }
@@ -146,7 +146,7 @@ $cardRadius: 1rem;
     &-cards {
       &.column {
         @for $i from 1 through $maxCardColumn {
-          &-sm-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
+          &-sm-#{$i} > .#{$ns}-card {width: calc((100% + $cardsGap) / $i - $cardsGap) !important; }
         }
       }
     }
@@ -158,7 +158,7 @@ $cardRadius: 1rem;
     &-cards {
       &.column {
         @for $i from 1 through $maxCardColumn {
-          &-md-#{$i} > .#{$ns}-card {width: calc(100% / $i - $cardsGap) !important; }
+          &-md-#{$i} > .#{$ns}-card {width: calc((100% + $cardsGap) / $i - $cardsGap) !important; }
         }
       }
     }

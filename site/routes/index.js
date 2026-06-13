@@ -16,44 +16,44 @@ var md = new markdownIt({
 }).use(require('markdown-it-anchor'), {})
 
 
-
-
+function getHtmlContents (mdxPath, lang) {
+  const mdPath = path.join(__dirname, `../mds/${lang}/${mdxPath}.md`);
+  const mdContent = fs.readFileSync(mdPath, 'utf-8');
+  return md.render(mdContent);
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Frog UI' });
 });
 
-// router.get('/pages/welcome', function(req, res, next) {
-//   res.render('components/welcome',  {title: 'Welcome'});
-// });
-
 router.get('/pages/welcome', function(req, res, next) {
-  const lang = req.cookies.lang || 'ko'
-  const mdPath = path.join(__dirname, `../mds/${lang}/welcome.md`);
-  const mdContent = fs.readFileSync(mdPath, 'utf-8');
-  const htmlContent = md.render(mdContent);
-  res.render('components/mdTemp',  {title: 'Welcome to Frog' , document: htmlContent});
+  res.render('components/mdTemp',  {
+    title: 'Welcome to Frog' ,
+    document:  getHtmlContents('welcome', req.cookies.lang || 'ko')
+  });
 });
 
 router.get('/pages/principle', function(req, res, next) {
-  const lang = req.cookies.lang || 'ko'
-  const mdPath = path.join(__dirname, `../mds/${lang}/principle.md`);
-  const mdContent = fs.readFileSync(mdPath, 'utf-8');
-  const htmlContent = md.render(mdContent);
-  res.render('components/mdTemp',  {title: 'Principles' , document: htmlContent});
+  res.render('components/mdTemp',  {
+    title: 'Principles' ,
+    document:  getHtmlContents('principle', req.cookies.lang || 'ko')
+  });
 });
 
 router.get('/pages/faqs', function(req, res, next) {
-  const lang = req.cookies.lang || 'ko'
-  const mdPath = path.join(__dirname, `../mds/${lang}/faqs.md`);
-  const mdContent = fs.readFileSync(mdPath, 'utf-8');
-  const htmlContent = md.render(mdContent);
-  res.render('components/faqs',  {title: 'faqs', document: htmlContent});
+  res.render('components/faqs',  {
+    title: 'faqs', 
+    document: getHtmlContents('faqs', req.cookies.lang || 'ko')
+  });
 });
 
 router.get('/pages/components', function(req, res, next) {
-  res.render('components/components',  {title: 'Components' });
+  // res.render('components/components',  {title: 'Components' });
+  res.render('components/mdTemp',  {
+    title: 'Components' ,
+    document:  getHtmlContents('components', req.cookies.lang || 'ko')
+  });
 });
 
 router.get('/pages/semantic', function(req, res, next) {
@@ -83,15 +83,23 @@ router.get('/pages/theming', function(req, res, next) {
 });
 
 router.get('/pages/typography', function(req, res, next) {
-  res.render('components/base',  {title: 'Typography' });
+  // res.render('components/base',  {title: 'Typography' });
+  res.render('components/mdTemp',  {
+    title: 'Typography' ,
+    document:  getHtmlContents('typography', req.cookies.lang || 'ko')
+  });
 });
 
 router.get('/pages/breakpoint', function(req, res, next) {
   res.render('components/breakpoint',  {title: 'BreakPoint' });
 });
 
-router.get('/pages/semantic', function(req, res, next) {
-  res.render('components/semantic',  {title: 'Semantic' });
+router.get('/pages/colors', function(req, res, next) {
+  // res.render('components/colors',  { title: 'Colors' , codes: codes.colors });
+  res.render('components/mdTemp',  {
+    title: 'Colors' ,
+    document:  getHtmlContents('colors', req.cookies.lang || 'ko')
+  });
 });
 
 // Elements
@@ -118,10 +126,6 @@ router.get('/pages/segments', function(req, res, next) {
 
 router.get('/pages/checkbox', function(req, res, next) {
   res.render('components/checkbox',  { title: 'Checkbox', codes: codes.checkbox });
-});
-
-router.get('/pages/colors', function(req, res, next) {
-  res.render('components/colors',  { title: 'Colors' , codes: codes.colors });
 });
 
 router.get('/pages/form', function(req, res, next) {

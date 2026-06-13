@@ -20,7 +20,8 @@ const round = `
 `
 
 const button = `
-<label class="ga-switch button">
+// data-length:: Max character length count both of contents.
+<label class="ga-switch button" data-length="{<number>}">
     <input type="checkbox" checked />
     <span class="on active">ON</span>
     <span class="off">OFF</span>

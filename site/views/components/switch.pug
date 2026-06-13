@@ -56,10 +56,22 @@ block contents
                             span.on.active ON
                             span.off OFF
                     .contents-wrapper
-                        label.ga-switch.button.round
+                        label.ga-switch.button.round(data-length="3")
                             input(type="checkbox", checked)
                             span.on.active Yes
                             span.off No
+                    .contents-wrapper
+                        label.ga-switch.button.lightgreen(data-length="8")
+                            input(type="checkbox", checked)
+                            span.on.active 123456
+                            span.off 7890
+                    .contents-wrapper
+                        label.ga-switch.button.icon
+                            input(type="checkbox", checked)
+                            span.on.active
+                                i.xi-check
+                            span.off
+                                i.xi-close
                     .footer
                         pre
                             code.language-markup

@@ -26,6 +26,9 @@ $segmentRadius: 1rem;
     & > div:not(.title) {
       padding: $segmentVerticalPadding $segmentHorizontalPadding;
     }
+    & > div, & > ul {
+      margin: 0;
+    }
     &:last-child {
       margin: 0;
     }

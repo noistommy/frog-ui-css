@@ -20,6 +20,10 @@ html, body {
   color: var(--txt);
   background-color: var(--bgc);
 }
+
+// a[class*="ga-"] {
+//   color: var(--txt-light);
+// }
 // header > gnb
 header.gnb {
   position: fixed;
@@ -336,7 +340,7 @@ section {
   }
   .section-contents {
     max-width: 780px;
-    line-height: 25px;
+    // line-height: 25px;
   }
 
 }
@@ -659,16 +663,16 @@ section {
       background-color: var(--ga-lightblue-light);
       border: 1px solid var(--ga-lightblue-color);
     }
+    &:has(img) {
+      margin: 0;
+    }
   }
   img {
     width: 100%;
+    background-color: var(--suf);
   }
   strong {
     font-weight: bold;
-  }
-  a {
-    color: var(--ga-deepblue-color);
-    text-decoration: underline;
   }
   
   pre {
@@ -677,15 +681,15 @@ section {
     border-radius: 1rem;
     position: relative;
     margin-bottom: 5em;
-    &:after {
-      content: 'SCSS';
-      position: absolute;
-      font-size: 0.85em;
-      top: 0;
-      right: 0;
-      padding: 10px;
-      opacity: 0.5;
-    }
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   font-size: 0.85em;
+    //   top: 0;
+    //   right: 0;
+    //   padding: 10px;
+    //   opacity: 0.5;
+    // }
   }
   hr {
     border-style: solid;
@@ -696,20 +700,25 @@ section {
   table {
     width: 100%;
     border-radius: 8px;
-    // background-color: var(--suf);
-    background-color: white;
     margin-bottom: 1rem;
-    tr {
-      border-bottom: 1px solid var(--brd);
+    border-collapse: collapse;
+    thead {
+      tr {
+        border-bottom: 1px solid var(--brd);
+      }
     }
     th,td {
-      background-color: var(--suf);
       padding: 5px 8px;
+      border: 1px solid var(--brd);
+    }
+    th {
+      background-color: var(--suf);
+      border-bottom: 2px solid var(--brd);
     }
   }
   ul {
     list-style: disc;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     li {
       margin-left: 1rem;
     }
@@ -725,6 +734,22 @@ section {
     min-height: 150px;
     .fluid {
       width: 100%;
+    }
+  }
+  .color-box {
+    display: inline-block;
+    min-width: 100px;
+    height: 100px;
+    padding: 10px;
+    word-break: break-word;
+    margin: 5px;
+    border-radius: 8px;
+    &.bordered {
+      border: 1px solid
+    }
+    &.small {
+      min-width: 30px;
+      // height: 30px;
     }
   }
 }

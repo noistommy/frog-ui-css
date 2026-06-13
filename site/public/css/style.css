@@ -327,7 +327,6 @@ section .section-contents .contents-wrapper .contents-item {
 }
 #welcome .section-contents, #faqs .section-contents {
   max-width: 780px;
-  line-height: 25px;
 }
 
 #faqs .tab-contents {
@@ -583,15 +582,15 @@ section .section-contents .contents-wrapper .contents-item {
   background-color: var(--ga-lightblue-light);
   border: 1px solid var(--ga-lightblue-color);
 }
+#mdContents p:has(img) {
+  margin: 0;
+}
 #mdContents img {
   width: 100%;
+  background-color: var(--suf);
 }
 #mdContents strong {
   font-weight: bold;
-}
-#mdContents a {
-  color: var(--ga-deepblue-color);
-  text-decoration: underline;
 }
 #mdContents pre {
   width: 100%;
@@ -599,15 +598,6 @@ section .section-contents .contents-wrapper .contents-item {
   border-radius: 1rem;
   position: relative;
   margin-bottom: 5em;
-}
-#mdContents pre:after {
-  content: "SCSS";
-  position: absolute;
-  font-size: 0.85em;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  opacity: 0.5;
 }
 #mdContents hr {
   border-style: solid;
@@ -618,19 +608,22 @@ section .section-contents .contents-wrapper .contents-item {
 #mdContents table {
   width: 100%;
   border-radius: 8px;
-  background-color: white;
   margin-bottom: 1rem;
+  border-collapse: collapse;
 }
-#mdContents table tr {
+#mdContents table thead tr {
   border-bottom: 1px solid var(--brd);
 }
 #mdContents table th, #mdContents table td {
-  background-color: var(--suf);
   padding: 5px 8px;
+  border: 1px solid var(--brd);
+}
+#mdContents table th {
+  background-color: var(--suf);
+  border-bottom: 2px solid var(--brd);
 }
 #mdContents ul {
   list-style: disc;
-  margin-bottom: 1rem;
 }
 #mdContents ul li {
   margin-left: 1rem;
@@ -646,6 +639,21 @@ section .section-contents .contents-wrapper .contents-item {
 }
 #mdContents > .ga-segment .fluid {
   width: 100%;
+}
+#mdContents .color-box {
+  display: inline-block;
+  min-width: 100px;
+  height: 100px;
+  padding: 10px;
+  word-break: break-word;
+  margin: 5px;
+  border-radius: 8px;
+}
+#mdContents .color-box.bordered {
+  border: 1px solid;
+}
+#mdContents .color-box.small {
+  min-width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
