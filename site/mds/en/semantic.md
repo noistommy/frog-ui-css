@@ -1,6 +1,6 @@
 ### Brands(primary, secondary, [tertiary])
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<button class="ga-button primary">Accept</button>
 	<button class="ga-button secondary">View</button>
 	<button class="ga-button text">Cancel</button>
@@ -30,7 +30,7 @@
 
 ### Status(success, info, danger, attention, importance)
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<div class="ga-tag label success">success</div>
 		<div class="ga-tag label danger">danger</div>
@@ -60,7 +60,7 @@ These are the names of the colors that are used to visually represent different 
 
 ### Sizes(tiny, small, large, huge, massive)
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<div class="ga-button  border tiny">tiny</div>
 		<div class="ga-button  border small">small</div>
@@ -79,7 +79,7 @@ Frog UI’s sizing system is designed such that all elements change proportional
 
 ### fluid
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents fluid">
 		<button class="ga-button primary fluid">Fluid</button>
 		<hr class="ga divider" />
@@ -102,7 +102,7 @@ As mentioned above, the “fluid” property is used to ensure that a child elem
 
 ### round
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button primary round">Round</button>
 		<button class="ga-button secondary round">Round</button>
@@ -134,7 +134,7 @@ As mentioned above, the “fluid” property is used to ensure that a child elem
 
 ### compact
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button primary compact">Compact</button>
 		<button class="ga-button secondary compact">Compact</button>
@@ -162,7 +162,7 @@ The difference from size-related elements like “small” is that it reduces th
 
 ### border
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button border">Border</button>
 		<button class="ga-button outline">Outline</button>
@@ -189,7 +189,7 @@ As mentioned earlier, the border is used to create a visual separation between e
 
 ### icon
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button border icon">
 			<i class="xi-bars"></i>
@@ -238,7 +238,7 @@ It’s used to arrange icons and badges, or to specify the direction in which it
 
 #### left, right, both (with element)
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button border">
 			<i class="icon left xi-angle-left"></i>
@@ -264,7 +264,7 @@ When icons are placed alongside buttons or input boxes, the position of the icon
 
 #### start, center, end (justify)
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents fluid">
 		<div class=" ga-grid divide-8 justify-left">
 			<div class="column">
@@ -314,7 +314,7 @@ top - middle(mid) - bottom
 
 ### -s
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<div class="ga-buttons border">
 			<button class="ga-button selected">

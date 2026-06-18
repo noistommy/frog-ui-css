@@ -4369,23 +4369,6 @@ button.ga-button {
 .ga-grid2.tabled > .column.align-bottom {
   align-items: flex-end;
 }
-.ga-grid2.tabled .be-select-box,
-.ga-grid2.tabled .be-input {
-  margin: 0;
-  width: 100%;
-}
-.ga-grid2.tabled .be-input input {
-  padding: 0.2857142857em 0.4285714286em;
-}
-.ga-grid2.tabled .be-select-box select {
-  padding: 0.2857142857em 0.4285714286em;
-}
-.ga-grid2.tabled .be-select-box i {
-  padding: 0.2857142857empx;
-}
-.ga-grid2.tabled .be-button {
-  padding: 0.2857142857em 0.4285714286em;
-}
 .ga-grid2.dosirak {
   --grid-auto-row: auto;
   grid-auto-rows: calc(var(--grid-auto-row) * 1px);
@@ -5990,6 +5973,10 @@ button.ga-button {
   padding: calc(0.5714285714em + 2px);
   margin-bottom: 1px;
   border-bottom: 1px solid transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 250ms ease;
 }
 .ga-list > .item:last-child {
   border: 0;
@@ -6032,6 +6019,10 @@ button.ga-button {
   height: 38px;
   background-color: #d6d6d6;
   margin-right: 10px;
+}
+.ga-list > .item.draggable-item-active {
+  outline: dotted 1px #5178af;
+  opacity: 0.3;
 }
 .ga-list.border > .item {
   border-color: var(--brd);

@@ -1,4 +1,4 @@
-# Frog UI
+# Frog UI Documentation
 > Semantic CSS를 사용하여 일관되고 의미있게 화면을 구현합니다.
 
 <!-- > Building consistent and meaningful UI with Semantic CSS -->

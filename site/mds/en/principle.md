@@ -1,6 +1,13 @@
 Frog UI was created based on the wealth of experiences—both successes and failures—we’ve accumulated while designing and managing design systems and UI libraries across various organizations and projects.
 
-Through this process, three principles naturally emerged: **“Make it usable across various frameworks,”** **“Enable the easy creation of systems optimized for each project,”** and **“Ensure it is easy to use for the developers who actually use it.”** Frog UI is both an experiment and the result of implementing these principles.
+Through this process, three principles naturally emerged: 
+
+- **Make it usable across various frameworks** 
+- **Enable the easy creation of systems optimized for each project** 
+- **Ensure it is easy to use for the developers who actually use it** 
+
+<br/>
+Frog UI is both an experiment and the result of implementing these principles.
 
 #### No framework constraints
 

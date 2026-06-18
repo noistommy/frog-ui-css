@@ -461,10 +461,11 @@ section {
   }
   .ga-grid2:not(.tabled) > .column {
     &:after {
-      content: '';
+      content: attr(data-index);
+      padding: 10px;
       width: 100%;
       height: 100%;
-      text-align: center;
+      // text-align: center;
       background-color: var(--suf);
       display: block;
       box-shadow: 0 0 0 1px var(--brd) inset;
@@ -728,10 +729,12 @@ section {
     margin-bottom: 1rem;
   }
   > .ga-segment {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 150px;
+    &.center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .fluid {
       width: 100%;
     }

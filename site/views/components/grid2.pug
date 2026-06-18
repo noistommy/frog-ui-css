@@ -33,44 +33,95 @@ block contents
                     .footer
                         pre
                             code.language-markup
-                                | #{codes.base}
+                                | #{codes.dosirak}
             .section-contents
                 h4.contents-title Divide
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-grid2
-                            .column.col-1
-                            .column.col-3
-                            .column.col-1
-                            .column.col-3
-                            .column.col-1
-                            .column.col-3
-                            .column.col-1
-                            .column.col-3
-                            .column.col-1
-                            .column.col-3
-                            .column.col-1
-                            .column.col-3
+                        .ga-grid2.divide-column-4
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
+                            .column
                     .footer
                         pre
                             code.language-markup
                                 | #{codes.divide}
             .section-contents
-                h4.contents-title Divide (+ROW)
+                h4.contents-title Widths
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-grid2
+                            .column.col-1
+                            .column.col-3
+                            .column.col-2
+                            .column.col-6
+                            .column.col-6
+                            .column.col-6
+                            .column.col-3
+                            .column.col-3
+                            .column.col-3
+                            .column.col-3
+                            .column.col-2
+                            .column.col-10
+                    .footer
+                        pre
+                            code.language-markup
+                                | #{codes.widths}
+            .section-contents
+                h4.contents-title Widths (+ROW)
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         .ga-grid2.set-rows(style="--grid-row-num: 9")
-                            .column.col-6.row-6
-                            .column.col-6.row-4
-                            .column.col-6.row-2
-                            .column.col-12
-                            .column.col-6.row-2
-                            .column.col-6.row-2
+                            .column.col-6.row-6(data-index=0)
+                            .column.col-6.row-4(data-index=1)
+                            .column.col-6.row-2(data-index=2)
+                            .column.col-12(data-index=3)
+                            .column.col-6.row-2(data-index=4)
+                            .column.col-6.row-2(data-index=5)
                             
                     .footer
                         pre
                             code.language-markup
-                                | #{codes.divideRow}
+                                | #{codes.widthRow}
+            .section-contents
+                h4.contents-title Flow column
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-grid2.set-rows(style="--grid-row-num: 9").flow-column
+                            .column.col-6.row-6(data-index=0)
+                            .column.col-6.row-4(data-index=1)
+                            .column.col-6.row-2(data-index=2)
+                            .column.col-12(data-index=3)
+                            .column.col-6.row-2(data-index=4)
+                            .column.col-6.row-2(data-index=5)
+                    .footer
+                        pre
+                            code.language-markup
+                                | #{codes.flowColumn}
+            .section-contents
+                h4.contents-title Dense
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-grid2.set-rows(style="--grid-row-num: 9").dense
+                            .column.col-6.row-6(data-index=0)
+                            .column.col-6.row-4(data-index=1)
+                            .column.col-6.row-2(data-index=2)
+                            .column.col-8.row-2(data-index=3)
+                            .column.col-8.row-2(data-index=4)
+                            .column.col-4.row-2(data-index=5)
+                    .footer
+                        pre
+                            code.language-markup
+                                | #{codes.dense}
             .section-contents
                 h4.contents-title Auto-fit
                 .ga-segment.float.round-m.attached

@@ -216,25 +216,6 @@ $gridBorderRadius: $baseBorderRadius * 2;
           align-items: flex-end;
         }
       }
-      .be-select-box,
-      .be-input {
-        margin: 0;
-        width: 100%;
-      }
-      .be-input input {
-        padding: $compactPadding;
-      }
-      .be-select-box {
-        select {
-          padding: $compactPadding;
-        }
-        i {
-          padding: $compactVerticalPadding + px;
-        }
-      }
-      .be-button {
-        padding: $compactPadding;
-      }
     }
     &.dosirak {
       --grid-auto-row: auto;

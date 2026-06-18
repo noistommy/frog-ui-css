@@ -1,10 +1,12 @@
 #### Brands
 
-<div class="ga-segment surface round-m">
-  <div class="ga-button primary">Primary</div>
-  <div class="ga-button primary dark">Primary - Darker</div>
-  <div class="ga-button secondary">Secondary</div>
-  <div class="ga-button secondary dark">Secondary - Darker</div>
+<div class="ga-segment surface round-m center">
+  <div>
+    <div class="ga-button primary">Primary</div>
+    <div class="ga-button primary dark">Primary - Darker</div>
+    <div class="ga-button secondary">Secondary</div>
+    <div class="ga-button secondary dark">Secondary - Darker</div>
+  </div>
 </div>
 
 ```html
@@ -16,7 +18,7 @@
 
 #### Status
 
-<div class="ga-segment surface round-m ga flex">
+<div class="ga-segment surface round-m ga flex center">
   <div>
     <div class="ga-button ga-success">Success</div>
     <div class="ga-button ga-info">Info</div>
@@ -44,7 +46,7 @@
 
 #### Types
 
-<div class="ga-segment surface round-m ga flex">
+<div class="ga-segment surface round-m ga flex center">
   <div class="flex gap-2">
     <div class="color-box ga-primary bordered">Basic</div>
     <div class="color-box ga-primary-text">Text</div>
@@ -64,7 +66,7 @@
 
 #### Grayscale
 
-<div class="ga-segment surface round-m ga flex">
+<div class="ga-segment surface round-m ga flex center">
   <div class="ga flex">
     <div class="color-box small gray-bg-0">White(0)</div>
     <div class="color-box small gray-bg-5">5</div>
@@ -93,7 +95,7 @@
 
 #### Palette Color
 
-<div class="ga-segment surface round-m ga flex">
+<div class="ga-segment surface round-m ga flex center">
   <div class="ga flex">
     <div class="color-box ga-red borded">red</div>
     <div class="color-box ga-orange borded">orange</div>

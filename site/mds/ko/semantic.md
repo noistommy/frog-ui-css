@@ -1,6 +1,6 @@
 ### Brands
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<button class="ga-button primary">Accept</button>
 	<button class="ga-button secondary">View</button>
 	<button class="ga-button text">Cancel</button>
@@ -32,7 +32,7 @@ Primary, Secondary는 단순히 “첫번째, 두번째” 같이 순서를 나�
 
 ### Status
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<div class="ga-tag label success">success</div>
 		<div class="ga-tag label danger">danger</div>
@@ -65,7 +65,7 @@ Primary, Secondary는 단순히 “첫번째, 두번째” 같이 순서를 나�
 
 ### Sizes
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<div class="ga-button  border tiny">tiny</div>
 		<div class="ga-button  border small">small</div>
@@ -85,7 +85,7 @@ Frog UI의 사이즈 시스템은 기본 폰트에 따라 전체 요소가 상�
 
 ### fluid
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents fluid">
 		<button class="ga-button primary fluid">Fluid</button>
 		<hr class="ga divider" />
@@ -109,7 +109,7 @@ Frog UI의 사이즈 시스템은 기본 폰트에 따라 전체 요소가 상�
 
 ### round
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button primary round">Round</button>
 		<button class="ga-button secondary round">Round</button>
@@ -139,7 +139,7 @@ round는 css로 `border-radius`  의 적용 유무를 나타내는 클래스입�
 
 ### compact
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button primary compact">Compact</button>
 		<button class="ga-button secondary compact">Compact</button>
@@ -167,7 +167,7 @@ small과 같은 사이즈 요소와 차별점은 컨텐츠의 크기 변화없�
 
 ### border
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button border">Border</button>
 		<button class="ga-button outline">Outline</button>
@@ -194,7 +194,7 @@ button요소의 경우 border와 비슷한 outline속성이 있는데 어떤 차
 
 ### icon
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button border icon">
 			<i class="xi-bars"></i>
@@ -241,7 +241,7 @@ button요소의 경우 border와 비슷한 outline속성이 있는데 어떤 차
 
 #### left, right, both
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<button class="ga-button border">
 			<i class="icon left xi-angle-left"></i>
@@ -269,7 +269,7 @@ button요소의 경우 border와 비슷한 outline속성이 있는데 어떤 차
 
 수평으로 나열된 아이템 정렬 시 사용합니다. 
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents fluid">
 		<div class=" ga-grid divide-8 justify-left">
 			<div class="column">
@@ -317,7 +317,7 @@ top - middle(mid) - bottom
 
 ### -s
 
-<div class="ga-segment surface round-s">
+<div class="ga-segment surface round-s center">
 	<div class="contents">
 		<div class="ga-buttons border">
 			<button class="ga-button selected">
