@@ -10,11 +10,11 @@ Frog UI는 `scss`기반으로 설계된 디자인 시스템이 포함된 CSS 프
 
 - `Gulp`빌드를 통한 정적 css 파일 생성
 - html, css 기술 중심의 구성
-- 시멘틱 네임밍을 통한 직관적인 의미 전달
+- 시멘틱 네이밍을 통한 직관적인 의미 전달
 - 지속적인 업데이트 및 버그 수정, 새로운 기능 추가
 
 
-**Tecknology Stack**
+**Technology Stack**
 
 - builder: Gulp v4
 - styling: SCSS(dart sass 기반), css
@@ -27,8 +27,6 @@ Frog UI는 `scss`기반으로 설계된 디자인 시스템이 포함된 CSS 프
 - **React**
 
 ## Summary
-
-**Summary**
 
 - **빌드:** SCSS → 단일 정적 CSS 파일 (프레임워크 종속 없음).
 - **원칙:** 다양한 프레임워크에서 사용 가능 / 프로젝트별 최적화된 시스템 구축 용이 / 실사용 개발자 중심 DX.
@@ -57,7 +55,7 @@ Frog UI는 `scss`기반으로 설계된 디자인 시스템이 포함된 CSS 프
 - [Components](https://frog-ui-css.app/pages/components): 프레임워크에 정의된 모든 컴포넌트 스타일 목록
 
 ### Base
-- [Theming](https://frog-ui-css.app/pages/theming): 다중 스타일링 테마를 위한 다자인토큰에 대한 설명
+- [Theming](https://frog-ui-css.app/pages/theming): 다중 스타일링 테마를 위한 디자인 토큰에 대한 설명
 - [Typography](https://frog-ui-css.app/pages/typography): 폰트 크기, 간격, 두께와 헤딩 시스템 등 타이포그래피 기본 요소.
 - [Colors](https://frog-ui-css.app/pages/colors): 브랜딩, 배경, UI 상태를 위한 컬러 토큰 정의
 
@@ -88,4 +86,3 @@ Frog UI는 `scss`기반으로 설계된 디자인 시스템이 포함된 CSS 프
 - [Modal](https://frog-ui-css.app/pages/modal): 알림이나 집중 인터랙션을 위한 오버레이 다이얼로그
 - [Toast](https://frog-ui-css.app/pages/toast): 짧게 표시되었다가 사라지는 위젯형 알림 메시지
 - [Tree List](https://frog-ui-css.app/pages/tree_list): 계층구조 데이터를 시각화 하여 탐색 가능하게 해주는 컴포넌트
-
