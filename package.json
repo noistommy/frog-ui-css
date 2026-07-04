@@ -3,9 +3,22 @@
   "version": "1.0.0",
   "description": "Frog UI is CSS Framework",
   "main": "index.js",
+  "bin": {
+    "frog-ui": "./bin/frog-ui.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "src",
+    "dist",
+    "config.json",
+    "gulpfile.js",
+    "README.md"
+  ],
   "scripts": {
     "start": "node ./site/bin/www",
     "dev": "nodemon ./site/bin/www & npm run scss",
+    "frog:init": "node ./bin/frog-ui.js init",
     "scss": "sass --watch ./site/public/scss:./site/public/css",
     "xeicon": "bower install xeicon",
     "test": "echo \"Error: no test specified\" && exit 1"

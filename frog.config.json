@@ -1,0 +1,12 @@
+{
+  "outDir": "public/frog-ui",
+  "theme": "beui",
+  "includeJs": true,
+  "includeAssets": true,
+  "includeReferences": true,
+  "tokens": {
+    "primary": "#2563eb",
+    "fontSize": "16px",
+    "radius": "8px"
+  }
+}

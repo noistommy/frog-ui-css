@@ -43,6 +43,30 @@ Frog UI는 `scss`기반으로 설계된 디자인 시스템이 포함된 CSS 프
 - **아이콘:** `icon`, 위치 `left` / `right` / `both`; 정렬 `justify-*`, `align-*`.
 - **그룹 래퍼:** `ga-button` → `ga-buttons`, `ga-tag` → `ga-tags`, `ga-card` → `ga-cards` (네임스페이스는 테마의 `$ns`와 함께 전역 충돌 방지).
 
+## Usage
+
+컴포넌트별 사용법은 `site/md-components`의 Markdown 문서를 참조합니다.
+
+- [badge.md](../md-components/badge.md)
+- [button.md](../md-components/button.md)
+- [calendar.md](../md-components/calendar.md)
+- [cards.md](../md-components/cards.md)
+- [checkbox.md](../md-components/checkbox.md)
+- [form.md](../md-components/form.md)
+- [grid.md](../md-components/grid.md)
+- [grid2.md](../md-components/grid2.md)
+- [input.md](../md-components/input.md)
+- [list.md](../md-components/list.md)
+- [message.md](../md-components/message.md)
+- [pagination.md](../md-components/pagination.md)
+- [panel.md](../md-components/panel.md)
+- [segment.md](../md-components/segment.md)
+- [selectbox.md](../md-components/selectbox.md)
+- [switch.md](../md-components/switch.md)
+- [table.md](../md-components/table.md)
+- [tabs.md](../md-components/tabs.md)
+- [tag.md](../md-components/tag.md)
+
 
 ## Document Index
 

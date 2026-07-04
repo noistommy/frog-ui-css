@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frog Usage"
+  short_description: "Check Frog UI component usage before edits"
+  default_prompt: "Use $frog-usage before changing or using a Frog UI component."
