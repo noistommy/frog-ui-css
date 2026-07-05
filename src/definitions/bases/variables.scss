@@ -225,18 +225,54 @@ h5,.h5 {font-size: $h5 !important;}
         }
     }
 }
-
+// $spaceUnit * $value
+// $unitList 2px, 4px, 6px, 8px ..., 40px
 $unitList: (1: 0.5,2: 1,3: 1.5,4: 2,5: 3,6: 4,7: 5,8: 6,9: 7,10: 8,11: 9,12: 10);
 @each $unit, $value in $unitList {
-    .pd {
+    .p {
         &-#{$unit} {
             padding: spacing($value) !important;
         }
-        &h-#{$unit} {
+        &t-#{$unit} {
+            padding-top: spacing($value) !important;
+        }
+        &b-#{$unit} {
+            padding-bottom: spacing($value) !important;
+        }
+        &l-#{$unit} {
+            padding-left: spacing($value) !important;
+        }
+        &r-#{$unit} {
+            padding-right: spacing($value) !important;
+        }
+        &x-#{$unit} {
             padding-inline: spacing($value) !important;
         }
-        &v-#{$unit} {
+        &y-#{$unit} {
             padding-block: spacing($value) !important;
+        }
+    }
+    .m {
+        &-#{$unit} {
+            margin: spacing($value) !important;
+        }
+        &t-#{$unit} {
+            margin-top: spacing($value) !important;
+        }
+        &b-#{$unit} {
+            margin-bottom: spacing($value) !important;
+        }
+        &l-#{$unit} {
+            margin-left: spacing($value) !important;
+        }
+        &r-#{$unit} {
+            margin-right: spacing($value) !important;
+        }
+        &x-#{$unit} {
+            margin-inline: spacing($value) !important;
+        }
+        &y-#{$unit} {
+            margin-block: spacing($value) !important;
         }
     }
 }
