@@ -95,10 +95,21 @@ const border =
   <div class="item"> option3 </div>
 </div>`
 
+
+const timeline = 
+`<div class="ga-list timeline connect">
+  <div class="item"> option1 </div>
+  <div class="item"> option2 </div>
+  ...
+  <div class="item"> option3 </div>
+</div>`
+
 const image = 
 `<div class="ga-list">
-  <div class="item">        
-    <img src="{image_path}" />        
+  <div class="item"> 
+    <div class="item-img>       
+      <img src="{image_path}" /> 
+    </div>
     <div class="item-title">option 1</div>    
   </div>
   <div class="item">        
@@ -113,5 +124,5 @@ const image =
 </div>`
 
 module.exports = {
-  base, link, list, select, subTitle, icon, button, border, image
+  base, link, list, select, subTitle, icon, button, border, timeline, image
 }

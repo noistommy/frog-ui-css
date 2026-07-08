@@ -443,7 +443,6 @@ section .section-contents .contents-wrapper .contents-item {
 
 #list .ga-list {
   max-width: 250px;
-  border: 1px solid var(--brd);
 }
 
 .flex {

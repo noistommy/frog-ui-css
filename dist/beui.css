@@ -510,6 +510,50 @@ h5, .h5 {
   background-color: inherit;
 }
 
+.p-0 {
+  padding: 0px !important;
+}
+.pt-0 {
+  padding-top: 0px !important;
+}
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+.pl-0 {
+  padding-left: 0px !important;
+}
+.pr-0 {
+  padding-right: 0px !important;
+}
+.px-0 {
+  padding-inline: 0px !important;
+}
+.py-0 {
+  padding-block: 0px !important;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+.mt-0 {
+  margin-top: 0px !important;
+}
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+.ml-0 {
+  margin-left: 0px !important;
+}
+.mr-0 {
+  margin-right: 0px !important;
+}
+.mx-0 {
+  margin-inline: 0px !important;
+}
+.my-0 {
+  margin-block: 0px !important;
+}
+
 .p-1 {
   padding: 2px !important;
 }
@@ -6373,11 +6417,15 @@ button.be-button {
   border: 0;
 }
 .be-list > .item:has(a) {
+  cursor: pointer;
   padding: 0;
 }
 .be-list > .item:has(a) a {
   width: 100%;
   padding: calc(0.8571428571em + 2px);
+}
+.be-list > .item:has(a):hover {
+  background-color: var(--hover-suf);
 }
 .be-list > .item .item-title {
   flex: 0 1 auto;
@@ -6404,16 +6452,6 @@ button.be-button {
 .be-list > .item .btn-set .be-button {
   font-size: 0.8em;
   color: #909090;
-}
-.be-list > .item .item-img {
-  width: 38px;
-  height: 38px;
-  background-color: #d6d6d6;
-  margin-right: 10px;
-}
-.be-list > .item.draggable-item-active {
-  outline: dotted 1px #5178af;
-  opacity: 0.3;
 }
 .be-list.border > .item {
   border-color: var(--brd);
@@ -6448,23 +6486,12 @@ button.be-button {
 .be-list.selection.bg > .item.include, .be-list.selection.bg > .item.selected:not(.include), .be-list.selection.bg > .item.active {
   background-color: rgba(81, 120, 175, 0.2);
 }
-.be-list.extend > .item {
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-}
-.be-list.underLine .item {
-  border-bottom: 1px solid #ebebeb;
-}
-.be-list.underLine:first-child {
-  border-top: 1px solid #ebebeb;
-}
 .be-list.compact .item {
-  padding: 4px 10px;
+  padding: calc((0.8571428571em + 2px) * 0.5);
 }
 .be-list.timeline .item {
   position: relative;
-  margin-left: 16px;
+  margin-left: 20px;
   margin-bottom: 0;
 }
 .be-list.timeline .item:after {
@@ -6476,18 +6503,18 @@ button.be-button {
   left: -10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #d4d4d4;
+  background-color: var(--brd);
 }
 .be-list.timeline .item.selected:after {
-  background-color: #2985db;
+  background-color: #5178af;
 }
 .be-list.timeline.connect .item:before {
   content: "";
   position: absolute;
   top: 0;
   left: -10px;
-  border-left: 1px solid #d4d4d4;
-  height: 100%;
+  border-left: 1px solid var(--brd);
+  height: calc(100% + 2px);
 }
 .be-list.timeline.connect .item:first-child:before {
   top: 50%;
@@ -6511,6 +6538,25 @@ button.be-button {
   display: inline-block;
   line-height: 1em;
   color: #909090;
+}
+.be-list.image > .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.be-list.image > .item > img,
+.be-list.image > .item .item-img {
+  width: 1.8em;
+  height: 1.8em;
+  background-color: var(--base-color);
+}
+.be-list.image > .item > img img,
+.be-list.image > .item .item-img img {
+  width: 100%;
+}
+.be-list.draggable > .item[draggable].draggable-item-active {
+  outline: dotted 1px #5178af;
+  opacity: 0.3;
 }
 .be-list.ul > .item {
   margin-left: 1.25rem;

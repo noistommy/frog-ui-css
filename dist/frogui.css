@@ -509,6 +509,50 @@ h5, .h5 {
   background-color: inherit;
 }
 
+.p-0 {
+  padding: 0px !important;
+}
+.pt-0 {
+  padding-top: 0px !important;
+}
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+.pl-0 {
+  padding-left: 0px !important;
+}
+.pr-0 {
+  padding-right: 0px !important;
+}
+.px-0 {
+  padding-inline: 0px !important;
+}
+.py-0 {
+  padding-block: 0px !important;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+.mt-0 {
+  margin-top: 0px !important;
+}
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+.ml-0 {
+  margin-left: 0px !important;
+}
+.mr-0 {
+  margin-right: 0px !important;
+}
+.mx-0 {
+  margin-inline: 0px !important;
+}
+.my-0 {
+  margin-block: 0px !important;
+}
+
 .p-1 {
   padding: 2px !important;
 }
@@ -6372,11 +6416,15 @@ button.ga-button {
   border: 0;
 }
 .ga-list > .item:has(a) {
+  cursor: pointer;
   padding: 0;
 }
 .ga-list > .item:has(a) a {
   width: 100%;
   padding: calc(0.8571428571em + 2px);
+}
+.ga-list > .item:has(a):hover {
+  background-color: var(--hover-suf);
 }
 .ga-list > .item .item-title {
   flex: 0 1 auto;
@@ -6403,16 +6451,6 @@ button.ga-button {
 .ga-list > .item .btn-set .ga-button {
   font-size: 0.8em;
   color: #909090;
-}
-.ga-list > .item .item-img {
-  width: 38px;
-  height: 38px;
-  background-color: #d6d6d6;
-  margin-right: 10px;
-}
-.ga-list > .item.draggable-item-active {
-  outline: dotted 1px #6d9d72;
-  opacity: 0.3;
 }
 .ga-list.border > .item {
   border-color: var(--brd);
@@ -6447,23 +6485,12 @@ button.ga-button {
 .ga-list.selection.bg > .item.include, .ga-list.selection.bg > .item.selected:not(.include), .ga-list.selection.bg > .item.active {
   background-color: rgba(109, 157, 114, 0.2);
 }
-.ga-list.extend > .item {
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-}
-.ga-list.underLine .item {
-  border-bottom: 1px solid #ebebeb;
-}
-.ga-list.underLine:first-child {
-  border-top: 1px solid #ebebeb;
-}
 .ga-list.compact .item {
-  padding: 4px 10px;
+  padding: calc((0.8571428571em + 2px) * 0.5);
 }
 .ga-list.timeline .item {
   position: relative;
-  margin-left: 16px;
+  margin-left: 20px;
   margin-bottom: 0;
 }
 .ga-list.timeline .item:after {
@@ -6475,18 +6502,18 @@ button.ga-button {
   left: -10px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #d4d4d4;
+  background-color: var(--brd);
 }
 .ga-list.timeline .item.selected:after {
-  background-color: #2985db;
+  background-color: #6d9d72;
 }
 .ga-list.timeline.connect .item:before {
   content: "";
   position: absolute;
   top: 0;
   left: -10px;
-  border-left: 1px solid #d4d4d4;
-  height: 100%;
+  border-left: 1px solid var(--brd);
+  height: calc(100% + 2px);
 }
 .ga-list.timeline.connect .item:first-child:before {
   top: 50%;
@@ -6510,6 +6537,25 @@ button.ga-button {
   display: inline-block;
   line-height: 1em;
   color: #909090;
+}
+.ga-list.image > .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ga-list.image > .item > img,
+.ga-list.image > .item .item-img {
+  width: 1.8em;
+  height: 1.8em;
+  background-color: var(--base-color);
+}
+.ga-list.image > .item > img img,
+.ga-list.image > .item .item-img img {
+  width: 100%;
+}
+.ga-list.draggable > .item[draggable].draggable-item-active {
+  outline: dotted 1px #6d9d72;
+  opacity: 0.3;
 }
 .ga-list.ul > .item {
   margin-left: 1.25rem;
