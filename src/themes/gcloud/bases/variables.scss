@@ -4,6 +4,7 @@
 @use 'sass:math';
 
 $baseFontSize: 14;
+$heightRhythm: 30;
 
 
 @function relativePx($number) {

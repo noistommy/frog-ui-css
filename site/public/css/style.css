@@ -631,7 +631,8 @@ section .section-contents .contents-wrapper .contents-item {
   margin-bottom: 1rem;
 }
 #mdContents > .ga-segment {
-  min-height: 150px;
+  --min-height: 150px;
+  min-height: var(--min-height);
 }
 #mdContents > .ga-segment.center {
   display: flex;

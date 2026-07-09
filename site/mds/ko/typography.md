@@ -1,5 +1,5 @@
 
-#### Typography
+#### Font family
 
 <div class="ga-segment border round-m">
   <div class="ga-grid fluid">

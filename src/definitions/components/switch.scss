@@ -77,6 +77,13 @@
         box-shadow: 0 0 0 4px color.change($primary, $alpha: 0.3);
       }
     }
+    &[data-label]::after {
+      content: attr(data-label);
+      position: absolute;
+      left: 100%;
+      padding-inline: 8px;
+      width: max-content;
+    }
   }
   &.button {
     --length: attr(data-length ch);

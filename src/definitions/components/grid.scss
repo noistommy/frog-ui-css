@@ -10,8 +10,8 @@
     align-items: stretch;
     margin: $gridGutter * -1px;
     margin-bottom: $gridGutter * 1px;
-    &.left-side .column:first-child {flex-grow: 1}
-    &.right-side .column:last-child {flex-grow: 1}
+    &.left-side > .column:first-child {flex-grow: 1}
+    &.right-side > .column:last-child {flex-grow: 1}
     &.divide {
       @for $i from 1 through $gridWhole {
         &-#{$i} > .field .column,
@@ -46,7 +46,7 @@
       &-bottom{align-items: flex-end;}
       &-stretch{align-items: stretch;}
     }
-    .column {
+    > .column {
       padding: $gridGutter * 1px;
       > .#{$ns}-grid,
       > .#{$ns}-form .fields {
@@ -55,7 +55,7 @@
     }
     .field > .column,
     .rows > .column,
-    .column {
+    > .column {
       width: $gridPercent * 1%;
       &.two {width: $gridPercent * 2%}
       &.three {width: $gridPercent * 3%}
@@ -102,7 +102,7 @@
   .#{$ns} {
     &-form > .fields.grid,
     &-grid {
-      .column {
+      > .column {
         &.span {
           @for $i from 1 through $gridWhole {
             &-xs-#{$i} {width: $gridPercent * $i * 1% !important; }
@@ -126,7 +126,7 @@
   .#{$ns} {
     &-form > .fields.grid,
     &-grid {
-      .column {
+      > .column {
         &.span {
           @for $i from 1 through $gridWhole {
             &-sm-#{$i} {width: $gridPercent * $i * 1% !important; }
@@ -152,7 +152,7 @@
   .#{$ns} {
     &-form > .fields.grid,
     &-grid {
-      .column {
+      > .column {
         &.span {
           @for $i from 1 through $gridWhole {
             &-md-#{$i} {width: $gridPercent * $i * 1% !important; }

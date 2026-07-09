@@ -102,6 +102,13 @@ router.get('/pages/colors', function(req, res, next) {
   });
 });
 
+router.get('/pages/utilities', function(req, res, next) {
+  res.render('components/mdTemp',  {
+    title: 'Utilities' ,
+    document:  getHtmlContents('utilities', req.cookies.lang || 'ko')
+  });
+});
+
 // Elements
 
 router.get('/pages/button', function(req, res, next) {

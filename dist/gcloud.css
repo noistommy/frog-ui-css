@@ -387,7 +387,6 @@ h5, .h5 {
 }
 
 .ga.flex {
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -434,6 +433,7 @@ h5, .h5 {
 }
 .ga.flex.column {
   flex-direction: column;
+  align-items: flex-start;
 }
 .ga.flex.column.reverse {
   flex-direction: column-reverse;
@@ -494,6 +494,100 @@ h5, .h5 {
 }
 .ga.flex.gap-9 {
   gap: 36px;
+}
+.ga.flex.basis-1 > *,
+.ga.flex > .basis-1 {
+  flex-basis: 5%;
+}
+.ga.flex.basis-2 > *,
+.ga.flex > .basis-2 {
+  flex-basis: 10%;
+}
+.ga.flex.basis-3 > *,
+.ga.flex > .basis-3 {
+  flex-basis: 15%;
+}
+.ga.flex.basis-4 > *,
+.ga.flex > .basis-4 {
+  flex-basis: 20%;
+}
+.ga.flex.basis-5 > *,
+.ga.flex > .basis-5 {
+  flex-basis: 25%;
+}
+.ga.flex.basis-6 > *,
+.ga.flex > .basis-6 {
+  flex-basis: 30%;
+}
+.ga.flex.basis-7 > *,
+.ga.flex > .basis-7 {
+  flex-basis: 35%;
+}
+.ga.flex.basis-8 > *,
+.ga.flex > .basis-8 {
+  flex-basis: 40%;
+}
+.ga.flex.basis-9 > *,
+.ga.flex > .basis-9 {
+  flex-basis: 45%;
+}
+.ga.flex.basis-10 > *,
+.ga.flex > .basis-10 {
+  flex-basis: 50%;
+}
+.ga.flex.basis-11 > *,
+.ga.flex > .basis-11 {
+  flex-basis: 55%;
+}
+.ga.flex.basis-12 > *,
+.ga.flex > .basis-12 {
+  flex-basis: 60%;
+}
+.ga.flex.basis-13 > *,
+.ga.flex > .basis-13 {
+  flex-basis: 65%;
+}
+.ga.flex.basis-14 > *,
+.ga.flex > .basis-14 {
+  flex-basis: 70%;
+}
+.ga.flex.basis-15 > *,
+.ga.flex > .basis-15 {
+  flex-basis: 75%;
+}
+.ga.flex.basis-16 > *,
+.ga.flex > .basis-16 {
+  flex-basis: 80%;
+}
+.ga.flex.basis-17 > *,
+.ga.flex > .basis-17 {
+  flex-basis: 85%;
+}
+.ga.flex.basis-18 > *,
+.ga.flex > .basis-18 {
+  flex-basis: 90%;
+}
+.ga.flex.basis-19 > *,
+.ga.flex > .basis-19 {
+  flex-basis: 95%;
+}
+.ga.flex.grow > * {
+  flex-grow: 1;
+}
+.ga.flex.shrink > * {
+  flex-shrink: 0;
+}
+.ga.flex > .grow-0 {
+  flex-grow: 0;
+}
+.ga.flex > .grow-1 {
+  flex-grow: 1;
+}
+.ga.flex > .shrink-0 {
+  flex-shrink: 0;
+}
+.ga.flex > .shrink-1 {
+  flex-shrink: 1;
 }
 .ga.code {
   width: 100%;
@@ -1097,6 +1191,182 @@ h5, .h5 {
 }
 .my-12 {
   margin-block: 40px !important;
+}
+
+.p-13 {
+  padding: 44px !important;
+}
+.pt-13 {
+  padding-top: 44px !important;
+}
+.pb-13 {
+  padding-bottom: 44px !important;
+}
+.pl-13 {
+  padding-left: 44px !important;
+}
+.pr-13 {
+  padding-right: 44px !important;
+}
+.px-13 {
+  padding-inline: 44px !important;
+}
+.py-13 {
+  padding-block: 44px !important;
+}
+
+.m-13 {
+  margin: 44px !important;
+}
+.mt-13 {
+  margin-top: 44px !important;
+}
+.mb-13 {
+  margin-bottom: 44px !important;
+}
+.ml-13 {
+  margin-left: 44px !important;
+}
+.mr-13 {
+  margin-right: 44px !important;
+}
+.mx-13 {
+  margin-inline: 44px !important;
+}
+.my-13 {
+  margin-block: 44px !important;
+}
+
+.p-14 {
+  padding: 48px !important;
+}
+.pt-14 {
+  padding-top: 48px !important;
+}
+.pb-14 {
+  padding-bottom: 48px !important;
+}
+.pl-14 {
+  padding-left: 48px !important;
+}
+.pr-14 {
+  padding-right: 48px !important;
+}
+.px-14 {
+  padding-inline: 48px !important;
+}
+.py-14 {
+  padding-block: 48px !important;
+}
+
+.m-14 {
+  margin: 48px !important;
+}
+.mt-14 {
+  margin-top: 48px !important;
+}
+.mb-14 {
+  margin-bottom: 48px !important;
+}
+.ml-14 {
+  margin-left: 48px !important;
+}
+.mr-14 {
+  margin-right: 48px !important;
+}
+.mx-14 {
+  margin-inline: 48px !important;
+}
+.my-14 {
+  margin-block: 48px !important;
+}
+
+.p-15 {
+  padding: 60px !important;
+}
+.pt-15 {
+  padding-top: 60px !important;
+}
+.pb-15 {
+  padding-bottom: 60px !important;
+}
+.pl-15 {
+  padding-left: 60px !important;
+}
+.pr-15 {
+  padding-right: 60px !important;
+}
+.px-15 {
+  padding-inline: 60px !important;
+}
+.py-15 {
+  padding-block: 60px !important;
+}
+
+.m-15 {
+  margin: 60px !important;
+}
+.mt-15 {
+  margin-top: 60px !important;
+}
+.mb-15 {
+  margin-bottom: 60px !important;
+}
+.ml-15 {
+  margin-left: 60px !important;
+}
+.mr-15 {
+  margin-right: 60px !important;
+}
+.mx-15 {
+  margin-inline: 60px !important;
+}
+.my-15 {
+  margin-block: 60px !important;
+}
+
+.p-16 {
+  padding: 80px !important;
+}
+.pt-16 {
+  padding-top: 80px !important;
+}
+.pb-16 {
+  padding-bottom: 80px !important;
+}
+.pl-16 {
+  padding-left: 80px !important;
+}
+.pr-16 {
+  padding-right: 80px !important;
+}
+.px-16 {
+  padding-inline: 80px !important;
+}
+.py-16 {
+  padding-block: 80px !important;
+}
+
+.m-16 {
+  margin: 80px !important;
+}
+.mt-16 {
+  margin-top: 80px !important;
+}
+.mb-16 {
+  margin-bottom: 80px !important;
+}
+.ml-16 {
+  margin-left: 80px !important;
+}
+.mr-16 {
+  margin-right: 80px !important;
+}
+.mx-16 {
+  margin-inline: 80px !important;
+}
+.my-16 {
+  margin-block: 80px !important;
 }
 
 .gray-bg-0 {
@@ -3480,6 +3750,14 @@ button.ga-button {
 .ga-switch.slide:hover .switch:before {
   box-shadow: 0 0 0 4px rgba(81, 120, 175, 0.3);
 }
+.ga-switch.slide[data-label]::after {
+  content: attr(data-label);
+  position: absolute;
+  left: 100%;
+  padding-inline: 8px;
+  width: -moz-max-content;
+  width: max-content;
+}
 .ga-switch.button {
   --length: attr(data-length ch);
   position: relative;
@@ -3732,10 +4010,10 @@ button.ga-button {
   margin: -4px;
   margin-bottom: 4px;
 }
-.ga-form > .fields.grid.left-side .column:first-child, .ga-grid.left-side .column:first-child {
+.ga-form > .fields.grid.left-side > .column:first-child, .ga-grid.left-side > .column:first-child {
   flex-grow: 1;
 }
-.ga-form > .fields.grid.right-side .column:last-child, .ga-grid.right-side .column:last-child {
+.ga-form > .fields.grid.right-side > .column:last-child, .ga-grid.right-side > .column:last-child {
   flex-grow: 1;
 }
 .ga-form > .fields.grid.divide-1 > .field .column, .ga-form > .fields.grid.divide-1 > .rows .column, .ga-form > .fields.grid.divide-1 > .column, .ga-grid.divide-1 > .field .column, .ga-grid.divide-1 > .rows .column, .ga-grid.divide-1 > .column {
@@ -3831,334 +4109,334 @@ button.ga-button {
 .ga-form > .fields.grid.align-stretch, .ga-grid.align-stretch {
   align-items: stretch;
 }
-.ga-form > .fields.grid .column, .ga-grid .column {
+.ga-form > .fields.grid > .column, .ga-grid > .column {
   padding: 4px;
 }
-.ga-form > .fields.grid .column > .ga-grid,
-.ga-form > .fields.grid .column > .ga-form .fields, .ga-grid .column > .ga-grid,
-.ga-grid .column > .ga-form .fields {
+.ga-form > .fields.grid > .column > .ga-grid,
+.ga-form > .fields.grid > .column > .ga-form .fields, .ga-grid > .column > .ga-grid,
+.ga-grid > .column > .ga-form .fields {
   margin-bottom: -4px;
 }
 .ga-form > .fields.grid .field > .column,
 .ga-form > .fields.grid .rows > .column,
-.ga-form > .fields.grid .column, .ga-grid .field > .column,
+.ga-form > .fields.grid > .column, .ga-grid .field > .column,
 .ga-grid .rows > .column,
-.ga-grid .column {
+.ga-grid > .column {
   width: 8.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.two,
 .ga-form > .fields.grid .rows > .column.two,
-.ga-form > .fields.grid .column.two, .ga-grid .field > .column.two,
+.ga-form > .fields.grid > .column.two, .ga-grid .field > .column.two,
 .ga-grid .rows > .column.two,
-.ga-grid .column.two {
+.ga-grid > .column.two {
   width: 16.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.three,
 .ga-form > .fields.grid .rows > .column.three,
-.ga-form > .fields.grid .column.three, .ga-grid .field > .column.three,
+.ga-form > .fields.grid > .column.three, .ga-grid .field > .column.three,
 .ga-grid .rows > .column.three,
-.ga-grid .column.three {
+.ga-grid > .column.three {
   width: 25%;
 }
 .ga-form > .fields.grid .field > .column.four,
 .ga-form > .fields.grid .rows > .column.four,
-.ga-form > .fields.grid .column.four, .ga-grid .field > .column.four,
+.ga-form > .fields.grid > .column.four, .ga-grid .field > .column.four,
 .ga-grid .rows > .column.four,
-.ga-grid .column.four {
+.ga-grid > .column.four {
   width: 33.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.five,
 .ga-form > .fields.grid .rows > .column.five,
-.ga-form > .fields.grid .column.five, .ga-grid .field > .column.five,
+.ga-form > .fields.grid > .column.five, .ga-grid .field > .column.five,
 .ga-grid .rows > .column.five,
-.ga-grid .column.five {
+.ga-grid > .column.five {
   width: 41.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.six,
 .ga-form > .fields.grid .rows > .column.six,
-.ga-form > .fields.grid .column.six, .ga-grid .field > .column.six,
+.ga-form > .fields.grid > .column.six, .ga-grid .field > .column.six,
 .ga-grid .rows > .column.six,
-.ga-grid .column.six {
+.ga-grid > .column.six {
   width: 50%;
 }
 .ga-form > .fields.grid .field > .column.seven,
 .ga-form > .fields.grid .rows > .column.seven,
-.ga-form > .fields.grid .column.seven, .ga-grid .field > .column.seven,
+.ga-form > .fields.grid > .column.seven, .ga-grid .field > .column.seven,
 .ga-grid .rows > .column.seven,
-.ga-grid .column.seven {
+.ga-grid > .column.seven {
   width: 58.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.eight,
 .ga-form > .fields.grid .rows > .column.eight,
-.ga-form > .fields.grid .column.eight, .ga-grid .field > .column.eight,
+.ga-form > .fields.grid > .column.eight, .ga-grid .field > .column.eight,
 .ga-grid .rows > .column.eight,
-.ga-grid .column.eight {
+.ga-grid > .column.eight {
   width: 66.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.nine,
 .ga-form > .fields.grid .rows > .column.nine,
-.ga-form > .fields.grid .column.nine, .ga-grid .field > .column.nine,
+.ga-form > .fields.grid > .column.nine, .ga-grid .field > .column.nine,
 .ga-grid .rows > .column.nine,
-.ga-grid .column.nine {
+.ga-grid > .column.nine {
   width: 75%;
 }
 .ga-form > .fields.grid .field > .column.ten,
 .ga-form > .fields.grid .rows > .column.ten,
-.ga-form > .fields.grid .column.ten, .ga-grid .field > .column.ten,
+.ga-form > .fields.grid > .column.ten, .ga-grid .field > .column.ten,
 .ga-grid .rows > .column.ten,
-.ga-grid .column.ten {
+.ga-grid > .column.ten {
   width: 83.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.span-1,
 .ga-form > .fields.grid .rows > .column.span-1,
-.ga-form > .fields.grid .column.span-1, .ga-grid .field > .column.span-1,
+.ga-form > .fields.grid > .column.span-1, .ga-grid .field > .column.span-1,
 .ga-grid .rows > .column.span-1,
-.ga-grid .column.span-1 {
+.ga-grid > .column.span-1 {
   width: 8.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.span-2,
 .ga-form > .fields.grid .rows > .column.span-2,
-.ga-form > .fields.grid .column.span-2, .ga-grid .field > .column.span-2,
+.ga-form > .fields.grid > .column.span-2, .ga-grid .field > .column.span-2,
 .ga-grid .rows > .column.span-2,
-.ga-grid .column.span-2 {
+.ga-grid > .column.span-2 {
   width: 16.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.span-3,
 .ga-form > .fields.grid .rows > .column.span-3,
-.ga-form > .fields.grid .column.span-3, .ga-grid .field > .column.span-3,
+.ga-form > .fields.grid > .column.span-3, .ga-grid .field > .column.span-3,
 .ga-grid .rows > .column.span-3,
-.ga-grid .column.span-3 {
+.ga-grid > .column.span-3 {
   width: 25%;
 }
 .ga-form > .fields.grid .field > .column.span-4,
 .ga-form > .fields.grid .rows > .column.span-4,
-.ga-form > .fields.grid .column.span-4, .ga-grid .field > .column.span-4,
+.ga-form > .fields.grid > .column.span-4, .ga-grid .field > .column.span-4,
 .ga-grid .rows > .column.span-4,
-.ga-grid .column.span-4 {
+.ga-grid > .column.span-4 {
   width: 33.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.span-5,
 .ga-form > .fields.grid .rows > .column.span-5,
-.ga-form > .fields.grid .column.span-5, .ga-grid .field > .column.span-5,
+.ga-form > .fields.grid > .column.span-5, .ga-grid .field > .column.span-5,
 .ga-grid .rows > .column.span-5,
-.ga-grid .column.span-5 {
+.ga-grid > .column.span-5 {
   width: 41.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.span-6,
 .ga-form > .fields.grid .rows > .column.span-6,
-.ga-form > .fields.grid .column.span-6, .ga-grid .field > .column.span-6,
+.ga-form > .fields.grid > .column.span-6, .ga-grid .field > .column.span-6,
 .ga-grid .rows > .column.span-6,
-.ga-grid .column.span-6 {
+.ga-grid > .column.span-6 {
   width: 50%;
 }
 .ga-form > .fields.grid .field > .column.span-7,
 .ga-form > .fields.grid .rows > .column.span-7,
-.ga-form > .fields.grid .column.span-7, .ga-grid .field > .column.span-7,
+.ga-form > .fields.grid > .column.span-7, .ga-grid .field > .column.span-7,
 .ga-grid .rows > .column.span-7,
-.ga-grid .column.span-7 {
+.ga-grid > .column.span-7 {
   width: 58.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.span-8,
 .ga-form > .fields.grid .rows > .column.span-8,
-.ga-form > .fields.grid .column.span-8, .ga-grid .field > .column.span-8,
+.ga-form > .fields.grid > .column.span-8, .ga-grid .field > .column.span-8,
 .ga-grid .rows > .column.span-8,
-.ga-grid .column.span-8 {
+.ga-grid > .column.span-8 {
   width: 66.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.span-9,
 .ga-form > .fields.grid .rows > .column.span-9,
-.ga-form > .fields.grid .column.span-9, .ga-grid .field > .column.span-9,
+.ga-form > .fields.grid > .column.span-9, .ga-grid .field > .column.span-9,
 .ga-grid .rows > .column.span-9,
-.ga-grid .column.span-9 {
+.ga-grid > .column.span-9 {
   width: 75%;
 }
 .ga-form > .fields.grid .field > .column.span-10,
 .ga-form > .fields.grid .rows > .column.span-10,
-.ga-form > .fields.grid .column.span-10, .ga-grid .field > .column.span-10,
+.ga-form > .fields.grid > .column.span-10, .ga-grid .field > .column.span-10,
 .ga-grid .rows > .column.span-10,
-.ga-grid .column.span-10 {
+.ga-grid > .column.span-10 {
   width: 83.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.span-11,
 .ga-form > .fields.grid .rows > .column.span-11,
-.ga-form > .fields.grid .column.span-11, .ga-grid .field > .column.span-11,
+.ga-form > .fields.grid > .column.span-11, .ga-grid .field > .column.span-11,
 .ga-grid .rows > .column.span-11,
-.ga-grid .column.span-11 {
+.ga-grid > .column.span-11 {
   width: 91.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.span-12,
 .ga-form > .fields.grid .rows > .column.span-12,
-.ga-form > .fields.grid .column.span-12, .ga-grid .field > .column.span-12,
+.ga-form > .fields.grid > .column.span-12, .ga-grid .field > .column.span-12,
 .ga-grid .rows > .column.span-12,
-.ga-grid .column.span-12 {
+.ga-grid > .column.span-12 {
   width: 100%;
 }
 .ga-form > .fields.grid .field > .column.order-1,
 .ga-form > .fields.grid .rows > .column.order-1,
-.ga-form > .fields.grid .column.order-1, .ga-grid .field > .column.order-1,
+.ga-form > .fields.grid > .column.order-1, .ga-grid .field > .column.order-1,
 .ga-grid .rows > .column.order-1,
-.ga-grid .column.order-1 {
+.ga-grid > .column.order-1 {
   order: 1;
 }
 .ga-form > .fields.grid .field > .column.order-2,
 .ga-form > .fields.grid .rows > .column.order-2,
-.ga-form > .fields.grid .column.order-2, .ga-grid .field > .column.order-2,
+.ga-form > .fields.grid > .column.order-2, .ga-grid .field > .column.order-2,
 .ga-grid .rows > .column.order-2,
-.ga-grid .column.order-2 {
+.ga-grid > .column.order-2 {
   order: 2;
 }
 .ga-form > .fields.grid .field > .column.order-3,
 .ga-form > .fields.grid .rows > .column.order-3,
-.ga-form > .fields.grid .column.order-3, .ga-grid .field > .column.order-3,
+.ga-form > .fields.grid > .column.order-3, .ga-grid .field > .column.order-3,
 .ga-grid .rows > .column.order-3,
-.ga-grid .column.order-3 {
+.ga-grid > .column.order-3 {
   order: 3;
 }
 .ga-form > .fields.grid .field > .column.order-4,
 .ga-form > .fields.grid .rows > .column.order-4,
-.ga-form > .fields.grid .column.order-4, .ga-grid .field > .column.order-4,
+.ga-form > .fields.grid > .column.order-4, .ga-grid .field > .column.order-4,
 .ga-grid .rows > .column.order-4,
-.ga-grid .column.order-4 {
+.ga-grid > .column.order-4 {
   order: 4;
 }
 .ga-form > .fields.grid .field > .column.order-5,
 .ga-form > .fields.grid .rows > .column.order-5,
-.ga-form > .fields.grid .column.order-5, .ga-grid .field > .column.order-5,
+.ga-form > .fields.grid > .column.order-5, .ga-grid .field > .column.order-5,
 .ga-grid .rows > .column.order-5,
-.ga-grid .column.order-5 {
+.ga-grid > .column.order-5 {
   order: 5;
 }
 .ga-form > .fields.grid .field > .column.order-6,
 .ga-form > .fields.grid .rows > .column.order-6,
-.ga-form > .fields.grid .column.order-6, .ga-grid .field > .column.order-6,
+.ga-form > .fields.grid > .column.order-6, .ga-grid .field > .column.order-6,
 .ga-grid .rows > .column.order-6,
-.ga-grid .column.order-6 {
+.ga-grid > .column.order-6 {
   order: 6;
 }
 .ga-form > .fields.grid .field > .column.order-7,
 .ga-form > .fields.grid .rows > .column.order-7,
-.ga-form > .fields.grid .column.order-7, .ga-grid .field > .column.order-7,
+.ga-form > .fields.grid > .column.order-7, .ga-grid .field > .column.order-7,
 .ga-grid .rows > .column.order-7,
-.ga-grid .column.order-7 {
+.ga-grid > .column.order-7 {
   order: 7;
 }
 .ga-form > .fields.grid .field > .column.order-8,
 .ga-form > .fields.grid .rows > .column.order-8,
-.ga-form > .fields.grid .column.order-8, .ga-grid .field > .column.order-8,
+.ga-form > .fields.grid > .column.order-8, .ga-grid .field > .column.order-8,
 .ga-grid .rows > .column.order-8,
-.ga-grid .column.order-8 {
+.ga-grid > .column.order-8 {
   order: 8;
 }
 .ga-form > .fields.grid .field > .column.order-9,
 .ga-form > .fields.grid .rows > .column.order-9,
-.ga-form > .fields.grid .column.order-9, .ga-grid .field > .column.order-9,
+.ga-form > .fields.grid > .column.order-9, .ga-grid .field > .column.order-9,
 .ga-grid .rows > .column.order-9,
-.ga-grid .column.order-9 {
+.ga-grid > .column.order-9 {
   order: 9;
 }
 .ga-form > .fields.grid .field > .column.order-10,
 .ga-form > .fields.grid .rows > .column.order-10,
-.ga-form > .fields.grid .column.order-10, .ga-grid .field > .column.order-10,
+.ga-form > .fields.grid > .column.order-10, .ga-grid .field > .column.order-10,
 .ga-grid .rows > .column.order-10,
-.ga-grid .column.order-10 {
+.ga-grid > .column.order-10 {
   order: 10;
 }
 .ga-form > .fields.grid .field > .column.order-11,
 .ga-form > .fields.grid .rows > .column.order-11,
-.ga-form > .fields.grid .column.order-11, .ga-grid .field > .column.order-11,
+.ga-form > .fields.grid > .column.order-11, .ga-grid .field > .column.order-11,
 .ga-grid .rows > .column.order-11,
-.ga-grid .column.order-11 {
+.ga-grid > .column.order-11 {
   order: 11;
 }
 .ga-form > .fields.grid .field > .column.order-12,
 .ga-form > .fields.grid .rows > .column.order-12,
-.ga-form > .fields.grid .column.order-12, .ga-grid .field > .column.order-12,
+.ga-form > .fields.grid > .column.order-12, .ga-grid .field > .column.order-12,
 .ga-grid .rows > .column.order-12,
-.ga-grid .column.order-12 {
+.ga-grid > .column.order-12 {
   order: 12;
 }
 .ga-form > .fields.grid .field > .column.offset-1,
 .ga-form > .fields.grid .rows > .column.offset-1,
-.ga-form > .fields.grid .column.offset-1, .ga-grid .field > .column.offset-1,
+.ga-form > .fields.grid > .column.offset-1, .ga-grid .field > .column.offset-1,
 .ga-grid .rows > .column.offset-1,
-.ga-grid .column.offset-1 {
+.ga-grid > .column.offset-1 {
   margin-left: 8.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.offset-2,
 .ga-form > .fields.grid .rows > .column.offset-2,
-.ga-form > .fields.grid .column.offset-2, .ga-grid .field > .column.offset-2,
+.ga-form > .fields.grid > .column.offset-2, .ga-grid .field > .column.offset-2,
 .ga-grid .rows > .column.offset-2,
-.ga-grid .column.offset-2 {
+.ga-grid > .column.offset-2 {
   margin-left: 16.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.offset-3,
 .ga-form > .fields.grid .rows > .column.offset-3,
-.ga-form > .fields.grid .column.offset-3, .ga-grid .field > .column.offset-3,
+.ga-form > .fields.grid > .column.offset-3, .ga-grid .field > .column.offset-3,
 .ga-grid .rows > .column.offset-3,
-.ga-grid .column.offset-3 {
+.ga-grid > .column.offset-3 {
   margin-left: 25%;
 }
 .ga-form > .fields.grid .field > .column.offset-4,
 .ga-form > .fields.grid .rows > .column.offset-4,
-.ga-form > .fields.grid .column.offset-4, .ga-grid .field > .column.offset-4,
+.ga-form > .fields.grid > .column.offset-4, .ga-grid .field > .column.offset-4,
 .ga-grid .rows > .column.offset-4,
-.ga-grid .column.offset-4 {
+.ga-grid > .column.offset-4 {
   margin-left: 33.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.offset-5,
 .ga-form > .fields.grid .rows > .column.offset-5,
-.ga-form > .fields.grid .column.offset-5, .ga-grid .field > .column.offset-5,
+.ga-form > .fields.grid > .column.offset-5, .ga-grid .field > .column.offset-5,
 .ga-grid .rows > .column.offset-5,
-.ga-grid .column.offset-5 {
+.ga-grid > .column.offset-5 {
   margin-left: 41.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.offset-6,
 .ga-form > .fields.grid .rows > .column.offset-6,
-.ga-form > .fields.grid .column.offset-6, .ga-grid .field > .column.offset-6,
+.ga-form > .fields.grid > .column.offset-6, .ga-grid .field > .column.offset-6,
 .ga-grid .rows > .column.offset-6,
-.ga-grid .column.offset-6 {
+.ga-grid > .column.offset-6 {
   margin-left: 50%;
 }
 .ga-form > .fields.grid .field > .column.offset-7,
 .ga-form > .fields.grid .rows > .column.offset-7,
-.ga-form > .fields.grid .column.offset-7, .ga-grid .field > .column.offset-7,
+.ga-form > .fields.grid > .column.offset-7, .ga-grid .field > .column.offset-7,
 .ga-grid .rows > .column.offset-7,
-.ga-grid .column.offset-7 {
+.ga-grid > .column.offset-7 {
   margin-left: 58.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.offset-8,
 .ga-form > .fields.grid .rows > .column.offset-8,
-.ga-form > .fields.grid .column.offset-8, .ga-grid .field > .column.offset-8,
+.ga-form > .fields.grid > .column.offset-8, .ga-grid .field > .column.offset-8,
 .ga-grid .rows > .column.offset-8,
-.ga-grid .column.offset-8 {
+.ga-grid > .column.offset-8 {
   margin-left: 66.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.offset-9,
 .ga-form > .fields.grid .rows > .column.offset-9,
-.ga-form > .fields.grid .column.offset-9, .ga-grid .field > .column.offset-9,
+.ga-form > .fields.grid > .column.offset-9, .ga-grid .field > .column.offset-9,
 .ga-grid .rows > .column.offset-9,
-.ga-grid .column.offset-9 {
+.ga-grid > .column.offset-9 {
   margin-left: 75%;
 }
 .ga-form > .fields.grid .field > .column.offset-10,
 .ga-form > .fields.grid .rows > .column.offset-10,
-.ga-form > .fields.grid .column.offset-10, .ga-grid .field > .column.offset-10,
+.ga-form > .fields.grid > .column.offset-10, .ga-grid .field > .column.offset-10,
 .ga-grid .rows > .column.offset-10,
-.ga-grid .column.offset-10 {
+.ga-grid > .column.offset-10 {
   margin-left: 83.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.offset-11,
 .ga-form > .fields.grid .rows > .column.offset-11,
-.ga-form > .fields.grid .column.offset-11, .ga-grid .field > .column.offset-11,
+.ga-form > .fields.grid > .column.offset-11, .ga-grid .field > .column.offset-11,
 .ga-grid .rows > .column.offset-11,
-.ga-grid .column.offset-11 {
+.ga-grid > .column.offset-11 {
   margin-left: 91.6666666667%;
 }
 .ga-form > .fields.grid .field > .column.offset-12,
 .ga-form > .fields.grid .rows > .column.offset-12,
-.ga-form > .fields.grid .column.offset-12, .ga-grid .field > .column.offset-12,
+.ga-form > .fields.grid > .column.offset-12, .ga-grid .field > .column.offset-12,
 .ga-grid .rows > .column.offset-12,
-.ga-grid .column.offset-12 {
+.ga-grid > .column.offset-12 {
   margin-left: 100%;
 }
 .ga-form > .fields.grid:not(:has(> .column, > .rows)), .ga-grid:not(:has(> .column, > .rows)) {
@@ -4175,76 +4453,76 @@ button.ga-button {
 }
 
 @media all and (max-width: 767.98px) {
-  .ga-form > .fields.grid .column.span-xs-1, .ga-grid .column.span-xs-1 {
+  .ga-form > .fields.grid > .column.span-xs-1, .ga-grid > .column.span-xs-1 {
     width: 8.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-2, .ga-grid .column.span-xs-2 {
+  .ga-form > .fields.grid > .column.span-xs-2, .ga-grid > .column.span-xs-2 {
     width: 16.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-3, .ga-grid .column.span-xs-3 {
+  .ga-form > .fields.grid > .column.span-xs-3, .ga-grid > .column.span-xs-3 {
     width: 25% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-4, .ga-grid .column.span-xs-4 {
+  .ga-form > .fields.grid > .column.span-xs-4, .ga-grid > .column.span-xs-4 {
     width: 33.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-5, .ga-grid .column.span-xs-5 {
+  .ga-form > .fields.grid > .column.span-xs-5, .ga-grid > .column.span-xs-5 {
     width: 41.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-6, .ga-grid .column.span-xs-6 {
+  .ga-form > .fields.grid > .column.span-xs-6, .ga-grid > .column.span-xs-6 {
     width: 50% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-7, .ga-grid .column.span-xs-7 {
+  .ga-form > .fields.grid > .column.span-xs-7, .ga-grid > .column.span-xs-7 {
     width: 58.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-8, .ga-grid .column.span-xs-8 {
+  .ga-form > .fields.grid > .column.span-xs-8, .ga-grid > .column.span-xs-8 {
     width: 66.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-9, .ga-grid .column.span-xs-9 {
+  .ga-form > .fields.grid > .column.span-xs-9, .ga-grid > .column.span-xs-9 {
     width: 75% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-10, .ga-grid .column.span-xs-10 {
+  .ga-form > .fields.grid > .column.span-xs-10, .ga-grid > .column.span-xs-10 {
     width: 83.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-11, .ga-grid .column.span-xs-11 {
+  .ga-form > .fields.grid > .column.span-xs-11, .ga-grid > .column.span-xs-11 {
     width: 91.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-xs-12, .ga-grid .column.span-xs-12 {
+  .ga-form > .fields.grid > .column.span-xs-12, .ga-grid > .column.span-xs-12 {
     width: 100% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-0, .ga-grid .column.offset-xs-0 {
+  .ga-form > .fields.grid > .column.offset-xs-0, .ga-grid > .column.offset-xs-0 {
     margin-left: 0% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-1, .ga-grid .column.offset-xs-1 {
+  .ga-form > .fields.grid > .column.offset-xs-1, .ga-grid > .column.offset-xs-1 {
     margin-left: 8.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-2, .ga-grid .column.offset-xs-2 {
+  .ga-form > .fields.grid > .column.offset-xs-2, .ga-grid > .column.offset-xs-2 {
     margin-left: 16.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-3, .ga-grid .column.offset-xs-3 {
+  .ga-form > .fields.grid > .column.offset-xs-3, .ga-grid > .column.offset-xs-3 {
     margin-left: 25% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-4, .ga-grid .column.offset-xs-4 {
+  .ga-form > .fields.grid > .column.offset-xs-4, .ga-grid > .column.offset-xs-4 {
     margin-left: 33.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-5, .ga-grid .column.offset-xs-5 {
+  .ga-form > .fields.grid > .column.offset-xs-5, .ga-grid > .column.offset-xs-5 {
     margin-left: 41.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-6, .ga-grid .column.offset-xs-6 {
+  .ga-form > .fields.grid > .column.offset-xs-6, .ga-grid > .column.offset-xs-6 {
     margin-left: 50% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-7, .ga-grid .column.offset-xs-7 {
+  .ga-form > .fields.grid > .column.offset-xs-7, .ga-grid > .column.offset-xs-7 {
     margin-left: 58.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-8, .ga-grid .column.offset-xs-8 {
+  .ga-form > .fields.grid > .column.offset-xs-8, .ga-grid > .column.offset-xs-8 {
     margin-left: 66.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-9, .ga-grid .column.offset-xs-9 {
+  .ga-form > .fields.grid > .column.offset-xs-9, .ga-grid > .column.offset-xs-9 {
     margin-left: 75% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-10, .ga-grid .column.offset-xs-10 {
+  .ga-form > .fields.grid > .column.offset-xs-10, .ga-grid > .column.offset-xs-10 {
     margin-left: 83.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-xs-11, .ga-grid .column.offset-xs-11 {
+  .ga-form > .fields.grid > .column.offset-xs-11, .ga-grid > .column.offset-xs-11 {
     margin-left: 91.6666666667% !important;
   }
   .ga-form > .fields.grid.divide-xs-1 > .column, .ga-grid.divide-xs-1 > .column {
@@ -4285,76 +4563,76 @@ button.ga-button {
   }
 }
 @media all and (min-width: 768px) and (max-width: 1279.98px) {
-  .ga-form > .fields.grid .column.span-sm-1, .ga-grid .column.span-sm-1 {
+  .ga-form > .fields.grid > .column.span-sm-1, .ga-grid > .column.span-sm-1 {
     width: 8.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-2, .ga-grid .column.span-sm-2 {
+  .ga-form > .fields.grid > .column.span-sm-2, .ga-grid > .column.span-sm-2 {
     width: 16.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-3, .ga-grid .column.span-sm-3 {
+  .ga-form > .fields.grid > .column.span-sm-3, .ga-grid > .column.span-sm-3 {
     width: 25% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-4, .ga-grid .column.span-sm-4 {
+  .ga-form > .fields.grid > .column.span-sm-4, .ga-grid > .column.span-sm-4 {
     width: 33.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-5, .ga-grid .column.span-sm-5 {
+  .ga-form > .fields.grid > .column.span-sm-5, .ga-grid > .column.span-sm-5 {
     width: 41.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-6, .ga-grid .column.span-sm-6 {
+  .ga-form > .fields.grid > .column.span-sm-6, .ga-grid > .column.span-sm-6 {
     width: 50% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-7, .ga-grid .column.span-sm-7 {
+  .ga-form > .fields.grid > .column.span-sm-7, .ga-grid > .column.span-sm-7 {
     width: 58.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-8, .ga-grid .column.span-sm-8 {
+  .ga-form > .fields.grid > .column.span-sm-8, .ga-grid > .column.span-sm-8 {
     width: 66.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-9, .ga-grid .column.span-sm-9 {
+  .ga-form > .fields.grid > .column.span-sm-9, .ga-grid > .column.span-sm-9 {
     width: 75% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-10, .ga-grid .column.span-sm-10 {
+  .ga-form > .fields.grid > .column.span-sm-10, .ga-grid > .column.span-sm-10 {
     width: 83.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-11, .ga-grid .column.span-sm-11 {
+  .ga-form > .fields.grid > .column.span-sm-11, .ga-grid > .column.span-sm-11 {
     width: 91.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-sm-12, .ga-grid .column.span-sm-12 {
+  .ga-form > .fields.grid > .column.span-sm-12, .ga-grid > .column.span-sm-12 {
     width: 100% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-0, .ga-grid .column.offset-sm-0 {
+  .ga-form > .fields.grid > .column.offset-sm-0, .ga-grid > .column.offset-sm-0 {
     margin-left: 0% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-1, .ga-grid .column.offset-sm-1 {
+  .ga-form > .fields.grid > .column.offset-sm-1, .ga-grid > .column.offset-sm-1 {
     margin-left: 8.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-2, .ga-grid .column.offset-sm-2 {
+  .ga-form > .fields.grid > .column.offset-sm-2, .ga-grid > .column.offset-sm-2 {
     margin-left: 16.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-3, .ga-grid .column.offset-sm-3 {
+  .ga-form > .fields.grid > .column.offset-sm-3, .ga-grid > .column.offset-sm-3 {
     margin-left: 25% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-4, .ga-grid .column.offset-sm-4 {
+  .ga-form > .fields.grid > .column.offset-sm-4, .ga-grid > .column.offset-sm-4 {
     margin-left: 33.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-5, .ga-grid .column.offset-sm-5 {
+  .ga-form > .fields.grid > .column.offset-sm-5, .ga-grid > .column.offset-sm-5 {
     margin-left: 41.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-6, .ga-grid .column.offset-sm-6 {
+  .ga-form > .fields.grid > .column.offset-sm-6, .ga-grid > .column.offset-sm-6 {
     margin-left: 50% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-7, .ga-grid .column.offset-sm-7 {
+  .ga-form > .fields.grid > .column.offset-sm-7, .ga-grid > .column.offset-sm-7 {
     margin-left: 58.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-8, .ga-grid .column.offset-sm-8 {
+  .ga-form > .fields.grid > .column.offset-sm-8, .ga-grid > .column.offset-sm-8 {
     margin-left: 66.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-9, .ga-grid .column.offset-sm-9 {
+  .ga-form > .fields.grid > .column.offset-sm-9, .ga-grid > .column.offset-sm-9 {
     margin-left: 75% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-10, .ga-grid .column.offset-sm-10 {
+  .ga-form > .fields.grid > .column.offset-sm-10, .ga-grid > .column.offset-sm-10 {
     margin-left: 83.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-sm-11, .ga-grid .column.offset-sm-11 {
+  .ga-form > .fields.grid > .column.offset-sm-11, .ga-grid > .column.offset-sm-11 {
     margin-left: 91.6666666667% !important;
   }
   .ga-form > .fields.grid.divide-sm-1 > .column, .ga-grid.divide-sm-1 > .column {
@@ -4395,76 +4673,76 @@ button.ga-button {
   }
 }
 @media all and (min-width: 1280px) and (max-width: 1439.98px) {
-  .ga-form > .fields.grid .column.span-md-1, .ga-grid .column.span-md-1 {
+  .ga-form > .fields.grid > .column.span-md-1, .ga-grid > .column.span-md-1 {
     width: 8.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-md-2, .ga-grid .column.span-md-2 {
+  .ga-form > .fields.grid > .column.span-md-2, .ga-grid > .column.span-md-2 {
     width: 16.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-md-3, .ga-grid .column.span-md-3 {
+  .ga-form > .fields.grid > .column.span-md-3, .ga-grid > .column.span-md-3 {
     width: 25% !important;
   }
-  .ga-form > .fields.grid .column.span-md-4, .ga-grid .column.span-md-4 {
+  .ga-form > .fields.grid > .column.span-md-4, .ga-grid > .column.span-md-4 {
     width: 33.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-md-5, .ga-grid .column.span-md-5 {
+  .ga-form > .fields.grid > .column.span-md-5, .ga-grid > .column.span-md-5 {
     width: 41.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-md-6, .ga-grid .column.span-md-6 {
+  .ga-form > .fields.grid > .column.span-md-6, .ga-grid > .column.span-md-6 {
     width: 50% !important;
   }
-  .ga-form > .fields.grid .column.span-md-7, .ga-grid .column.span-md-7 {
+  .ga-form > .fields.grid > .column.span-md-7, .ga-grid > .column.span-md-7 {
     width: 58.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-md-8, .ga-grid .column.span-md-8 {
+  .ga-form > .fields.grid > .column.span-md-8, .ga-grid > .column.span-md-8 {
     width: 66.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-md-9, .ga-grid .column.span-md-9 {
+  .ga-form > .fields.grid > .column.span-md-9, .ga-grid > .column.span-md-9 {
     width: 75% !important;
   }
-  .ga-form > .fields.grid .column.span-md-10, .ga-grid .column.span-md-10 {
+  .ga-form > .fields.grid > .column.span-md-10, .ga-grid > .column.span-md-10 {
     width: 83.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.span-md-11, .ga-grid .column.span-md-11 {
+  .ga-form > .fields.grid > .column.span-md-11, .ga-grid > .column.span-md-11 {
     width: 91.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.span-md-12, .ga-grid .column.span-md-12 {
+  .ga-form > .fields.grid > .column.span-md-12, .ga-grid > .column.span-md-12 {
     width: 100% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-0, .ga-grid .column.offset-md-0 {
+  .ga-form > .fields.grid > .column.offset-md-0, .ga-grid > .column.offset-md-0 {
     margin-left: 0% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-1, .ga-grid .column.offset-md-1 {
+  .ga-form > .fields.grid > .column.offset-md-1, .ga-grid > .column.offset-md-1 {
     margin-left: 8.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-2, .ga-grid .column.offset-md-2 {
+  .ga-form > .fields.grid > .column.offset-md-2, .ga-grid > .column.offset-md-2 {
     margin-left: 16.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-3, .ga-grid .column.offset-md-3 {
+  .ga-form > .fields.grid > .column.offset-md-3, .ga-grid > .column.offset-md-3 {
     margin-left: 25% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-4, .ga-grid .column.offset-md-4 {
+  .ga-form > .fields.grid > .column.offset-md-4, .ga-grid > .column.offset-md-4 {
     margin-left: 33.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-5, .ga-grid .column.offset-md-5 {
+  .ga-form > .fields.grid > .column.offset-md-5, .ga-grid > .column.offset-md-5 {
     margin-left: 41.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-6, .ga-grid .column.offset-md-6 {
+  .ga-form > .fields.grid > .column.offset-md-6, .ga-grid > .column.offset-md-6 {
     margin-left: 50% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-7, .ga-grid .column.offset-md-7 {
+  .ga-form > .fields.grid > .column.offset-md-7, .ga-grid > .column.offset-md-7 {
     margin-left: 58.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-8, .ga-grid .column.offset-md-8 {
+  .ga-form > .fields.grid > .column.offset-md-8, .ga-grid > .column.offset-md-8 {
     margin-left: 66.6666666667% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-9, .ga-grid .column.offset-md-9 {
+  .ga-form > .fields.grid > .column.offset-md-9, .ga-grid > .column.offset-md-9 {
     margin-left: 75% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-10, .ga-grid .column.offset-md-10 {
+  .ga-form > .fields.grid > .column.offset-md-10, .ga-grid > .column.offset-md-10 {
     margin-left: 83.3333333333% !important;
   }
-  .ga-form > .fields.grid .column.offset-md-11, .ga-grid .column.offset-md-11 {
+  .ga-form > .fields.grid > .column.offset-md-11, .ga-grid > .column.offset-md-11 {
     margin-left: 91.6666666667% !important;
   }
   .ga-form > .fields.grid.divide-md-1 > .column, .ga-grid.divide-md-1 > .column {

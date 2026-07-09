@@ -729,7 +729,8 @@ section {
     margin-bottom: 1rem;
   }
   > .ga-segment {
-    min-height: 150px;
+    --min-height: 150px;
+    min-height: var(--min-height);
     &.center {
       display: flex;
       justify-content: center;
