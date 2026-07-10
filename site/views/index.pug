@@ -135,15 +135,17 @@ block contents
                         |  BE-UI-VUE
                         img(src="/img/vue.svg", alt="vue", style="width: 1rem; margin-left: 10px")
                         a.link(href="https://beui.vercel.app/", target="_blank")  
-                //.ga-cards.column-2
-                    .ga-card.border 
-                        .contents 
-                            img(src="/img/react.svg", alt="react")
-                            | React + Frog
-                    .ga-card.border 
-                        .contents 
-                            img(src="/img/vue.svg", alt="vue")
-                            | Vue + Frog
+    .section-wrapper 
+        section 
+            .page-header 
+                .page-title !{cont("MAIN_SECTION_UTILITIES_TITLE")}
+                .page-desc  !{cont("MAIN_SECTION_UTILITIES_DESC")}
+            .page-contents 
+                .ga.flex.center
+                    .ga-button.outline
+                        | Utility Classes
+                        i.icon.right.xi-arrow-right
+                        a.link(href="/pages/utilities3") 
     .section-wrapper.summary#grids2
         section
             .page-header.ui-elements
@@ -417,6 +419,19 @@ block contents
             .page-header 
                 .page-title !{cont("MAIN_SECTION_CONTACT_TITLE")}
                 .page-desc !{cont("MAIN_SECTION_CONTACT_DESC")}
+            .page-contents 
+                .ga.flex.center
+                    .ga-buttons 
+                        .ga-button.icon 
+                            i.xi-mail
+                            a.link(href="mailto:noistommy@gmail.com", target="_blank")
+                        .ga-button.icon 
+                            i.xi-linkedin
+                            a.link(href="https://www.linkedin.com/in/minyoung-kim-noistommy", target="_blank")
+                        .ga-button.icon 
+                            i.xi-home
+                            a.link(href="/", target="_blank")
+            
             include comments
     script(src="/js/selectbox.js")
     script. 

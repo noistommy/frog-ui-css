@@ -10,6 +10,8 @@
 	"MAIN_SECTION_TOKEN_TITLE": "Token-Driven Semantic Design",
 	"MAIN_SECTION_TOKEN_DESC": "Combine design tokens with natural, semantic class names for a readable design language.",
   "MAIN_SECTION_ELEMENT_TITLE": "Example UI Element",
+  "MAIN_SECTION_UTILITIES_TITLE": "About Utility Classes",
+	"MAIN_SECTION_UTILITIES_DESC": "By default, it follows the principle of avoiding the application of utility classes to defined component styles. However, for user custom styling such as component placement and layout adjustments, using utility classes is more advantageous. Therefore, a minimal set of the most useful utility classes has been defined so that you don't need to use a separate library.",
   "MAIN_SECTION_CONTACT_TITLE": "Contact Me",
 	"MAIN_SECTION_CONTACT_DESC": "",
   "WELCOME_FROG_TITLE": "Frog UI",  
