@@ -2,6 +2,9 @@
 @use 'sass:math';
 @use 'sass:color';
 
+$baseFontSize: 14;
+$heightRhythm: 38;
+
 @function relativePx($number) {
     @return calc($number/14)*1em
 };
