@@ -6772,7 +6772,7 @@ button.ga-button {
   width: 100%;
   padding: calc(0.7142857143em + 2px);
 }
-.ga-list > .item:has(a):hover {
+.ga-list > .item:has(a) a:hover {
   background-color: var(--hover-suf);
 }
 .ga-list > .item .item-title {

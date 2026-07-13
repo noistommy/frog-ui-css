@@ -23,9 +23,9 @@ $listItemCompactPadding: calc($listItemPadding * 0.5);
        a {
         width: 100%;
         padding: $listItemPadding;
-       }
-       &:hover {
-        background-color: var(--hover-suf);
+        &:hover {
+         background-color: var(--hover-suf);
+        }
        }
     }
     .item-title {

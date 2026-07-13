@@ -44,7 +44,7 @@ block contents
                         button.ga-button
                             | !{cont("MAIN_SECTION_STYLE_LABEL")}
                             i.icon.right.xi-arrow-right
-                            a.link(href="/pages/theme")
+                            a.link(href="/pages/theming")
                         
                     .page-contents.ga.flex.center
                         .select-css
@@ -87,7 +87,7 @@ block contents
                                     i.icon.xi-eye
                             .field 
                                 label.ga-checkbox(for="signin")
-                                    input(type="checkbox" name="signin") 
+                                    input(type="checkbox" id="signin") 
                                     | Please prove that you are not an AI.
                         .extra.text-right
                             button.ga-button.primary.fluid Create                                
@@ -237,11 +237,11 @@ block contents
                         .name importance
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-bg-0
+                        .chip.white
                         .name white
                 .column.span-xs-4
                     .color-item
-                        .chip.gray-bg-100
+                        .chip.black
                         .name black
             h5.header Grayscale
             .ga-grid
@@ -299,7 +299,7 @@ block contents
             .ga-grid
                 each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
                     .column
-                        .gray-item.gray-15
+                        .gray-item.gray-bg-15
     .section-wrapper.summary#grids2
         section
             .ga-grid2.dosirak.round-l(style="--grid-row-num: 6; --grid-gap: 20")
@@ -347,7 +347,7 @@ block contents
                                             = `option${col}`
                 .column.col-6.col-xs-12
                     h5.title List
-                    .ga-list.selection.border
+                    .ga-list.selection.border.mark.bg
                         .item(style="padding: 10px").selected Item 1
                         .item(style="padding: 10px") Item 2
                         .item(style="padding: 10px") Item 3
@@ -397,23 +397,27 @@ block contents
                             span.switch.round
                         label.ga-switch.slide.inside
                             input(type="checkbox" checked)
-                            span.switch.round
-                        label.ga-switch.button
+                            span.switch
+                        label.ga-switch.button.round
                             input(type="checkbox" checked)
-                            span.on.round A
-                            span.off.round B
+                            span.on A
+                            span.off B
+                        label.ga-switch.button.lightblue(data-length="8")
+                            input(type="checkbox" checked)
+                            span.on Yes I Can!
+                            span.off No.
                 .column.col-6.col-xs-12
                     h5.title Checkbox
                     .field
-                        .ga-checkbox
+                        label(for="ch1").ga-checkbox
                             input(id="ch1" type="checkbox")
-                            label(for="ch1") Checkbox 1
-                        .ga-checkbox
+                            | Checkbox 1
+                        label(for="ch2").ga-checkbox
                             input(id="ch2" type="checkbox" checked="true")
-                            label(for="ch2") Checkbox 2
-                        .ga-checkbox.radio
+                            | Checkbox 2
+                        label(for="ch3").ga-checkbox.radio
                             input(id="ch3" type="checkbox")
-                            label(for="ch3") radio
+                            | Radio
     .section-wrapper 
         section 
             .page-header 

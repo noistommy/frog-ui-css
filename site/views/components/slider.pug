@@ -1,0 +1,40 @@
+extends ../layout
+
+
+
+block title
+    title #{title} | Frog UI CSS
+
+block contents
+    .page-wrapper
+        section#tree
+            .section-title
+                h1= title
+                .section-desc 
+                    p
+            .section-contents
+                h4.contents-title Base
+                .ga-segment.float.round-m.attached
+                    .contents
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider(data-width="50").primary
+                            //- .control-btn.min(data-width="0")
+                            .control-btn.max(data-width="50")
+                            //- .label-text 
+                            //-     .start-label 0
+                            //-     .end-label 100
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Files
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+block module 
+    script(src="/js/slider.js")
