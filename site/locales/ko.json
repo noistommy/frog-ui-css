@@ -68,6 +68,7 @@
 	"ELEMENTS_TABS_SUB_TITLE": "탭 형태로 여러 콘텐츠 섹션을 전환하는 UI.",
 	"ELEMENTS_CARDS_SUB_TITLE": "텍스트, 이미지, 액션을 묶어 보여주는 카드 레이아웃.",
 	"ELEMENTS_SEGMENTS_SUB_TITLE": "텍스트, 이미지, 액션을 묶어 구분해 주는 세그먼트 컨테이너.",
+	"ELEMENTS_SLIDER_SUB_TITLE": "정해진 범위 내에서 사용자가 값을 조절할 수 있는 입력 컴포넌트",
 	"ELEMENTS_TABLE_SUB_TITLE": "행과 헤더 스타일을 지원하는 데이터 테이블.",
 	"ELEMENTS_PAGINATION_SUB_TITLE": "여러 페이지의 콘텐츠를 탐색하기 위한 페이지네이션 UI.",
 	"ELEMENTS_PANEL_SUB_TITLE": "접기/펼치기가 가능한 사이드 또는 콘텐츠 패널.",

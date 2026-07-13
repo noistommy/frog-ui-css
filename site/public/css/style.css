@@ -485,6 +485,10 @@ section .section-contents .contents-wrapper .contents-item {
   border-left: 5px solid;
 }
 
+.ga-segment .contents-wrapper,
+.ga-card .contents-wrapper {
+  padding: 40px 20px;
+}
 .ga-segment > .footer:has(pre),
 .ga-card > .footer:has(pre) {
   padding: 0;

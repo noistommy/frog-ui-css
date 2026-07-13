@@ -11,30 +11,164 @@ block contents
             .section-title
                 h1= title
                 .section-desc 
-                    p
+                    p !{cont("ELEMENTS_SLIDER_SUB_TITLE")}
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
-                    .contents
+                    .contents-wrapper.py-10
                         .ga-slider
                             input(type="range", hidden)
-                            .result-slider(data-width="50").primary
-                            //- .control-btn.min(data-width="0")
+                            .result-slider(data-width="50")
                             .control-btn.max(data-width="50")
-                            //- .label-text 
-                            //-     .start-label 0
-                            //-     .end-label 100
+    
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.base}
             .section-contents
-                h4.contents-title Files
+                h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
-                    .contents-wrapper
+                    .contents-wrapper.py-10
+                        .ga-slider.disabled
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50")
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.disabled}
+            .section-contents
+                h4.contents-title Show Label
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50")
+                            .label-text 
+                                .start-label 0
+                                .end-label 100
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.labels}
+            .section-contents
+                h4.contents-title Show Tooltip
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50").tooltip
+                            .label-text 
+                                .start-label 0
+                                .end-label 100
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.tooltip}
+            .section-contents
+                h4.contents-title Show Result
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50").show-result
+                            .label-text 
+                                .start-label 0
+                                .end-label 100
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.result}
+            .section-contents
+                h4.contents-title Unit Text
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider(data-unit="%")
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50").tooltip
+                            .label-text 
+                                .start-label 0%
+                                .end-label 100%
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.unit}
+            .section-contents
+                h4.contents-title Track Type
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        h5 Thin
+                        .ga-slider.thin
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50")
+                        h5 (Default)
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50")
+                        h5 Fat
+                        .ga-slider.fat
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50")
+                            
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.track}
+            .section-contents
+                h4.contents-title Colors
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-slider.red
+                            input(type="range", hidden)
+                            .result-slider(data-width="10")
+                            .control-btn.max(data-width="10")
+                        .ga-slider.orange
+                            input(type="range", hidden)
+                            .result-slider(data-width="20")
+                            .control-btn.max(data-width="20")
+                        .ga-slider.yellow
+                            input(type="range", hidden)
+                            .result-slider(data-width="30")
+                            .control-btn.max(data-width="30")
+                        .ga-slider.green
+                            input(type="range", hidden)
+                            .result-slider(data-width="40")
+                            .control-btn.max(data-width="40")
+                        .ga-slider.blue
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                            .control-btn.max(data-width="50")
+                        .ga-slider.deepblue
+                            input(type="range", hidden)
+                            .result-slider(data-width="60")
+                            .control-btn.max(data-width="60")
+                        .ga-slider.purple
+                            input(type="range", hidden)
+                            .result-slider(data-width="70")
+                            .control-btn.max(data-width="70")
+                        .ga-slider.lightblue
+                            input(type="range", hidden)
+                            .result-slider(data-width="80")
+                            .control-btn.max(data-width="80")
+                        .ga-slider.lightgreen
+                            input(type="range", hidden)
+                            .result-slider(data-width="90")
+                            .control-btn.max(data-width="90")
+                        .ga-slider.brown
+                            input(type="range", hidden)
+                            .result-slider(data-width="100")
+                            .control-btn.max(data-width="100")
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.colors}
 block module 
     script(src="/js/slider.js")
+        

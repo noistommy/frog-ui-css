@@ -196,7 +196,7 @@ router.get('/pages/tree_list', function(req, res, next) {
 });
 
 router.get('/pages/slider', function(req, res, next) {
-  res.render('components/slider',  { title: 'Slider', codes: codes.tree });
+  res.render('components/slider',  { title: 'Slider', codes: codes.slider });
 });
 
 // Layout

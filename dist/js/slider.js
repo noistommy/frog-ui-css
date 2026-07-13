@@ -7,18 +7,20 @@ class Slider {
     // this.sliderEl = this.el.querySelector('.slider')
     this.container = 0
     this.result = 0
+    this.resultPer = 0
     this.initX = 0
     this.initW = 0
     this.catch = false
+    this.unit = this.el.dataset.unit || ''
   }
 
   init() {
     const sliderEl = this.el.getBoundingClientRect()
     this.container =  this.el.offsetWidth
-    console.log(sliderEl.width, this.container)
-    console.dir(this.el)
+
     this.initX = sliderEl.left
     this.el.addEventListener('mousedown', (e) => this.handleDown(e))
+
   }
 
   // setRange (value) {
@@ -33,6 +35,7 @@ class Slider {
       this.initX = pageX
       this.initW = this.resultEl.offsetWidth
       this.catch = true
+      this.handleEl.classList.add('catch')
       window.addEventListener('mousemove', e => this.handleMove(e))
       window.addEventListener('mouseup', e => this.handleUp(e))
     } else {
@@ -45,14 +48,17 @@ class Slider {
   }
   handleUp ({target,  pageX}) {
     this.catch = false
+    this.handleEl.classList.remove('catch')
     window.removeEventListener('mousemove', e => this.handleMove(e))
     window.removeEventListener('mouseup', e => this.handleUp(e))
   }
   changeValue (pageX) {
     this.result = this.updatePos(pageX - this.initX)
+    this.resultPer = Math.round(this.result / this.container * 100)
 
-    this.rangeEl.value = Math.round(this.result / this.container * 100)
-    this.resultEl.dataset.width = Math.floor(this.result / this.container)*100
+    this.rangeEl.value = this.resultPer
+    this.resultEl.dataset.width = this.resultPer + this.unit
+    this.handleEl.dataset.width = this.resultPer + this.unit
     this.resultEl.style.width = this.result + 'px'
     this.handleEl.style.left = this.result + 'px'
   }
@@ -71,3 +77,5 @@ class Slider {
       sl.init()
   })
 })()
+
+

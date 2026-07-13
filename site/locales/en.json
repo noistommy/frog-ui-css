@@ -68,6 +68,7 @@
   "ELEMENTS_TABS_SUB_TITLE": "UI for toggling between content sections in a tabbed layout.",
   "ELEMENTS_CARDS_SUB_TITLE": "Content containers for grouping text, images, and actions.",
   "ELEMENTS_SEGMENTS_SUB_TITLE": "Content containers for grouping text, images, and actions.",
+  "ELEMENTS_SLIDER_SUB_TITLE": "An input component that allows the user to adjust the value within a defined range",
   "ELEMENTS_TABLE_SUB_TITLE": "Data tables with support for rows, headers, and styling.",
   "ELEMENTS_PAGINATION_SUB_TITLE": "UI for navigating through multiple pages of content.",
   "ELEMENTS_PANEL_SUB_TITLE": "Expandable/collapsible side or content panels.",

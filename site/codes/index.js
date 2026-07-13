@@ -20,4 +20,5 @@ module.exports = {
   tabs: require('./tabs'),
   table: require('./table'),
   tag: require('./tag'),
+  slider: require('./slider'),
 }
