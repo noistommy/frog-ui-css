@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([class*=light]) {
     --bgc: #333333;
     --txt: #f2f2f2;
     --txt-light: #dfdfdf;
@@ -6545,6 +6545,13 @@ button.be-button {
 }
 .be-select-box.round {
   --radius: 2em;
+}
+.be-select-box.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.be-select-box.disabled .default-text {
+  background-color: var(--suf);
 }
 .be-select-box .selected-item {
   position: relative;

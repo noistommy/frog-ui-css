@@ -48,7 +48,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([class*=light]) {
     --bgc: #1a1a1a;
     --txt: #f2f2f2;
     --txt-light: #dfdfdf;
@@ -6562,6 +6562,13 @@ button.ga-button {
 }
 .ga-select-box.round {
   --radius: 2em;
+}
+.ga-select-box.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.ga-select-box.disabled .default-text {
+  background-color: var(--suf);
 }
 .ga-select-box .selected-item {
   position: relative;

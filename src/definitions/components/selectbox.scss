@@ -8,6 +8,13 @@
   border-radius: var(--radius);
   display: inline-flex;
   flex-direction: column;
+  &.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    .default-text {
+      background-color: var(--suf);
+    }
+  }
   .selected-item {
     position: relative;
     display: inline-flex;

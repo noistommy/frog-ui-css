@@ -54,7 +54,8 @@ class SelectBox {
         this.menu = this.root.querySelector('.select-menu')
         this.selectedElement = this.root.querySelector('.selected-item')
         this.optionItems = this.root.querySelectorAll('.item')
-        this.inputElement = this.selectedElement ? this.selectedElement.querySelector('input') : null
+        this.inputElement = this.selectedElement.querySelector('input') || null
+        this.textElement = this.selectedElement.querySelector('.default-text') || null
     }
 
     toggleMenu() {
@@ -82,8 +83,8 @@ class SelectBox {
         
         if (this.inputElement) {
             this.inputElement.value = this.selectedItem
-        } else if (this.selectedElement) {
-            this.selectedElement.textContent = this.selectedItem
+        } else if (this.textElement) {
+            this.textElement.textContent = this.selectedItem
         }
 
         this.optionItems.forEach((item) => item.classList.remove('selected'))
