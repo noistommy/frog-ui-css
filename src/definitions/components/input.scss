@@ -21,6 +21,7 @@ $iconAreaOffset: 5px;
     max-width: 100%;
     input, textarea, .input {
       vertical-align: baseline;
+      font-family: inherit;
       font-size: 1em;
       padding: $inputPadding;
       line-height: $inputLineHeight;

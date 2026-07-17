@@ -12,7 +12,7 @@
 기본적으로 `flex-direct: row`, `flex-wrap: wrap`, `align-items: center` 값을 갖습니다.
 <div class="ga-segment border round-m">
   <div class="contents">
-    <div class="ga flex gray-bg-5 gap-1">
+    <div class="flex gray-bg-5 gap-1">
       <div class="item p-3 gray-bg-10">Item 1</div>
       <div class="item p-3 gray-bg-10">Item 2</div>
       <div class="item p-3 gray-bg-10">Item 3</div>
