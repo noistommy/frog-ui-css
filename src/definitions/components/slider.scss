@@ -249,14 +249,19 @@ $sliderHandleSize: 1em;
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        border-top: 6px solid #505050;
+        border-top: 6px solid $primary;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
       }
     }
+    &:hover {
+      .tooltip {
+        display: block;
+      }
+    }
   }
   .label-text {
-    &.current-label {
+    .current-label {
       transform: translateX(-50%);
       color: $primary;
       font-weight: 700;

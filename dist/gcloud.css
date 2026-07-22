@@ -8689,17 +8689,20 @@ table.ga-table .ga-button {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border-top: 6px solid #505050;
+  border-top: 6px solid #5178af;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
-.ga-slider .label-text.current-label {
+.ga-slider .control-btn:hover .tooltip {
+  display: block;
+}
+.ga-slider .label-text .current-label {
   transform: translateX(-50%);
   color: #5178af;
   font-weight: 700;
   top: 10px;
 }
-.ga-slider .label-text.current-label:before {
+.ga-slider .label-text .current-label:before {
   content: "";
   position: absolute;
   top: 0;

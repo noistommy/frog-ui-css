@@ -8523,17 +8523,20 @@ table.be-table .be-button {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border-top: 6px solid #505050;
+  border-top: 6px solid #5178af;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
-.be-slider .label-text.current-label {
+.be-slider .control-btn:hover .tooltip {
+  display: block;
+}
+.be-slider .label-text .current-label {
   transform: translateX(-50%);
   color: #5178af;
   font-weight: 700;
   top: 10px;
 }
-.be-slider .label-text.current-label:before {
+.be-slider .label-text .current-label:before {
   content: "";
   position: absolute;
   top: 0;
