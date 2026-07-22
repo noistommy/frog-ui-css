@@ -8340,9 +8340,6 @@ table.be-table .be-button {
   box-shadow: none;
   opacity: 0.8;
 }
-.be-slider .result-slider[data-width] {
-  width: attr(data-width %, 100%);
-}
 .be-slider .control-btn {
   cursor: grab;
   outline: 0;

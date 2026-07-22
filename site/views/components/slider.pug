@@ -24,6 +24,26 @@ block contents
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.base}
+            //.section-contents
+                h4.contents-title BEUI style only
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider
+                            .control-btn
+                                .tooltip 50
+                    .contents-wrapper.py-10
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider
+                            .control-btn
+                            .label-text 
+                                .current-label(style="left: 195px") 50
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
             .section-contents
                 h4.contents-title Range
                 .ga-segment.float.round-m.attached

@@ -49,10 +49,6 @@ $sliderHandleSize: 1em;
     border-radius: calc($baseSliderHeight / 2);
     box-shadow: none;
     opacity: 0.8;
-    &[data-width] {
-      width: attr(data-width %, 100%);
-    }
-
   }
   .control-btn {
     cursor: grab;
