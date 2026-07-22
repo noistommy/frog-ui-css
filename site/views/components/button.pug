@@ -285,7 +285,7 @@ block contents
                             button.ga-button CENTER
                             button.ga-button BOTTOM
                     .contents-wrapper
-                        .ga-buttons
+                        .ga-buttons(data-type=true)
                             button.ga-button.outline.mini.primary
                                 i.icon.left.xi-play
                                 | Play
@@ -306,7 +306,15 @@ block module
        ( function () {
             const buttons = document.querySelectorAll('.ga-buttons');
 
+
+            const selEl = document.querySelector('[data-type]')
+
+            const selObj = new Select(selEl)
+
             buttons.forEach(elem => {
-                new Buttons(elem).init()
+                const button = new Buttons(elem)
+                button.init(1)
+
+                elem.addEventListener('click', () => (console.log(button.selected)))
             })
         })()

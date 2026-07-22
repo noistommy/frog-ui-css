@@ -18,21 +18,44 @@ block contents
                     .contents-wrapper.py-10
                         .ga-slider
                             input(type="range", hidden)
-                            .result-slider(data-width="50").red
-                            .control-btn.max(data-width="50")
-    
+                            .result-slider
+                            .control-btn
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.base}
+            .section-contents
+                h4.contents-title Range
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider(data-type='range')
+                            input(type="range", hidden)
+                            .result-slider
+                            .control-btn.max
+                            .control-btn.min
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title No handle
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider(data-type="bar")
+                            input(type="range", hidden)
+                            .result-slider(data-width="50")
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.disabled}
             .section-contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
                         .ga-slider.disabled
                             input(type="range", hidden)
-                            .result-slider(data-width="50")
-                            .control-btn.max(data-width="50")
+                            .result-slider
+                            .control-btn.max
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
@@ -44,7 +67,7 @@ block contents
                         .ga-slider
                             input(type="range", hidden)
                             .result-slider(data-width="50")
-                            .control-btn.max(data-width="50")
+                            .control-btn(data-width="50")
                             .label-text 
                                 .start-label 0
                                 .end-label 100

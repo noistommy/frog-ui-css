@@ -8310,6 +8310,9 @@ table.be-table .be-button {
   border-radius: 4px;
   padding: 0 !important;
 }
+.be-slider:hover {
+  background-color: var(--hover-suf);
+}
 .be-slider.thin {
   height: 3px;
 }
@@ -8350,6 +8353,12 @@ table.be-table .be-button {
   background-color: #fff;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
+}
+.be-slider .control-btn.min {
+  z-index: 1;
+}
+.be-slider .control-btn.max {
+  z-index: 2;
 }
 .be-slider .control-btn[data-width] {
   left: attr(data-width %, 100%);

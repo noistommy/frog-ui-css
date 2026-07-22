@@ -8476,6 +8476,9 @@ table.ga-table .ga-button {
   border-radius: 4px;
   padding: 0 !important;
 }
+.ga-slider:hover {
+  background-color: var(--hover-suf);
+}
 .ga-slider.thin {
   height: 3px;
 }
@@ -8516,6 +8519,12 @@ table.ga-table .ga-button {
   background-color: #fff;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
+}
+.ga-slider .control-btn.min {
+  z-index: 1;
+}
+.ga-slider .control-btn.max {
+  z-index: 2;
 }
 .ga-slider .control-btn[data-width] {
   left: attr(data-width %, 100%);

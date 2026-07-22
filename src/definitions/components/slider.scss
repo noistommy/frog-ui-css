@@ -7,6 +7,7 @@ $fatSliderHeight: 1em;
 $sliderMargin: 14px;
 
 $baseSliderBg: var(--suf);
+$baseSliderBgHover: var(--hover-suf);
 
 $sliderHandleSize: 1em;
 
@@ -19,6 +20,9 @@ $sliderHandleSize: 1em;
   background-color: $baseSliderBg;
   border-radius: calc($baseSliderHeight / 2);
   padding: 0 !important;
+  &:hover {
+    background-color: $baseSliderBgHover;
+  }
   &.thin {
     height: $thinSliderHeight;
   }
@@ -74,6 +78,8 @@ $sliderHandleSize: 1em;
     //   // border: 3px solid #6d9d72;
     //   border-radius: 50%;
     // }
+    &.min {z-index: 1;}
+    &.max {z-index: 2;}
     &[data-width] {
       left: attr(data-width %, 100%);
       // &:hover,
