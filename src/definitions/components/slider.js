@@ -14,12 +14,16 @@ class Slider {
     this.initX = 0
     this.initW = 0
     this.catch = false
+    this.noHandle = false
     this.unit = this.el.dataset.unit || ''
-    this.type = this.el.dataset.type //bar, (single), range
+    this.type = this.el.dataset.type // (single), range
 
     if (this.type !== 'range') {
       this.handleMax = this.el.querySelector('.control-btn')
     }
+
+    this.noHandle = this.el.classList.contains('no-handle')
+    window.addEventListener('resize', () => this.init(this.setPercent(this.start), this.setPercent(this.end)))
   }
 
   init(start = 0, end = 0) {
@@ -39,7 +43,6 @@ class Slider {
   }
  
   handleDown ({target, pageX}) {
-    // console.log(this.start, this.end, this.midX)
     if (target.closest('.control-btn')) {
       // if (target.classList.contains('max')) {
       //   console.log('max')
@@ -66,7 +69,7 @@ class Slider {
     if (pageX) {
       const newPos = this.updatePos(pageX - this.initX)
   
-      if (this.handleMin && newPos <= this.midX) {
+      if (this.type === 'range' && newPos <= this.midX) {
         this.start = newPos
       } else {
         this.end = newPos
@@ -81,7 +84,11 @@ class Slider {
 
     // this.rangeEl.value = this.resultPer
 
-    this.resultEl.dataset.width = this.resultPer + this.unit
+    this.resultEl.dataset.width = this.resultPer
+
+    this.el.dataset.start = this.setPercent(this.start)
+    this.el.dataset.end = this.setPercent(this.end)
+    
     
 
     
@@ -90,11 +97,11 @@ class Slider {
     
     
 
-    if (this.type === 'range') {
+    if (!this.noHandle && this.type === 'range') {
       // this.handleMin.dataset.width = this.setPercent(this.start) + this.unit
       this.handleMin.style.left = this.start + 'px'
     }
-    if (this.type !== 'bar') {
+    if (!this.noHandle) {
       // this.handleMax.dataset.width = this.setPercent(this.end) + this.unit
       this.handleMax.style.left = this.end + 'px'
     }

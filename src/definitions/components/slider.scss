@@ -12,6 +12,7 @@ $baseSliderBgHover: var(--hover-suf);
 $sliderHandleSize: 1em;
 
 .#{$ns}-slider {
+  --unit: attr(data-unit, '');
   display: block;
   width: 100%;
   height: $baseSliderHeight;
@@ -80,93 +81,38 @@ $sliderHandleSize: 1em;
     // }
     &.min {z-index: 1;}
     &.max {z-index: 2;}
-    &[data-width] {
-      left: attr(data-width %, 100%);
-      // &:hover,
-      &.tooltip:hover {
-        &:before {
-          content: attr(data-width, 100%);
-          position: absolute;
-          background-color: $primary;
-          font-size: 0.8em;
-          color: $white;
-          border-radius: 4px;
-          padding: 4px 8px;
-          margin-bottom: 10px;
-          bottom: 100%;
-          left: 50%;
-          transform: translate(-50%, 0);
-        }
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: 100%;
-          left: 50%;
-          margin-bottom: 6px;
-          transform: translate(-50%, 0);
-          border-top: 6px solid $primary;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-        }
-      }
-      &.show-result {
-        &:before {
-          content: attr(data-width, 100%);
-          position: absolute;
-          font-size: 0.8em;
-          color: $primary;
-          border-radius: 4px;
-          padding: 4px 8px;
-          margin-top: 10px;
-          top: 100%;
-          left: 50%;
-          transform: translate(-50%, 0);
-        }
-        &:after {
-          content: '';
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          margin-top: 6px;
-          transform: translate(-50%, 0);
-          border-bottom: 6px solid $primary;
-          border-left: 6px solid transparent;
-          border-right: 6px solid transparent;
-        }
-      }
-    }
-    .tooltip {
-      display: none;
-      padding: 4px 8px;
-      position: absolute;
-      min-width: max-content;
-      bottom: 100%;
-      left: 50%;
-      z-index: 9999;
-      margin-bottom: 10px;
-      border-radius: 4px;
-      background-color: #505050;
-      color: #fff;
-      font-size: 0.8em;
-      transform: translateX(-50%);
-      &:before {
-        content: '';
-        position: absolute;
-        margin-top: -1px;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        border-top: 6px solid #505050;
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-      }
-    }
+    // &[data-width] {
+    //   left: attr(data-width %, 100%);
+    // }
+    // .tooltip {
+    //   display: none;
+    //   padding: 4px 8px;
+    //   position: absolute;
+    //   min-width: max-content;
+    //   bottom: 100%;
+    //   left: 50%;
+    //   z-index: 9999;
+    //   margin-bottom: 10px;
+    //   border-radius: 4px;
+    //   background-color: #505050;
+    //   color: #fff;
+    //   font-size: 0.8em;
+    //   transform: translateX(-50%);
+    //   &:before {
+    //     content: '';
+    //     position: absolute;
+    //     margin-top: -1px;
+    //     top: 100%;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     border-top: 6px solid #505050;
+    //     border-left: 6px solid transparent;
+    //     border-right: 6px solid transparent;
+    //   }
+    // }
     &:hover {
       transform: translate(-50%, -50%) scale(1.05);
       box-shadow: 0 0 0 2px rgba($primary, 1), 0 0 0 5px rgba($primary, 0.16);
-      .tooltip {
-        display: block;
-      }
     }
     &:active {
       cursor: grabbing;
@@ -247,6 +193,95 @@ $sliderHandleSize: 1em;
   &:hover {
     .result-slider {
       opacity: 1;
+    }
+  }
+  &[data-start] {
+    --start: attr(data-start %, '100%');
+    --start-label: attr(data-start);
+    
+  }
+  &[data-end] {
+    --end: attr(data-end %, '100%');
+    --end-label: attr(data-end);
+  }
+  .result-slider {
+    left: var(--start);
+    width: calc(var(--end) - var(--start));
+  }
+  .control-btn {
+    left: var(--end);
+    .min {
+      left: var(--start);
+    }
+  }
+  &.tooltip {
+    > .control-btn:hover {
+      &::before {
+        content: var(--end-label)+var(--unit);
+        position: absolute;
+        background-color: $primary;
+        font-size: 0.8em;
+        color: $white;
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin-bottom: 10px;
+        bottom: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-bottom: 6px;
+        transform: translate(-50%, 0);
+        border-top: 6px solid $primary;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+      }
+      &.min {
+        &:before {
+          content: var(--start-label)+var(--unit);
+        }
+      }
+    }
+  }
+  &.show-result:not(.tooltip) {
+    > .control-btn {
+      &:before {
+        content: var(--end-label)+var(--unit);
+        position: absolute;
+        font-size: 0.8em;
+        color: $primary;
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin-top: 10px;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-top: 6px;
+        transform: translate(-50%, 0);
+        border-bottom: 6px solid $primary;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+      }
+      &.min {
+        &:before {
+          content: var(--start-label)+var(--unit);
+        }
+      }
+    }
+  }
+  &.no-handle {
+    .control-btn {
+      display: none;
     }
   }
   
