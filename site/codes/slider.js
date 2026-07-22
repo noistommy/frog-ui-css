@@ -1,5 +1,5 @@
 const base = `
-<!-- data- 속정은 script 적용 없이 css를 이용해 값을 표시 할때 사용 -->
+<!-- data- 속성은 script 적용 없이 css를 이용해 값을 표시 할때 사용 -->
 <div class="ga-slider" data-end="50">
   <input type="range" hidden /> 
   <div class="result-slider"></div>
