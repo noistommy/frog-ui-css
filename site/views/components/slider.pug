@@ -12,6 +12,18 @@ block contents
                 h1= title
                 .section-desc 
                     p !{cont("ELEMENTS_SLIDER_SUB_TITLE")}
+            //- .section-contents
+                h4.contents-title Test
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider
+                            input(type="range", hidden)
+                            .result-slider
+                            .control-btn
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
@@ -24,7 +36,7 @@ block contents
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.base}
-            .section-contents
+            //- .section-contents
                 h4.contents-title BEUI style only
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
@@ -67,6 +79,7 @@ block contents
                             .control-btn.max
                     .footer 
                         pre.code-wrapper
+
                             code.language-markup 
                                 | #{codes.noHandle}
             .section-contents

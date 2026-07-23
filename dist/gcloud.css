@@ -8691,6 +8691,12 @@ table.ga-table .ga-button {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
+.ga-slider.clipper .result-slider {
+  width: 100%;
+  height: 100%;
+  background: var(--ga-deepblue-color);
+  background: linear-gradient(90deg, var(--ga-deepblue-color) 0%, var(--ga-green-color) 50%, var(--ga-yellow-color) 100%);
+}
 
 .ga-slider.red .result-slider {
   background-color: #de5c5c;

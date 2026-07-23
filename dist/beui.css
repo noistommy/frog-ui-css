@@ -8525,6 +8525,12 @@ table.be-table .be-button {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
+.be-slider.clipper .result-slider {
+  width: 100%;
+  height: 100%;
+  background: var(--ga-deepblue-color);
+  background: linear-gradient(90deg, var(--ga-deepblue-color) 0%, var(--ga-green-color) 50%, var(--ga-yellow-color) 100%);
+}
 
 .be-slider.red .result-slider {
   background-color: #D75757;

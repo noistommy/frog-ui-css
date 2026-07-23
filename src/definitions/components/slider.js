@@ -6,7 +6,7 @@ class Slider {
     this.handleMax = this.el.querySelector('.control-btn.max')
     this.rangeEl = this.el.querySelector('input[type="range"]')
     this.resultEl = this.el.querySelector('.result-slider')
-    
+    this.resultElBg = this.el.querySelector('.result-slider-bg')
     // 전체 slider 길이(px)
     this.container = 0
     // 0 - start값 까지의 길이(px)
@@ -29,15 +29,19 @@ class Slider {
     this.unit = this.el.dataset.unit || ''
     this.range = false
 
-    if (!this.range) {
-      this.handleMax = this.el.querySelector('.control-btn')
-    }
 
     this.noHandle = this.el.classList.contains('no-handle')
     this.isTooltip = this.el.classList.contains('tooltip')
     this.range = this.el.classList.contains('range')
+    this.clipper = this.el.classList.contains('clipper')
+
+    if (!this.range) {
+      this.handleMax = this.el.querySelector('.control-btn')
+    }
 
     window.addEventListener('resize', () => this.init(this.setPercent(this.start), this.setPercent(this.end)))
+
+    // console.log(this.el.dataset.color[0])
   }
 
   init(start = 0, end = 0) {
@@ -101,10 +105,15 @@ class Slider {
 
     // this.rangeEl.value = this.resultPer
 
-    this.resultEl.dataset.width = this.resultPer
-    
-    this.resultEl.style.width = this.result + 'px'
-    this.resultEl.style.left = this.start + 'px'
+    if (this.clipper) {
+      this.resultEl.style.clipPath = `inset(0 ${100 - this.setPercent(this.end)}% 0 ${this.setPercent(this.start)}% )` 
+    } else {
+      this.resultEl.dataset.width = this.resultPer
+      
+      this.resultEl.style.width = this.result + 'px'
+      this.resultEl.style.left = this.start + 'px'
+    }
+
     
     if (!this.noHandle && this.range) {
       this.handleMin.style.left = this.start + 'px'
@@ -114,6 +123,7 @@ class Slider {
       this.handleMax.style.left = this.end + 'px'
       this.handleMax.dataset.width = this.setPercent(this.end)
     }
+
   }
 
 
