@@ -8494,10 +8494,11 @@ table.be-table .be-button {
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-top: 6px;
+  margin-top: -1px;
   transform: translate(-50%, 0);
-  border-bottom: 6px solid #5178af;
+  border-top: 6px solid #5178af;
   border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
 .be-slider .control-btn:hover .tooltip {
   display: block;

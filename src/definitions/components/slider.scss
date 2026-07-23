@@ -214,10 +214,11 @@ $sliderHandleSize: 1em;
         position: absolute;
         top: 100%;
         left: 50%;
-        margin-top: 6px;
+        margin-top: -1px;
         transform: translate(-50%, 0);
-        border-bottom: 6px solid $primary;
+        border-top: 6px solid $primary;
         border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
       }
     }
     &:hover {
