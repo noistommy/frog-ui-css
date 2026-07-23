@@ -133,29 +133,10 @@ $sliderHandleSize: 1em;
       opacity: 1;
     }
   }
-  &[data-start] {
-    --start: attr(data-start %, '100%');
-    --start-label: attr(data-start);
-    
-  }
-  &[data-end] {
-    --end: attr(data-end %, '100%');
-    --end-label: attr(data-end);
-  }
-  .result-slider {
-    left: var(--start);
-    width: calc(var(--end) - var(--start));
-  }
-  .control-btn {
-    left: var(--end);
-    .min {
-      left: var(--start);
-    }
-  }
   &.tooltip {
     > .control-btn:hover {
       &:before {
-        content: var(--end-label)+var(--unit);
+        content: attr(data-width)+var(--unit);
         position: absolute;
         background-color: $primary;
         font-size: 0.8em;
@@ -178,17 +159,12 @@ $sliderHandleSize: 1em;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
       }
-      &.min {
-        &:before {
-          content: var(--start-label)+var(--unit);
-        }
-      }
     }
   }
   &.show-result:not(.tooltip) {
     > .control-btn {
       &:before {
-        content: var(--end-label)+var(--unit);
+        content: attr(data-width)+var(--unit);
         position: absolute;
         font-size: 0.8em;
         color: $primary;
@@ -209,11 +185,6 @@ $sliderHandleSize: 1em;
         border-bottom: 6px solid $primary;
         border-left: 6px solid transparent;
         border-right: 6px solid transparent;
-      }
-      &.min {
-        &:before {
-          content: var(--start-label)+var(--unit);
-        }
       }
     }
   }
@@ -241,13 +212,12 @@ $sliderHandleSize: 1em;
       &:before {
         content: '';
         position: absolute;
-        margin-top: -1px;
         top: 100%;
         left: 50%;
-        transform: translateX(-50%);
-        border-top: 6px solid $primary;
+        margin-top: 6px;
+        transform: translate(-50%, 0);
+        border-bottom: 6px solid $primary;
         border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
       }
     }
     &:hover {
@@ -255,17 +225,21 @@ $sliderHandleSize: 1em;
         display: block;
       }
     }
-  }
-  .label-text {
     .current-label {
-      transform: translateX(-50%);
+      position: absolute;
+      font-size: 0.8em;
       color: $primary;
-      font-weight: 700;
-      top: 10px;
+      border-radius: 4px;
+      padding: 4px 8px;
+      margin-top: 10px;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      line-height: 1em;
       &:before {
         content: '';
         position: absolute;
-        top: 0;
+        bottom: 100%;
         left: 50%;
         transform: translateX(-50%);
         border-bottom: 6px solid $primary;

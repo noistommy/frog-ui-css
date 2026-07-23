@@ -1,13 +1,12 @@
 const base = `
-<!-- data- 속성은 script 적용 없이 css를 이용해 값을 표시 할때 사용 -->
-<div class="ga-slider" data-end="50">
+<div class="ga-slider" >
   <input type="range" hidden /> 
   <div class="result-slider"></div>
   <div class="control-btn"></div>
 </div>
 `
 const range = `
-<div class="ga-slider" data-start="0" data-end="50">
+<div class="ga-slider range">
   <input name="start" type="range" hidden /> 
   <input name="end" type="range" hidden /> 
   <div class="result-slider"></div>
@@ -17,7 +16,7 @@ const range = `
 `
 
 const noHandle = `
-<div class="ga-slider no-handle" data-start="0" data-end="50">
+<div class="ga-slider no-handle">
   <input name="start" type="range" hidden /> 
   <input name="end" type="range" hidden />
   <div class="result-slider"></div>
@@ -45,7 +44,7 @@ const labels = `
 `
 
 const tooltip = `
-<div class="ga-slider tooltip" data-start="0" data-end="50">
+<div class="ga-slider tooltip">
   <input type="range" hidden /> 
   <div class="result-slider"></div>
   <div class="control-btn min"></div>
@@ -54,7 +53,7 @@ const tooltip = `
 `
 
 const result = `
-<div class="ga-slider show-result" data-start="0" data-end="50">
+<div class="ga-slider show-result">
   <input type="range" hidden /> 
   <div class="result-slider"></div>
   <div class="control-btn"></div>

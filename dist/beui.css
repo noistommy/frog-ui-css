@@ -8423,26 +8423,8 @@ table.be-table .be-button {
 .be-slider:hover .result-slider {
   opacity: 1;
 }
-.be-slider[data-start] {
-  --start: attr(data-start %, "100%");
-  --start-label: attr(data-start);
-}
-.be-slider[data-end] {
-  --end: attr(data-end %, "100%");
-  --end-label: attr(data-end);
-}
-.be-slider .result-slider {
-  left: var(--start);
-  width: calc(var(--end) - var(--start));
-}
-.be-slider .control-btn {
-  left: var(--end);
-}
-.be-slider .control-btn .min {
-  left: var(--start);
-}
 .be-slider.tooltip > .control-btn:hover:before {
-  content: var(--end-label)var(--unit);
+  content: attr(data-width)var(--unit);
   position: absolute;
   background-color: #5178af;
   font-size: 0.8em;
@@ -8465,11 +8447,8 @@ table.be-table .be-button {
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
 }
-.be-slider.tooltip > .control-btn:hover.min:before {
-  content: var(--start-label)var(--unit);
-}
 .be-slider.show-result:not(.tooltip) > .control-btn:before {
-  content: var(--end-label)var(--unit);
+  content: attr(data-width)var(--unit);
   position: absolute;
   font-size: 0.8em;
   color: #5178af;
@@ -8490,9 +8469,6 @@ table.be-table .be-button {
   border-bottom: 6px solid #5178af;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-}
-.be-slider.show-result:not(.tooltip) > .control-btn.min:before {
-  content: var(--start-label)var(--unit);
 }
 .be-slider.no-handle .control-btn {
   display: none;
@@ -8516,27 +8492,32 @@ table.be-table .be-button {
 .be-slider .control-btn .tooltip:before {
   content: "";
   position: absolute;
-  margin-top: -1px;
   top: 100%;
   left: 50%;
-  transform: translateX(-50%);
-  border-top: 6px solid #5178af;
+  margin-top: 6px;
+  transform: translate(-50%, 0);
+  border-bottom: 6px solid #5178af;
   border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
 }
 .be-slider .control-btn:hover .tooltip {
   display: block;
 }
-.be-slider .label-text .current-label {
-  transform: translateX(-50%);
+.be-slider .control-btn .current-label {
+  position: absolute;
+  font-size: 0.8em;
   color: #5178af;
-  font-weight: 700;
-  top: 10px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-top: 10px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1em;
 }
-.be-slider .label-text .current-label:before {
+.be-slider .control-btn .current-label:before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
   border-bottom: 6px solid #5178af;

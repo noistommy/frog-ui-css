@@ -16,7 +16,7 @@ block contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider(data-end="80")
+                        .ga-slider
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -38,8 +38,7 @@ block contents
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                            .label-text 
-                                .current-label(style="left: 195px") 50
+                                .current-label 50
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
@@ -48,7 +47,7 @@ block contents
                 h4.contents-title Range
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider(data-type='range' data-start="20", data-end="50")
+                        .ga-slider.range
                             input(type="range", hidden)
                             .result-slider
                             .control-btn.max
@@ -61,9 +60,11 @@ block contents
                 h4.contents-title No handle
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider(data-type="range" data-start="20", data-end="50").no-handle
+                        .ga-slider.range.no-handle
                             input(type="range", hidden)
                             .result-slider
+                            .control-btn.min
+                            .control-btn.max
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
@@ -99,7 +100,7 @@ block contents
                 h4.contents-title Show Tooltip
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.tooltip(data-start="0", data-end="50")
+                        .ga-slider.tooltip
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -114,7 +115,7 @@ block contents
                 h4.contents-title Show Result
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.show-result(data-start="0", data-end="50")
+                        .ga-slider.show-result
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -129,7 +130,7 @@ block contents
                 h4.contents-title Unit Text
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider(data-unit="%", data-start="0", data-end="50").show-result
+                        .ga-slider(data-unit="%").show-result
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
