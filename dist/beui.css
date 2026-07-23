@@ -8553,10 +8553,10 @@ table.be-table .be-button {
 .be-slider.red .control-btn .tooltip:before {
   border-top-color: #D75757;
 }
-.be-slider.red .label-text .current-label {
+.be-slider.red .control-btn .current-label {
   color: #D75757;
 }
-.be-slider.red .label-text .current-label:before {
+.be-slider.red .control-btn .current-label:before {
   border-bottom-color: #D75757;
 }
 
@@ -8587,10 +8587,10 @@ table.be-table .be-button {
 .be-slider.orange .control-btn .tooltip:before {
   border-top-color: #EE9033;
 }
-.be-slider.orange .label-text .current-label {
+.be-slider.orange .control-btn .current-label {
   color: #EE9033;
 }
-.be-slider.orange .label-text .current-label:before {
+.be-slider.orange .control-btn .current-label:before {
   border-bottom-color: #EE9033;
 }
 
@@ -8621,10 +8621,10 @@ table.be-table .be-button {
 .be-slider.yellow .control-btn .tooltip:before {
   border-top-color: #F8B825;
 }
-.be-slider.yellow .label-text .current-label {
+.be-slider.yellow .control-btn .current-label {
   color: #F8B825;
 }
-.be-slider.yellow .label-text .current-label:before {
+.be-slider.yellow .control-btn .current-label:before {
   border-bottom-color: #F8B825;
 }
 
@@ -8655,10 +8655,10 @@ table.be-table .be-button {
 .be-slider.lightgreen .control-btn .tooltip:before {
   border-top-color: #B3BC40;
 }
-.be-slider.lightgreen .label-text .current-label {
+.be-slider.lightgreen .control-btn .current-label {
   color: #B3BC40;
 }
-.be-slider.lightgreen .label-text .current-label:before {
+.be-slider.lightgreen .control-btn .current-label:before {
   border-bottom-color: #B3BC40;
 }
 
@@ -8689,10 +8689,10 @@ table.be-table .be-button {
 .be-slider.green .control-btn .tooltip:before {
   border-top-color: #61A475;
 }
-.be-slider.green .label-text .current-label {
+.be-slider.green .control-btn .current-label {
   color: #61A475;
 }
-.be-slider.green .label-text .current-label:before {
+.be-slider.green .control-btn .current-label:before {
   border-bottom-color: #61A475;
 }
 
@@ -8723,10 +8723,10 @@ table.be-table .be-button {
 .be-slider.lightblue .control-btn .tooltip:before {
   border-top-color: #8CC5CE;
 }
-.be-slider.lightblue .label-text .current-label {
+.be-slider.lightblue .control-btn .current-label {
   color: #8CC5CE;
 }
-.be-slider.lightblue .label-text .current-label:before {
+.be-slider.lightblue .control-btn .current-label:before {
   border-bottom-color: #8CC5CE;
 }
 
@@ -8757,10 +8757,10 @@ table.be-table .be-button {
 .be-slider.blue .control-btn .tooltip:before {
   border-top-color: #70A3CA;
 }
-.be-slider.blue .label-text .current-label {
+.be-slider.blue .control-btn .current-label {
   color: #70A3CA;
 }
-.be-slider.blue .label-text .current-label:before {
+.be-slider.blue .control-btn .current-label:before {
   border-bottom-color: #70A3CA;
 }
 
@@ -8791,10 +8791,10 @@ table.be-table .be-button {
 .be-slider.deepblue .control-btn .tooltip:before {
   border-top-color: #5178AF;
 }
-.be-slider.deepblue .label-text .current-label {
+.be-slider.deepblue .control-btn .current-label {
   color: #5178AF;
 }
-.be-slider.deepblue .label-text .current-label:before {
+.be-slider.deepblue .control-btn .current-label:before {
   border-bottom-color: #5178AF;
 }
 
@@ -8825,10 +8825,10 @@ table.be-table .be-button {
 .be-slider.deeppurple .control-btn .tooltip:before {
   border-top-color: #9180B4;
 }
-.be-slider.deeppurple .label-text .current-label {
+.be-slider.deeppurple .control-btn .current-label {
   color: #9180B4;
 }
-.be-slider.deeppurple .label-text .current-label:before {
+.be-slider.deeppurple .control-btn .current-label:before {
   border-bottom-color: #9180B4;
 }
 
@@ -8859,10 +8859,10 @@ table.be-table .be-button {
 .be-slider.purple .control-btn .tooltip:before {
   border-top-color: #AF77C0;
 }
-.be-slider.purple .label-text .current-label {
+.be-slider.purple .control-btn .current-label {
   color: #AF77C0;
 }
-.be-slider.purple .label-text .current-label:before {
+.be-slider.purple .control-btn .current-label:before {
   border-bottom-color: #AF77C0;
 }
 
@@ -8893,10 +8893,10 @@ table.be-table .be-button {
 .be-slider.brown .control-btn .tooltip:before {
   border-top-color: #A86A82;
 }
-.be-slider.brown .label-text .current-label {
+.be-slider.brown .control-btn .current-label {
   color: #A86A82;
 }
-.be-slider.brown .label-text .current-label:before {
+.be-slider.brown .control-btn .current-label:before {
   border-bottom-color: #A86A82;
 }
 
@@ -8927,10 +8927,10 @@ table.be-table .be-button {
 .be-slider.gray .control-btn .tooltip:before {
   border-top-color: #8B8B8B;
 }
-.be-slider.gray .label-text .current-label {
+.be-slider.gray .control-btn .current-label {
   color: #8B8B8B;
 }
-.be-slider.gray .label-text .current-label:before {
+.be-slider.gray .control-btn .current-label:before {
   border-bottom-color: #8B8B8B;
 }
 
