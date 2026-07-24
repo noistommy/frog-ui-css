@@ -71,7 +71,10 @@ class Slider {
       window.addEventListener('touchmove', e => this.handleMove(e))
       window.addEventListener('touchend', e => this.handleMove(e))
       window.addEventListener('touchleave', e => this.handleMove(e))
-    } else {
+    } else if (target.closest('.break-point')) {
+      console.log(target.dataset.step)
+      this.changeValue (this.setPx(target.dataset.step) + this.initX)
+    }  else {
       this.changeValue (pageValue)
     }
   }
@@ -104,12 +107,10 @@ class Slider {
     this.resultPer = this.setPercent(this.result)
 
     // this.rangeEl.value = this.resultPer
-
+    this.resultEl.dataset.width = this.resultPer
     if (this.clipper) {
       this.resultEl.style.clipPath = `inset(0 ${100 - this.setPercent(this.end)}% 0 ${this.setPercent(this.start)}% )` 
     } else {
-      this.resultEl.dataset.width = this.resultPer
-      
       this.resultEl.style.width = this.result + 'px'
       this.resultEl.style.left = this.start + 'px'
     }

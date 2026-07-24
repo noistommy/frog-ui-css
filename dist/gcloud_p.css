@@ -8507,6 +8507,7 @@ table.ga-table .ga-button {
   opacity: 0.8;
 }
 .ga-slider .control-btn {
+  z-index: 100;
   cursor: grab;
   outline: 0;
   position: absolute;
@@ -8541,7 +8542,18 @@ table.ga-table .ga-button {
   width: 8px;
   height: 100%;
   top: 0;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.6);
+  transition: transform 150ms ease-in;
+  border-radius: 50%;
+}
+.ga-slider .break-point:hover {
+  transform: translateX(-50%) scale(0.95);
+}
+.ga-slider .break-point:first-child {
+  margin-left: 4px;
+}
+.ga-slider .break-point:last-child {
+  margin-left: -4px;
 }
 .ga-slider .slider-title {
   bottom: 100%;
@@ -8695,7 +8707,7 @@ table.ga-table .ga-button {
   width: 100%;
   height: 100%;
   background: var(--ga-deepblue-color);
-  background: linear-gradient(90deg, var(--ga-deepblue-color) 0%, var(--ga-green-color) 50%, var(--ga-yellow-color) 100%);
+  background: linear-gradient(90deg, var(--ga-deepblue-color), var(--ga-green-color), var(--ga-orange-color), var(--ga-red-color));
 }
 
 .ga-slider.red .result-slider {

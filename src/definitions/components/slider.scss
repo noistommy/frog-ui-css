@@ -51,6 +51,7 @@ $sliderHandleSize: 1em;
     opacity: 0.8;
   }
   .control-btn {
+    z-index: 100;
     cursor: grab;
     outline: 0;
     position: absolute;
@@ -81,7 +82,18 @@ $sliderHandleSize: 1em;
     width: 8px;
     height: 100%;
     top: 0;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.6);
+    transition: transform 150ms ease-in;
+    border-radius: 50%;
+    &:hover {
+      transform: translateX(-50%) scale(.95);
+    }
+    &:first-child {
+      margin-left: 4px;
+    }
+    &:last-child {
+      margin-left: -4px;
+    }
   }
   .slider-title {
     // position: absolute;
@@ -254,7 +266,7 @@ $sliderHandleSize: 1em;
     height: 100%;
     background: var(--ga-deepblue-color);
     // background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-    background: linear-gradient(90deg, var(--ga-deepblue-color) 0%, var(--ga-green-color) 50%, var(--ga-yellow-color) 100%);
+    background: linear-gradient(90deg, var(--ga-deepblue-color), var(--ga-green-color), var(--ga-orange-color), var(--ga-red-color));
   }
 }
 

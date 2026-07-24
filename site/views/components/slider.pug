@@ -12,18 +12,6 @@ block contents
                 h1= title
                 .section-desc 
                     p !{cont("ELEMENTS_SLIDER_SUB_TITLE")}
-            //- .section-contents
-                h4.contents-title Test
-                .ga-segment.float.round-m.attached
-                    .contents-wrapper.py-10
-                        .ga-slider
-                            input(type="range", hidden)
-                            .result-slider
-                            .control-btn
-                    .footer 
-                        pre.code-wrapper
-                            code.language-markup 
-                                | #{codes.base}
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
@@ -82,6 +70,19 @@ block contents
 
                             code.language-markup 
                                 | #{codes.noHandle}
+            .section-contents
+                h4.contents-title Clipper
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider.range.clipper
+                            input(type="range", hidden)
+                            .result-slider
+                            .control-btn.min
+                            .control-btn.max
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
             .section-contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
@@ -150,6 +151,22 @@ block contents
                             .label-text 
                                 .start-label 0%
                                 .end-label 100%
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.unit}
+            .section-contents
+                h4.contents-title Steps
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper.py-10
+                        .ga-slider(data-unit="%").show-result
+                            input(type="range", hidden)
+                            .result-slider
+                            .control-btn
+                            .break-points
+                                - for (var i = 0; i <= 10; i++)
+                                    .break-point(style=`left: ${i * 10}%`, data-step=`${i * 10}`)
+
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
