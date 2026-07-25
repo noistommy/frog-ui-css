@@ -181,18 +181,18 @@ $surface2: #EFF4FC;
 $surface3: #DAE8F8;
 
 
-$redColor: #D75757;
-$orangeColor: #EE9033;
-$yellowColor: #F8B825;
-$lightgreenColor: #B3BC40;
-$greenColor: #61A475;
-$lightblueColor: #8CC5CE;
-$blueColor: #70A3CA;
-$deepblueColor: #5178AF;
-$deeppurpleColor: #9180B4;
-$purpleColor: #AF77C0;
-$brownColor: #A86A82;
-$grayColor: #8B8B8B;
+$redColor: #B35454;        // was #D75757
+$orangeColor: #C07E3C;     // was #EE9033
+$yellowColor: #C59934;     // was #F8B825
+$lightgreenColor: #8C914D; // was #B3BC40
+$greenColor: #60866B;      // was #61A475
+$lightblueColor: #7BA9B0;  // was #8CC5CE
+$blueColor: #678DAA;       // was #70A3CA
+$deepblueColor: #576C8A;   // was #5178AF
+$deeppurpleColor: #7F7399; // was #9180B4
+$purpleColor: #966CA2;     // was #AF77C0
+$brownColor: #8C6474;      // was #A86A82
+$grayColor: #7A7A7A;       // was #8B8B8B
 
 $brandColors: (
     'primary': ($primary, $darkPrimary, $primaryText, $lightPrimary),
@@ -226,18 +226,18 @@ $stateColors: (
 //     'gray': #8b8b8b,
 // );
 $colors: (
-    'red': map.get($red-palette, 500),
-    'orange': map.get($orange-palette, 400),
-    'yellow': map.get($yellow-palette, 200),
-    'lightgreen': map.get($lightgreen-palette, 200),
-    'green': map.get($green-palette, 400),
-    'lightblue': map.get($lightblue-palette, 300),
-    'blue': map.get($blue-palette, 400),
-    'deepblue': map.get($deepblue-palette, 500),
-    'deeppurple': map.get($deeppurple-palette, 500),
-    'purple': map.get($purple-palette, 400),
-    'brown': map.get($brown-palette, 500),
-    'gray': map.get($gray-palette, 500),
+    'red': map.get($red-palette, 600),
+    'orange': map.get($orange-palette, 500),
+    'yellow': map.get($yellow-palette, 300),
+    'lightgreen': map.get($lightgreen-palette, 300),
+    'green': map.get($green-palette, 500),
+    'lightblue': map.get($lightblue-palette, 400),
+    'blue': map.get($blue-palette, 500),
+    'deepblue': map.get($deepblue-palette, 600),
+    'deeppurple': map.get($deeppurple-palette, 600),
+    'purple': map.get($purple-palette, 500),
+    'brown': map.get($brown-palette, 600),
+    'gray': map.get($gray-palette, 600),
 );
 
 $light-level: 50;

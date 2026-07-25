@@ -8061,7 +8061,7 @@ table.be-table .be-button {
 }
 
 .be-card {
-  --card-width: 300px;
+  --card-width: auto;
   position: relative;
   max-width: 100%;
   width: var(--card-width);
@@ -8070,6 +8070,7 @@ table.be-table .be-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
 }
 .be-card.border {
   border: 1px solid var(--brd);
@@ -8102,14 +8103,21 @@ table.be-table .be-button {
   padding: 16px 20px;
 }
 .be-card.media > .image {
-  width: 100%;
+  flex-grow: 1;
   padding: 0;
 }
 .be-card.media > .image img {
+  display: block;
   width: 100%;
 }
 .be-card.media.vertical {
   flex-direction: row;
+}
+.be-card.media.vertical > .image {
+  height: 100%;
+}
+.be-card.media.vertical > .image img {
+  height: 100%;
 }
 .be-card.attached > .header {
   border-top-left-radius: inherit;

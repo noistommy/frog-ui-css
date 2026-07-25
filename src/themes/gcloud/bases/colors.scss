@@ -1,170 +1,219 @@
 @use 'sass:map';
+// Color Palette SCSS Variables
+// Generated on 2026. 7. 25. 오후 1:47:13
+
+// Primary
+$primary-palette: (
+  50: #f9f9ff,
+  100: #ebf1ff,
+  200: #d4e3ff,
+  300: #a6c8ff,
+  400: #86ade7,
+  500: #6c92cb,
+  600: #5178af,
+  700: #375f95,
+  800: #1b477b,
+  900: #00315f
+);
+
+// Secondary
+$secondary-palette: (
+  50: #faf9fe,
+  100: #f1f0f5,
+  200: #e3e2e7,
+  300: #c6c6cb,
+  400: #ababaf,
+  500: #909095,
+  600: #76777b,
+  700: #5d5e62,
+  800: #46464b,
+  900: #2f3034
+);
+
 // Red
 $red-palette: (
-  50: #ffe9e7,
-  100: #ffd2d0,
-  200: #ffaba7,
-  300: #ff8986,
-  400: #f9706f,
-  500: #de5c5c,
-  600: #c34849,
-  700: #af3a3c,
-  800: #9c2b2f,
-  900: #7f151d,
+  50: #fff8f7,
+  100: #ffedeb,
+  200: #ffdad8,
+  300: #ffb3b1,
+  400: #fa8c8a,
+  500: #da7271,
+  600: #ba5a59,
+  700: #9b4242,
+  800: #7d2b2d,
+  900: #5f1419
 );
 
 // Orange
 $orange-palette: (
-  50: #ffeadc,
-  100: #ffd5b4,
-  200: #ffb06a,
-  300: #f49437,
-  400: #e08528,
-  500: #c77111,
-  600: #ac5e00,
-  700: #965200,
-  800: #814600,
-  900: #633400,
+  50: #fff8f5,
+  100: #ffeee1,
+  200: #ffdcc0,
+  300: #ffb875,
+  400: #e39c57,
+  500: #c58240,
+  600: #a76929,
+  700: #895111,
+  800: #6b3b00,
+  900: #4b2800
 );
 
 // Yellow
 $yellow-palette: (
-  50: #ffebcd,
-  100: #ffd790,
-  200: #f6b623,
-  300: #dda100,
-  400: #c99200,
-  500: #ae7e00,
-  600: #946b00,
-  700: #815d00,
-  800: #6f4f00,
-  900: #553b00,
+  50: #fff8f2,
+  100: #ffefd5,
+  200: #ffdea0,
+  300: #f0c057,
+  400: #d2a43f,
+  500: #b48a26,
+  600: #987106,
+  700: #795900,
+  800: #5c4300,
+  900: #402d00
 );
 
 // Lightgreen
 $lightgreen-palette: (
-  50: #edf673,
-  100: #dbe564,
-  200: #bfc94b,
-  300: #a9b237,
-  400: #99a227,
-  500: #848d0d,
-  600: #707800,
-  700: #626800,
-  800: #535900,
-  900: #3f4300,
+  50: #faffaf,
+  100: #f1f6a7,
+  200: #e3e89a,
+  300: #c7cc81,
+  400: #abb069,
+  500: #909551,
+  600: #767b3a,
+  700: #5e6224,
+  800: #464a0d,
+  900: #2f3300
 );
 
 // Green
 $green-palette: (
-  50: #b7fec8,
-  100: #a7edb8,
-  200: #8bd09e,
-  300: #76ba89,
-  400: #66a97a,
-  500: #519466,
-  600: #3d7f53,
-  700: #2d7046,
-  800: #1c6138,
-  900: #004a26,
+  50: #e9ffec,
+  100: #d1fbda,
+  200: #c3edcd,
+  300: #a8d0b1,
+  400: #8db597,
+  500: #739a7e,
+  600: #5a8065,
+  700: #41664d,
+  800: #2a4e37,
+  900: #123722
 );
 
 // Lightblue
 $lightblue-palette: (
-  50: #c4f7ff,
-  100: #ade7f0,
-  200: #91cad3,
-  300: #7cb4bd,
-  400: #6ca4ad,
-  500: #578f98,
-  600: #417a83,
-  700: #316b74,
-  800: #205d65,
-  900: #00474f,
+  50: #ecfcff,
+  100: #cef8ff,
+  200: #bbebf2,
+  300: #a0cfd6,
+  400: #85b3ba,
+  500: #6b989f,
+  600: #517e85,
+  700: #37656c,
+  800: #1d4d54,
+  900: #00363c
 );
 
 // Blue
 $blue-palette: (
-  50: #e0f0ff,
-  100: #bee1ff,
-  200: #94c7ef,
-  300: #7eb1d8,
-  400: #6ea1c8,
-  500: #588cb1,
-  600: #43779c,
-  700: #32688c,
-  800: #21597d,
-  900: #004465,
+  50: #f6faff,
+  100: #e6f2ff,
+  200: #c9e6ff,
+  300: #a4cbea,
+  400: #89b0ce,
+  500: #6f95b2,
+  600: #557b98,
+  700: #3c627e,
+  800: #224a65,
+  900: #03344d
 );
 
 // Deepblue
 $deepblue-palette: (
-  50: #e7eeff,
-  100: #cbdeff,
-  200: #9cc3ff,
-  300: #86ade7,
-  400: #769dd6,
-  500: #6188c0,
-  600: #4c73aa,
-  700: #3c649a,
-  800: #2c568b,
-  900: #104074,
+  50: #f8f9ff,
+  100: #ebf1ff,
+  200: #d3e3ff,
+  300: #b2c8ea,
+  400: #97adcd,
+  500: #7d92b2,
+  600: #637897,
+  700: #4b607d,
+  800: #334864,
+  900: #1b314c
 );
 
 // Deeppurple
 $deeppurple-palette: (
-  50: #f4eaff,
-  100: #e5d6ff,
-  200: #cbb8f0,
-  300: #b5a2d9,
-  400: #a493c8,
-  500: #8f7eb2,
-  600: #7a6a9c,
-  700: #6b5b8c,
-  800: #5c4d7d,
-  900: #473866,
+  50: #fef7ff,
+  100: #f6edff,
+  200: #e9ddff,
+  300: #cec0ea,
+  400: #b2a5ce,
+  500: #978ab2,
+  600: #7d7197,
+  700: #64597d,
+  800: #4c4164,
+  900: #352b4c
 );
 
 // Purple
 $purple-palette: (
-  50: #fee7ff,
-  100: #f7d0ff,
-  200: #e8abf9,
-  300: #d196e2,
-  400: #bf86d0,
-  500: #a972ba,
-  600: #935da4,
-  700: #834f94,
-  800: #734085,
-  900: #5c2a6e,
+  50: #fff7fb,
+  100: #ffebff,
+  200: #f9d8ff,
+  300: #e6b6f1,
+  400: #c99bd5,
+  500: #ad81b9,
+  600: #92689e,
+  700: #775083,
+  800: #5e386a,
+  900: #452152
 );
 
 // Brown
 $brown-palette: (
-  50: #ffe8ee,
-  100: #ffd1e0,
-  200: #f4adc7,
-  300: #dc98b1,
-  400: #ca88a1,
-  500: #b3748c,
-  600: #9c6078,
-  700: #8b5169,
-  800: #7b435a,
-  900: #632f45,
+  50: #fff8f8,
+  100: #ffecf1,
+  200: #ffd8e6,
+  300: #eabacb,
+  400: #cd9fb0,
+  500: #b08596,
+  600: #946c7c,
+  700: #7a5363,
+  800: #603c4b,
+  900: #462635
 );
 
 // Gray
 $gray-palette: (
-  50: #efeded,
-  100: #dddcdc,
-  200: #c1c1c1,
-  300: #ababab,
-  400: #9b9b9b,
-  500: #868686,
-  600: #727272,
-  700: #636363,
-  800: #545555,
-  900: #3f4040,
+  50: #fbf9f9,
+  100: #f2f0f0,
+  200: #e3e2e2,
+  300: #c7c6c6,
+  400: #acabab,
+  500: #919090,
+  600: #777777,
+  700: #5e5e5e,
+  800: #464747,
+  900: #303031
+);
+
+// All colors collection
+$colors-palettes: (
+  primary: $primary-palette,
+  secondary: $secondary-palette,
+  red: $red-palette,
+  orange: $orange-palette,
+  yellow: $yellow-palette,
+  lightgreen: $lightgreen-palette,
+  green: $green-palette,
+  lightblue: $lightblue-palette,
+  blue: $blue-palette,
+  deepblue: $deepblue-palette,
+  deeppurple: $deeppurple-palette,
+  purple: $purple-palette,
+  brown: $brown-palette,
+  gray: $gray-palette
 );
 
 // All colors collection
@@ -340,22 +389,22 @@ $gray-o: (
   900: #131313,
 );
 
-$color-palettes: (
-  'red': $red-o,
-  'orange': $orange-o,
-  'yellow': $yellow-o,
-  'lightgreen': $lightgreen-o,
-  'green': $green-o,
-  'lightblue': $lightblue-o,
-  'blue': $blue-o,
-  'deepblue': $deepblue-o,
-  'deeppurple': $deeppurple-o,
-  'purple': $purple-o,
-  'brown': $brown-o,
-  'gray': $gray-o,
-);
+// $color-palettes: (
+//   'red': $red-o,
+//   'orange': $orange-o,
+//   'yellow': $yellow-o,
+//   'lightgreen': $lightgreen-o,
+//   'green': $green-o,
+//   'lightblue': $lightblue-o,
+//   'blue': $blue-o,
+//   'deepblue': $deepblue-o,
+//   'deeppurple': $deeppurple-o,
+//   'purple': $purple-o,
+//   'brown': $brown-o,
+//   'gray': $gray-o,
+// );
 // 색상 접근 함수
-@function getUserColor($color-name, $shade: 400) {
+@function be-color($color-name, $shade: 400) {
   @if map.has-key($color-palettes, $color-name) {
     $palette: map.get($color-palettes, $color-name);
     @if map.has-key($palette, $shade) {
@@ -429,4 +478,3 @@ $color-palettes: (
   <div class="bg-red text-white">빨간 배경</div>
   <div class="bg-blue-200 text-deepblue-800">밝은 파란 배경, 어두운 글자</div>
 */
-

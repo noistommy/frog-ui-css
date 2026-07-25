@@ -8060,7 +8060,7 @@ table.ga-table .ga-button {
 }
 
 .ga-card {
-  --card-width: 300px;
+  --card-width: auto;
   position: relative;
   max-width: 100%;
   width: var(--card-width);
@@ -8069,6 +8069,7 @@ table.ga-table .ga-button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
 }
 .ga-card.border {
   border: 1px solid var(--brd);
@@ -8101,14 +8102,21 @@ table.ga-table .ga-button {
   padding: 16px 20px;
 }
 .ga-card.media > .image {
-  width: 100%;
+  flex-grow: 1;
   padding: 0;
 }
 .ga-card.media > .image img {
+  display: block;
   width: 100%;
 }
 .ga-card.media.vertical {
   flex-direction: row;
+}
+.ga-card.media.vertical > .image {
+  height: 100%;
+}
+.ga-card.media.vertical > .image img {
+  height: 100%;
 }
 .ga-card.attached > .header {
   border-top-left-radius: inherit;
