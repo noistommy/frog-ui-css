@@ -2,6 +2,7 @@ const runBtn = document.querySelector('.run-btn');
 const openBtn = document.querySelector('.open-btn');
 const clearBtn = document.querySelector('.clear-btn');
 const selectTheme = document.querySelector('.theme-select');
+
 const statusIcon = {
   success: 'xi-check-circle',
   info: 'xi-info',
@@ -135,7 +136,7 @@ function toastBoard () {
 
 const tBoard = toastBoard()
 
-openBtn.addEventListener('click', (e) => {
+openBtn && openBtn.addEventListener('click', (e) => {
   // if(e.target.nodeName !== 'BUTTON') return
   const type = e.target.textContent
   tBoard.addToast(type, 'This is Toast Testing.', {

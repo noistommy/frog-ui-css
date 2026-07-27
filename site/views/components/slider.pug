@@ -16,7 +16,7 @@ block contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider
+                        .ga-slider(fr-slider="end: 80;")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -47,7 +47,7 @@ block contents
                 h4.contents-title Range
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.range
+                        .ga-slider(fr-slider="range: true; start: 10; end: 60;")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn.max
@@ -60,7 +60,7 @@ block contents
                 h4.contents-title No handle
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.range.no-handle
+                        .ga-slider(fr-slider="range: true; no-handle: true; start: 10; end: 60")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn.min
@@ -74,7 +74,7 @@ block contents
                 h4.contents-title Clipper
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.range.clipper
+                        .ga-slider(fr-slider="clipper: true; range: true;")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn.min
@@ -87,7 +87,7 @@ block contents
                 h4.contents-title Disabled
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.disabled
+                        .ga-slider(fr-slider="end: 50; disabled: true;")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn.max
@@ -99,7 +99,7 @@ block contents
                 h4.contents-title Show Label
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider
+                        .ga-slider(fr-slider)
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -114,7 +114,7 @@ block contents
                 h4.contents-title Show Tooltip
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.tooltip
+                        .ga-slider(fr-slider="tooltip: true; end: 56;")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -129,7 +129,7 @@ block contents
                 h4.contents-title Show Result
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider.show-result
+                        .ga-slider.show-result(fr-slider="end: 45; showResult: true")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -144,7 +144,7 @@ block contents
                 h4.contents-title Unit Text
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider(data-unit="%").show-result
+                        .ga-slider(data-unit="%", fr-slider="end: 50").show-result
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -159,7 +159,7 @@ block contents
                 h4.contents-title Steps
                 .ga-segment.float.round-m.attached
                     .contents-wrapper.py-10
-                        .ga-slider(data-unit="%").show-result
+                        .ga-slider(data-unit="%", fr-slider="end: 50").show-result
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -176,17 +176,17 @@ block contents
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
                         h5 Thin
-                        .ga-slider.thin
+                        .ga-slider.thin(fr-slider="end: 50")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
                         h5 (Default)
-                        .ga-slider
+                        .ga-slider(fr-slider="end: 50")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
                         h5 Fat
-                        .ga-slider.fat
+                        .ga-slider.fat(fr-slider="end: 50")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -199,43 +199,43 @@ block contents
                 h4.contents-title Colors
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-slider.tooltip.red
+                        .ga-slider.tooltip.red(fr-slider="end: 10")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.orange
+                        .ga-slider.tooltip.orange(fr-slider="end: 20")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.yellow
+                        .ga-slider.tooltip.yellow(fr-slider="end: 30")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.green
+                        .ga-slider.tooltip.green(fr-slider="end: 40")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.blue
+                        .ga-slider.tooltip.blue(fr-slider="end: 50")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.deepblue
+                        .ga-slider.tooltip.deepblue(fr-slider="end: 60")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.purple
+                        .ga-slider.tooltip.purple(fr-slider="end: 70")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.lightblue
+                        .ga-slider.tooltip.lightblue(fr-slider="end: 80")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.lightgreen
+                        .ga-slider.tooltip.lightgreen(fr-slider="end: 90")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
-                        .ga-slider.tooltip.brown
+                        .ga-slider.tooltip.brown(fr-slider="end: 100")
                             input(type="range", hidden)
                             .result-slider
                             .control-btn
@@ -243,6 +243,6 @@ block contents
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.colors}
-block module 
+//- block module 
     script(src="/js/slider.js")
         

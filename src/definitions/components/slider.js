@@ -1,6 +1,17 @@
 class Slider {
-  constructor(root) {
+  #defaultOption = {
+    noHandle: false,
+    tooltip: false,
+    range: false,
+    clipper: false,
+    disabled: false,
+    unit: null,
+    start: 0,
+    end: 100
+  }
+  constructor(root, options = {}) {
     this.el = root
+    this.options = {...this.#defaultOption, ...options}
     this.handleEl = this.el.querySelectorAll('.control-btn')
     this.handleMin = this.el.querySelector('.control-btn.min')
     this.handleMax = this.el.querySelector('.control-btn.max')
@@ -32,7 +43,8 @@ class Slider {
 
     this.noHandle = this.el.classList.contains('no-handle')
     this.isTooltip = this.el.classList.contains('tooltip')
-    this.range = this.el.classList.contains('range')
+    this.showResult = this.el.classList.contains('show-result')
+    this.range = this.options.range
     this.clipper = this.el.classList.contains('clipper')
 
     if (!this.range) {
@@ -42,23 +54,39 @@ class Slider {
     window.addEventListener('resize', () => this.init(this.setPercent(this.start), this.setPercent(this.end)))
 
     // console.log(this.el.dataset.color[0])
+    this.init()
   }
 
-  init(start = 0, end = 0) {
+  init() {
     const sliderEl = this.el.getBoundingClientRect()
     this.container =  this.el.offsetWidth
     this.initX = sliderEl.left
     this.initW = this.resultEl.offsetWidth
     this.midX = this.initW / 2
 
-    this.start = this.range ? this.setPx(start) : 0
-    this.end = this.setPx(end)
+    this.start = this.range ? this.setPx(this.options.start) : 0
+    this.end = this.setPx(this.options.end)
 
     this.changeValue()
+    this.setClass()
 
     this.el.addEventListener('mousedown', (e) => this.handleDown(e))
     this.el.addEventListener('touchstart', (e) => this.handleDown(e))
 
+  }
+
+  setClass () {
+    const classes = [
+      this.options.noHandle && 'no-handle',
+      this.options.tooltip && 'tooltip',
+      this.options.showResult && 'show-result',
+      this.options.range && 'range',
+      this.options.clipper && 'clipper',
+      this.options.disabled && 'disabled'
+    ]
+    // console.log(classes.filter(t => t))
+    const claArr = classes.filter(t => t)
+    this.el.classList.add(...claArr)
   }
  
   handleDown ({target, pageX}) {
@@ -72,7 +100,6 @@ class Slider {
       window.addEventListener('touchend', e => this.handleMove(e))
       window.addEventListener('touchleave', e => this.handleMove(e))
     } else if (target.closest('.break-point')) {
-      console.log(target.dataset.step)
       this.changeValue (this.setPx(target.dataset.step) + this.initX)
     }  else {
       this.changeValue (pageValue)
@@ -158,13 +185,10 @@ class Slider {
 }
 
 (function () {
-  const sliders = document.querySelectorAll('.ga-slider')
+  const sliders = document.querySelectorAll('[fr-slider]')
   sliders.forEach(slider => {
-      const sl = new Slider(slider);
-      sl.init(10, 50)
-
+    const frAttr = parseOptions(slider.getAttribute('fr-slider'))
+    const sl = new Slider(slider, frAttr);
       // slider.addEventListener('click', () => console.log(sl.resultPercent))
   })
 })()
-
-

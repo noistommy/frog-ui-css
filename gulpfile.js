@@ -60,6 +60,8 @@ const buildThemeCss = (themeFile) => {
     .pipe(rename(`${themeFile}.css`))
     .pipe(minifyCSS())
     .pipe(dest('./site/public'))
+    .pipe(rename(`${themeFile}.min.css`))
+    .pipe(dest('./dist/css'))
 }
 
 // scss 빌드 (--file= 이름이 있으면 해당 엔트리만)
@@ -81,9 +83,24 @@ const buildAll = series(
 )
 
 // JS 빌드
+const buildJSCore = () => {
+  return src(['src/definitions/core/*.js'])
+    .pipe(concat('frog-core.js'))
+    .pipe(dest('./dist/js'))
+    .pipe(uglify())
+    .pipe(dest('./site/public/js'))
+}
+
+const buildJSModule = () => {
+  return src(['src/definitions/components/*.js', 'src/definitions/index.js'])
+    .pipe(concat('frog.js'))
+    .pipe(dest('./dist/js'))
+    .pipe(uglify())
+    .pipe(dest('./site/public/js'))
+}
+
 const buildJS = () => {
-  return src(['src/definitions/components/*.js'])
-    // .pipe(concat('frog_ui.js'))
+  return src(['src/assets/js/*.js'])
     .pipe(dest('./dist/js'))
     .pipe(uglify())
     .pipe(dest('./site/public/js'))
@@ -100,7 +117,7 @@ const assets = () => {
 const watcher = () => {
   watch(['src/themes/**/**/*.scss','src/definitions/**/**/*.scss'], build)
   watch(['src/themes/default/bases/variables.scss', 'src/themes/default/bases/reset.scss'], build)
-  watch('src/definitions/components/*.js', buildJS)
+  watch('src/definitions/components/*.js', buildJSModule)
 }
 
 // install 여부 확인 (테스트 중...)
@@ -130,6 +147,6 @@ module.exports.question = question;
 module.exports.clean = clean;
 module.exports.build = build;
 module.exports.buildAll = buildAll;
-module.exports.default = series(clean, parallel(build, buildJS, assets), watcher, () => {
+module.exports.default = series(clean, parallel(build, buildJS, buildJSCore, buildJSModule, assets), watcher, () => {
     log("Run gulp!!")
 });

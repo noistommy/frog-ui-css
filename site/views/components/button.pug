@@ -252,7 +252,7 @@ block contents
                 h4.contents-title Buttons
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-buttons 
+                        .ga-buttons
                             button.ga-button
                                 i.icon.left.xi-download
                                 | Copy Page 
@@ -263,29 +263,29 @@ block contents
                         button.ga-button.icon
                             i.xi-arrow-right
                     .contents-wrapper
-                        .ga-buttons
+                        .ga-buttons(fr-select)
                             button.ga-button.selected Play
                             button.ga-button Stop
                             button.ga-button Pause
                     .contents-wrapper
-                        .ga-buttons.round
-                            button.ga-button.icon
+                        .ga-buttons.round(fr-select="type: multiple;")
+                            button.ga-button.icon(data-value="backward")
+                                i.xi-backward
+                            button.ga-button.icon(data-value="play")
                                 i.xi-play
-                            button.ga-button.icon
+                            button.ga-button.icon(data-value="stop")
                                 i.xi-stop
-                            button.ga-button.icon
+                            button.ga-button.icon(data-value="pause")
                                 i.xi-pause
-                            button.ga-button.icon
-                                i.xi-rotate-right
-                            button.ga-button.icon
-                                i.xi-power-off
+                            button.ga-button.icon(data-value="forward")
+                                i.xi-forward
                     .contents-wrapper
-                        .ga-buttons.outline
+                        .ga-buttons.outline(fr-select)
                             button.ga-button TOP
                             button.ga-button CENTER
                             button.ga-button BOTTOM
                     .contents-wrapper
-                        .ga-buttons(data-type=true)
+                        .ga-buttons(fr-select)
                             button.ga-button.outline.mini.primary
                                 i.icon.left.xi-play
                                 | Play
@@ -299,22 +299,3 @@ block contents
                             pre.code-wrapper
                                 code.language-markup
                                     | #{codes.buttons}
-block module 
-    script(src="/js/button.js")
-    script(src="/js/slider.js")
-    script. 
-       ( function () {
-            const buttons = document.querySelectorAll('.ga-buttons');
-
-
-            const selEl = document.querySelector('[data-type]')
-
-            const selObj = new Select(selEl)
-
-            buttons.forEach(elem => {
-                const button = new Buttons(elem)
-                button.init(1)
-
-                elem.addEventListener('click', () => (console.log(button.selected)))
-            })
-        })()

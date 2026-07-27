@@ -41,8 +41,6 @@ class Checkbox {
         this.el = el
         this.input = this.el.querySelector('input')
         this.type = this.input.type
-    }
-    init() {
         this.el.addEventListener('click', e => this.type === 'checkbox' ? this.changChecked() : this.selectRadio())
     }
     changChecked() {
@@ -60,10 +58,9 @@ class Checkbox {
     }
 }
 
-(function () {
-    const checkboxes = document.querySelectorAll('.ga-checkbox')
-    checkboxes.forEach(checkbox => {
-        const cb = new Checkbox(checkbox);
-        cb.init()
-    })
-})()
+// (function () {
+//     const checkboxes = document.querySelectorAll('.ga-checkbox')
+//     checkboxes.forEach(checkbox => {
+//         const cb = new Checkbox(checkbox);
+//     })
+// })()

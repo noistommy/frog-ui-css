@@ -1,28 +1,12 @@
 let list;
 const items = document.querySelectorAll('.ga-list > .item');
-let selectedItem;
 
 items.forEach(item => {
-    item.addEventListener('click', (e) => selectItem(e));
     if (item.getAttribute('draggable')) {
         item.addEventListener('mousedown', (e) => { onMouseDown(e) })
     }
     
 })
-
-function selectItem({currentTarget, clientX, clientY}) {
-    list = currentTarget.parentNode;
-    // console.log(document.elementFromPoint(clientX, clientY))
-    for (let i of list.children) {
-        i.classList.remove('selected')
-    }
-    currentTarget.classList.add('selected')
-    selectedItem = currentTarget.textContent;
-}
-
-// const activeItem = document.querySelector('.item');
-
-// item.addEventListener('mousedown', (e) => { onMouseDown(e) })
 
 function onMouseDown({currentTarget}) {
     // console.log(currentTarget)

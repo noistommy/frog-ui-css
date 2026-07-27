@@ -1,0 +1,1 @@
+document.querySelectorAll("[fr-select]").forEach((e,t)=>{var r=parseOptions(e.getAttribute("fr-select"));new Select(e,r).selected=0});

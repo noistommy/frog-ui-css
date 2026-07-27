@@ -45,10 +45,6 @@ header.gnb .toggle-menu {
 }
 header.gnb .header-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
 }
 
 header.gnb .logo {
@@ -512,6 +508,9 @@ section .section-contents .contents-wrapper .contents-item {
   }
   header.gnb .main-menu .toggle-menu {
     display: block;
+  }
+  header.gnb .main-menu .nav-list {
+    display: none;
   }
   header.gnb .link-btn {
     position: absolute;

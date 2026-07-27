@@ -53,10 +53,6 @@ header.gnb {
   }
   .header-wrapper {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
   }
 }
 
@@ -567,6 +563,9 @@ section {
     .main-menu {
       .toggle-menu {
         display: block;
+      }
+      .nav-list {
+       display: none;
       }
     }
     .link-btn {

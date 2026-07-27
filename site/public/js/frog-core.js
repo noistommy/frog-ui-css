@@ -1,0 +1,1 @@
+function camelize(e){return e.replace(/-([a-z])/g,(e,r)=>r.toUpperCase())}function parseValue(e){return"true"===(e=e.trim())||"false"!==e&&(isNaN(e)?e:Number(e))}function parseOptions(e){let a={};return e&&e.split(";").forEach(e=>{var[e,r]=e.split(":");e&&r&&(e=camelize(e.trim()),a[e]=parseValue(r))}),a}
