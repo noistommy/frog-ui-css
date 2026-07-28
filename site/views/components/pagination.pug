@@ -14,7 +14,7 @@ block contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-pagination
+                        .ga-pagination(fr-paging)
                             - var items = [2, 3, 4, 5, 6, 7, 8, 9, 10]
                             .pagination-nav.prev
                                 i.xi-angle-left
@@ -32,7 +32,7 @@ block contents
                 h4.contents-title  Limit displayed Number
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-pagination
+                        .ga-pagination(fr-paging)
                             - var items = [2, 3, 4]
                             .pagination-nav.prev
                                 i.xi-angle-left
@@ -55,7 +55,7 @@ block contents
                 h4.contents-title Button
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-pagination.number.round
+                        .ga-pagination(fr-paging).number.round
                             - var items = [2, 3, 4, 5, 6, 7, 8, 9, 10]
                             .pagination-nav.prev
                                 i.xi-angle-left
@@ -73,7 +73,7 @@ block contents
                 h4.contents-title User costom Style
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-pagination.number
+                        .ga-pagination(fr-paging).number
                             - var items = [2, 3, 4]
                             .pagination-nav.pagination-item.prev
                                 i.xi-angle-left
@@ -96,7 +96,7 @@ block contents
                 h4.contents-title Page type
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-pagination.page
+                        .ga-pagination(fr-paging).page
                             .pagination-nav.pagination-item.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
@@ -114,7 +114,7 @@ block contents
                 h4.contents-title Compact
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-pagination.compact.number
+                        .ga-pagination(fr-paging).compact.number
                             - var items = [2, 3, 4, 5, 6, 7, 8, 9, 10]
                             .pagination-nav.prev
                                 i.xi-angle-left
@@ -134,7 +134,7 @@ block contents
                     - var items = [2, 3, 4, 5]
                     .contents-wrapper
                         h5 LEFT
-                        .ga-pagination.number.align-left
+                        .ga-pagination(fr-paging).number.align-left
                             .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
@@ -145,7 +145,7 @@ block contents
                                 i.xi-angle-right
                     .contents-wrapper
                         h5 CENTER
-                        .ga-pagination.number.align-center
+                        .ga-pagination(fr-paging).number.align-center
                             .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
@@ -156,7 +156,7 @@ block contents
                                 i.xi-angle-right
                     .contents-wrapper
                         h5 RIGHT
-                        .ga-pagination.number.align-right
+                        .ga-pagination(fr-paging).number.align-right
                             .pagination-nav.prev
                                 i.xi-angle-left
                             .pagination-page-wrapper
@@ -170,4 +170,4 @@ block contents
                                 code.language-markup 
                                     | #{codes.align}
 block module 
-    script(src="/js/pagination.js")
+    //- script(src="/js/pagination.js")

@@ -65,9 +65,13 @@ html
                         else
                             .nav-list.ga.flex.px-2
                                 .nav-item
-                                    .ga-button.text.round About
+                                    .ga-button.text.round 
+                                        | About
+                                        a.link(href="/pages/welcome")
                                 .nav-item
-                                    .ga-button.text.round Components
+                                    .ga-button.text.round 
+                                        | Components
+                                        a.link(href="/pages/components")
                     .logo 
                         a(href="/")
                             svg( width="60", height="60", viewBox="0 0 60 60", fill="none", xmlns="http://www.w3.org/2000/svg")
@@ -76,6 +80,14 @@ html
                                 path(d="M32 36C32 33.7909 33.7909 32 36 32H48C50.2091 32 52 33.7909 52 36V48C52 50.2091 50.2091 52 48 52H36C33.7909 52 32 50.2091 32 48V36Z", fill="currentColor")
                             span FROG
                     nav.sub-menu.small
+                        .device.ga-buttons.round(fr-select)
+                            .ga-button.icon
+                                i.xi-mobile
+                            .ga-button.icon
+                                i.xi-tablet
+                            .ga-button.icon
+                                i.xi-desktop
+
                         .locale
                             .ga-button.round
                         .buttons-part
@@ -110,13 +122,52 @@ html
                             include lnb
                     .right-part
                         block contents
+            .mobile-view
+                iframe#iframe-view 
+
         script(src="/js/frog-core.js")
         script(src="/js/frog.js")
         block module
         block js-module
+
         script(src="/base.js")
         script(src="/js/css-switcher.js")
         script.
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         script(defer, src="/_vercel/insights/script.js")
-       
+        script.
+
+            const iframeWrap = document.querySelector('.mobile-view')
+            const iframeView = document.getElementById('iframe-view');
+            const dList = ['mobile', 'tablet', 'desktop'] 
+            const device = document.querySelector('.device')
+            const selectDevice = new Select(device)
+            selectDevice.selected = 2
+            render(dList[selectDevice.selected])
+            device.addEventListener('click', () => {
+                sessionStorage.setItem('device-number', selectDevice.selected)
+                render(dList[selectDevice.selected])
+            })
+            
+            function render (value) {
+                iframeWrap.classList.remove(...dList)
+                iframeWrap.classList.add(value)
+                if (value === 'mobile') {
+                    iframeView.src = window.location.href;
+                    iframeView.style.width = '375px';  // iPhone 세로 너비
+                    iframeView.style.height = '667px';
+                    iframeWrap.classList.add('show')
+                } else if (value === 'tablet') {
+                    iframeView.src = window.location.href;
+                    iframeView.style.height  = '768px';  // iPad 세로 너비
+                    iframeView.style.width = '1024px';
+                    iframeWrap.classList.add('show')
+                } else {
+                    iframeWrap.classList.remove('show')
+                }
+            }
+
+            if (window.self !== window.top) {
+                // iframe 내부라면 body에 클래스 추가
+                document.body.classList.add('is-iframe');
+            }

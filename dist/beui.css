@@ -142,6 +142,14 @@
   }
 }
 :root {
+  --be-primary-color: #5178af;
+  --be-primary-dark: rgb(63.6031496063, 94.6096850394, 138.3368503937);
+  --be-primary-on: #ffffff;
+  --be-primary-light: rgba(81, 120, 175, 0.2);
+  --be-secondary-color: #35363a;
+  --be-secondary-dark: hsl(228, 4.5045045045%, -13.9352941176%);
+  --be-secondary-on: #ffffff;
+  --be-secondary-light: rgba(81, 120, 175, 0.2);
   --be-success-color: #528E64;
   --be-success-dark: rgb(63.3303571429, 109.6696428571, 77.2321428571);
   --be-success-on: #ffffff;
@@ -4047,7 +4055,13 @@ button.be-button {
   margin: -4px;
   margin-bottom: 4px;
 }
+.be-form > .fields.grid.left-side .rows > .column:first-child, .be-grid.left-side .rows > .column:first-child {
+  flex-grow: 1;
+}
 .be-form > .fields.grid.left-side > .column:first-child, .be-grid.left-side > .column:first-child {
+  flex-grow: 1;
+}
+.be-form > .fields.grid.right-side .rows > .column:last-child, .be-grid.right-side .rows > .column:last-child {
   flex-grow: 1;
 }
 .be-form > .fields.grid.right-side > .column:last-child, .be-grid.right-side > .column:last-child {
@@ -4159,6 +4173,7 @@ button.be-button {
 .be-form > .fields.grid > .column, .be-grid .field > .column,
 .be-grid .rows > .column,
 .be-grid > .column {
+  padding: 4px;
   width: 8.3333333333%;
 }
 .be-form > .fields.grid .field > .column.two,
@@ -7681,7 +7696,7 @@ table.be-table .be-button {
 .be-panel.collapse .panel-content {
   max-height: 0;
   overflow: auto;
-  transition: all 0.25s ease;
+  transition: all 0.5s ease;
 }
 .be-panel.collapse.icon.left .panel-toggle-btn {
   order: -1;

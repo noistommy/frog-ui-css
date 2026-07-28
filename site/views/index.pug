@@ -326,22 +326,22 @@ block contents
                 .column.col-6.col-xs-12
                     h5.title Select box
                     .field
-                        .ga-select-box.dropdown
+                        .ga-select-box.dropdown(fr-collapse)
                             .selected-item.ga-input.icon.right.fluid
                                 input(type="text", placeholder="Select option", readonly)
                                 i.icon.xi-angle-down
                             .select-menu
-                                .ga-list.selection
+                                .ga-list.selection.bg.mark(fr-select)
                                     each col in [1, 2, 3, 4, 5, 6]
                                         .icon.item(style="padding: 10px")
                                             = `option${col}`
                     .field
-                        .ga-select-box.float
+                        .ga-select-box.float(fr-collapse)
                             .selected-item.ga-input.icon.right
                                 input(type="text", placeholder="Select option", readonly)
                                 i.icon.xi-angle-down
                             .select-menu
-                                .ga-list.selection
+                                .ga-list.selection(fr-select)
                                     each col in [1, 2, 3, 4, 5, 6]
                                         .icon.item(style="padding: 10px")
                                             = `option${col}`
@@ -436,7 +436,7 @@ block contents
                             i.xi-home
                             a.link(href="/", target="_blank")
             
-            include comments
+            //- include comments
     script(src="/js/selectbox.js")
     script. 
         const cssSelector = document.getElementById('css-selector');
@@ -447,8 +447,6 @@ block contents
             selectBox = new SelectBox(cssSelector) 
             selectBox.init()
         }
-
-
         const cssFile = localStorage.getItem('selected-css-file')
         let cssFileName;
 
@@ -467,11 +465,3 @@ block contents
             const value = e.detail.selectedItem;
             console.log('변경된 selectedItem:', value);
         });
-
-        (function () {
-            const selectBoxes = document.querySelectorAll('#grids2 .ga-select-box')
-            selectBoxes.forEach((sb) => {
-                const selectBox = new SelectBox(sb)
-                selectBox.init()
-            })
-        })()

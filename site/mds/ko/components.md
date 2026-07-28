@@ -1,6 +1,6 @@
 ### Elements
 
-<div class="ga-cards round-s column-6 column-md-4 column-sm-1 column-xs-1">
+<div class="ga-cards round-s column-4 column-md-2 column-sm-1 column-xs-1">
 
 <a class="ga-card border media" href="/pages/badge">
 <div class="image">
@@ -116,7 +116,16 @@
 !['image'](https://nt-cabinet.vercel.app/ui-el-img/switch.svg)
 
 </div>
-<div class="contents">Switch</div>
+<div class="contents">Slider</div>
+</a>
+
+<a class="ga-card border media" href="/pages/slider">
+<div class="image">
+
+!['image'](https://nt-cabinet.vercel.app/ui-el-img/slider.svg)
+
+</div>
+<div class="contents">Slider</div>
 </a>
 
 <a class="ga-card border media" href="/pages/table">
@@ -150,7 +159,7 @@
 
 ### Layouts
 
-<div class="ga-cards round-s column-6 column-md-4 column-sm-1 column-xs-1">
+<div class="ga-cards round-s column-4 column-md-2 column-sm-1 column-xs-1">
 
 <a class="ga-card border media" href="/pages/form">
 <div class="image">
@@ -194,7 +203,7 @@
 
 ### Modules
 
-<div class="ga-cards round-s column-6 column-md-4 column-sm-1 column-xs-1">
+<div class="ga-cards round-s column-4 column-md-2 column-sm-1 column-xs-1">
 
 <a class="ga-card border media" href="/pages/modal">
 <div class="image">

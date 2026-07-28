@@ -120,6 +120,12 @@
 
 
 :root {
+    @each $color, $value in $brandColors {
+        --#{$ns}-#{$color}-color: #{list.nth($value, 1)};
+        --#{$ns}-#{$color}-dark: #{list.nth($value, 2)};
+        --#{$ns}-#{$color}-on: #{list.nth($value, 3)};
+        --#{$ns}-#{$color}-light: #{list.nth($value, 4)};
+    }
     @each $color, $value in $stateColors {
         --#{$ns}-#{$color}-color: #{list.nth($value, 1)};
         --#{$ns}-#{$color}-dark: #{list.nth($value, 2)};

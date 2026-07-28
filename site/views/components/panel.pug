@@ -38,7 +38,7 @@ block contents
                 h4.contents-title Border
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-panel.border
+                        .ga-panel.border(fr-collapse)
                             .panel-header
                                 .title Title
                             .panel-content
@@ -56,10 +56,10 @@ block contents
                 h4.contents-title Collapse
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-panel.collapse.border
+                        .ga-panel.border.collapse(fr-collapse="open: true")
                             .panel-header
                                 .title Title
-                                .panel-toggle-btn.small
+                                .panel-toggle-btn.small(fr-toggle)
                                     i.xi-angle-down
                             .panel-content
                                 .content-wrapper
@@ -81,7 +81,7 @@ block contents
                 h4.contents-title Accordion
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-accordion.border
+                        .ga-accordion.border(fr-accordion)
                             .ga-panel.collapse
                                 .panel-header
                                     .title Title
@@ -195,6 +195,6 @@ block contents
                                                 each item in items
                                                     .pagination-num=`${item}`
                                             .pagination-nav
-                                                i.xi-angle-right
-block module 
-    script(src="/js/panel.js")
+//-                                                 i.xi-angle-right
+//- block module 
+//-     script(src="/js/panel.js")

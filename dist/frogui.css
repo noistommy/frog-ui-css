@@ -141,6 +141,14 @@
   }
 }
 :root {
+  --ga-primary-color: #6d9d72;
+  --ga-primary-dark: rgb(85.123442623, 126.816557377, 89.4664754098);
+  --ga-primary-on: #ffffff;
+  --ga-primary-light: rgba(109, 157, 114, 0.2);
+  --ga-secondary-color: #35363a;
+  --ga-secondary-dark: hsl(228, 4.5045045045%, -13.9352941176%);
+  --ga-secondary-on: #ffffff;
+  --ga-secondary-light: rgba(109, 157, 114, 0.2);
   --ga-success-color: #528E64;
   --ga-success-dark: rgb(63.3303571429, 109.6696428571, 77.2321428571);
   --ga-success-on: #ffffff;
@@ -4046,7 +4054,13 @@ button.ga-button {
   margin: -4px;
   margin-bottom: 4px;
 }
+.ga-form > .fields.grid.left-side .rows > .column:first-child, .ga-grid.left-side .rows > .column:first-child {
+  flex-grow: 1;
+}
 .ga-form > .fields.grid.left-side > .column:first-child, .ga-grid.left-side > .column:first-child {
+  flex-grow: 1;
+}
+.ga-form > .fields.grid.right-side .rows > .column:last-child, .ga-grid.right-side .rows > .column:last-child {
   flex-grow: 1;
 }
 .ga-form > .fields.grid.right-side > .column:last-child, .ga-grid.right-side > .column:last-child {
@@ -4158,6 +4172,7 @@ button.ga-button {
 .ga-form > .fields.grid > .column, .ga-grid .field > .column,
 .ga-grid .rows > .column,
 .ga-grid > .column {
+  padding: 4px;
   width: 8.3333333333%;
 }
 .ga-form > .fields.grid .field > .column.two,
@@ -7680,7 +7695,7 @@ table.ga-table .ga-button {
 .ga-panel.collapse .panel-content {
   max-height: 0;
   overflow: auto;
-  transition: all 0.25s ease;
+  transition: all 0.5s ease;
 }
 .ga-panel.collapse.icon.left .panel-toggle-btn {
   order: -1;

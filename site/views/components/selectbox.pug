@@ -14,12 +14,13 @@ block contents
                 h4.contents-title Base - Dropdown
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-select-box.dropdown.open
+                        .ga-select-box.dropdown(fr-collapse="open: true")
                             .selected-item 
                                 .default-text
+                                    | option 1
                                     i.icon.xi-angle-down
                             .select-menu
-                                .ga-list.selection
+                                .ga-list.selection.bg.mark(fr-select)
                                     each col in [1, 2, 3, 4, 5, 6]
                                         .icon.item.option-item
                                             = `option${col}`
@@ -31,13 +32,13 @@ block contents
                 h4.contents-title base - Float
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-select-box.float
+                        .ga-select-box.float(fr-collapse)
                             .selected-item.ga-input.icon.both
                                 i.icon.xi-search
                                 input(type="text", placeholder="Select option")
                                 i.icon.xi-angle-down
                             .select-menu
-                                .ga-list.selection
+                                .ga-list.selection.bg(fr-select)
                                     each col in [1, 2, 3, 4, 5, 6]
                                         .icon.item.option-item
                                             = `option${col}`
@@ -96,13 +97,13 @@ block contents
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.tag_select_compact}
-block module 
-    script(src="/js/selectbox.js")
-    script. 
-        (function () {
-            const selectBoxes = document.querySelectorAll('.ga-select-box')
-            selectBoxes.forEach((sb) => {
-                const selectBox = new SelectBox(sb)
-                selectBox.init()
-            })
-        })()
+//- block module 
+    //- script(src="/js/selectbox.js")
+    //- script. 
+    //-     (function () {
+    //-         const selectBoxes = document.querySelectorAll('.ga-select-box')
+    //-         selectBoxes.forEach((sb) => {
+    //-             const selectBox = new SelectBox(sb)
+    //-             selectBox.init()
+    //-         })
+    //-     })()
