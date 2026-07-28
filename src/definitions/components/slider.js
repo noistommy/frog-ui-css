@@ -135,7 +135,7 @@ class Slider {
 
     // this.rangeEl.value = this.resultPer
     this.resultEl.dataset.width = this.resultPer
-    if (this.clipper) {
+    if (this.options.clipper) {
       this.resultEl.style.clipPath = `inset(0 ${100 - this.setPercent(this.end)}% 0 ${this.setPercent(this.start)}% )` 
     } else {
       this.resultEl.style.width = this.result + 'px'
