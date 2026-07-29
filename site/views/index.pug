@@ -6,10 +6,11 @@ block title
 block contents
     .section-wrapper
         section#main-banner
-            .title FROG
+            .title
+                | FROG
             .sub-title !{cont("SUB_TITLE")}
             .main-link.ga-grid.justify-center
-                .ga-button.primary
+                .ga-button.primary 
                     | What is Frog?
                     a.link(href="/pages/welcome") 
                 .ga-button.outline 
@@ -18,7 +19,7 @@ block contents
                     a.link(href="/pages/components") 
     .section-wrapper
         section 
-            .page-header 
+            .page-header
                 .page-title !{cont("MAIN_SECTION_TOKEN_TITLE")}
                 .page-desc !{cont("MAIN_SECTION_TOKEN_DESC")}
             .page-contents
@@ -65,7 +66,7 @@ block contents
                                 .desc Create an account and discover the worlds' best UI component framework.
                             .fields
                                 .field
-                                    .ga.flex.around.ga-buttons
+                                    .ga-buttons(fr-select).fluid
                                         button.ga-button.selected
                                             i.icon.left.xi-google
                                             | Google
@@ -100,7 +101,7 @@ block contents
                 button.ga-button.text.link 
                     i.icon.left.xi-link 
                     | CSS Variable with mode 
-                    a.link(href="/pages/theme/#light-mode")
+                    a.link(href="/pages/theming/#light-mode")
             .page-contents
                 .ga.flex.center
                     label.ga-switch.button(for="change-mode")
@@ -124,7 +125,7 @@ block contents
                 .page-title !{cont("MAIN_SECTION_CSS_TITLE")}
                 .page-desc !{cont("MAIN_SECTION_CSS_DESC")}
             .page-contents
-                .buttons
+                .buttons.ga.flex
                     .ga-button
                         i.icon.left.xi-link
                         | BE-UI-REACT
@@ -155,8 +156,8 @@ block contents
                 .column.col-6.row-4.col-xs-12
                     h5.title Typography
                     .ga-grid
-                        .column.span-6.mainWord.hero.large ABC
-                        .column.span-6.mainWord.hero.large 가나다
+                        .column.span-6.span-xs-12.mainWord.hero.large ABC
+                        .column.span-6.span-xs-12.mainWord.hero.large 가나다
                         .column.span-6.subWord
                             p ABCDEFGHIJKLMNOPQRSTUVWXYZ
                             p abcdefghijklmnopqrstuvwxyz
@@ -296,7 +297,7 @@ block contents
     .section-wrapper.summary#grids
         section
             h5.header Grid System
-            .ga-grid
+            .ga-grid.divide-md-6.divide-xs-1
                 each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
                     .column
                         .gray-item.gray-bg-15

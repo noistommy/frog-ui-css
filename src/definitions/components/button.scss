@@ -262,6 +262,12 @@
                 }
             }
         }
+        &.fluid {
+            width: 100%;
+            .#{$ns}-button {
+                flex-grow: 1;
+            }
+        }
     }
 }
 button.#{$ns}-button {

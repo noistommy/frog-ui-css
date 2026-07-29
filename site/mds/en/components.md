@@ -1,6 +1,6 @@
 ### Elements
 
-<div class="ga-cards round-s column-6 column-md-4 column-sm-3 colimn-xs-1">
+<div class="ga-cards round-s column-4 column-md-2 column-sm-1 column-xs-1">
 
 <a class="ga-card border media" href="/pages/badge">
 <div class="image">

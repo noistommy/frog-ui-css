@@ -143,9 +143,11 @@ html
             const device = document.querySelector('.device')
             const selectDevice = new Select(device)
             selectDevice.selected = 2
+            let currentUrl =  window.location.href
             render(dList[selectDevice.selected])
             device.addEventListener('click', () => {
                 sessionStorage.setItem('device-number', selectDevice.selected)
+                currentUrl =  window.location.href
                 render(dList[selectDevice.selected])
             })
             
@@ -153,18 +155,17 @@ html
                 iframeWrap.classList.remove(...dList)
                 iframeWrap.classList.add(value)
                 if (value === 'mobile') {
-                    iframeView.src = window.location.href;
                     iframeView.style.width = '375px';  // iPhone 세로 너비
                     iframeView.style.height = '667px';
                     iframeWrap.classList.add('show')
                 } else if (value === 'tablet') {
-                    iframeView.src = window.location.href;
                     iframeView.style.height  = '768px';  // iPad 세로 너비
                     iframeView.style.width = '1024px';
                     iframeWrap.classList.add('show')
                 } else {
                     iframeWrap.classList.remove('show')
                 }
+                 iframeView.src = currentUrl;
             }
 
             if (window.self !== window.top) {

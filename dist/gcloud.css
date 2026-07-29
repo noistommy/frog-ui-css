@@ -2284,6 +2284,12 @@ h5, .h5 {
   border-top-right-radius: 2em;
   border-bottom-right-radius: 2em;
 }
+.ga-buttons.fluid {
+  width: 100%;
+}
+.ga-buttons.fluid .ga-button {
+  flex-grow: 1;
+}
 
 button.ga-button {
   font-family: inherit;
@@ -6963,7 +6969,8 @@ button.ga-button {
 }
 .ga-tabs .tab-menu {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
+  overflow-x: auto;
 }
 .ga-tabs .tab-menu .tab-item {
   flex-shrink: 0;
@@ -7340,7 +7347,7 @@ button.ga-button {
 
 .ga-calendar {
   --grid-size: 7;
-  --cell-size: 42px;
+  --cell-size: 32px;
   --cell-gap: 1px;
   display: inline-block;
   max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1em + 2em);
@@ -7350,6 +7357,9 @@ button.ga-button {
 }
 .ga-calendar.border {
   border: 1px solid var(--brd);
+}
+.ga-calendar.compact {
+  --cell-size: 32px;
 }
 .ga-calendar .calendar-header {
   display: flex;
@@ -7690,7 +7700,6 @@ table.ga-table .ga-button {
 }
 .ga-panel .panel-header .panel-toggle-btn {
   line-height: 1;
-  padding: 0 4px;
 }
 .ga-panel .panel-header .panel-toggle-btn i {
   transition: transform 150ms ease;
@@ -8226,7 +8235,7 @@ table.ga-table .ga-button {
   box-shadow: none;
 }
 
-@media (max-width: 319.98px) {
+@media (max-width: 479.98px) {
   .ga-cards.column-xs-1 > .ga-card {
     width: calc((100% + 12px) / 1 - 12px) !important;
   }
@@ -8264,7 +8273,7 @@ table.ga-table .ga-button {
     width: calc((100% + 12px) / 12 - 12px) !important;
   }
 }
-@media (min-width: 320px) and (max-width: 767.98px) {
+@media (min-width: 480px) and (max-width: 767.98px) {
   .ga-cards.column-sm-1 > .ga-card {
     width: calc((100% + 12px) / 1 - 12px) !important;
   }
@@ -8344,12 +8353,15 @@ table.ga-table .ga-button {
   pointer-events: none;
   width: -moz-max-content;
   width: max-content;
+  max-width: 250px;
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: 9999;
   word-break: break-all;
   filter: drop-shadow(0 0 5px rgba(80, 80, 80, 0.2));
+  background-color: #fff;
+  color: #333;
 }
 .ga-tooltip.small {
   padding: 5px 10px;
@@ -8413,6 +8425,12 @@ table.ga-table .ga-button {
   bottom: max(10%, 1em);
   /* transform: translateY(-100%); */
 }
+.ga-tooltip.show {
+  animation: fadein 0.3s ease, scale 0.3s ease;
+}
+.ga-tooltip.show .slide {
+  animation: fadein 0.3s ease, slide-up 0.3s ease;
+}
 .ga-tooltip {
   font-size: 1rem;
   font-weight: normal;
@@ -8432,6 +8450,42 @@ table.ga-table .ga-button {
   top: 100%;
 }
 
+[fr-target] {
+  display: none;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleX {
+  0% {
+    scaleX: 0;
+  }
+  100% {
+    scaleX: 1;
+  }
+}
+@keyframes slide-up {
+  0% {
+    translate: 0 10px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+@keyframes slide-down {
+  0% {
+    translate: 0 -10px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
 .ga-tree-list {
   width: 100%;
 }

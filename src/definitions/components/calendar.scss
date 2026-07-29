@@ -4,7 +4,7 @@ $calendarPadding: 1em;
 
 .#{$ns}-calendar {
   --grid-size: 7;
-  --cell-size: 42px;
+  --cell-size: 32px;
   --cell-gap: 1px;
   display: inline-block;
   max-width: calc((var(--cell-size) + var(--cell-gap)) * var(--grid-size) + 1em + $calendarPadding * 2);
@@ -13,6 +13,9 @@ $calendarPadding: 1em;
   height: auto;
   &.border {
     border: 1px solid var(--brd);
+  }
+  &.compact {
+    --cell-size: 32px;
   }
   .calendar-header {
     display: flex;

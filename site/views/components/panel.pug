@@ -38,7 +38,7 @@ block contents
                 h4.contents-title Border
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-panel.border(fr-collapse)
+                        .ga-panel.border(fr-collapse="open: true")
                             .panel-header
                                 .title Title
                             .panel-content
@@ -59,7 +59,7 @@ block contents
                         .ga-panel.border.collapse(fr-collapse="open: true")
                             .panel-header
                                 .title Title
-                                .panel-toggle-btn.small(fr-toggle)
+                                .panel-toggle-btn.small
                                     i.xi-angle-down
                             .panel-content
                                 .content-wrapper
@@ -126,16 +126,22 @@ block contents
                 h4.contents-title Collapse toggle Button
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-panel.collapse.border.icon.left
+                        .ga-panel.collapse.border.icon.left(fr-collapse)
                             .panel-header
                                 .title Toggle Button on left
-                                .panel-toggle-btn.small
+                                .panel-toggle-btn.ga-button.round.small.icon(fr-toggle)
                                     i.xi-angle-down
-                        .ga-panel.collapse.border.icon
+                            .panel-content
+                                .contents-wrapper 
+                                    | Panel Contents
+                        .ga-panel.collapse.border.icon(fr-collapse)
                             .panel-header
                                 .title Toggle Button on right
-                                .panel-toggle-btn.small
+                                .panel-toggle-btn.ga-button.icon.small.round(fr-toggle)
                                     i.xi-angle-down
+                            .panel-content
+                                .contents-wrapper 
+                                    | Panel Contents
                     .footer
                         .code-wrapper
                             pre

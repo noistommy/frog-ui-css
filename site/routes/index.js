@@ -191,6 +191,10 @@ router.get('/pages/tag', function(req, res, next) {
   res.render('components/tag',  { title: 'Tag' , codes: codes.tag });
 });
 
+router.get('/pages/tooltip', function(req, res, next) {
+  res.render('components/tooltip',  { title: 'Tooltip' , codes: codes.tag });
+});
+
 router.get('/pages/tree_list', function(req, res, next) {
   res.render('components/tree',  { title: 'Tree', codes: codes.tree });
 });

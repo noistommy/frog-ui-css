@@ -1,0 +1,130 @@
+extends ../layout
+
+block title
+    title #{title} | Frog UI CSS
+
+block contents
+    .page-wrapper
+        section#modal
+            .section-title
+                h1= title
+                .section-desc 
+                    //- p !{cont("MODULES_MODAL_SUB_TITLE")}
+            .section-contents
+                h4.contents-title Base
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: Base Tooltip!") Base 
+            .section-contents
+                h4.contents-title Theme
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: Light; theme: light") Theme: Light 
+                        .ga-button(fr-tooltip="content: Dark; theme: dark") Theme: Dark             
+            .section-contents
+                h4.contents-title Trigger
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: Hover;") Hover 
+                        .ga-button(fr-tooltip="content: Dark; trigger: click") Click
+            .section-contents
+                h4.contents-title Contents Type
+                p.contents-desc.p-4 [fr-target] 속성이 지정된 html source를 tooltip 컨텐츠로 활용 가능합니다. 
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: content: {contents...}") Attr: content 
+                        .ga-button(fr-tooltip) 
+                            | Target
+                            span(fr-target)
+                                .title.bold.ga-yellow-text TItle 
+                                p.ga-lightblue-text Html Contents
+            .section-contents
+                h4.contents-title Position
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: Top; pos: top") 
+                            i.icon.left.xi-arrow-up
+                            | Top 
+                        .ga-button(fr-tooltip="content: Bottom; pos: bottom") 
+                            i.icon.left.xi-arrow-down
+                            | Bottom 
+                        .ga-button(fr-tooltip="content: Left; pos: left") 
+                            i.icon.left.xi-arrow-left
+                            | Left 
+                        .ga-button(fr-tooltip="content: Right; pos: right") 
+                            i.icon.left.xi-arrow-right
+                            | Right 
+            .section-contents
+                h4.contents-title Position and Align
+                .ga-segment.float.round-m
+                    .contents-wrapper
+                    - const lorem = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore necessitatibus nam delectus illum qui tenetur fuga, iure id a voluptas. Neque qui quo alias nulla odit adipisci suscipit totam."
+                        .ga-grid2
+                            .column.col-3.col-xs-12
+                                .ga-button.text.fluid Top | Left
+                            .column.col-6.col-xs-12
+                                .ga.grow.flex
+                                    .ga-button(fr-tooltip="content: TOP-END; pos: top-end") 
+                                        | T-END
+                                    .ga-button(fr-tooltip="content: TOP-CENTER; pos: top-center") 
+                                        | T-CENTER
+                                    .ga-button(fr-tooltip="content: TOP-START; pos: top-start") 
+                                        | T-START 
+                            .column.col-3.col-xs-12
+                                .ga-button.text.fluid Top | Right
+                            
+                            .column.col-3.col-xs-12
+                                .ga-button.fluid(fr-tooltip="pos: left-end") 
+                                    | L-END
+                                    span(fr-target)
+                                        .title  LEFT-END
+                                        .desc= lorem
+                            .column.col-6.col-xs-12
+                            .column.col-3.col-xs-12
+                                .ga-button.fluid(fr-tooltip="pos: right-end") 
+                                    | R-END
+                                    span(fr-target)
+                                        .title  RIGHT-END
+                                        .desc= lorem
+                            
+                            
+                            .column.col-3.col-xs-12
+                                .ga-button.fluid(fr-tooltip="pos: left-center") 
+                                    | L-CENTET
+                                    span(fr-target)
+                                        .title  LEFT-CENTER
+                                        .desc= lorem
+                            .column.col-6.col-xs-12
+                            .column.col-3.col-xs-12
+                                .ga-button.fluid(fr-tooltip="pos: right-center") 
+                                    | R-CENTET
+                                    span(fr-target)
+                                        .title  RIGHT-CENTER
+                                        .desc= lorem
+                            
+                            
+                            .column.col-3.col-xs-12
+                                .ga-button.fluid(fr-tooltip="pos: left-start") 
+                                    | L-START
+                                    span(fr-target)
+                                        .title  LEFT-START
+                                        .desc= lorem
+                            .column.col-6.col-xs-12
+                            .column.col-3.col-xs-12
+                                .ga-button.fluid(fr-tooltip="pos: right-start") 
+                                    | R-START
+                                    span(fr-target)
+                                        .title  RIGHT-START
+                                        .desc= lorem
+                            .column.col-3.col-xs-12
+                                .ga-button.text.fluid Bottom | Left
+                            .column.col-6.col-xs-12
+                                .ga.grow.flex
+                                    .ga-button(fr-tooltip="content: BOTTOM-END; pos: bottom-end") 
+                                        | B-END
+                                    .ga-button(fr-tooltip="content: BOTTOM-CENTER; pos: bottom-center") 
+                                        | B-CENTER
+                                    .ga-button(fr-tooltip="content: BOTTOM-START; pos: bottom-start") 
+                                        | B-START 
+                            .column.col-3.col-xs-12
+                                .ga-button.text.fluid Bottom | Right
