@@ -192,10 +192,10 @@ router.get('/pages/tag', function(req, res, next) {
 });
 
 router.get('/pages/tooltip', function(req, res, next) {
-  res.render('components/tooltip',  { title: 'Tooltip' , codes: codes.tag });
+  res.render('components/tooltip',  { title: 'Tooltip' , codes: codes.tooltip });
 });
 
-router.get('/pages/tree_list', function(req, res, next) {
+router.get('/pages/tree', function(req, res, next) {
   res.render('components/tree',  { title: 'Tree', codes: codes.tree });
 });
 

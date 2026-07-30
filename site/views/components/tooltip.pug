@@ -5,31 +5,47 @@ block title
 
 block contents
     .page-wrapper
-        section#modal
+        section
             .section-title
                 h1= title
                 .section-desc 
-                    //- p !{cont("MODULES_MODAL_SUB_TITLE")}
+                    p !{cont("MODULES_TOOLTIP_SUB_TITLE")}
+                .section-tag.p-4
+                    .ga-tags.attached
+                        .ga-tag.label.deepblue fr-component
+                        .ga-tag.label.lightblue JS
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m
                     .contents-wrapper.ga.flex.center
                         .ga-button(fr-tooltip="content: Base Tooltip!") Base 
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.base}
             .section-contents
                 h4.contents-title Theme
                 .ga-segment.float.round-m
                     .contents-wrapper.ga.flex.center
                         .ga-button(fr-tooltip="content: Light; theme: light") Theme: Light 
                         .ga-button(fr-tooltip="content: Dark; theme: dark") Theme: Dark             
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.theme}
             .section-contents
                 h4.contents-title Trigger
                 .ga-segment.float.round-m
                     .contents-wrapper.ga.flex.center
                         .ga-button(fr-tooltip="content: Hover;") Hover 
                         .ga-button(fr-tooltip="content: Dark; trigger: click") Click
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.trigger}
             .section-contents
                 h4.contents-title Contents Type
-                p.contents-desc.p-4 [fr-target] 속성이 지정된 html source를 tooltip 컨텐츠로 활용 가능합니다. 
+                p.contents-desc.py-8 [fr-target] 속성이 지정된 html source를 tooltip 컨텐츠로 활용 가능합니다. 
                 .ga-segment.float.round-m
                     .contents-wrapper.ga.flex.center
                         .ga-button(fr-tooltip="content: content: {contents...}") Attr: content 
@@ -38,8 +54,13 @@ block contents
                             span(fr-target)
                                 .title.bold.ga-yellow-text TItle 
                                 p.ga-lightblue-text Html Contents
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.contentType}
             .section-contents
                 h4.contents-title Position
+                p.contents-desc.py-8 pos 속성은 기본적으로 '{direct}-{align}' 구조로 적용 합니다. 예를들면 'top-center', 'left-start' 처럼, 하지만 가운데 정렬을 기본 값으로 두고 position만 입력하더라도 동작 가능합니다. 
                 .ga-segment.float.round-m
                     .contents-wrapper.ga.flex.center
                         .ga-button(fr-tooltip="content: Top; pos: top") 
@@ -54,11 +75,15 @@ block contents
                         .ga-button(fr-tooltip="content: Right; pos: right") 
                             i.icon.left.xi-arrow-right
                             | Right 
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.position}
             .section-contents
                 h4.contents-title Position and Align
                 .ga-segment.float.round-m
                     .contents-wrapper
-                    - const lorem = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore necessitatibus nam delectus illum qui tenetur fuga, iure id a voluptas. Neque qui quo alias nulla odit adipisci suscipit totam."
+                        - const lorem = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti tempore necessitatibus nam delectus illum qui tenetur fuga, iure id a voluptas. Neque qui quo alias nulla odit adipisci suscipit totam."
                         .ga-grid2
                             .column.col-3.col-xs-12
                                 .ga-button.text.fluid Top | Left
@@ -146,3 +171,7 @@ block contents
                                             .desc= lorem
                             .column.col-3.col-xs-12
                                 .ga-button.text.fluid Bottom | Right
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.aligns}

@@ -21,4 +21,6 @@ module.exports = {
   table: require('./table'),
   tag: require('./tag'),
   slider: require('./slider'),
+  tooltip: require('./tooltip'),
+  tree: require('./tree'),
 }

@@ -76,5 +76,6 @@
   "LAYOUT_GRID_SUB_TITLE": "Layout utility using CSS Grid for structured alignment.(Flex)",
   "LAYOUT_GRID2_SUB_TITLE": "Layout utility using CSS Grid for structured alignment.(Grid)",
   "MODULES_MODAL_SUB_TITLE": "Overlay dialog UI for alerts or focused interactions.",
-  "MODULES_TOAST_SUB_TITLE": "Temporary, auto-dismissable message for quick user feedback."
+  "MODULES_TOAST_SUB_TITLE": "Temporary, auto-dismissable message for quick user feedback.",
+  "MODULES_TOOLTIP_SUB_TITLE": "A UI element that visually displays brief information about an item when accessed by a user event."
 }

@@ -40,7 +40,7 @@ class Tooltip {
         this.setPosition()
 
         if (this.options.trigger === 'click') {
-            window.addEventListener('scroll', () => this.setPosition())
+            window.addEventListener('scroll', () => this.setPosition(), true)
             window.addEventListener('resize', () => this.setPosition())
         }
 
@@ -138,7 +138,7 @@ class Tooltip {
             this.tooltip = null
         }
         if (this.options.trigger === 'click') {
-            window.removeEventListener('scroll', () => this.setPosition())
+            window.removeEventListener('scroll', () => this.setPosition(), true)
             window.removeEventListener('resize', () => this.setPosition())
         }
     }

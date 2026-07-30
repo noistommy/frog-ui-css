@@ -76,5 +76,6 @@
 	"LAYOUT_GRID_SUB_TITLE": "CSS Flex 기반의 정렬과 레이아웃을 위한 그리드 유틸리티.",
 	"LAYOUT_GRID2_SUB_TITLE": "CSS Grid 기반의 정렬과 레이아웃을 위한 그리드 유틸리티.",
 	"MODULES_MODAL_SUB_TITLE": "알림이나 집중 인터랙션을 위한 오버레이 다이얼로그.",
-	"MODULES_TOAST_SUB_TITLE": "짧게 표시되었다가 사라지는 위젯형 알림 메시지."
+	"MODULES_TOAST_SUB_TITLE": "짧게 표시되었다가 사라지는 위젯형 알림 메시지.",
+	"MODULES_TOOLTIP_SUB_TITLE": "사용자 이벤트로 요소에 접근 시 요소에 대한 간단한 정보를 시각적으로 보여주는 UI요소"
 }
