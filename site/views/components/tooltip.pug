@@ -64,12 +64,21 @@ block contents
                                 .ga-button.text.fluid Top | Left
                             .column.col-6.col-xs-12
                                 .ga.grow.flex
-                                    .ga-button(fr-tooltip="content: TOP-END; pos: top-end") 
+                                    .ga-button(fr-tooltip="pos: top-end") 
                                         | T-END
-                                    .ga-button(fr-tooltip="content: TOP-CENTER; pos: top-center") 
+                                        span(fr-target)
+                                            .title  TOP-END
+                                            .desc= lorem
+                                    .ga-button(fr-tooltip="pos: top-center") 
                                         | T-CENTER
-                                    .ga-button(fr-tooltip="content: TOP-START; pos: top-start") 
+                                        span(fr-target)
+                                            .title  TOP-CENTER
+                                            .desc= lorem
+                                    .ga-button(fr-tooltip="pos: top-start") 
                                         | T-START 
+                                        span(fr-target)
+                                            .title  TOP-START
+                                            .desc= lorem
                             .column.col-3.col-xs-12
                                 .ga-button.text.fluid Top | Right
                             
@@ -120,11 +129,20 @@ block contents
                                 .ga-button.text.fluid Bottom | Left
                             .column.col-6.col-xs-12
                                 .ga.grow.flex
-                                    .ga-button(fr-tooltip="content: BOTTOM-END; pos: bottom-end") 
+                                    .ga-button(fr-tooltip="pos: bottom-end") 
                                         | B-END
-                                    .ga-button(fr-tooltip="content: BOTTOM-CENTER; pos: bottom-center") 
+                                        span(fr-target)
+                                            .title  BOTTOM-END
+                                            .desc= lorem
+                                    .ga-button(fr-tooltip="pos: bottom-center") 
                                         | B-CENTER
-                                    .ga-button(fr-tooltip="content: BOTTOM-START; pos: bottom-start") 
-                                        | B-START 
+                                        span(fr-target)
+                                            .title  BOTTOM-CENTER
+                                            .desc= lorem
+                                    .ga-button(fr-tooltip="pos: bottom-start") 
+                                        | B-START
+                                        span(fr-target)
+                                            .title  BOTTOM-START
+                                            .desc= lorem
                             .column.col-3.col-xs-12
                                 .ga-button.text.fluid Bottom | Right

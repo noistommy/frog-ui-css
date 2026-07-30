@@ -24,20 +24,6 @@ class Tooltip {
 
        
     }
-
-    setShow () {
-        this.setTooltip()
-        this._show = true
-    }
-    setClose () {
-        this._show = false
-        this.tooltip.classList.remove('show')
-        this.tooltip.remove()
-        if (this.options.trigger === 'click') {
-            window.removeEventListener('scroll', () => this.setPosition())
-            window.removeEventListener('resize', () => this.setPosition())
-        }
-    }
     setToggle () {
         if (this._show) {
             this.setClose()
@@ -46,10 +32,9 @@ class Tooltip {
         }
     }
     setTooltip () {
-        if (this.tooltip) this.setClose()
+        if (this.tooltip && this._show) this.setClose()
 
         this.tooltip = document.createElement('div');
-        // this.tooltip.style.transform  = 'scale(0)';
         this.setAttribute()
         document.body.append(this.tooltip)
         this.setPosition()
@@ -140,12 +125,22 @@ class Tooltip {
         this._show = value
     }
 
-}
+    setShow () {
+        if(this._show) return
+        this.setTooltip()
+        this._show = true
+    }
+    setClose () {
+        this._show = false
+        if (this.tooltip) {
+            this.tooltip.classList.remove('show')
+            this.tooltip.remove()
+            this.tooltip = null
+        }
+        if (this.options.trigger === 'click') {
+            window.removeEventListener('scroll', () => this.setPosition())
+            window.removeEventListener('resize', () => this.setPosition())
+        }
+    }
 
-(function() {
-    const tooltips = document.querySelectorAll('[fr-tooltip]')
-    tooltips.forEach(tooltip => {
-        const options = parseOptions(tooltip.getAttribute('fr-tooltip'))
-        new Tooltip(tooltip, options)
-    })
-})()
+}
