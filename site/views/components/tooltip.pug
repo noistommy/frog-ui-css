@@ -12,7 +12,7 @@ block contents
                     p !{cont("MODULES_TOOLTIP_SUB_TITLE")}
                 .section-tag.p-4
                     .ga-tags.attached
-                        .ga-tag.label.deepblue fr-component
+                        .ga-tag.label.deepblue fr-tooltip
                         .ga-tag.label.lightblue JS
             .section-contents
                 h4.contents-title Base
@@ -24,11 +24,11 @@ block contents
                                 code.language-markup
                                     | #{codes.base}
             .section-contents
-                h4.contents-title Theme
+                h4.contents-title Invert
                 .ga-segment.float.round-m
                     .contents-wrapper.ga.flex.center
-                        .ga-button(fr-tooltip="content: Light; theme: light") Theme: Light 
-                        .ga-button(fr-tooltip="content: Dark; theme: dark") Theme: Dark             
+                        .ga-button(fr-tooltip="content: Same Theme; invert: false") Equal Theme
+                        .ga-button(fr-tooltip="content: Invert Theme;") Invert Theme            
                     .footer
                             pre
                                 code.language-markup

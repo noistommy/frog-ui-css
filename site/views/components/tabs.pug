@@ -10,17 +10,27 @@ block contents
                 h1= title
                 .section-desc 
                     p !{cont("ELEMENTS_TABS_SUB_TITLE")}
+                .section-tag.p-4
+                    .ga-tags.attached
+                        .ga-tag.label.deepblue fr-tabs
+                        .ga-tag.label.lightblue JS
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-tabs
+                        .ga-tabs(fr-tabs="active-tab: 1")
                             .tab-menu
                                 .tab-item.tab.active Item 1
                                 .tab-item.tab Item 2
                                 .tab-item.tab Item 3
                                 .tab-item.tab Item 4
                                 .tab-item.tab Item 5
+                            .tab-contents.p-8
+                                div(fr-tab-contents="Item 1") Item 1 Contents
+                                div(fr-tab-contents="Item 2") Item 2 Contents
+                                div(fr-tab-contents="Item 3") Item 3 Contents
+                                div(fr-tab-contents="Item 4") Item 4 Contents
+                                div(fr-tab-contents="Item 5") Item 5 Contents
                     .footer
                         pre.code-wrapper
                             code.language-markup 
@@ -63,15 +73,19 @@ block contents
                 h4.contents-title Active (Button)
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-tabs.button
+                        .ga-tabs.button(fr-tabs)
                             .tab-menu
                                 .tab-item.tab.active Item 1
                                 .tab-item.tab Item 2
                                 .tab-item.tab Item 3
                                 .tab-item.tab Item 4
                                 .tab-item.tab Item 5
-                            .tab-contents.pd-5
-                                | tab contents
+                            .tab-contents.p-8
+                                div(fr-tab-contents = "Item 1") 1 Contents
+                                div(fr-tab-contents = "Item 2") 2 Contents
+                                div(fr-tab-contents = "Item 3") 3 Contents
+                                div(fr-tab-contents = "Item 4") 4 Contents
+                                div(fr-tab-contents = "Item 5") 5 Contents
                     .footer
                         pre.code-wrapper
                             code.language-markup 
@@ -80,7 +94,7 @@ block contents
                 h4.contents-title Browser Tab
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
-                        .ga-tabs.browser
+                        .ga-tabs.browser(fr-tabs)
                             - var tabMenu = [1, 2, 3, 4, 5]
                             .tab-menu
                                 each tab in tabMenu
@@ -88,12 +102,12 @@ block contents
                                         span.tabText.ellipsis=`Item ${tab}`
                                         .btn-close.ga-button.icon.tiny.round
                                             i.xi-close
-                            .tab-contents.pd-5
+                            .tab-contents.p-5
                                 .tab-plus.ga-button.icon.primary ADD
                                     i.icon.right.xi-plus
                     .footer
                         pre.code-wrapper
                             code.language-markup 
                                 | #{codes.browser}
-block module 
-    script(src="/js/tabs.js")
+//- block module 
+//-     script(src="/js/tabs.js")

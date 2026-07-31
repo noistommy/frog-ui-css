@@ -84,6 +84,9 @@ $tabsItemPadding: $buttonPadding;
   }
   .tab-contents {
     width: 100%;
+    [fr-tab-contents]:not(.show) {
+      display: none;
+    }
   }
   &.browser {
     .tab-menu {

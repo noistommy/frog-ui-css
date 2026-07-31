@@ -203,6 +203,10 @@ router.get('/pages/slider', function(req, res, next) {
   res.render('components/slider',  { title: 'Slider', codes: codes.slider });
 });
 
+router.get('/pages/breadcrumb', function(req, res, next) {
+  res.render('components/breadcrumb',  { title: 'Breadcrumb', codes: codes.slider });
+});
+
 // Layout
 
 // Modules

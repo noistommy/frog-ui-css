@@ -1,0 +1,161 @@
+extends ../layout
+
+
+
+block title
+    title #{title} | Frog UI CSS
+
+block contents
+    .page-wrapper
+        section
+            .section-title
+                h1= title
+                .section-desc 
+                    p
+            .section-contents
+                h4.contents-title Base
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb
+                            li 
+                                a(href='/') Home
+                            li 
+                                a(href='/') Page 1
+                            li.current 
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title No hover
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb.no-hover
+                            li 
+                                a(href='/') Home
+                            li 
+                                a(href='/') Page 1
+                            li.current 
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Round
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb.round
+                            li 
+                                a(href='/') Home
+                            li 
+                                a(href='/') Page 1
+                            li.current 
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Compact
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb.compact
+                            li 
+                                a(href='/') Home
+                            li 
+                                a(href='/') Page 1
+                            li.current 
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Icon
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb
+                            li
+                                a(href='/') 
+                                    i.icon.left.xi-home
+                                    | Home
+                            li
+                                a(href='/') 
+                                    i.icon.left.xi-browser-text
+                                    | Page 1
+                            li.current
+                                span
+                                    i.icon.left.xi-maker 
+                                    | Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Custom mark
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb
+                            li 
+                                a(href='/') Home
+                            li(data-split="|") 
+                                a(href='/') Page 1
+                            li.current(data-split="<") 
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Dropdown
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                       ul.ga-breadcrumb
+                            li 
+                                a(href='/') Home
+                            li
+                                span.dropdown(fr-tooltip="trigger: click; pos: bottom")
+                                    i.icon.xi-ellipsis-h
+                                    div(fr-target)
+                                        .ga-list
+                                            .item
+                                                a.link(href="/") Page 1
+                                            .item
+                                                a.link(href="/") Page 2
+                                            .item
+                                                a.link(href="/") Page 3
+                            li 
+                                a(href='/') Page N
+                            li.current
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+            .section-contents
+                h4.contents-title Ellipsis
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        - var lorem = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iusto ab, aspernatur sint consequatur error velit quasi inventore, veritatis perferendis vero, voluptas necessitatibus libero accusamus fugit incidunt ullam fugiat eveniet!'
+                         ul.ga-breadcrumb
+                            li 
+                                a(href='/') Home
+                            li
+                                a(href='/', fr-tooltip=`content: ${lorem}, pos: bottom`).ellipsis= lorem
+                            li.current
+                                span Current
+                    .footer 
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.base}
+block module 
+    script.
+        (function () {
+            const treeList = document.querySelectorAll('.ga-tree-list');
+            treeList.forEach((tree) => {
+                const treeInstance = new TreeList(tree)
+                treeInstance.init()
+            })
+        })()

@@ -1,0 +1,55 @@
+.#{$ns}-breadcrumb {
+  color: var(--txt-light);
+  > li {
+    display: contents;
+    &:not(:first-child)::before {
+      content: attr(data-split, '/');
+      margin-inline: 0.4rem;
+      color: var(--gray-15);
+    }
+    a, span {
+      display: inline-block;
+      width: max-content;
+      max-width: 150px;
+      color: inherit;
+      padding: $inputPadding;
+      vertical-align: middle;
+      &.dropdown {
+        cursor: pointer;
+        padding: $verticalPadding;
+      }
+    }
+    a, span {
+      i.icon {
+        &.left {margin-right: 4px;}
+        &.right {margin-left: 4px;}
+      }
+    }
+  }
+  &.round {
+    > li a {
+      border-radius: calc(($heightRhythm / 2) * 1px);
+    }
+  }
+  &.compact {
+    > li {
+      a, span {
+        padding: $compactPadding;
+      }
+    }
+  }
+  &:not(.no-hover) {
+    > li:not(.current) :hover {
+      color: var(--txt);
+      background-color: var(--gray-5);
+    }
+  }
+  .current {
+    // span {
+    // }
+    color: $primary;
+    span {
+      padding: $inputPadding;
+    }
+  }
+}

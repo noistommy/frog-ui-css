@@ -3,6 +3,7 @@ class Tooltip {
        content: '',
        pos: 'top-center',
        theme: 'dark',
+       invert: true,
        show: false,
        trigger: 'hover',
        className: 'ga-tooltip',
@@ -14,13 +15,14 @@ class Tooltip {
         this.tooltip = null
         this.currenPos = null
         if (this.options.trigger === 'hover') {
-            this.root.addEventListener('mouseenter', e => { this.setShow() })
+            this.root.addEventListener('mouseenter', e => { this.setShow(e) })
             this.root.addEventListener('mouseleave', e => { this.setClose() })
             this.root.addEventListener('touchstart', e => { this.setShow() })
             this.root.addEventListener('touchend', e => { this.setClose() })
             this.root.addEventListener('touchcancel', e => { this.setClose() })
         } else {
             this.root.addEventListener('click', e => { this.setToggle() })
+            // window.addEventListener('click', e => { this.setToggle(false) })
         }
 
        
@@ -44,7 +46,6 @@ class Tooltip {
             window.addEventListener('scroll', () => this.setPosition(), true)
             window.addEventListener('resize', () => this.setPosition())
         }
-
         requestAnimationFrame(() => {
             this.tooltip.classList.add('show')
         });
@@ -56,7 +57,8 @@ class Tooltip {
         this.root.querySelector('[fr-target]').innerHTML
         this.tooltip.classList.add(...[
             this.options.className,
-            `theme-${this.options.theme}`,
+            this.options.invert && 'invert',
+            // `theme-${this.options.theme}`,
         ]);
     }
 
