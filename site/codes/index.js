@@ -23,4 +23,5 @@ module.exports = {
   slider: require('./slider'),
   tooltip: require('./tooltip'),
   tree: require('./tree'),
+  breadcrumb: require('./breadcrumb'),
 }

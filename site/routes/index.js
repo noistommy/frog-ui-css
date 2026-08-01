@@ -204,7 +204,7 @@ router.get('/pages/slider', function(req, res, next) {
 });
 
 router.get('/pages/breadcrumb', function(req, res, next) {
-  res.render('components/breadcrumb',  { title: 'Breadcrumb', codes: codes.slider });
+  res.render('components/breadcrumb',  { title: 'Breadcrumb', codes: codes.breadcrumb });
 });
 
 // Layout

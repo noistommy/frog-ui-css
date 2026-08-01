@@ -2,7 +2,7 @@
   const frSelects = document.querySelectorAll('[fr-select]');
   const frCollapses = document.querySelectorAll('[fr-collapse]');
   const tooltips = document.querySelectorAll('[fr-tooltip]')
-  
+
   frSelects.forEach((select, i) => {
       const options = parseOptions(select.getAttribute('fr-select'))
 

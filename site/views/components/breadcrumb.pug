@@ -12,6 +12,10 @@ block contents
                 h1= title
                 .section-desc 
                     p
+                .section-tag.p-4
+                    .ga-tags.attached
+                        .ga-tag.label.deepblue fr-breadcrumb
+                        .ga-tag.label.lightblue JS
             .section-contents
                 h4.contents-title Base
                 .ga-segment.float.round-m.attached
@@ -41,7 +45,7 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.noHover}
             .section-contents
                 h4.contents-title Round
                 .ga-segment.float.round-m.attached
@@ -56,7 +60,7 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.round}
             .section-contents
                 h4.contents-title Compact
                 .ga-segment.float.round-m.attached
@@ -71,7 +75,7 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.compact}
             .section-contents
                 h4.contents-title Icon
                 .ga-segment.float.round-m.attached
@@ -92,7 +96,7 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.icon}
             .section-contents
                 h4.contents-title Custom mark
                 .ga-segment.float.round-m.attached
@@ -107,7 +111,7 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.customMark}
             .section-contents
                 h4.contents-title Dropdown
                 .ga-segment.float.round-m.attached
@@ -133,7 +137,7 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
+                                | #{codes.dropdown}
             .section-contents
                 h4.contents-title Ellipsis
                 .ga-segment.float.round-m.attached
@@ -149,13 +153,96 @@ block contents
                     .footer 
                         pre.code-wrapper
                             code.language-markup 
-                                | #{codes.base}
-block module 
+                                | #{codes.ellipsis}
+            .section-contents
+                h4.contents-title fr-breadcrumb
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        - var lorem = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam iusto ab, aspernatur sint consequatur error velit quasi inventore, veritatis perferendis vero, voluptas necessitatibus libero accusamus fugit incidunt ullam fugiat eveniet!'
+                         ul.ga-breadcrumb(fr-breadcrumb="ellipsis: true;")
+                    .footer 
+                        pre.code-wrapper
+                            code.language-js 
+                                | #{codes.fr_js}
+                        pre.code-wrapper
+                            code.language-markup 
+                                | #{codes.fr_html}
+block module
     script.
+        class Breadcrumb {
+            #defaultOption = {
+                round: false,
+                compact: false,
+                noHover: false,
+                mark: null,
+                ellipsis: true,
+                tooltip: true
+            }
+            constructor(root, options = {}) {
+                this.root = root
+                this.options = {...this.#defaultOption, ...options}
+                this._pages = [
+                   { name: 'Home', path: '/'} 
+                ]
+                this.setClass ()
+                this.setBreadcrumb()
+            }
+            setClass () {
+                const classes =  [
+                    this.options.round && 'round',
+                    this.options.compact && 'compact',
+                    this.options.noHover && 'no-hover',
+                ].filter(t  => t)
+
+                this.root.classList.add(...classes)
+            }
+            setBreadcrumb () {
+                if (this._pages.length < 1) return
+                this.root.textContent = '';
+                this._pages.forEach((page, i) => {
+                    const listItem = document.createElement('li');
+                    if (this.options.mark) {
+                        listItem.dataset.split = this.options.mark
+                    }
+                    let link;
+                    if (i < this._pages.length - 1) {
+                        link = document.createElement('a');
+                        link.setAttribute('href', page.path);
+                        link.innerHTML = page.icon ? `<i class="icon left ${page.icon}"></i> ${page.name}` : page.name 
+                        if (this.options.ellipsis) {
+                            link.classList.add('ellipsis')
+                            if (this.options.tooltip) {
+                                link.setAttribute('fr-tooltip', `content: ${page.name}`)
+                            }
+                        }
+                        listItem.append(link)
+                    } else {
+                        link = document.createElement('span');
+                        link.innerHTML= page.icon ? `<i class="icon left ${page.icon}"> </i> ${page.name}` : page.name 
+                        listItem.append(link)
+                        listItem.classList.add('current')
+                    }
+                    this.root.append(listItem)
+                })
+            }
+
+            set setPages (pages) {
+                this._pages = pages
+                this.setBreadcrumb()
+            }
+        }
         (function () {
-            const treeList = document.querySelectorAll('.ga-tree-list');
-            treeList.forEach((tree) => {
-                const treeInstance = new TreeList(tree)
-                treeInstance.init()
+            const breadcrumbs = document.querySelectorAll('[fr-breadcrumb]');
+            const pages = [
+                {name: 'Home', path: '/', icon: 'xi-home'},
+                {name: 'Pagedfkgjsdfg;lkfghl;kkfgsld;dk;ldgfhfghdfg', path: '/', icon: 'xi-browser-text'},
+                {name: 'Current', path: '', icon: 'xi-marker'},
+            ]
+
+            //- const options = {pages}
+            breadcrumbs.forEach((breadcrumb) => {
+                const options = parseOptions(breadcrumb.getAttribute('fr-breadcrumb'))
+                const bc = new Breadcrumb(breadcrumb, options)
+                bc.setPages = pages
             })
         })()

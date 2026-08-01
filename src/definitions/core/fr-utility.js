@@ -5,13 +5,29 @@ function camelize(str) {
 }
 
 function parseValue(value) {
-  value = value.trim(); // 양끝 공백 제거
-  
+  if (typeof value !== 'string') return value;
+
+  value = value.trim();
+
+  // Boolean 처리
   if (value === 'true') return true;
   if (value === 'false') return false;
-  if (!isNaN(value)) return Number(value); // 숫자인 경우 변환
-  
-  return value; // 문자열인 경우 그대로 반환 ('uk-open' 등)
+  // 숫자 처리
+  if (!isNaN(value) && value !== '') return Number(value);
+  // Object, Array 처리 (JSON 객체 가능성)
+  if (
+    (value.startsWith('{') && value.endsWith('}')) || 
+    (value.startsWith('[') && value.endsWith(']'))
+  ) {
+    try {
+      return JSON.parse(value);
+    } catch (e) {
+      // Parsing 실패시 원문 반환
+      return value;
+    }
+  }
+  // 나머지(문자열 등)
+  return value;
 }
 
 function parseOptions(attrString) {
