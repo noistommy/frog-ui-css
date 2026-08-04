@@ -69,3 +69,90 @@
     margin-left: 24px;
   }
 }
+$animation-duration: 1s;
+$animation-duration-fade: 0.5s;
+
+[class*="#{$ns}-motion-"] {
+  animation: $animation-duration ease-out both;
+}
+
+.#{$ns}-motion {
+  &-fade {
+    animation-name: fr-fade;
+    animation-duration: $animation-duration-fade;
+    animation-timing-function: linear;
+  }
+
+  &-scale-up {
+    animation-name: fr-fade, fr-scale-up;
+  }
+
+  &-scale-down {
+    animation-name: fr-fade, fr-scale-down;
+  }
+
+  &-reverse {
+    animation-direction: reverse;
+    animation-timing-function: ease-in;
+  }
+
+  &-slide-top {
+    animation-name: fr-fade, fr-slide-top;
+  }
+
+  &-slide-bottom {
+    animation-name: fr-fade, fr-slide-bottom;
+  }
+
+  &-slide-left {
+    animation-name: fr-fade, fr-slide-left;
+  }
+
+  &-slide-right {
+    animation-name: fr-fade, fr-slide-right;
+  }
+
+  &-toggle {
+    cursor: pointer;
+    &:not(:hover):not(:focus) {
+      [class*="#{$ns}-motion-"] { animation-name: none; }
+    }
+  }
+}
+
+
+
+@keyframes fr-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fr-scale-up {
+  0% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fr-scale-down {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fr-slide-top {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fr-slide-bottom {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fr-slide-left {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fr-slide-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateY(0); }
+}

@@ -774,21 +774,21 @@ class Tooltip {
         if (this.options.trigger === 'hover') {
             this.root.addEventListener('mouseenter', e => { this.setShow(e) })
             this.root.addEventListener('mouseleave', e => { this.setClose() })
-            this.root.addEventListener('touchstart', e => { this.setShow() })
+            this.root.addEventListener('touchstart', e => { this.setShow(e) })
             this.root.addEventListener('touchend', e => { this.setClose() })
             this.root.addEventListener('touchcancel', e => { this.setClose() })
         } else {
-            this.root.addEventListener('click', e => { this.setToggle() })
+            this.root.addEventListener('click', e => { this.setToggle(e) })
             // window.addEventListener('click', e => { this.setToggle(false) })
         }
 
        
     }
-    setToggle () {
+    setToggle (e) {
         if (this._show) {
             this.setClose()
         } else {
-            this.setShow()
+            this.setShow(e)
         }
     }
     setTooltip () {
@@ -885,7 +885,8 @@ class Tooltip {
         this._show = value
     }
 
-    setShow () {
+    setShow (e) {
+        e?.preventDefault();
         if(this._show) return
         this.setTooltip()
         this._show = true
@@ -978,7 +979,7 @@ class TreeList {
   const frSelects = document.querySelectorAll('[fr-select]');
   const frCollapses = document.querySelectorAll('[fr-collapse]');
   const tooltips = document.querySelectorAll('[fr-tooltip]')
-  
+
   frSelects.forEach((select, i) => {
       const options = parseOptions(select.getAttribute('fr-select'))
 

@@ -51,6 +51,72 @@ block contents
                             code.language-markup 
                                 | #{codes.base}
             .section-contents
+                h4.contents-title Anmations
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-grid.divide-3.divide-xs-1
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-fade
+                                    .contents
+                                        | Fade
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-scale-up
+                                    .contents
+                                        | Scale-up
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-scale-down
+                                    .contents
+                                        | Scale-down
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-top
+                                    .contents
+                                        | Slide-top
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-bottom
+                                    .contents
+                                        | Slide-bottom
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-left
+                                    .contents
+                                        | Slide-left
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-right
+                                    .contents
+                                        | Slide-right
+            .section-contents.reverse
+                h4.contents-title Anmations Reverse
+                .ga-segment.float.round-m.attached
+                    .contents-wrapper
+                        .ga-grid.divide-4
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-fade.ga-motion-reverse
+                                    .contents
+                                        | Fade
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-scale-up.ga-motion-reverse
+                                    .contents
+                                        | Scale-up
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-scale-down.ga-motion-reverse
+                                    .contents
+                                        | Scale-down
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-top.ga-motion-reverse
+                                    .contents
+                                        | Slide-top
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-bottom.ga-motion-reverse
+                                    .contents
+                                        | Slide-bottom
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-left.ga-motion-reverse
+                                    .contents
+                                        | Slide-left
+                            .column.ga-motion-toggle
+                                .ga-card.border.ga-motion-slide-right.ga-motion-reverse
+                                    .contents
+                                        | Slide-right
+            .section-contents
                 h4.contents-title Files
                 .ga-segment.float.round-m.attached
                     .contents-wrapper
@@ -98,4 +164,13 @@ block module
                 const treeInstance = new TreeList(tree)
                 treeInstance.init()
             })
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        console.log('요소가 뷰포트 내에 있습니다.');
+                    }
+                });
+            });
+            observer.observe(document.querySelector('.reverse'));
         })()

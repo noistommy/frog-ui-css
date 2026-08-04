@@ -8399,6 +8399,100 @@ table.ga-table .ga-button {
   margin-left: 24px;
 }
 
+[class*=ga-motion-] {
+  animation: 1s ease-out both;
+}
+
+.ga-motion-fade {
+  animation-name: fr-fade;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+.ga-motion-scale-up {
+  animation-name: fr-fade, fr-scale-up;
+}
+.ga-motion-scale-down {
+  animation-name: fr-fade, fr-scale-down;
+}
+.ga-motion-reverse {
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+}
+.ga-motion-slide-top {
+  animation-name: fr-fade, fr-slide-top;
+}
+.ga-motion-slide-bottom {
+  animation-name: fr-fade, fr-slide-bottom;
+}
+.ga-motion-slide-left {
+  animation-name: fr-fade, fr-slide-left;
+}
+.ga-motion-slide-right {
+  animation-name: fr-fade, fr-slide-right;
+}
+.ga-motion-toggle {
+  cursor: pointer;
+}
+.ga-motion-toggle:not(:hover):not(:focus) [class*=ga-motion-] {
+  animation-name: none;
+}
+
+@keyframes fr-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fr-scale-up {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fr-scale-down {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fr-slide-top {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fr-slide-bottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fr-slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fr-slide-right {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .ga-slider {
   --unit: attr(data-unit, "");
   display: block;
