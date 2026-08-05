@@ -495,7 +495,10 @@ class Slider {
     this.el.classList.add(...claArr)
   }
  
-  handleDown ({target, pageX}) {
+  handleDown (e) {
+    e.preventDefault()
+    const {target, pageX} = e
+
     const pageValue = this.getPageX(event)
     if (target.closest('.control-btn')) {
       this.catch = true
@@ -503,8 +506,8 @@ class Slider {
       window.addEventListener('mousemove', e => this.handleMove(e))
       window.addEventListener('mouseup', e => this.handleUp(e))
       window.addEventListener('touchmove', e => this.handleMove(e))
-      window.addEventListener('touchend', e => this.handleMove(e))
-      window.addEventListener('touchleave', e => this.handleMove(e))
+      window.addEventListener('touchend', e => this.handleUp(e))
+      window.addEventListener('touchleave', e => this.handleUp(e))
     } else if (target.closest('.break-point')) {
       this.changeValue (this.setPx(target.dataset.step) + this.initX)
     }  else {
@@ -521,8 +524,8 @@ class Slider {
     window.removeEventListener('mousemove', e => this.handleMove(e))
     window.removeEventListener('mouseup', e => this.handleUp(e))
     window.removeEventListener('touchmove', e => this.handleMove(e))
-    window.removeEventListener('touchend', e => this.handleMove(e))
-    window.removeEventListener('touchleave', e => this.handleMove(e))
+    window.removeEventListener('touchend', e => this.handleUp(e))
+    window.removeEventListener('touchleave', e => this.handleUp(e))
   }
   changeValue (pageX = null) {
     if (pageX) {

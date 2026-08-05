@@ -189,13 +189,13 @@
 </a>
 
 
-<a class="ga-card border media" href="/pages/tree_list">
+<a class="ga-card border media" href="/pages/tree">
 <div class="image">
 
 !['image'](https://nt-cabinet.vercel.app/ui-el-img/tree_list.svg)
 
 </div>
-<div class="contents">Tree List</div>
+<div class="contents">Tree</div>
 </a>
 
 

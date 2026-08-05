@@ -69,11 +69,19 @@
     margin-left: 24px;
   }
 }
-$animation-duration: 1s;
+$animation-duration: .5s;
 $animation-duration-fade: 0.5s;
 
 [class*="#{$ns}-motion-"] {
   animation: $animation-duration ease-out both;
+}
+
+.#{$ns}-motion-duration {
+  @each $dur in (100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 1000) {
+    &-#{$dur} {
+      animation-duration: #{$dur}ms;
+    }
+  }
 }
 
 .#{$ns}-motion {
@@ -81,35 +89,69 @@ $animation-duration-fade: 0.5s;
     animation-name: fr-fade;
     animation-duration: $animation-duration-fade;
     animation-timing-function: linear;
+    &-scale-up {
+      animation-name: fr-fade, fr-scale-up;
+    }
+  
+    &-scale-down {
+      animation-name: fr-fade, fr-scale-down;
+    }
+  
+    &-slide-top {
+      animation-name: fr-fade, fr-slide-top;
+    }
+  
+    &-slide-bottom {
+      animation-name: fr-fade, fr-slide-bottom;
+    }
+  
+    &-slide-left {
+      animation-name: fr-fade, fr-slide-left;
+    }
+  
+    &-slide-right {
+      animation-name: fr-fade, fr-slide-right;
+    }
   }
 
+
   &-scale-up {
-    animation-name: fr-fade, fr-scale-up;
+    animation-name: fr-scale-up;
   }
 
   &-scale-down {
-    animation-name: fr-fade, fr-scale-down;
+    animation-name: fr-scale-down;
+  }
+
+  &-slide-top {
+    animation-name: fr-slide-top;
+  }
+
+  &-slide-bottom {
+    animation-name: fr-slide-bottom;
+  }
+
+  &-slide-left {
+    animation-name: fr-slide-left;
+  }
+
+  &-slide-right {
+    animation-name: fr-slide-right;
+  }
+
+  &-expand-up {
+    animation-name: fr-expand;
+    transform-origin: bottom center;
+  }
+  
+  &-expand-down {
+    animation-name: fr-expand;
+    transform-origin: top center;
   }
 
   &-reverse {
     animation-direction: reverse;
     animation-timing-function: ease-in;
-  }
-
-  &-slide-top {
-    animation-name: fr-fade, fr-slide-top;
-  }
-
-  &-slide-bottom {
-    animation-name: fr-fade, fr-slide-bottom;
-  }
-
-  &-slide-left {
-    animation-name: fr-fade, fr-slide-left;
-  }
-
-  &-slide-right {
-    animation-name: fr-fade, fr-slide-right;
   }
 
   &-toggle {
@@ -155,4 +197,9 @@ $animation-duration-fade: 0.5s;
 @keyframes fr-slide-right {
   0% { transform: translateX(100%); }
   100% { transform: translateY(0); }
+}
+
+@keyframes fr-expand {
+  0% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
 }

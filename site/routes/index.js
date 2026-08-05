@@ -207,6 +207,10 @@ router.get('/pages/breadcrumb', function(req, res, next) {
   res.render('components/breadcrumb',  { title: 'Breadcrumb', codes: codes.breadcrumb });
 });
 
+router.get('/pages/motions', function(req, res, next) {
+  res.render('components/motions',  { title: 'Motions', codes: codes.breadcrumb });
+});
+
 // Layout
 
 // Modules

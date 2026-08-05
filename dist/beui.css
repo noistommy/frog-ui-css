@@ -9053,7 +9053,41 @@ table.be-table .be-button {
 }
 
 [class*=be-motion-] {
-  animation: 1s ease-out both;
+  animation: 0.5s ease-out both;
+}
+
+.be-motion-duration-100 {
+  animation-duration: 100ms;
+}
+.be-motion-duration-150 {
+  animation-duration: 150ms;
+}
+.be-motion-duration-200 {
+  animation-duration: 200ms;
+}
+.be-motion-duration-250 {
+  animation-duration: 250ms;
+}
+.be-motion-duration-300 {
+  animation-duration: 300ms;
+}
+.be-motion-duration-400 {
+  animation-duration: 400ms;
+}
+.be-motion-duration-500 {
+  animation-duration: 500ms;
+}
+.be-motion-duration-600 {
+  animation-duration: 600ms;
+}
+.be-motion-duration-700 {
+  animation-duration: 700ms;
+}
+.be-motion-duration-800 {
+  animation-duration: 800ms;
+}
+.be-motion-duration-1000 {
+  animation-duration: 1000ms;
 }
 
 .be-motion-fade {
@@ -9061,27 +9095,53 @@ table.be-table .be-button {
   animation-duration: 0.5s;
   animation-timing-function: linear;
 }
-.be-motion-scale-up {
+.be-motion-fade-scale-up {
   animation-name: fr-fade, fr-scale-up;
 }
-.be-motion-scale-down {
+.be-motion-fade-scale-down {
   animation-name: fr-fade, fr-scale-down;
+}
+.be-motion-fade-slide-top {
+  animation-name: fr-fade, fr-slide-top;
+}
+.be-motion-fade-slide-bottom {
+  animation-name: fr-fade, fr-slide-bottom;
+}
+.be-motion-fade-slide-left {
+  animation-name: fr-fade, fr-slide-left;
+}
+.be-motion-fade-slide-right {
+  animation-name: fr-fade, fr-slide-right;
+}
+.be-motion-scale-up {
+  animation-name: fr-scale-up;
+}
+.be-motion-scale-down {
+  animation-name: fr-scale-down;
+}
+.be-motion-slide-top {
+  animation-name: fr-slide-top;
+}
+.be-motion-slide-bottom {
+  animation-name: fr-slide-bottom;
+}
+.be-motion-slide-left {
+  animation-name: fr-slide-left;
+}
+.be-motion-slide-right {
+  animation-name: fr-slide-right;
+}
+.be-motion-expand-up {
+  animation-name: fr-expand;
+  transform-origin: bottom center;
+}
+.be-motion-expand-down {
+  animation-name: fr-expand;
+  transform-origin: top center;
 }
 .be-motion-reverse {
   animation-direction: reverse;
   animation-timing-function: ease-in;
-}
-.be-motion-slide-top {
-  animation-name: fr-fade, fr-slide-top;
-}
-.be-motion-slide-bottom {
-  animation-name: fr-fade, fr-slide-bottom;
-}
-.be-motion-slide-left {
-  animation-name: fr-fade, fr-slide-left;
-}
-.be-motion-slide-right {
-  animation-name: fr-fade, fr-slide-right;
 }
 .be-motion-toggle {
   cursor: pointer;
@@ -9144,6 +9204,14 @@ table.be-table .be-button {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes fr-expand {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 .be-rate {
