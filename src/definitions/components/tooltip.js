@@ -14,12 +14,26 @@ class Tooltip {
         this._show = this.options.show
         this.tooltip = null
         this.currenPos = null
+        this.touchTimer = null
+        this.longTouch = false
         if (this.options.trigger === 'hover') {
             this.root.addEventListener('mouseenter', e => { this.setShow(e) })
             this.root.addEventListener('mouseleave', e => { this.setClose() })
-            this.root.addEventListener('touchstart', e => { this.setShow(e) })
-            this.root.addEventListener('touchend', e => { this.setClose() })
-            this.root.addEventListener('touchcancel', e => { this.setClose() })
+
+            // this.root.addEventListener('touchstart', e => { 
+            //     this.longTouch = false
+            //     this.touchTimer = setTimeout(() => {
+            //         this.longTouch = true
+            //         this.setShow(e) 
+            //     }, 600);
+            // })
+            // this.root.addEventListener('touchend', e => { 
+            //     clearTimeout(this.touchTimer)
+            //     if (this.longTouch) e.preventDefault()
+
+            //     this.setClose() 
+            // })
+            // this.root.addEventListener('touchcancel', e => { this.setClose() })
         } else {
             this.root.addEventListener('click', e => { this.setToggle(e) })
             // window.addEventListener('click', e => { this.setToggle(false) })
@@ -28,6 +42,7 @@ class Tooltip {
        
     }
     setToggle (e) {
+        console.log('toggle')
         if (this._show) {
             this.setClose()
         } else {
@@ -129,7 +144,7 @@ class Tooltip {
     }
 
     setShow (e) {
-        e?.preventDefault();
+        // e?.preventDefault();
         if(this._show) return
         this.setTooltip()
         this._show = true
