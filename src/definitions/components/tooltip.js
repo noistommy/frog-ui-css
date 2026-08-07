@@ -57,10 +57,8 @@ class Tooltip {
         document.body.append(this.tooltip)
         this.setPosition()
 
-        if (this.options.trigger === 'click') {
-            window.addEventListener('scroll', () => this.setPosition(), true)
-            window.addEventListener('resize', () => this.setPosition())
-        }
+        window.addEventListener('scroll', () => this.setPosition(), true)
+        window.addEventListener('resize', () => this.setPosition())
         requestAnimationFrame(() => {
             this.tooltip.classList.add('show')
         });
@@ -156,10 +154,8 @@ class Tooltip {
             this.tooltip.remove()
             this.tooltip = null
         }
-        if (this.options.trigger === 'click') {
-            window.removeEventListener('scroll', () => this.setPosition(), true)
-            window.removeEventListener('resize', () => this.setPosition())
-        }
+        window.removeEventListener('scroll', () => this.setPosition(), true)
+        window.removeEventListener('resize', () => this.setPosition())
     }
 
 }
