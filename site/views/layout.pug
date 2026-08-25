@@ -80,7 +80,7 @@ html
                                 path(d="M32 36C32 33.7909 33.7909 32 36 32H48C50.2091 32 52 33.7909 52 36V48C52 50.2091 50.2091 52 48 52H36C33.7909 52 32 50.2091 32 48V36Z", fill="currentColor")
                             span FROG
                     nav.sub-menu.small
-                        .device.ga-buttons.round(fr-select)
+                        .device.ga-buttons.round(fr-select, fr-tooltip="content: Device")
                             .ga-button.icon
                                 i.xi-mobile
                             .ga-button.icon
@@ -88,7 +88,7 @@ html
                             .ga-button.icon
                                 i.xi-desktop
 
-                        .locale
+                        .locale(fr-tooltip="content: Language")
                             .ga-button.round
                         .buttons-part
                             .ga-button.round.badge.compact
@@ -100,10 +100,10 @@ html
                                 .in-badge.ga-green vue
                                 a.link(href="https://beui.vercel.app/", target="_blank") 
                         
-                            .mode
+                            .mode(fr-tooltip="content: Theme Mode")
                                 .ga-button.icon.round.toggle-mode
                                     i.xi-sun-o
-                            .github
+                            .github(fr-tooltip="content: Github")
                                 a.ga-button.icon.round.toggle-mode(href="https://github.com/noistommy/frog-ui-css", target="_blank")
                                     i.xi-github
                         .more 

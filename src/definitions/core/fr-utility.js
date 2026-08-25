@@ -38,16 +38,22 @@ function parseOptions(attrString) {
   const pairs = attrString.split(';');
 
   pairs.forEach(pair => {
-      // 2. 콜론(:)을 기준으로 key와 value를 분리
-      const [key, value] = pair.split(':');
+    const colonIndex = pair.indexOf(':')
+    if (colonIndex === -1) return
 
-      if (key && value) {
-          const cleanKey = key.trim();
-          
-          // 3. 키값은 카멜케이스로 변경하고, 벨류값은 타입을 변환하여 객체에 바인딩
-          const camelKey = camelize(cleanKey);
-          options[camelKey] = parseValue(value);
-      }
+    // 2. 콜론(:)을 기준으로 key와 value를 분리
+    // const [key, value] = pair.split(':');
+
+    const key = pair.slice(0, colonIndex).trim()
+    const value = pair.slice(colonIndex + 1)
+
+    if (key && value) {
+        const cleanKey = key.trim();
+        
+        // 3. 키값은 카멜케이스로 변경하고, 벨류값은 타입을 변환하여 객체에 바인딩
+        const camelKey = camelize(cleanKey);
+        options[camelKey] = parseValue(value);
+    }
   });
 
   return options;

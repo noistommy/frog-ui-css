@@ -80,13 +80,13 @@ $sliderHandleSize: 1em;
     background-color: $white;
     position: absolute;
     width: 8px;
-    height: 100%;
-    top: 0;
-    transform: translateX(-50%) scale(0.6);
+    height: 8px;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.6);
     transition: transform 150ms ease-in;
     border-radius: 50%;
     &:hover {
-      transform: translateX(-50%) scale(.95);
+      transform: translate(-50%, -50%) scale(1.2);
     }
     &:first-child {
       margin-left: 4px;

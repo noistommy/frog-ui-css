@@ -1,12 +1,18 @@
 class Tooltip {
     #defaultOption = {
-       content: '',
-       pos: 'top-center',
-       theme: 'dark',
-       invert: true,
-       show: false,
-       trigger: 'hover',
-       className: 'ga-tooltip',
+        content: '',
+        pos: 'top-center',
+        theme: 'dark',
+        invert: true,
+        show: false,
+        trigger: 'hover',
+        selector: 'ga-tooltip',
+        size: null,
+        padding: 8,
+        maxWidth: 250,
+        textAlign: 'center',
+        offset: 10,
+        customClass: '',
     };
     constructor(root, options = {}) {
         this.root = root
@@ -16,37 +22,47 @@ class Tooltip {
         this.currenPos = null
         this.touchTimer = null
         this.longTouch = false
-        if (this.options.trigger === 'hover') {
-            this.root.addEventListener('mouseenter', e => { this.setShow(e) })
-            this.root.addEventListener('mouseleave', e => { this.setClose() })
-
-            // this.root.addEventListener('touchstart', e => { 
-            //     this.longTouch = false
-            //     this.touchTimer = setTimeout(() => {
-            //         this.longTouch = true
-            //         this.setShow(e) 
-            //     }, 600);
-            // })
-            // this.root.addEventListener('touchend', e => { 
-            //     clearTimeout(this.touchTimer)
-            //     if (this.longTouch) e.preventDefault()
-
-            //     this.setClose() 
-            // })
-            // this.root.addEventListener('touchcancel', e => { this.setClose() })
-        } else {
-            this.root.addEventListener('click', e => { this.setToggle(e) })
-            // window.addEventListener('click', e => { this.setToggle(false) })
-        }
-
-       
+        this.#createEvents()
     }
-    setToggle (e) {
-        console.log('toggle')
+
+    #createEvents () {
+        if (this.options.trigger === 'hover') {
+            this.root.addEventListener('mouseenter', this.setShow)
+            this.root.addEventListener('mouseleave', this.setClose)
+
+        } else {
+            this.root.addEventListener('click', this.setToggle)
+        }
+    }
+    destroy () {
+        if (this.options.trigger === 'hover') {
+            this.root.removeEventListener('mouseenter', this.setShow)
+            this.root.removeEventListener('mouseleave', this.setClose)
+
+        } else {
+            this.root.removeEventListener('click', this.setToggle)
+        }
+    }
+    setShow = () => {
+        if(this._show) return
+        this._show = true
+        this.setTooltip()
+    }
+    setClose = () => {
+        this._show = false
+        if (this.tooltip) {
+            this.tooltip.classList.remove('show')
+            this.tooltip.remove()
+            this.tooltip = null
+        }
+        window.removeEventListener('scroll', this.setPosition, true)
+        window.removeEventListener('resize', this.setPosition)
+    }
+    setToggle = () => {
         if (this._show) {
             this.setClose()
         } else {
-            this.setShow(e)
+            this.setShow()
         }
     }
     setTooltip () {
@@ -57,8 +73,8 @@ class Tooltip {
         document.body.append(this.tooltip)
         this.setPosition()
 
-        window.addEventListener('scroll', () => this.setPosition(), true)
-        window.addEventListener('resize', () => this.setPosition())
+        window.addEventListener('scroll', this.setPosition, true)
+        window.addEventListener('resize', this.setPosition)
         requestAnimationFrame(() => {
             this.tooltip.classList.add('show')
         });
@@ -69,20 +85,27 @@ class Tooltip {
         this.options.content :
         this.root.querySelector('[fr-target]').innerHTML
         this.tooltip.classList.add(...[
-            this.options.className,
+            this.options.selector,
             this.options.invert && 'invert',
+            this.options.size,
+            this.options.customClass ? ` ${this.options.customClass}` : null,
             // `theme-${this.options.theme}`,
         ]);
+        this.tooltip.style.maxWidth = this.options.maxWidth + 'px'
+        this.tooltip.style.paddingBlock = this.options.padding + 'px'
+        this.tooltip.style.paddingInline = (Number(this.options.padding) * 1.5) + 'px'
+        this.tooltip.style.textAlign = this.options.textAlign
     }
 
-    setPosition () {
+    setPosition = () =>{
+        if (!this._show || !this.tooltip) return
         const W = window.innerWidth;
         const H = window.innerHeight;
         let [dir, align] = this.options.pos.split('-') || ['top', 'center'];
 
         const rootPos = this.root.getBoundingClientRect();
         const ttPos = this.tooltip.getBoundingClientRect();
-        const offset = 10
+        const offset = this.options.offset;
         const alignOffset = 0
 
         let tPos = rootPos.top - ttPos.height - offset
@@ -141,21 +164,26 @@ class Tooltip {
         this._show = value
     }
 
-    setShow (e) {
-        // e?.preventDefault();
-        if(this._show) return
-        this.setTooltip()
-        this._show = true
-    }
-    setClose () {
-        this._show = false
-        if (this.tooltip) {
-            this.tooltip.classList.remove('show')
-            this.tooltip.remove()
-            this.tooltip = null
-        }
-        window.removeEventListener('scroll', () => this.setPosition(), true)
-        window.removeEventListener('resize', () => this.setPosition())
-    }
-
 }
+
+// const activeInstances = new Map();
+
+// export function initTooltip(options = {}) {
+//     clearTooltip();
+
+//     const selectorName = options.selector | 'fr-tooltip';
+//     const targetElement = document.querySelectorAll(`[${selectorName}]`);
+    
+//     targetElement.forEach(el => {
+//         const instance = new Tooltip(el, options)
+
+//         activeInstances.set(el, instance)
+//     })
+
+//     console.log(`${activeInstances.length}개의 툴팁 활성`)
+// }
+
+// export function clearTooltip () {
+//     activeInstances.forEach(instance => instance.destroy())
+//     activeInstances.clear();
+// }

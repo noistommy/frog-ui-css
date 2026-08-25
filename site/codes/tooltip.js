@@ -18,6 +18,44 @@ const trigger = `
 >...</div>
 `
 
+const offset = `
+<!-- @offset: number(px) -->
+<div class="parent-element" 
+  fr-tooltip="offset: {@offset}"
+>...</div>
+`
+
+const size = `
+<!-- @size: small | null -->
+<div class="parent-element" 
+  fr-tooltip="size: {@size}"
+>...</div>
+`
+
+const maxWidth = `
+<!-- @maxWidth: number-->
+<!-- default: 250-->
+<div class="parent-element" 
+  fr-tooltip="maxWidth: {@maxWidth}"
+>...</div>
+`
+
+const textAlign = `
+<!-- @textAlign: 'left | 'center' | 'right'-->
+<!-- default: center-->
+<div class="parent-element" 
+  fr-tooltip="textAlign: {@textAlign}"
+>...</div>
+`
+
+const padding = `
+<!-- @textAlign: number(px)-->
+<!-- default: 8-->
+<div class="parent-element" 
+  fr-tooltip="padding: {@padding}"
+>...</div>
+`
+
 const contentType = `
 <!-- type content -->
 <div class="parent-element" 
@@ -50,5 +88,5 @@ const aligns = `
 `
 
 module.exports = {
-  base,theme, trigger, contentType, position, aligns
+  base,theme, trigger, offset, size, maxWidth, textAlign, padding, contentType, position, aligns
 }

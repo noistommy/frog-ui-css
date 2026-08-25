@@ -175,3 +175,90 @@ block contents
                             pre
                                 code.language-markup
                                     | #{codes.aligns}
+            .section-contents
+                h4.contents-title Offset
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: Offset 10; offset: 10") Offset 10px 
+                        .ga-button(fr-tooltip="content: Offset 20; offset: 20") Offset 20px 
+                        .ga-button(fr-tooltip="content: Offset 0; offset: 0") Offset 0px 
+                        .ga-button(fr-tooltip="content: Offset -10; offset: -10") Offset -10px 
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.offset}
+            .section-contents
+                h4.contents-title Size
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="content: Normal size;") Normal
+                        .ga-button(fr-tooltip="content: Small size; size: small") Small
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.size}
+            .section-contents
+                h4.contents-title Max width
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="maxWidth: 150") Max Width 150
+                            span(fr-target)
+                                .title  Width 150px
+                                .desc= lorem
+                        .ga-button(fr-tooltip="maxWidth: 250") Max Width 250
+                            span(fr-target)
+                                .title  Width 250px
+                                .desc= lorem
+                        .ga-button(fr-tooltip="maxWidth: 500") Max Width 500
+                            span(fr-target)
+                                .title  Width 500px
+                                .desc= lorem
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.maxWidth}
+            .section-contents
+                h4.contents-title Text Alignment
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="textAlign: left") Align Left
+                            span(fr-target)
+                                .title  Align Left
+                                .desc= lorem
+                        .ga-button(fr-tooltip="textAlign: center") Align Center
+                            span(fr-target)
+                                .title  Align Left Center
+                                .desc= lorem
+                        .ga-button(fr-tooltip="textAlign: right") Align Right
+                            span(fr-target)
+                                .title  Align Right
+                                .desc= lorem
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.textAlign}
+            .section-contents
+                h4.contents-title Padding
+                .ga-segment.float.round-m
+                    .contents-wrapper.ga.flex.center
+                        .ga-button(fr-tooltip="padding: 4") Padding 4
+                            span(fr-target)
+                                .title  padding: 4px
+                                .desc= lorem
+                        .ga-button(fr-tooltip="padding: 8") Padding 8
+                            span(fr-target)
+                                .title  padding: 8px
+                                .desc= lorem
+                        .ga-button(fr-tooltip="padding: 16") Padding 16
+                            span(fr-target)
+                                .title  padding: 16px
+                                .desc= lorem
+                        .ga-button(fr-tooltip="padding: 24") Padding 24
+                            span(fr-target)
+                                .title  padding: 24px
+                                .desc= lorem
+    
+                    .footer
+                            pre
+                                code.language-markup
+                                    | #{codes.padding}

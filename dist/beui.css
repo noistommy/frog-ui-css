@@ -8417,14 +8417,14 @@ table.be-table .be-button {
   background-color: #ffffff;
   position: absolute;
   width: 8px;
-  height: 100%;
-  top: 0;
-  transform: translateX(-50%) scale(0.6);
+  height: 8px;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
   transition: transform 150ms ease-in;
   border-radius: 50%;
 }
 .be-slider .break-point:hover {
-  transform: translateX(-50%) scale(0.95);
+  transform: translate(-50%, -50%) scale(1.2);
 }
 .be-slider .break-point:first-child {
   margin-left: 4px;
@@ -9462,7 +9462,7 @@ table.be-table .be-button {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 9999;
+  z-index: 99999;
   word-break: break-all;
   filter: drop-shadow(0 0 5px 2px rgba(80, 80, 80, 0.2));
   background-color: var(--gray-5);
