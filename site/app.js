@@ -4,6 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+
+
 const indexRouter = require('./routes/index');
 // var pagesRouter = require('./routes/pages');
 const i18n = require('./i18n');
@@ -33,10 +35,7 @@ app.get(/^\/en(\/.*)?$/, (req, res, next) => {
   res.redirect(path);
 });
 
-
 app.use('/', indexRouter);
-
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

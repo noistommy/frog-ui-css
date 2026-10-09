@@ -1,85 +1,162 @@
-# Frog UI
+<!-- README.md -->
+**English** | [한국어](./README_KO.md)
+<div align="center">
 
-**"코드가 아니라 언어로 스타일을 말하다. (Speaking styles in language, not code.)"**
+<!-- TODO: add your logo, e.g. <img src="./docs/logo.png" alt="Frog UI logo" width="120" /> -->
 
-Frog UI는 Semantic CSS를 사용하여 일관되고 의미 있는 화면을 구현하는 현대적인 CSS 프레임워크입니다.
+# 🐸 Frog UI
 
-## 🐸 Overview
+**Speaking styles in language, not code.**
 
-Frog UI는 SCSS로 작성되고 Gulp로 빌드되는 고성능 CSS 프레임워크입니다. 특정 프레임워크(React, Vue 등)에 의존하지 않는 순수 CSS 레이어를 지향하며, 개발자가 UI를 구현할 때 약어나 암호 같은 토큰 대신 자연스러운 문장으로 그림 그리듯 스타일을 적용할 수 있도록 설계되었습니다.
+A modern CSS framework that uses Semantic CSS to build consistent, meaningful interfaces.
 
-## ✨ Core Principles
+[Documentation](https://frog-ui-css.vercel.app/) ·
+[Components](https://frog-ui-css.vercel.app/pages/components) ·
+[Design Tokens](https://frog-ui-css.vercel.app/pages/tokens) ·
+[Theming](https://frog-ui-css.vercel.app/pages/theming)
 
-1. **프레임워크의 제약을 받지 않을 것 (Framework Agnostic)**
-   - 스타일과 동작을 분리하여 어떤 UI 라이브러리와도 결합 가능합니다.
-   - 의존성을 최소화하여 새로운 기술 스택이 등장해도 스타일 시스템을 그대로 재사용할 수 있습니다.
+<!-- TODO: add a screenshot or GIF, e.g. ![Frog UI preview](./docs/preview.png) -->
 
-2. **프로젝트에 최적화된 시스템 (Tailored for Your Project)**
-   - 완성된 라이브러리를 강요하기보다, 각 프로젝트의 브랜드 아이덴티티를 온전히 담을 수 있는 도구를 제공합니다.
-   - 컬러, 타이포그래피 등 핵심 디자인 토큰 변경만으로 고유한 테마를 구축할 수 있습니다.
+</div>
 
-3. **압도적인 개발자 경험 (Superior DX)**
-   - 클래스 이름만 보고도 역할을 즉시 이해할 수 있는 시맨틱 네이밍을 지향합니다.
-   - 직관적인 요소 조합을 통해 학습 비용을 낮추고 구현 속도를 극대화합니다.
+---
 
-## 🎨 Semantic CSS Concept
+## Overview
 
-Frog UI의 네이밍은 시각적 특성을 그대로 묘사합니다.
+Frog UI is a high-performance CSS framework written in SCSS and built with Gulp. It aims to be a pure CSS layer that does not depend on any specific framework (React, Vue, etc.).
 
-- **Brands:** `primary`, `secondary` (브랜드 중요도와 우선순위)
-- **Status:** `success`, `info`, `danger`, `attention`, `importance`
-- **Sizes:** `tiny` ~ `massive` (상대 단위 rem 기반)
-- **Features:** `fluid` (가변 너비), `round` (라운드 처리), `compact` (여백 압축), `border`/`outline`
-- **Grouping:** `{element}s` (예: `ga-buttons`, `ga-tags`) - 그룹 래퍼 명명 규칙
+Instead of cryptic abbreviations and coded tokens, you describe your UI in natural, readable words, almost like painting a picture with sentences.
 
-### Usage Example
+## Core Principles
+
+### 1. Framework agnostic
+- Styling is separated from behavior, so Frog UI combines with any UI library.
+- Dependencies are kept to a minimum, so your style system stays reusable even when a new tech stack appears.
+
+### 2. Tailored for your project
+- Rather than forcing a finished, one-size-fits-all library on you, Frog UI gives you tools to express each project's brand identity.
+- Change core design tokens such as color and typography to build your own theme.
+
+### 3. Superior developer experience
+- Semantic naming lets you understand a class's role at a glance.
+- Intuitive composition lowers the learning curve and speeds up implementation.
+
+## Semantic CSS Concept
+
+Frog UI class names describe what an element looks like and what it means.
+
+| Category | Classes | Description |
+| --- | --- | --- |
+| **Brands** | `primary`, `secondary` | Brand importance and priority |
+| **Status** | `success`, `info`, `danger`, `attention`, `importance` | Meaning and state |
+| **Sizes** | `tiny` ~ `massive` | Relative sizes based on `rem` |
+| **Features** | `fluid`, `round`, `compact`, `border`, `outline` | Fluid width, rounded corners, tighter spacing, border styles |
+| **Grouping** | `{element}s` (e.g. `ga-buttons`, `ga-tags`) | Naming rule for group wrappers |
+
+### Usage example
+
 ```html
-<!-- namespace : "ga" -->
+<!-- namespace: "ga" -->
 
-<!-- "둥근 모서리에 주요 색상을 가진 유동적인 버튼" -->
+<!-- "A fluid button with rounded corners in the primary color" -->
 <button class="ga-button primary round fluid">
   Submit
 </button>
 
-<!-- "성공 상태를 나타내는 작은 태그" -->
+<!-- "A small tag that indicates a success state" -->
 <span class="ga-tag label success small">
   Completed
 </span>
 ```
 
-## 🛠 Tech Stack & Build
+Browse every component with live examples in the [documentation](https://frog-ui-css.vercel.app/pages/components).
+
+## Features
+
+- **Semantic CSS**: readable class names that combine design tokens with meaningful words
+- **Design tokens**: a single set of tokens drives color, typography, and more
+- **Light and dark themes**: supported out of the box with CSS variables
+- **Custom theming**: build your own theme by changing tokens
+- **Minimal utilities**: a small, curated set of utility classes, so you don't need a separate utility library
+- **Responsive**: responsive components and a grid system
+
+## Use with React and Vue
+
+Because Frog UI is plain CSS, it pairs well with headless UI components. Two companion libraries are available:
+
+| Library | Description |
+| --- | --- |
+| [Be-UI for React](https://react-be-ui.vercel.app/) | Headless React components styled with Frog UI |
+| [Be-UI for Vue](https://beui.vercel.app/) | Headless Vue components styled with Frog UI |
+
+## Tech Stack and Build
 
 - **Styling:** SCSS (Sass), PostCSS (Autoprefixer)
-- **Build Tool:** Gulp
-- **Documentation:** Node.js, Express, Pug, Markdown-it
+- **Build tool:** Gulp
+- **Documentation site:** Node.js, Express, Pug, Markdown-it
 
-### Commands
+### Getting started
 
 ```bash
-# 의존성 설치
+# Install dependencies
 npm install
 
-# 프레임워크 빌드 (dist/ 및 site/public/ 로 빌드)
+# Build the framework (outputs to dist/ and site/public/)
 npx gulp build
 
-# 특정 테마 빌드
+# Build a specific theme
 npx gulp build --file=gcloud
 
-# 전체 테마 빌드
+# Build all themes
 npx gulp buildAll
 
-# 문서 사이트 실행 (Local Development)
+# Run the documentation site locally
 npm run dev
 ```
 
-## 📂 Project Structure
+The built CSS and JS files are generated in `dist/`.
 
-- `src/`: 프레임워크 코어 소스 (Definitions, Themes, Utils)
-- `dist/`: 빌드된 정적 파일 (.css, .js)
-- `site/`: Frog UI 가이드 및 데모 사이트
-- `tasks/`: 빌드 및 자동화 스크립트
+<!-- TODO: once published, add CDN / npm install instructions here -->
 
----
-Developed by [noistommy@gmail.com](mailto:noistommy@gmail.com)
+## CDN
 
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/noistommy/frog-ui-css@main/dist/css/frogui.min.css" />
+```
 
+```css
+@import url("https://cdn.jsdelivr.net/gh/noistommy/frog-ui-css@main/dist/css/frogui.min.css");
+```
+
+## Project Structure
+
+```text
+src/     Framework core source (definitions, themes, utils)
+dist/    Built static files (.css, .js)
+site/    Frog UI guide and demo site
+tasks/   Build and automation scripts
+```
+
+## Documentation
+
+Full documentation is available at **[frog-ui-css.vercel.app](https://frog-ui-css.vercel.app/)**:
+
+- [What is Frog?](https://frog-ui-css.vercel.app/pages/welcome)
+- [Components](https://frog-ui-css.vercel.app/pages/components)
+- [Design Tokens](https://frog-ui-css.vercel.app/pages/tokens)
+- [Semantic Classes](https://frog-ui-css.vercel.app/pages/semantic)
+- [Theming](https://frog-ui-css.vercel.app/pages/theming)
+- [Utility Classes](https://frog-ui-css.vercel.app/pages/utilities)
+
+## Contributing
+
+Issues and pull requests are welcome. If you find a bug, have an idea, or want to improve the docs, please [open an issue](https://github.com/noistommy/frog-ui-css/issues).
+
+## Author
+
+Developed by [noistommy](https://github.com/noistommy) · [noistommy@gmail.com](mailto:noistommy@gmail.com)
+
+<!-- ## License
+
+<!-- TODO: confirm your license and add a LICENSE file -->
+<!-- Released under the [MIT License](./LICENSE). --> -->

@@ -84,7 +84,7 @@ Frog UI는 `scss`기반으로 설계된 디자인 시스템이 포함된 CSS 프
 - [Colors](https://frog-ui-css.app/pages/colors): 브랜딩, 배경, UI 상태를 위한 컬러 토큰 정의
 
 ### Elements
-- [Bedge](https://frog-ui-css.app/pages/badge): 카운트나 상태를 보여주는 작은 시각적 인디케이터
+- [Badge](https://frog-ui-css.app/pages/badge): 카운트나 상태를 보여주는 작은 시각적 인디케이터
 - [Button](https://frog-ui-css.app/pages/button): 크기, 색상, 상태에 따른 다양한 버튼 인터랙션 컴포넌트
 - [Calendar](https://frog-ui-css.app/pages/calendar): 날짜 선택 및 스케줄링을 위한 캘린더 UI 컴포넌트
 - [Cards](https://frog-ui-css.app/pages/cards): 텍스트, 이미지, 액션을 묶어 보여주는 카드 레이아웃

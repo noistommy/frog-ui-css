@@ -143,22 +143,25 @@ function initLocaleButton() {
     const currentPath = window.location.pathname;
     
     const button = localeContainer.querySelector('.ga-button');
+    const lang_switch = localeContainer.querySelector('.ga-switch.lang');
     // 버튼 생성
     const link = document.createElement('a');
     link.className = 'link';
     
     if (currentLocale === 'ko') {
         // button.textContent = '한국어 -> ENGLISH';
-        button.textContent = '한';
+        lang_switch.querySelector('input').checked = true
+        button.textContent = 'KO → EN';
         link.href = `/en${currentPath}`;
     } else {
-        button.textContent = 'A';
+        lang_switch.querySelector('input').checked = false
+        button.textContent = 'EN → KO';
         // button.textContent = 'ENGLISH -> 한국어';
         link.href = `/ko${currentPath}`;
     }
     updateGiscuLocals(currentLocale)
     
-    button.appendChild(link);
+    lang_switch.appendChild(link);
     localeContainer.appendChild(button);
 }
 

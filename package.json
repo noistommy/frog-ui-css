@@ -26,6 +26,7 @@
   "author": "noistommy@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "@noistommy/nt-tooltip": "^1.0.1",
     "@types/pug": "^2.0.10",
     "autoprefixer": "^10.4.21",
     "del": "^7.1.0",

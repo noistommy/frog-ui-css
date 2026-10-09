@@ -53,6 +53,7 @@ html
             });
         script(src="/pagefind/pagefind-component-ui.js" type="module")
         link(href="/pagefind/pagefind-component-ui.css", rel="stylesheet")
+        link(href="https://unpkg.com/react-nt-tooltip@1.4.0/dist/nt-tooltip.css", rel="stylesheet")
     body
         #root
             header.gnb
@@ -65,7 +66,7 @@ html
                         else
                             .nav-list.ga.flex.px-2
                                 .nav-item
-                                    .ga-button.text.round 
+                                    .ga-button.text.round(nt-tooltip="content: About;")
                                         | About
                                         a.link(href="/pages/welcome")
                                 .nav-item
@@ -88,8 +89,12 @@ html
                             .ga-button.icon
                                 i.xi-desktop
 
-                        .locale(fr-tooltip="content: Language")
+                        .locale(fr-tooltip="content: Language to")
                             .ga-button.round
+                            .ga-switch.button.round.lang
+                                input(type="checkbox" checked="false")
+                                span.on KO
+                                span.off EN
                         .buttons-part
                             .ga-button.round.badge.compact
                                 | Be-UI 
@@ -135,8 +140,12 @@ html
         script.
             window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
         script(defer, src="/_vercel/insights/script.js")
+        script(src="https://unpkg.com/@noistommy/nt-tooltip")
         script.
-
+           document.addEventListener('DOMContentLoaded', () => {
+                NtTooltip.initTooltip()
+           })
+        script.
             const iframeWrap = document.querySelector('.mobile-view')
             const iframeView = document.getElementById('iframe-view');
             const dList = ['mobile', 'tablet', 'desktop'] 

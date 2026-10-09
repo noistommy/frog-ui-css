@@ -118,7 +118,7 @@ deep-blue, deep-purple, purple, brown, gray -->
 </button>
 ```
 
-#### With Bedge
+#### With Badge
 
 ```html
 <button class="ga-button badge">

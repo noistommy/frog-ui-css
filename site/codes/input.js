@@ -64,7 +64,7 @@ const icon =
   <input type="text" placeholder="Insert text" />    
   <i class="xi-icon"></i>
 </div>`
-const bedge = 
+const badge = 
 `<div class="ga-input badge">    
   <input type="text" placeholder="Insert text" />    
   <span class="ga-badge">B</span>
@@ -99,6 +99,6 @@ const textarea =
 
 module.exports = {
   base, label, disabled, readonly, underline, transparent, 
-  compact, edit, status, fluid, unit, icon, bedge, labeled, 
+  compact, edit, status, fluid, unit, icon, badge, labeled, 
   button, textarea
 }

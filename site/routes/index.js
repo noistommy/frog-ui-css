@@ -9,6 +9,8 @@ var contents = require('../contents')
 
 var markdownIt = require('markdown-it')
 
+var default_lang = 'en'
+
 var md = new markdownIt({
   html: true,
   linkify: true,
@@ -30,21 +32,21 @@ router.get('/', function(req, res, next) {
 router.get('/pages/welcome', function(req, res, next) {
   res.render('components/mdTemp',  {
     title: 'Welcome to Frog' ,
-    document:  getHtmlContents('welcome', req.cookies.lang || 'ko')
+    document:  getHtmlContents('welcome', req.cookies.lang || default_lang)
   });
 });
 
 router.get('/pages/principle', function(req, res, next) {
   res.render('components/mdTemp',  {
     title: 'Principles' ,
-    document:  getHtmlContents('principle', req.cookies.lang || 'ko')
+    document:  getHtmlContents('principle', req.cookies.lang || default_lang)
   });
 });
 
 router.get('/pages/faqs', function(req, res, next) {
   res.render('components/faqs',  {
     title: 'faqs', 
-    document: getHtmlContents('faqs', req.cookies.lang || 'ko')
+    document: getHtmlContents('faqs', req.cookies.lang || default_lang)
   });
 });
 
@@ -52,12 +54,12 @@ router.get('/pages/components', function(req, res, next) {
   // res.render('components/components',  {title: 'Components' });
   res.render('components/mdTemp',  {
     title: 'Components' ,
-    document:  getHtmlContents('components', req.cookies.lang || 'ko')
+    document:  getHtmlContents('components', req.cookies.lang || default_lang)
   });
 });
 
 router.get('/pages/semantic', function(req, res, next) {
-  const lang = req.cookies.lang || 'ko'
+  const lang = req.cookies.lang || default_lang
   const mdPath = path.join(__dirname, `../mds/${lang}/semantic.md`);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const htmlContent = md.render(mdContent);
@@ -65,7 +67,7 @@ router.get('/pages/semantic', function(req, res, next) {
 });
 
 router.get('/pages/tokens', function(req, res, next) {
-  const lang = req.cookies.lang || 'ko'
+  const lang = req.cookies.lang || default_lang
   const mdPath = path.join(__dirname, `../mds/${lang}/tokens.md`);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const htmlContent = md.render(mdContent);
@@ -75,7 +77,7 @@ router.get('/pages/tokens', function(req, res, next) {
 // Base 
 
 router.get('/pages/theming', function(req, res, next) {
-  const lang = req.cookies.lang || 'ko'
+  const lang = req.cookies.lang || default_lang
   const mdPath = path.join(__dirname, `../mds/${lang}/theme.md`);
   const mdContent = fs.readFileSync(mdPath, 'utf-8');
   const htmlContent = md.render(mdContent);
@@ -86,7 +88,7 @@ router.get('/pages/typography', function(req, res, next) {
   // res.render('components/base',  {title: 'Typography' });
   res.render('components/mdTemp',  {
     title: 'Typography' ,
-    document:  getHtmlContents('typography', req.cookies.lang || 'ko')
+    document:  getHtmlContents('typography', req.cookies.lang || default_lang)
   });
 });
 
@@ -98,14 +100,14 @@ router.get('/pages/colors', function(req, res, next) {
   // res.render('components/colors',  { title: 'Colors' , codes: codes.colors });
   res.render('components/mdTemp',  {
     title: 'Colors' ,
-    document:  getHtmlContents('colors', req.cookies.lang || 'ko')
+    document:  getHtmlContents('colors', req.cookies.lang || default_lang)
   });
 });
 
 router.get('/pages/utilities', function(req, res, next) {
   res.render('components/mdTemp',  {
     title: 'Utilities' ,
-    document:  getHtmlContents('utilities', req.cookies.lang || 'ko')
+    document:  getHtmlContents('utilities', req.cookies.lang || default_lang``)
   });
 });
 

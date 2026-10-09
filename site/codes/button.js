@@ -38,7 +38,7 @@ const withIcon =
   Right    
   <i class="icon right xi-icon"></i>
 </button>`
-const bedge = 
+const badge = 
 `<button class="ga-button badge">
   <sapn class="in-badge">B</span>
   Contents
@@ -57,5 +57,5 @@ const buttons =
 
 module.exports = {
   base, type, brand, status, colors, disabled, border, fluid, compact, outline,
-  icon, round, withIcon, bedge, text, buttons
+  icon, round, withIcon, badge, text, buttons
 }
